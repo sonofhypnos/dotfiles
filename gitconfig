@@ -1,0 +1,5 @@
+[user]
+	name = Tassilo Neubauer
+	email = tassilo.neubauer@gmail.com
+[core]
+	editor = nvim
