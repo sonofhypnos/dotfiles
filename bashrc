@@ -1,3 +1,5 @@
+#Default config from the system that I didn't bother to mess with yet
+
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
@@ -124,5 +126,10 @@ fi
 
 
 
-#custom config.
-EDITOR=vim
+#Tassilo's config
+EDITOR=nvim
+
+
+#useful aliases
+alias d='cd'
+
