@@ -1,3 +1,7 @@
+- defaults:
+        link:
+                create: true
+                relink: true
 - clean: ['~']
 
 - link:
@@ -6,8 +10,9 @@
     ~/.bash_logout: bash_logout
     ~/.gitconfig: gitconfig
     ~/.vimrc: vimrc
+    ~/.xini: .xini
+    ~/.XCompose: .XCompose
     ~/.config/i3:
         path: config/i3/
-        create: true
 
 
