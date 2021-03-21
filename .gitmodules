@@ -5,3 +5,6 @@
 [submodule "dotbot-autobot"]
 	path = dotbot-autobot
 	url = https://github.com/gwerbin/dotbot-autobot
+[submodule "zsh/oh-my-zsh"]
+	path = zsh/oh-my-zsh
+	url = https://github.com/ohmyzsh/ohmyzsh.git
