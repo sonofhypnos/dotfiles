@@ -14,6 +14,7 @@
     ~/.zshrc: zsh/zshrc
     ~/.config/nvim: 
         path: nvim/
+        ~/.config/redshift.conf: config/redshift.conf
     ~/.config/i3:
         path: config/i3/
 
