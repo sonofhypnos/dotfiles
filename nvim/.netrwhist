@@ -1,0 +1,3 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =1
+let g:netrw_dirhist_1='/home/tassilo/.config/unity3d/Abrakam Entertainment SA/Faeria/Abrakam/Data'
