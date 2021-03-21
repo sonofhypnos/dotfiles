@@ -9,9 +9,11 @@
     ~/.bashrc: bashrc
     ~/.bash_logout: bash_logout
     ~/.gitconfig: gitconfig
-    ~/.vimrc: vimrc
     ~/.xini: .xini
     ~/.XCompose: .XCompose
+    ~/.zshrc: zsh/zshrc
+    ~/.config/nvim: 
+        path: nvim/
     ~/.config/i3:
         path: config/i3/
 
