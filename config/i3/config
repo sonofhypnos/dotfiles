@@ -241,7 +241,7 @@ set $firefox firefox
 #Todo: make shortcut for editing this file
 
 #Open main Applications
-exec redshift
+exec redshift-gtk
 exec $todoist
 exec $keep
 exec rescuetime
