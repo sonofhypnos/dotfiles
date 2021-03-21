@@ -113,7 +113,7 @@ alias mv='mv -i'
 # See /usr/share/doc/bash-doc/examples in the bash-doc package.
 
 if [ -f ~/.bash_aliases ]; then
-    . ~/.bash_aliases
+    . ~/.shell/shell_aliases
 fi
 
 if [ -f ~/.bashrc_local]; then
