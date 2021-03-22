@@ -116,8 +116,8 @@ if [ -f ~/.bash_aliases ]; then
     . ~/.shell/shell_aliases
 fi
 
-if [ -f ~/.bashrc_local]; then
-	.~/.bashrc_local
+if [ -f ~/.bashrc_local ]; then
+	. ~/.bashrc_local
 fi
 
 # enable programmable completion features (you don't need to enable

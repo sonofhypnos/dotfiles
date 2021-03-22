@@ -2,17 +2,20 @@
         link:
                 create: true
                 relink: true
-- clean: ['~']
+- clean: ['~','~/.config']
 
 - link:
-    ~/.profile: profile
-    ~/.bashrc: bashrc
-    ~/.bash_logout: bash_logout
-    ~/.gitconfig: gitconfig
-    ~/.xini: .xini
-    ~/.XCompose: .XCompose
+    ~/.profile: 
+    ~/.bashrc: 
+    ~/.bash_logout: 
+    ~/.gitconfig: 
+    ~/.xini: 
+    ~/.XCompose: 
     ~/.zshrc:
-    ~/.config: 
+    ~/.tmux.conf:
+    ~/.config/:
+            glob: true
+            path: config/*
     ~/.shell:
 
 
