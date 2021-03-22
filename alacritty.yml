@@ -1,20 +1,14 @@
 # Configuration for Alacritty, the GPU enhanced terminal emulator.
 
-# Import additional configuration files
-#
-# Imports are loaded in order, skipping all missing files, with the importing
-# file being loaded last. If a field is already present in a previous import, it
-# will be replaced.
-#
 # All imports must either be absolute paths starting with `/`, or paths relative
 # to the user's home directory starting with `~/`.
-#import:
-#  - /path/to/alacritty.yml
+import:
+- /path/to/alacritty.yml
 
 # Any items in the `env` entry below will be added as
 # environment variables. Some entries may override variables
 # set by alacritty itself.
-#env:
+env:
   # TERM variable
   #
   # This value is used to set the `$TERM` environment variable for
@@ -22,7 +16,7 @@
   # check the local terminfo database and use `alacritty` if it is
   # available, otherwise `xterm-256color` is used.
   #TERM: alacritty
-
+        WINIT_X11_SCALE_FACTOR : two
 #window:
   # Window dimensions (changes require restart)
   #
@@ -58,9 +52,6 @@
   #     - full: Borders and title bar
   #     - none: Neither borders nor title bar
   #
-  # Values for `decorations` (macOS only):
-  #     - transparent: Title bar, transparent background and title bar buttons
-  #     - buttonless: Title bar, transparent background and no title bar buttons
   #decorations: full
 
   # Startup Mode (changes require restart)
@@ -70,8 +61,6 @@
   #   - Maximized
   #   - Fullscreen
   #
-  # Values for `startup_mode` (macOS only):
-  #   - SimpleFullscreen
   #startup_mode: Windowed
 
   # Window title
@@ -102,15 +91,13 @@
   #multiplier: 3
 
 # Font configuration
-#font:
+font:
   # Normal (roman) font face
   #normal:
     # Font family
     #
     # Default:
-    #   - (macOS) Menlo
     #   - (Linux/BSD) monospace
-    #   - (Windows) Consolas
     #family: monospace
 
     # The `style` can be specified to pick a specific face.
@@ -150,7 +137,7 @@
     #style: Bold Italic
 
   # Point size
-  #size: 11.0
+  size: 9.0
 
   # Offset is the extra space around each character. `offset.y` can be thought
   # of as modifying the line spacing, and `offset.x` as modifying the letter
@@ -165,12 +152,6 @@
   #glyph_offset:
   #  x: 0
   #  y: 0
-
-  # Thin stroke font rendering (macOS only)
-  #
-  # Thin strokes are suitable for retina displays, but for non-retina screens
-  # it is recommended to set `use_thin_strokes` to `false`.
-  #use_thin_strokes: true
 
 # If `true`, bold text is drawn using the bright color variants.
 #draw_bold_text_with_bright_colors: false
@@ -398,9 +379,7 @@
 # shell.
 #
 # Default:
-#   - (macOS) /bin/bash --login
 #   - (Linux/BSD) user login shell
-#   - (Windows) powershell
 #shell:
 #  program: /bin/bash
 #  args:
@@ -436,9 +415,7 @@
     # When set to `launcher: None`, URL launching will be disabled completely.
     #
     # Default:
-    #   - (macOS) open
     #   - (Linux/BSD) xdg-open
-    #   - (Windows) explorer
     #launcher:
     #  program: xdg-open
     #  args: []
@@ -627,10 +604,6 @@
 #   - SearchHistoryNext
 #       Go to the next regex in the search history.
 #
-# - macOS exclusive actions:
-#   - ToggleSimpleFullscreen
-#       Enter fullscreen without occupying another space.
-#
 # - Linux/BSD exclusive actions:
 #
 #   - CopySelection
@@ -766,29 +739,7 @@
   #- { key: Minus,          mods: Control,                         action: DecreaseFontSize }
   #- { key: NumpadSubtract, mods: Control,                         action: DecreaseFontSize }
 
-  # (Windows only)
-  #- { key: Return,   mods: Alt,           action: ToggleFullscreen }
 
-  # (macOS only)
-  #- { key: K,              mods: Command, mode: ~Vi|~Search, chars: "\x0c"            }
-  #- { key: K,              mods: Command, mode: ~Vi|~Search, action: ClearHistory     }
-  #- { key: Key0,           mods: Command,                    action: ResetFontSize    }
-  #- { key: Equals,         mods: Command,                    action: IncreaseFontSize }
-  #- { key: Plus,           mods: Command,                    action: IncreaseFontSize }
-  #- { key: NumpadAdd,      mods: Command,                    action: IncreaseFontSize }
-  #- { key: Minus,          mods: Command,                    action: DecreaseFontSize }
-  #- { key: NumpadSubtract, mods: Command,                    action: DecreaseFontSize }
-  #- { key: V,              mods: Command,                    action: Paste            }
-  #- { key: C,              mods: Command,                    action: Copy             }
-  #- { key: C,              mods: Command, mode: Vi|~Search,  action: ClearSelection   }
-  #- { key: H,              mods: Command,                    action: Hide             }
-  #- { key: M,              mods: Command,                    action: Minimize         }
-  #- { key: Q,              mods: Command,                    action: Quit             }
-  #- { key: W,              mods: Command,                    action: Quit             }
-  #- { key: N,              mods: Command,                    action: SpawnNewInstance }
-  #- { key: F,              mods: Command|Control,            action: ToggleFullscreen }
-  #- { key: F,              mods: Command, mode: ~Search,     action: SearchForward    }
-  #- { key: B,              mods: Command, mode: ~Search,     action: SearchBackward   }
 
 #debug:
   # Display the time it takes to redraw each frame.

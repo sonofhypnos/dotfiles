@@ -13,6 +13,7 @@
     ~/.XCompose: 
     ~/.zshrc:
     ~/.tmux.conf:
+    ~/.alacritty.yml:
     ~/.config/:
             glob: true
             path: config/*
