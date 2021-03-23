@@ -18,5 +18,7 @@
             glob: true
             path: config/*
     ~/.shell:
+    ~/.spacemacs:
+    ~/.spacemacs.env:
 
 
