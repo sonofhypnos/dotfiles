@@ -20,5 +20,6 @@
     ~/.shell:
     ~/.spacemacs:
     ~/.spacemacs.env:
+    ~/.i3status.conf:
 
 
