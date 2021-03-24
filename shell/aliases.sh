@@ -4,4 +4,6 @@ alias d='cd'
 alias cp='cp -i'
 alias mv='mv -i'
 
+# Editors
 alias v='nvim'
+alias e='emacsclient --no-wait'
