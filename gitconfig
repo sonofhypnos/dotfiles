@@ -2,7 +2,8 @@
 	name = Tassilo Neubauer
 	email = 46806445+sonofhypnos@users.noreply.github.com
 [core]
-	editor = emacsclient
+	editor = nvim
+	autocrlf = input
 [alias]
 	br = branch -vv
 	bra = branch -vv --all
@@ -21,6 +22,7 @@
 	dhs = diff HEAD~ --stat
 	dhw = diff HEAD~ --color-words
 	lg = log -p
+        gll= log --graph --pretty=oneline --abbrev-commit
 	gr = log --graph --format=line # graph
 	grd = log --graph --format=detail # graph detail
 	gra = log --graph --format=line --all # graph all
