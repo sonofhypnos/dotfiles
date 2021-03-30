@@ -182,7 +182,39 @@ map t <Plug>Sneak_t
 map T <Plug>Sneak_T
 
 
+" remapping Escape
+nnoremap ö< <esc>
+" Remap in Normal mode
+inoremap ö <esc>
+" Remap in Insert and Replace mode
+vnoremap ö <esc>
+" Remap in Visual and Select mode
+xnoremap ö <esc>
+" Remap in Visual mode
+snoremap ö <esc>
+" Remap in Select mode
+cnoremap ö <C-C>
+" Remap in Command-line mode
+onoremap ö <esc>
+" Remap in Operator pending mode
 
+" esc in command mode
+
+" remapping Escape
+nnoremap Ö <esc>
+" Remap in Normal mode
+inoremap Ö <esc>
+" Remap in Insert and Replace mode
+vnoremap Ö <esc>
+" Remap in Visual and Select mode
+xnoremap Ö <esc>
+" Remap in Visual mode
+snoremap Ö <esc>
+" Remap in Select mode
+cnoremap Ö <C-C>
+" Remap in Command-line mode
+onoremap Ö <esc>
+" Remap in Operator pending mode
 
 
 
