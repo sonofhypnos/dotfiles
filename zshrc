@@ -98,3 +98,5 @@ source $ZSH/oh-my-zsh.sh
 EDITOR='nvim'
 
 source ~/.shell/aliases.sh
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
