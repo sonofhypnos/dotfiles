@@ -246,6 +246,7 @@ exec $todoist
 exec $keep
 exec rescuetime
 exec flameshot
+exec ./i3-wallpaper
 assign [class="^Chromium$"] 1
 
 #Send Battery warning
