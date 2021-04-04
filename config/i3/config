@@ -15,7 +15,7 @@
 
 set $mod Mod4
 #Mod1 is the Alt-key
-set $mod2 Mod1 
+set $alt Mod1 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
 font pango:monospace 8
@@ -204,7 +204,7 @@ exec $mainDeskLayout
 
 #LayoutMode
 set $layout_mode Layout Mode: [p]rog [m]ain [l]aptopOnly [d]ouble Portrait [f]rontLaptop [t]rippleLand
-bindsym Control+$mod+$mod2+L mode "$layout_mode"
+bindsym Control+$mod+$alt+L mode "$layout_mode"
 
 mode "$layout_mode" {
 	bindsym p mode "default" exec $prog
