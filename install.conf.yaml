@@ -11,6 +11,7 @@
     ~/.gitconfig: 
     ~/.xini: 
     ~/.XCompose: 
+    ~/.Xresources-regolith:
     ~/.zshrc:
     ~/.tmux.conf:
     ~/.alacritty.yml:
@@ -21,5 +22,6 @@
     ~/.spacemacs:
     ~/.spacemacs.env:
     ~/.i3status.conf:
+
 
 
