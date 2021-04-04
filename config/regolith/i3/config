@@ -115,7 +115,7 @@ set_from_resource $i3-wm.program.launcher.window i3-wm.program.launcher.window r
 bindsym $mod+$i3-wm.binding.launcher.window exec $i3-wm.program.launcher.window
 
 ## Launch // This Dialog // <><Shift> ? ##
-set_from_resource $i3-wm.binding.help i3-wm.binding.help Shift+question
+set_from_resource $i3-wm.binding.help i3-wm.binding.help $mod+Insert
 set_from_resource $i3-wm.program.help i3-wm.program.help /usr/bin/remontoire-toggle
 bindsym $mod+$i3-wm.binding.help exec --no-startup-id $i3-wm.program.help
 
@@ -148,10 +148,10 @@ bindsym $mod+Up focus up
 bindsym $mod+Right focus right
 
 ## Navigate // Relative Window // <> k j h l ##
-set_from_resource $i3-wm.binding.left i3-wm.binding.left h
-set_from_resource $i3-wm.binding.right i3-wm.binding.right l
-set_from_resource $i3-wm.binding.up i3-wm.binding.up k
-set_from_resource $i3-wm.binding.down i3-wm.binding.down j
+set_from_resource $i3-wm.binding.left i3-wm.binding.left j
+set_from_resource $i3-wm.binding.right i3-wm.binding.right ö
+set_from_resource $i3-wm.binding.up i3-wm.binding.up l
+set_from_resource $i3-wm.binding.down i3-wm.binding.down k
 bindsym $mod+$i3-wm.binding.left focus left
 bindsym $mod+$i3-wm.binding.down focus down
 bindsym $mod+$i3-wm.binding.up focus up
@@ -230,10 +230,10 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
 ## Modify // Window Position // <><Shift> k j h l ##
-set_from_resource $i3-wm.binding.move_left i3-wm.binding.move_left Shift+h
-set_from_resource $i3-wm.binding.move_right i3-wm.binding.move_right Shift+l
-set_from_resource $i3-wm.binding.move_up i3-wm.binding.move_up Shift+k
-set_from_resource $i3-wm.binding.move_down i3-wm.binding.move_down Shift+j
+set_from_resource $i3-wm.binding.move_left i3-wm.binding.move_left Shift+j
+set_from_resource $i3-wm.binding.move_right i3-wm.binding.move_right Shift+ö
+set_from_resource $i3-wm.binding.move_up i3-wm.binding.move_up Shift+l
+set_from_resource $i3-wm.binding.move_down i3-wm.binding.move_down Shift+k
 bindsym $mod+$i3-wm.binding.move_left move left
 bindsym $mod+$i3-wm.binding.move_down move down
 bindsym $mod+$i3-wm.binding.move_up move up
@@ -665,3 +665,100 @@ set_from_resource $i3-wm.program.2 i3-wm.program.2 :
 exec --no-startup-id $i3-wm.program.2
 set_from_resource $i3-wm.program.3 i3-wm.program.3 :
 exec --no-startup-id $i3-wm.program.3
+
+
+# =========================================================================
+# Custom configuration
+# =========================================================================
+
+#Screen-layout
+set $mainDeskLayout ./.screenlayout/desk2land1port.sh
+set $laptopOnlyLayout ./.screenlayout/laptopOnly.sh
+set $prog ./.screenlayout/prog.sh
+set $doublePort ./.screenlayout/doublePort.sh
+set $frontLaptop ./.screenlayout/frontLaptop.sh
+set $tripleLand ./.screenlayout/tripleLand.sh
+
+exec $mainDeskLayout
+
+#LayoutMode
+set $layout_mode Layout Mode: [p]rog [m]ain [l]aptopOnly [d]ouble Portrait [f]rontLaptop [t]rippleLand
+bindsym Control+$mod+$alt+L mode "$layout_mode"
+
+mode "$layout_mode" {
+	bindsym p mode "default" exec $prog
+	bindsym m mode "default" exec $mainDeskLayout
+	bindsym l mode "default" exec $laptopOnlyLayout
+	bindsym d mode "default" exec $doublePort
+	bindsym f mode "default" exec $frontLaptop
+	bindsym t mode "default" exec $tripleLand
+
+
+	bindsym Escape mode "default"
+	bindsym Return mode "default"
+}
+
+#Launch Gnome:
+# Restore GNOME's settings
+exec --no-startup-id /usr/libexec/gnome-settings-daemon-localeexec
+
+# Fix a bug in gnome-settings-daemon: http://feeding.cloud.geek.nz/posts/creating-a-modern-tiling-desktop-environment-using-i3/
+exec --no-startup-id dconf write /org/gnome/settings-daemon/plugins/cursor/active false
+
+#Assign variables for special Applications
+set $todoist chromium --app=https://todoist.com  
+set $whatsapp chromium --app=https://web.whatsapp.com 
+set $gmail chromium --app=https://mail.google.com 
+set $keep chromium --app=https://keep.google.com 
+set $calendar chromium --app=https://calendar.google.com 
+set $discord discord --class=communication
+set $telegram telegram --class=communication
+set $signal signal --class=communication
+set $intellij intellij-idea-ultimate
+set $firefox firefox
+
+#Todo: make shortcut for editing this file
+
+#Open main Applications
+exec redshift-gtk
+exec $todoist
+exec rescuetime
+exec flameshot
+exec ./i3-wallpaper
+assign [class="^Chromium$"] 1
+
+#Send Battery warning
+exec --no-startup-id ./i3-battery-popup/i3-battery-popup
+
+#Launcher for Main Applications
+set $main_launcher Main Launcher: [f]irefox [] 
+bindsym $mod+o mode "$main_launcher"
+
+mode "$main_launcher" {
+	bindsym f mode "default" exec $firefox
+	bindsym t mode "default" exec $todoist
+	bindsym w mode "default" exec $whatsapp 
+	bindsym g mode "default" exec $gmail
+	bindsym k mode "default" exec $keep
+	bindsym c mode "default" exec $calendar
+	bindsym s mode "default" exec gnome-control-center
+	bindsym d mode "default" exec discord
+	bindsym 3 mode "default" exec $firefox https://i3wm.org/docs/userguide.html
+	bindsym i mode "default" exec $intellij
+	#not sure the following works
+	bindsym b mode "default" exec nvim -c ":terminal"
+
+
+
+
+	
+	bindsym Escape mode "default"
+	bindsym Return mode "default"
+}
+#
+#other Shortcuts
+set $killCom [class="^Chromium$"] kill
+bindsym $mod+c $killCom, exec $todoist
+bindsym $alt+f exec $firefox
+
+
