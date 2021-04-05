@@ -263,10 +263,6 @@ bindsym $mod+$i3-wm.binding.split_v split vertical
 set_from_resource $i3-wm.binding.split_h i3-wm.binding.split_h g
 bindsym $mod+$i3-wm.binding.split_h split horizontal
 
-## Modify // Toggle Window Orientation // <> Backspace ##
-set_from_resource $i3-wm.binding.orientation_toggle i3-wm.binding.orientation_toggle BackSpace
-bindsym $mod+$i3-wm.binding.orientation_toggle split toggle
-
 ## Modify // Window Fullscreen Toggle // <> f ##
 set_from_resource $i3-wm.binding.fullscreen_toggle i3-wm.binding.fullscreen_toggle f
 bindsym $mod+$i3-wm.binding.fullscreen_toggle fullscreen toggle
@@ -741,13 +737,9 @@ mode "$main_launcher" {
 	bindsym g mode "default" exec $gmail
 	bindsym k mode "default" exec $keep
 	bindsym c mode "default" exec $calendar
-	bindsym s mode "default" exec gnome-control-center
 	bindsym d mode "default" exec discord
 	bindsym 3 mode "default" exec $firefox https://i3wm.org/docs/userguide.html
 	bindsym i mode "default" exec $intellij
-	#not sure the following works
-	bindsym b mode "default" exec nvim -c ":terminal"
-
 
 
 
@@ -758,7 +750,12 @@ mode "$main_launcher" {
 #
 #other Shortcuts
 set $killCom [class="^Chromium$"] kill
-bindsym $mod+c $killCom, exec $todoist
+bindsym $mod+$alt+c $killCom, exec $todoist
 bindsym $alt+f exec $firefox
 
 
+#kill focused Window
+
+set $kill [con_id="__focused__"] exec --no-startup-id kill -9 $(xdotool getwindowfocus getwindowpid)
+bindsym Mod1+F4 $kill
+bindsym $mod+BackSpace kill
