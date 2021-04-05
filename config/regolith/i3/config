@@ -716,7 +716,6 @@ set $firefox firefox
 #Todo: make shortcut for editing this file
 
 #Open main Applications
-exec redshift-gtk
 exec $todoist
 exec rescuetime
 exec flameshot
@@ -727,7 +726,7 @@ assign [class="^Chromium$"] 1
 exec --no-startup-id ./i3-battery-popup/i3-battery-popup
 
 #Launcher for Main Applications
-set $main_launcher Main Launcher: [f]irefox [] 
+set $main_launcher Main Launcher: main [t]odoist
 bindsym $mod+o mode "$main_launcher"
 
 mode "$main_launcher" {
@@ -742,8 +741,6 @@ mode "$main_launcher" {
 	bindsym i mode "default" exec $intellij
 
 
-
-	
 	bindsym Escape mode "default"
 	bindsym Return mode "default"
 }
