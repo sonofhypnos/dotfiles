@@ -1,4 +1,4 @@
-alias c='cd'
+alias d='cd'
 
 # Aliases to protect against overwriting
 alias cp='cp -i'
@@ -8,9 +8,10 @@ alias mv='mv -i'
 alias v='nvim'
 alias e='emacsclient --no-wait'
 alias gll='git log --graph --pretty=oneline --abbrev-commit'
-f='fdfind'
+alias f='fdfind'
 
 
-#miscelanous
-alias do='cd .dotfiles'
+#directories
+alias do='cd ~/.dotfiles'
 alias regi3='nvim ~/.dotfiles/config/regolith/i3/config'
+alias ozsh='cd ~/.dotfiles/zsh/oh-my-zsh'
