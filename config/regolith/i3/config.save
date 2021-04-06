@@ -114,7 +114,7 @@ set_from_resource $i3-wm.binding.launcher.window i3-wm.binding.launcher.window C
 set_from_resource $i3-wm.program.launcher.window i3-wm.program.launcher.window rofi -show window -theme $rofiTheme
 bindsym $mod+$i3-wm.binding.launcher.window exec $i3-wm.program.launcher.window
 
-## Launch // This Dialog // <><Shift> Insert ##
+## Launch // This Dialog // <><Shift> ? ##
 set_from_resource $i3-wm.binding.help i3-wm.binding.help $mod+Insert
 set_from_resource $i3-wm.program.help i3-wm.program.help /usr/bin/remontoire-toggle
 bindsym $mod+$i3-wm.binding.help exec --no-startup-id $i3-wm.program.help
@@ -263,6 +263,10 @@ bindsym $mod+$i3-wm.binding.split_v split vertical
 set_from_resource $i3-wm.binding.split_h i3-wm.binding.split_h g
 bindsym $mod+$i3-wm.binding.split_h split horizontal
 
+## Modify // Toggle Window Orientation // <> Backspace ##
+set_from_resource $i3-wm.binding.orientation_toggle i3-wm.binding.orientation_toggle BackSpace
+bindsym $mod+$i3-wm.binding.orientation_toggle split toggle
+
 ## Modify // Window Fullscreen Toggle // <> f ##
 set_from_resource $i3-wm.binding.fullscreen_toggle i3-wm.binding.fullscreen_toggle f
 bindsym $mod+$i3-wm.binding.fullscreen_toggle fullscreen toggle
@@ -398,8 +402,8 @@ bindsym $mod+$i3-wm.binding.sleep exec $i3-wm.program.sleep
 # System Management
 ###############################################################################
 
-## Modify // Settings // <> s ##
-set_from_resource $i3-wm.binding.settings i3-wm.binding.settings s
+## Modify // Settings // <> c ##
+set_from_resource $i3-wm.binding.settings i3-wm.binding.settings c
 set_from_resource $i3-wm.program.settings i3-wm.program.settings gnome-control-center --class=floating_window
 bindsym $mod+$i3-wm.binding.settings exec $i3-wm.program.settings
 
@@ -716,6 +720,7 @@ set $firefox firefox
 #Todo: make shortcut for editing this file
 
 #Open main Applications
+exec redshift-gtk
 exec $todoist
 exec rescuetime
 exec flameshot
@@ -752,7 +757,5 @@ bindsym $alt+f exec $firefox
 
 
 #kill focused Window
-
-set $kill [con_id="__focused__"] exec --no-startup-id kill -9 $(xdotool getwindowfocus getwindowpid)
-bindsym Mod1+F4 $kill
+bindsym Mod1+F4 kill
 bindsym $mod+BackSpace kill

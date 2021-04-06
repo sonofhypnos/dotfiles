@@ -13,3 +13,4 @@ f='fdfind'
 
 #miscelanous
 alias do='cd .dotfiles'
+alias regi3='nvim ~/.dotfiles/config/regolith/i3/config'
