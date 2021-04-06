@@ -23,5 +23,6 @@
     ~/.spacemacs.env:
     ~/.i3status.conf:
 
-
-
+- shell:
+        - git submodule sync --recursive
+        - git update-submodules
