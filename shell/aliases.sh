@@ -9,3 +9,7 @@ alias v='nvim'
 alias e='emacsclient --no-wait'
 alias gll='git log --graph --pretty=oneline --abbrev-commit'
 f='fdfind'
+
+
+#miscelanous
+alias do='cd .dotfiles'
