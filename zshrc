@@ -106,6 +106,6 @@ source ~/.shell/aliases.sh
 startmine(){
 	nmcli radio wifi off
 	sed -i 's/EMPEROR_OBVORIS/Tassilo/g' ~/.minecraft/launcher_accounts.json
-	minecraft-launcher
-	
+	minecraft-launcher & disown
+	nmcli radio wifi on
 }
