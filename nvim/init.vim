@@ -3,6 +3,7 @@ set nocompatible
 " =============================================================================
 "   PLUGINS
 " =============================================================================
+" to update run :PlugUpgrade, PlugUpdate
 
 call plug#begin('~/.local/share/nvim/plugged')
 
@@ -25,6 +26,11 @@ Plug 'andymass/vim-matchup'
 Plug 'airblade/vim-rooter'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
+
+" spellchecking in bash and other languages. might collide with my other
+" addons.
+Plug 'dense-analysis/ale'
+
 
 
 " Code Formating
@@ -64,6 +70,7 @@ let g:neoformat_basic_format_trim = 1
 
 " open the go-to function in split, not another buffer
 let g:jedi#use_splits_not_buffers = "right"
+
 
 
 " =============================================================================
