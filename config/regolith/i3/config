@@ -721,6 +721,7 @@ exec rescuetime
 exec flameshot
 exec ./i3-wallpaper
 assign [class="^Chromium$"] 1
+exec anki
 
 #Send Battery warning
 exec --no-startup-id ./i3-battery-popup/i3-battery-popup
@@ -739,6 +740,7 @@ mode "$main_launcher" {
 	bindsym d mode "default" exec discord
 	bindsym 3 mode "default" exec $firefox https://i3wm.org/docs/userguide.html
 	bindsym i mode "default" exec $intellij
+	bindsym a mode "default" exec anki
 
 
 	bindsym Escape mode "default"
