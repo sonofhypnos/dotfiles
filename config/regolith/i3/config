@@ -719,9 +719,9 @@ set $firefox firefox
 exec $todoist
 exec rescuetime
 exec flameshot
-exec ./i3-wallpaper
-assign [class="^Chromium$"] 1
+exec i3-wallpaper
 exec anki
+#assign [class="^Chromium$"] 1
 
 #Send Battery warning
 exec --no-startup-id ./i3-battery-popup/i3-battery-popup
