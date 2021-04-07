@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 #
 # This Script changes the name of the Minecraft account of a player to make it possible to play minecraft in local multiplayer with a single minecraft account.
-# It takes the new name as an input.
+# It takes the new name as input.
 
-newPlayerName="${$1:-Tassilo}"
+newPlayerName="${1:-Tassilo}"
 nmcli radio wifi off
-sed -iE "s/\"name\" : \".*\"/\"name\" : \"$1\"/g" ~/.minecraft/launcher_accounts.jsonk
+sed -iE "s/\"name\" : \".*\"/\"name\" : \"$newPlayerName\"/g" ~/.minecraft/launcher_accounts.json
 minecraft-launcher & disown
 nmcli radio wifi on
