@@ -101,11 +101,4 @@ source ~/.shell/aliases.sh
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-
-# this function changes the name of the Minecraft account of a player to make it possible to play minecraft in local multiplayer with a single minecraft account.
-startmine(){
-	nmcli radio wifi off
-	sed -iE 's/"name" : ".*"/"name" : "Tassilo"/g' ~/.minecraft/launcher_accounts.json
-	minecraft-launcher & disown
-	nmcli radio wifi on
-}
+export PATH=$PATH:~/bin

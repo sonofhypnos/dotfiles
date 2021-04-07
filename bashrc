@@ -134,3 +134,5 @@ fi
 
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+export PATH=$PATH:~/bin
