@@ -26,4 +26,4 @@
 
 - shell:
         - git submodule sync --recursive
-        - git update-submodules
+        - git submodule update
