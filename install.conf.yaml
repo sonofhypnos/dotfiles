@@ -23,6 +23,7 @@
     ~/.spacemacs:
     ~/.spacemacs.env:
     ~/.i3status.conf:
+    ~/.emacs-profiles.el:
 
 - shell:
         - git submodule sync --recursive
