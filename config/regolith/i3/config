@@ -727,7 +727,7 @@ exec anki
 exec --no-startup-id ./i3-battery-popup/i3-battery-popup
 
 #Launcher for Main Applications
-set $main_launcher Main Launcher: main [t]odoist
+set $main_launcher Main Launcher: main [t]odoist [f]irefox [w]hatsapp [g]mail [k]eep [c]alendar [d]iscord [i]ntelliJ [a]nki
 bindsym $mod+o mode "$main_launcher"
 
 mode "$main_launcher" {
