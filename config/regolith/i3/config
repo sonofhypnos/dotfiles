@@ -728,7 +728,7 @@ exec --no-startup-id ./i3-battery-popup/i3-battery-popup
 
 #Launcher for Main Applications
 set $main_launcher Main Launcher: main [t]odoist [f]irefox [w]hatsapp [g]mail [k]eep [c]alendar [d]iscord [i]ntelliJ [a]nki
-bindsym $mod+o mode "$main_launcher"
+bindsym $mod+$alt+o mode "$main_launcher"
 
 mode "$main_launcher" {
 	bindsym f mode "default" exec $firefox
@@ -741,8 +741,6 @@ mode "$main_launcher" {
 	bindsym 3 mode "default" exec $firefox https://i3wm.org/docs/userguide.html
 	bindsym i mode "default" exec $intellij
 	bindsym a mode "default" exec anki
-
-
 	bindsym Escape mode "default"
 	bindsym Return mode "default"
 }
