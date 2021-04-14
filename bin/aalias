@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+#this command creates a new alias.
+if [ $# -gt 1 ]; then
+	echo "alias $1="\'"${@:2}"\' >> ~/.dotfiles/shell/aliases.sh
+else
+	echo "Expected 2 arguments, but $# were given."
+fi
