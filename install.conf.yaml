@@ -1,3 +1,4 @@
+#addons21 needs to be manually installed.
 - defaults:
         link:
                 create: true
