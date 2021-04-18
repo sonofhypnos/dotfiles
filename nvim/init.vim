@@ -16,6 +16,7 @@ Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'ciaranm/securemodelines'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'justinmk/vim-sneak'
+Plug 'tpope/vim-surround'
 
 " GUI enhancements
 Plug 'itchyny/lightline.vim'
@@ -183,10 +184,10 @@ nnoremap <Up>    :echoe "Use k"<CR>
 nnoremap <Down>  :echoe "Use j"<CR>
 
 
-map f <Plug>Sneak_f
-map F <Plug>Sneak_F
-map t <Plug>Sneak_t
-map T <Plug>Sneak_T
+"map f <Plug>Sneak_f
+"map F <Plug>Sneak_F
+"map t <Plug>Sneak_t
+"map T <Plug>Sneak_T
 
 
 " remapping Escape
@@ -222,8 +223,4 @@ cnoremap Ö <C-C>
 " Remap in Command-line mode
 onoremap Ö <esc>
 " Remap in Operator pending mode
-
-
-
-
 
