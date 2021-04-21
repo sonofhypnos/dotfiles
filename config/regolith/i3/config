@@ -675,8 +675,6 @@ set $doublePort ./.screenlayout/doublePort.sh
 set $frontLaptop ./.screenlayout/frontLaptop.sh
 set $tripleLand ./.screenlayout/tripleLand.sh
 
-exec $mainDeskLayout
-
 #LayoutMode
 set $layout_mode Layout Mode: [p]rog [m]ain [l]aptopOnly [d]ouble Portrait [f]rontLaptop [t]rippleLand
 bindsym Control+$mod+$alt+L mode "$layout_mode"
