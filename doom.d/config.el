@@ -31,9 +31,70 @@
 ;; change `org-directory'. It must be set before org loads!
 (setq org-directory "~/org/")
 
+
+
+
 ;; This determines the style of line numbers in effect. If set to `nil', line
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
 (setq display-line-numbers-type t)
+
+;; (use-package! org-roam-bibtex
+;;  :after (org-roam)
+;;  :hook (org-roam-mode . org-roam-bibtex-mode)
+;;  :config
+;;  (setq org-roam-bibtex-preformat-keywords
+;;   '("=key=" "title" "url" "file" "author-or-editor" "keywords"))
+;;  (setq orb-templates
+;;        '(("r" "ref" plain (function org-roam-capture--get-point)
+;;           ""
+;;           :file-name "${slug}"
+;;           :head "#+TITLE: ${=key=}: ${title}\n#+ROAM_KEY: ${ref}\n#+ROAM_TAGS:
+;;
+;;- keywords :: ${keywords}
+;;
+;;\n* ${title}\n  :PROPERTIES:\n  :Custom_ID: ${=key=}\n  :URL: ${url}\n  :AUTHOR: ${author-or-editor}\n  :NOTER_DOCUMENT: %(orb-process-file-field \"${=key=}\")\n  :NOTER_PAGE: \n  :END:\n\n"
+;;
+;;           :unnarrowed t))))
+
+
+
+(after! org-roam
+        (map! :leader
+        :prefix "a"
+        :desc "org-roam" "l" #'org-roam
+        :desc "org-roam-insert" "i" #'org-roam-insert
+        :desc "org-roam-switch-to-buffer" "b" #'org-roam-switch-to-buffer
+        :desc "org-roam-find-file" "f" #'org-roam-find-file
+        :desc "org-roam-show-graph" "g" #'org-roam-show-graph
+        :desc "org-roam-capture" "c" #'org-roam-capture
+        :desc "org-roam-tag-add" "t" #'org-roam-tag-add
+        :desc "org-roam-dailies-today" "d" #'org-roam-dailies-today
+        :desc "org-roam-tag-delete" "ö" #'org-roam-tag-delete))
+
+(use-package org-roam-server
+  :config
+  (setq org-roam-server-host "127.0.0.1"
+        org-roam-server-port 8080
+        org-roam-server-authenticate nil
+        org-roam-server-export-inline-images t
+        org-roam-server-serve-files nil
+        org-roam-server-served-file-extensions '("pdf" "mp4" "ogv")
+        org-roam-server-network-poll t
+        org-roam-server-network-arrows nil
+        org-roam-server-network-label-truncate t
+        org-roam-server-network-label-truncate-length 60
+        org-roam-server-network-label-wrap-length 20))
+
+
+(add-hook 'after-init-hook 'org-roam-mode)
+(add-hook 'after-init-hook 'org-zotxt-mode)
+
+;;(require 'company-org-roam)
+;;        (use-package company-org-roam
+;;                :when (featurep! :completion company)
+;;                :after org-roam
+;;                :config
+;;        (set-company-backend! 'org-mode '(company-org-roam company-yasnippet company-dabbrev))
 
 
 ;; Here are some additional functions/macros that could help you configure Doom:
