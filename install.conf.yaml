@@ -25,6 +25,7 @@
     ~/.spacemacs.env:
     ~/.i3status.conf:
     ~/.emacs-profiles.el:
+    ~/.doom.d:
 
 - shell:
         - git submodule sync --recursive
