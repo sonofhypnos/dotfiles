@@ -667,8 +667,10 @@ exec --no-startup-id $i3-wm.program.3
 # Custom configuration
 # =========================================================================
 
+set $wallpaper i3-wallpaper
+
 #Screen-layout
-set $mainDeskLayout ./.screenlayout/desk2land1port.sh
+set $mainDeskLayout ./.screenlayout/desk2land1port.sh && $wallpaper
 set $laptopOnlyLayout ./.screenlayout/laptopOnly.sh
 set $prog ./.screenlayout/prog.sh
 set $doublePort ./.screenlayout/doublePort.sh
