@@ -71,6 +71,7 @@
         :desc "org-roam-capture" "c" #'org-roam-capture
         :desc "org-roam-tag-add" "t" #'org-roam-tag-add
         :desc "org-roam-dailies-today" "d" #'org-roam-dailies-today
+        :desc "org-roam-alias-add" "a" #'org-roam-alias-add
         :desc "org-roam-tag-delete" "ö" #'org-roam-tag-delete))
 
 ;;org-roam server creates an interactive graph from the org-roam files in the browser.
