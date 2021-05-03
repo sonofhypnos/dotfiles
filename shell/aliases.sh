@@ -17,7 +17,7 @@ alias regi3='nvim ~/.dotfiles/config/regolith/i3/config'
 alias ozsh='cd ~/.dotfiles/zsh/oh-my-zsh'
 
 #miscelanous or recently added.
-alias .d='cd /home/tassilo/.dotfiles/'
+alias .d='cd ~/.dotfiles/'
 alias ashell='nvim /home/tassilo/.dotfiles/shell/aliases.sh'
 alias hm='xdg-open semester2/Höhere\ Mathematik\ I\ \(Analysis\)\ für\ die\ Fachrichtung\ Informatik/Vorlesungsmaterial/Skript\ Höhere\ Mathematik\ 1.pdf && exit' 
 alias hm1='xdg-open semester2/Höhere Mathematik I (Analysis) für die Fachrichtung Informatik/Vorlesungsmaterial/Skript Höhere Mathematik 1.pdf && exit'
