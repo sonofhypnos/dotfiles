@@ -23,3 +23,5 @@ alias hm='xdg-open semester2/Höhere\ Mathematik\ I\ \(Analysis\)\ für\ die\ Fa
 alias hm1='xdg-open semester2/Höhere Mathematik I (Analysis) für die Fachrichtung Informatik/Vorlesungsmaterial/Skript Höhere Mathematik 1.pdf && exit'
 alias rs='cd semester2; ranger'
 alias la1='xdg-open semester2/Lineare\ Algebra\ II\ für\ Mathematik/stuff/LA1.pdf && exit'
+alias oIlias='source oIlias'
+alias update-alternatives='sudo update-alternatives'

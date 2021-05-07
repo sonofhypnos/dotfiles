@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+#This batch script opens the IliasDownloader
+sdk use java 8.0.282.fx-zulu
+java -jar ~/Installations/IliasDownloaderTool-kit-v2/Ilias-Downloader-Tool-kit-v2.jar & disown

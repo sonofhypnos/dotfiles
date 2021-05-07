@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+#create a new command
+
+file="$1"
+header='#!/usr/bin/env bash'
+
+cd ~/.dotfiles/bin
+echo $header > $file
+chmod +x $file
+~/.dotfiles/install
+nvim $file
+
+
