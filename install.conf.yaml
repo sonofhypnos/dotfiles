@@ -21,10 +21,7 @@
             glob: true
             path: config/*
     ~/.shell:
-    ~/.spacemacs:
-    ~/.spacemacs.env:
     ~/.i3status.conf:
-    ~/.emacs-profiles.el:
     ~/.doom.d:
 
 - shell:
