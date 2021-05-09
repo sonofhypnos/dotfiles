@@ -18,10 +18,12 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'justinmk/vim-sneak'
 Plug 'tpope/vim-surround'
 
+
 " GUI enhancements
 Plug 'itchyny/lightline.vim'
 Plug 'machakann/vim-highlightedyank'
 Plug 'andymass/vim-matchup'
+Plug 'tridactyl/vim-tridactyl'
 
 " Fuzzy finder
 Plug 'airblade/vim-rooter'

@@ -16,6 +16,7 @@
     ~/.zshrc:
     ~/.tmux.conf:
     ~/.alacritty.yml:
+    ~/.tridactylrc:
     ~/bin:
     ~/.config/:
             glob: true
