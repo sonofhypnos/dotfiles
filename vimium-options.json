@@ -8,6 +8,14 @@
     {
       "pattern": "https?://www.youtube.com/*",
       "passKeys": "dsxlkjhfy"
+    },
+    {
+      "pattern": "https?://todoist.com/*",
+      "passKeys": ""
+    },
+    {
+      "pattern": "https?://calendar.google.com/*",
+      "passKeys": ""
     }
   ],
   "filterLinkHints": false,
