@@ -39,6 +39,9 @@ bind ;c hint -Jc [class*="expand"],[class="togg"],[class="comment_folder"]
 bind d composite tabprev; tabclose #
 bind D tabclose
 
+"Use Firefox search
+unbind <C-f>
+
 " make t open the selection with tabopen
 bind --mode=visual t composite js document.getSelection().toString() | fillcmdline tabopen
 
@@ -85,7 +88,6 @@ jsb browser.runtime.getPlatformInfo().then(os=>{const profiledir = os.os=="win" 
 
 " Sane hinting mode
 set hintfiltermode vimperator-reflow
-set hintnames numeric
 
 " Defaults to 300ms but I'm a 'move fast and close the wrong tabs' kinda chap
 set hintdelay 100
@@ -131,7 +133,7 @@ command translate js let googleTranslateCallback = document.createElement('scrip
 "
 
 " New reddit is bad
-autocmd DocStart ^http(s?)://www.reddit.com js tri.excmds.urlmodify("-t", "www", "old")
+" autocmd DocStart ^http(s?)://www.reddit.com js tri.excmds.urlmodify("-t", "www", "old")
 " Mosquito nets won't make themselves
 autocmd DocStart ^http(s?)://www.amazon.co.uk js tri.excmds.urlmodify("-t", "www", "smile")
 
