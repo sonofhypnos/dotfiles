@@ -133,7 +133,7 @@ before we send our 'ok' to the SessionManager."
  "Emacs server" (getenv "DESKTOP_AUTOSTART_ID"))
 
 ;;Custom Shortcuts
-(map! :i "ö" #'evil-normal-state)
+;;(map! :i "ö" #'evil-normal-state)
 (map! :leader :desc "execute emacs command" "SPC" #'execute-extended-command)
 (map! :leader :desc "projectile find file" ":" #'projectile-find-file)
 
