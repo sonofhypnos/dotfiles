@@ -2,7 +2,6 @@
 	name = Tassilo Neubauer
 	email = 46806445+sonofhypnos@users.noreply.github.com
 [core]
-	editor = nvim
 	autocrlf = input
 [alias]
 	br = branch -vv
