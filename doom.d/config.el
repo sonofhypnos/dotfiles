@@ -56,6 +56,34 @@
 ;;
 ;;           :unnarrowed t))))
 
+
+;;journal template copied from here: https://org-roam.discourse.group/t/dailies-capture-templates-best-practices/1043
+    (setq org-roam-dailies-capture-templates
+          (let ((head "#+title: %<%Y-%m-%d (%A)>\n* [/] Do Today\n* [/] Maybe Do Today\n* Journal\n** What did you achieve today?\n** What are you grateful for?\n** What worried you today?\n** What else is on your mind?"))
+            `(("j" "journal" entry
+               #'org-roam-capture--get-point
+               "* %<%H:%M> %?"
+               :file-name "daily/%<%Y-%m-%d>"
+               :head ,head
+               :olp ("Journal"))
+              ("t" "do today" item
+               #'org-roam-capture--get-point
+               "[ ] %(princ as/agenda-captured-link)"
+               :file-name "daily/%<%Y-%m-%d>"
+               :head ,head
+               :olp ("Do Today")
+               :immediate-finish t)
+              ("m" "maybe do today" item
+               #'org-roam-capture--get-point
+               "[ ] %(princ as/agenda-captured-link)"
+               :file-name "daily/%<%Y-%m-%d>"
+               :head ,head
+               :olp ("Maybe Do Today")
+               :immediate-finish t))))
+
+
+
+
 (server-start)
 
 
