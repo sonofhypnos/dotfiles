@@ -748,7 +748,6 @@ mode "$main_launcher" {
 #other Shortcuts
 set $killCom [class="^Chromium$"] kill
 bindsym $mod+$alt+c $killCom, exec $todoist
-bindsym $alt+f exec $firefox
 
 
 #kill focused Window
