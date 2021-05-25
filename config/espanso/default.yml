@@ -1,0 +1,48 @@
+# espanso configuration file
+
+# This is the default configuration file, change it as you like it
+# You can refer to the official documentation:
+# https://espanso.org/docs/
+
+# Matches are the substitution rules, when you type the "trigger" string
+# it gets replaced by the "replace" string.
+matches:
+  # Simple text replacement
+  - trigger: ":espanso"
+    form: '\n  - trigger: "{{match}}"\n    replace:'
+
+  # Dates
+  - trigger: ":date"
+    replace: "{{mydate}}"
+    vars:
+      - name: mydate
+        type: date
+        params:
+          format: "%m/%d/%Y"
+
+  # latex
+  - trigger: "\\pd "
+    form: \frac{\partial {{num}}}{\partial {{denum}}}
+  - trigger: "\\pdc "
+    form: \left(\frac{\partial {{num}}}{\partial {{denum}}}\right)_{{index}}
+  - trigger: ":x "
+    replace: "$x$"
+
+  # Shell commands
+  - trigger: ":shell"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: shell
+        params:
+          cmd: "echo Hello from your shell"
+
+  - trigger: ':laugh'
+    replace: "\U0001F604"
+
+
+  - trigger: '@tw'
+    replace: 'tassilo.neubauer@web.de'
+  - trigger: @tg:
+    replace: 'tassilo.neubauer@gmail.com'
+dkdk\nkddkdk

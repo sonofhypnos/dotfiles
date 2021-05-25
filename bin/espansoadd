@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+#this command adds a new espanso shortcut to the configuration.
+if [ $# -gt 1 ]; then
+	echo -e "  - trigger: $1:\n    replace: "\'"${@:2}"\' >> ~/.config/espanso/default.yml
+	echo 'dkdk\nkddkdk' >> ~/.config/espanso/default.yml
+else
+	echo "Expected 2 arguments, but $# were given."
+fi
