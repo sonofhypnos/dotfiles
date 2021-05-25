@@ -29,3 +29,5 @@
 	info = ! "inf() { if git rev-parse ${1} >/dev/null 2>&1; then git cat-file -p $(git rev-parse ${1}); else echo Invalid object; fi }; inf"
 	update-submodules = submodule update --init --recursive
 	upgrade-submodules = submodule update --init --remote
+[init]
+	defaultBranch = main
