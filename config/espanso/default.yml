@@ -43,6 +43,5 @@ matches:
 
   - trigger: '@tw'
     replace: 'tassilo.neubauer@web.de'
-  - trigger: @tg:
+  - trigger: '@tg'
     replace: 'tassilo.neubauer@gmail.com'
-dkdk\nkddkdk
