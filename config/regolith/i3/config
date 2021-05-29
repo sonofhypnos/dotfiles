@@ -716,11 +716,10 @@ set $firefox firefox
 #Todo: make shortcut for editing this file
 
 #Open main Applications
-exec $todoist
 exec rescuetime
 exec flameshot
 exec i3-wallpaper
-exec anki
+exec emacs
 #assign [class="^Chromium$"] 1
 
 #Send Battery warning
