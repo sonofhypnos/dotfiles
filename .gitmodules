@@ -11,3 +11,6 @@
 [submodule "config/i3/i3-battery-popup"]
 	path = config/i3/i3-battery-popup
 	url = https://github.com/rjekker/i3-battery-popup
+[submodule "config/espanso/user/espanso-package-date-utilities"]
+	path = config/espanso/user/espanso-package-date-utilities
+	url = https://github.com/kopach/espanso-package-date-utilities.git
