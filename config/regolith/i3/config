@@ -707,11 +707,13 @@ set $whatsapp chromium --app=https://web.whatsapp.com
 set $gmail chromium --app=https://mail.google.com 
 set $keep chromium --app=https://keep.google.com 
 set $calendar chromium --app=https://calendar.google.com 
+set $focusmate chromium --app=https://focusmate.com/dashboard
 set $discord discord --class=communication
 set $telegram telegram --class=communication
 set $signal signal --class=communication
 set $intellij intellij-idea-ultimate
-set $firefox firefox
+
+
 
 #Todo: make shortcut for editing this file
 
@@ -726,11 +728,11 @@ exec emacs
 exec --no-startup-id ./i3-battery-popup/i3-battery-popup
 
 #Launcher for Main Applications
-set $main_launcher Main Launcher: main [t]odoist [f]irefox [w]hatsapp [g]mail [k]eep [c]alendar [d]iscord [i]ntelliJ [a]nki
+set $main_launcher Main Launcher: main [t]odoist [f]ocusmate [w]hatsapp [g]mail [k]eep [c]alendar [d]iscord [i]ntelliJ [a]nki
 bindsym Control+$mod+$alt+o mode "$main_launcher"
 
 mode "$main_launcher" {
-	bindsym f mode "default" exec $firefox
+	bindsym f mode "default" exec $focusmate
 	bindsym t mode "default" exec $todoist
 	bindsym w mode "default" exec $whatsapp 
 	bindsym g mode "default" exec $gmail
