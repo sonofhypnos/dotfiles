@@ -670,12 +670,12 @@ exec --no-startup-id $i3-wm.program.3
 set $wallpaper i3-wallpaper
 
 #Screen-layout
-set $mainDeskLayout ./.screenlayout/mainDeskLayout.sh
-set $laptopOnlyLayout ./.screenlayout/laptopOnly.sh
-set $prog ./.screenlayout/prog.sh
-set $doublePort ./.screenlayout/doublePort.sh
-set $frontLaptop ./.screenlayout/frontLaptop.sh
-set $tripleLand ./.screenlayout/tripleLand.sh
+set $mainDeskLayout ~/.screenlayout/mainDeskLayout.sh
+set $laptopOnlyLayout ~/.screenlayout/laptopOnly.sh
+set $prog ~/.screenlayout/prog.sh
+set $doublePort ~/.screenlayout/doublePort.sh
+set $frontLaptop ~/.screenlayout/frontLaptop.sh
+set $tripleLand ~/.screenlayout/tripleLand.sh
 
 #LayoutMode
 set $layout_mode Layout Mode: [p]rog [m]ain [l]aptopOnly [d]ouble Portrait [f]rontLaptop [t]rippleLand
