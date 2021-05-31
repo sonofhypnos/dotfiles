@@ -9,7 +9,7 @@
 matches:
   # Simple text replacement
   - trigger: ":espanso"
-    form: '\n  - trigger: "{{match}}"\n    replace:'
+    form: "\n  - trigger: \"{{match}}\"\n    replace:"
 
   # Dates
   - trigger: ":date"
@@ -18,7 +18,16 @@ matches:
       - name: mydate
         type: date
         params:
-          format: "%m/%d/%Y"
+          format: "%d-%m-%Y"
+  # Dates for OrgMode
+  - trigger: ":odate"
+    replace: "{{mydate}}"
+    vars:
+      - name: mydate
+        type: date
+        params:
+          format: "[%Y-%m-%d]"
+
 
   # latex
   - trigger: "\\pd "
@@ -45,3 +54,73 @@ matches:
     replace: 'tassilo.neubauer@web.de'
   - trigger: '@tg'
     replace: 'tassilo.neubauer@gmail.com'
+  - trigger: 'gtasse'
+    replace: "Grüße\n\nTassilo"
+  - trigger: 'mfg'
+    replace: "Mit freundlichen Grüßen\n\nTassilo Neubauer"
+  - trigger: "ill"
+    replace: "i’ll"
+    propagate_case: true
+    word: true
+    
+  - trigger: ":TN"
+    replace: "Tassilo Neubauer"
+  - trigger: ":tn"
+    replace: "tassilo neubauer"
+  - trigger: ":sws."
+    replace: "😅"
+  - trigger: "x(k"
+    replace: "x⁽ᵏ⁾"
+  - trigger: "a0  "
+    replace: "a₀  "
+  - trigger: "s0  "
+    replace: "s₀  "
+  - trigger: "d0  "
+    replace: "d₀  "
+  - trigger: "f0  "
+    replace: "f₀  "
+  - trigger: "g0  "
+    replace: "g₀  "
+  - trigger: "h0  "
+    replace: "h₀  "
+  - trigger: "j0  "
+    replace: "j₀  "
+  - trigger: "k0  "
+    replace: "k₀  "
+  - trigger: "l0  "
+    replace: "l₀  "
+  - trigger: "q0  "
+    replace: "q₀  "
+  - trigger: "w0  "
+    replace: "w₀  "
+  - trigger: "e0  "
+    replace: "e₀  "
+  - trigger: "r0  "
+    replace: "r₀  "
+  - trigger: "t0  "
+    replace: "t₀  "
+  - trigger: "z0  "
+    replace: "z₀  "
+  - trigger: "u0  "
+    replace: "u₀  "
+  - trigger: "i0  "
+    replace: "i₀  "
+  - trigger: "o0  "
+    replace: "o₀  "
+  - trigger: "p0  "
+    replace: "p₀  "
+  - trigger: "y0  "
+    replace: "y₀  "
+  - trigger: "x0  "
+    replace: "x₀  "
+  - trigger: "c0  "
+    replace: "c₀  "
+  - trigger: "v0  "
+    replace: "v₀  "
+  - trigger: "b0  "
+    replace: "b₀  "
+  - trigger: "n0  "
+    replace: "n₀  "
+  - trigger: "m0  "
+    replace: "m₀  "
+
