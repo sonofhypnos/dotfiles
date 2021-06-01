@@ -667,38 +667,36 @@ exec --no-startup-id $i3-wm.program.3
 # Custom configuration
 # =========================================================================
 
-#set $wallpaper i3-wallpaper
-#
-##Screen-layout
-#set $mainDeskLayout ~/.screenlayout/mainDeskLayout.sh
-#set $laptopOnlyLayout ~/.screenlayout/laptopOnly.sh
-#set $prog ~/.screenlayout/prog.sh
-#set $doublePort ~/.screenlayout/doublePort.sh
-#set $frontLaptop ~/.screenlayout/frontLaptop.sh
-#set $tripleLand ~/.screenlayout/tripleLand.sh
-#
-##LayoutMode
-#set $layout_mode Layout Mode: [p]rog [m]ain [l]aptopOnly [d]ouble Portrait [f]rontLaptop [t]rippleLand
-#bindsym Control+$mod+$alt+L mode "$layout_mode"
-#
-#mode "$layout_mode" {
-#	bindsym p mode "default" exec $prog
-#	bindsym m mode "default" exec $mainDeskLayout
-#	bindsym l mode "default" exec $laptopOnlyLayout
-#	bindsym d mode "default" exec $doublePort
-#	bindsym f mode "default" exec $frontLaptop
-#	bindsym t mode "default" exec $tripleLand
-#
-#
-#	bindsym Escape mode "default"
-#	bindsym Return mode "default"
-#}
+set $wallpaper i3-wallpaper
+
+#Screen-layout
+set $mainDeskLayout ~/.screenlayout/mainDeskLayout.sh
+set $laptopOnlyLayout ~/.screenlayout/laptopOnly.sh
+set $prog ~/.screenlayout/prog.sh
+set $doublePort ~/.screenlayout/doublePort.sh
+set $frontLaptop ~/.screenlayout/frontLaptop.sh
+set $tripleLand ~/.screenlayout/tripleLand.sh
+
+#LayoutMode
+set $layout_mode Layout Mode: [p]rog [m]ain [l]aptopOnly [d]ouble Portrait [f]rontLaptop [t]rippleLand
+bindsym Control+$mod+$alt+L mode "$layout_mode"
+
+mode "$layout_mode" {
+	bindsym p mode "default" exec $prog
+	bindsym m mode "default" exec $mainDeskLayout
+	bindsym l mode "default" exec $laptopOnlyLayout
+	bindsym d mode "default" exec $doublePort
+	bindsym f mode "default" exec $frontLaptop
+	bindsym t mode "default" exec $tripleLand
+
+
+	bindsym Escape mode "default"
+	bindsym Return mode "default"
+}
 
 #Launch Gnome:
 # Restore GNOME's settings
-# I am not sure this is still needed after I did the clean regolith install
 exec --no-startup-id /usr/libexec/gnome-settings-daemon-localeexec
-
 
 # Fix a bug in gnome-settings-daemon: http://feeding.cloud.geek.nz/posts/creating-a-modern-tiling-desktop-environment-using-i3/
 exec --no-startup-id dconf write /org/gnome/settings-daemon/plugins/cursor/active false
@@ -741,6 +739,7 @@ mode "$main_launcher" {
 	bindsym k mode "default" exec $keep
 	bindsym c mode "default" exec $calendar
 	bindsym d mode "default" exec discord
+	bindsym 3 mode "default" exec $firefox https://i3wm.org/docs/userguide.html
 	bindsym i mode "default" exec $intellij
 	bindsym a mode "default" exec anki
 	bindsym Escape mode "default"
