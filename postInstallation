@@ -1,0 +1,80 @@
+#!/usr/bin/env bash
+#https://nicolargo.github.io/ubuntupostinstall/
+action_dummy = dpkg -l > /tmp/pkg-before.txt
+
+#add Regolith repository
+add-apt-repository ppa:regolith-linux/release -y &&
+
+
+# Add WineHQ repository
+wget -nc https://dl.winehq.org/wine-builds/Release.key -O - | sudo apt-key add -
+sudo apt-add-repository --yes --no-update "https://dl.winehq.org/wine-builds/ubuntu/"
+
+# Add Docker repository
+sudo apt install --yes curl
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+sudo add-apt-repository --yes --no-update "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+
+# Add Pop!_OS PPA
+sudo add-apt-repository --yes --no-update --enable-source ppa:system76/pop
+
+# Add KeepassXC PPA
+sudo add-apt-repository --yes --no-update --enable-source ppa:phoerious/keepassxc
+
+apt update &&
+apt install git -y &&
+apt install neovim -y &&
+apt install minecraft -y &&
+apt install apt -y &&
+apt install curl -y &&
+apt install fzf -y &&
+apt install tldr -y &&
+apt install fd-find -y &&
+apt install redshift &&
+apt install arandr &&
+snap install deja-dup --classic &&
+snap install espanso --classic &&
+apt install ranger &&
+apt install tor-browser &&
+snap install polar-bookshelf &&
+apt install flatpack
+apt install gdebi-core wget
+
+
+
+# New stuff: copied from Repository with the following link: https://github.com/strycore/dotfiles/blob/master/post-install.sh
+# The file where this comes from was intended for Ubuntu 18.04. I wasn't to careful looking into whether these work or not.
+# Install packages
+sudo apt --yes update
+sudo apt --yes full-upgrade
+sudo apt --yes install git keepassxc apt-file pavucontrol htop gimp chrome-gnome-shell vim-gnome synaptic \
+    lm-sensors kdeconnect gcdemu python-dev python3-dev python3-pip silversearcher-ag lxd lxd-tools \
+    nmap ncdu docker-ce exuberant-ctags postgresql gnash libvulkan-dev libpng-dev libwayland-dev libxcb1-dev \
+    meson ninja-build w3m devscripts git-buildpackage libgirepository1.0-dev debhelper mono-complete \
+    neofetch jstest-gtk sc-controller mesa-utils mesa-vulkan-drivers linux-tools-common linux-tools-generic \
+    winehq-staging gimp inkscape lutris virtualbox-5.2 tilix zsh cmake dconf-editor gnome-tweaks \
+    gconf-service gconf-service-backend gconf2-common libappindicator1 libc++1 libc++abi1 libgconf-2-4 libindicator7 \
+    gnome-shell-extension-pop-suspend-button pop-fonts pop-gnome-shell-theme pop-gtk-theme pop-icon-theme python-apt \
+    libsystemd-dev vulkan-utils chromium-browser picard gnome-mpv audacious gstreamer1.0-plugins-bad gstreamer1.0-plugins-good \
+    gstreamer1.0-plugins-ugly exfat-utils xbindkeys libgcc-8-dev:i386 libc6-dev:i386
+
+if [ ! -e /opt/google/chrome ]; then
+    # Install Chrome
+    wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+    sudo dpkg -i google-chrome-stable_current_amd64.deb
+    rm google-chrome-stable_current_amd64.deb
+fi
+if [ ! -e /usr/bin/discord ]; then
+    # Install Discord
+    wget -O ~/discord.deb "https://discordapp.com/api/download?platform=linux&format=deb"
+    gdebi ~/discord.deb 
+
+fi
+
+
+
+#
+#Todo:
+#automate removing already existing directories/files? (like .bashrc)
+#look into already existing software/frameworks for doing what I am doing here.
+
