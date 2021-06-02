@@ -74,7 +74,6 @@ plugins=(git
 	alias-finder
 	colored-man-pages
 	colorize
-	tmux
 	fasd
 	zsh-syntax-highlighting
 	zsh-autosuggestions
@@ -107,12 +106,26 @@ source $ZSH/oh-my-zsh.sh
 export EDITOR=nvim
 export VISUAL=nvim
 
+# Functions
+source ~/.shell/functions.sh
 
+
+# Allow local customizations in the ~/.shell_local_before file
+if [ -f ~/.shell_local_before ]; then
+    source ~/.shell_local_before
+
+# Allow local customizations in the ~/.zshrc_local_before file
+if [ -f ~/.zshrc_local_before ]; then
+    source ~/.zshrc_local_before
+fi
+
+# Add Paths
+source ~/.shell/path.sh
+
+#Aliases
 source ~/.shell/aliases.sh
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-export PATH=$PATH:~/bin
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/home/tassilo/.sdkman"
