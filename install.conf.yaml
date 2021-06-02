@@ -22,6 +22,8 @@
             glob: true
             path: config/*
     ~/.shell:
+            glob: true
+            path: shell/*
     ~/.i3status.conf:
     ~/.doom.d:
 
