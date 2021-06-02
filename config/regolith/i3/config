@@ -682,12 +682,12 @@ set $layout_mode Layout Mode: [p]rog [m]ain [l]aptopOnly [d]ouble Portrait [f]ro
 bindsym Control+$mod+$alt+L mode "$layout_mode"
 
 mode "$layout_mode" {
-	bindsym p mode "default" exec $prog
-	bindsym m mode "default" exec $mainDeskLayout
-	bindsym l mode "default" exec $laptopOnlyLayout
-	bindsym d mode "default" exec $doublePort
-	bindsym f mode "default" exec $frontLaptop
-	bindsym t mode "default" exec $tripleLand
+	bindsym --release p mode "default" exec $prog
+	bindsym --release m mode "default" exec $mainDeskLayout
+	bindsym --release l mode "default" exec $laptopOnlyLayout
+	bindsym --release d mode "default" exec $doublePort
+	bindsym --release f mode "default" exec $frontLaptop
+	bindsym --release t mode "default" exec $tripleLand
 
 
 	bindsym Escape mode "default"
