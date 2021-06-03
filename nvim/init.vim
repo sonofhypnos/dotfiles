@@ -52,6 +52,10 @@ Plug 'wakatime/vim-wakatime'
 
 " Python documentation [I can't get it to work]
 "Plug 'fs111/pydoc.vimj'
+"
+
+" Regex Highlighting
+Plug "/osyo-manga/vim-over"
 
 call plug#end()
 
