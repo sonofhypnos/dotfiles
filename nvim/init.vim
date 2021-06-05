@@ -35,6 +35,8 @@ Plug 'junegunn/fzf.vim'
 Plug 'dense-analysis/ale'
 
 
+" Vim Editing in the browser
+Plug 'raghur/vim-ghost', {'do': ':GhostInstall'}
 
 " Code Formating
 Plug 'sbdchd/neoformat'
@@ -52,10 +54,10 @@ Plug 'wakatime/vim-wakatime'
 
 " Python documentation [I can't get it to work]
 "Plug 'fs111/pydoc.vimj'
-"
+
 
 " Regex Highlighting
-Plug "/osyo-manga/vim-over"
+Plug '/osyo-manga/vim-over'
 
 call plug#end()
 
