@@ -259,8 +259,8 @@ bindsym $mod+$i3-wm.binding.take_right move workspace to output right
 set_from_resource $i3-wm.binding.split_v i3-wm.binding.split_v v
 bindsym $mod+$i3-wm.binding.split_v split vertical
 
-## Modify // Horizontal Window Orientation // <> g ##
-set_from_resource $i3-wm.binding.split_h i3-wm.binding.split_h g
+## Modify // Horizontal Window Orientation // <> h ##
+set_from_resource $i3-wm.binding.split_h i3-wm.binding.split_h h
 bindsym $mod+$i3-wm.binding.split_h split horizontal
 
 ## Modify // Window Fullscreen Toggle // <> f ##
@@ -397,16 +397,6 @@ bindsym $mod+$i3-wm.binding.sleep exec $i3-wm.program.sleep
 ###############################################################################
 # System Management
 ###############################################################################
-
-## Modify // Settings // <> s ##
-set_from_resource $i3-wm.binding.settings i3-wm.binding.settings s
-set_from_resource $i3-wm.program.settings i3-wm.program.settings gnome-control-center --class=floating_window
-bindsym $mod+$i3-wm.binding.settings exec $i3-wm.program.settings
-
-## Modify // Display Settings // <> d ##
-set_from_resource $i3-wm.binding.display i3-wm.binding.display d
-set_from_resource $i3-wm.program.display i3-wm.program.display gnome-control-center --class=floating_window display
-bindsym $mod+$i3-wm.binding.display exec $i3-wm.program.display
 
 ## Modify // Wifi Settings // <> w ##
 set_from_resource $i3-wm.binding.wifi i3-wm.binding.wifi w
@@ -712,8 +702,9 @@ set $discord discord --class=communication
 set $telegram telegram --class=communication
 set $signal signal --class=communication
 set $intellij intellij-idea-ultimate
-
-
+set $emacs emacsclient -e '(make-orgcapture-frame)'
+set $searchClip sh -c 'firefox "https://www.google.com/search?q=$(xclip -o)"'
+set $transGerman sh -c 'firefox "http://translate.google.com/#de/en/$(xclip -o)"'
 
 #Todo: make shortcut for editing this file
 
@@ -750,6 +741,9 @@ mode "$main_launcher" {
 set $killCom [class="^Chromium$"] kill
 bindsym $mod+$alt+c $killCom, exec $todoist
 bindsym Control+Shift+Escape exec gnome-system-monitor
+bindsym $mod+q exec $emacs
+bindsym $mod+s exec $searchClip
+bindsym $mod+d exec $transGerman
 
 
 #kill focused Window
