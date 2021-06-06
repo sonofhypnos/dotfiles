@@ -1,0 +1,356 @@
+<project version="4">
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="-1">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/edu/kit/informatik/view/Session.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="4830">
+              <caret line="249" column="64" selection-start-line="249" selection-start-column="64" selection-end-line="249" selection-end-column="64" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/edu/kit/informatik/presenter/post/commands/GetMail.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="252">
+              <caret line="27" column="13" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/edu/kit/informatik/presenter/post/PostCommandSupplier.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="252">
+              <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/edu/kit/informatik/presenter/post/commands/SendMail.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="252">
+              <caret line="28" column="13" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/edu/kit/informatik/presenter/post/commands/ResetPin.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="252">
+              <caret line="26" column="13" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/edu/kit/informatik/presenter/post/commands/ListPrice.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="357">
+              <caret line="35" column="64" selection-start-line="35" selection-start-column="64" selection-end-line="35" selection-end-column="64" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/edu/kit/informatik/view/parameter/AuthenticationParameter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="315">
+              <caret line="17" selection-start-line="17" selection-end-line="17" />
+              <folding>
+                <element signature="e#734#735#0" expanded="true" />
+                <element signature="e#757#758#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/edu/kit/informatik/view/parameter/BooleanParameter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="252">
+              <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="$PROJECT_DIR$/.idea" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1" />
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="TaskB" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TaskB" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TaskB" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TaskB" type="462c0819:PsiDirectoryNode" />
+              <item name="informatik" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TaskB" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TaskB" type="462c0819:PsiDirectoryNode" />
+              <item name="informatik" type="462c0819:PsiDirectoryNode" />
+              <item name="presenter" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TaskB" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TaskB" type="462c0819:PsiDirectoryNode" />
+              <item name="informatik" type="462c0819:PsiDirectoryNode" />
+              <item name="presenter" type="462c0819:PsiDirectoryNode" />
+              <item name="post" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TaskB" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TaskB" type="462c0819:PsiDirectoryNode" />
+              <item name="informatik" type="462c0819:PsiDirectoryNode" />
+              <item name="presenter" type="462c0819:PsiDirectoryNode" />
+              <item name="post" type="462c0819:PsiDirectoryNode" />
+              <item name="commands" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TaskB" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TaskB" type="462c0819:PsiDirectoryNode" />
+              <item name="informatik" type="462c0819:PsiDirectoryNode" />
+              <item name="view" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TaskB" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TaskB" type="462c0819:PsiDirectoryNode" />
+              <item name="informatik" type="462c0819:PsiDirectoryNode" />
+              <item name="view" type="462c0819:PsiDirectoryNode" />
+              <item name="command" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TaskB" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TaskB" type="462c0819:PsiDirectoryNode" />
+              <item name="informatik" type="462c0819:PsiDirectoryNode" />
+              <item name="view" type="462c0819:PsiDirectoryNode" />
+              <item name="parameter" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TaskB" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TaskB" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TaskB" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TaskB" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
+              <item name="production" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TaskB" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TaskB" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
+              <item name="production" type="462c0819:PsiDirectoryNode" />
+              <item name="TaskB" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TaskB" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TaskB" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
+              <item name="production" type="462c0819:PsiDirectoryNode" />
+              <item name="TaskB" type="462c0819:PsiDirectoryNode" />
+              <item name=".idea" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+    </panes>
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="6176000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <editor active="true" />
+    <layout>
+      <window_info active="true" content_ui="combo" x="3842" y="968" width="1076" height="931" id="Project" order="0" sideWeight="0.49894515" visible="true" weight="0.14812835" />
+      <window_info id="Structure" order="1" sideWeight="0.5010548" side_tool="true" weight="0.13247864" />
+      <window_info id="Favorites" order="2" sideWeight="0.5015723" side_tool="true" weight="0.13152805" />
+      <window_info id="Commit" order="3" />
+      <window_info id="Learn" order="4" weight="0.32959402" />
+      <window_info id="Pull Requests" order="5" />
+      <window_info id="Code Time" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="0" />
+      <window_info anchor="bottom" id="Event Log" order="1" side_tool="true" weight="0.3297062" />
+      <window_info anchor="bottom" id="Find" order="2" weight="0.32867524" />
+      <window_info anchor="bottom" id="Run" order="3" weight="0.32867524" />
+      <window_info anchor="bottom" id="Debug" order="4" weight="0.39873418" />
+      <window_info anchor="bottom" auto_hide="true" x="2282" y="18" width="356" height="1881" id="TODO" order="5" weight="0.1740347" />
+      <window_info active="true" anchor="bottom" auto_hide="true" x="3842" y="968" width="1076" height="931" id="Problems View" order="6" type="WINDOWED" weight="0.3510341" />
+      <window_info anchor="bottom" id="Inspection Results" order="7" weight="0.32979318" />
+      <window_info anchor="bottom" id="Inspection" order="8" weight="0.4" />
+      <window_info anchor="bottom" id="File Transfer" order="9" />
+      <window_info anchor="bottom" id="CheckStyle" order="10" weight="0.3370598" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.3370598" />
+      <window_info anchor="bottom" id="Profiler" order="12" weight="0.3297062" />
+      <window_info anchor="bottom" id="Database Changes" order="13" show_stripe_button="false" />
+      <window_info anchor="bottom" id="TypeScript" order="14" />
+      <window_info anchor="bottom" id="Endpoints" order="15" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Build" order="16" visible="true" weight="0.32911393" />
+      <window_info anchor="bottom" id="Internal Method Tracing" order="17" />
+      <window_info anchor="bottom" id="Flow" order="18" />
+      <window_info anchor="bottom" id="Services" order="19" show_stripe_button="false" weight="0.32911393" />
+      <window_info anchor="right" id="Database" order="0" />
+      <window_info anchor="right" id="Layout Validation" order="1" />
+      <window_info active="true" anchor="right" x="3002" y="438" width="636" height="1041" id="Documentation" order="2" side_tool="true" type="WINDOWED" visible="true" weight="0.38394585" />
+      <window_info anchor="right" id="Test Cube" order="3" />
+      <window_info anchor="right" id="aiXcoder" order="4" />
+    </layout>
+  </component>
+  <component name="Trusted.Project.Settings" hasCheckedIfOldProject="true" />
+  <component name="WindowStateProjectService">
+    <state x="2193" y="454" width="1086" height="761" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1616971039798">
+      <screen x="1920" y="420" width="1920" height="1080" />
+    </state>
+    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1611067882771" />
+    <state x="2193" y="454" width="1086" height="761" key="#com.intellij.execution.impl.EditConfigurationsDialog/1920.420.1920.1080/0.420.1920.1080/3840.0.1080.1920@1920.420.1920.1080" timestamp="1616971039798" />
+    <state x="2601" y="611" key="FileChooserDialogImpl" timestamp="1616970348333">
+      <screen x="1920" y="420" width="1920" height="1080" />
+    </state>
+    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1611145463817" />
+    <state x="2601" y="611" key="FileChooserDialogImpl/1920.420.1920.1080/0.420.1920.1080/3840.0.1080.1920@1920.420.1920.1080" timestamp="1616970348333" />
+    <state x="4224" y="371" key="FileChooserDialogImpl/1920.420.1920.1080/0.420.1920.1080/3840.0.1080.1920@3840.0.1080.1920" timestamp="1616960690144" />
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1611068353411">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1611068353411" />
+    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1611068353411">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1611068353411" />
+    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1611068353411">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1611068353411" />
+    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1611068353411">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1611068353411" />
+    <state x="2366" y="567" key="SettingsEditor" timestamp="1616970981594">
+      <screen x="1920" y="420" width="1920" height="1080" />
+    </state>
+    <state x="2366" y="567" key="SettingsEditor/1920.420.1920.1080/0.420.1920.1080/3840.0.1080.1920@1920.420.1920.1080" timestamp="1616970981594" />
+    <state width="498" height="398" key="SwitcherDM" timestamp="1616960623983">
+      <screen x="3840" y="0" width="1080" height="1920" />
+    </state>
+    <state width="498" height="398" key="SwitcherDM/1920.420.1920.1080/0.420.1920.1080/3840.0.1080.1920@3840.0.1080.1920" timestamp="1616960623983" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/edu/kit/informatik/view/Session.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4830">
+          <caret line="249" column="64" selection-start-line="249" selection-start-column="64" selection-end-line="249" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/edu/kit/informatik/presenter/post/commands/ListPrice.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="35" column="64" selection-start-line="35" selection-start-column="64" selection-end-line="35" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/edu/kit/informatik/view/parameter/BooleanParameter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/out/production/TaskB/edu/kit/informatik/Application.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="17" column="19" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/out/production/TaskB/edu/kit/informatik/Terminal.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="12" column="19" selection-start-line="12" selection-start-column="19" selection-end-line="12" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/out/production/TaskB/edu/kit/informatik/presenter/RestrictedCommand.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="21" column="22" selection-start-line="21" selection-start-column="22" selection-end-line="21" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/out/production/TaskB/edu/kit/informatik/presenter/Quit.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/edu/kit/informatik/view/parameter/AuthenticationParameter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+          <folding>
+            <element signature="e#734#735#0" expanded="true" />
+            <element signature="e#757#758#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/edu/kit/informatik/presenter/post/commands/GetMail.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="27" column="13" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/edu/kit/informatik/presenter/post/commands/ResetPin.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="26" column="13" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/edu/kit/informatik/presenter/post/PostCommandSupplier.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/edu/kit/informatik/presenter/post/commands/SendMail.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="28" column="13" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

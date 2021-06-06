@@ -1,0 +1,1000 @@
+rm edu.zip
+ls
+zip -r edu.zip edu -x *T*
+ls
+cd Installations
+ls
+suo add-apt-repository ppa:boltgolt/howdy
+sudo add-apt-repository ppa:boltgolt/howdy
+sudo apt update
+apt list --upgradable
+man apt
+vim
+sudo apt --upgradable
+apt list --upgradable
+sudo apt update
+sudo apt install howdy
+apt install v4l-utils
+sudo apt install v4l-utils
+v4l-ctl --list-devices
+sudo apt install v4l-utils
+v4l-ctl --list-devices
+sudo apt autoremove
+v4l-utils --help
+man v4l-utils
+v4l2-ctl --list-devices
+/dev/video0
+cd /dev/video0
+man /dev/video0
+sudo /dev/dideo0
+v4l2-ctl –device=/dev/video0
+v4l2-ctl –device=/dev/video0-all
+v4l2-ctl –device=/dev/video0 -all
+v4l2-ctl -all –device=/dev/video0
+v4l2-ctl –device=/dev/video0 --all
+v4l2-ctl --all
+v4l2-ctl --list-devices
+v4l2-ctl /dev/video0 --all
+v4l2-ctl --all
+v4l2-ctl –device=/dev/video0
+sudo howdy config
+sudo vim howdy config
+sudo howdy config
+v4l2-ctl --all
+v4l2-ctl --list-devices
+sudo howdy config
+sudo update-alternatives --config editor
+sudo howdy config
+sudo howdy add
+sudo howdy config
+sudo howdy add
+sudo howdy list
+sudo ls
+sudo ls
+sudo ls
+snapd
+snap
+man snap
+snap install --classic anbox-installer && anbox-installer
+sudo mokutil --sb-state
+sudo kmodsign sha512 /var/lib/shim-signed/mok/MOK.priv /var/lib/shim-signed/mok/MOK.der /lib/modules/`uname -r`/kernel/drivers/staging/android/ashmem_linux.ko
+sudo modprobe ashmem_linux
+vim openssl.cnf
+openssl req -config ./openssl.cnf         -new -x509 -newkey rsa:2048         -nodes -days 36500 -outform DER         -keyout "MOK.priv"         -out "MOK.der"
+vim openssl.cnf
+openssl req -config ./openssl.cnf         -new -x509 -newkey rsa:2048         -nodes -days 36500 -outform DER         -keyout "MOK.priv"         -out "MOK.der"
+vim openssl.cnf
+openssl req -config ./openssl.cnf         -new -x509 -newkey rsa:2048         -nodes -days 36500 -outform DER         -keyout "MOK.priv"         -out "MOK.der"
+man openssl req
+vim openssl.cnf
+openssl req -config ./openssl.cnf         -new -x509 -newkey rsa:2048         -nodes -days 36500 -outform DER         -keyout "MOK.priv"         -out "MOK.der"
+man openssl req
+vim openssl.cnf
+man openssl req
+vim openssl.cnf
+ls
+find / .config
+vim
+find / .vimrc
+find ~ .vimrc
+find ~ *vim*
+find ~ "*vim*"
+find / "*vim*"
+find / .vimrc
+find ~ .vimrc
+vim
+neovim
+nvim
+sudo apt install veovim
+sudo apt install neovim
+nvim
+convert
+pip install --user -e Installations/logitech-m720-config
+$ m720-config
+m720-config
+cd Installations
+m720 config
+m720-config
+ls
+vim logitch-m720-config
+vim logitech-m720-config
+ls
+ls -l
+cd logitech-m720-config
+ls
+vim m720_config
+cd Downloads
+cd ..
+ls
+cd Installations
+pip install --user -e /path/to/logitech-m720-config
+git clone https://github.com/fin-ger/logitech-m720-config
+pip install --user -e /path/to/logitech-m720-config
+SPC : dotspacemacs/install RET
+emacs
+cd Installations
+ls
+~$ git clone https://code.orgmode.org/bzg/org-mode.git
+git clone https://code.orgmode.org/bzg/org-mode.git
+ls
+cd
+ls
+find ~ .spacemacs
+emacs .spacemacs
+emacs myFirstOrgDocument.org
+cd Documents
+ls
+mkdir OrgmodeTesting
+cd OrgmodeTesting
+emacs MyFirstOrg.org
+openvpn
+man openvpn
+sudo openvpn --config 
+sudo openvpn --config Downloads/kit.ovpn
+emacs
+vim
+ls
+~/.vimrc
+find init.vim
+find / init.vim
+nvim
+cd /config
+cd config
+cd /
+ls
+cd config
+cd
+mkdir /config/nvim
+mkdir /config
+touch ~/.vimrc
+ls
+vim .vimrc
+vim
+emacs
+ls
+emacs myFirstOrgDocument.org
+zip -r edu.zip edu -x *Terminal*
+ls
+emacs
+sudo pip install wakatime
+which wakatime
+cd$(which wakatime)
+cd usr 
+cd /usr
+cd local
+cd bin
+emacs
+apt install lutris
+sudo apt install lutris
+vim
+find ~ vimrc
+find ~ .vimrc
+find / .vimrc
+ls
+emacs myfirstOrgDocument
+emacs myfirstOrgDocument.org
+emacs myFirstOrgDocument.org
+vim this.py
+which firefox
+cd usr
+cd /usr
+cd firefox
+man find
+cd .mozilla
+find firefox
+search hello
+firefox search hello
+firefox hello
+firefox -search hello
+firefox -search
+firefox
+cd /.local/share/FirefoxAddon
+cd .local
+cd shar
+cd share
+cd FirefoxAddon
+/.install.sh
+./install.sh
+nodeJS
+nodejs
+sudo apt install nodejs
+./install.sh
+firefox
+find 
+vfind 
+find ~ firefox
+find 
+find ~ *firefox*
+find -r *firefox*
+find / *firefox*
+sudo gedit /etc/X11/xorg.conf
+snap install telegram
+sudo apt install telegram
+sudo apt install uivisin
+sudo apt install uivision
+sudo apt install xmodules
+sudo apt install xmodulesexit
+firefox
+superpaper
+sudo apt-get install solaar-gnome3
+files
+filemanager
+manager
+file-manager
+solaar3
+sudo apt-get install solaar
+solaar
+flux
+xflux
+fluxgui
+cd Desktop/playful/i3-pomodoro
+emacs stages.py
+superpaper
+cd Desktop
+mkdir playful
+cd playful
+git clone https://gitlab.com/moritz-weber/i3-pomodoro#
+git clone https://gitlab.com/moritz-weber/i3-pomodoro.git
+ls
+ls -l
+cd i3
+cd i3-pomodoro
+ls
+cd src
+ls
+cd pomodoro
+ls
+emacs pomodoro.py
+pavucontrol
+superpaper
+vim ~/.config/i3/config
+vim ~/.config/vim/config/vimrc
+nvim ~/.config/i3/config
+xrandr
+man xrandr
+arandr
+sudo apt install arandr
+arandr
+nvim ~/.config/i3/config
+alsamixer
+pacmd list-sinks
+cd /etc
+cd pulse
+ls
+emacs default.pa
+pulseAudio
+pulseaudio
+emacs default.pa
+pavucontrol
+sudo apt install pavucontrol
+pavucontrol
+aranc
+arandr
+pavucontrol
+nvim ~/.config/i3/config
+exec
+cen
+xenec
+xen
+nvim ~/.config/i3/config
+nvim ~/.config/i3/config [A
+fluxgui
+flux
+xflux
+firefox
+nvim ~/.config/i3/config
+reboot
+nvim ~/.config/i3/config
+i3
+nvim
+nvim ~/.config/i3/config
+export XDG_CURRENT_DESKTOP=GNOME
+EXIT
+exit
+nvim ~/.config/i3/config
+emacs
+sudo apt remove pavucontrol
+nvim ~/.config/i3/config
+firefox
+nvim ~/.config/i3/config
+arandr
+nvim ~/.config/i3/config
+printf '\e[48;5;16m Backround color: green\n'
+printf '\e[K'
+printf '\e[48;5;16m Backround color: green\n'
+printf '\e[K'
+echo -e "Default \e[30;107mBlack on white")
+echo -e "Default \e[30;107mBlack on white"
+echo -e "Default \e[30;49mBlack on white"
+40
+echo -e "Default \e[30;40mBlack on white"
+echo -e "Default \e[40;40mBlack on white"
+poweroff
+gnome-system-monitor
+flameshot
+sudo snap install flameshot
+flameshot
+nvim ~/.config/i3/config
+superpaper
+feh
+sudo apt install feh
+feh
+poweroff
+man feh
+nvim ~/.config/i3/config
+superpaper
+cd .screenlayout
+ls
+mv LaptopOnly laptopOnly.sh
+arandr
+ls
+ls -a
+nvim
+cd tassilo
+arandr
+cd screenlayout
+cd .screenlayout
+ls
+nvim StandardDesk.sh
+mv StandardDesk.sh desk2land1port.sh
+ls
+./desk2land1port.sh
+nvim desk2land1port.sh
+./desk2land1port.sh
+nvim ~/.config/i3/config
+arandr
+ls
+ls -a
+cd .screenlayout
+ls
+arandr
+nvim ~/.config/i3/config
+ls -a
+gnome
+help
+gnome-help
+sudo apt install gnome-tweaks
+sudo apt install gnome-tweak-tool
+nvim ~/.config/i3/config
+cd usr
+ls
+cd /
+cd usr
+ls
+cd libexec
+ls
+which gnome-tweaks
+cd which gnome-tweaks
+which gnome-tweaks
+nvimwhich gnome-tweaks
+which gnome-tweaks
+nvim $(which gnome-tweaks)
+gnome-tweak-control
+gnome-tweak
+gnome-tweak-u
+gnome-tweak-uti
+gnome-tweak-util
+xev
+xen
+nex
+xev
+nvim ~/.config/i3/config
+xdotool search -class communication
+xdotool search -class Firefox
+xdotool search -class todoist
+xdotool search -class Todoist
+xdotool search -class communication
+xdotool search -class
+xprop
+xdotool
+getwindowname
+xdotool getwindowname
+xdotool getwindowname Allein: Todoist
+xdotool getwindowname 1
+xdotool getwindowname 2
+window
+man xdotool
+xdotool search .
+xdotool
+xdotool getwindowname search .
+man xdotool
+x11
+X11
+x
+man x
+xprop
+exiot
+exit
+firefo
+firefox
+nvim
+neovim
+sudo apt install neovim
+neovim-qt
+sudo snap install neovim-qt
+xprop
+man chromium
+chromium --help
+gtk
+man gtk
+Gtk
+GTK+
+gtk+ 
+gtk+
+gtk --help
+chromium --help
+nvim ~/.config/i3/config
+prop
+xprop
+nvim ~/.config/i3/config
+xprop
+man xprop
+xprop 
+nvim ~/.config/i3/config
+arandr
+whatsapp
+Chromium
+chromium
+shutdown
+arandr
+ls
+ls -l
+ls -a
+cd .config
+ls
+ls -a
+cd nvim
+ls
+cd pack
+ls
+cd ..
+ls -l -a
+cd
+cd Installations
+ls
+npm install -g tldr
+npm
+apt-cache show npm
+sudo apt install npm
+npm install -g tldr
+sudo npm install -g tldr
+tldr man
+tldr find
+cd
+cd Desktop
+ls
+cd
+find ~ *missing*
+find -r *missing*
+ls
+mkdr Programming
+mkdir Programming
+ls
+cd Programming
+mkdir MissingSemester
+cd MissingSemester
+mkdir ShellScripting
+cd ShellScripting
+nvim controlFlow.sh
+cd Downloads
+nvim vimrc
+cd .config
+cd nvim
+man vim
+man nvim
+tldr nvim
+man nvim
+curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+vim-plug
+man vim-plug
+man PlugInstall
+PlugInstall --help
+sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
+       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
+       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+sudo sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
+       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+PlugInstall surround
+vim-surround
+PlugInstall vim-surround
+cd .config
+cd nvim
+Pluginstall vim-surround
+cd 
+cd .var
+cd share
+cd /share
+cd .local
+cd share
+ls
+cd nvim
+ls
+cd site
+ls
+cd autoloas
+ls | xargs rm
+ls | xargs cd
+ls
+ls | xargs cd
+cd autoload
+ls
+nvim plug.vim
+nvim ~/.config/i3/config
+false || echo "OOps"
+cd Programming
+cd MissingSemester
+vim prog
+cd 
+cd .config
+cd vim
+ls
+cd
+find ~ init
+find / init.vim
+sudo nvim /etc/vim/vimrc.local
+sudo nvim /etc/vim/vimrc
+.vimrc
+nvim .vimrc
+ls
+ls -a
+cp .vimrc .config/nvim/init.vim
+cd _$
+cd .config/nvim
+ls
+nvim init.vim
+nvim Downloads/vimrc
+nvim ~/Downloads/vimrc
+nvim init.vim
+cd .config
+cd
+PlugInstall
+pip install yapf
+cd .config
+cd nvim
+ls
+nvim init.vim
+cd
+arandr
+firefox
+openvpn
+cd Documents
+nvim start-VPN.sh
+./start-VPN.sh
+sudo ./start-VPN.sh
+ls
+sudo ./start-VPN.sh
+sudo su; ./start-VPN.sh
+chmod
+chmod -xr start-VPN.sh
+./start-VPN.sh
+ls -l | grep -rE start
+ls -l | grep start
+man chmod
+chmod +xr start-VPN.sh
+./start-VPN.sh
+nvim start-VPN.sh
+./start-VPN.sh
+cd Documents
+nvim start-VPN.sh
+cd Documents
+nvim startOpenVPN.sh
+nvim start-openVPN.sh
+nvim start-VPN.sh
+./start-VPN.sh
+nvim start-VPN.sh
+./start-VPN.sh
+nvim start-VPN.sh
+./start-VPN.sh
+nvim start-VPN.sh
+./start-VPN.sh
+nvim start-VPN.sh
+./start-VPN.sh
+:wq
+./start-VPN.sh
+nvim start-VPN.sh
+printf "fir\nfjfj"
+printf 'fif\nfjf'
+nvim start-VPN.sh
+./start-VPN.sh
+nvim start-VPN.sh
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+nvim start-VPN.sh
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+nvim start-VPN.sh
+openvpn --config ~/Downloads/kit.ovpn 
+openvpn --config ~/Downloads/kit.ovpn
+nvim start-VPN.sh
+./start-VPN.sh
+openvpn --config ~/Downloads/kit.ovpn
+openVPN
+openvpn
+sudo apt install network-manager-openvpn-gnome
+network-manager-openvpn-gnome
+./start-VPN.sh
+'FZyzEtmP_MG72CYm:'
+echo 'FZyzEtmP_MG72CYm:'
+openvpn --config ~/Downloads/kit.ovpn
+resolfconf
+sudo apt install openresolv
+./start-VPN.sh
+openvpn --config ~/Downloads/kit.ovpn
+nvim start-VPN.sh
+./start-VPN.sh
+openvpn --config ~/Downloads/kit.ovpn --config /etc/openvpn/update-systemd-resolved.conf
+cd /etc
+ls
+openvpn --config ~/Downloads/kit.ovpn --config /etc/openvpn/update-systemd-resolved.conf
+cd /etc
+cd openvpn
+ls
+nvim update-resov-conf
+nvim update-resolv-conf
+nvim update-systemd-resolved.conf
+touch update-systemd-resolved.conf
+sudo touch update-systemd-resolved.conf
+nvim update-systemd-resolved.conf
+ls
+ls -l
+chmod +xw update-systemd-resolved.conf
+sudo chmod +xw update-systemd-resolved.conf
+nvim update-systemd-resolved.conf
+sudo chmod +xw update-systemd-resolved.conf
+ls
+ls -l
+sudo chmod +w update-systemd-resolved.conf
+ls
+ls -l
+man chmod
+sudo su
+ls
+rm update-systemd-resolved.comf
+sudo rm update-systemd-resolved.comf
+openvpn --config ~/Downloads/kit.ovpn --config /etc/openvpn/update-systemd-resolved.conf
+mdir scripts
+mkdir scripts
+sudo mkdir scripts
+mv update-systemd-resolved.conf /scripts/update-systemd-resolved.conf
+mv update-systemd-resolved.conf scripts/update-systemd-resolved.conf
+sudo mv update-systemd-resolved.conf scripts/update-systemd-resolved.conf
+openvpn --config ~/Downloads/kit.ovpn --config /etc/openvpn/upd:ate-systemd-resolved.conf
+ls
+rm scripts
+rm -r scripts
+ls
+sudo rm -r scripts
+ls
+cd MissingSemester
+zip -r edu.zip edu -x *Terminal*
+ls
+cd IdeaProjects
+ls
+cd FinalAssignment1.0
+ls
+zip -r edu.zip edu -x *Terminal*
+flameshot
+nvim ~/.config/i3/config
+nvim init.vim
+nvim /.config/nvim/init.vim
+nvim /.config/ddnvimo/init.vim
+cd /.config
+nvim .config/ddnvimo/init.vim
+cd .config
+ls
+cd nvim
+ls
+nvim .config/nvim/init.vim
+nvim ~/.config/nvim/init.vim
+arandr
+sudo apt install ranger
+sudo dpkg-reconfigure libdvd-pkg
+sudo apt-get update
+ranger
+sudo pip install wakatime
+git clone https://github.com/gjsheep/bash-wakatime.git
+source path/to/bash-wakatime.sh
+ls -a
+sourse bash-wakatime.sh
+source bash-wakatime.sh
+source bash-wakatime
+cd .wakatime
+ls
+cd wakatime-cli
+ls
+cd
+find ~ wakatime.sh
+find ~ bash-wakatime.sh
+find ~ *.sh
+find ~ "*.sh"
+tldr find
+find root_path -name *.sh
+find / -name *.sh
+sudo apt install rescutime
+sudo apt install rescuetime
+sudo apt-get update
+sudo apt install gdebi-core
+cd Downloads
+gdebi
+gdebi-gtk
+sudo apt install gdebi
+find / -name *rescuetime*
+find ~ -name *rescuetime*
+rescuetime
+wakatime
+wakatime --today
+nvim ~/.config/i3/config
+rescuetime
+flameshot
+nvim ~/.config/i3/config
+gnome-tweak-control
+gnome-tweaks
+ranger
+cd Documents
+cd Notizen
+cd ls
+ls | xarg cd
+ls | xargs cd
+cd Programmieren
+ls
+emacs notesFinal2.org
+ranger
+ls
+mv bash-wakatime ~/Installations/bash-wakatime
+ls
+ranger
+arandr
+ranger
+man sleep
+man shutdown
+man halt
+pm-hibernate
+sudo apt install pm-utils
+pm-hibernate
+sudo pm-hibernate
+-c
+man pm-hibernate
+sudo su
+flameshot
+arandr
+xev
+arandr
+nvim ~/.config/i3/config
+arandr
+nvim ~/.config/nvim/init.vim
+cd .screenlayout
+ls
+nvim ~/.config/nvim/init.vim
+ls
+nvim ~/.config/nvim/init.vim
+pip3 install --user --upgrade pynvim
+cd .lo
+map f <Plug>Sneak_f
+map F <Plug>Sneak_F
+map t <Plug>Sneak_t
+map f <Plug>Sneak_f
+map F <Plug>Sneak_F
+map t <Plug>Sneak_t
+nvim ~/.config/nvim/init.vim
+ls
+nvim ~/.config/i3/config
+kd
+ranger
+pm-hybernate
+pm-hibernate
+sudo pm-hibernate
+pm-suspend
+sudo pm-suspend
+nvim ~/.config/i3/config
+ranger
+dconf-editor
+apt install -y i3 gnome-flashback
+sudo install gnome-flashback
+apt install -y gnome-flashback
+sudo apt install -y gnome-flashback
+git clone 
+git clone https://github.com/glsorre/i3-gnome
+ls
+make install
+cd i3-gnome
+make install
+sudo make install
+sudo rebood
+sudo reboot
+pm-suspend
+sudo pm-suspend
+sudo apt install i3 gnome-flashback build-essential
+ls
+clone https://github.com/deuill/i3-gnome-flashback.git
+cd /
+ls
+cd etc
+ls
+git clone https://github.com/deuill/i3-gnome-flashback.git
+cd ~
+git clone https://github.com/deuill/i3-gnome-flashback.git
+cd
+ls
+[A apt install i3-gnome-flashback build-essential
+cd i3-gnome-flashback
+ls
+sudo make install
+sudo reboot
+xev
+sudo apt install paprefs
+sudo list
+apt list
+sudo apt-get update
+paprefs
+pulseaudio -k
+pulseaudio -D
+pulseaudio
+xprop
+superpaper
+fluxgui
+xflux
+fluxgui
+xflux
+kill xflux
+xflux kill
+fluxgui
+ranger
+superpaper
+ranger
+sudo shutdown
+ranger
+nvim
+ranger

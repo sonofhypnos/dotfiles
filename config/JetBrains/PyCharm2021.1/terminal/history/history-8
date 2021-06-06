@@ -1,0 +1,1000 @@
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+nvim start-VPN.sh
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+nvim start-VPN.sh
+openvpn --config ~/Downloads/kit.ovpn 
+openvpn --config ~/Downloads/kit.ovpn
+nvim start-VPN.sh
+./start-VPN.sh
+openvpn --config ~/Downloads/kit.ovpn
+openVPN
+openvpn
+sudo apt install network-manager-openvpn-gnome
+network-manager-openvpn-gnome
+./start-VPN.sh
+'FZyzEtmP_MG72CYm:'
+echo 'FZyzEtmP_MG72CYm:'
+openvpn --config ~/Downloads/kit.ovpn
+resolfconf
+sudo apt install openresolv
+./start-VPN.sh
+openvpn --config ~/Downloads/kit.ovpn
+nvim start-VPN.sh
+./start-VPN.sh
+openvpn --config ~/Downloads/kit.ovpn --config /etc/openvpn/update-systemd-resolved.conf
+cd /etc
+ls
+openvpn --config ~/Downloads/kit.ovpn --config /etc/openvpn/update-systemd-resolved.conf
+cd /etc
+cd openvpn
+ls
+nvim update-resov-conf
+nvim update-resolv-conf
+nvim update-systemd-resolved.conf
+touch update-systemd-resolved.conf
+sudo touch update-systemd-resolved.conf
+nvim update-systemd-resolved.conf
+ls
+ls -l
+chmod +xw update-systemd-resolved.conf
+sudo chmod +xw update-systemd-resolved.conf
+nvim update-systemd-resolved.conf
+sudo chmod +xw update-systemd-resolved.conf
+ls
+ls -l
+sudo chmod +w update-systemd-resolved.conf
+ls
+ls -l
+man chmod
+sudo su
+ls
+rm update-systemd-resolved.comf
+sudo rm update-systemd-resolved.comf
+openvpn --config ~/Downloads/kit.ovpn --config /etc/openvpn/update-systemd-resolved.conf
+mdir scripts
+mkdir scripts
+sudo mkdir scripts
+mv update-systemd-resolved.conf /scripts/update-systemd-resolved.conf
+mv update-systemd-resolved.conf scripts/update-systemd-resolved.conf
+sudo mv update-systemd-resolved.conf scripts/update-systemd-resolved.conf
+openvpn --config ~/Downloads/kit.ovpn --config /etc/openvpn/upd:ate-systemd-resolved.conf
+ls
+rm scripts
+rm -r scripts
+ls
+sudo rm -r scripts
+ls
+cd MissingSemester
+zip -r edu.zip edu -x *Terminal*
+ls
+cd IdeaProjects
+ls
+cd FinalAssignment1.0
+ls
+zip -r edu.zip edu -x *Terminal*
+flameshot
+nvim ~/.config/i3/config
+nvim init.vim
+nvim /.config/nvim/init.vim
+nvim /.config/ddnvimo/init.vim
+cd /.config
+nvim .config/ddnvimo/init.vim
+cd .config
+ls
+cd nvim
+ls
+nvim .config/nvim/init.vim
+nvim ~/.config/nvim/init.vim
+arandr
+sudo apt install ranger
+sudo dpkg-reconfigure libdvd-pkg
+sudo apt-get update
+ranger
+sudo pip install wakatime
+git clone https://github.com/gjsheep/bash-wakatime.git
+source path/to/bash-wakatime.sh
+ls -a
+sourse bash-wakatime.sh
+source bash-wakatime.sh
+source bash-wakatime
+cd .wakatime
+ls
+cd wakatime-cli
+ls
+cd
+find ~ wakatime.sh
+find ~ bash-wakatime.sh
+find ~ *.sh
+find ~ "*.sh"
+tldr find
+find root_path -name *.sh
+find / -name *.sh
+sudo apt install rescutime
+sudo apt install rescuetime
+sudo apt-get update
+sudo apt install gdebi-core
+cd Downloads
+gdebi
+gdebi-gtk
+sudo apt install gdebi
+find / -name *rescuetime*
+find ~ -name *rescuetime*
+rescuetime
+wakatime
+wakatime --today
+nvim ~/.config/i3/config
+rescuetime
+flameshot
+nvim ~/.config/i3/config
+gnome-tweak-control
+gnome-tweaks
+ranger
+cd Documents
+cd Notizen
+cd ls
+ls | xarg cd
+ls | xargs cd
+cd Programmieren
+ls
+emacs notesFinal2.org
+ranger
+ls
+mv bash-wakatime ~/Installations/bash-wakatime
+ls
+ranger
+arandr
+ranger
+man sleep
+man shutdown
+man halt
+pm-hibernate
+sudo apt install pm-utils
+pm-hibernate
+sudo pm-hibernate
+-c
+man pm-hibernate
+sudo su
+flameshot
+arandr
+xev
+arandr
+nvim ~/.config/i3/config
+arandr
+nvim ~/.config/nvim/init.vim
+cd .screenlayout
+ls
+nvim ~/.config/nvim/init.vim
+ls
+nvim ~/.config/nvim/init.vim
+pip3 install --user --upgrade pynvim
+cd .lo
+map f <Plug>Sneak_f
+map F <Plug>Sneak_F
+map t <Plug>Sneak_t
+map f <Plug>Sneak_f
+map F <Plug>Sneak_F
+map t <Plug>Sneak_t
+nvim ~/.config/nvim/init.vim
+ls
+nvim ~/.config/i3/config
+kd
+ranger
+pm-hybernate
+pm-hibernate
+sudo pm-hibernate
+pm-suspend
+sudo pm-suspend
+nvim ~/.config/i3/config
+ranger
+dconf-editor
+apt install -y i3 gnome-flashback
+sudo install gnome-flashback
+apt install -y gnome-flashback
+sudo apt install -y gnome-flashback
+git clone 
+git clone https://github.com/glsorre/i3-gnome
+ls
+make install
+cd i3-gnome
+make install
+sudo make install
+sudo rebood
+sudo reboot
+pm-suspend
+sudo pm-suspend
+sudo apt install i3 gnome-flashback build-essential
+ls
+clone https://github.com/deuill/i3-gnome-flashback.git
+cd /
+ls
+cd etc
+ls
+git clone https://github.com/deuill/i3-gnome-flashback.git
+cd ~
+git clone https://github.com/deuill/i3-gnome-flashback.git
+cd
+ls
+[A apt install i3-gnome-flashback build-essential
+cd i3-gnome-flashback
+ls
+sudo make install
+sudo reboot
+xev
+sudo apt install paprefs
+sudo list
+apt list
+sudo apt-get update
+paprefs
+pulseaudio -k
+pulseaudio -D
+pulseaudio
+xprop
+superpaper
+fluxgui
+xflux
+fluxgui
+xflux
+kill xflux
+xflux kill
+fluxgui
+ranger
+superpaper
+ranger
+sudo shutdown
+ranger
+nvim
+ranger
+kill flux
+kill fluxgui
+sudo kill fluxgui
+which fluxgui
+ranger
+arandr
+uptime
+whoami
+w
+du
+cal
+d
+free
+finger user
+finger
+man finger
+finger -info
+apt-info finger
+uname -a
+whereis app
+whereis intellij
+whereis intellij-idea-ultimate
+df
+more file
+ls
+more hellotext.txt
+more hello.txt
+man more
+less
+man les
+man less
+ln
+man ln
+ls
+cd Programming
+ls
+cd ls
+xarg
+ls xarg
+man xargs
+ls 
+ls | xargs cd
+ls | cd xargs
+ls xargs
+tldr xargs
+ls
+ls | xargs cd
+ls
+ls | xargs echo
+cat ls
+cat !(ls)
+cat !(ls) | xargs cd
+ls
+cd MissingSemester
+ls
+mkdir gitExperiment
+ls
+cd gitExperiment
+ls
+git init
+ls
+ls -a
+git help init
+git status
+echo "hello world"> hello.txt
+ls
+git add hello.txt
+ls
+git status
+help git
+git help
+nvim ~/.config/i3/config
+apt remove fluxgui
+sudo apt remove fluxgui
+apt fluxgui
+whereis fluxgui
+ls
+cd Installations
+cd neo-awt-hack
+ls
+intellij-idea-ultimate
+ls
+ls | xargs nvim
+cd -
+cd Installations
+cd neo-awt-hack
+ls
+mvn clean package
+sudo apt install maven
+mvn clean package
+ls
+man mvn clean
+clean
+mvn clean
+cd ..
+mvn clean neo-awt-hack
+man mvn
+cd ..
+cd Installations
+cd neo-awt-hack
+ls
+ls | xargs nvim
+mvn clean package
+cd
+cd Installations
+mvn clean neo-awt hack
+mvn clean neo-awt-hack
+cd 
+ls
+cd Installations
+cd neo-awt-hack
+ls
+mvn clean install neo2-awt-hack-0.5-java8oracle.jar
+cd
+cd java
+cd -
+cd java
+ls
+cd awt
+ls
+cd event
+ls
+cd KeyEvent.class
+nvim KeyEvent.class
+cd -
+cd /Programming/MissingSemester
+cd Programming/MissingSemester
+ls
+man mv
+man rename
+rename gitExperiment gitExp .
+man rename
+mv gitExperiment gitExp
+ls
+gitExp
+cd gitExp
+git commit
+$HOME$
+$HOME
+git config --global user.name "Tassilo Neubauer"
+git config --global user.email tassilo.neubauer@gmail.com
+export EDITOR=nvim
+git config --global core.editor nvim
+cd
+cd /usr/share/dict/words
+cd /usr/share/dict
+ls
+cat words
+man grep
+cat words | grep -E s
+cat words | grep -E sss
+cat words | grep -E ss
+cat words | grep -E [s]{3}
+cat words | grep -E [s.]{3}
+cat words | grep -E [s.]*
+cat words | grep -E s*$
+cat words | grep -E s.*$
+cat words | grep -E [s.*]{3}$
+cat words | grep -E [s.*]{1-3}$
+man sed
+cat words | grep -E ss
+cat words | grep -E s{2}
+cat words | grep -E st+{2}
+cat words | grep -E stt+{2}
+cat words | grep -E stt+
+cat words | grep -E tt+
+cat words | grep -E (tt)+
+cat words | grep -E [tt]+
+cat words | grep -E {tt}+
+cat words | grep -E {st.}*
+cat words | grep -E {st.}+
+cat words | grep -E (st.)+
+cat words | grep -E '(st.)+'
+cat words | grep -E '(st.){2}'
+cat words | grep -E '(st.*){2}'
+cat words | grep -E '(.*s.*){2}'
+cat words | grep -E '(.*(s).*){2}'
+cat words | grep -E '(.*s.*){3}'
+cat words | grep -E '(.*s.*){3}' | grep -E '[^'s]$'
+cat words | grep -E '[^'s]$'
+cat words | grep -E '['s]$'
+cat words | grep -E ''s$'
+cat words | grep -E '/'s$'
+cat words | grep -E 's$'
+cat words | grep -E '’s$'
+cat words | grep -E ''s$'
+cat words | grep -E 's$
+cat words | grep -E '
+cat words | grep -E "'"
+cat words | grep -E '(.*s.*){3}' | grep -E '\''
+cat words | grep -E '(.*s.*){3}' | grep -E '[']'
+cat words | grep -E '(.*s.*){3}' | grep -E '["']'
+cat words | grep -E '(.*s.*){3}' | grep -E "[']"
+cat words | grep -E '(.*s.*){3}' | grep -E "[^'s]$"
+log show
+jounalctl
+journalctl
+ls -l
+ls -l | grep -E a
+ls -l | grep -E 
+journalctl | grep -E Startup
+journalctl | grep -E 'Startup finished in \d*ms\.'
+journalctl | grep -E 'Startup finished in *ms\.$' | less
+journalctl | grep -E 'Startup finished' | less
+journalctl | grep -E 'Startup finished'
+journalctl | grep -E 'Startup finished in'
+journalctl | grep -E 'ished in'
+ls
+ls | grep b
+ls | xargs | grep b
+ls | xargs echo | grep b
+ls | xargs echo
+ls | xargs cat
+gnuplot
+R
+sudo apt install r-base-core
+sed
+man sed
+man tr
+tldr tr
+cat words | "tr "[:upper:]" "[:lower:]" | grep -E '(.*s.*){3}' | grep -E "[']"
+cat words | "tr "[:upper:]" "[:lower:]" | grep -E '(.*s.*){3}'
+cat words | tr "[:upper:]" "[:lower:]" | grep -E '(.*s.*){3}'
+cat words | tr "[:upper:]" "[:lower:]" | grep -E '(.*s.*){3}' | grep -E "'s$"
+cat words | tr "[:upper:]" "[:lower:]" | grep -E '(.*s.*){3}' | grep -E "^'s$"
+cat words | tr "[:upper:]" "[:lower:]" | grep -E '(.*s.*){3}' | grep -E "[^'s]$"
+'cat words | tr "[:upper:]" "[:lower:]" | grep -E '(.*s.*){3}' | grep -E "[^'s]$"'
+ls
+cd 
+cd Programming/MissingSemester
+touch wrangling
+vim wrangling
+nvim wrangling
+echo 'cat words | tr "[:upper:]" "[:lower:]" | grep -E '(.*s.*){3}' | grep -E "[^'s]$"'>wrangling
+echo "cat words | tr "[:upper:]" "[:lower:]" | grep -E '(.*s.*){3}' | grep -E "[^'s]$"">wrangling
+echo 'cat words | tr "[:upper:]" "[:lower:]" | grep -E \'(.*s.*){3}\' | grep -E "[^'s]$"'>wrangling
+echo 'cat words | tr "[:upper:]" "[:lower:]" | grep -E \'(.*s.*){3}\' | grep -E "[^'s]$"' > wrangling
+'cat words | tr "[:upper:]" "[:lower:]" | grep -E \'(.*s.*){3}\' | grep -E "[^'s]$"' > wrangling
+'cat words | tr "[:upper:]" "[:lower:]" | grep -E \'\(.*s.*\){3}\' | grep -E "[^'s]$"' > wrangling
+echo 'cat words | tr "[:upper:]" "[:lower:]" | grep -E \'\(.*s.*\){3}\' | grep -E "[^'s]$"' > wrangling
+echo 'cat words | tr "[:upper:]" "[:lower:]" | grep -E \'\(.*s.*\){3}\' | grep -E "[^'s]$"'>wrangling
+echo 'cat words | tr "[:upper:]" "[:lower:]" | grep -E \'\(.*s.*\){3}\' | grep -E "[^'s]$"' > wrangling
+echo 'cat words | tr "[:upper:]" "[:lower:]" | grep -E \'\(.*s.*\){3}\' | grep -E "[^\'s]$"' > wrangling
+nvim datawrangling
+nvim wrangling
+nvim
+nvim wrangling
+cat wrangling
+./wrangling
+chmod +xr ./wrangling
+./wrangling
+chmod +xr wrangling
+./wrangling
+ls
+.\wrangling
+./wrangling
+./wrangling 
+ls h
+ls -l
+./wrangling 
+gpaste
+sudo apt install diodon
+diodon
+ls
+cd
+cd -
+ls
+cd gitExp
+ls
+git status
+commit
+git commit
+.initvim
+cd
+ls
+.initvim
+nvim /.config/nvim/init.vim
+cd /.config/nvim/
+cd .config/nvim/
+ls
+nvim init.vim
+tldr find
+find ~ -name .ideavimrc
+find ~ -name .ideavimrc | xargs cd
+echo 'Programming' | cd
+ls
+cd !(find ~ -name.ideavimrc)
+$1
+find ~ -name .ideavimrc
+$2
+$1
+find ~ -name .ideavimrc
+$1
+0
+find ~ -name .ideavimrc > nvim
+find ~ -name .ideavimrc | xargs nvim
+nvim /.config/nvim/init.vim
+cd /.config/nvim/
+cd /.config/nvim
+nvim init.vim
+find ~ -name idea.sh
+find / -name idea.sh
+cd snap
+cd
+cd snap
+cd intellij-idea-ultimate
+ls
+cd 282
+ls
+ls -a
+cd bin
+cd .
+cd ..
+ls
+cd 269
+la
+ls
+sudo find ~ -name idea.sh
+sudo find / -name idea.sh
+cd /snap/intellij-idea-ultimate/282/bin
+ls
+nvim idea.sh
+cd
+ls
+cd Installations
+neo-awt-hack
+mkdir neo-awt-hack
+ls
+cd neo-awt-hack
+cd -
+cd /snap/intellij-idea-ultimate/282/bin
+nvim idea.sh
+sudo nvim idea.sh
+ls
+ls -l
+chmod +w idea.sh
+ls
+ls -l
+sudo chmod +w idea.sh
+ls -l
+sudo su
+nvim /.config/nvim/init.vim
+nvim .config/nvim/init.vim
+nvim ~/.config/nvim/init.vim
+cd /snap/intellij-idea-ultimate/282/bin
+nvim idea.sh
+vim idea.sh
+sudo vim idea.sh
+ls -l
+sudo su 
+sudo vim /snap/intellij-idea-ultimate/282/bin/idea.sh
+sudo chmod +w /snap/intellij-idea-ultimate/282/bin/idea.sh
+ls
+ls -l
+sudo su
+sudoedit idea.sh
+sudo umount idea.sh
+sudo umount /snap/intellij-idea-ultimate/282
+sudo umount -f /snap/intellij-idea-ultimate/282
+ls
+cd .
+cd ..
+ls
+sudo umount -f /snap/intellij-idea-ultimate/282
+ls
+sudo unsqashfs /var/lib/snapd/intellij-idea-ultimate_282.snap
+sudo unsquashfs /var/lib/snapd/intellij-idea-ultimate_282.snap
+cd /var
+cd lib
+cd snapd
+ls
+cd snaps
+ls
+sudo unsquashfs /var/lib/snapd/snaps/intellij-idea-ultimate_282.snap
+squashfs-root
+ls
+cd
+ls
+sudo find / idea.sh
+sudo find / -name idea.sh
+/var/lib/snapd/snaps/squashfs-root/bin/idea.sh
+nvim /var/lib/snapd/snaps/squashfs-root/bin/idea.sh
+sudo nvim /var/lib/snapd/snaps/squashfs-root/bin/idea.sh
+/var/lib/snapd/snaps/squashfs-root/bin/idea.sh
+sudo nvim /var/lib/snapd/snaps/squashfs-root/bin/idea.sh
+/var/lib/snapd/snaps/squashfs-root/bin/idea.sh
+sudo nvim /var/lib/snapd/snaps/squashfs-root/bin/idea.sh
+/var/lib/snapd/snaps/squashfs-root/bin/idea.sh
+sudo nvim /var/lib/snapd/snaps/squashfs-root/bin/idea.sh
+find vmoptions
+find / -name vmoptions
+sudo find / -name *vmoptions*
+pycharm.vmoptions
+/snap/intellij-idea-ultimate/269/bin/idea64.vmoptions
+/snap/intellij-idea-ultimate/269/bin/idea64.vmoptions
+cd /snap/intellij-idea-ultimate/269/bin/idea64.vmoptions
+nvim /snap/intellij-idea-ultimate/269/bin/idea64.vmoptions
+sudo nvim /var/lib/snapd/snaps/squashfs-root/bin/idea.sh
+nvim /snap/intellij-idea-ultimate/269/bin/idea64.vmoptions
+/var/lib/snapd/snaps/squashfs-root/bin/idea.sh
+/var/lib/snapd/snaps/squashfs-root/bin/
+cd /var/lib/snapd/snaps/squashfs-root/bin/
+ls
+nvim idea.vmoptions
+intellij
+intellij-idea-ultimate
+cd Installations
+cd neo-awt-hack
+cd java
+cd key
+ls
+cd awt
+cd event
+ls
+cd 
+nvim 'KeyEvent$.class'
+nvim KeyEvent$.class
+nvim KeyEvent$1.class
+nvim 'KeyEvent$1.class'
+ls | grep 1
+cd -
+ls | grep 2
+ls | grep 1
+ls | grep 1 | xargs nvim
+/var/lib/snapd/snaps/squashfs-root/bin/
+cd /var/lib/snapd/snaps/squashfs-root/bin/
+ls
+sudo nvim idea.vmoptions
+/var/lib/snapd/snaps/squashfs-root/bin/
+nvim /var/lib/snapd/snaps/squashfs-root/bin/idea.sh
+sudo nvim /var/lib/snapd/snaps/squashfs-root/bin/idea.sh
+/var/lib/snapd/snaps/squashfs-root/bin/
+/var/lib/snapd/snaps/squashfs-root/bin/idea.sh
+find / -name .vmoptions
+sudo find / -name .vmoptions
+sudo find / -name *.vmoptions*
+sudo find / -name '*.vmoptions*'
+ls
+idea64.vmoptions
+nvim idea64.vmoptions
+sudo nvim idea64.vmoptions
+/var/lib/snapd/snaps/squashfs-root/bin/idea.sh
+sudo nvim idea64.vmoptions
+sudo nvim /var/lib/snapd/snaps/squashfs-root/bin/idea.sh
+sudo nvim idea64.vmoptions
+/var/lib/snapd/snaps/squashfs-root/bin/idea.sh
+sudo nvim /var/lib/snapd/snaps/squashfs-root/bin/idea.sh
+/var/lib/snapd/snaps/squashfs-root/bin/idea.sh
+sudo nvim /var/lib/snapd/snaps/squashfs-root/bin/idea.sh
+/var/lib/snapd/snaps/squashfs-root/bin/idea.sh
+sudo nvim /var/lib/snapd/snaps/squashfs-root/bin/idea.sh
+/var/lib/snapd/snaps/squashfs-root/bin/idea.sh
+find ~ rt.jar
+find ~ -name rt.jar
+find ~ -name *rt.jar
+shutdown
+sudo shutdown
+ranger
+whereis fluxgui
+cd whereis fluxgui
+cd !(cd whereis fluxgui)
+cd $(whereis fluxgui)
+cd $(whereis fluxgui | grep usr)
+whereis fluxgui | grep usr
+cd .local
+cd bin
+ls
+rm -r fluxgui
+ls
+rm -r xflux
+ls
+cd
+cd /usr
+cd local
+cd bin
+ls
+rm -r xflux
+sudo rm -r xflux
+sudo rm -r fluxgui
+sudo mksquashfs sqqashfs-root intellij-idea-ultimate_282.snap
+sudo mksquashfs squashfs-root intellij-idea-ultimate_282.snap
+sudo mksquashfs /var/lib/snapd/snaps/bin/squashfs-root intellij-idea-ultimate_282.snap
+sudo mksquashfs /var/lib/snapd/snaps/squashfs-root intellij-idea-ultimate_282.snap
+cd var/lib/snapd/snaps/sqashfs-root
+cd /var/lib/snapd/snaps/sqashfs-root
+cd /var/lib/snapd/snaps/
+ls
+sudo cp intellij-idea-ultimate_282.snap /var/lib/snapd/snaps/intellij-idea-ultimate_282.snap
+sudo mount -t squashfs -o ro,nodev,relatime,x-gdu.hide /var/lib/snapd/snaps/intellij-idea-ultimate_282.snap /snap/intellij-idea-ultimate/282
+sudo apt install redshift
+redshift
+ranger
+redshift
+cd Programming/MissingSemester/GitExp
+cd Programming/MissingSemester
+ls
+cd gitExp
+ls
+git commit
+git status
+ls
+cat hello.txt
+git log
+git log --all --graph --decorate
+echo "another line" >> hello.txt
+cat hello.txt
+git commit
+git add hello.txt
+git commit
+git log --all --graph --decorate
+git checkout 6bb0
+cat hello.txt
+git log --all --graph --decorate
+vim hello.txt
+nvim hello.txt
+git log --all --graph --decorate
+git checkout 677
+git checkout 6777
+cat hello.txt
+git checkout 6b
+git checkout 6bb
+git checkout head
+git checkout HEAD
+cat hello.txt
+git log --all --graph --decorate
+git checkout 6bb02
+cat hello.txt
+nvim hello.txt
+git diff hello.txt
+git log
+git checkout hello.txt
+nvim animal.py
+python animal.py
+python3 animal.py
+nvim animal.py
+python3 animal.py
+nvim animal.py
+git add animal.py
+git commit
+git branch
+ls
+git log --all --graph --decorate
+git checkout master
+git log --all --graph --decorate
+git checkout 7ed0d
+git log --all --graph --decorate
+git branch -vv
+git branch cat
+git log --all --graph --decorate
+git log
+cd
+ls
+cd Installations
+cd neo-awt-hack
+ls
+ls | xargs rm
+ls | xargs rm -r
+ls
+git clone https://github.com/chenkelmann/neo2-awt-hack
+ls
+cd neo2-awt-hack
+ls
+git status
+git log --all --graph --decorate
+git checkout neoqwertz
+git checkout -b neoqwertz
+git log --all --graph --decorate
+cd Installattions
+cd Installations
+cd neo-awt-hack
+cd neo2awt-hack
+cd neo2-awt-hack
+ls
+ranger
+cd releases
+ls
+nvim neo2-awt-hack-0.5-java8oracle.jar
+maven clean src
+mvn clean
+mvn clean src
+maven clean java
+mvn clean java
+mvn compile src
+maven clean
+mvn clean package
+help 1
+mvn help 1
+mvn clean package
+mvn clean package -e
+mvn clean package -e -X
+mvn clean package
+ls
+javac KeyEvent.java
+ranger
+cd Installations
+ranger
+ls
+nvim 'KeyEvent$1.class'
+nvim KeyEvent.class
+cd 
+cd -
+ls
+cd ..
+ls
+cd ..
+ls
+cd ..
+ls
+git clone https://github.com/chenkelmann/neo2-awt-hack
+sudo umount /snap/intellij-idea-ultimate/282
+sudo umount -f /snap/intellij-idea-ultimate/282
+sudo unsquashfs /var/lib/snapd/snaps/intellij-idea-ultimate_282.snap
+sudo find ~ -name idea.sh
+sudo nvim $(sudo find ~ -name idea.sh)
+ls
+acle.jar \
+/home/tassilo/Installations/neo-awt-hack/squashfs-root/bin/idea.sh
+mvn clean package
