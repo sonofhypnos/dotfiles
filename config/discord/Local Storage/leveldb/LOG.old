@@ -1,0 +1,63 @@
+2021/06/05-13:25:38.795 a7b7 Reusing MANIFEST /home/tassilo/.config/discord/Local Storage/leveldb/MANIFEST-000001
+2021/06/05-13:25:38.796 a7b7 Recovering log #101
+2021/06/05-13:25:38.796 a7b7 Reusing old log /home/tassilo/.config/discord/Local Storage/leveldb/000101.log 
+2021/06/05-14:37:44.567 1b1b6 Level-0 table #105: started
+2021/06/05-14:37:44.573 1b1b6 Level-0 table #105: 18556 bytes OK
+2021/06/05-14:37:44.575 1b1b6 Delete type=0 #101
+2021/06/05-14:37:44.576 1b1b6 Compacting 4@0 + 1@1 files
+2021/06/05-14:37:44.578 1b1b6 Generated table #106@0: 20 keys, 10057 bytes
+2021/06/05-14:37:44.578 1b1b6 Compacted 4@0 + 1@1 files => 10057 bytes
+2021/06/05-14:37:44.579 1b1b6 compacted to: files[ 0 1 1 0 0 0 0 ]
+2021/06/05-14:37:44.580 1b1b6 Delete type=2 #102
+2021/06/05-14:37:44.580 1b1b6 Delete type=2 #105
+2021/06/05-14:37:44.580 1b1b6 Delete type=2 #95
+2021/06/05-14:37:44.580 1b1b6 Delete type=2 #97
+2021/06/05-14:37:44.580 1b1b6 Delete type=2 #99
+2021/06/05-15:02:31.066 1b1b6 Level-0 table #108: started
+2021/06/05-15:02:31.070 1b1b6 Level-0 table #108: 17998 bytes OK
+2021/06/05-15:02:31.071 1b1b6 Delete type=0 #104
+2021/06/05-15:26:13.396 1b1b6 Level-0 table #110: started
+2021/06/05-15:26:13.398 1b1b6 Level-0 table #110: 17929 bytes OK
+2021/06/05-15:26:13.400 1b1b6 Delete type=0 #107
+2021/06/05-15:52:04.200 1b1b6 Level-0 table #112: started
+2021/06/05-15:52:04.204 1b1b6 Level-0 table #112: 18026 bytes OK
+2021/06/05-15:52:04.206 1b1b6 Delete type=0 #109
+2021/06/05-16:15:45.884 1b1b6 Level-0 table #114: started
+2021/06/05-16:15:45.891 1b1b6 Level-0 table #114: 17941 bytes OK
+2021/06/05-16:15:45.893 1b1b6 Delete type=0 #111
+2021/06/05-16:15:45.894 1b1b6 Compacting 4@0 + 1@1 files
+2021/06/05-16:15:45.895 1b1b6 Generated table #115@0: 20 keys, 10064 bytes
+2021/06/05-16:15:45.895 1b1b6 Compacted 4@0 + 1@1 files => 10064 bytes
+2021/06/05-16:15:45.897 1b1b6 compacted to: files[ 0 1 1 0 0 0 0 ]
+2021/06/05-16:15:45.897 1b1b6 Delete type=2 #108
+2021/06/05-16:15:45.897 1b1b6 Delete type=2 #112
+2021/06/05-16:15:45.897 1b1b6 Delete type=2 #110
+2021/06/05-16:15:45.897 1b1b6 Delete type=2 #114
+2021/06/05-16:15:45.897 1b1b6 Delete type=2 #106
+2021/06/05-16:41:45.884 1b1b6 Level-0 table #117: started
+2021/06/05-16:41:45.890 1b1b6 Level-0 table #117: 18308 bytes OK
+2021/06/05-16:41:45.892 1b1b6 Delete type=0 #113
+2021/06/05-17:07:45.883 1b1b6 Level-0 table #119: started
+2021/06/05-17:07:45.890 1b1b6 Level-0 table #119: 17443 bytes OK
+2021/06/05-17:07:45.892 1b1b6 Delete type=0 #116
+2021/06/05-17:33:45.883 1b1b6 Level-0 table #121: started
+2021/06/05-17:33:45.891 1b1b6 Level-0 table #121: 17445 bytes OK
+2021/06/05-17:33:45.893 1b1b6 Delete type=0 #118
+2021/06/05-19:04:24.243 1b1b6 Level-0 table #123: started
+2021/06/05-19:04:24.247 1b1b6 Level-0 table #123: 18287 bytes OK
+2021/06/05-19:04:24.250 1b1b6 Delete type=0 #120
+2021/06/05-19:04:24.250 1b1b6 Compacting 4@0 + 1@1 files
+2021/06/05-19:04:24.253 1b1b6 Generated table #124@0: 21 keys, 10848 bytes
+2021/06/05-19:04:24.254 1b1b6 Compacted 4@0 + 1@1 files => 10848 bytes
+2021/06/05-19:04:24.255 1b1b6 compacted to: files[ 0 1 1 0 0 0 0 ]
+2021/06/05-19:04:24.255 1b1b6 Delete type=2 #115
+2021/06/05-19:04:24.255 1b1b6 Delete type=2 #119
+2021/06/05-19:04:24.255 1b1b6 Delete type=2 #123
+2021/06/05-19:04:24.255 1b1b6 Delete type=2 #117
+2021/06/05-19:04:24.255 1b1b6 Delete type=2 #121
+2021/06/05-19:26:53.484 1b1b6 Level-0 table #126: started
+2021/06/05-19:26:53.486 1b1b6 Level-0 table #126: 18322 bytes OK
+2021/06/05-19:26:53.488 1b1b6 Delete type=0 #122
+2021/06/05-19:47:52.058 1b1b6 Level-0 table #128: started
+2021/06/05-19:47:52.065 1b1b6 Level-0 table #128: 17963 bytes OK
+2021/06/05-19:47:52.067 1b1b6 Delete type=0 #125

@@ -1,0 +1,243 @@
+<application>
+  <component name="AppInspectionProfilesVisibleTreeState">
+    <entry key="Default">
+      <profile-state>
+        <expanded-state>
+          <State />
+        </expanded-state>
+        <selected-state>
+          <State />
+        </selected-state>
+      </profile-state>
+    </entry>
+  </component>
+  <component name="JdkInstallerHistory">
+    <option name="installedItems">
+      <installed-jdk>
+        <option name="fullText" value="AdoptOpenJDK (HotSpot) 1.8.0_282" />
+        <option name="installDir" value="$USER_HOME$/.jdks/adopt-openjdk-1.8.0_282" />
+        <option name="javaHomeDir" value="$USER_HOME$/.jdks/adopt-openjdk-1.8.0_282" />
+        <option name="sha256" value="e6e6e0356649b9696fa5082cfcb0663d4bef159fc22d406e3a012e71fce83a5c" />
+        <option name="url" value="https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u282-b08/OpenJDK8U-jdk_x64_linux_hotspot_8u282b08.tar.gz" />
+        <option name="versionText" value="1.8.0_282" />
+      </installed-jdk>
+    </option>
+  </component>
+  <component name="NodeJsLocalInterpreters">
+    <local-interpreter path="/bin/node" />
+    <local-interpreter path="/usr/bin/node" />
+  </component>
+  <component name="ProjectPluginTrackerManager">
+    <option name="trackers">
+      <map>
+        <entry key="1lSqVrP6YcClnOyf9TjgUy2F80Y">
+          <value>
+            <ProjectPluginTrackerState />
+          </value>
+        </entry>
+        <entry key="1n21T2RxcdKB9wWmUNhl9Mvp9TL">
+          <value>
+            <ProjectPluginTrackerState />
+          </value>
+        </entry>
+        <entry key="1nHqAUX7X37a0xopAbtNfYzf8Cj">
+          <value>
+            <ProjectPluginTrackerState />
+          </value>
+        </entry>
+        <entry key="1nHqSFdkVrlzuFXICtVS9en78JY">
+          <value>
+            <ProjectPluginTrackerState />
+          </value>
+        </entry>
+        <entry key="1nIAuiiMqH0D0hTV1XyEA3jH5ou">
+          <value>
+            <ProjectPluginTrackerState />
+          </value>
+        </entry>
+        <entry key="1nWhwB8gNMffMfNatdX2bNwq6ui">
+          <value>
+            <ProjectPluginTrackerState />
+          </value>
+        </entry>
+        <entry key="1nhmRwP4GZjkMcpsd1LFcpvYS2X">
+          <value>
+            <ProjectPluginTrackerState />
+          </value>
+        </entry>
+        <entry key="1oha3QSFQbU9SSCrylME2Wlrdv9">
+          <value>
+            <ProjectPluginTrackerState />
+          </value>
+        </entry>
+        <entry key="1ojx6GZ8XwS3szbPekjo4HYMD7l">
+          <value>
+            <ProjectPluginTrackerState />
+          </value>
+        </entry>
+        <entry key="1ok8JNUcfzn34X2Qz7sICVcfycA">
+          <value>
+            <ProjectPluginTrackerState />
+          </value>
+        </entry>
+        <entry key="1onm2vUERA9jWbJoVSeKBwg6dva">
+          <value>
+            <ProjectPluginTrackerState />
+          </value>
+        </entry>
+        <entry key="1opZ4JWF2aIijBlc46j4ZSgP84l">
+          <value>
+            <ProjectPluginTrackerState />
+          </value>
+        </entry>
+        <entry key="1oyCg4YE4jJPSGdHVPacgzmD67h">
+          <value>
+            <ProjectPluginTrackerState />
+          </value>
+        </entry>
+        <entry key="1pWJ3aY5N6nbGNk0M6PLQWnGBaW">
+          <value>
+            <ProjectPluginTrackerState />
+          </value>
+        </entry>
+        <entry key="1piAdu1tetlOFpIdiWWz6qHkWkC">
+          <value>
+            <ProjectPluginTrackerState />
+          </value>
+        </entry>
+        <entry key="1pk2PaBq1EuVswXmMAEeU2Dtdrp">
+          <value>
+            <ProjectPluginTrackerState />
+          </value>
+        </entry>
+        <entry key="1pkdv7GqPypmCjeM11Pp2cnNeW4">
+          <value>
+            <ProjectPluginTrackerState />
+          </value>
+        </entry>
+        <entry key="1qO3OqcQBtuHsG3GscTuKF449gG">
+          <value>
+            <ProjectPluginTrackerState />
+          </value>
+        </entry>
+        <entry key="1qnpha0iQZo6c91QffdHX4SfOQ2">
+          <value>
+            <ProjectPluginTrackerState />
+          </value>
+        </entry>
+        <entry key="1qnqbmFrxc5NF4vGm2jtVB6f3Hf">
+          <value>
+            <ProjectPluginTrackerState />
+          </value>
+        </entry>
+        <entry key="1qnrAlMi2at7wYXRI1DCvM8qNTV">
+          <value>
+            <ProjectPluginTrackerState />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="AFTER.DISTRACTION.MODE.ARE_GUTTER_ICONS_SHOWN" value="false" />
+    <property name="AFTER.DISTRACTION.MODE.ARE_LINE_NUMBERS_SHOWN" value="false" />
+    <property name="AFTER.DISTRACTION.MODE.EDITOR_TAB_PLACEMENT" value="0" />
+    <property name="AFTER.DISTRACTION.MODE.HIDE_TOOL_STRIPES" value="true" />
+    <property name="AFTER.DISTRACTION.MODE.IS_FOLDING_OUTLINE_SHOWN" value="false" />
+    <property name="AFTER.DISTRACTION.MODE.IS_INDENT_GUIDES_SHOWN" value="false" />
+    <property name="AFTER.DISTRACTION.MODE.IS_RIGHT_MARGIN_SHOWN" value="false" />
+    <property name="AFTER.DISTRACTION.MODE.IS_WHITESPACES_SHOWN" value="false" />
+    <property name="AFTER.DISTRACTION.MODE.SHOW_BREADCRUMBS" value="false" />
+    <property name="AFTER.DISTRACTION.MODE.SHOW_MAIN_TOOLBAR" value="false" />
+    <property name="AFTER.DISTRACTION.MODE.SHOW_METHOD_SEPARATORS" value="false" />
+    <property name="AFTER.DISTRACTION.MODE.SHOW_NAVIGATION_BAR" value="false" />
+    <property name="AFTER.DISTRACTION.MODE.SHOW_STATUS_BAR" value="false" />
+    <property name="BEFORE.DISTRACTION.MODE.ARE_GUTTER_ICONS_SHOWN" value="true" />
+    <property name="BEFORE.DISTRACTION.MODE.ARE_LINE_NUMBERS_SHOWN" value="true" />
+    <property name="BEFORE.DISTRACTION.MODE.EDITOR_TAB_PLACEMENT" value="1" />
+    <property name="BEFORE.DISTRACTION.MODE.HIDE_TOOL_STRIPES" value="false" />
+    <property name="BEFORE.DISTRACTION.MODE.IS_FOLDING_OUTLINE_SHOWN" value="true" />
+    <property name="BEFORE.DISTRACTION.MODE.IS_INDENT_GUIDES_SHOWN" value="true" />
+    <property name="BEFORE.DISTRACTION.MODE.IS_RIGHT_MARGIN_SHOWN" value="true" />
+    <property name="BEFORE.DISTRACTION.MODE.IS_WHITESPACES_SHOWN" value="false" />
+    <property name="BEFORE.DISTRACTION.MODE.SHOW_BREADCRUMBS" value="true" />
+    <property name="BEFORE.DISTRACTION.MODE.SHOW_MAIN_TOOLBAR" value="false" />
+    <property name="BEFORE.DISTRACTION.MODE.SHOW_METHOD_SEPARATORS" value="false" />
+    <property name="BEFORE.DISTRACTION.MODE.SHOW_NAVIGATION_BAR" value="true" />
+    <property name="BEFORE.DISTRACTION.MODE.SHOW_STATUS_BAR" value="true" />
+    <property name="CommitChangeListDialog.DETAILS_SPLITTER_PROPORTION_2" value="0.60186416" />
+    <property name="ExpandRunDashboardTypesPanel" value="false" />
+    <property name="FileTemplates.CurrentTab" value="Other" />
+    <property name="FileTemplates.SelectedTemplate" value="File Header" />
+    <property name="FindSplitterProportion" value="0.3297456" />
+    <property name="IJ_BASE_PACKAGE" value="com.company" />
+    <property name="INSPECTION_FILTER_HISTORY" value="Checkst&#10;Code Cleanup" />
+    <property name="InstalledPluginsSearchHistory" value="save as default&#10;completion&#10;completio&#10;comple&#10;comp" />
+    <property name="JUnitSupport.hidePassedTests" value="false" />
+    <property name="LayoutCode.codeCleanup" value="true" />
+    <property name="LayoutCode.optimizeImports" value="true" />
+    <property name="LayoutCode.processChangedText" value="false" />
+    <property name="LayoutCode.rearrangeEntries" value="true" />
+    <property name="LayoutCode.rearrangeEntriesJava" value="true" />
+    <property name="MarketplacePluginsSearchHistory" value="Code Comple&#10;Code Compl&#10;Code Comp&#10;Code Com&#10;Code C" />
+    <property name="MemberChooser.copyJavadoc" value="false" />
+    <property name="MemberChooser.showClasses" value="true" />
+    <property name="NonModalCommitCustomization.IsApplied" value="true" />
+    <property name="PluginConfigurable.selectionTab" value="1" />
+    <property name="SettingsSearchHistory" value="save as default&#10;keymap&#10;checkstyle&#10;code cleanup&#10;final" />
+    <property name="ShowDocumentationInToolWindow" value="false" />
+    <property name="TERMINAL_CUSTOM_COMMANDS_GOT_IT" value="true" />
+    <property name="UITheme.relaunch" value="true" />
+    <property name="appcds.runOnSecondStart" value="IU-203.7717.56-4c4d2d941218a9e458ffc716bc6b0975016cce2eccd32bbb50153041f02adcf1" />
+    <property name="ask.about.ctrl.y.shortcut.v2" value="true" />
+    <property name="build.toolwindow.Build Output.selection.state" value="com.intellij.build.BuildTreeConsoleView" />
+    <property name="build.toolwindow.Sync.selection.state" value="com.intellij.build.BuildTreeConsoleView" />
+    <property name="build.toolwindow.run.selection.state" value="com.intellij.build.BuildTreeConsoleView" />
+    <property name="build.toolwindow.show.successful.steps.selection.state" value="true" />
+    <property name="com.intellij.history.integration.ui.views.FileHistoryDialog.0" value="300" />
+    <property name="com.intellij.history.integration.ui.views.FileHistoryDialog.1" value="800" />
+    <property name="com.intellij.history.integration.ui.views.SelectionHistoryDialog.0" value="300" />
+    <property name="com.intellij.history.integration.ui.views.SelectionHistoryDialog.1" value="800" />
+    <property name="com.intellij.openapi.roots.ui.configuration.TabbedModuleEditor.selectedEditor" value="Sources" />
+    <property name="debugger.smart.chooser.counter" value="3" />
+    <property name="decompiler.legal.notice.accepted" value="true" />
+    <property name="defaultJdkConfigured" value="true" />
+    <property name="es6.show.auto.import" value="true" />
+    <property name="evlsprt3.203" value="15" />
+    <property name="file.chooser.recent.files" value="$USER_HOME$/Programming/Plugins/CreeperSpawn&#10;/home/tassilo/Programming/Plugins&#10;/home/tassilo/IdeaProjects/Assignment5/proposal_for_solution&#10;/home/tassilo/IdeaProjects/FinalAssignment1.0&#10;/home/tassilo/IdeaProjects/FinalAssignment2&#10;/home/tassilo/IdeaProjects/proposal_for_solution/TaskB&#10;/home/tassilo/IdeaProjects/proposal_for_solution&#10;/home/tassilo/IdeaProjects/Assignment4/AufgabeB&#10;/home/tassilo/Installations/neo2-awt-hack&#10;/home/tassilo/Installations/neo-awt-hack/neo2-awt-hack&#10;/home/tassilo/Installations/neo-awt-hack&#10;/home/tassilo/IdeaProjects/Assignment03&#10;/home/tassilo/IdeaProjects/TestingStuff&#10;/home/tassilo/IdeaProjects/Assignment4/Assignment5&#10;/home/tassilo/IdeaProjects/Assignment5&#10;/home/tassilo/Downloads/AbschlussaufgabenCheckstyle.xml&#10;/home/tassilo/Downloads/proposal_for_solution&#10;/home/tassilo/IdeaProjects/FinalAssignment1&#10;/home/tassilo/IdeaProjects&#10;/home/tassilo/IdeaProjects/FinalAssignment1/src/edu&#10;/home/tassilo/Desktop/GitHub/tutorium&#10;/home/tassilo/IdeaProjects/Assignment4/Assignment5/Tests/edu/kit/informatik/model/santorini/CardStackTest.java" />
+    <property name="file.gist.reindex.count" value="848" />
+    <property name="fileTypeChangedCounter" value="6" />
+    <property name="got.it.tooltip.extract.method.gotit.navigate" value="1" />
+    <property name="got.it.tooltip.extract.method.signature.change" value="1" />
+    <property name="got.it.tooltip.reader.mode.got.it" value="1" />
+    <property name="got.it.tooltip.reset.lesson.got.it" value="1" />
+    <property name="ide.memory.adjusted" value="true" />
+    <property name="ide.updates.previous.build.number" value="IU-203.7717.56" />
+    <property name="ideavim.statistics.timestamp" value="1617725160367" />
+    <property name="installed.kotlin.plugin.version" value="203-1.4.32-release-IJ7148.5" />
+    <property name="jdk.selected.JAVA_MODULE" value="14" />
+    <property name="js.field.names.completion" value="false" />
+    <property name="js.opt.chain.completion" value="true" />
+    <property name="js.overrides.completion" value="true" />
+    <property name="js.var.names.completion.kind" value="NAMES_ONLY" />
+    <property name="kotlin-gradle-user-dirs" value="$USER_HOME$/.gradle" />
+    <property name="kotlin.lastUpdateCheck" value="1613820813025" />
+    <property name="kotlin.plugin.releaseDate" value="203-1.4.32-release-IJ7148.5:2021-03-23" />
+    <property name="lastSeenTip" value="neue-ColumnSelection.html" />
+    <property name="lastTimeTipsWereShown" value="1614336396999" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Programming/Plugins" />
+    <property name="packagesearch.endpoint.url.fulltext" value="https://package-search.services.jetbrains.com/api/search/idea/fulltext" />
+    <property name="packagesearch.endpoint.url.suggest" value="https://package-search.services.jetbrains.com/api/search/idea/suggest" />
+    <property name="packagesearch.status.updated.ts" value="1617294871011" />
+    <property name="project.wizard.group" value="org.jetbrains.idea.maven.wizards.InternalMavenModuleBuilder" />
+    <property name="project.wizard.template" value="Empty Project" />
+    <property name="seenTips" value="neue-InspectionsWidget.html,neue-MultiselectionWords.html,neue-Rename.html,neue-CtrlW.html,neue-JupyterExecuteCurrentSelectNext.html,neue-SecondSmartCompletionAsList.html,neue-HighlightUsagesInFile.html,neue-SecondSmartCompletionChain.html,InjectSQLLanguage.html,neue-DragToOpen.html,neue-ExternalJavaDoc.html,neue-SurroundWith.html,neue-Close_all_editor_tabs.html,neue-ColumnSelection.html" />
+    <property name="settings.code.style.selected.tab.JAVA" value="Blank Lines" />
+    <property name="shared.index.infrastructure.prop" value="4" />
+    <property name="tasks.pass.word.conversion.enforced" value="true" />
+    <property name="tooltips.show.actions.in.key" value="false" />
+    <property name="ts.lib.d.ts.version" value="4.1.3" />
+    <property name="typescript.show.auto.import" value="true" />
+    <property name="vcs.branch.view.splitter.proportion" value="0.20641282" />
+  </component>
+</application>

@@ -1,0 +1,264 @@
+<application>
+  <component name="AppInspectionProfilesVisibleTreeState">
+    <entry key="Default">
+      <profile-state>
+        <expanded-state>
+          <State />
+        </expanded-state>
+        <selected-state>
+          <State />
+        </selected-state>
+      </profile-state>
+    </entry>
+  </component>
+  <component name="CodeStyleSchemesUIConfiguration">
+    <option name="RECENT_IMPORT_FILE_LOCATION" value="file:$USER_HOME$/IdeaProjects/Ilias/iliasDownloaderTool/pom.xml" />
+  </component>
+  <component name="JdkInstallerHistory">
+    <option name="installedItems">
+      <installed-jdk>
+        <option name="fullText" value="Amazon Corretto 11.0.11" />
+        <option name="installDir" value="$USER_HOME$/.jdks/corretto-11.0.11" />
+        <option name="javaHomeDir" value="$USER_HOME$/.jdks/corretto-11.0.11" />
+        <option name="sha256" value="0de91aef7136254753c04a8f3ec81b3d3f1cb736004046fc46bddbc783112129" />
+        <option name="url" value="https://corretto.aws/downloads/resources/11.0.11.9.1/amazon-corretto-11.0.11.9.1-linux-x64.tar.gz" />
+        <option name="versionText" value="11.0.11" />
+      </installed-jdk>
+    </option>
+  </component>
+  <component name="NodeJsLocalInterpreters">
+    <local-interpreter path="/bin/node" />
+    <local-interpreter path="/usr/bin/node" />
+  </component>
+  <component name="ProjectPluginTrackerManager">
+    <trackers>
+      <map>
+        <entry key="1lVzK8aHQ64TbAF8bEVCjEUpqMW">
+          <value>
+            <ProjectPluginTracker />
+          </value>
+        </entry>
+        <entry key="1nhmRwP4GZjkMcpsd1LFcpvYS2X">
+          <value>
+            <ProjectPluginTracker />
+          </value>
+        </entry>
+        <entry key="1oyCg4YE4jJPSGdHVPacgzmD67h">
+          <value>
+            <ProjectPluginTracker />
+          </value>
+        </entry>
+        <entry key="1pWJ3aY5N6nbGNk0M6PLQWnGBaW">
+          <value>
+            <ProjectPluginTracker />
+          </value>
+        </entry>
+        <entry key="1qnpha0iQZo6c91QffdHX4SfOQ2">
+          <value>
+            <ProjectPluginTracker />
+          </value>
+        </entry>
+        <entry key="1qzi1VQKf6Y4MqrNvSF88INjKzh">
+          <value>
+            <ProjectPluginTracker />
+          </value>
+        </entry>
+        <entry key="1qzk7Sa9KeIamgAkFMjaiMIjjJz">
+          <value>
+            <ProjectPluginTracker />
+          </value>
+        </entry>
+        <entry key="1qzkNERBuaa8UBuMvZUiLQpHFGn">
+          <value>
+            <ProjectPluginTracker />
+          </value>
+        </entry>
+        <entry key="1r4Ru7abqwZPbipHbeLtytlYaTn">
+          <value>
+            <ProjectPluginTracker />
+          </value>
+        </entry>
+        <entry key="1r7JgSKOn7VXv2gE4Y2JAylUt9J">
+          <value>
+            <ProjectPluginTracker />
+          </value>
+        </entry>
+        <entry key="1r7M37VsPxNhJvcyviPa2bVsSsY">
+          <value>
+            <ProjectPluginTracker />
+          </value>
+        </entry>
+        <entry key="1r7SthWFvzLO4ffA7VWt4fcPNTM">
+          <value>
+            <ProjectPluginTracker />
+          </value>
+        </entry>
+        <entry key="1r7ntr8H2ua623glNR29eHZ6ysB">
+          <value>
+            <ProjectPluginTracker />
+          </value>
+        </entry>
+        <entry key="1r9Z9dMz6hO216iRT77lVzRh6SP">
+          <value>
+            <ProjectPluginTracker />
+          </value>
+        </entry>
+        <entry key="1r9bwtq8Kd0sTirJhYiADmi74lj">
+          <value>
+            <ProjectPluginTracker />
+          </value>
+        </entry>
+        <entry key="1r9eIfqMBAxOtwEYYUq0HgoQyR5">
+          <value>
+            <ProjectPluginTracker />
+          </value>
+        </entry>
+        <entry key="1r9vI07oeIDE0U12hapCA9ezrlW">
+          <value>
+            <ProjectPluginTracker />
+          </value>
+        </entry>
+        <entry key="1rTvWrG1OMXmK0juwBRPijuzJrs">
+          <value>
+            <ProjectPluginTracker />
+          </value>
+        </entry>
+        <entry key="1sWtrK2PDIliycuGOltj0gY3GrL">
+          <value>
+            <ProjectPluginTracker />
+          </value>
+        </entry>
+        <entry key="1tO37C3UcfmuCQOCsSDCLthfoGB">
+          <value>
+            <ProjectPluginTracker />
+          </value>
+        </entry>
+      </map>
+    </trackers>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="AFTER.DISTRACTION.MODE.ARE_GUTTER_ICONS_SHOWN" value="false" />
+    <property name="AFTER.DISTRACTION.MODE.ARE_LINE_NUMBERS_SHOWN" value="false" />
+    <property name="AFTER.DISTRACTION.MODE.EDITOR_TAB_PLACEMENT" value="0" />
+    <property name="AFTER.DISTRACTION.MODE.HIDE_TOOL_STRIPES" value="true" />
+    <property name="AFTER.DISTRACTION.MODE.IS_FOLDING_OUTLINE_SHOWN" value="false" />
+    <property name="AFTER.DISTRACTION.MODE.IS_INDENT_GUIDES_SHOWN" value="false" />
+    <property name="AFTER.DISTRACTION.MODE.IS_RIGHT_MARGIN_SHOWN" value="false" />
+    <property name="AFTER.DISTRACTION.MODE.IS_WHITESPACES_SHOWN" value="false" />
+    <property name="AFTER.DISTRACTION.MODE.SHOW_BREADCRUMBS" value="false" />
+    <property name="AFTER.DISTRACTION.MODE.SHOW_MAIN_TOOLBAR" value="false" />
+    <property name="AFTER.DISTRACTION.MODE.SHOW_METHOD_SEPARATORS" value="false" />
+    <property name="AFTER.DISTRACTION.MODE.SHOW_NAVIGATION_BAR" value="false" />
+    <property name="AFTER.DISTRACTION.MODE.SHOW_STATUS_BAR" value="false" />
+    <property name="BEFORE.DISTRACTION.MODE.ARE_GUTTER_ICONS_SHOWN" value="true" />
+    <property name="BEFORE.DISTRACTION.MODE.ARE_LINE_NUMBERS_SHOWN" value="true" />
+    <property name="BEFORE.DISTRACTION.MODE.EDITOR_TAB_PLACEMENT" value="1" />
+    <property name="BEFORE.DISTRACTION.MODE.HIDE_TOOL_STRIPES" value="false" />
+    <property name="BEFORE.DISTRACTION.MODE.IS_FOLDING_OUTLINE_SHOWN" value="true" />
+    <property name="BEFORE.DISTRACTION.MODE.IS_INDENT_GUIDES_SHOWN" value="true" />
+    <property name="BEFORE.DISTRACTION.MODE.IS_RIGHT_MARGIN_SHOWN" value="true" />
+    <property name="BEFORE.DISTRACTION.MODE.IS_WHITESPACES_SHOWN" value="false" />
+    <property name="BEFORE.DISTRACTION.MODE.SHOW_BREADCRUMBS" value="true" />
+    <property name="BEFORE.DISTRACTION.MODE.SHOW_MAIN_TOOLBAR" value="false" />
+    <property name="BEFORE.DISTRACTION.MODE.SHOW_METHOD_SEPARATORS" value="false" />
+    <property name="BEFORE.DISTRACTION.MODE.SHOW_NAVIGATION_BAR" value="true" />
+    <property name="BEFORE.DISTRACTION.MODE.SHOW_STATUS_BAR" value="true" />
+    <property name="BuildView.Splitter.Proportion" value="0.60470587" />
+    <property name="CommitChangeListDialog.DETAILS_SPLITTER_PROPORTION_2" value="0.60186416" />
+    <property name="ExpandBeforeRunStepsPanel" value="true" />
+    <property name="ExpandRunDashboardTypesPanel" value="false" />
+    <property name="FileTemplates.CurrentTab" value="Other" />
+    <property name="FileTemplates.SelectedTemplate" value="File Header" />
+    <property name="FindSplitterProportion" value="0.3297456" />
+    <property name="IJ_BASE_PACKAGE" value="com.company" />
+    <property name="INSPECTION_FILTER_HISTORY" value="Checkst&#10;Code Cleanup" />
+    <property name="IdeaUltimate.EnableRunTargetsOnce" value="true" />
+    <property name="InstalledPluginsSearchHistory" value="Zen&#10;Ze&#10;Zu&#10;Z&#10;coverage" />
+    <property name="JUnitSupport.hidePassedTests" value="false" />
+    <property name="LayoutCode.codeCleanup" value="true" />
+    <property name="LayoutCode.optimizeImports" value="true" />
+    <property name="LayoutCode.processChangedText" value="false" />
+    <property name="LayoutCode.rearrangeEntries" value="true" />
+    <property name="LayoutCode.rearrangeEntriesJava" value="true" />
+    <property name="LayoutCode.rearrangeEntriesXML" value="false" />
+    <property name="MarketplacePluginsSearchHistory" value="seq&#10;seqe&#10;se&#10;Sequence&#10;Zen" />
+    <property name="MemberChooser.copyJavadoc" value="false" />
+    <property name="MemberChooser.showClasses" value="true" />
+    <property name="NonModalCommitCustomization.IsApplied" value="true" />
+    <property name="SettingsSearchHistory" value="checkstyle&#10;plugins&#10;java&#10;maven&#10;build" />
+    <property name="ShowDocumentationInToolWindow" value="false" />
+    <property name="SplitFileEditor.Proportion" value="0.15" />
+    <property name="TERMINAL_CUSTOM_COMMANDS_GOT_IT" value="true" />
+    <property name="UITheme.relaunch" value="true" />
+    <property name="appcds.runOnSecondStart" value="IU-211.7442.40-604987474e35555029296b5f5b35d8f0b1d7f304867f79d938d83950a43b9160" />
+    <property name="ask.about.ctrl.y.shortcut.v2" value="true" />
+    <property name="build.toolwindow.Build Output.selection.state" value="com.intellij.build.BuildTreeConsoleView" />
+    <property name="build.toolwindow.Sync.selection.state" value="com.intellij.build.BuildTreeConsoleView" />
+    <property name="build.toolwindow.run.selection.state" value="com.intellij.build.BuildTreeConsoleView" />
+    <property name="build.toolwindow.show.successful.steps.selection.state" value="true" />
+    <property name="com.intellij.history.integration.ui.views.FileHistoryDialog.0" value="300" />
+    <property name="com.intellij.history.integration.ui.views.FileHistoryDialog.1" value="800" />
+    <property name="com.intellij.history.integration.ui.views.SelectionHistoryDialog.0" value="300" />
+    <property name="com.intellij.history.integration.ui.views.SelectionHistoryDialog.1" value="800" />
+    <property name="com.intellij.openapi.roots.ui.configuration.TabbedModuleEditor.selectedEditor" value="Sources" />
+    <property name="debugger.smart.chooser.counter" value="3" />
+    <property name="decompiler.legal.notice.accepted" value="true" />
+    <property name="defaultJdkConfigured" value="true" />
+    <property name="es6.show.auto.import" value="true" />
+    <property name="evlsprt3.203" value="15" />
+    <property name="evlsprt3.211" value="17" />
+    <property name="experimentalFeature.run.targets" value="true" />
+    <property name="file.chooser.recent.files" value="$USER_HOME$/IdeaProjects/ub1_ml/iMage/jmjrst.main/src/test/resources/checkstyle_swt1.xml&#10;/home/tassilo/IdeaProjects/ub1_ml&#10;/home/tassilo/IdeaProjects/Tests&#10;/home/tassilo/IdeaProjects/FinalAssignment2&#10;/home/tassilo/IdeaProjects/ub1_ml/iMage&#10;/home/tassilo/IdeaProjects/iMage&#10;/home/tassilo/IdeaProjects/iMage/jmjrst.main/src/test/checkstyle_swt1.xml&#10;/home/tassilo/Downloads/Informatik/swt/Projekte/Maven-Testprojekt/lez-test-dummy&#10;/home/tassilo/semester2/Softwaretechnik I mit Übung/Übungen/Übungsblatt 1/patch/ub1_a1_g_patch.patch&#10;/home/tassilo/IdeaProjects&#10;/home/tassilo/repos/iliasDownloaderTool&#10;/home/tassilo/semester2/swt/Projekte/Maven-Testprojekt/lez-test-dummy/src/test/resources/checkstyle_swt1.xml&#10;/home/tassilo/semester2/swt/Projekte/Maven-Testprojekt/lez-test-dummy&#10;/home/tassilo/semester2/swt/Projekte/Maven-Testprojekt (1)/lez-test-dummy/src/test/resources/checkstyle_swt1.xml&#10;/home/tassilo/semester2/swt/Projekte/Maven-Testprojekt (1)/lez-test-dummy&#10;/home/tassilo/Pictures/Maven-Testprojekt/lez-test-dummy/src/test/resources/checkstyle_swt1.xml&#10;/home/tassilo/Pictures/Maven-Testprojekt/lez-test-dummy&#10;/home/tassilo/semester2/swt/Projekte/Maven-Testprojekt/lez-test-dummy/lez-test-dummy.xml&#10;/home/tassilo/semester2/swt/Projekte/Maven-Testprojekt/lez-test-dummy/pom.xml&#10;/home/tassilo/semester2/swt/Projekte/Maven-Testprojekt&#10;/home/tassilo/semester2/swt/Projekte/B0/Maven-Testprojekt/lez-test-dummy/pom.xml&#10;/home/tassilo/IdeaProjects/Ilias/iliasDownloaderTool/pom.xml&#10;/home/tassilo/semester2/swt/Projekte/B0/Maven-Testprojekt/lez-test-dummy&#10;/home/tassilo/Installations/IliasDownloaderTool-kit-v2/Ilias-Downloader-Tool-kit-v2.jar&#10;/home/tassilo/IdeaProjects/Ilias/iliasDownloaderTool&#10;/home/tassilo/Programming/Plugins&#10;/home/tassilo/Installations/IliasDownloaderTool-kit-v2&#10;/home/tassilo/IdeaProjects/FinalAssignment1.0&#10;/home/tassilo/IdeaProjects/Assignment5/proposal_for_solution&#10;/home/tassilo/Programming/Plugins/CreeperSpawn" />
+    <property name="file.gist.reindex.count" value="1728" />
+    <property name="fileTypeChangedCounter" value="11" />
+    <property name="fileTypeDetectors" value="com.android.tools.idea.fileTypes.profiler.MemoryCaptureFileType$Detector:com.android.tools.idea.sqlite.fileType.SqliteFileTypeDetector:com.intellij.database.vfs.DbStorageFileType$Detector:com.intellij.ide.scratch.ScratchFileServiceImpl$Detector:com.intellij.javascript.debugger.sourcemap.SourceMapFileType$MyFileTypeDetector:com.intellij.profiler.ultimate.hprof.impl.HprofFileTypeDetector:com.jetbrains.nodejs.util.NodeFileTypeDetector$JavaScriptFileTypeDetector:com.jetbrains.nodejs.util.NodeFileTypeDetector$TypeScriptFileTypeDetector" />
+    <property name="got.it.tooltip.cwm.invitation.notification" value="1" />
+    <property name="got.it.tooltip.extract.method.gotit.navigate" value="1" />
+    <property name="got.it.tooltip.extract.method.signature.change" value="1" />
+    <property name="got.it.tooltip.reader.mode.got.it" value="1" />
+    <property name="got.it.tooltip.reset.lesson.got.it" value="1" />
+    <property name="got.it.tooltip.terminal.smart_command_execution" value="1" />
+    <property name="ide.memory.adjusted" value="true" />
+    <property name="ide.updates.previous.build.number" value="IU-211.7442.40" />
+    <property name="ide.updates.whats.new.shown.for" value="211" />
+    <property name="ideavim.statistics.timestamp" value="1622593763338" />
+    <property name="installed.kotlin.plugin.version" value="211-1.4.32-release-IJ7442.2" />
+    <property name="jdk.selected.JAVA_MODULE" value="openjdk-16" />
+    <property name="js.field.names.completion" value="false" />
+    <property name="js.opt.chain.completion" value="true" />
+    <property name="js.overrides.completion" value="true" />
+    <property name="js.var.names.completion.kind" value="NAMES_ONLY" />
+    <property name="kotlin-gradle-user-dirs" value="$USER_HOME$/.gradle" />
+    <property name="kotlin.lastUpdateCheck" value="1613820813025" />
+    <property name="lastSeenTip" value="neue-ColumnSelection.html" />
+    <property name="lastTimeTipsWereShown" value="1614336396999" />
+    <property name="last_opened_file_path" value="$USER_HOME$/IdeaProjects" />
+    <property name="log.trace.categories" value="#com.jetbrains.rdserver.requests&#10;#com.jetbrains.rd.ide.document&#10;#com.jetbrains.rdserver.document&#10;#com.jetbrains.rdserver.editors&#10;#com.jetbrains.rdserver.actions" />
+    <property name="packagesearch.endpoint.url.fulltext" value="https://package-search.services.jetbrains.com/api/search/idea/fulltext" />
+    <property name="packagesearch.endpoint.url.suggest" value="https://package-search.services.jetbrains.com/api/search/idea/suggest" />
+    <property name="packagesearch.status.updated.ts" value="1622386843046" />
+    <property name="project.wizard.group" value="org.jetbrains.idea.maven.wizards.InternalMavenModuleBuilder" />
+    <property name="project.wizard.template" value="Empty Project" />
+    <property name="seenTips" value="neue-InspectionsWidget.html,neue-MultiselectionWords.html,neue-Rename.html,neue-CtrlW.html,neue-JupyterExecuteCurrentSelectNext.html,neue-SecondSmartCompletionAsList.html,neue-HighlightUsagesInFile.html,neue-SecondSmartCompletionChain.html,InjectSQLLanguage.html,neue-DragToOpen.html,neue-ExternalJavaDoc.html,neue-SurroundWith.html,neue-Close_all_editor_tabs.html,neue-ColumnSelection.html" />
+    <property name="settings.code.style.selected.tab.JAVA" value="Blank Lines" />
+    <property name="shared.index.infrastructure.prop" value="4" />
+    <property name="tasks.pass.word.conversion.enforced" value="true" />
+    <property name="tooltips.show.actions.in.key" value="false" />
+    <property name="ts.lib.d.ts.version" value="4.2.2" />
+    <property name="typescript.show.auto.import" value="true" />
+    <property name="vcs.branch.view.splitter.proportion" value="0.20641282" />
+  </component>
+  <component name="TerminalCommandHistoryManager">
+    <command-history-files>
+      <command-history-file filename="iMage-history2" project-path="$USER_HOME$/IdeaProjects/ub1_ml/iMage" last-access-time="1621406120007" />
+      <command-history-file filename="lez-test-dummy-history7" project-path="$USER_HOME$/Pictures/Maven-Testprojekt/lez-test-dummy" last-access-time="1619698302749" />
+      <command-history-file filename="lez-test-dummy-history1" project-path="$USER_HOME$/Downloads/Informatik/swt/Projekte/Maven-Testprojekt/lez-test-dummy" last-access-time="1619701888871" />
+      <command-history-file filename="iMage-history" project-path="$USER_HOME$/IdeaProjects/iMage" last-access-time="1621246219918" />
+      <command-history-file filename="iliasDownloaderTool-history1" project-path="$USER_HOME$/repos/iliasDownloaderTool" last-access-time="1619011903556" />
+      <command-history-file filename="iMage-history1" project-path="$USER_HOME$/IdeaProjects/iMage" last-access-time="1621246219909" />
+    </command-history-files>
+  </component>
+  <component name="ToolbarSettingsService">
+    <option name="NEW_TOOLBAR_SETTINGS" value="OLD_NAVBAR" />
+  </component>
+</application>

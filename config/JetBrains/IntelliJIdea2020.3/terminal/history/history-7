@@ -1,0 +1,1000 @@
+/home
+ls -l
+ls -l | grep idea
+ls -l | grep -i idea
+ls -l | grep -i idea | tail
+ls -l | tail grep -i idea
+ls -l | grep -i idea
+man tial
+man tail
+ls -l | grep -i idea
+ls -l | grep -i idea | grep -oE 'i'
+ls -l | grep -i idea | grep -E '[^ ]+$' 
+ls -l | grep -i idea | grep -oE '[^ ]+$' 
+foo=ls -l | grep -i idea | grep -oE '[^ ]+$' 
+ls -l | grep -i idea | grep -oE '[^ ]+$' 
+foo=(ls -l | grep -i idea | grep -oE '[^ ]+$' )
+foo=(echo foo=(ls -l | grep -i idea | grep -oE '[^ ]+$' ))
+ls -l | grep -i idea | grep -oE '[^ ]+$' 
+foo=$(ls -l | grep -i idea | grep -oE '[^ ]+$' )
+foo
+cat foo
+echo $foo
+ls -l
+cd $foo
+ls -l
+mk
+touch ~/.ideavimrc
+ls -l
+cd ~/
+ls
+ls -l -a
+nvim .ideavimrc
+intellij
+~$ git clone https://code.orgmode.org/bzg/org-mode.git
+git
+~$ git clone https://code.orgmode.org/bzg/org-mode.git
+git clone https://code.orgmode.org/bzg/org-mode.git
+git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d
+spacemacs
+emacs
+xsetpointer -l | grep Pointer
+sudo apt-get install tlp
+xsetpointer -l | grep Pointer
+$ xmodmap -pke | grep Menu
+xmodmap
+$ xmodmap -pke | grep Menu
+$ xmodmap -pke | grep 
+$ xmodmap -pke | grep menu
+$ xmodmap -pke | grep -i menu
+man grep
+man rgrep
+xmodmap -pke | grep -i menu
+xev
+--patch-module java.desktop=/your/path/to/the/jar/neo2-awt-hack-0.5-java8oracle.jar
+jdk
+--patch-module java.desktop=/your/path/to/the/jar/neo2-awt-hack-0.5-java8oracle.jar
+java --patch-module java.desktop=/your/path/to/the/jar/neo2-awt-hack-0.5-java8oracle.jar
+find java
+find 2 java
+find -2 java
+find
+man find
+/home
+cd /home
+ls
+ls -l
+ls -l -a
+ls tassilo
+ls -l -a
+cd tassilo
+ls
+ls -l -a
+.java
+cd .java
+ls
+cd
+ls .jdks
+ls -l
+ls .jdks
+cd
+cd .java
+ls -l
+cd 
+cd jdks
+cd .jdks
+ls
+ls -l
+cd 
+intellij
+find intellij
+find in
+find -E 'i'
+find 
+cd ./
+cd snap
+sl
+ls
+cd intellij
+cd $(ls | pred -oE 
+ls | pred -oE 'in'
+cd $(ls | prep -oE 
+cd $(ls | grep -oE 
+cd $(ls | grep -oE 'i
+ls | grep -oE 'in'
+ls | grep -E 'in'
+cd (ls | grep -E 'in')
+ls | grep -E 'in'
+cd $(ls | grep -E 'in')
+ls
+java
+mvn clean package
+nvim
+orgmode
+org-mode
+M-x package-install RET org RET
+emacs
+cd tassilo
+ls
+cd documents
+cd -i documents
+cd Documents
+vim
+bind
+man bind
+xdg-open
+man xdg-open
+man open
+python -m webbrowser "todoist"
+python2
+python --version
+sudo apt update
+ubuntu
+--version
+system version
+lsb_release -a
+sudo apt update
+python
+python --version
+python -version
+sudo apt update
+sudo apt install software-properties-common
+sudo add-apt-repository ppa:deadsnakes/ppa
+sudo apt updte
+sudo apt update
+apt install python
+sudo apt install python
+python3
+python3 -m webbrowser "https://todoist.com"
+python3 -m chromium "https://todoist.com"
+man python3 -m
+modules
+chromium
+man chromium
+chromium --help
+chromium https://todoist.com
+chromium "https://todoist.com"
+chromium "http://todoist.com"
+chromium "todoist.com"
+w3m google.com
+chromium "http://google.com"
+chromium "google.com"
+chromium -help
+which chromium
+cd which chromium
+which chromium
+cd $(which chromium)
+cd snap
+cd bin
+ls -l
+cd chromium
+ls
+ls -l -a
+find theme
+find
+find .themes
+find ./themes
+cd .
+ls
+ls -l
+ls 1497
+cd 1497
+ls 
+ls -a
+ls -l -a
+.themes
+/.themes
+cd /snap/chromium/1497/data-dir/themes
+ls
+ls -a
+ls -a -l
+chromium google.com
+chromium todoist.com
+/.install.sh
+install.sh
+./install.sh
+update nodejs
+sudo update
+sudo apt update
+sudo apt nodejs update
+nodejs update
+NodeJS
+ls
+ls -l
+./install.sh
+host is ready
+ls
+cat ReadMe
+cat ReadMe.txt
+cd
+find firefox
+exec firefox
+which firefox
+cd usr
+cd /usr
+cd bin
+ls
+ls | grep firefox
+ls -l| grep firefox
+../lib/firefox
+cd ../lib/firefox
+$path
+"path\to\chrome\chrome.exe" --app=http://facebook.com
+chromium --app=http://facebook.com
+"path\to\chrome\chrome.exe" --app=todoist.com
+chromium --app=todoist.com
+chromium --app=https://todoist.com
+java
+man xdg-open
+ls
+org-mode
+cd org-mode
+ls
+list
+lisp
+ls list
+cd lisp
+cd
+..
+-
+cd-
+cd -
+ls
+cd ..
+ls
+cd
+ls
+cd Documents
+ls
+ls -l
+cd Github
+cd
+cd /Desktop
+ls
+Desktop
+cd Desktop
+ls
+cd GitHub
+ls
+cd
+ls
+cd Documents
+ls
+cd GitHub
+cd
+ls
+mv neo2-awt-hack ./Desktop/GitHub
+ls
+mv neo2-awt-hack ./Desktop/GitHub
+mv org-mode ./Desktop/GitHub
+ls
+cd Github
+cd Desktop Github
+cd Desktop/Github
+cd Desktop/GitHub
+ls
+--patchmodule
+java.desktop
+git https://github.com/chenkelmann/neo2-awt-hack.git
+git
+git clone https://github.com/chenkelmann/neo2-awt-hack.git
+ls
+find ~ idea.sh
+find / idea.sh
+find / idea
+find *idea*.sh
+find ~ *idea*.sh
+find ~ "*idea*.sh"
+find ~ "*idea*"
+find ~ *idea*
+find ~ *Idea*
+find ~ idea.properties
+find / idea
+find ~ idea.properties
+find ~ /.config/JetBrains
+find ~ /Desktop
+find ~ Desktop
+find ~ .config/JetBrains
+cd ~/.config/JetBrains/IntelliJIdea2020.3/options
+ls
+cd ../
+ls
+vim ide.properties
+vim idea.properties
+/home/tassilo/.jdks/corretto-11.0.10/bin/java
+man /home/tassilo/.jdks/corretto-11.0.10/bin/java
+-patch-module /home/tassilo/.jdks/corretto-11.0.10/bin/java 
+--patch-module /home/tassilo/.jdks/corretto-11.0.10/bin/java 
+/home/tassilo/.jdks/corretto-11.0.10/bin/java --patch-module
+/home/tassilo/.jdks/corretto-11.0.10/bin/java --patch-module java.dektop=./Desktop/GitHub/neo2-awt-hack-0.5-java8oracle.jar
+sudo /home/tassilo/.jdks/corretto-11.0.10/bin/java --patch-module java.dektop=./Desktop/GitHub/neo2-awt-hack-0.5-java8oracle.jar
+sudo /home/tassilo/.jdks/corretto-11.0.10/bin/java --patch-module ./Desktop/GitHub/neo2-awt-hack-0.5-java8oracle.jar
+sudo /home/tassilo/.jdks/corretto-11.0.10/bin/java --patch-module java=./Desktop/GitHub/neo2-awt-hack-0.5-java8oracle.jar
+sudo /home/tassilo/.jdks/corretto-11.0.10/bin/java --patch-module java.desktop=./Desktop/GitHub/neo2-awt-hack-0.5-java8oracle.jar
+--patch-module java.desktop=./Desktop/GitHub/neo2-awt-hack-0.5-java8oracle.jar
+sudo /home/tassilo/.jdks/corretto-11.0.10/bin/java --patch-module java.desktop=./Desktop/GitHub/neo2-awt-hack-0.5-java8oracle.jar
+ls
+cd snap
+ls
+cd intellij-idea-ultimate
+ls
+ls -l -a
+find
+find exec
+find
+find jile
+find idea
+ls ./current
+ls./269
+ls ./269
+ls./269 -a
+ls ./269 -a
+ls ./269 -a -l
+ls ./common -a -l
+cd common
+ls
+which intellij-idea-ultimate
+cd $(which intellij-idea-ultimate)
+cd snap
+cd /snap
+cd bin
+ls
+cd $(ls | grep -i intellij
+cd $(ls | grep -i intellij)
+ls | grep -i intellij
+ls -l | grep -i intellij
+which $(ls | grep -i intellij)
+$(ls | grep -i intellij)
+ls /usr/bin/snap
+ls
+which intellij-idea-ultimate
+cd $(which intellij-idea-ultimate)
+which intellij-idea-ultimate
+nvim $(which intellij-idea-ultimate)
+cd /Documents/GitHub
+cd Documents/GitHub
+cd Desktop/GitHub
+git clone https://github.com/marvin-meller/tutorium.git
+ls
+cd tutorium
+intellij
+intelliJ
+xmodmap -pk
+xmodmap -pk | grep wake
+xmodmap -pk | grep -i wakeup
+xmodmap -pk | grep -i Control
+xmodmap -e "keycode 151 = Control_L"
+xmodmap -e "keycode 37 = XF86WakeUp"
+xmodmap -e "keycode  = 1"
+xmodmap -e "keycode 37 = XF86WakeUp"
+sudo showkey -k
+xmodmap -pk | grep 29
+sudo showkey -k
+xmodmap -e "keycode 118 = Control_L"
+xmodmap -e "keycode 109 = Control_L"
+xmodmap -e "keycode 109 = (Control_L)"
+keysim
+xmodmap
+man xmodmap
+man xmodmap
+xmodmap add "control = Control_L"
+xmodmap add control = Control_L
+xmodmap "add control = Control_L"
+man xmodmap
+xmodmap -e  "add control = Control_L"
+xmodmap -e  'add control = Control_L'
+xmodmap
+sudo showkey -k
+xmodmap -e "keycode 109 = PageUp"
+xmodmap
+keysim
+sudo showkey -k
+xmodmap -pk | grep page
+xmodmap -pk | grep -i page
+xmodmap -pk | grep -i down
+xmodmap -pk | grep -i 109
+xmodmap -pk | grep -i up
+xmodmap -e "keycode 109 = ScrollUp"~~~
+xmodmap -e "keycode 109 = XF86ScrollUp"
+xmodmap -e "keycode 109 = 1"
+xmodmap -e "keycode 118 = XF86ScrollUp"
+xmodmap -e "keycode 118 = 1"
+sudo showkey -k
+xmodmap -e ""
+xmodmpa
+xmodmap
+xmodmap -e "add control = XF86WakeUp"
+xmodmap
+/.Xmodmap
+xmodmap clear
+xmodmap clear control
+~/.Xmodmap
+xmodmap ~/.Xmodmap
+xmodmap -e "add control = XF86WakeUp"
+xmodmap -e "add control = XF86WakeUp" -verbose
+xmodmap -e "add control=XF86WakeUp" -verbose
+xmodmap -e "add control = XF86WakeUp" -verbose
+xmodmap
+xmodmap -e "add control = 109" -verbose
+xmodmap -e "add control = Scrolldown" -verbose
+xmodmap -e "add control = XF86Scrolldown" -verbos
+xmodmap -e "add control = XF86Scrollup" -verbose
+xmodmap -e "add control = XF86WakeUp"
+öaslkdjf
+öalsdkfj
+öasldkfj
+xev
+xmodmap -pke >~/.Xmodmap
+vim .xinitrc
+ls
+ls -a
+xmodmap -pm
+xmodmap -e "keycode 117 = 1"
+xev
+11
+xmodmap -e "add control = 1"
+xmodmap -e "add control = f"
+xmodmap -e ""
+xmodmap -e "add control = "
+xmodmap -e "keycode 117 = 15"
+xmodmap -e "keycode 117 = Control_L"
+xmodmap -e "add control = Control_L"
+xmodmap
+xev  
+xmodmap -e "add control = 0xffe3"
+xmodmap
+xev
+xmodmap -pk 
+xmodmap -e "add control = 0x0031"
+xmodmap -e "add control = 1"
+xmodmap -e "add control = Up"
+vim .Xmodmap
+ls
+ls -a
+./.xinitrc
+sudo su
+/.xinitrc
+./.xinitrc
+sh ./.xinitrc
+xev
+./.xinitrc
+vim .xinitrc
+sh ./.xinitrc
+vim .Xmodmap
+xmodmap ~/.Xmodmap
+~/.Xmodmap
+sh ~/.Xmodmap
+vim sh ~/.Xmodmap
+~/.Xmodmap
+vim !
+~/.Xmodmap
+vim ~/.Xmodmap
+xmodmap -e "clear control"
+xmodmap
+man xmodmap
+xmodmap -e "clear Control"
+vim ~/.Xmodmap
+xmodmap ~/.Xmodmap
+vim ~/.Xmodmap
+xmodmap ~/.Xmodmap
+vim ~/.Xmodmap
+xmodmap ~/.Xmodmap
+which Faeria
+Faeria
+faeria
+steam
+which steam
+cd $(which steam)
+cd games
+cd /usr/games
+ls
+cd steam
+ls -l
+vim steam
+cd
+ls
+ls -l
+cd bin
+cd \
+cd /
+ls
+cd bin
+ls
+cd .config
+.config
+find .config
+find / .config
+.config
+/.config
+ls
+cd Steam
+ls
+ls -l
+cd logs
+ls
+cat ls
+cat $(ls)
+find ~.config
+find ~ .config
+find ~ .config/unity3d
+find ~ .config
+find ~ /.config
+find ~ .config
+ls
+cd
+find . 
+find . config
+find . /config
+find / *.pdf
+find ~ "*.pdf"
+find / .bashrc
+find / Faeria
+find / /Faeria/
+cd ~/.config/unity3d/Abrakam/Faeria/Abrakam
+cd ~/.config/unity3d/
+ls
+cd $(ls | grep 'Agrakam
+cd $(ls | grep 'Abrakam)
+$(ls | grep 'Abrakam)
+ls | grep 'Abrakam
+ls | grep Abrakam
+$(ls | grep Abrakam)
+$(ls | grep "Abrakam")
+cd $(ls | grep Abrakam)
+cd 'Abrakam Entertainment SA'
+ls
+cd Faeria
+ls
+vim prefs
+Abrakam
+cd Abrakam
+ls
+vim Data
+vim cp Data /
+cp Data /
+man cp
+cp ./Data /
+cp Data /usr
+cp Data 
+cp Data /usr/FaeriaData
+cp Data ~/FaeriaData
+cp Data ~/.FaeriaData
+nautilus
+nautilus .
+cp -r  Data ~/FaeriaData
+cd Data
+ls
+man rm
+foo=$(ls)
+$foo
+$foo=$(ls)
+foo
+$foo
+$path
+path
+$path
+$Path
+mvp
+pvm
+ls
+foo=$(ls)
+$foo
+echo $foo
+for name in $foo; do echoe $name; done
+$foo
+for name in $foo; do echo $name; done
+for name in $foo; rm tee $name; done
+for name in $foo; rm $name; done
+rm
+for name in $foo; rm $name; done
+for name in $foo; rm $name
+man rm
+rm ./*
+for name in $foo; rm -r  $name
+for name in $foo; rm -r $name
+rm -r ./*
+ls
+gem install vimgolf
+sudo snap install gem
+sudo snap install ruby
+sudo snap install ruby --classic
+gem install vimgolf
+vimgolf setup
+vimgolf
+gem install vimgolf
+vimgolf setup
+man vimgolf
+vimgolg
+vimgolf
+vimgolf put
+gem install vimgolf
+gem vimgolf setup
+vimgolf setup
+which vimgolf
+vimgolf-0.4.8
+ruby
+info ruby
+man ruby
+ruby -info
+man gem
+gem
+ruby -v
+gem install vimgolf
+vimgolf
+ruby -v
+vimgolf
+vimgolf setup
+twitter
+ruby
+man gem
+gem
+ruby help install
+gem help install
+ls
+man find
+find -d
+find -d ~ vimgolf
+find -D ~ vimgolf
+find  ~ vimgolf -D
+find ~ vimgolf -
+d
+find ~ vimgolf -D
+man find 
+find -D exec ~ vimgolf
+find -D opt ~ vimgolf
+man find
+man find -O
+find -D opt -O ~ vimgolf
+find -D opt -O 5 ~ vimgolf
+find -D opt -O 5. ~ vimgolf
+find -D opt -O5  ~ vimgolf
+find -D opt -O10  ~ vimgolf
+find -D opt -O200  ~ vimgolf
+find -D opt -O200  ~ vimg
+find -D opt -O200  ~ vim
+find -D opt -O200  ~ TaskA
+find -D opt -O200  ~ /TaskA
+find -D opt -O200  ~ *.pdf
+find -D opt -O200  ~ -name vimgolf
+find -D opt  ~ -name vimgolf
+vimgolf
+find -D opt  ~ -name vimgolf tail
+find -D opt  ~ -name vimgolf | tail
+man tail
+tail(1)
+tail 1
+man tail(1)
+man tail
+find -D opt  ~ -name vimgolf | tail
+find -D opt  ~ -name vimgolf | tail 1
+find -D opt  ~ -name vimgolf
+find -D opt  ~ -name vimgolf > this
+this
+find -D opt  ~ -name vimgolf > this.txt
+$(find -D opt  ~ -name vimgolf) > this.txt
+$(find -D opt  ~ -name vimgolf) > this.txt
+$(find -D opt  ~ -name vimgolf) 
+find ~ -name vimgolf
+find ~ -name vimgolf | tail 1
+man tail
+find ~ -name vimgolf | tail n=1
+find ~ -name vimgolf | tail -2
+find ~ -name vimgolf | tail -1
+cd $(find ~ -name vimgolf | tail -1)
+ls
+cd ..
+ls
+vimgolf
+ls
+...
+-
+cd -
+ls
+Vimgolf
+VimGolf
+vimgolf
+cd Vimgolf
+lf
+ls
+ls -l
+vim ls
+vim 
+vim
+ls
+vimgolf
+nvimgolf
+man vim
+vim golf
+golf
+vimgolf
+ruby
+ruby vimgolf
+ruby Vimgolf
+ruby VimGolf
+find ~ -name vimgolf | tail -1
+cd (find ~ -name vimgolf | tail -1)
+find ~ -name vimgolf | tail -1
+cd $(find ~ -name vimgolf | tail -1)
+ls
+cd ..
+ls
+cd ..
+ls
+cd git
+cd 
+cd /Desktop/GitHub
+cd Desktop/GitHub
+ls
+git clone
+git clone https://github.com/igrigorik/vimgolf.git
+ls
+vimgolf
+gep install
+apt uninstall
+apt
+apt remove ruby
+ruby help install
+snap 
+snap remove ruby
+ruby -v
+ls
+cd
+gem install vimgolf
+sudo apt install ruby
+gem install vimgolf
+sudo gem install vimgolf
+vimgolf setup
+vimgolf put multiline to single line
+5f0890dbb409320009a38274
+vimgolf put 5f0890dbb409320009a38274
+apt remove nvim
+nvim
+man nvim
+nvim
+apt remove neovim
+sudo apt remove neovim
+vim
+apt install vim
+vim
+sudo apt install vim
+apt update
+sudo apt update
+apt list --upgradable
+vim
+vimgolf put 5f0890dbb409320009a38274
+vimgolf put 5f1e0217becb80000692b9c4
+curl ls
+curl http://www.vimgolf.com/challenges/5f1e0217becb80000692b9c4
+curl http://www.vimgolf.com/challenges/5f0890dbb409320009a38274
+cd
+vimgolf put 5f8fd2f33dc797000ce6d784
+xkbmap
+setxkbmap
+man setxkbmap
+which firefox
+cd $(which firefox)
+cd usr/bin
+cd /usr/bin
+ls
+ls | firefox
+ls | grep firefox
+ls -l | grep firefox
+/
+cd /
+ls
+pwd
+cd usr
+cd 
+cd usr
+cd /usr
+ls
+cd bin
+ls
+cd ..
+ls
+xdotool search "" windowkill %@
+sudo apt install xdotool
+xdotool search "" windowkill %@
+ls
+find -name Xmodmap
+find / -name .Xmodmap
+find / -P -name .Xmodmap
+find / -D -name .Xmodmap
+find ~ -D -name .Xmodmap
+find ~ -name .Xmodmap
+ls -a
+xinitrc
+mv .xinitrc .xini
+ls
+ls -a
+mv .Xmodmap .Xmo
+xmodmap
+-history
+history
+xmodmap pk
+xmodmap -pk
+intellij
+bluej
+todoist
+apt install bluej
+sudo apt install bluej
+snap install bluej
+sudo snap install bluej
+sudo su
+rsync -vzctlp http://minimals.contextgarden.net/current/bin/luatex/linux/bin/
+rsync -vzctlp http://minimals.contextgarden.net/distribution/current/bin/luatex/linux/bin/
+rsync -vzctlp rsync://.contextgarden.net/distribution/current/bin/luatex/linux/bin/
+rsync -vzctlp rsync://.contextgarden.net/distribution/current/bin/luatex/linux/
+sudo rsync -vzctlp rsync://.contextgarden.net/distribution/current/bin/luatex/linux/
+sudo rsync -vzctlp rsync://contextgarden.net/distribution/current/bin/luatex/linux/
+luatex
+ls
+luatex
+man texlive-binaries
+texlive-binaries -info
+texlive-binaries --help
+luatex
+sudo apt install texlive-binaries
+luatex
+luatex --help
+lua firstTex.tex
+luatex firstTex.tex
+texlive
+vim myfirstluatex.tex
+ls
+cd Documents
+man mkr
+man mkdr
+man mk
+man mdr
+man makedir
+man mkedir
+man mkdir
+man mkdir LatexFiles
+mkdir LatexFiles
+ls
+cd LatexFiles
+vim myFirstLua.tex
+luatex myFirstlua.tex
+ls
+ls | grep *.pdf
+man open
+ls | grep *.pdf
+open $(ls | grep *.pdf)
+\.myFirstLua.pdf
+\myFirstLua.pdf
+open myFirstLua.pdf
+xdg-open myFirstLua.pdf
+luatex
+uname
+lshw -short
+lshw -short | grep amd
+lshw -short
+sudo lshw -short
+lshw -short | grep -i amd
+lspci | grep VGA
+sudo lshw -C video
+glmark2 -version
+sudo apt install glmark 2
+sudo apt install glmark2
+glmark2
+$ curl -O https://ftp.hadiko.de/int/hadiko/hadinet/hadinet-canon.ppd # oder anderweitig die Datei herunterladen in den aktuellen Ordner
+curl -O https://ftp.hadiko.de/int/hadiko/hadinet/hadinet-canon.ppd 
+PRINTERNAme=HaDiKo-EUFF
+lpadmin -v ipps://cups1.hadiko.de/printers/canon -p "$PRINTERNAME" -P hadinet-canon.ppd -o printer-is-shared=false -o 'username-default=tassilo.neubauer' -o 'password-default=xrCJskPg6692xtM' && cupsenable "$PRINTERNAME" && cupsaccept "$PRINTERNAME" && echo Erfolg
+printer
+lpadmin -v ipps://cups1.hadiko.de/printers/"$PRINTERNAME" -P hadinet-canon.ppd -o printer-is-shared=false -o 'username-default=tassilo.neubauer' -o 'password-default=xrCJskPg6692xtM' && cupsenable "$PRINTERNAME" && cupsaccept "$PRINTERNAME" && echo Erfolg
+lpadmin -v ipps://cups1.hadiko.de/printers/canon -p "$PRINTERNAME" -P hadinet-canon.ppd -o printer-is-shared=false -o 'username-default=tassilo.neubauer' -o 'password-default=xrCJskPg6692xtM' && cupsenable "$PRINTERNAME" && cupsaccept "$PRINTERNAME" && echo Erfolg
+man lpadmin
+"$PRINTERNAME"
+$PRINTERNAME
+echo $PRINTERNAME
+$PRINTERNAME
+"$PRINTERNAME"
+echo "$PRINTERNAME"
+echo $PRINTERNAME
+PRINTERNAME=HaDiKo-EUFF
+echo "$PRINTERNAME"
+lpadmin -v ipps://cups1.hadiko.de/printers/canon -p "$PRINTERNAME" -P hadinet-canon.ppd -o printer-is-shared=false -o 'username-default=tassilo.neubauer' -o 'password-default=xrCJskPg6692xtM' && cupsenable "$PRINTERNAME" && cupsaccept "$PRINTERNAME" && echo Erfolg
+bash -c "$(wget -q -O - https://linux.kite.com/dls/linux/current)"
+un systemctl --user start kite-autostart
+run systemctl --user start kite-autostart
+with systemd, run systemctl --user start kite-autostart
+start kite-autostart
+kite-autostart
+dynalist
+ls
+ls -l
+sudo su
+make install
+man make
+dynalist
+NeoBundleLazy
+neo
+neovim
+nvim
+vim
+vim -info
+mkdir -p ~/.vim/pack/vendor/start
+cd ~/.vim/pack/vendor/start
+git clone https://tpope.io/vim/surround.git
+vim -u NONE -c "helptags surround/doc" -c q
+vim
+exit
+-h
+help
+intellij
+ls
+pwd
+ubuntu
+help exit
+man unalias
+man for
+help for
+man shutdown
+ls
+gedit escapeTest.sh
+ls
+touch escapeTest.sh
+ls
+vim escapeTest.sh
+./escapeTest.sh
+sudo s/escapeTest.sh
+sudo ./escapeTest.sh
+sudo su
+sh ./escapeTest.sh
+touch mainEscapeTest
+mv mainEscapeTest mainEscapeTest.sh
+ls
+ls -l
+chmov
+man chmod
+ls -l
+man chmod
+chmod +x escappeTest.sh
+chmod +x escapeTest.sh
+chmod +x mainEscapeTest.sh
+ls
+ls -l
+chmod +w escapeTest.sh
+chmod +w mainEscapeTest.sh
+ls
+ls -l
+vim mainEscapeTest
+echo off
+echo date>mainTest.log
+./mainEscapeTest.sh 2>>mainTest.log 2>mainTest.err
+more <mainTest.log
+ls
+cat mainTest.err
+cat mainTest.log
+vim mainEscapeTest
+./mainEscapeTest
+./mainEscapeTest.sh
+cat
+cat mainEscapeTest.sh
+echo mainEscapeTest.sh
+cat mainEscapeTest
+vim mainEscapeTest
+./mainEscapeTest
+ls
+./mainEscapeTest.sh
+vim mainEscapeTest.sh
+./mainEscapeTest
+vim mainEscapeTest.sh
+vim mainEscapeTest
+vim mainEscapeTest.sh
+./mainEscapeTest.sh
+ls
+vim mainEscapeTest.sh
+./mainEscapeTest.sh
+man javac
+vim EscapeTest.sh
+vim escapeTest.sh
+./mainEscapeTest.sh
+Javac Application.java
+javac Application.java
+sudo apt install openjdk-11-jdk-headless
+javac /Application.java
+/home/tassilo/.jdks/corretto-11.0.10/bin/java -javaagent:/snap/intellij-idea-ultimate/269/lib/idea_rt.jar=38197:/snap/intellij-idea-ultimate/269/bin -Dfile.encoding=UTF-8 -classpath /home/tassilo/IdeaProjects/FinalAssignment1.0/out/production/FinalAssignment1.0 edu.kit.informatik.Application
+exit

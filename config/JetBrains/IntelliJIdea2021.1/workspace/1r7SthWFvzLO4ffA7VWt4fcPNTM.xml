@@ -1,0 +1,128 @@
+<project version="4">
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="-1">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/lez-test-dummy/lez-test-dummy.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="440">
+              <caret line="20" column="18" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="$PROJECT_DIR$/.idea" />
+      </set>
+    </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand />
+      <select />
+    </treeState>
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1" />
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Maven-Testprojekt" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Maven-Testprojekt" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Maven-Testprojekt" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Maven-Testprojekt" type="462c0819:PsiDirectoryNode" />
+              <item name="lez-test-dummy" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="2184000" />
+  </component>
+  <component name="ToolWindowManager">
+    <layout>
+      <window_info active="true" content_ui="combo" x="642" y="2" width="636" height="1052" id="Project" order="0" sideWeight="0.49839228" visible="true" weight="0.3470464" />
+      <window_info id="Structure" order="1" sideWeight="0.5016077" side_tool="true" visible="true" weight="0.3470464" />
+      <window_info id="Favorites" order="2" sideWeight="0.5015723" side_tool="true" weight="0.13152805" />
+      <window_info id="Commit" order="3" />
+      <window_info id="Learn" order="4" weight="0.32959402" />
+      <window_info id="Pull Requests" order="5" />
+      <window_info id="Code Time" order="6" side_tool="true" />
+      <window_info id="Space Code Reviews" order="7" />
+      <window_info anchor="bottom" id="Version Control" order="0" />
+      <window_info anchor="bottom" id="Event Log" order="1" side_tool="true" weight="0.3297062" />
+      <window_info anchor="bottom" id="Find" order="2" weight="0.32867524" />
+      <window_info anchor="bottom" id="Run" order="3" weight="0.32867524" />
+      <window_info anchor="bottom" id="Debug" order="4" weight="0.39873418" />
+      <window_info anchor="bottom" auto_hide="true" x="2282" y="18" width="356" height="1881" id="TODO" order="5" weight="0.17439911" />
+      <window_info anchor="bottom" x="962" y="2" width="956" height="1052" id="Problems View" order="6" weight="0.3484536" />
+      <window_info anchor="bottom" id="Inspection Results" order="7" weight="0.32979318" />
+      <window_info anchor="bottom" id="Inspection" order="8" weight="0.4" />
+      <window_info anchor="bottom" id="File Transfer" order="9" />
+      <window_info anchor="bottom" id="CheckStyle" order="10" visible="true" weight="0.3360825" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.3370598" />
+      <window_info anchor="bottom" id="Profiler" order="12" weight="0.3297062" />
+      <window_info anchor="bottom" id="Database Changes" order="13" show_stripe_button="false" />
+      <window_info anchor="bottom" id="TypeScript" order="14" />
+      <window_info anchor="bottom" id="Endpoints" order="15" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Build" order="16" weight="0.32886598" />
+      <window_info anchor="bottom" id="Internal Method Tracing" order="17" />
+      <window_info anchor="bottom" id="Flow" order="18" />
+      <window_info anchor="bottom" id="Services" order="19" show_stripe_button="false" weight="0.32911393" />
+      <window_info anchor="right" id="Database" order="0" />
+      <window_info anchor="right" id="Layout Validation" order="1" />
+      <window_info active="true" anchor="right" x="3002" y="438" width="636" height="1041" id="Documentation" order="2" side_tool="true" type="WINDOWED" visible="true" weight="0.38394585" />
+      <window_info anchor="right" id="Test Cube" order="3" />
+      <window_info anchor="right" id="aiXcoder" order="4" />
+      <window_info anchor="right" id="Space Automation" order="5" />
+      <window_info anchor="right" id="Maven" order="6" />
+    </layout>
+    <recentWindows>
+      <value>Project</value>
+      <value>CheckStyle</value>
+      <value>Structure</value>
+      <value>Build</value>
+    </recentWindows>
+  </component>
+  <component name="Trusted.Project.Settings" hasCheckedIfOldProject="true" trusted="YES" />
+  <component name="WindowStateProjectService">
+    <state x="2605" y="494" key="FileChooserDialogImpl" timestamp="1618336208053">
+      <screen x="1920" y="420" width="1920" height="1080" />
+    </state>
+    <state x="689" y="126" key="FileChooserDialogImpl/0.0.1920.1080@0.0.1920.1080" timestamp="1618326326122" />
+    <state x="2605" y="494" key="FileChooserDialogImpl/1920.420.1920.1080/0.420.1920.1080/3840.0.1080.1920@1920.420.1920.1080" timestamp="1618336208053" />
+    <state x="2783" y="518" key="SettingsEditor" timestamp="1618335366447">
+      <screen x="1920" y="420" width="1920" height="1080" />
+    </state>
+    <state x="-2" y="125" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1618326339692" />
+    <state x="2783" y="518" key="SettingsEditor/1920.420.1920.1080/0.420.1920.1080/3840.0.1080.1920@1920.420.1920.1080" timestamp="1618335366447" />
+    <state width="600" height="400" key="javadoc.popup" timestamp="1618326164400">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="600" height="400" key="javadoc.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1618326164400" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/lez-test-dummy/pom.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lez-test-dummy/lez-test-dummy.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="20" column="18" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

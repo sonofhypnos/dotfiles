@@ -1,0 +1,316 @@
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="-1">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SECOND">
+              <first_editor />
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/AutoDownload.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-3697">
+              <caret line="14" selection-start-line="14" selection-end-line="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/venv/bin/Activate.ps1">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/venv/bin/pip3">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/venv/bin/pip">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="88">
+              <caret line="4" column="12" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/venv/bin/activate.fish">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>read</find>
+      <find>username</find>
+    </findStrings>
+    <dirStrings>
+      <dir>$PROJECT_DIR$</dir>
+    </dirStrings>
+  </component>
+  <component name="IdeDocumentHistory">
+    <changedPaths>
+      <option value="$PROJECT_DIR$/Util.py" />
+      <option value="$PROJECT_DIR$/VorkursDownload.py" />
+      <option value="$PROJECT_DIR$/DownloadSettingsTemplate.py" />
+      <option value="$PROJECT_DIR$/AutoDownload.py" />
+    </changedPaths>
+  </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="$PROJECT_DIR$/.idea" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1" />
+    <panes>
+      <pane id="ProjectPane" />
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="TerminalArrangementManager">
+    <option name="myTabStates">
+      <TerminalTabState tabName="Local" commandHistoryFileName="history-" />
+    </option>
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="7207000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1548488" />
+      <window_info id="Structure" order="1" side_tool="true" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info id="Commit" order="3" weight="0.14427084" />
+      <window_info id="Pull Requests" order="4" weight="0.3296875" />
+      <window_info id="Learn" order="5" />
+      <window_info anchor="bottom" id="Version Control" order="0" weight="0.32962587" />
+      <window_info anchor="bottom" id="Event Log" order="1" side_tool="true" weight="0.8095723" />
+      <window_info anchor="bottom" id="Find" order="2" weight="0.32960325" />
+      <window_info anchor="bottom" id="Run" order="3" weight="0.32617587" />
+      <window_info anchor="bottom" id="TODO" order="4" weight="0.32962587" />
+      <window_info anchor="bottom" id="Problems View" order="5" visible="true" weight="0.18533605" />
+      <window_info anchor="bottom" id="Debug" order="6" weight="0.39468303" />
+      <window_info anchor="bottom" id="Python Packages" order="7" />
+      <window_info anchor="bottom" id="Internal Method Tracing" order="8" />
+      <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
+      <window_info anchor="bottom" id="File Transfer" order="10" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.32962587" />
+      <window_info anchor="bottom" id="Database Changes" order="12" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Python Console" order="13" />
+      <window_info anchor="bottom" id="Flow" order="14" />
+      <window_info anchor="bottom" id="TypeScript" order="15" />
+      <window_info anchor="bottom" id="Services" order="16" show_stripe_button="false" />
+      <window_info anchor="right" id="Database" order="0" />
+      <window_info anchor="right" id="SciView" order="1" />
+    </layout>
+    <recentWindows>
+      <value>Project</value>
+      <value>Problems View</value>
+      <value>Commit</value>
+      <value>Debug</value>
+      <value>Run</value>
+      <value>Event Log</value>
+      <value>Find</value>
+      <value>Pull Requests</value>
+    </recentWindows>
+  </component>
+  <component name="Trusted.Project.Settings" hasCheckedIfOldProject="true" />
+  <component name="WindowStateProjectService">
+    <state x="2497" y="314" width="755" height="350" key="#Notifications" timestamp="1618083457835">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2497" y="314" width="755" height="350" key="#Notifications/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1618083457835" />
+    <state x="0" y="-26" width="1920" height="1080" key="#Vim_Emulation" timestamp="1618082964830">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="0" y="-26" key="#Vim_Emulation/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1618082964830" />
+    <state x="0" y="0" width="1920" height="1080" key="#Vim_Emulation/0.0.1920.1080@0.0.1920.1080" timestamp="1617467100970" />
+    <state x="2448" y="136" width="866" height="613" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1618083318665">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2448" y="136" width="866" height="613" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1618083318665" />
+    <state x="2508" y="266" width="733" height="446" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1618083259302">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2508" y="266" width="733" height="446" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1618083259302" />
+    <state x="0" y="0" width="960" height="1061" key="DiffContextDialog" timestamp="1617467791219">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="0" y="0" width="960" height="1061" key="DiffContextDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1617467791219" />
+    <state x="2645" y="139" key="FileChooserDialogImpl" timestamp="1618087014542">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2645" y="139" key="FileChooserDialogImpl/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1618087014541" />
+    <state x="763" y="394" width="473" height="236" key="Github.ShareDialog" timestamp="1617467997419">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="763" y="394" width="473" height="236" key="Github.ShareDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1617467997419" />
+    <state width="455" height="358" key="GridCell.Tab.0.bottom" timestamp="1618084070818">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state width="455" height="358" key="GridCell.Tab.0.bottom/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1618084070818" />
+    <state width="455" height="358" key="GridCell.Tab.0.center" timestamp="1618084070815">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state width="455" height="358" key="GridCell.Tab.0.center/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1618084070815" />
+    <state width="455" height="358" key="GridCell.Tab.0.left" timestamp="1618084070815">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state width="455" height="358" key="GridCell.Tab.0.left/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1618084070815" />
+    <state width="455" height="358" key="GridCell.Tab.0.right" timestamp="1618084070817">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state width="455" height="358" key="GridCell.Tab.0.right/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1618084070817" />
+    <state width="455" height="358" key="GridCell.Tab.1.bottom" timestamp="1618084070821">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state width="455" height="358" key="GridCell.Tab.1.bottom/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1618084070821" />
+    <state width="455" height="358" key="GridCell.Tab.1.center" timestamp="1618084070820">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state width="455" height="358" key="GridCell.Tab.1.center/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1618084070820" />
+    <state width="455" height="358" key="GridCell.Tab.1.left" timestamp="1618084070819">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state width="455" height="358" key="GridCell.Tab.1.left/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1618084070819" />
+    <state width="455" height="358" key="GridCell.Tab.1.right" timestamp="1618084070821">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state width="455" height="358" key="GridCell.Tab.1.right/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1618084070821" />
+    <state x="178" y="26" width="1540" height="884" key="MergeDialog" timestamp="1617467310841">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="178" y="26" width="1540" height="884" key="MergeDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1617467310841" />
+    <state x="591" y="277" width="728" height="463" key="MultipleFileMergeDialog" timestamp="1617467300489">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="591" y="277" width="728" height="463" key="MultipleFileMergeDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1617467300489" />
+    <state x="2355" y="7" key="SettingsEditor" timestamp="1618082721025">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2355" y="7" key="SettingsEditor/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1618082721025" />
+    <state x="443" y="111" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1617468242648" />
+    <state x="2717" y="401" width="315" height="176" key="VCS.ChangelistChooser" timestamp="1618077873816">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2717" y="401" width="315" height="176" key="VCS.ChangelistChooser/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1618077873816" />
+    <state x="2191" y="180" width="408" height="617" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1618078958286">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2191" y="180" width="408" height="617" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1618078958286" />
+    <state x="2126" y="111" width="657" height="780" key="find.popup" timestamp="1618079195888">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2126" y="111" width="657" height="780" key="find.popup/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1618079195888" />
+    <state x="2543" y="234" width="672" height="678" key="search.everywhere.popup" timestamp="1618079397854">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2543" y="234" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1618079397854" />
+    <state x="623" y="234" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1617468068680" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/Images/Done.png" />
+    <entry file="file://$APPLICATION_HOME_DIR$/plugins/python/helpers/pydev/pydevd.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="10" column="33" lean-forward="true" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="33" />
+          <folding>
+            <element signature="e#77#86#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/lib/python3.8/socket.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6314">
+          <caret line="291" selection-start-line="291" selection-end-line="291" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/plugins/python/helpers/pydev/_pydevd_bundle/pydevd_comm.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="289" selection-start-line="289" selection-end-line="289" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/plugins/python/helpers/pydev/_pydevd_bundle/pydevd_command_line_handling.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="7" column="22" lean-forward="true" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Util.py" />
+    <entry file="file://$PROJECT_DIR$/VorkursDownload.py" />
+    <entry file="file://$PROJECT_DIR$/DownloadSettingsTemplate.py" />
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SECOND">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/bin/Activate.ps1">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/bin/pip3">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/bin/pip">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="4" column="12" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/bin/activate.fish">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AutoDownload.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3697">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

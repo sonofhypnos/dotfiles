@@ -1,0 +1,102 @@
+<application>
+  <component name="VimHistorySettings">
+    <history>
+      <history-search>
+        <entry encoding="base64">dXNlcm5hbWU=</entry>
+      </history-search>
+      <history-cmd>
+        <entry encoding="base64">d3E=</entry>
+      </history-cmd>
+      <history-expr />
+      <history-input />
+    </history>
+  </component>
+  <component name="VimMarksSettings">
+    <globalmarks />
+    <filemarks>
+      <file name="/Dummy.txt" timestamp="1618084171483">
+        <mark key="[" line="0" column="0" />
+      </file>
+      <file name="/Python Console" timestamp="1618083807596">
+        <mark key="[" line="0" column="0" />
+      </file>
+      <file name="$USER_HOME$/repos/KIT-ILIAS_AutoDownloader/Util.py" timestamp="1618078039045">
+        <mark key="[" line="3" column="19" />
+        <mark key="]" line="3" column="35" />
+        <mark key="." line="3" column="34" />
+        <mark key="^" line="3" column="35" />
+      </file>
+      <file name="$USER_HOME$/repos/KIT-ILIAS_AutoDownloader/DownloadSettingsTemplate.py" timestamp="1618083395034">
+        <mark key="[" line="8" column="28" />
+        <mark key="]" line="8" column="28" />
+        <mark key="^" line="8" column="28" />
+        <mark key="." line="8" column="27" />
+      </file>
+      <file name="$USER_HOME$/repos/KIT-ILIAS_AutoDownloader/VorkursDownload.py" timestamp="1618079351677">
+        <mark key="'" line="143" column="9" />
+        <mark key="[" line="7" column="0" />
+        <mark key="]" line="7" column="0" />
+        <mark key="." line="7" column="0" />
+        <mark key="^" line="6" column="9" />
+      </file>
+      <file name="$USER_HOME$/repos/pythonProject/main.py" timestamp="1617475010725">
+        <mark key="[" line="56" column="26" />
+        <mark key="]" line="57" column="10" />
+        <mark key="^" line="57" column="10" />
+        <mark key="." line="57" column="9" />
+      </file>
+    </filemarks>
+    <jumps>
+      <jump line="5" column="0" filename="$USER_HOME$/repos/KIT-ILIAS_AutoDownloader/VorkursDownload.py" />
+      <jump line="143" column="9" filename="$USER_HOME$/repos/KIT-ILIAS_AutoDownloader/VorkursDownload.py" />
+    </jumps>
+  </component>
+  <component name="VimRegisterSettings">
+    <registers>
+      <register name="0" type="2">
+        <text encoding="base64">YmVudXR6ZXIgPSAidXBraW0iCnB3ZCA9ICJGWnl6RXRtUF9NRzcyQ1ltOiIK</text>
+      </register>
+      <register name="1" type="2">
+        <text encoding="base64">Cg==</text>
+      </register>
+      <register name="&quot;" type="2">
+        <text encoding="base64">Cg==</text>
+      </register>
+      <register name="2" type="2">
+        <text encoding="base64">Cg==</text>
+      </register>
+      <register name="3" type="2">
+        <text encoding="base64">cHdkID0gIkZaeXpFdG1QX01HNzJDWW06Igo=</text>
+      </register>
+      <register name="4" type="2">
+        <text encoding="base64">YmVudXR6ZXIgPSAidXBraW0iCg==</text>
+      </register>
+      <register name="5" type="2">
+        <text encoding="base64">cGFzc3dvcmQgPSAiIgo=</text>
+      </register>
+      <register name="6" type="2">
+        <text encoding="base64">dXNlcm5hbWUgPSAiIgo=</text>
+      </register>
+      <register name="7" type="2">
+        <text encoding="base64">ICAgIHByaW50X2hpKCdQeUNoYXJtJykK</text>
+      </register>
+      <register name=":" type="4">
+        <text encoding="base64">d3E=</text>
+      </register>
+      <register name="-" type="4">
+        <text encoding="base64">QzpcVXNlcnNcQXV0b0Rvd25sb2FkRXJyb3IubG9n</text>
+      </register>
+      <register name="/" type="4">
+        <text encoding="base64">dXNlcm5hbWU=</text>
+      </register>
+    </registers>
+  </component>
+  <component name="VimSearchSettings">
+    <search>
+      <last-search encoding="base64">dXNlcm5hbWU=</last-search>
+      <last-pattern encoding="base64">dXNlcm5hbWU=</last-pattern>
+      <last-dir encoding="base64">MQ==</last-dir>
+      <show-last encoding="base64">dHJ1ZQ==</show-last>
+    </search>
+  </component>
+</application>

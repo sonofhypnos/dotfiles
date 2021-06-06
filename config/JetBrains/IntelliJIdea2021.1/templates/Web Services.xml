@@ -1,0 +1,11 @@
+<templateSet group="Web Services">
+  <template name="ijrws" value="try {&#10;  $WebServiceNameServiceLocator$ $locator$ = new $WebServiceNameServiceLocator$();&#10;  $WebServiceName$ $service$ = $locator$.$getMethod$();&#10;  // invoke business method&#10;  $service$.$businessMethod$($END$);&#10;} catch(java.rmi.RemoteException ex) { ex.printStackTrace(); }" description="Generate JaxRPC web service invocation" toReformat="true" toShortenFQNames="false">
+    <variable name="WebServiceNameServiceLocator" expression="descendantClassesEnum(&quot;javax.xml.rpc.Service&quot;)" defaultValue="&quot;MyLocator&quot;" alwaysStopAt="true" />
+    <variable name="locator" expression="&quot;locator&quot;" defaultValue="&quot;locator&quot;" alwaysStopAt="true" />
+    <variable name="WebServiceName" expression="descendantClassesEnum(&quot;java.rmi.Remote&quot;)" defaultValue="&quot;MyServiceName&quot;" alwaysStopAt="true" />
+    <variable name="service" expression="&quot;service&quot;" defaultValue="&quot;service&quot;" alwaysStopAt="true" />
+    <variable name="getMethod" expression="completeSmart()" defaultValue="get" alwaysStopAt="true" />
+    <variable name="businessMethod" expression="complete()" defaultValue="businessMethod" alwaysStopAt="true" />
+    <context />
+  </template>
+</templateSet>

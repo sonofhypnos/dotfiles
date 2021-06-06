@@ -1,0 +1,197 @@
+<project version="4">
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="-1">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="336">
+              <caret line="16" column="8" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="8" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../FinalAssignment1/src/edu/kit/informatik/model/EscapeNetwork.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="126">
+              <caret line="10" selection-start-line="10" selection-end-line="10" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="IdeDocumentHistory">
+    <changedPaths>
+      <option value="$PROJECT_DIR$/src/com/company/EscapeNetwork.java" />
+      <option value="$PROJECT_DIR$/src/com/company/Main.java" />
+    </changedPaths>
+  </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="$PROJECT_DIR$/.idea" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1" />
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="TestingStuff" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TestingStuff" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TestingStuff" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TestingStuff" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TestingStuff" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TestingStuff" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="company" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="20764000" />
+  </component>
+  <component name="ToolWindowManager">
+    <editor active="true" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13987139" />
+      <window_info id="Structure" order="1" side_tool="true" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info id="Commit" order="3" />
+      <window_info id="Learn" order="4" />
+      <window_info id="Pull Requests" order="5" />
+      <window_info anchor="bottom" id="Version Control" order="0" />
+      <window_info anchor="bottom" id="Event Log" order="1" side_tool="true" />
+      <window_info anchor="bottom" id="Find" order="2" />
+      <window_info anchor="bottom" id="Run" order="3" visible="true" weight="0.3284055" />
+      <window_info anchor="bottom" id="Debug" order="4" weight="0.39915523" />
+      <window_info anchor="bottom" id="TODO" order="5" />
+      <window_info anchor="bottom" id="Problems View" order="6" weight="0.32946146" />
+      <window_info anchor="bottom" id="CheckStyle" order="7" />
+      <window_info anchor="bottom" id="Inspection" order="8" weight="0.4" />
+      <window_info anchor="bottom" id="File Transfer" order="9" />
+      <window_info anchor="bottom" id="Terminal" order="10" />
+      <window_info anchor="bottom" id="Profiler" order="11" />
+      <window_info anchor="bottom" id="Database Changes" order="12" show_stripe_button="false" />
+      <window_info anchor="bottom" id="TypeScript" order="13" />
+      <window_info anchor="bottom" id="Endpoints" order="14" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Build" order="15" weight="0.3284055" />
+      <window_info anchor="bottom" id="Internal Method Tracing" order="16" />
+      <window_info anchor="bottom" id="Flow" order="17" />
+      <window_info anchor="bottom" id="Services" order="18" show_stripe_button="false" />
+      <window_info anchor="right" id="Database" order="0" />
+      <window_info anchor="right" x="0" y="0" width="187" height="853" id="Documentation" order="1" side_tool="true" visible="true" weight="0.32959402" />
+      <window_info anchor="right" id="Layout Validation" order="2" />
+      <window_info anchor="right" id="Test Cube" order="3" weight="0.32959402" />
+      <window_info anchor="right" id="aiXcoder" order="4" />
+    </layout>
+  </component>
+  <component name="Trusted.Project.Settings" hasCheckedIfOldProject="true" trusted="YES" />
+  <component name="WindowStateProjectService">
+    <state x="555" y="215" width="800" height="684" key="#Intentions" timestamp="1613986536964">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="555" y="215" width="800" height="684" key="#Intentions/0.27.1920.1053@0.27.1920.1053" timestamp="1613986536964" />
+    <state x="0" y="420" width="1920" height="1080" key="#Vim_Emulation" timestamp="1615543751674">
+      <screen x="0" y="420" width="1920" height="1080" />
+    </state>
+    <state x="0" y="420" width="1920" height="1080" key="#Vim_Emulation/1920.420.1920.1080/0.420.1920.1080/3840.0.1080.1920@1920.420.1920.1080" timestamp="1615543751674" />
+    <state x="3129" y="675" width="437" height="504" key="FileChooserDialogImpl" timestamp="1615545194552">
+      <screen x="1920" y="420" width="1920" height="1080" />
+    </state>
+    <state x="1213" y="311" width="424" height="491" key="FileChooserDialogImpl/0.27.1920.1053@0.27.1920.1053" timestamp="1614154564465" />
+    <state x="3129" y="675" width="437" height="504" key="FileChooserDialogImpl/1920.420.1920.1080/0.420.1920.1080/3840.0.1080.1920@1920.420.1920.1080" timestamp="1615545194552" />
+    <state width="1872" height="283" key="GridCell.Tab.0.bottom" timestamp="1615472764914">
+      <screen x="1920" y="420" width="1920" height="1080" />
+    </state>
+    <state width="1874" height="275" key="GridCell.Tab.0.bottom/0.27.1920.1053@0.27.1920.1053" timestamp="1613989201662" />
+    <state width="1872" height="283" key="GridCell.Tab.0.bottom/1920.420.1920.1080/0.420.1920.1080/3840.0.1080.1920@1920.420.1920.1080" timestamp="1615472764914" />
+    <state width="1872" height="283" key="GridCell.Tab.0.center" timestamp="1615472764913">
+      <screen x="1920" y="420" width="1920" height="1080" />
+    </state>
+    <state width="1874" height="275" key="GridCell.Tab.0.center/0.27.1920.1053@0.27.1920.1053" timestamp="1613989201661" />
+    <state width="1872" height="283" key="GridCell.Tab.0.center/1920.420.1920.1080/0.420.1920.1080/3840.0.1080.1920@1920.420.1920.1080" timestamp="1615472764913" />
+    <state width="1872" height="283" key="GridCell.Tab.0.left" timestamp="1615472764913">
+      <screen x="1920" y="420" width="1920" height="1080" />
+    </state>
+    <state width="1874" height="275" key="GridCell.Tab.0.left/0.27.1920.1053@0.27.1920.1053" timestamp="1613989201660" />
+    <state width="1872" height="283" key="GridCell.Tab.0.left/1920.420.1920.1080/0.420.1920.1080/3840.0.1080.1920@1920.420.1920.1080" timestamp="1615472764913" />
+    <state width="1872" height="283" key="GridCell.Tab.0.right" timestamp="1615472764914">
+      <screen x="1920" y="420" width="1920" height="1080" />
+    </state>
+    <state width="1874" height="275" key="GridCell.Tab.0.right/0.27.1920.1053@0.27.1920.1053" timestamp="1613989201661" />
+    <state width="1872" height="283" key="GridCell.Tab.0.right/1920.420.1920.1080/0.420.1920.1080/3840.0.1080.1920@1920.420.1920.1080" timestamp="1615472764914" />
+    <state width="904" height="340" key="GridCell.Tab.1.bottom" timestamp="1613985504225">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state width="904" height="340" key="GridCell.Tab.1.bottom/0.27.1920.1053@0.27.1920.1053" timestamp="1613985504225" />
+    <state width="904" height="340" key="GridCell.Tab.1.center" timestamp="1613985504224">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state width="904" height="340" key="GridCell.Tab.1.center/0.27.1920.1053@0.27.1920.1053" timestamp="1613985504224" />
+    <state width="904" height="340" key="GridCell.Tab.1.left" timestamp="1613985504223">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state width="904" height="340" key="GridCell.Tab.1.left/0.27.1920.1053@0.27.1920.1053" timestamp="1613985504223" />
+    <state width="904" height="340" key="GridCell.Tab.1.right" timestamp="1613985504224">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state width="904" height="340" key="GridCell.Tab.1.right/0.27.1920.1053@0.27.1920.1053" timestamp="1613985504224" />
+    <state x="2349" y="540" width="1359" height="739" key="SettingsEditor" timestamp="1615544760603">
+      <screen x="1920" y="420" width="1920" height="1080" />
+    </state>
+    <state x="2349" y="540" width="1359" height="739" key="SettingsEditor/1920.420.1920.1080/0.420.1920.1080/3840.0.1080.1920@1920.420.1920.1080" timestamp="1615544760603" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/com/company/EscapeNetwork.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/company/DirectedGraph.java" />
+    <entry file="file://$USER_HOME$/.ideavimrc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="16" column="8" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../FinalAssignment1/src/edu/kit/informatik/model/EscapeNetwork.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

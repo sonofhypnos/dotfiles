@@ -1,0 +1,1128 @@
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="DatabaseView">
+    <expand />
+    <select />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="FinalAssignment2" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="-1">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/edu/kit/informatik/presenter/BoardCheck.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1995">
+              <caret line="103" column="8" selection-start-line="103" selection-start-column="8" selection-end-line="103" selection-end-column="8" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/edu/kit/informatik/presenter/gamecommands/Refill.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="693">
+              <caret line="49" column="20" selection-start-line="49" selection-start-column="20" selection-end-line="49" selection-end-column="20" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/edu/kit/informatik/presenter/gamecommands/GameCommands.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="441">
+              <caret line="25" column="36" selection-start-line="25" selection-start-column="36" selection-end-line="25" selection-end-column="36" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/edu/kit/informatik/presenter/gamecommands/Move.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="882">
+              <caret line="57" column="19" selection-start-line="57" selection-start-column="19" selection-end-line="57" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/edu/kit/informatik/presenter/gamecommands/FireToRoll.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="49" selection-start-column="49" selection-end-column="49" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/edu/kit/informatik/presenter/gamecommands/Extinguish.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1239">
+              <caret line="72" selection-start-line="72" selection-end-line="72" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/edu/kit/informatik/model/firebreaker/FireBreaker.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/edu/kit/informatik/model/firebreaker/FireEngine.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1344">
+              <caret line="69" column="26" selection-start-line="69" selection-start-column="26" selection-end-line="69" selection-end-column="26" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/edu/kit/informatik/model/firebreaker/GameBoard.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2982">
+              <caret line="154" column="51" selection-start-line="154" selection-start-column="51" selection-end-line="154" selection-end-column="51" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/edu/kit/informatik/model/firebreaker/ForestStates.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="84">
+              <caret line="4" selection-start-line="4" selection-end-line="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>system.out</find>
+      <find>Errors.</find>
+      <find>toString</find>
+      <find>FireTruck</find>
+      <find>fire truck</find>
+      <find>FIRE_TRUCK</find>
+      <find>Truck</find>
+      <find>truck</find>
+      <find>TRU</find>
+      <find>TRUCK</find>
+      <find>==</find>
+      <find>next</find>
+      <find>nextPlayer</find>
+      <find>water-</find>
+      <find>Wet F</find>
+      <find>dice</find>
+      <find>i</find>
+      <find>IOEx</find>
+      <find>Illega</find>
+      <find>Illegal</find>
+      <find>unchecked cast</find>
+      <find>is not k</find>
+      <find>ParseException</find>
+      <find>does not exi</find>
+      <find>valueOf</find>
+      <find>Parameter&lt;Integer</find>
+      <find>kj</find>
+      <find>print</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>Engine</replace>
+      <replace>engine</replace>
+      <replace>ENGINE</replace>
+      <replace>currentPlayer</replace>
+    </replaceStrings>
+    <dirStrings>
+      <dir>$PROJECT_DIR$/src/edu/kit/informatik/presenter</dir>
+      <dir>$PROJECT_DIR$/Tests/edu/kit/informatik/presenter</dir>
+      <dir>$PROJECT_DIR$/Tests/edu/kit/informatik/model/FireBreaker</dir>
+      <dir>$PROJECT_DIR$/src/edu/kit/informatik/model/resources</dir>
+      <dir>$PROJECT_DIR$/src/edu/kit/informatik/presenter/GameCommands</dir>
+      <dir>$PROJECT_DIR$/src/edu/kit/informatik/model/FireBreaker</dir>
+      <dir>$PROJECT_DIR$/src/edu/kit/informatik/model/fireBreaker</dir>
+      <dir>$PROJECT_DIR$/src</dir>
+      <dir>$PROJECT_DIR$/src/edu/kit/informatik/view/command</dir>
+      <dir>$PROJECT_DIR$/src/edu/kit/informatik/view</dir>
+      <dir>$PROJECT_DIR$/src/edu/kit/informatik</dir>
+      <dir>$PROJECT_DIR$/src/edu/kit/informatik/presenter/gamecommands</dir>
+      <dir>$PROJECT_DIR$/Tests/edu/kit/informatik/model/firebreaker</dir>
+      <dir>$PROJECT_DIR$/src/edu/kit/informatik/model/firebreaker</dir>
+    </dirStrings>
+  </component>
+  <component name="IdeDocumentHistory">
+    <changedPaths>
+      <option value="$PROJECT_DIR$/src/edu/kit/informatik/model/FireBreaker/GameException.java" />
+      <option value="$PROJECT_DIR$/src/edu/kit/informatik/model/FireBreaker/Player.java" />
+      <option value="$PROJECT_DIR$/src/edu/kit/informatik/model/FireBreaker/Turn.java" />
+      <option value="$PROJECT_DIR$/src/edu/kit/informatik/model/fireBreaker/Turn.java" />
+      <option value="$PROJECT_DIR$/src/edu/kit/informatik/presenter/GameCommands/GameCommands.java" />
+      <option value="$PROJECT_DIR$/src/edu/kit/informatik/presenter/GameCommands/ShowBoard.java" />
+      <option value="$PROJECT_DIR$/src/edu/kit/informatik/presenter/GameCommands/ShowPlayer.java" />
+      <option value="$PROJECT_DIR$/src/edu/kit/informatik/presenter/GameCommands/TurnCommand.java" />
+      <option value="$PROJECT_DIR$/src/edu/kit/informatik/presenter/Quit.java" />
+      <option value="$PROJECT_DIR$/src/edu/kit/informatik/model/fireBreaker/GameBoard.java" />
+      <option value="$PROJECT_DIR$/src/edu/kit/informatik/model/resources/Messages.java" />
+      <option value="$PROJECT_DIR$/src/edu/kit/informatik/model/fireBreaker/Player.java" />
+      <option value="$PROJECT_DIR$/src/edu/kit/informatik/model/fireBreaker/FireBreaker.java" />
+      <option value="$PROJECT_DIR$/src/edu/kit/informatik/model/fireBreaker/Forest.java" />
+      <option value="$PROJECT_DIR$/src/edu/kit/informatik/presenter/GameCommands/Move.java" />
+      <option value="$PROJECT_DIR$/src/edu/kit/informatik/presenter/GameCommands/Refill.java" />
+      <option value="$PROJECT_DIR$/src/edu/kit/informatik/presenter/GameCommands/ShowField.java" />
+      <option value="$PROJECT_DIR$/src/edu/kit/informatik/presenter/GameCommands/BuyFireEngine.java" />
+      <option value="$PROJECT_DIR$/src/edu/kit/informatik/presenter/GameCommands/Extinguish.java" />
+      <option value="$PROJECT_DIR$/src/edu/kit/informatik/presenter/GameCommands/FireToRoll.java" />
+      <option value="$PROJECT_DIR$/src/edu/kit/informatik/presenter/gameCommands/FireToRoll.java" />
+      <option value="$PROJECT_DIR$/src/edu/kit/informatik/view/parameter/PositiveIntParameter.java" />
+      <option value="$PROJECT_DIR$/src/edu/kit/informatik/view/command/IPDCommandParser.java" />
+      <option value="$PROJECT_DIR$/src/edu/kit/informatik/presenter/Reset.java" />
+      <option value="$PROJECT_DIR$/src/edu/kit/informatik/core/Input.java" />
+      <option value="$PROJECT_DIR$/Tests/edu/kit/informatik/model/firebreaker/FireBreakerTest.java" />
+      <option value="$PROJECT_DIR$/src/edu/kit/informatik/model/firebreaker/Turn.java" />
+      <option value="$PROJECT_DIR$/src/edu/kit/informatik/view/parameter/IntegerParameter.java" />
+      <option value="$PROJECT_DIR$/Tests/edu/kit/informatik/presenter/BoardCheckTest.java" />
+      <option value="$PROJECT_DIR$/src/edu/kit/informatik/presenter/gamecommands/Refill.java" />
+      <option value="$PROJECT_DIR$/src/edu/kit/informatik/view/Session.java" />
+      <option value="$PROJECT_DIR$/src/edu/kit/informatik/Application.java" />
+      <option value="$USER_HOME$/.ideavimrc" />
+      <option value="$APPLICATION_CONFIG_DIR$/idea64.vmoptions" />
+      <option value="$APPLICATION_CONFIG_DIR$/idea.properties" />
+      <option value="$PROJECT_DIR$/src/edu/kit/informatik/presenter/gamecommands/Move.java" />
+      <option value="$PROJECT_DIR$/src/edu/kit/informatik/presenter/gamecommands/ShowField.java" />
+      <option value="$PROJECT_DIR$/src/edu/kit/informatik/model/resources/Errors.java" />
+      <option value="$PROJECT_DIR$/src/edu/kit/informatik/core/ZipUtils.java" />
+      <option value="$PROJECT_DIR$/src/edu/kit/informatik/presenter/gamecommands/GameCommands.java" />
+      <option value="$PROJECT_DIR$/src/edu/kit/informatik/presenter/gamecommands/ShowBoard2.java" />
+      <option value="$PROJECT_DIR$/src/edu/kit/informatik/presenter/gamecommands/ShowPlayer.java" />
+      <option value="$PROJECT_DIR$/src/edu/kit/informatik/model/firebreaker/Player.java" />
+      <option value="$PROJECT_DIR$/src/edu/kit/informatik/presenter/gamecommands/Extinguish.java" />
+      <option value="$PROJECT_DIR$/src/edu/kit/informatik/presenter/gamecommands/BuyFireEngine.java" />
+      <option value="$PROJECT_DIR$/src/edu/kit/informatik/model/firebreaker/Forest.java" />
+      <option value="$PROJECT_DIR$/src/edu/kit/informatik/model/firebreaker/FireEngine.java" />
+      <option value="$PROJECT_DIR$/src/edu/kit/informatik/presenter/BoardCheck.java" />
+      <option value="$PROJECT_DIR$/src/edu/kit/informatik/model/firebreaker/GameBoard.java" />
+      <option value="$PROJECT_DIR$/src/edu/kit/informatik/presenter/gamecommands/FireToRoll.java" />
+      <option value="$PROJECT_DIR$/src/edu/kit/informatik/model/firebreaker/FireBreaker.java" />
+    </changedPaths>
+  </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="$PROJECT_DIR$" />
+        <option value="$PROJECT_DIR$/.idea" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1" />
+    <panes />
+  </component>
+  <component name="TerminalArrangementManager">
+    <option name="myTabStates">
+      <TerminalTabState tabName="Local" commandHistoryFileName="history-3" />
+    </option>
+  </component>
+  <component name="TestHistory">
+    <history-entry file="All_in_FinalAssignment2 - 2021.03.29 at 17h 07m 31s.xml">
+      <configuration name="All in FinalAssignment2" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_FinalAssignment2 - 2021.03.29 at 17h 12m 18s.xml">
+      <configuration name="All in FinalAssignment2" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_FinalAssignment2 - 2021.03.29 at 17h 19m 34s.xml">
+      <configuration name="All in FinalAssignment2" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_FinalAssignment2 - 2021.03.29 at 17h 48m 00s.xml">
+      <configuration name="All in FinalAssignment2" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_FinalAssignment2 - 2021.03.29 at 17h 48m 59s.xml">
+      <configuration name="All in FinalAssignment2" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_FinalAssignment2 - 2021.03.29 at 17h 58m 37s.xml">
+      <configuration name="All in FinalAssignment2" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_FinalAssignment2 - 2021.03.29 at 18h 08m 57s.xml">
+      <configuration name="All in FinalAssignment2" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_FinalAssignment2 - 2021.03.29 at 18h 09m 13s.xml">
+      <configuration name="All in FinalAssignment2" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_FinalAssignment2 - 2021.03.29 at 18h 57m 04s.xml">
+      <configuration name="All in FinalAssignment2" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_FinalAssignment2 - 2021.03.29 at 19h 00m 11s.xml">
+      <configuration name="All in FinalAssignment2" configurationId="JUnit" />
+    </history-entry>
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="270176000" />
+  </component>
+  <component name="TodoView" selected-index="4">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <layout>
+      <window_info content_ui="combo" x="962" y="18" width="956" height="1041" id="Project" order="0" sideWeight="0.49894515" weight="0.07032967" />
+      <window_info id="Structure" order="1" sideWeight="0.5010548" side_tool="true" weight="0.13247864" />
+      <window_info id="Favorites" order="2" sideWeight="0.5015723" side_tool="true" weight="0.13152805" />
+      <window_info id="Commit" order="3" />
+      <window_info id="Learn" order="4" weight="0.32959402" />
+      <window_info id="Pull Requests" order="5" />
+      <window_info id="Code Time" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="0" />
+      <window_info anchor="bottom" id="Event Log" order="1" side_tool="true" weight="0.3297062" />
+      <window_info anchor="bottom" id="Find" order="2" weight="0.34177214" />
+      <window_info anchor="bottom" id="Run" order="3" weight="0.38361046" />
+      <window_info anchor="bottom" id="Debug" order="4" weight="0.32624114" />
+      <window_info anchor="bottom" auto_hide="true" x="2282" y="18" width="356" height="1881" id="TODO" order="5" weight="0.17439911" />
+      <window_info anchor="bottom" x="962" y="18" width="956" height="1041" id="Problems View" order="6" weight="0.35021096" />
+      <window_info anchor="bottom" id="Inspection Results" order="7" weight="0.32979318" />
+      <window_info anchor="bottom" id="Inspection" order="8" weight="0.4" />
+      <window_info anchor="bottom" id="File Transfer" order="9" />
+      <window_info anchor="bottom" id="CheckStyle" order="10" weight="0.3364979" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.3370598" />
+      <window_info anchor="bottom" id="Profiler" order="12" weight="0.32928064" />
+      <window_info anchor="bottom" id="Database Changes" order="13" show_stripe_button="false" />
+      <window_info anchor="bottom" id="TypeScript" order="14" />
+      <window_info anchor="bottom" id="Endpoints" order="15" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Build" order="16" weight="0.32911393" />
+      <window_info anchor="bottom" id="Internal Method Tracing" order="17" />
+      <window_info anchor="bottom" id="Flow" order="18" />
+      <window_info anchor="bottom" id="Services" order="19" show_stripe_button="false" weight="0.32911393" />
+      <window_info anchor="right" id="Database" order="0" />
+      <window_info anchor="right" id="Layout Validation" order="1" />
+      <window_info active="true" anchor="right" x="3002" y="438" width="636" height="1041" id="Documentation" order="2" side_tool="true" type="WINDOWED" visible="true" weight="0.38394585" />
+      <window_info anchor="right" id="Test Cube" order="3" sideWeight="0.49921754" weight="0.16773504" />
+      <window_info anchor="right" id="aiXcoder" order="4" sideWeight="0.97652584" weight="0.32959402" />
+    </layout>
+    <layout-to-restore>
+      <window_info auto_hide="true" content_ui="combo" x="2882" y="438" width="956" height="1041" id="Project" order="0" sideWeight="0.49894515" weight="0.21497326" />
+      <window_info id="Structure" order="1" sideWeight="0.5010548" side_tool="true" weight="0.13247864" />
+      <window_info id="Favorites" order="2" sideWeight="0.5015723" side_tool="true" weight="0.13152805" />
+      <window_info id="Commit" order="3" />
+      <window_info id="Learn" order="4" weight="0.32959402" />
+      <window_info id="Pull Requests" order="5" />
+      <window_info id="Code Time" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="0" />
+      <window_info anchor="bottom" id="Event Log" order="1" side_tool="true" weight="0.3297062" />
+      <window_info anchor="bottom" id="Find" order="2" visible="true" weight="0.32805908" />
+      <window_info anchor="bottom" id="Run" order="3" weight="0.32805908" />
+      <window_info anchor="bottom" id="Debug" order="4" weight="0.39873418" />
+      <window_info anchor="bottom" auto_hide="true" x="2282" y="18" width="356" height="1881" id="TODO" order="5" weight="0.17439911" />
+      <window_info anchor="bottom" auto_hide="true" x="2882" y="438" width="956" height="1041" id="Problems View" order="6" weight="0.35021096" />
+      <window_info anchor="bottom" id="Inspection Results" order="7" weight="0.32979318" />
+      <window_info anchor="bottom" id="Inspection" order="8" weight="0.4" />
+      <window_info anchor="bottom" id="File Transfer" order="9" />
+      <window_info anchor="bottom" id="CheckStyle" order="10" weight="0.3370598" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.3370598" />
+      <window_info anchor="bottom" id="Profiler" order="12" weight="0.3297062" />
+      <window_info anchor="bottom" id="Database Changes" order="13" show_stripe_button="false" />
+      <window_info anchor="bottom" id="TypeScript" order="14" />
+      <window_info anchor="bottom" id="Endpoints" order="15" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Build" order="16" weight="0.32805908" />
+      <window_info anchor="bottom" id="Internal Method Tracing" order="17" />
+      <window_info anchor="bottom" id="Flow" order="18" />
+      <window_info anchor="bottom" id="Services" order="19" show_stripe_button="false" weight="0.32911393" />
+      <window_info anchor="right" id="Database" order="0" />
+      <window_info anchor="right" id="Layout Validation" order="1" />
+      <window_info anchor="right" x="3002" y="438" width="636" height="1041" id="Documentation" order="2" side_tool="true" visible="true" weight="0.32959402" />
+      <window_info anchor="right" id="Test Cube" order="3" visible="true" weight="0.16791444" />
+      <window_info anchor="right" id="aiXcoder" order="4" />
+    </layout-to-restore>
+  </component>
+  <component name="Trusted.Project.Settings" hasCheckedIfOldProject="true" trusted="YES" />
+  <component name="WindowStateProjectService">
+    <state x="574" y="85" width="738" height="629" key="#Inspections" timestamp="1617393918682">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="574" y="85" width="738" height="629" key="#Inspections/0.0.1920.1080@0.0.1920.1080" timestamp="1617393918682" />
+    <state x="970" y="630" key="#Inspections/0.1553.1920.1080/388.473.1920.1080/2308.0.1080.1920@388.473.1920.1080" timestamp="1617034325799" />
+    <state x="2506" y="613" width="738" height="629" key="#Inspections/1920.420.1920.1080/0.420.1920.1080/3840.0.1080.1920@1920.420.1920.1080" timestamp="1616983388538" />
+    <state x="37" y="-43" width="1799" height="777" key="#Live_Templates" timestamp="1617395303394">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="37" y="-43" key="#Live_Templates/0.0.1920.1080@0.0.1920.1080" timestamp="1617395303394" />
+    <state x="1959" y="395" width="1799" height="777" key="#Live_Templates/1920.420.1920.1080/0.420.1920.1080/3840.0.1080.1920@1920.420.1920.1080" timestamp="1616983890836" />
+    <state x="2539" y="762" width="671" height="331" key="#Notifications" timestamp="1616717947321">
+      <screen x="1920" y="420" width="1920" height="1080" />
+    </state>
+    <state x="2539" y="762" width="671" height="331" key="#Notifications/1920.420.1920.1080/0.420.1920.1080/3840.0.1080.1920@1920.420.1920.1080" timestamp="1616717947321" />
+    <state x="-2" y="402" width="1920" height="1080" key="#Vim_Emulation" timestamp="1616934165181">
+      <screen x="0" y="420" width="1920" height="1080" />
+    </state>
+    <state x="-2" y="402" width="1920" height="1080" key="#Vim_Emulation/1920.420.1920.1080/0.420.1920.1080/3840.0.1080.1920@1920.420.1920.1080" timestamp="1616934165181" />
+    <state x="2609" y="750" width="532" height="354" key="#com.intellij.codeInsight.template.impl.EditVariableDialog" timestamp="1616962563834">
+      <screen x="1920" y="420" width="1920" height="1080" />
+    </state>
+    <state x="2609" y="750" width="532" height="354" key="#com.intellij.codeInsight.template.impl.EditVariableDialog/1920.420.1920.1080/0.420.1920.1080/3840.0.1080.1920@1920.420.1920.1080" timestamp="1616962563834" />
+    <state x="0" y="0" width="1920" height="1080" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1617405506458">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="0" y="0" width="1920" height="1080" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1617405506458" />
+    <state x="1012" y="530" width="1086" height="686" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.1553.1920.1080/388.473.1920.1080/2308.0.1080.1920@388.473.1920.1080" timestamp="1617037892743" />
+    <state x="630" y="531" width="1086" height="736" key="#com.intellij.execution.impl.EditConfigurationsDialog/1920.420.1920.1080/0.420.1920.1080/3840.0.1080.1920@1920.420.1920.1080" timestamp="1616964233863" />
+    <state x="960" y="0" width="960" height="1061" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1617030058515">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="960" y="0" width="960" height="1061" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1617030058515" />
+    <state x="1920" y="420" width="1920" height="1061" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.420.1920.1080/1920.0.1920.1080/3840.0.1920.1080@1920.0.1920.1080" timestamp="1616804372451" />
+    <state x="2880" y="420" width="960" height="1061" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/1920.420.1920.1080/0.420.1920.1080/3840.0.1080.1920@1920.420.1920.1080" timestamp="1616927906333" />
+    <state x="2294" y="632" width="1159" height="814" key="#com.intellij.featureStatistics.actions.ShowFeatureUsageStatisticsDialog" timestamp="1616985950417">
+      <screen x="1920" y="420" width="1920" height="1080" />
+    </state>
+    <state x="2294" y="632" width="1159" height="814" key="#com.intellij.featureStatistics.actions.ShowFeatureUsageStatisticsDialog/1920.420.1920.1080/0.420.1920.1080/3840.0.1080.1920@1920.420.1920.1080" timestamp="1616985950417" />
+    <state x="-12" y="-108" width="1920" height="1080" key="#com.intellij.ide.util.MemberChooser" timestamp="1617395237922">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="-12" y="-108" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1080@0.0.1920.1080" timestamp="1617395237922" />
+    <state x="1920" y="402" width="1080" height="1100" key="#com.intellij.ide.util.MemberChooser/1920.0.1080.1920/0.502.1920.1080/3000.0.1080.1920@1920.0.1080.1920" timestamp="1615394046175" />
+    <state x="-10" y="330" width="1920" height="1080" key="#com.intellij.ide.util.MemberChooser/1920.420.1920.1080/0.420.1920.1080/3840.0.1080.1920@1920.420.1920.1080" timestamp="1616977013616" />
+    <state x="2443" y="686" width="530" height="435" key="#com.intellij.ide.util.PackageChooserDialog" timestamp="1615394138023">
+      <screen x="1920" y="0" width="1080" height="1920" />
+    </state>
+    <state x="2443" y="686" width="530" height="435" key="#com.intellij.ide.util.PackageChooserDialog/1920.0.1080.1920/0.502.1920.1080/3000.0.1080.1920@1920.0.1080.1920" timestamp="1615394138023" />
+    <state x="2161" y="701" width="754" height="260" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1616989371640">
+      <screen x="1920" y="420" width="1920" height="1080" />
+    </state>
+    <state x="2519" y="827" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/1920.0.1080.1920/0.502.1920.1080/3000.0.1080.1920@1920.0.1080.1920" timestamp="1615384633374" />
+    <state x="2161" y="701" width="754" height="260" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/1920.420.1920.1080/0.420.1920.1080/3840.0.1080.1920@1920.420.1920.1080" timestamp="1616989371640" />
+    <state x="3981" y="660" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/1920.420.1920.1080/0.420.1920.1080/3840.0.1080.1920@3840.0.1080.1920" timestamp="1616173756269" />
+    <state x="2634" y="767" key="#com.intellij.refactoring.move.moveInstanceMethod.MoveInstanceMethodDialog" timestamp="1616711129452">
+      <screen x="1920" y="420" width="1920" height="1080" />
+    </state>
+    <state x="2634" y="767" key="#com.intellij.refactoring.move.moveInstanceMethod.MoveInstanceMethodDialog/1920.420.1920.1080/0.420.1920.1080/3840.0.1080.1920@1920.420.1920.1080" timestamp="1616711129452" />
+    <state x="2572" y="590" width="585" height="495" key="#com.intellij.refactoring.move.moveMembers.MoveMembersDialog" timestamp="1616978434131">
+      <screen x="1920" y="420" width="1920" height="1080" />
+    </state>
+    <state x="2572" y="590" width="585" height="495" key="#com.intellij.refactoring.move.moveMembers.MoveMembersDialog/1920.420.1920.1080/0.420.1920.1080/3840.0.1080.1920@1920.420.1920.1080" timestamp="1616978434131" />
+    <state x="2415" y="476" width="908" height="794" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1616966312120">
+      <screen x="1920" y="420" width="1920" height="1080" />
+    </state>
+    <state x="2415" y="476" width="908" height="794" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/1920.420.1920.1080/0.420.1920.1080/3840.0.1080.1920@1920.420.1920.1080" timestamp="1616966312120" />
+    <state x="1712" y="762" width="530" height="493" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1617035928206">
+      <screen x="388" y="473" width="1920" height="1080" />
+    </state>
+    <state x="1712" y="762" width="530" height="493" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.1553.1920.1080/388.473.1920.1080/2308.0.1080.1920@388.473.1920.1080" timestamp="1617035928206" />
+    <state x="3248" y="325" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.420.1920.1080/1920.0.1920.1080/3840.0.1920.1080@1920.0.1920.1080" timestamp="1616799857055" />
+    <state x="1328" y="745" width="530" height="493" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/1920.420.1920.1080/0.420.1920.1080/3840.0.1080.1920@1920.420.1920.1080" timestamp="1616989381158" />
+    <state x="952" y="301" width="530" height="493" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog" timestamp="1617401842791">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="952" y="301" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1617401842791" />
+    <state x="1342" y="792" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog/0.1553.1920.1080/388.473.1920.1080/2308.0.1080.1920@388.473.1920.1080" timestamp="1617038747375" />
+    <state x="2460" y="663" width="530" height="493" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog/1920.0.1080.1920/0.502.1920.1080/3000.0.1080.1920@1920.0.1080.1920" timestamp="1615386878517" />
+    <state x="2876" y="757" width="530" height="493" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog/1920.420.1920.1080/0.420.1920.1080/3840.0.1080.1920@1920.420.1920.1080" timestamp="1616982165964" />
+    <state x="715" y="258" key="#xdebugger.evaluate" timestamp="1617401515047">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="715" y="258" key="#xdebugger.evaluate/0.0.1920.1080@0.0.1920.1080" timestamp="1617401515047" />
+    <state x="1067" y="685" width="519" height="303" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1617035669140">
+      <screen x="388" y="473" width="1920" height="1080" />
+    </state>
+    <state x="1067" y="685" width="519" height="303" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.1553.1920.1080/388.473.1920.1080/2308.0.1080.1920@388.473.1920.1080" timestamp="1617035669140" />
+    <state x="2603" y="668" width="572" height="313" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/1920.420.1920.1080/0.420.1920.1080/3840.0.1080.1920@1920.420.1920.1080" timestamp="1616991075131" />
+    <state x="2880" y="420" width="960" height="1061" key="DiffContextDialog" timestamp="1616942916049">
+      <screen x="1920" y="420" width="1920" height="1080" />
+    </state>
+    <state x="2880" y="420" width="960" height="1061" key="DiffContextDialog/1920.420.1920.1080/0.420.1920.1080/3840.0.1080.1920@1920.420.1920.1080" timestamp="1616942916049" />
+    <state x="1014" y="604" width="307" height="518" key="EnvironmentVariablesDialog" timestamp="1616964192261">
+      <screen x="0" y="420" width="1920" height="1080" />
+    </state>
+    <state x="1014" y="604" width="307" height="518" key="EnvironmentVariablesDialog/1920.420.1920.1080/0.420.1920.1080/3840.0.1080.1920@1920.420.1920.1080" timestamp="1616964192261" />
+    <state x="-26" y="-260" width="610" height="1080" key="FileChooserDialogImpl" timestamp="1617725315020">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="-26" y="-260" key="FileChooserDialogImpl/0.0.1920.1080@0.0.1920.1080" timestamp="1617725315020" />
+    <state x="364" y="239" width="610" height="1080" key="FileChooserDialogImpl/0.1553.1920.1080/388.473.1920.1080/2308.0.1080.1920@388.473.1920.1080" timestamp="1617036589401" />
+    <state x="1918" y="402" width="1924" height="1100" key="FileChooserDialogImpl/1920.0.1080.1920/0.502.1920.1080/3000.0.1080.1920@1920.0.1080.1920" timestamp="1615384355685" />
+    <state x="2388" y="-178" width="610" height="1920" key="FileChooserDialogImpl/1920.0.1080.1920/0.502.1920.1080/3000.0.1080.1920@3000.0.1080.1920" timestamp="1615742351530" />
+    <state x="-22" y="204" width="1920" height="1080" key="FileChooserDialogImpl/1920.420.1920.1080/0.420.1920.1080/3840.0.1080.1920@1920.420.1920.1080" timestamp="1616986273268" />
+    <state x="3838" y="-18" width="1084" height="1940" key="FileChooserDialogImpl/1920.420.1920.1080/0.420.1920.1080/3840.0.1080.1920@3840.0.1080.1920" timestamp="1615655622836" />
+    <state x="2226" y="795" width="475" height="238" key="Github.ShareDialog" timestamp="1616973811942">
+      <screen x="1920" y="420" width="1920" height="1080" />
+    </state>
+    <state x="2226" y="795" width="475" height="238" key="Github.ShareDialog/1920.420.1920.1080/0.420.1920.1080/3840.0.1080.1920@1920.420.1920.1080" timestamp="1616973811942" />
+    <state x="2139" y="629" width="511" height="596" key="Github.UntrackedFilesDialog" timestamp="1616697715204">
+      <screen x="1920" y="420" width="1920" height="1080" />
+    </state>
+    <state x="2139" y="629" width="511" height="596" key="Github.UntrackedFilesDialog/1920.420.1920.1080/0.420.1920.1080/3840.0.1080.1920@1920.420.1920.1080" timestamp="1616697715204" />
+    <state width="910" height="283" key="GridCell.Tab.0.bottom" timestamp="1617408510988">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="910" height="283" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1617408510988" />
+    <state width="1147" height="275" key="GridCell.Tab.0.bottom/0.1553.1920.1080/388.473.1920.1080/2308.0.1080.1920@388.473.1920.1080" timestamp="1617040657497" />
+    <state width="1870" height="349" key="GridCell.Tab.0.bottom/0.420.1920.1080/1920.0.1920.1080/3840.0.1920.1080@1920.0.1920.1080" timestamp="1616808120034" />
+    <state width="1870" height="195" key="GridCell.Tab.0.bottom/1920.420.1920.1080/0.420.1920.1080/3840.0.1080.1920@1920.420.1920.1080" timestamp="1616991945232" />
+    <state width="910" height="283" key="GridCell.Tab.0.center" timestamp="1617408510986">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="910" height="283" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1617408510986" />
+    <state width="1147" height="275" key="GridCell.Tab.0.center/0.1553.1920.1080/388.473.1920.1080/2308.0.1080.1920@388.473.1920.1080" timestamp="1617040657497" />
+    <state width="1870" height="349" key="GridCell.Tab.0.center/0.420.1920.1080/1920.0.1920.1080/3840.0.1920.1080@1920.0.1920.1080" timestamp="1616808120034" />
+    <state width="1870" height="195" key="GridCell.Tab.0.center/1920.420.1920.1080/0.420.1920.1080/3840.0.1080.1920@1920.420.1920.1080" timestamp="1616991945232" />
+    <state width="910" height="283" key="GridCell.Tab.0.left" timestamp="1617408510985">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="910" height="283" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1617408510985" />
+    <state width="1147" height="275" key="GridCell.Tab.0.left/0.1553.1920.1080/388.473.1920.1080/2308.0.1080.1920@388.473.1920.1080" timestamp="1617040657497" />
+    <state width="1870" height="349" key="GridCell.Tab.0.left/0.420.1920.1080/1920.0.1920.1080/3840.0.1920.1080@1920.0.1920.1080" timestamp="1616808120034" />
+    <state width="1870" height="195" key="GridCell.Tab.0.left/1920.420.1920.1080/0.420.1920.1080/3840.0.1080.1920@1920.420.1920.1080" timestamp="1616991945231" />
+    <state width="910" height="283" key="GridCell.Tab.0.right" timestamp="1617408510987">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="910" height="283" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1617408510987" />
+    <state width="1147" height="275" key="GridCell.Tab.0.right/0.1553.1920.1080/388.473.1920.1080/2308.0.1080.1920@388.473.1920.1080" timestamp="1617040657497" />
+    <state width="1870" height="349" key="GridCell.Tab.0.right/0.420.1920.1080/1920.0.1920.1080/3840.0.1920.1080@1920.0.1920.1080" timestamp="1616808120034" />
+    <state width="1870" height="195" key="GridCell.Tab.0.right/1920.420.1920.1080/0.420.1920.1080/3840.0.1080.1920@1920.420.1920.1080" timestamp="1616991945232" />
+    <state x="2688" y="868" width="373" height="118" key="ReplaceDuplicatesPrompt" timestamp="1616807007361">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2688" y="868" width="373" height="118" key="ReplaceDuplicatesPrompt/0.420.1920.1080/1920.0.1920.1080/3840.0.1920.1080@1920.0.1920.1080" timestamp="1616807007361" />
+    <state x="690" y="225" width="530" height="565" key="RollbackChangesDialog" timestamp="1617311762190">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="690" y="225" width="530" height="565" key="RollbackChangesDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1617311762190" />
+    <state x="-2" y="-18" width="1920" height="1080" key="SettingsEditor" timestamp="1617468196665">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="-2" y="-18" width="1920" height="1080" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1617468196665" />
+    <state x="1920" y="506" width="1080" height="755" key="SettingsEditor/1920.0.1080.1920/0.502.1920.1080/3000.0.1080.1920@1920.0.1080.1920" timestamp="1615397941528" />
+    <state x="1916" y="325" width="1080" height="720" key="SettingsEditor/1920.0.1080.1920/0.502.1920.1080/3000.0.1080.1920@3000.0.1080.1920" timestamp="1615742334035" />
+    <state x="2025" y="493" width="904" height="720" key="SettingsEditor/1920.420.1920.1080/0.420.1920.1080/3840.0.1080.1920@1920.420.1920.1080" timestamp="1616991332276" />
+    <state x="3835" y="361" key="SettingsEditor/1920.420.1920.1080/0.420.1920.1080/3840.0.1080.1920@3840.0.1080.1920" timestamp="1615654685498" />
+    <state width="498" height="524" key="SwitcherDM" timestamp="1617407576299">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="498" height="524" key="SwitcherDM/0.0.1920.1080@0.0.1920.1080" timestamp="1617407576299" />
+    <state width="498" height="802" key="SwitcherDM/1920.0.1080.1920/0.502.1920.1080/3000.0.1080.1920@1920.0.1080.1920" timestamp="1615396587092" />
+    <state width="498" height="524" key="SwitcherDM/1920.420.1920.1080/0.420.1920.1080/3840.0.1080.1920@1920.420.1920.1080" timestamp="1616987544080" />
+    <state x="2747" y="847" width="255" height="160" key="VCS.EditChangelistDialog" timestamp="1616717246457">
+      <screen x="1920" y="420" width="1920" height="1080" />
+    </state>
+    <state x="2747" y="847" width="255" height="160" key="VCS.EditChangelistDialog/1920.420.1920.1080/0.420.1920.1080/3840.0.1080.1920@1920.420.1920.1080" timestamp="1616717246457" />
+    <state x="930" y="630" width="806" height="520" key="Vcs.Push.Dialog.v2" timestamp="1617038080133">
+      <screen x="388" y="473" width="1920" height="1080" />
+    </state>
+    <state x="930" y="630" key="Vcs.Push.Dialog.v2/0.1553.1920.1080/388.473.1920.1080/2308.0.1080.1920@388.473.1920.1080" timestamp="1617038080133" />
+    <state x="2464" y="595" width="806" height="520" key="Vcs.Push.Dialog.v2/1920.420.1920.1080/0.420.1920.1080/3840.0.1080.1920@1920.420.1920.1080" timestamp="1616977807756" />
+    <state x="960" y="0" width="960" height="1061" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1617313146071">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="960" y="0" width="960" height="1061" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1617313146071" />
+    <state x="960" y="0" width="960" height="1061" key="com.intellij.history.integration.ui.views.SelectionHistoryDialog" timestamp="1617312701602">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="960" y="0" width="960" height="1061" key="com.intellij.history.integration.ui.views.SelectionHistoryDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1617312701602" />
+    <state x="2341" y="826" width="651" height="202" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1615395270488">
+      <screen x="1920" y="0" width="1080" height="1920" />
+    </state>
+    <state x="2341" y="826" width="651" height="202" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/1920.0.1080.1920/0.502.1920.1080/3000.0.1080.1920@1920.0.1080.1920" timestamp="1615395270488" />
+    <state x="551" y="23" width="768" height="608" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1617313145534">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="551" y="23" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1920.1080@0.0.1920.1080" timestamp="1617313145534" />
+    <state x="2473" y="461" width="768" height="608" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/1920.420.1920.1080/0.420.1920.1080/3840.0.1080.1920@1920.420.1920.1080" timestamp="1616976156484" />
+    <state x="0" y="420" width="1920" height="1080" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1616856418309">
+      <screen x="0" y="420" width="1920" height="1080" />
+    </state>
+    <state x="2824" y="282" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.420.1920.1080/1920.0.1920.1080/3840.0.1920.1080@1920.0.1920.1080" timestamp="1616802053129" />
+    <state x="2434" y="662" width="558" height="530" key="com.intellij.testIntegration.createTest.CreateTestDialog/1920.0.1080.1920/0.502.1920.1080/3000.0.1080.1920@1920.0.1080.1920" timestamp="1615394159067" />
+    <state x="0" y="420" width="1920" height="1080" key="com.intellij.testIntegration.createTest.CreateTestDialog/1920.420.1920.1080/0.420.1920.1080/3840.0.1080.1920@1920.420.1920.1080" timestamp="1616856418309" />
+    <state x="787" y="241" width="1125" height="628" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1617402569862">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="787" y="241" width="1125" height="628" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1920.1080@0.0.1920.1080" timestamp="1617402569862" />
+    <state x="1920" y="0" width="1920" height="1080" key="extract.method.dialog" timestamp="1616806977652">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="1920" y="0" width="1920" height="1080" key="extract.method.dialog/0.420.1920.1080/1920.0.1920.1080/3840.0.1920.1080@1920.0.1920.1080" timestamp="1616806977652" />
+    <state x="2462" y="691" width="530" height="472" key="extract.method.dialog/1920.0.1080.1920/0.502.1920.1080/3000.0.1080.1920@1920.0.1080.1920" timestamp="1615388785948" />
+    <state x="2870" y="683" width="943" height="488" key="extract.method.dialog/1920.420.1920.1080/0.420.1920.1080/3840.0.1080.1920@1920.420.1920.1080" timestamp="1616687150353" />
+    <state x="165" y="73" width="736" height="762" key="find.popup" timestamp="1617397419810">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="165" y="73" width="736" height="762" key="find.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1617397419810" />
+    <state x="553" y="546" width="736" height="762" key="find.popup/0.1553.1920.1080/388.473.1920.1080/2308.0.1080.1920@388.473.1920.1080" timestamp="1617039417994" />
+    <state x="2085" y="493" width="736" height="762" key="find.popup/1920.420.1920.1080/0.420.1920.1080/3840.0.1080.1920@1920.420.1920.1080" timestamp="1616989231972" />
+    <state width="1023" height="240" key="javadoc.popup" timestamp="1617399588792">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1023" height="240" key="javadoc.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1617399588792" />
+    <state width="575" height="426" key="javadoc.popup/1920.0.1080.1920/0.502.1920.1080/3000.0.1080.1920@1920.0.1080.1920" timestamp="1615384600819" />
+    <state width="1023" height="240" key="javadoc.popup/1920.420.1920.1080/0.420.1920.1080/3840.0.1080.1920@1920.420.1920.1080" timestamp="1616983739144" />
+    <state x="545" y="-26" width="654" height="1080" key="new project wizard" timestamp="1617725327563">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="545" y="-26" width="654" height="1080" key="new project wizard/0.0.1920.1080@0.0.1920.1080" timestamp="1617725327563" />
+    <state x="2467" y="508" width="808" height="766" key="new project wizard/1920.420.1920.1080/0.420.1920.1080/3840.0.1080.1920@1920.420.1920.1080" timestamp="1615705306502" />
+    <state x="4147" y="170" width="654" height="1362" key="new project wizard/1920.420.1920.1080/0.420.1920.1080/3840.0.1080.1920@3840.0.1080.1920" timestamp="1615655553245" />
+    <state x="633" y="727" width="700" height="530" key="recent.locations.popup" timestamp="1617037723131">
+      <screen x="388" y="473" width="1920" height="1080" />
+    </state>
+    <state x="633" y="727" width="700" height="530" key="recent.locations.popup/0.1553.1920.1080/388.473.1920.1080/2308.0.1080.1920@388.473.1920.1080" timestamp="1617037723131" />
+    <state x="1023" y="623" width="611" height="441" key="refactoring.ChangeSignatureDialog" timestamp="1617038649456">
+      <screen x="388" y="473" width="1920" height="1080" />
+    </state>
+    <state x="1023" y="623" width="611" height="441" key="refactoring.ChangeSignatureDialog/0.1553.1920.1080/388.473.1920.1080/2308.0.1080.1920@388.473.1920.1080" timestamp="1617038649456" />
+    <state x="2559" y="606" width="611" height="462" key="refactoring.ChangeSignatureDialog/1920.420.1920.1080/0.420.1920.1080/3840.0.1080.1920@1920.420.1920.1080" timestamp="1616982973315" />
+    <state x="622" y="35" key="run.anything.popup" timestamp="1617315475530">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="622" y="35" key="run.anything.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1617315475530" />
+    <state x="2542" y="455" key="run.anything.popup/1920.420.1920.1080/0.420.1920.1080/3840.0.1080.1920@1920.420.1920.1080" timestamp="1616977025222" />
+    <state x="2553" y="682" key="save.file.as.template.dialog" timestamp="1616960387271">
+      <screen x="1920" y="420" width="1920" height="1080" />
+    </state>
+    <state x="2553" y="682" key="save.file.as.template.dialog/1920.420.1920.1080/0.420.1920.1080/3840.0.1080.1920@1920.420.1920.1080" timestamp="1616960387271" />
+    <state x="2723" y="828" width="303" height="198" key="save.project.as.template.dialog" timestamp="1616961244690">
+      <screen x="1920" y="420" width="1920" height="1080" />
+    </state>
+    <state x="2723" y="828" width="303" height="198" key="save.project.as.template.dialog/1920.420.1920.1080/0.420.1920.1080/3840.0.1080.1920@1920.420.1920.1080" timestamp="1616961244690" />
+    <state x="546" y="323" width="1195" height="382" key="search.everywhere.popup" timestamp="1617401085675">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="546" y="323" width="1195" height="382" key="search.everywhere.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1617401085675" />
+    <state x="2466" y="323" width="1195" height="382" key="search.everywhere.popup/0.420.1920.1080/1920.0.1920.1080/3840.0.1920.1080@1920.0.1920.1080" timestamp="1616801283474" />
+    <state x="2543" y="654" width="672" height="678" key="search.everywhere.popup/1920.0.1080.1920/0.502.1920.1080/3000.0.1080.1920@1920.0.1080.1920" timestamp="1615397477264" />
+    <state x="2466" y="743" width="1195" height="382" key="search.everywhere.popup/1920.420.1920.1080/0.420.1920.1080/3840.0.1080.1920@1920.420.1920.1080" timestamp="1616986929917" />
+  </component>
+  <component name="debuggerHistoryManager">
+    <expressions id="watch">
+      <expression>
+        <expression-string>Application</expression-string>
+        <language-id>JAVA</language-id>
+        <custom-info>edu.kit.informatik.Application</custom-info>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
+    <expressions id="evaluateExpression">
+      <expression>
+        <expression-string>targetField instanceof Forest</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/edu/kit/informatik/view/parameter/ParameterBundle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+          <folding>
+            <element signature="e#1916#1917#0" expanded="true" />
+            <element signature="e#1972#1973#0" expanded="true" />
+            <element signature="e#2099#2100#0" expanded="true" />
+            <element signature="e#2139#2140#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/kit/informatik/view/parameter/Parameter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="500">
+          <caret line="74" column="24" selection-start-line="74" selection-start-column="24" selection-end-line="74" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/kit/informatik/presenter/Reset.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="407">
+          <caret line="43" column="26" selection-start-line="43" selection-start-column="26" selection-end-line="43" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/kit/informatik/presenter/Quit.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="37" column="21" selection-start-line="37" selection-start-column="21" selection-end-line="37" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tests/edu/kit/informatik/model/firebreaker/FireBreakerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="130" column="24" selection-start-line="130" selection-start-column="24" selection-end-line="130" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/kit/informatik/view/command/Command.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="19" column="22" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/kit/informatik/Terminal.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="205">
+          <caret line="57" column="19" selection-start-line="57" selection-start-column="19" selection-end-line="57" selection-end-column="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/kit/informatik/Application.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="882">
+          <caret line="52" column="32" selection-start-line="52" selection-start-column="32" selection-end-line="52" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/idea.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="42">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/idea64.vmoptions">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.ideavimrc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="542">
+          <caret line="100" selection-start-line="99" selection-end-line="100" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tests/edu/kit/informatik/presenter/BoardCheckTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21">
+          <caret line="24" column="41" selection-start-line="24" selection-start-column="41" selection-end-line="24" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/kit/informatik/view/parameter/IntegerParameter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="575">
+          <caret line="49" column="102" selection-start-line="49" selection-start-column="102" selection-end-line="49" selection-end-column="102" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/kit/informatik/model/resources/Errors.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="365">
+          <caret line="207" column="118" selection-start-line="207" selection-start-column="118" selection-end-line="207" selection-end-column="118" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/kit/informatik/core/ZipUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="407">
+          <caret line="30" column="23" selection-start-line="30" selection-start-column="23" selection-end-line="30" selection-end-column="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.jdks/corretto-11.0.10/lib/src.zip!/java.base/java/util/stream/Collectors.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3738">
+          <caret line="381" column="53" selection-start-line="381" selection-start-column="53" selection-end-line="381" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/kit/informatik/view/command/Result.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="575">
+          <caret line="59" column="16" selection-start-line="59" selection-start-column="16" selection-end-line="59" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/kit/informatik/view/command/IPDCommandParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21">
+          <caret line="42" column="11" selection-start-line="42" selection-start-column="11" selection-end-line="42" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/kit/informatik/view/command/CommandParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="17" column="17" selection-start-line="17" selection-start-column="17" selection-end-line="17" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/kit/informatik/view/command/CommandSupplier.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="15" column="17" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/kit/informatik/view/parameter/ParseException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.jdks/corretto-11.0.10/lib/src.zip!/java.base/java/util/Comparator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="489" column="34" selection-start-line="489" selection-start-column="34" selection-end-line="489" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.jdks/corretto-11.0.10/lib/src.zip!/java.base/java/lang/Integer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="1471" column="22" selection-start-line="1471" selection-start-column="22" selection-end-line="1471" selection-end-column="22" />
+          <folding>
+            <element signature="e#58244#58245#0" expanded="true" />
+            <element signature="e#58300#58301#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tests/edu/kit/informatik/model/firebreaker/TurnTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="68" selection-start-line="68" selection-end-line="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/kit/informatik/presenter/gamecommands/TurnCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="27" column="33" selection-start-line="27" selection-start-column="33" selection-end-line="27" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/kit/informatik/presenter/gamecommands/ShowPlayer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="500">
+          <caret line="66" column="71" selection-start-line="66" selection-start-column="71" selection-end-line="66" selection-end-column="71" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/kit/informatik/model/firebreaker/GameException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/kit/informatik/model/firebreaker/FireStation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="441">
+          <caret line="25" column="18" selection-start-line="25" selection-start-column="18" selection-end-line="25" selection-end-column="18" />
+          <folding>
+            <element signature="e#536#537#0" expanded="true" />
+            <element signature="e#575#576#0" expanded="true" />
+            <element signature="e#922#923#0" expanded="true" />
+            <element signature="e#959#960#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/kit/informatik/model/firebreaker/Field.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="520">
+          <caret line="32" column="9" selection-start-line="32" selection-start-column="9" selection-end-line="32" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/kit/informatik/presenter/gamecommands/ShowBoard.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="447">
+          <caret line="46" column="58" selection-start-line="46" selection-start-column="58" selection-end-line="46" selection-end-column="58" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/kit/informatik/presenter/gamecommands/ShowBoard2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="500">
+          <caret line="46" column="61" selection-start-line="46" selection-start-column="61" selection-end-line="46" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/kit/informatik/view/Session.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="193">
+          <caret line="100" selection-start-line="100" selection-end-line="100" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/kit/informatik/model/firebreaker/Turn.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/kit/informatik/model/firebreaker/Player.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="241">
+          <caret line="57" column="20" selection-start-line="57" selection-start-column="20" selection-end-line="57" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/kit/informatik/model/firebreaker/FireFightingPond.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="59">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/kit/informatik/presenter/gamecommands/ShowField.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="52" column="31" selection-start-line="52" selection-start-column="31" selection-end-line="52" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.jdks/corretto-11.0.10/lib/src.zip!/java.base/java/lang/Object.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21">
+          <caret line="244" column="18" selection-start-line="244" selection-start-column="18" selection-end-line="244" selection-end-column="18" />
+          <folding>
+            <element signature="e#11222#11223#0" expanded="true" />
+            <element signature="e#11305#11306#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/kit/informatik/model/firebreaker/Forest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="133" column="60" selection-start-line="133" selection-start-column="60" selection-end-line="133" selection-end-column="60" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/kit/informatik/presenter/gamecommands/BuyFireEngine.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="51" column="19" selection-start-line="51" selection-start-column="19" selection-end-line="51" selection-end-column="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.jdks/corretto-11.0.10/lib/src.zip!/java.base/java/lang/IndexOutOfBoundsException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="202">
+          <caret line="36" column="13" selection-start-line="36" selection-start-column="13" selection-end-line="36" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.jdks/corretto-11.0.10/lib/src.zip!/java.base/java/util/ArrayList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="458" column="16" selection-start-line="458" selection-start-column="16" selection-end-line="458" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/kit/informatik/presenter/BoardCheck.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1995">
+          <caret line="103" column="8" selection-start-line="103" selection-start-column="8" selection-end-line="103" selection-end-column="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/kit/informatik/presenter/gamecommands/Refill.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="693">
+          <caret line="49" column="20" selection-start-line="49" selection-start-column="20" selection-end-line="49" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/kit/informatik/presenter/gamecommands/GameCommands.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="441">
+          <caret line="25" column="36" selection-start-line="25" selection-start-column="36" selection-end-line="25" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/kit/informatik/presenter/gamecommands/Move.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="882">
+          <caret line="57" column="19" selection-start-line="57" selection-start-column="19" selection-end-line="57" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/kit/informatik/presenter/gamecommands/FireToRoll.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="49" selection-start-column="49" selection-end-column="49" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/kit/informatik/presenter/gamecommands/Extinguish.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1239">
+          <caret line="72" selection-start-line="72" selection-end-line="72" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/kit/informatik/model/firebreaker/FireEngine.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1344">
+          <caret line="69" column="26" selection-start-line="69" selection-start-column="26" selection-end-line="69" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/kit/informatik/model/firebreaker/GameBoard.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2982">
+          <caret line="154" column="51" selection-start-line="154" selection-start-column="51" selection-end-line="154" selection-end-column="51" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/kit/informatik/model/firebreaker/ForestStates.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/kit/informatik/model/firebreaker/FireBreaker.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI" />
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>11</last-edited>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>FinalAssignment2</last-edited>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI" />
+    </states>
+  </component>
+</project>

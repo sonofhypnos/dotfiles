@@ -1,0 +1,69 @@
+<application>
+  <component name="RecentProjectsManager">
+    <option name="additionalInfo">
+      <map>
+        <entry key="$USER_HOME$/PycharmProjects/pythonProject">
+          <value>
+            <RecentProjectMetaInfo frameTitle="pythonProject – ~/repos/KIT-ILIAS_AutoDownloader/AutoDownload.py" projectWorkspaceId="1piCeHRXRXkam81mXfZkWH3GsbD">
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="build" value="PY-203.7148.72" />
+              <option name="buildTimestamp" value="1611720947782" />
+              <frame x="-2" y="-18" width="1924" height="1100" />
+              <option name="productionCode" value="PY" />
+              <option name="projectOpenTimestamp" value="1615656619362" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/repos/pythonProject">
+          <value>
+            <RecentProjectMetaInfo frameTitle="pythonProject – main.py" projectWorkspaceId="1qfe8UJ5LrnIOkYx5hDtJXg6XCt">
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="build" value="PY-203.7717.81" />
+              <option name="buildTimestamp" value="1616674852276" />
+              <frame x="1920" y="-24" width="960" height="1080" />
+              <option name="productionCode" value="PY" />
+              <option name="projectOpenTimestamp" value="1617474911525" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/downloader">
+          <value>
+            <RecentProjectMetaInfo frameTitle="downloader" projectWorkspaceId="1qzYpmuS4Ejo7rTcsvD23yN21kt">
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="build" value="PY-211.6693.115" />
+              <option name="buildTimestamp" value="1617710425329" />
+              <frame x="2880" y="-24" width="960" height="1080" />
+              <option name="productionCode" value="PY" />
+              <option name="projectOpenTimestamp" value="1618084071209" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/repos/KIT-ILIAS_AutoDownloader">
+          <value>
+            <RecentProjectMetaInfo frameTitle="KIT-ILIAS_AutoDownloader – ~/repos/KIT-ILIAS_AutoDownloader/AutoDownload.py" projectWorkspaceId="1qfOA10r8UMFiVcg6bcJsQg5dcS">
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="build" value="PY-211.6693.115" />
+              <option name="buildTimestamp" value="1617710425329" />
+              <frame x="1918" y="-26" width="1924" height="1084" />
+              <option name="productionCode" value="PY" />
+              <option name="projectOpenTimestamp" value="1618085080440" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/repos/autoFork">
+          <value>
+            <RecentProjectMetaInfo frameTitle="autoFork – AutoDownload.py" opened="true" projectWorkspaceId="1qzeo3KRpWY0JORmlYMbWvdYRU2">
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="build" value="PY-211.6693.115" />
+              <option name="buildTimestamp" value="1617710411679" />
+              <frame x="1920" y="-24" width="960" height="1080" />
+              <option name="productionCode" value="PY" />
+              <option name="projectOpenTimestamp" value="1618087016963" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="lastProjectLocation" value="$USER_HOME$/repos" />
+  </component>
+</application>

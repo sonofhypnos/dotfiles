@@ -1,0 +1,109 @@
+<application>
+  <component name="DimensionService">
+    <location key="find.popup.0.0.1920.1080" x="165" y="73" />
+    <location key="find.popup.1920.0.1080.1920" x="2291" y="485" />
+    <location key="find.popup.1920.420.1920.1080" x="2085" y="493" />
+    <location key="find.popup.388.473.1920.1080" x="553" y="546" />
+    <location key="find.popup.0.1500.1920.1080" x="207" y="1615" />
+    <location key="find.popup.1920.0.1920.1080" x="2658" y="109" />
+    <size key="find.popup.0.0.1920.1080" width="1183" height="790" />
+    <size key="GridCell.Tab.0.left.0.0.1920.1080" width="1872" height="310" />
+    <size key="GridCell.Tab.0.center.0.0.1920.1080" width="1872" height="310" />
+    <size key="GridCell.Tab.0.right.0.0.1920.1080" width="1872" height="310" />
+    <size key="GridCell.Tab.0.bottom.0.0.1920.1080" width="1872" height="310" />
+    <size key="GridCell.Tab.1.left.0.0.1920.1080" width="1872" height="339" />
+    <size key="GridCell.Tab.1.center.0.0.1920.1080" width="1872" height="339" />
+    <size key="GridCell.Tab.1.right.0.0.1920.1080" width="1872" height="339" />
+    <size key="GridCell.Tab.1.bottom.0.0.1920.1080" width="1872" height="339" />
+    <size key="GridCell.Tab.-1.left.0.0.1920.1080" width="1872" height="339" />
+    <size key="GridCell.Tab.-1.center.0.0.1920.1080" width="1872" height="339" />
+    <size key="GridCell.Tab.-1.right.0.0.1920.1080" width="1872" height="339" />
+    <size key="GridCell.Tab.-1.bottom.0.0.1920.1080" width="1872" height="339" />
+    <size key="GridCell.Tab.0.left.1920.420.1920.1080" width="1872" height="181" />
+    <size key="GridCell.Tab.0.center.1920.420.1920.1080" width="1872" height="181" />
+    <size key="GridCell.Tab.0.right.1920.420.1920.1080" width="1872" height="181" />
+    <size key="GridCell.Tab.0.bottom.1920.420.1920.1080" width="1872" height="181" />
+    <size key="GridCell.Tab.0.left.1920.0.1080.1920" width="1032" height="559" />
+    <size key="GridCell.Tab.0.center.1920.0.1080.1920" width="1032" height="559" />
+    <size key="GridCell.Tab.0.right.1920.0.1080.1920" width="1032" height="559" />
+    <size key="GridCell.Tab.0.bottom.1920.0.1080.1920" width="1032" height="559" />
+    <size key="find.popup.1920.0.1080.1920" width="568" height="949" />
+    <size key="find.popup.1920.420.1920.1080" width="1183" height="790" />
+    <size key="GridCell.Tab.0.left.1920.0.1920.1080" width="1874" height="310" />
+    <size key="GridCell.Tab.0.center.1920.0.1920.1080" width="1874" height="310" />
+    <size key="GridCell.Tab.0.right.1920.0.1920.1080" width="1874" height="310" />
+    <size key="GridCell.Tab.0.bottom.1920.0.1920.1080" width="1874" height="310" />
+    <size key="GridCell.Tab.0.left.388.473.1920.1080" width="1147" height="275" />
+    <size key="GridCell.Tab.0.center.388.473.1920.1080" width="1147" height="275" />
+    <size key="GridCell.Tab.0.right.388.473.1920.1080" width="1147" height="275" />
+    <size key="GridCell.Tab.0.bottom.388.473.1920.1080" width="1147" height="275" />
+    <size key="find.popup.388.473.1920.1080" width="736" height="762" />
+    <size key="find.popup.0.1500.1920.1080" width="912" height="780" />
+    <size key="find.popup.1920.0.1920.1080" width="622" height="762" />
+  </component>
+  <component name="WindowManager">
+    <frame x="1918" y="0" width="1924" height="1058" extendedState="6" />
+    <layout>
+      <window_info active="true" content_ui="combo" x="642" y="2" width="636" height="1052" id="Project" order="0" sideWeight="0.49894515" visible="true" weight="0.07486631" />
+      <window_info id="Structure" order="1" sideWeight="0.5010548" side_tool="true" weight="0.13247864" />
+      <window_info id="Favorites" order="2" sideWeight="0.5015723" side_tool="true" weight="0.13152805" />
+      <window_info id="Commit" order="3" />
+      <window_info id="Learn" order="4" weight="0.32959402" />
+      <window_info id="Pull Requests" order="5" />
+      <window_info id="Code Time" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="0" />
+      <window_info anchor="bottom" id="Event Log" order="1" side_tool="true" weight="0.3297062" />
+      <window_info anchor="bottom" id="Find" order="2" weight="0.32867524" />
+      <window_info anchor="bottom" id="Run" order="3" weight="0.32867524" />
+      <window_info anchor="bottom" id="Debug" order="4" weight="0.39873418" />
+      <window_info anchor="bottom" auto_hide="true" x="2282" y="18" width="356" height="1881" id="TODO" order="5" weight="0.17439911" />
+      <window_info active="true" anchor="bottom" x="962" y="2" width="956" height="1052" id="Problems View" order="6" visible="true" weight="0.348643" />
+      <window_info anchor="bottom" id="Inspection Results" order="7" weight="0.32979318" />
+      <window_info anchor="bottom" id="Inspection" order="8" weight="0.4" />
+      <window_info anchor="bottom" id="File Transfer" order="9" />
+      <window_info anchor="bottom" id="CheckStyle" order="10" weight="0.3370598" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.3370598" />
+      <window_info anchor="bottom" id="Profiler" order="12" weight="0.3297062" />
+      <window_info anchor="bottom" id="Database Changes" order="13" show_stripe_button="false" />
+      <window_info anchor="bottom" id="TypeScript" order="14" />
+      <window_info anchor="bottom" id="Endpoints" order="15" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Build" order="16" weight="0.32911393" />
+      <window_info anchor="bottom" id="Internal Method Tracing" order="17" />
+      <window_info anchor="bottom" id="Flow" order="18" />
+      <window_info anchor="bottom" id="Services" order="19" show_stripe_button="false" weight="0.32911393" />
+      <window_info anchor="right" id="Database" order="0" />
+      <window_info anchor="right" id="Layout Validation" order="1" />
+      <window_info active="true" anchor="right" x="3002" y="438" width="636" height="1041" id="Documentation" order="2" side_tool="true" type="WINDOWED" visible="true" weight="0.38394585" />
+      <window_info anchor="right" id="Test Cube" order="3" />
+      <window_info anchor="right" id="aiXcoder" order="4" />
+    </layout>
+  </component>
+  <component name="WindowStateApplicationService">
+    <state x="734" y="181" width="535" height="504" key="FileChooserDialogImpl" timestamp="1618391492876">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="734" y="181" width="535" height="504" key="FileChooserDialogImpl/0.0.1920.1080" timestamp="1618391492876" />
+    <state x="736" y="207" width="437" height="504" key="FileChooserDialogImpl/0.0.1920.1080/1920.0.1920.1080" timestamp="1618089961500" />
+    <state x="720" y="254" width="424" height="491" key="FileChooserDialogImpl/0.27.1874.1053" timestamp="1613740904402" />
+    <state x="2435" y="1326" width="300" height="200" key="ProcessPopupWindow" timestamp="1615719767104">
+      <screen x="1920" y="420" width="1920" height="1080" />
+    </state>
+    <state x="2435" y="1326" width="300" height="200" key="ProcessPopupWindow/1920.420.1920.1080/0.420.1920.1080/3840.0.1080.1920" timestamp="1615719767104" />
+    <state x="2400" y="936" width="960" height="1080" key="WELCOME_SCREEN" timestamp="1619094770134">
+      <screen x="1920" y="420" width="1920" height="1080" />
+    </state>
+    <state x="960" y="516" width="636" height="1072" key="WELCOME_SCREEN/0.0.1920.1080" timestamp="1618391494686" />
+    <state x="960" y="1753" width="1912" height="546" key="WELCOME_SCREEN/0.1500.1920.1080/0.420.1920.1080/1920.0.1080.1920" timestamp="1618233596315" />
+    <state x="937" y="496" key="WELCOME_SCREEN/0.27.1874.1053" timestamp="1613687188619" />
+    <state x="2400" y="936" width="960" height="1080" key="WELCOME_SCREEN/1920.420.1920.1080/0.420.1920.1080/3840.0.1080.1920" timestamp="1619094770134" />
+    <state x="708" y="549" width="864" height="358" key="bookmarks" timestamp="1617397326979">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="708" y="549" width="864" height="358" key="bookmarks/0.0.1920.1080" timestamp="1617397326979" />
+    <state x="708" y="562" width="864" height="349" key="bookmarks/0.27.1920.1053" timestamp="1614536079772" />
+    <state x="295" y="125" width="802" height="803" key="new project wizard" timestamp="1613741075089">
+      <screen x="0" y="27" width="1874" height="1053" />
+    </state>
+    <state x="295" y="125" width="802" height="803" key="new project wizard/0.27.1874.1053" timestamp="1613741075089" />
+  </component>
+</application>

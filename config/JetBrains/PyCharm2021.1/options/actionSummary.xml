@@ -1,0 +1,244 @@
+<application>
+  <component name="ActionsLocalSummary">
+    <e n="$Undo">
+      <i c="7" l="1618083369039" />
+    </e>
+    <e n="ChangesView.Changelists">
+      <i c="1" l="1618077868524" />
+    </e>
+    <e n="ChangesView.Move">
+      <i c="1" l="1618077871495" />
+    </e>
+    <e n="ChangesView.ShowCommitOptions">
+      <i c="2" l="1617467717194" />
+    </e>
+    <e n="CheckinProject">
+      <i c="3" l="1617467894005" />
+    </e>
+    <e n="CloseProject">
+      <i c="1" l="1618083777279" />
+    </e>
+    <e n="Compare.SameVersion">
+      <i c="1" l="1617467691129" />
+    </e>
+    <e n="Debug">
+      <i c="9" l="1618083807471" />
+    </e>
+    <e n="EditorBackSpace">
+      <i c="60" l="1618079392461" />
+    </e>
+    <e n="EditorChooseLookupItem">
+      <i c="2" l="1617467722773" />
+    </e>
+    <e n="EditorRight">
+      <i c="6" l="1615656640660" />
+    </e>
+    <e n="FindInPath">
+      <i c="2" l="1618079186795" />
+    </e>
+    <e n="FindUsages">
+      <i c="1" l="1618079397882" />
+    </e>
+    <e n="Git.Branches">
+      <i c="1" l="1617467823380" />
+    </e>
+    <e n="Git.Fetch">
+      <i c="1" l="1618083448341" />
+    </e>
+    <e n="Git.Rebase">
+      <i c="1" l="1617467208502" />
+    </e>
+    <e n="Github.Accounts.AddGHAccount">
+      <i c="1" l="1617467972592" />
+    </e>
+    <e n="Github.Accounts.AddGHAccountWithToken">
+      <i c="1" l="1617467968436" />
+    </e>
+    <e n="Github.Share">
+      <i c="1" l="1617467944334" />
+    </e>
+    <e n="GotoAction">
+      <i c="2" l="1618079387027" />
+    </e>
+    <e n="GotoDeclaration">
+      <i c="4" l="1618083003791" />
+    </e>
+    <e n="GotoNextError">
+      <i c="9" l="1618079078820" />
+    </e>
+    <e n="GotoPreviousError">
+      <i c="1" l="1618079080192" />
+    </e>
+    <e n="IdeaVim.ReloadVimRc.reload">
+      <i c="2" l="1617466824865" />
+    </e>
+    <e n="InvalidateCaches">
+      <i c="1" l="1618083618045" />
+    </e>
+    <e n="NewDirectoryProject">
+      <i c="5" l="1618087003027" />
+    </e>
+    <e n="NewElement">
+      <i c="1" l="1617466732030" />
+    </e>
+    <e n="OpenFile">
+      <i c="6" l="1618087010961" />
+    </e>
+    <e n="PasteMultiple">
+      <i c="2" l="1618078955973" />
+    </e>
+    <e n="ProblemsView.ShowPreview">
+      <i c="2" l="1618083819149" />
+    </e>
+    <e n="Rerun">
+      <i c="5" l="1618082662805" />
+    </e>
+    <e n="Run">
+      <i c="13" l="1618083657693" />
+    </e>
+    <e n="SelectInProjectView">
+      <i c="1" l="1618083146995" />
+    </e>
+    <e n="ShowIntentionActions">
+      <i c="9" l="1618079067671" />
+    </e>
+    <e n="ShowReformatFileDialog">
+      <i c="3" l="1617474987417" />
+    </e>
+    <e n="ShowSettings">
+      <i c="8" l="1618082697693" />
+    </e>
+    <e n="Stop">
+      <i c="9" l="1618083416351" />
+    </e>
+    <e n="Switcher">
+      <i c="7" l="1618079170076" />
+    </e>
+    <e n="ToggleLineBreakpoint">
+      <i c="34" l="1618083668502" />
+    </e>
+    <e n="Tree-selectChild">
+      <i c="6" l="1617467048056" />
+    </e>
+    <e n="Tree-selectNext">
+      <i c="11" l="1617467048440" />
+    </e>
+    <e n="Tree-selectParent">
+      <i c="4" l="1617467047304" />
+    </e>
+    <e n="Tree-selectPrevious">
+      <i c="10" l="1618079402980" />
+    </e>
+    <e n="Vcs.Show.Log">
+      <i c="1" l="1617467160062" />
+    </e>
+    <e n="Vcs.ToggleAmendCommitMode">
+      <i c="1" l="1617467391408" />
+    </e>
+    <e n="WelcomeScreen.OpenDirectoryProject">
+      <i c="1" l="1615656603857" />
+    </e>
+    <e n="com.intellij.application.options.schemes.AbstractSchemesPanel$ShowSchemesActionsListAction">
+      <i c="1" l="1617466856538" />
+    </e>
+    <e n="com.intellij.codeInsight.actions.ReaderModeActionProvider$ReaderModeAction">
+      <i c="6" l="1618083801961" />
+    </e>
+    <e n="com.intellij.codeInsight.daemon.impl.ConfigureInspectionsAction">
+      <i c="1" l="1617466851518" />
+    </e>
+    <e n="com.intellij.execution.actions.RunConfigurationsComboBoxAction$SelectConfigAction">
+      <i c="3" l="1618083310776" />
+    </e>
+    <e n="com.intellij.execution.impl.ConsoleViewImpl$EnterHandler">
+      <i c="5" l="1618083414583" />
+    </e>
+    <e n="com.intellij.execution.lineMarker.LineMarkerActionWrapper">
+      <i c="1" l="1618082624296" />
+    </e>
+    <e n="com.intellij.find.impl.FindPopupPanel$MyEnterAction">
+      <i c="1" l="1618079195835" />
+    </e>
+    <e n="com.intellij.ide.ReopenProjectAction">
+      <i c="1" l="1618083796634" />
+    </e>
+    <e n="com.intellij.ide.plugins.PluginManagerMain$2">
+      <i c="1" l="1618078526448" />
+    </e>
+    <e n="com.intellij.notification.EventLogConsole$ClearLogAction">
+      <i c="1" l="1618083814829" />
+    </e>
+    <e n="com.intellij.notification.NotificationAction$Simple">
+      <i c="4" l="1618084968688" />
+    </e>
+    <e n="com.intellij.openapi.actionSystem.DefaultActionGroup">
+      <i c="1" l="1618077876467" />
+    </e>
+    <e n="com.intellij.openapi.actionSystem.EmptyAction$MyDelegatingAction">
+      <i c="812" l="1618083395032" />
+    </e>
+    <e n="com.intellij.openapi.editor.impl.EditorMarkupModelImpl$StatusAction">
+      <i c="12" l="1618079505520" />
+    </e>
+    <e n="com.intellij.openapi.editor.impl.InspectionPopupManager$MenuAction">
+      <i c="2" l="1617467606082" />
+    </e>
+    <e n="com.intellij.openapi.fileEditor.impl.tabActions.CloseTab">
+      <i c="5" l="1618083805867" />
+    </e>
+    <e n="com.intellij.openapi.project.DumbAwareAction$SimpleDumbAwareAction">
+      <i c="2" l="1618079397843" />
+    </e>
+    <e n="com.intellij.openapi.ui.DialogWrapper$4">
+      <i c="3" l="1618088569622" />
+    </e>
+    <e n="com.intellij.openapi.ui.DialogWrapper$5">
+      <i c="6" l="1617474988116" />
+    </e>
+    <e n="com.intellij.openapi.updateSettings.impl.UpdateChecker$showUpdateResult$5$1">
+      <i c="1" l="1618078521595" />
+    </e>
+    <e n="com.intellij.openapi.wm.impl.ToolWindowHeader$HideAction">
+      <i c="2" l="1618086983668" />
+    </e>
+    <e n="com.intellij.openapi.wm.impl.welcomeScreen.ActionGroupPanelWrapper$5">
+      <i c="2" l="1615656615255" />
+    </e>
+    <e n="com.intellij.ui.CommonActionsPanel$RemoveButton">
+      <i c="1" l="1618083283869" />
+    </e>
+    <e n="com.intellij.ui.ScrollingUtil$ListMoveDownAction">
+      <i c="4" l="1618079397260" />
+    </e>
+    <e n="com.intellij.ui.ScrollingUtil$TableMoveDownAction">
+      <i c="1" l="1618079192419" />
+    </e>
+    <e n="com.intellij.ui.ScrollingUtil$TableMoveUpAction">
+      <i c="1" l="1618079194916" />
+    </e>
+    <e n="com.intellij.xdebugger.impl.breakpoints.RemoveBreakpointGutterIconAction">
+      <i c="6" l="1618083668067" />
+    </e>
+    <e n="com.jetbrains.python.debugger.PyCythonExtensionWarning$1">
+      <i c="1" l="1618082632672" />
+    </e>
+    <e n="com.maddyhome.idea.vim.group.NotificationService$OpenIdeaVimRcAction">
+      <i c="1" l="1617466811645" />
+    </e>
+    <e n="com.maddyhome.idea.vim.ui.ShortcutConflictsSettings">
+      <i c="2" l="1618082863981" />
+    </e>
+    <e n="com.maddyhome.idea.vim.ui.ex.ExShortcutKeyAction">
+      <i c="4" l="1618083372489" />
+    </e>
+    <e n="editRunConfigurations">
+      <i c="6" l="1618084153119" />
+    </e>
+    <e n="git4idea.ui.branch.GitBranchPopupActions$GitNewBranchAction">
+      <i c="1" l="1617467831072" />
+    </e>
+    <e n="kite.obfuscated.kq">
+      <i c="1" l="1617466807334" />
+    </e>
+  </component>
+</application>

@@ -1,0 +1,4 @@
+com.kite.intellij
+com.softwareco.intellij.plugin
+eu.theblob42.idea.whichkey
+io.edgeg.gtm.intellij

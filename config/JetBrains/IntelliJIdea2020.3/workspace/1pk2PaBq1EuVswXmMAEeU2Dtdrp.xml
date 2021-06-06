@@ -1,0 +1,448 @@
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:neoqwertz" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </select>
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="-1" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <changedPaths>
+      <option value="$PROJECT_DIR$/neo2-awt-hack.iml" />
+      <option value="$PROJECT_DIR$/pom.xml" />
+      <option value="$PROJECT_DIR$/src/main/java/java/awt/event/KeyEvent.java" />
+    </changedPaths>
+  </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="$PROJECT_DIR$/.idea" />
+      </set>
+    </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand />
+      <select />
+    </treeState>
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1" />
+    <panes>
+      <pane id="Scope">
+        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
+          <expand>
+            <path>
+              <item name="neo2-awt-hack" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="neo2-awt-hack" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+            </path>
+            <path>
+              <item name="neo2-awt-hack" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="neo2-awt-hack" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="releases" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="neo2-awt-hack" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="neo2-awt-hack" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="neo2-awt-hack" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="neo2-awt-hack" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="neo2-awt-hack" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="neo2-awt-hack" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="neo2-awt-hack" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="neo2-awt-hack" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="neo2-awt-hack" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="neo2-awt-hack" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="awt" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="neo2-awt-hack" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="neo2-awt-hack" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="awt" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="event" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="neo2-awt-hack" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="neo2-awt-hack" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="target" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="neo2-awt-hack" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="neo2-awt-hack" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="target" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="maven-status" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="neo2-awt-hack" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="neo2-awt-hack" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="target" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="maven-status" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="maven-compiler-plugin" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="neo2-awt-hack" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="neo2-awt-hack" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="target" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="maven-status" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="maven-compiler-plugin" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="compile" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="neo2-awt-hack" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="neo2-awt-hack" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="target" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="maven-status" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="maven-compiler-plugin" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="compile" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="default-compile" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="neo2-awt-hack" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="Extensions" type="442cc68d:ScopeViewTreeModel$RootNode" />
+            </path>
+            <path>
+              <item name="neo2-awt-hack" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="Extensions" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="Java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="neo2-awt-hack" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="Scratches" type="442cc68d:ScopeViewTreeModel$RootNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="neo2-awt-hack" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Scratches and Consoles" type="b85a3e1f:ScratchTreeStructureProvider$MyProjectNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="PackagesPane" />
+    </panes>
+  </component>
+  <component name="TerminalArrangementManager">
+    <option name="myTabStates">
+      <TerminalTabState tabName="Local" currentWorkingDirectory="$PROJECT_DIR$" commandHistoryFileName="history-5" />
+    </option>
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="17673000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <layout>
+      <window_info content_ui="combo" x="3197" y="413" width="636" height="1041" id="Project" order="0" sideWeight="0.49894515" visible="true" weight="0.24463938" />
+      <window_info id="Structure" order="1" sideWeight="0.5010548" side_tool="true" weight="0.13247864" />
+      <window_info id="Favorites" order="2" sideWeight="0.5015723" side_tool="true" weight="0.13152805" />
+      <window_info id="Commit" order="3" weight="0.3294347" />
+      <window_info id="Learn" order="4" weight="0.32959402" />
+      <window_info id="Pull Requests" order="5" />
+      <window_info id="Code Time" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="0" weight="0.4531688" />
+      <window_info anchor="bottom" id="Event Log" order="1" side_tool="true" visible="true" weight="0.58833426" />
+      <window_info anchor="bottom" id="Find" order="2" weight="0.32867524" />
+      <window_info anchor="bottom" id="Run" order="3" weight="0.32865956" />
+      <window_info anchor="bottom" id="Debug" order="4" weight="0.39873418" />
+      <window_info anchor="bottom" auto_hide="true" x="2282" y="18" width="356" height="1881" id="TODO" order="5" weight="0.17343578" />
+      <window_info anchor="bottom" x="1922" y="18" width="1076" height="1881" id="Problems View" order="6" weight="0.34997195" />
+      <window_info anchor="bottom" id="Inspection Results" order="7" weight="0.32979318" />
+      <window_info anchor="bottom" id="Inspection" order="8" weight="0.4" />
+      <window_info anchor="bottom" id="File Transfer" order="9" />
+      <window_info anchor="bottom" id="CheckStyle" order="10" weight="0.33644345" />
+      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.58833426" />
+      <window_info anchor="bottom" id="Profiler" order="12" weight="0.3287596" />
+      <window_info anchor="bottom" id="Database Changes" order="13" show_stripe_button="false" />
+      <window_info anchor="bottom" id="TypeScript" order="14" />
+      <window_info anchor="bottom" id="Endpoints" order="15" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Build" order="16" weight="0.32821077" />
+      <window_info anchor="bottom" id="Internal Method Tracing" order="17" />
+      <window_info anchor="bottom" id="Flow" order="18" />
+      <window_info anchor="bottom" id="Services" order="19" show_stripe_button="false" weight="0.32911393" />
+      <window_info anchor="right" id="Database" order="0" />
+      <window_info anchor="right" id="Layout Validation" order="1" />
+      <window_info active="true" anchor="right" x="3002" y="438" width="636" height="1041" id="Documentation" order="2" side_tool="true" type="WINDOWED" visible="true" weight="0.38394585" />
+      <window_info anchor="right" id="Maven" order="3" weight="0.3294347" />
+      <window_info anchor="right" id="Test Cube" order="4" />
+      <window_info anchor="right" id="aiXcoder" order="5" />
+    </layout>
+  </component>
+  <component name="Trusted.Project.Settings" hasCheckedIfOldProject="true" trusted="YES" />
+  <component name="WindowStateProjectService">
+    <state x="2254" y="314" width="681" height="1031" key="#Vim_Emulation" timestamp="1615714753255">
+      <screen x="1920" y="420" width="1920" height="1080" />
+    </state>
+    <state x="2254" y="314" width="681" height="1031" key="#Vim_Emulation/1920.420.1920.1080/0.420.1920.1080/3840.0.1080.1920@1920.420.1920.1080" timestamp="1615714753255" />
+    <state x="2098" y="708" width="885" height="438" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1615718855123">
+      <screen x="1920" y="420" width="1920" height="1080" />
+    </state>
+    <state x="2098" y="708" width="885" height="438" key="#com.intellij.fileTypes.FileTypeChooser/1920.420.1920.1080/0.420.1920.1080/3840.0.1080.1920@1920.420.1920.1080" timestamp="1615718855123" />
+    <state x="2202" y="799" width="505" height="256" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1615717686007">
+      <screen x="1920" y="420" width="1920" height="1080" />
+    </state>
+    <state x="2202" y="799" width="505" height="256" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/1920.420.1920.1080/0.420.1920.1080/3840.0.1080.1920@1920.420.1920.1080" timestamp="1615717686007" />
+    <state x="1926" y="501" width="1074" height="856" key="CommitChangelistDialog2" timestamp="1615728465495">
+      <screen x="1920" y="0" width="1080" height="1920" />
+    </state>
+    <state x="1926" y="501" width="1074" height="856" key="CommitChangelistDialog2/1920.0.1080.1920/0.502.1920.1080/3000.0.1080.1920@3000.0.1080.1920" timestamp="1615728465495" />
+    <state x="1918" y="-18" width="1080" height="1901" key="DiffContextDialog" timestamp="1615727421873">
+      <screen x="1920" y="0" width="1080" height="1920" />
+    </state>
+    <state x="1918" y="-18" width="1080" height="1901" key="DiffContextDialog/1920.0.1080.1920/0.502.1920.1080/3000.0.1080.1920@1920.0.1080.1920" timestamp="1615727421873" />
+    <state x="1920" y="0" width="1080" height="1901" key="DiffContextDialog/1920.420.1920.1080/0.420.1920.1080/3840.0.1080.1920@1920.420.1920.1080" timestamp="1615719199950" />
+    <state x="3166" y="237" width="908" height="559" key="FileChooserDialogImpl" timestamp="1615731245913">
+      <screen x="3000" y="0" width="1080" height="1920" />
+    </state>
+    <state x="2428" y="291" key="FileChooserDialogImpl/1920.0.1080.1920/0.502.1920.1080/3000.0.1080.1920@1920.0.1080.1920" timestamp="1615721694520" />
+    <state x="3166" y="237" key="FileChooserDialogImpl/1920.0.1080.1920/0.502.1920.1080/3000.0.1080.1920@3000.0.1080.1920" timestamp="1615731245913" />
+    <state x="911" y="604" width="908" height="559" key="FileChooserDialogImpl/1920.420.1920.1080/0.420.1920.1080/3840.0.1080.1920@1920.420.1920.1080" timestamp="1615719801209" />
+    <state x="3168" y="818" key="Git.Rebase.Log.Action.NewCommitMessage.Dialog" timestamp="1615728522266">
+      <screen x="3000" y="0" width="1080" height="1920" />
+    </state>
+    <state x="3168" y="818" key="Git.Rebase.Log.Action.NewCommitMessage.Dialog/1920.0.1080.1920/0.502.1920.1080/3000.0.1080.1920@3000.0.1080.1920" timestamp="1615728522266" />
+    <state width="1026" height="558" key="GridCell.Tab.0.bottom" timestamp="1615720242582">
+      <screen x="1920" y="420" width="1920" height="1080" />
+    </state>
+    <state width="1026" height="558" key="GridCell.Tab.0.bottom/1920.420.1920.1080/0.420.1920.1080/3840.0.1080.1920@1920.420.1920.1080" timestamp="1615720242582" />
+    <state width="1026" height="558" key="GridCell.Tab.0.center" timestamp="1615720242581">
+      <screen x="1920" y="420" width="1920" height="1080" />
+    </state>
+    <state width="1026" height="558" key="GridCell.Tab.0.center/1920.420.1920.1080/0.420.1920.1080/3840.0.1080.1920@1920.420.1920.1080" timestamp="1615720242581" />
+    <state width="1026" height="558" key="GridCell.Tab.0.left" timestamp="1615720242580">
+      <screen x="1920" y="420" width="1920" height="1080" />
+    </state>
+    <state width="1026" height="558" key="GridCell.Tab.0.left/1920.420.1920.1080/0.420.1920.1080/3840.0.1080.1920@1920.420.1920.1080" timestamp="1615720242580" />
+    <state width="1026" height="558" key="GridCell.Tab.0.right" timestamp="1615720242582">
+      <screen x="1920" y="420" width="1920" height="1080" />
+    </state>
+    <state width="1026" height="558" key="GridCell.Tab.0.right/1920.420.1920.1080/0.420.1920.1080/3840.0.1080.1920@1920.420.1920.1080" timestamp="1615720242582" />
+    <state x="1990" y="589" width="930" height="676" key="Maven.ArtifactSearchDialog" timestamp="1615719044682">
+      <screen x="1920" y="420" width="1920" height="1080" />
+    </state>
+    <state x="1990" y="589" width="930" height="676" key="Maven.ArtifactSearchDialog/1920.420.1920.1080/0.420.1920.1080/3840.0.1080.1920@1920.420.1920.1080" timestamp="1615719044682" />
+    <state x="369" y="584" width="1019" height="828" key="SettingsEditor" timestamp="1615720581331">
+      <screen x="0" y="502" width="1920" height="1080" />
+    </state>
+    <state x="369" y="584" width="1019" height="828" key="SettingsEditor/1920.0.1080.1920/0.502.1920.1080/3000.0.1080.1920@1920.0.1080.1920" timestamp="1615720581331" />
+    <state x="539" y="464" width="1183" height="730" key="SettingsEditor/1920.420.1920.1080/0.420.1920.1080/3840.0.1080.1920@1920.420.1920.1080" timestamp="1615719908534" />
+    <state width="498" height="452" key="SwitcherDM" timestamp="1615726823398">
+      <screen x="1920" y="0" width="1080" height="1920" />
+    </state>
+    <state width="498" height="452" key="SwitcherDM/1920.0.1080.1920/0.502.1920.1080/3000.0.1080.1920@1920.0.1080.1920" timestamp="1615726823398" />
+    <state x="3163" y="809" width="806" height="520" key="Vcs.Push.Dialog.v2" timestamp="1615727947908">
+      <screen x="3000" y="0" width="1080" height="1920" />
+    </state>
+    <state x="2050" y="649" width="806" height="520" key="Vcs.Push.Dialog.v2/1920.0.1080.1920/0.502.1920.1080/3000.0.1080.1920@1920.0.1080.1920" timestamp="1615727424618" />
+    <state x="3163" y="809" key="Vcs.Push.Dialog.v2/1920.0.1080.1920/0.502.1920.1080/3000.0.1080.1920@3000.0.1080.1920" timestamp="1615727947908" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="jar://$USER_HOME$/.jdks/corretto-11.0.10/lib/src.zip!/java.desktop/java/awt/event/InputEvent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="290">
+          <caret line="58" column="22" selection-start-line="58" selection-start-column="22" selection-end-line="58" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/compiler.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/vcs.xml" />
+    <entry file="file://$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" />
+    <entry file="file://$PROJECT_DIR$/.idea/modules.xml" />
+    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/Learning.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/jarRepositories.xml" />
+    <entry file="file://$PROJECT_DIR$/.idea/checkstyle-idea.xml" />
+    <entry file="file://$PROJECT_DIR$/.idea/misc.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LICENSE">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/.gitignore" />
+    <entry file="file://$PROJECT_DIR$/neo2-awt-hack.iml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/java/awt/event/KeyEvent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="546">
+          <caret line="1061" column="35" selection-start-line="1061" selection-start-column="35" selection-end-line="1061" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#42452#42453#0" expanded="true" />
+            <element signature="e#42482#42483#0" expanded="true" />
+            <element signature="e#42692#42693#0" expanded="true" />
+            <element signature="e#42730#42731#0" expanded="true" />
+            <element signature="e#43420#43421#0" expanded="true" />
+            <element signature="e#43450#43451#0" expanded="true" />
+            <element signature="e#43711#43712#0" expanded="true" />
+            <element signature="e#43749#43750#0" expanded="true" />
+            <element signature="e#45155#45156#0" expanded="true" />
+            <element signature="e#45189#45190#0" expanded="true" />
+            <element signature="e#66046#66047#0" expanded="true" />
+            <element signature="e#66089#66090#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SECOND">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>11</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>neo2-awt-hack</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
