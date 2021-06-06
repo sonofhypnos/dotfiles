@@ -1,0 +1,25 @@
+#!/usr/bin/env python3
+# I use the following script to search my current university courses
+import sys
+
+DEFAULT_PATH = "~/semester2"
+PATH_DICT = {
+    "la": "Lineare Algebra I für Mathematik - Informatik",
+    "hm": "0186800 – Höhere Mathematik II (Analysis) für die Fachrichtung Informatik",
+    "prog" : "2400083 – Übung zu Programmieren",
+    "dgt": "24007 – Digitaltechnik und Entwurfsverfahren",
+    "algo": "Algorithmen I (SS 2021)",
+    "swt" : "Softwaretechnik I mit Übung"
+}
+
+args = sys.argv
+
+
+
+path = DEFAULT_PATH
+
+if len() == 2:
+    if args[2] not in PATH_DICT:
+        print
+        sys.exit(1)
+    path = argv
