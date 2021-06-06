@@ -12,7 +12,7 @@ The following files/folders might be of interest to you:
  - `bashrc` bash configuration (recently switched to zsh, but still keeping this file)
  - `gitconfig` git configuration
 
-My [Doom-Emacs](https://github.com/hlissner/doom-emacs/blob/develop/docs/getting_started.org) files are in a separate [repo](https://github.com/sonofhypnos/emacs-config/edit/main/README.md)
+My [Doom-Emacs](https://github.com/hlissner/doom-emacs/blob/develop/docs/getting_started.org) files are in a separate [repo](https://github.com/sonofhypnos/emacs-config/)
 
 ## miscellaneous/obscure
  - `Xcompose` Compose key file for the German [neo keyboard layout](https://neo-layout.org/).
