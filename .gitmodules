@@ -14,9 +14,6 @@
 [submodule "config/espanso/user/espanso-package-date-utilities"]
 	path = config/espanso/user/espanso-package-date-utilities
 	url = https://github.com/kopach/espanso-package-date-utilities.git
-[submodule ".doom.d"]
-	path = .doom.d
-	url = ./.doom.d
 [submodule "doom.d"]
 	path = doom.d
-	url = ./doom.d
+	url = https://github.com/sonofhypnos/emacs-config
