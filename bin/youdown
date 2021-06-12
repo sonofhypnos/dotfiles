@@ -1,0 +1,32 @@
+#!/usr/bin/env bash
+#get subtitles from videos in the playlists.
+
+
+directory="$HOME/Dropbox/semester2/subs"
+playlists=('https://www.youtube.com/playlist?list=PLfk0Dfh13pBNW7ei5VKKEw4p4MSOcjwX5' 'https://www.youtube.com/playlist?list=PLfk0Dfh13pBNAuLDg--fTzdRci5TUEG6o')
+len=${#playlists[@]}
+suffix=".vtt"
+newsuffix=".txt"
+
+for url in $playlists
+do
+	cd $directory 
+	youtube-dl --write-auto-sub --sub-lang de $url
+	echo $pwd
+
+
+	#sed regrex for duplicate lines from https://stackoverflow.com/questions/1444406/how-to-delete-duplicate-lines-in-a-file-without-sorting-it-in-unix
+	#Delete duplicate, nonconsecutive and nonempty lines from a file: 
+	for f in *$suffix
+	do
+		newfile=$(echo "$f" | sed "s/$suffix/$newsuffix/")
+		sed -e 's/^.*<.*>.*$//g' \
+		    -e 's/^.*-->.*//g' \
+		    -e '/^\s*$/d' "$f" | tee "$newfile"  
+	done
+done
+for f in *.txt
+do 
+	gawk -i inplace '!seen[$0]++' "$f"
+done
+cd $directory && ls | grep -v ".txt" | rm k
