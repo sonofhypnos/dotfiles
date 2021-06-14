@@ -21,24 +21,25 @@ sudo add-apt-repository --yes --no-update --enable-source ppa:system76/pop
 # Add KeepassXC PPA
 sudo add-apt-repository --yes --no-update --enable-source ppa:phoerious/keepassxc
 
-apt update &&
-apt install git -y &&
-apt install neovim -y &&
-apt install minecraft -y &&
-apt install apt -y &&
-apt install curl -y &&
-apt install fzf -y &&
-apt install tldr -y &&
-apt install fd-find -y &&
-apt install redshift &&
-apt install arandr &&
-snap install deja-dup --classic &&
-snap install espanso --classic &&
-apt install ranger &&
-apt install tor-browser &&
-snap install polar-bookshelf &&
-apt install flatpack
-apt install gdebi-core wget
+sudo apt update &&
+sudo apt install git -y &&
+sudo apt install neovim -y &&
+sudo apt install minecraft -y &&
+sudo apt install apt -y &&
+sudo apt install curl -y &&
+sudo apt install fzf -y &&
+sudo apt install vlc -y &&
+sudo apt install tldr -y &&
+sudo apt install fd-find -y &&
+sudo apt install redshift &&
+sudo apt install arandr &&
+sudo snap install deja-dup --classic &&
+sudo snap install espanso --classic &&
+sudo apt install ranger &&
+sudo apt install tor-browser &&
+sudo snap install polar-bookshelf &&
+sudo apt install flatpack
+sudo apt install gdebi-core wget
 
 
 
@@ -71,6 +72,17 @@ if [ ! -e /usr/bin/discord ]; then
 
 fi
 
+#Install Signal:
+
+wget -O- https://updates.signal.org/desktop/apt/keys.asc | gpg --dearmor > signal-desktop-keyring.gpg
+cat signal-desktop-keyring.gpg | sudo tee -a /usr/share/keyrings/signal-desktop-keyring.gpg > /dev/null
+
+# 2. Add our repository to your list of repositories
+echo 'deb [arch=amd64 signed-by=/usr/share/keyrings/signal-desktop-keyring.gpg] https://updates.signal.org/desktop/apt xenial main' |\
+  sudo tee -a /etc/apt/sources.list.d/signal-xenial.list
+
+# 3. Update your package database and install signal
+sudo apt update && sudo apt install signal-desktop
 
 
 #

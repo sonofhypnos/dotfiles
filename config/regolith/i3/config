@@ -692,12 +692,13 @@ exec --no-startup-id /usr/libexec/gnome-settings-daemon-localeexec
 exec --no-startup-id dconf write /org/gnome/settings-daemon/plugins/cursor/active false
 
 #Assign variables for special Applications
-set $todoist chromium --app=https://todoist.com  
-set $whatsapp chromium --app=https://web.whatsapp.com 
-set $gmail chromium --app=https://mail.google.com 
-set $keep chromium --app=https://keep.google.com 
-set $calendar chromium --app=https://calendar.google.com 
-set $focusmate chromium --app=https://focusmate.com/dashboard
+set $todoist google-chrome --app=https://todoist.com  
+set $whatsapp google-chrome --app=https://web.whatsapp.com 
+set $gmail google-chrome --app=https://mail.google.com 
+set $keep google-chrome --app=https://keep.google.com 
+set $calendar google-chrome --app=https://calendar.google.com 
+set $focusmate google-chrome --app=https://focusmate.com/dashboard
+set $polar google-chrome --app=https://app.getpolarized.io/
 set $discord discord --class=communication
 set $telegram telegram --class=communication
 set $signal signal --class=communication
@@ -732,6 +733,7 @@ mode "$main_launcher" {
 	bindsym d mode "default" exec discord
 	bindsym 3 mode "default" exec $firefox https://i3wm.org/docs/userguide.html
 	bindsym i mode "default" exec $intellij
+	bindsym p mode "default" exec $polar
 	bindsym a mode "default" exec anki
 	bindsym Escape mode "default"
 	bindsym Return mode "default"
@@ -744,6 +746,7 @@ bindsym Control+Shift+Escape exec gnome-system-monitor
 bindsym $mod+q exec $emacs
 bindsym $mod+s exec $searchClip
 bindsym $mod+d exec $transGerman
+bindsym $mod+$alt+Control+q exec emacsclient -t
 
 
 #kill focused Window
