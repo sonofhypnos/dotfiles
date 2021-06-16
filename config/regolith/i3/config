@@ -44,6 +44,9 @@ set_from_resource $alt  i3-wm.alt Mod1
 
 set_from_resource $i3-wm.binding. i3-wm.binding.
 
+
+# Close all windows on all workspaces (any class string)
+bindsym $mod+Shift+q [class=”.*”] kill
 ###############################################################################
 # Workspace Names
 # These are the labels which define each i3 workspace.
@@ -348,9 +351,6 @@ hide_edge_borders $i3-wm.hide.edge.borders
 # Session Management
 ###############################################################################
 
-## Session // Exit App // <><Shift> q ##
-set_from_resource $i3-wm.binding.exit_app i3-wm.binding.exit_app Shift+q
-bindsym $mod+$i3-wm.binding.exit_app [con_id="__focused__"] kill
 
 ## Session // Terminate App // <><Alt> q ##
 set_from_resource $i3-wm.binding.kill_app i3-wm.binding.kill_app Mod1+q
@@ -752,5 +752,8 @@ bindsym $mod+$alt+Control+q exec emacsclient -t
 #kill focused Window
 
 set $kill [con_id="__focused__"] exec --no-startup-id kill -9 $(xdotool getwindowfocus getwindowpid)
+
+# Close all windows on all workspaces
+
 bindsym Mod1+F4 $kill
 bindsym $mod+BackSpace kill
