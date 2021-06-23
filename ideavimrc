@@ -2,10 +2,14 @@
 
 " activating IntelliJ plugins to extend ideaVim
 set sneak
-set vim-which-key
+" I've never managed to get vim-which-key working. Always throws errors
+" set vim-which-key 
 set surround
+" the following was recommended for ideavim
+set ideajoin
 
-set relativenumber
+set number
+
 "search
 set incsearch
 set ignorecase smartcase
@@ -25,6 +29,10 @@ set backspace=indent,eol,start
 " Do this in normal mode...
 nnoremap <ESC>:echoe "Use oe"<CR>
 
+"some useful hotkeys for idea functionality
+nnoremap <Space>e <Action>(ShowErrorDescription)
+nnoremap <Space>q <Action>(QuickImplementations)
+nnoremap <Space>d <Action>(QuickJavaDoc)
 
 " easy system clipboard copy/paster
 noremap <Space>y "*y
