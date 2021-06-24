@@ -126,7 +126,8 @@ source ~/.shell/paths.sh
 #Aliases
 source ~/.shell/aliases.sh
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+source /usr/share/doc/fzf/examples/key-bindings.zsh
+source /usr/share/doc/fzf/examples/completion.zsh
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/home/tassilo/.sdkman"

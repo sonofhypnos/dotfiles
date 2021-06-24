@@ -1,8 +1,16 @@
+unifiles='~/Dropbox/semester2'
+swtfiles="$unifiles/Softwaretechnik\ I\ mit\ Übung"
+lafiles="$unifiles/Lineare\ Algebra\ II\ für\ Mathematik"
+algofiles="$unifiles/Algorithmen\ I\ \(SS\ 2021\)/"
+hmfiles="$unifiles/0186800\ –\ Höhere\ Mathematik\ II\ \(Analysis\)\ für\ die\ Fachrichtung\ Informatik/"
+dgtfiles="$unifiles/24007\ –\ Digitaltechnik\ und\ Entwurfsverfahren/"
+
 alias d='cd'
 
 # Aliases to protect against overwriting
 alias cp='cp -i'
 alias mv='mv -i'
+
 
 # Editors
 alias v='nvim'
@@ -15,32 +23,35 @@ alias f='fdfind'
 alias regi3='nvim ~/.dotfiles/config/regolith/i3/config'
 alias ozsh='cd ~/.dotfiles/zsh/oh-my-zsh'
 alias econfig='nvim ~/.doom.d/config.el'
-#miscelanous or recently added.
 alias .d='cd /home/tassilo/.dotfiles/'
-alias ashell='nvim /home/tassilo/.dotfiles/shell/aliases.sh'
-alias hm='xdg-open semester2/Höhere\ Mathematik\ I\ \(Analysis\)\ für\ die\ Fachrichtung\ Informatik/Vorlesungsmaterial/Skript\ Höhere\ Mathematik\ 1.pdf && exit' 
-alias hm1='xdg-open semester2/Höhere Mathematik I (Analysis) für die Fachrichtung Informatik/Vorlesungsmaterial/Skript Höhere Mathematik 1.pdf && exit'
-alias rs='cd ~/Dropbox/semester2; ranger'
-alias la1='xdg-open semester2/Lineare\ Algebra\ II\ für\ Mathematik/stuff/LA1.pdf && exit'
+alias ashell="nvim /home/tassilo/.dotfiles/shell/aliases.sh"
+
+########################################
+# Uni Files
+########################################
+
+alias hm1="xdg-open $unifiles/Höhere\ Mathematik\ I\ \(Analysis\)\ für\ die\ Fachrichtung\ Informatik/Vorlesungsmaterial/Skript\ Höhere\ Mathematik\ 1.pdf && exit" 
+alias hm2="xdg-open $unifiles/Höhere\ Mathematik\ I\ \(Analysis\)\ für\ die\ Fachrichtung\ Informatik/Vorlesungsmaterial/HM2.pdf && exit" 
+
+#navigate to ranger
+alias rs="cd $unifiles; ranger"
+alias hm="cd $hmfiles; ranger"
+alias la="cd $lafiles; ranger"
+alias swt="cd $swtfiles; ranger"
+alias dgt="cd $dgtfiles; ranger"
+alias algo="cd $algofiles; ranger"
+
+alias la1="xdg-open semester2/Lineare\ Algebra\ II\ für\ Mathematik/stuff/LA1.pdf && exit"
 alias oIlias='source oIlias'
 alias update-alternatives='sudo update-alternatives'
 
-function usswt {
-alias usswt="pdfgrep -Ri $@ ~/Dropbox/semester2/Softwaretechnik\ I\ mit\ Übung"
-}
-function usla {
-alias usswt="pdfgrep -Ri $@ ~/Dropbox/semester2/Lineare\ Algebra\ II\ für\ Mathematik"
-}
-function usalgo {
-alias usswt="pdfgrep -Ri $@ ~/Dropbox/semester2/Algorithmen\ I\ (SS\ 2021)"
-}
-function ushm {
-alias usswt="pdfgrep -Ri $@ ~/Dropbox/semester2/0186800\ –\ Höhere\ Mathematik\ II\ (Analysis)\ für\ die\ Fachrichtung\ Informatik"
-}
-function usdgt {
-alias usswt="pdfgrep -Ri $@ ~/Dropbox/semester2/24007\ –\ Digitaltechnik\ und\ Entwurfsverfahren"
-}
+alias usswt="pdfgrep -Ri $@ $unifiles/Softwaretechnik\ I\ mit\ Übung"
+alias usswt="pdfgrep -Ri $@ $unifiles/Lineare\ Algebra\ II\ für\ Mathematik"
+alias usswt="pdfgrep -Ri $@ $unifiles/Algorithmen\ I\ (SS\ 2021)"
+alias usswt="pdfgrep -Ri $@ $unifiles/0186800\ –\ Höhere\ Mathematik\ II\ (Analysis)\ für\ die\ Fachrichtung\ Informatik"
+alias usswt="pdfgrep -Ri $@ $unifiles/24007\ –\ Digitaltechnik\ und\ Entwurfsverfahren"
 
+#miscelanous or recently added.
 
 
 
