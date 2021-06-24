@@ -46,7 +46,6 @@ set_from_resource $i3-wm.binding. i3-wm.binding.
 
 
 # Close all windows on all workspaces (any class string)
-bindsym $mod+Shift+q [class=”.*”] kill
 ###############################################################################
 # Workspace Names
 # These are the labels which define each i3 workspace.
@@ -213,10 +212,6 @@ bindsym $mod+$i3-wm.binding.ws_prev_on_output workspace prev_on_output
 ## Navigate // Previous Workspace on Output // <><Ctrl> h ##
 set_from_resource $i3-wm.binding.ws_prev_on_output2 i3-wm.binding.ws_prev_on_output2 Ctrl+h
 bindsym $mod+$i3-wm.binding.ws_prev_on_output2 workspace prev_on_output
-
-## Navigate // Next Free Workspace // <> ` ##
-set_from_resource $i3-wm.binding.next_free i3-wm.binding.next_free grave
-bindsym $mod+$i3-wm.binding.next_free exec --no-startup-id /usr/bin/i3-next-workspace
 
 ## Navigate // Scratchpad // <><Ctrl> a ##
 set_from_resource $i3-wm.binding.scratchpad i3-wm.binding.scratchpad Ctrl+a
@@ -748,6 +743,7 @@ bindsym $mod+s exec $searchClip
 bindsym $mod+d exec $transGerman
 bindsym $mod+$alt+Control+q exec emacsclient -t
 
+bindsym $mod+Shift+q [class=".*"] kill
 
 #kill focused Window
 
@@ -757,3 +753,21 @@ set $kill [con_id="__focused__"] exec --no-startup-id kill -9 $(xdotool getwindo
 
 bindsym Mod1+F4 $kill
 bindsym $mod+BackSpace kill
+
+
+# alt-tab through windows
+exec_always --no-startup-id i3-cycle-focus.py --history 2
+bindsym $alt+Tab exec --no-startup-id i3-cycle-focus.py --switch
+
+
+#emacsclient in Scratchpad
+# launch scratchpad frame in existing emacs daemon
+exec --no-startup-id /usr/local/bin/pad.sh
+
+# when scratchpad frame is launched, move it to the scratchpad workspace
+for_window [title="_emacs scratchpad_" class="Emacs"] move scratchpad
+bindsym $mod+e exec [title="_emacs scratchpad_"] scratchpad show
+bindsym $mod+$alt+e zotero move 
+
+
+

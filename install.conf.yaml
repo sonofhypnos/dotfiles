@@ -13,6 +13,7 @@
     ~/.ideavimrc:
     ~/.XCompose: 
     ~/.Xresources-regolith:
+    ~/.xinitrc:
     ~/.zshrc:
     ~/.tmux.conf:
     ~/.alacritty.yml:
