@@ -16,12 +16,16 @@
     {
       "pattern": "https?://calendar.google.com/*",
       "passKeys": ""
+    },
+    {
+      "pattern": "https?://keep.google.com/*",
+      "passKeys": ""
     }
   ],
   "filterLinkHints": false,
   "waitForEnterForFilteredHints": true,
   "hideHud": false,
-  "keyMappings": "# Insert your preferred key mappings here.",
+  "keyMappings": "# Insert your preferred key mappings here.\nmap <space><space> Vomnibar.activate\nmap <a-space>: \nmap <c-f> LinkHints.activateModeToOpenInNewForegroundTab\nmap Ö",
   "linkHintCharacters": "sadfjklewcmpgh",
   "linkHintNumbers": "0123456789",
   "newTabUrl": "about:newtab",
@@ -29,7 +33,7 @@
   "previousPatterns": "prev,previous,back,older,<,‹,←,«,≪,<<",
   "regexFindMode": false,
   "ignoreKeyboardLayout": false,
-  "scrollStepSize": 60,
+  "scrollStepSize": 200,
   "smoothScroll": true,
   "grabBackFocus": false,
   "searchEngines": "w: https://www.wikipedia.org/w/index.php?title=Special:Search&search=%s Wikipedia\n\n# More examples.\n#\n# (Vimium supports search completion Wikipedia, as\n# above, and for these.)\n#\n# g: https://www.google.com/search?q=%s Google\n# l: https://www.google.com/search?q=%s&btnI I'm feeling lucky...\n# y: https://www.youtube.com/results?search_query=%s Youtube\n# gm: https://www.google.com/maps?q=%s Google maps\n# b: https://www.bing.com/search?q=%s Bing\n# d: https://duckduckgo.com/?q=%s DuckDuckGo\n# az: https://www.amazon.com/s/?field-keywords=%s Amazon\n# qw: https://www.qwant.com/?q=%s Qwant",
