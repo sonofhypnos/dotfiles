@@ -15,6 +15,7 @@
     ~/.Xresources-regolith:
     ~/.xinitrc:
     ~/.zshrc:
+    ~/.jupyter:
     ~/.tmux.conf:
     ~/.alacritty.yml:
     ~/.tridactylrc:
