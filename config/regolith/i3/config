@@ -193,8 +193,8 @@ bindsym $mod+$i3-wm.binding.ws_next2 workspace next
 set_from_resource $i3-wm.binding.ws_next_on_output i3-wm.binding.ws_next_on_output Ctrl+Tab
 bindsym $mod+$i3-wm.binding.ws_next_on_output workspace next_on_output
 
-## Navigate // Next Workspace on Output // <><Ctrl> l ##
-set_from_resource $i3-wm.binding.ws_next_on_output2 i3-wm.binding.ws_next_on_output2 Ctrl+l
+## Navigate // Next Workspace on Output // <><Ctrl> ö ##
+set_from_resource $i3-wm.binding.ws_next_on_output2 i3-wm.binding.ws_next_on_output2 Ctrl+odiaeresis
 bindsym $mod+$i3-wm.binding.ws_next_on_output2 workspace next_on_output
 
 ## Navigate // Previous Workspace // <><Shift> Tab ##
@@ -209,8 +209,8 @@ bindsym $mod+$i3-wm.binding.ws_prev2 workspace prev
 set_from_resource $i3-wm.binding.ws_prev_on_output i3-wm.binding.ws_prev_on_output Ctrl+Shift+Tab
 bindsym $mod+$i3-wm.binding.ws_prev_on_output workspace prev_on_output
 
-## Navigate // Previous Workspace on Output // <><Ctrl> h ##
-set_from_resource $i3-wm.binding.ws_prev_on_output2 i3-wm.binding.ws_prev_on_output2 Ctrl+h
+## Navigate // Previous Workspace on Output // <><Ctrl> j ##
+set_from_resource $i3-wm.binding.ws_prev_on_output2 i3-wm.binding.ws_prev_on_output2 Ctrl+j
 bindsym $mod+$i3-wm.binding.ws_prev_on_output2 workspace prev_on_output
 
 ## Navigate // Scratchpad // <><Ctrl> a ##
