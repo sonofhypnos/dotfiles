@@ -1,6 +1,6 @@
-unifiles='~/Dropbox/semester2'
+unifiles="$HOME/Dropbox/semester2"
 swtfiles="$unifiles/Softwaretechnik\ I\ mit\ Übung"
-lafiles="$unifiles/Lineare\ Algebra\ II\ für\ Mathematik"
+lafiles="$unifiles/Lineare\ Algebra\ II\ für\ Mathematik/"
 algofiles="$unifiles/Algorithmen\ I\ \(SS\ 2021\)/"
 hmfiles="$unifiles/0186800\ –\ Höhere\ Mathematik\ II\ \(Analysis\)\ für\ die\ Fachrichtung\ Informatik/"
 dgtfiles="$unifiles/24007\ –\ Digitaltechnik\ und\ Entwurfsverfahren/"
@@ -45,13 +45,29 @@ alias la1="xdg-open semester2/Lineare\ Algebra\ II\ für\ Mathematik/stuff/LA1.p
 alias oIlias='source oIlias'
 alias update-alternatives='sudo update-alternatives'
 
-alias usswt="pdfgrep -Ri $@ $unifiles/Softwaretechnik\ I\ mit\ Übung"
-alias usswt="pdfgrep -Ri $@ $unifiles/Lineare\ Algebra\ II\ für\ Mathematik"
-alias usswt="pdfgrep -Ri $@ $unifiles/Algorithmen\ I\ (SS\ 2021)"
-alias usswt="pdfgrep -Ri $@ $unifiles/0186800\ –\ Höhere\ Mathematik\ II\ (Analysis)\ für\ die\ Fachrichtung\ Informatik"
-alias usswt="pdfgrep -Ri $@ $unifiles/24007\ –\ Digitaltechnik\ und\ Entwurfsverfahren"
-
 #miscelanous or recently added.
 
+
+sswt() {
+	pdfgrep -Ri $1 "$swtfiles"
+	grep -Ri $1 "$swtfiles"
+}
+sla() {
+	pdfgrep -Ri $1 "$lafiles"
+
+	grep -Ri $1 "$lafiles"
+}
+salgo() {
+	pdfgrep -Ri $1 "$algofiles"
+	grep -Ri $1 "$algofiles"
+}
+sdgt() {
+	pdfgrep -Ri $1 "$dgtfiles"
+	grep -Ri $1 "$dgtfiles"
+}
+shm() {
+	pdfgrep -Ri $1 "$hmfiles"
+	grep -Ri $1 "$hmfiles"
+}
 
 
