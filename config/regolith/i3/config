@@ -711,7 +711,6 @@ exec ~/Installations/KIT-ILIAS-downloader -tn -o ~/Dropbox/semester2
 exec rescuetime
 exec flameshot
 exec i3-wallpaper
-exec emacs
 #assign [class="^Chromium$"] 1
 
 #Send Battery warning
