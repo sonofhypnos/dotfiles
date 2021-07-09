@@ -161,7 +161,8 @@ set gdefault
 " Enable searching as you type, rather than waiting till you press enter.
 set incsearch
 
-
+" Rust autoformat
+let g:rustfmt_autosave = 1
 
 " =============================================================================
 " # GUI settings 
