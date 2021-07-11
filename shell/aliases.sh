@@ -15,6 +15,7 @@ alias mv='mv -i'
 # Editors
 alias v='nvim'
 alias e='emacsclient --no-wait'
+alias emacs='emacsclient -c & disown'
 alias gll='git log --graph --pretty=oneline --abbrev-commit'
 alias f='fdfind'
 
