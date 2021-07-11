@@ -19,6 +19,14 @@ matches:
         type: date
         params:
           format: "%d-%m-%Y"
+  # ISO-Date
+  - trigger: ":time"
+    replace: "{{mydate}}"
+    vars:
+      - name: mydate
+        type: date
+        params:
+          format: "%Y-%m-%d %H:%M:%S"
   # Dates for OrgMode
   - trigger: ":odate"
     replace: "{{mydate}}"
