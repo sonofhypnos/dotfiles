@@ -1,5 +1,5 @@
 # dotfiles
-Welcome to my [dotfiles](https://wiki.archlinux.org/title/Dotfiles) 👋! I am new to Linux, so this configuration is still quite in flux. I use [dotbot](https://github.com/anishathalye/dotbot) to manage the files. Overall I copied a lot of the from the following [repo](https://github.com/anishathalye/dotbot). I recommend you to check it out!
+Welcome to my [dotfiles](https://wiki.archlinux.org/title/Dotfiles) 👋! I am new to Linux, so this configuration is still quite in flux. I use [dotbot](https://github.com/anishathalye/dotbot) to manage the files. 
 
 ## Overview
 The following files/folders might be of interest to you:
