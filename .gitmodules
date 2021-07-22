@@ -16,4 +16,4 @@
 	url = https://github.com/kopach/espanso-package-date-utilities.git
 [submodule "doom.d"]
 	path = doom.d
-	url = https://github.com/sonofhypnos/emacs-config
+	url = git@github.com:sonofhypnos/emacs-config.git
