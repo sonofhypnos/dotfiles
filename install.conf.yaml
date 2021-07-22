@@ -28,6 +28,7 @@
             path: shell/*
     ~/.i3status.conf:
     ~/.doom.d:
+    ~/.screenlayout:
 
 - shell:
         - git submodule sync --recursive
