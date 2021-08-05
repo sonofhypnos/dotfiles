@@ -694,9 +694,10 @@ set $keep google-chrome --app=https://keep.google.com
 set $calendar google-chrome --app=https://calendar.google.com 
 set $focusmate google-chrome --app=https://focusmate.com/dashboard
 set $polar google-chrome --app=https://app.getpolarized.io/
-set $discord discord --class=communication
-set $telegram telegram --class=communication
-set $signal signal --class=communication
+set $sitzplatz google-chrome --app=https://raumbuchung.bibliothek.kit.edu/sitzplatzreservierung/day.php?year=2021&month=7&day=1&area=20&room=140
+set $discord discord 
+set $telegram telegram 
+set $signal signal 
 set $intellij intellij-idea-ultimate
 set $emacs emacsclient -e '(make-orgcapture-frame)'
 set $searchClip sh -c 'firefox "https://www.google.com/search?q=$(xclip -o)"'
@@ -734,6 +735,7 @@ mode "$main_launcher" {
 	bindsym a mode "default" exec anki
 	bindsym Escape mode "default"
 	bindsym Return mode "default"
+	bindsym s mode "default" exec $sitzplatz
 }
 
 #other Shortcuts
