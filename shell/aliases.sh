@@ -1,5 +1,5 @@
 unifiles="$HOME/Dropbox/semester2"
-swtfiles="$unifiles/Softwaretechnik\ I\ mit\ Übung"
+swtfiles="$unifiles/Softwaretechnik\ I\ mit\ Übung/"
 lafiles="$unifiles/Lineare\ Algebra\ \ II\ für\ Mathematik/"
 algofiles="$unifiles/Algorithmen\ I\ \(SS\ 2021\)/"
 hmfiles="$unifiles/0186800\ –\ Höhere\ Mathematik\ II\ \(Analysis\)\ für\ die\ Fachrichtung\ Informatik/"
@@ -42,7 +42,7 @@ alias dgt="cd $dgtfiles; ranger"
 alias algo="cd $algofiles; ranger"
 
 alias la1="xdg-open semester2/Lineare\ Algebra\ II\ für\ Mathematik/stuff/LA1.pdf && exit"
-alias oIlias='source oIlias'
+alias dIlias='exec ~/Installations/KIT-ILIAS-downloader -t -o ~/Dropbox/semester2'
 alias update-alternatives='sudo update-alternatives'
 
 #miscelanous or recently added.
