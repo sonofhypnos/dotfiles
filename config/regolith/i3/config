@@ -735,25 +735,27 @@ mode "$main_launcher" {
 	bindsym Escape mode "default"
 	bindsym Return mode "default"
 }
-#
+
 #other Shortcuts
-set $killCom [class="^Chromium$"] kill
-bindsym $mod+$alt+c $killCom, exec $todoist
 bindsym Control+Shift+Escape exec gnome-system-monitor
 bindsym $mod+q exec $emacs
 bindsym $mod+s exec $searchClip
 bindsym $mod+d exec $transGerman
 bindsym $mod+$alt+Control+q exec emacsclient -t
 
-bindsym $mod+Shift+q [class=".*"] kill
 
 #kill focused Window
-
 set $kill [con_id="__focused__"] exec --no-startup-id kill -9 $(xdotool getwindowfocus getwindowpid)
 
-# Close all windows on all workspaces
+#kill all windows of the given type
+set $hardKill [con_id="__focused__"] exec --no-startup-id kill -9 -1 $(xdotool getwindowfocus getwindowpid)
 
+# Close all windows
+bindsym $mod+Shift+q [class=".*"] kill
+
+#shotcuts
 bindsym Mod1+F4 $kill
+bindsym $mod+Shift+Control+q $hardKill
 bindsym $mod+BackSpace kill
 
 
@@ -768,8 +770,5 @@ exec --no-startup-id /usr/local/bin/pad.sh
 
 # when scratchpad frame is launched, move it to the scratchpad workspace
 for_window [title="_emacs scratchpad_" class="Emacs"] move scratchpad
-bindsym $mod+e exec [title="_emacs scratchpad_"] scratchpad show
-bindsym $mod+$alt+e zotero move 
-
-
-
+bindsym $mod+e [title="_emacs scratchpad_"] scratchpad show
+bindsym $mod+$alt+e zotero move
