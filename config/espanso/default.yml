@@ -112,3 +112,5 @@ matches:
     replace: "show"
   - trigger: "assidiuously"
     replace: "actively"
+  - trigger: "backround"
+    replace: "background"
