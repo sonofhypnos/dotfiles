@@ -152,6 +152,8 @@ source ~/.shell/paths.sh
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="/home/tassilo/.sdkman"
-[[ -s "/home/tassilo/.sdkman/bin/sdkman-init.sh" ]] && source "/home/tassilo/.sdkman/bin/sdkman-init.sh"
-. "$HOME/.cargo/env"
+if [ -f ~/.cago/env ]; then
+    export SDKMAN_DIR="/home/tassilo/.sdkman"
+    [[ -s "/home/tassilo/.sdkman/bin/sdkman-init.sh" ]] && source "/home/tassilo/.sdkman/bin/sdkman-init.sh"
+    . "$HOME/.cargo/env"
+fi

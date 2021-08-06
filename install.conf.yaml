@@ -20,6 +20,9 @@
     ~/.alacritty.yml:
     ~/.tridactylrc:
     ~/bin:
+    ~/.oh-my-zsh:
+          glob: true
+          path: zsh/oh-my-zsh/*
     ~/.config/:
             glob: true
             path: config/*
