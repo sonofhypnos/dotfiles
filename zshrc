@@ -120,6 +120,11 @@ if [ -f ~/.zshrc_local_before ]; then
     source ~/.zshrc_local_before
 fi
 
+#Emacs vterm support
+if [[ "$INSIDE_EMACS" = 'vterm' ]]; then
+    alias clear='vterm_printf "51;Evterm-clear-scrollback";tput clear'
+fi
+
 # Add Paths
 source ~/.shell/paths.sh
 
