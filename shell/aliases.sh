@@ -10,18 +10,15 @@ alias d='cd'
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
+alias v='nvim'
+alias e='emacsclient -c & disown'
+alias gll='git log --graph --pretty=oneline --abbrev-commit'
+alias f='fdfind'
 
 # Aliases to protect against overwriting
 alias cp='cp -i'
 alias mv='mv -i'
 alias ainstall='sudo apt-get update -y & sudo apt-get upgrade -y && sudo apt-get install'
-
-
-# Editors
-alias v='nvim'
-alias e='emacsclient -c & disown'
-alias gll='git log --graph --pretty=oneline --abbrev-commit'
-alias f='fdfind'
 
 #directories
 #alias do='cd ~/.dotfiles' this line caused a tone of problems for me.
