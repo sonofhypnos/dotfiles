@@ -5,7 +5,11 @@ algofiles="$unifiles/Algorithmen\ I\ \(SS\ 2021\)/"
 hmfiles="$unifiles/0186800\ –\ Höhere\ Mathematik\ II\ \(Analysis\)\ für\ die\ Fachrichtung\ Informatik/"
 dgtfiles="$unifiles/24007\ –\ Digitaltechnik\ und\ Entwurfsverfahren/"
 
+#convenience
 alias d='cd'
+alias ll='ls -alF'
+alias la='ls -A'
+alias l='ls -CF'
 
 # Aliases to protect against overwriting
 alias cp='cp -i'

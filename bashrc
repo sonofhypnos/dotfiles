@@ -101,12 +101,6 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 #Default Editor
 EDITOR=nvim
 
-
-#useful aliases
-alias d='cd'
-alias gits='git status'
-alias mv='mv -i'
-
 # Alias definitions.
 # You may want to put all your additions into a separate file like
 # ~/.bash_aliases, instead of adding them here directly.
@@ -152,8 +146,8 @@ source ~/.shell/paths.sh
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-if [ -f ~/.cago/env ]; then
-    export SDKMAN_DIR="/home/tassilo/.sdkman"
-    [[ -s "/home/tassilo/.sdkman/bin/sdkman-init.sh" ]] && source "/home/tassilo/.sdkman/bin/sdkman-init.sh"
+if [[ -e ~/.cargo/env && -s "$HOME/.sdkman/bin/sdkman-init.sh" ]]; then
+    export SDKMAN_DIR="$HOME/.sdkman"
+    source "$HOME/.sdkman/bin/sdkman-init.sh"
     . "$HOME/.cargo/env"
 fi

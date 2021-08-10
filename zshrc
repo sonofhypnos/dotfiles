@@ -83,21 +83,6 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-# export MANPATH="/usr/local/man:$MANPATH"
-
-# You may need to manually set your language environment
-# export LANG=en_US.UTF-8
-
-# Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
-
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
-
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
@@ -112,18 +97,15 @@ source ~/.shell/functions.sh
 
 # Allow local customizations in the ~/.shell_local_before file
 if [ -f ~/.shell_local_before ]; then
-    source ~/.shell_local_before
-fi
+    source ~/.shell_local_before; fi
 
 # Allow local customizations in the ~/.zshrc_local_before file
 if [ -f ~/.zshrc_local_before ]; then
-    source ~/.zshrc_local_before
-fi
+    source ~/.zshrc_local_before; fi
 
 #Emacs vterm support
 if [[ "$INSIDE_EMACS" = 'vterm' ]]; then
-    alias clear='vterm_printf "51;Evterm-clear-scrollback";tput clear'
-fi
+    alias clear='vterm_printf "51;Evterm-clear-scrollback";tput clear'; fi
 
 # Add Paths
 source ~/.shell/paths.sh
@@ -131,19 +113,16 @@ source ~/.shell/paths.sh
 #Aliases
 source ~/.shell/aliases.sh
 
-if [ -f /usr/share/doc/fzf ]; then
-source /usr/share/doc/fzf/examples/key-bindings.zsh
-source /usr/share/doc/fzf/examples/completion.zsh
-fi
+#fzf
+if [ -e /usr/share/doc/fzf ]; then
+    source /usr/share/doc/fzf/examples/key-bindings.zsh
+    source /usr/share/doc/fzf/examples/completion.zsh; fi
 #Nix
-if [ -f ~/.nix-profile ]; then
-source $HOME/.nix-profile/etc/profile.d/nix.sh
-fi
+if [ -f /home/tassilo/.nix-profile/etc/profile.d/nix.sh ]; then
+    . /home/tassilo/.nix-profile/etc/profile.d/nix.sh; fi
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 if [ -f ~/.sdkman ]; then
 export SDKMAN_DIR="/home/tassilo/.sdkman"
 [[ -s "/home/tassilo/.sdkman/bin/sdkman-init.sh" ]] && source "/home/tassilo/.sdkman/bin/sdkman-init.sh"
 fi
-if [ -f /home/tassilo/.nix-profile/etc/profile.d/nix.sh ]; then 
-    . /home/tassilo/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
