@@ -745,6 +745,18 @@ bindsym $mod+s exec $searchClip
 bindsym $mod+d exec $transGerman
 bindsym $mod+$alt+Control+q exec emacsclient -t
 
+exec emacs --daemon
+#Todo: make shortcut for editing this file
+#
+#emacsclient in Scratchpad
+# launch scratchpad frame in existing emacs daemon
+# exec emacs --daemon
+exec --no-startup-id /usr/local/bin/pad.sh
+
+# when scratchpad frame is launched, move it to the scratchpad workspace
+for_window [title="_emacs scratchpad_" class="Emacs"] move scratchpad
+bindsym $mod+e [title="_emacs scratchpad_"] scratchpad show
+bindsym $mod+$alt+e zotero move
 
 #kill focused Window
 set $kill [con_id="__focused__"] exec --no-startup-id kill -9 $(xdotool getwindowfocus getwindowpid)
@@ -766,11 +778,4 @@ exec_always --no-startup-id i3-cycle-focus.py --history 2
 bindsym $alt+Tab exec --no-startup-id i3-cycle-focus.py --switch
 
 
-#emacsclient in Scratchpad
-# launch scratchpad frame in existing emacs daemon
-exec --no-startup-id /usr/local/bin/pad.sh
 
-# when scratchpad frame is launched, move it to the scratchpad workspace
-for_window [title="_emacs scratchpad_" class="Emacs"] move scratchpad
-bindsym $mod+e [title="_emacs scratchpad_"] scratchpad show
-bindsym $mod+$alt+e zotero move
