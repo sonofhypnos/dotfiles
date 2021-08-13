@@ -73,3 +73,4 @@ shm() {
 }
 
 
+alias vpn='sudo openvpn --config ~/Downloads/kit.ovpn'

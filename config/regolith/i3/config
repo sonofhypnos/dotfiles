@@ -768,7 +768,7 @@ bindsym $alt+Tab exec --no-startup-id i3-cycle-focus.py --switch
 
 #emacsclient in Scratchpad
 # launch scratchpad frame in existing emacs daemon
-exec /usr/local/bin/pad.sh
+exec --no-startup-id /usr/local/bin/pad.sh
 
 # when scratchpad frame is launched, move it to the scratchpad workspace
 for_window [title="_emacs scratchpad_" class="Emacs"] move scratchpad

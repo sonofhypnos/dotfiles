@@ -7,9 +7,6 @@
 
 - shell:
   - [sh pre-install.sh, Running pre installation script]
-  - [mkdir -p ~/.oh-my-zsh/custom/, Creating oh-my-zsh custom forlders]
-  - [mkdir -p ~/.oh-my-zsh/custom/plugins, Creating oh-my-zsh custom plugins forlders]
-
 
 - link:
     ~/.profile: 
@@ -27,8 +24,6 @@
     ~/.tridactylrc:
     ~/bin:
     ~/.oh-my-zsh:
-          glob: true
-          path: zsh/oh-my-zsh/*
     ~/.config/:
             glob: true
             path: config/*
@@ -36,6 +31,7 @@
             glob: true
             path: shell/*
     ~/.i3status.conf:
+    ~/.xsession:
     ~/.doom.d:
     ~/.screenlayout:
 
