@@ -1,13 +1,15 @@
 #!/usr/bin/env bash
 
-# Check if oh-my-zsh is installed
-OMZDIR="$HOME/.oh-my-zsh"
-if [ ! -d "$OMZDIR" ]; then
-  echo 'Installing oh-my-zsh'
-  /bin/sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+# Check if doom is installed
+DOOM="$HOME/.emacs.d"
+if [ ! -d "$DOOM" ]; then
+  echo 'Installing doom'
+apt-get install ripgrep fd-find
+git clone --depth 1 https://github.com/hlissner/doom-emacs ~/.emacs.d
+~/.emacs.d/bin/doom install
 else
-  echo 'Updating oh-my-zsh'
-  upgrade_oh_my_zsh
+  echo 'Updating doom'
+  doom sync
 fi
 
 # Change default shell
