@@ -703,11 +703,6 @@ set $emacs emacsclient -e '(make-orgcapture-frame)'
 set $searchClip sh -c 'firefox "https://www.google.com/search?q=$(xclip -o)"'
 set $transGerman sh -c 'firefox "http://translate.google.com/#de/en/$(xclip -o)"'
 
-
-
-#launch ilias
-exec ~/Installations/KIT-ILIAS-downloader -tn -o ~/Dropbox/semester2
-
 #Open main Applications
 exec rescuetime
 exec flameshot

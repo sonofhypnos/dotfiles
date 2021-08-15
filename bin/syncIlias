@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+#This script starts the Ilias downloader
+#Should be put in /etc/cron.hourly
+~/Installations/KIT-ILIAS-downloader -tn -o ~/Dropbox/semester2
+
