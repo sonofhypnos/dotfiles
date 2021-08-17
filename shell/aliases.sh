@@ -10,10 +10,10 @@ alias d='cd'
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
-alias v='nvim'
 alias e='emacsclient -c & disown'
 alias gll='git log --graph --pretty=oneline --abbrev-commit'
-alias f='fdfind'
+alias bat='batcat'
+alias v='nvim'
 
 # Aliases to protect against overwriting
 alias cp='cp -i'
@@ -23,6 +23,7 @@ alias ainstall='sudo apt-get update -y & sudo apt-get upgrade -y && sudo apt-get
 #directories
 #alias do='cd ~/.dotfiles' this line caused a tone of problems for me.
 alias regi3='nvim ~/.dotfiles/config/regolith/i3/config'
+alias aalias='nvim ~/.dotfiles/shell/aliases.sh'
 alias ozsh='cd ~/.dotfiles/zsh/oh-my-zsh'
 alias econfig='nvim ~/.doom.d/config.el'
 alias .d='cd /home/tassilo/.dotfiles/'
