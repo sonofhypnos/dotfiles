@@ -50,6 +50,7 @@ Plug 'lambdalisue/suda.vim'
 
 " timetracking
 Plug 'wakatime/vim-wakatime'
+Plug 'ActivityWatch/aw-watcher-vim'
 
 
 " Python documentation [I can't get it to work]
