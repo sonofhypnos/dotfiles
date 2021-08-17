@@ -750,7 +750,7 @@ exec --no-startup-id /usr/local/bin/pad.sh
 
 # when scratchpad frame is launched, move it to the scratchpad workspace
 for_window [title="_emacs scratchpad_" class="Emacs"] move scratchpad
-bindsym $mod+e [title="_emacs scratchpad_"] scratchpad show
+bindsym $mod+e [class="Emacs"] scratchpad show
 bindsym $mod+$alt+e zotero move
 
 #kill focused Window
