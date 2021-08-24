@@ -707,6 +707,7 @@ set $transGerman sh -c 'firefox "http://translate.google.com/#de/en/$(xclip -o)"
 exec rescuetime
 exec flameshot
 exec i3-wallpaper
+exec ~/.local/opt/activitywatch/aw-qt
 #assign [class="^Chromium$"] 1
 
 #Send Battery warning
@@ -767,10 +768,19 @@ bindsym Mod1+F4 $kill
 bindsym $mod+Shift+Control+q $hardKill
 bindsym $mod+BackSpace kill
 
+#create
 
 # alt-tab through windows
 exec_always --no-startup-id i3-cycle-focus.py --history 2
 bindsym $alt+Tab exec --no-startup-id i3-cycle-focus.py --switch
 
+#SearchMode
+set $search_mode Layout Mode: [c]lipboard [t]ranslate 
+bindsym Control+$mod+$alt+u mode "$search_mode"
+
+mode "$search_mode" {
+	bindsym Escape mode "default"
+	bindsym Return mode "default"
+}
 
 

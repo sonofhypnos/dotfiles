@@ -10,7 +10,6 @@ matches:
   # Simple text replacement
   - trigger: ":espanso"
     form: "\n  - trigger: \"{{match}}\"\n    replace:"
-
   # Dates
   - trigger: ":date"
     replace: "{{mydate}}"
@@ -19,6 +18,14 @@ matches:
         type: date
         params:
           format: "%d-%m-%Y"
+  # Day
+  - trigger: ":day"
+    replace: "{{mydate}}"
+    vars:
+      - name: mydate
+        type: date
+        params:
+          format: "%d"
   # ISO-Date
   - trigger: ":time"
     replace: "{{mydate}}"
@@ -114,3 +121,5 @@ matches:
     replace: "actively"
   - trigger: "backround"
     replace: "background"
+  - trigger: ":fnr"
+    replace: '00000050878.5'
