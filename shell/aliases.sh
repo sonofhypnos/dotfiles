@@ -28,6 +28,7 @@ alias ozsh='cd ~/.dotfiles/zsh/oh-my-zsh'
 alias econfig='nvim ~/.doom.d/config.el'
 alias .d='cd /home/tassilo/.dotfiles/'
 alias ashell="nvim /home/tassilo/.dotfiles/shell/aliases.sh"
+alias dmemacs="~/.local/lib/python3.9/site-packages/memacs/"
 
 ########################################
 # Uni Files
