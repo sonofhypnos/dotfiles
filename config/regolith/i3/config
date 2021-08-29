@@ -735,7 +735,7 @@ mode "$main_launcher" {
 }
 
 #other Shortcuts
-bindsym Control+Shift+Escape exec gnome-system-monitor
+bindsym $mod+Shift+Escape exec gnome-system-monitor
 bindsym $mod+q exec $emacs
 bindsym $mod+s exec $searchClip
 bindsym $mod+d exec $transGerman
