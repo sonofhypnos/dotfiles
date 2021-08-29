@@ -31,3 +31,5 @@
 	upgrade-submodules = submodule update --init --remote
 [init]
 	defaultBranch = main
+[pull]
+	rebase = true
