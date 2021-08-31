@@ -14,6 +14,9 @@ alias e='emacsclient -c & disown'
 alias gll='git log --graph --pretty=oneline --abbrev-commit'
 alias bat='batcat'
 alias v='nvim'
+alias pip2='python2 -m pip'
+
+alias refresh='watch -n 1 cat'
 
 # Aliases to protect against overwriting
 alias cp='cp -i'
