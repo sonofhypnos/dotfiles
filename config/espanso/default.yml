@@ -123,3 +123,9 @@ matches:
     replace: "background"
   - trigger: ":fnr"
     replace: '00000050878.5'
+  - trigger: ":hg"
+    replace: "Herzliche Grüße\nTassilo"
+  - trigger: ":hg"
+    replace: "Liebe Grüße\nTassilo"
+  - trigger: ":gt"
+    replace: "Grüße\nTassilo"
