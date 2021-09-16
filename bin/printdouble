@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+for file in "$@"; do
+	lpr -o sides=two-sided-long-edge -P HaDiKo-EUFF "$file"
+done
