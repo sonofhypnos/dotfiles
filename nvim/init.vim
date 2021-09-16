@@ -18,6 +18,8 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'justinmk/vim-sneak'
 Plug 'tpope/vim-surround'
 
+"stop swapfiles from annoying me
+Plug 'gioele/vim-autoswap'
 
 " GUI enhancements
 Plug 'itchyny/lightline.vim'
