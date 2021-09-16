@@ -699,16 +699,13 @@ set $discord discord
 set $telegram telegram 
 set $signal signal 
 set $intellij intellij-idea-ultimate
-set $emacs emacsclient -e '(make-orgcapture-frame)'
+set $emacs emacsclient -c
 set $searchClip sh -c 'firefox "https://www.google.com/search?q=$(xclip -o)"'
 set $transGerman sh -c 'firefox "http://translate.google.com/#de/en/$(xclip -o)"'
 
 #Open main Applications
-exec rescuetime
-exec flameshot
-exec i3-wallpaper
-exec ~/.local/opt/activitywatch/aw-qt
-exec emacs
+exec emacs --daemon; emacsclient -c & flatpak run org.zotero.Zotero & rescuetime & flameshot & i3-wallpaper & ~/.local/opt/activitywatch/aw-qt
+
 #assign [class="^Chromium$"] 1
 
 #Send Battery warning
@@ -737,7 +734,6 @@ mode "$main_launcher" {
 
 #other Shortcuts
 bindsym $mod+Shift+Escape exec gnome-system-monitor
-bindsym $mod+q exec $emacs
 bindsym $mod+s exec $searchClip
 bindsym $mod+d exec $transGerman
 bindsym $mod+$alt+Control+q exec emacsclient -t
@@ -746,13 +742,14 @@ bindsym $mod+$alt+Control+q exec emacsclient -t
 #
 #emacsclient in Scratchpad
 # launch scratchpad frame in existing emacs daemon
-# exec emacs --daemon
+#exec emacs
 #exec --no-startup-id /usr/local/bin/pad.sh
 
 # when scratchpad frame is launched, move it to the scratchpad workspace
-for_window [class="Emacs"] move scratchpad
+for_window [class="Zotero" window_role="browser"] move scratchpad
+for_window [title="_emacs scratchpad_"] move scratchpad
 bindsym $mod+e [class="Emacs"] scratchpad show
-bindsym $mod+$alt+e zotero move
+bindsym $mod+$alt+z [class="Zotero"] scratchpad show
 
 #kill focused Window
 set $kill [con_id="__focused__"] exec --no-startup-id kill -9 $(xdotool getwindowfocus getwindowpid)
@@ -782,5 +779,6 @@ mode "$search_mode" {
 	bindsym Escape mode "default"
 	bindsym Return mode "default"
 }
+
 
 
