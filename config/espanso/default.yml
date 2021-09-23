@@ -18,6 +18,14 @@ matches:
         type: date
         params:
           format: "%d-%m-%Y"
+  #american dates
+  - trigger: ":adate"
+    replace: "{{mydate}}"
+    vars:
+      - name: mydate
+        type: date
+        params:
+          format: "%Y-%m-%d"
   # Day
   - trigger: ":day"
     replace: "{{mydate}}"
