@@ -661,9 +661,10 @@ set $prog ~/.screenlayout/prog.sh
 set $doublePort ~/.screenlayout/doublePort.sh
 set $frontLaptop ~/.screenlayout/frontLaptop.sh
 set $tripleLand ~/.screenlayout/tripleLand.sh
+set $doublePortOnly ~/.screenlayout/doublePortOnly.sh
 
 #LayoutMode
-set $layout_mode Layout Mode: [p]rog [m]ain [l]aptopOnly [d]ouble Portrait [f]rontLaptop [t]rippleLand
+set $layout_mode Layout Mode: [p]rog [m]ain [l]aptopOnly [d]oublePortrait [o]nlyDoublePortrait [f]rontLaptop [t]rippleLand
 bindsym Control+$mod+$alt+L mode "$layout_mode"
 
 mode "$layout_mode" {
@@ -673,6 +674,7 @@ mode "$layout_mode" {
 	bindsym --release d mode "default" exec $doublePort
 	bindsym --release f mode "default" exec $frontLaptop
 	bindsym --release t mode "default" exec $tripleLand
+	bindsym --release o mode "default" exec $doublePortOnly
 
 
 	bindsym Escape mode "default"
@@ -712,7 +714,7 @@ exec emacs --daemon; emacsclient -c & flatpak run org.zotero.Zotero & rescuetime
 exec --no-startup-id ./i3-battery-popup/i3-battery-popup
 
 #Launcher for Main Applications
-set $main_launcher Main Launcher: main [t]odoist [f]ocusmate [w]hatsapp [g]mail [k]eep [c]alendar [d]iscord [i]ntelliJ [a]nki
+set $main_launcher Main Launcher: main [t]odoist [f]ocusmate [w]hatsapp [g]mail [k]eep [c]alendar [d]iscord [i]ntelliJ [a]nki [r]eminder
 bindsym Control+$mod+$alt+o mode "$main_launcher"
 
 mode "$main_launcher" {
@@ -727,6 +729,7 @@ mode "$main_launcher" {
 	bindsym i mode "default" exec $intellij
 	bindsym p mode "default" exec $polar
 	bindsym a mode "default" exec anki
+	bindsym r mode "default" exec firefox https://web.colreminder.com/en-US/addReminder
 	bindsym Escape mode "default"
 	bindsym Return mode "default"
 	bindsym s mode "default" exec $sitzplatz
@@ -771,6 +774,10 @@ bindsym $mod+BackSpace kill
 exec_always --no-startup-id i3-cycle-focus.py --history 2
 bindsym $alt+Tab exec --no-startup-id i3-cycle-focus.py --switch
 
+
+#toggle fullscreen for multiple monitors
+bindsym $mod+Control+f fullscreen toggle global
+
 #SearchMode
 set $search_mode Layout Mode: [c]lipboard [t]ranslate 
 bindsym Control+$mod+$alt+u mode "$search_mode"
@@ -780,5 +787,15 @@ mode "$search_mode" {
 	bindsym Return mode "default"
 }
 
+#Mnemonics
+set $r_mode Layout Mode: [s]enfcall [b]luebutton
+bindsym Control+$mod+$alt+r mode "$r_mode"
+
+mode "$r_mode" {
+	bindsym Escape mode "default"
+	bindsym Return mode "default"
+	bindsym s mode "default" exec google-chrome --app=https://public.senfcall.de/ka-rationality 
+	bindsym b mode "default" exec google-chrome --app=https://bbb23.senfcall.de/html5client/join?sessionToken=1rjjiv1kgifdse8k
+}
 
 
