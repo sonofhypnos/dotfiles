@@ -11,7 +11,13 @@ path_prepend() {
     path_remove "$1"
     PATH="$1${PATH:+":$PATH"}"
 }
-function apt-history(){
+
+ 
+magit() {
+emacsclient -c --eval '(let ((display-buffer-alist `(("^\\*magit: " display-buffer-same-window) ,display-buffer-alist))) (magit-status))' & sleep 0.5 && i3-msg '[title="^magit:"] move scratchpad' && i3-msg '[title="^magit:"] scratchpad show' 
+}
+
+apt_history(){
       case "$1" in
         install)
               cat /var/log/dpkg.log | grep 'install '
@@ -30,4 +36,5 @@ function apt-history(){
               ;;
       esac
 }
+
 
