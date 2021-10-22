@@ -697,6 +697,7 @@ set $calendar google-chrome --app=https://calendar.google.com
 set $focusmate google-chrome --app=https://focusmate.com/dashboard
 set $polar google-chrome --app=https://app.getpolarized.io/
 set $sitzplatz google-chrome --app=https://raumbuchung.bibliothek.kit.edu/sitzplatzreservierung/day.php?year=2021&month=7&day=1&area=20&room=140
+set $teams google-chrome --app=https://teams.microsoft.com
 set $discord discord 
 set $telegram telegram 
 set $signal signal 
@@ -729,6 +730,7 @@ mode "$main_launcher" {
 	bindsym i mode "default" exec $intellij
 	bindsym p mode "default" exec $polar
 	bindsym a mode "default" exec anki
+	bindsym m mode "default" exec $teams
 	bindsym r mode "default" exec firefox https://web.colreminder.com/en-US/addReminder
 	bindsym Escape mode "default"
 	bindsym Return mode "default"

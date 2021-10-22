@@ -74,6 +74,8 @@ matches:
     replace: 'tassilo.neubauer@web.de'
   - trigger: '@tg'
     replace: 'tassilo.neubauer@gmail.com'
+  - trigger: '@up'
+    replace: 'upkim@student.kit.edu'
   - trigger: 'gtasse'
     replace: "Grüße\n\nTassilo"
   - trigger: 'mfg'
