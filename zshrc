@@ -113,6 +113,9 @@ source ~/.shell/paths.sh
 #Aliases
 source ~/.shell/aliases.sh
 
+#mujoco
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/tassilo/.mujoco/mujoco200/bin
+
 #fzf
 if [ -e /usr/share/doc/fzf ]; then
     source /usr/share/doc/fzf/examples/key-bindings.zsh
