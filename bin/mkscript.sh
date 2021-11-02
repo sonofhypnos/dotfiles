@@ -40,8 +40,8 @@ _select_title(){
 _select_title
 
 printf "Enter a description: " ; read -r dscrpt
-printf "Enter your name: " ; read -r name
-printf "Enter the version number: " ; read -r vnum
+name="Tassilo Neubauer"
+vnum="0.1"
 
 # Format the output and write it to a file.
 printf "%-16s\n\
