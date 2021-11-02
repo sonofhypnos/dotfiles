@@ -130,6 +130,9 @@ export SDKMAN_DIR="/home/tassilo/.sdkman"
 [[ -s "/home/tassilo/.sdkman/bin/sdkman-init.sh" ]] && source "/home/tassilo/.sdkman/bin/sdkman-init.sh"
 fi
 
+#disable special meaning for brackets by default
+alias rake='noglob rake'
+
 #trying to fix commandline with pycharm: https://stackoverflow.com/questions/41960441/why-my-zsh-in-pycharm-doesnt-have-correct-path
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 
