@@ -113,8 +113,8 @@ source ~/.shell/paths.sh
 #Aliases
 source ~/.shell/aliases.sh
 
-#mujoco
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/tassilo/.mujoco/mujoco200/bin
+#mujoco (version 1.5, since version 2.0 does not work with openais gym[mujoco] library)
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/tassilo/.mujoco/mjpro150/bin
 
 #fzf
 if [ -e /usr/share/doc/fzf ]; then
