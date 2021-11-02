@@ -2,7 +2,7 @@
 # I use the following script to search my current university courses
 import sys
 
-DEFAULT_PATH = "~/semester2"
+DEFAULT_PATH = "~/Dropbox/semester3"
 PATH_DICT = {
     "la": "Lineare Algebra I für Mathematik - Informatik",
     "hm": "0186800 – Höhere Mathematik II (Analysis) für die Fachrichtung Informatik",
