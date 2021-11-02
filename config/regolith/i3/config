@@ -139,8 +139,8 @@ bindsym $mod+$i3-wm.binding.look_selector exec $i3-wm.program.look_selector
 set_from_resource $i3-wm.binding.focus_parent i3-wm.binding.focus_parent a
 bindsym $mod+$i3-wm.binding.focus_parent focus parent
 
-## Navigate // Relative Child // <> z ##/
-set_from_resource $i3-wm.binding.focus_child i3-wm.binding.focus_child z
+## Navigate // Relative Child // <> y ##/
+set_from_resource $i3-wm.binding.focus_child i3-wm.binding.focus_child y
 bindsym $mod+$i3-wm.binding.focus_child focus child
 
 ## Navigate // Relative Window // <> ↑ ↓ ← → ##
@@ -765,12 +765,13 @@ set $hardKill [con_id="__focused__"] exec --no-startup-id kill -9 -1 $(xdotool g
 # Close all windows
 bindsym $mod+Shift+q [class=".*"] kill
 
-#shotcuts
+#shortcuts
 bindsym Mod1+F4 $kill
 bindsym $mod+Shift+Control+q $hardKill
 bindsym $mod+BackSpace kill
 
 #create
+bindsym $mod+c exec capture.sh
 
 # alt-tab through windows
 exec_always --no-startup-id i3-cycle-focus.py --history 2
@@ -780,16 +781,15 @@ bindsym $alt+Tab exec --no-startup-id i3-cycle-focus.py --switch
 #toggle fullscreen for multiple monitors
 bindsym $mod+Control+f fullscreen toggle global
 
-#SearchMode
-set $search_mode Layout Mode: [c]lipboard [t]ranslate 
-bindsym Control+$mod+$alt+u mode "$search_mode"
+#Search Bindings
+set $search_selection exec xclip -out | xargs -I{} xdg-open https://www.google.de/search\?q\=\{\}
+bindsym $mod+Shift+z $search_selection
+set $search exec echo "" | rofi -dmenu -p "Search:" | xargs -I{} xdg-open https://www.google.de/search?q={}
+bindsym $mod+z $search
 
-mode "$search_mode" {
-	bindsym Escape mode "default"
-	bindsym Return mode "default"
-}
 
-#Mnemonics
+
+#Mnemonics (Create something to make new once or work with other stuff?)
 set $r_mode Layout Mode: [s]enfcall [b]luebutton
 bindsym Control+$mod+$alt+r mode "$r_mode"
 

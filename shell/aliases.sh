@@ -4,6 +4,7 @@ lafiles="$unifiles/Lineare\ Algebra\ \ II\ für\ Mathematik/"
 algofiles="$unifiles/Algorithmen\ I\ \(SS\ 2021\)/"
 hmfiles="$unifiles/0186800\ –\ Höhere\ Mathematik\ II\ \(Analysis\)\ für\ die\ Fachrichtung\ Informatik/"
 dgtfiles="$unifiles/24007\ –\ Digitaltechnik\ und\ Entwurfsverfahren/"
+maineditor='emacsclient'
 
 #convenience
 alias d='cd'
@@ -26,12 +27,12 @@ alias ainstall='sudo apt-get update -y & sudo apt-get upgrade -y && sudo apt-get
 
 #directories and files
 #alias do='cd ~/.dotfiles' this line caused a tone of problems for me.
-alias regi3='nvim ~/.dotfiles/config/regolith/i3/config'
-alias aalias='nvim ~/.dotfiles/shell/aliases.sh'
+alias regi3='$maineditor ~/.dotfiles/config/regolith/i3/config'
+alias aalias='$maineditor ~/.dotfiles/shell/aliases.sh'
 alias ozsh='cd ~/.dotfiles/zsh/oh-my-zsh'
-alias econfig='nvim ~/.doom.d/config.el'
+alias econfig='$maineditor ~/.doom.d/config.el'
 alias .d='cd /home/tassilo/.dotfiles/'
-alias ashell="nvim /home/tassilo/.dotfiles/shell/aliases.sh"
+alias ashell="$maineditor /home/tassilo/.dotfiles/shell/aliases.sh"
 alias dmemacs="~/.local/lib/python3.9/site-packages/memacs/"
 
 # Uni Files
