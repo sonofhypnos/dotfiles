@@ -1,10 +1,13 @@
 unifiles="$HOME/Dropbox/semester3"
-swtfiles="$unifiles/Softwaretechnik\ I\ mit\ Übung/"
 lafiles="$unifiles/Lineare\ Algebra\ \ II\ für\ Mathematik/"
-algofiles="$unifiles/Algorithmen\ I\ \(SS\ 2021\)/"
-hmfiles="$unifiles/0186800\ –\ Höhere\ Mathematik\ II\ \(Analysis\)\ für\ die\ Fachrichtung\ Informatik/"
+osfiles="$unifiles/Betriebssysteme\ WS\ 21-22/"
+robfiles="$unifiles/Robotik\ I\ -\ Einführung\ in\ die\ Robotik/"
+tgifiles="$unifiles/Theoretische\ Grundlagen\ der\ Informatik/"
+cgfiles="$unifiles/Computergrafik\ WS\ 21-22/"
+rofiles="$unifiles/24502\ –\ Rechnerorganisation/"
+wsfiles="$unifiles/Grundlagen\ der\ Wahrscheinlichkeitstheorie\ und\ Statistik\ für\ Studierende\ der\ Informatik/"
 dgtfiles="$unifiles/24007\ –\ Digitaltechnik\ und\ Entwurfsverfahren/"
-maineditor='emacsclient'
+maineditor='nvim'
 
 #convenience
 alias d='cd'
@@ -41,6 +44,12 @@ alias hm2="xdg-open $unifiles/Höhere\ Mathematik\ I\ \(Analysis\)\ für\ die\ F
 
 
 #navigate to ranger
+alias os="cd $osfiles; ranger"
+alias ro="cd $rofiles; ranger"
+alias rob="cd $robfiles; ranger"
+alias ws="cd $wsfiles; ranger"
+alias tgi="cd $tgifiles; ranger"
+alias cg="cd $cgfiles; ranger"
 alias rs="cd $unifiles; ranger"
 alias hm="cd $hmfiles; ranger"
 alias la="cd $lafiles; ranger"
