@@ -1,3 +1,4 @@
+unifiles2="$HOME/Dropbox/semester2"
 unifiles="$HOME/Dropbox/semester3"
 lafiles="$unifiles/Lineare\ Algebra\ \ II\ für\ Mathematik/"
 osfiles="$unifiles/Betriebssysteme\ WS\ 21-22/"
@@ -39,8 +40,8 @@ alias ashell="$maineditor /home/tassilo/.dotfiles/shell/aliases.sh"
 alias dmemacs="~/.local/lib/python3.9/site-packages/memacs/"
 
 # Uni Files
-alias hm1="xdg-open $unifiles/Höhere\ Mathematik\ I\ \(Analysis\)\ für\ die\ Fachrichtung\ Informatik/Vorlesungsmaterial/Skript\ Höhere\ Mathematik\ 1.pdf && exit" 
-alias hm2="xdg-open $unifiles/Höhere\ Mathematik\ I\ \(Analysis\)\ für\ die\ Fachrichtung\ Informatik/Vorlesungsmaterial/HM2.pdf && exit" 
+alias hm1="xdg-open ~/Dropbox/semester2/Höhere\ Mathematik\ I\ \(Analysis\)\ für\ die\ Fachrichtung\ Informatik/Vorlesungsmaterial/Skript\ Höhere\ Mathematik\ 1.pdf && exit" 
+alias hm2="xdg-open $unifiles2/Höhere\ Mathematik\ I\ \(Analysis\)\ für\ die\ Fachrichtung\ Informatik/Vorlesungsmaterial/HM2.pdf && exit" 
 
 
 #navigate to ranger
