@@ -65,4 +65,4 @@ alias dIlias='exec ~/Installations/KIT-ILIAS-downloader -t -o ~/Dropbox/semester
 alias update-alternatives='sudo update-alternatives'
 
 #miscelanous or recently added.
-alias vpn='sudo openvpn --config ~/Downloads/kit.ovpn'
+alias vpn="sudo $HOME/vpnstuff"
