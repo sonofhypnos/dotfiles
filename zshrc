@@ -94,6 +94,9 @@ export VISUAL=nvim
 # Functions
 source ~/.shell/functions.sh
 
+# Allow local customizations in the ~/.zshrc_local_before file
+if [ -f ~/.zshrc_local_before ]; then
+    source ~/.zshrc_local_before; fi
 
 # Allow local customizations in the ~/.shell_local_before file
 if [ -f ~/.shell_local_before ]; then
@@ -129,7 +132,7 @@ fi
 #disable special meaning for brackets by default
 alias rake='noglob rake'
 
-#trying to fix commandline with pycharm: https://stackoverflow.com/questions/41960441/why-my-zsh-in-pycharm-doesnt-have-correct-path
+#fix commandline with pycharm: https://stackoverflow.com/questions/41960441/why-my-zsh-in-pycharm-doesnt-have-correct-path
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 

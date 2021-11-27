@@ -137,3 +137,7 @@ matches:
     replace: "Liebe Grüße\nTassilo"
   - trigger: ":gt"
     replace: "Grüße\nTassilo"
+  - trigger: "lenght"
+    replace: "length"
+  - trigger: "compiel"
+    replace: "compile"
