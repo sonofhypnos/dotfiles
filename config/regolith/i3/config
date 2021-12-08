@@ -783,9 +783,9 @@ bindsym $alt+Tab exec --no-startup-id i3-cycle-focus.py --switch
 bindsym $mod+Control+f fullscreen toggle global
 
 #Search Bindings
-set $search_selection exec xclip -selection "p" -out | xargs -I xdg-open https://www.google.de/search\?q\="\{\}"
+set $search_selection exec xclip -selection "c" -out | xargs -I{} xdg-open https://www.google.de/search\?q\={}
 bindsym $mod+Shift+z $search_selection
-set $search exec echo '' | rofi -dmenu -p 'Search:' | xargs -I xdg-open https://www.google.de/search?q={}
+set $search exec echo '' | rofi -dmenu -p 'Search:' | xargs -I{} xdg-open https://www.google.de/search?q={}
 bindsym $mod+z $search
 
 

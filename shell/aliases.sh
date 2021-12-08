@@ -21,6 +21,7 @@ alias bat='batcat'
 alias v='nvim'
 alias pip2='python2 -m pip'
 alias printpagesd='lpr -o number-up=2 sides=two-sided-long-edge -P HaDiKo-EUFF'
+alias rars="$HOME/Dropbox/semester3/24502\ –\ Rechnerorganisation/Übungsmaterialien/Übung\ 2/rars_46ab74d.jar"
 
 alias refresh='watch -n 1 cat'
 
