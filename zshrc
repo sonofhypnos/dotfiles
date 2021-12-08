@@ -124,7 +124,7 @@ if [ -f /home/tassilo/.nix-profile/etc/profile.d/nix.sh ]; then
     . /home/tassilo/.nix-profile/etc/profile.d/nix.sh; fi
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-if [ -f ~/.sdkman ]; then
+if [ -d ~/.sdkman ]; then 
 export SDKMAN_DIR="/home/tassilo/.sdkman"
 [[ -s "/home/tassilo/.sdkman/bin/sdkman-init.sh" ]] && source "/home/tassilo/.sdkman/bin/sdkman-init.sh"
 fi
