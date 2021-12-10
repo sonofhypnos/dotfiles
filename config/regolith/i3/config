@@ -755,6 +755,20 @@ bindsym $mod+$alt+Control+q exec emacsclient -t
 for_window [class="Zotero" window_role="browser"] move scratchpad
 for_window [title="_emacs scratchpad_"] move scratchpad
 bindsym $mod+e [class="Emacs"] scratchpad show
+for_window [title="cd ; ranger"] move scratchpad
+
+#university binds
+mode "userbinds" {
+  bindsym u mode "default" [title="cd ; ranger"] scratchpad show
+
+  # Back to normal: Enter, Escape, or s
+  bindsym Return mode "default"
+  bindsym Escape mode "default"
+  bindsym s mode "default"
+}
+
+bindsym $mod+u mode "userbinds"
+bindsym $mod+s [title="cd ; ranger"] scratchpad show
 bindsym $mod+$alt+z [class="Zotero"] scratchpad show
 
 #kill focused Window
@@ -803,59 +817,59 @@ mode "$r_mode" {
 
 #i3_resurrect config
 
-set $i3_resurrect i3-resurrect
-
-# Save workspace mode.
-mode "save" {
-  bindsym 1 exec "$i3_resurrect save -w 1 --swallow=class,instance,title" mode "default"
-  bindsym 2 exec "$i3_resurrect save -w 2 --swallow=class,instance,title" mode "default"
-  bindsym 3 exec "$i3_resurrect save -w 3 --swallow=class,instance,title" mode "default"
-  bindsym 4 exec "$i3_resurrect save -w 4 --swallow=class,instance,title" mode "default"
-  bindsym 5 exec "$i3_resurrect save -w 5 --swallow=class,instance,title" mode "default"
-  bindsym 6 exec "$i3_resurrect save -w 6 --swallow=class,instance,title" mode "default"
-  bindsym 7 exec "$i3_resurrect save -w 7 --swallow=class,instance,title" mode "default"
-  bindsym 8 exec "$i3_resurrect save -w 8 --swallow=class,instance,title" mode "default"
-  bindsym 9 exec "$i3_resurrect save -w 9 --swallow=class,instance,title" mode "default"
-  bindsym 0 exec "$i3_resurrect save -w 10 --swallow=class,instance,title" mode "default"
-
-  # Back to normal: Enter, Escape, or s
-  bindsym Return mode "default"
-  bindsym Escape mode "default"
-  bindsym s mode "default"
-  bindsym $mod+s mode "default"
-}
-
-bindsym $mod+s mode "save"
+#set $i3_resurrect i3-resurrect
+#
+## Save workspace mode.
+#mode "save" {
+#  bindsym 1 exec "$i3_resurrect save -w 1 --swallow=class,instance,title" mode "default"
+#  bindsym 2 exec "$i3_resurrect save -w 2 --swallow=class,instance,title" mode "default"
+#  bindsym 3 exec "$i3_resurrect save -w 3 --swallow=class,instance,title" mode "default"
+#  bindsym 4 exec "$i3_resurrect save -w 4 --swallow=class,instance,title" mode "default"
+#  bindsym 5 exec "$i3_resurrect save -w 5 --swallow=class,instance,title" mode "default"
+#  bindsym 6 exec "$i3_resurrect save -w 6 --swallow=class,instance,title" mode "default"
+#  bindsym 7 exec "$i3_resurrect save -w 7 --swallow=class,instance,title" mode "default"
+#  bindsym 8 exec "$i3_resurrect save -w 8 --swallow=class,instance,title" mode "default"
+#  bindsym 9 exec "$i3_resurrect save -w 9 --swallow=class,instance,title" mode "default"
+#  bindsym 0 exec "$i3_resurrect save -w 10 --swallow=class,instance,title" mode "default"
+#
+#  # Back to normal: Enter, Escape, or s
+#  bindsym Return mode "default"
+#  bindsym Escape mode "default"
+#  bindsym s mode "default"
+#  bindsym $mod+s mode "default"
+#}
+#
+#bindsym $mod+s mode "save"
 
 # Restore workspace mode.
-mode "restore" {
-  bindsym 1 exec "$i3_resurrect restore -w 1 --programs-only"
-  bindsym 2 exec "$i3_resurrect restore -w 2 --programs-only"
-  bindsym 3 exec "$i3_resurrect restore -w 3 --programs-only"
-  bindsym 4 exec "$i3_resurrect restore -w 4 --programs-only"
-  bindsym 5 exec "$i3_resurrect restore -w 5 --programs-only"
-  bindsym 6 exec "$i3_resurrect restore -w 6 --programs-only"
-  bindsym 7 exec "$i3_resurrect restore -w 7 --programs-only"
-  bindsym 8 exec "$i3_resurrect restore -w 8 --programs-only"
-  bindsym 9 exec "$i3_resurrect restore -w 9 --programs-only"
-  bindsym 0 exec "$i3_resurrect restore -w 10 --programs-only"
-
-  bindsym $mod+1 exec "$i3_resurrect restore -w 1 --layout-only"
-  bindsym $mod+2 exec "$i3_resurrect restore -w 2 --layout-only"
-  bindsym $mod+3 exec "$i3_resurrect restore -w 3 --layout-only"
-  bindsym $mod+4 exec "$i3_resurrect restore -w 4 --layout-only"
-  bindsym $mod+5 exec "$i3_resurrect restore -w 5 --layout-only"
-  bindsym $mod+6 exec "$i3_resurrect restore -w 6 --layout-only"
-  bindsym $mod+7 exec "$i3_resurrect restore -w 7 --layout-only"
-  bindsym $mod+8 exec "$i3_resurrect restore -w 8 --layout-only"
-  bindsym $mod+9 exec "$i3_resurrect restore -w 9 --layout-only"
-  bindsym $mod+0 exec "$i3_resurrect restore -w 10 --layout-only"
-
-  # Back to normal: Enter, Escape, or n
-  bindsym Return mode "default"
-  bindsym Escape mode "default"
-  bindsym n mode "default"
-  bindsym $mod+n mode "default"
-}
-
-bindsym $mod+n mode "restore"
+#mode "restore" {
+#  bindsym 1 exec "$i3_resurrect restore -w 1 --programs-only"
+#  bindsym 2 exec "$i3_resurrect restore -w 2 --programs-only"
+#  bindsym 3 exec "$i3_resurrect restore -w 3 --programs-only"
+#  bindsym 4 exec "$i3_resurrect restore -w 4 --programs-only"
+#  bindsym 5 exec "$i3_resurrect restore -w 5 --programs-only"
+#  bindsym 6 exec "$i3_resurrect restore -w 6 --programs-only"
+#  bindsym 7 exec "$i3_resurrect restore -w 7 --programs-only"
+#  bindsym 8 exec "$i3_resurrect restore -w 8 --programs-only"
+#  bindsym 9 exec "$i3_resurrect restore -w 9 --programs-only"
+#  bindsym 0 exec "$i3_resurrect restore -w 10 --programs-only"
+#
+#  bindsym $mod+1 exec "$i3_resurrect restore -w 1 --layout-only"
+#  bindsym $mod+2 exec "$i3_resurrect restore -w 2 --layout-only"
+#  bindsym $mod+3 exec "$i3_resurrect restore -w 3 --layout-only"
+#  bindsym $mod+4 exec "$i3_resurrect restore -w 4 --layout-only"
+#  bindsym $mod+5 exec "$i3_resurrect restore -w 5 --layout-only"
+#  bindsym $mod+6 exec "$i3_resurrect restore -w 6 --layout-only"
+#  bindsym $mod+7 exec "$i3_resurrect restore -w 7 --layout-only"
+#  bindsym $mod+8 exec "$i3_resurrect restore -w 8 --layout-only"
+#  bindsym $mod+9 exec "$i3_resurrect restore -w 9 --layout-only"
+#  bindsym $mod+0 exec "$i3_resurrect restore -w 10 --layout-only"
+#
+#  # Back to normal: Enter, Escape, or n
+#  bindsym Return mode "default"
+#  bindsym Escape mode "default"
+#  bindsym n mode "default"
+#  bindsym $mod+n mode "default"
+#}
+#
+#bindsym $mod+n mode "restore"
