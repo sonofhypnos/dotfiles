@@ -22,6 +22,7 @@ alias v='nvim'
 alias pip2='python2 -m pip'
 alias printpagesd='lpr -o number-up=2 sides=two-sided-long-edge -P HaDiKo-EUFF'
 alias rars="$HOME/Dropbox/semester3/24502\ –\ Rechnerorganisation/Übungsmaterialien/Übung\ 2/rars_46ab74d.jar"
+alias mat='MATLAB_JAVA=/home/tassilo/.sdkman/candidates/java/8.0.282.fx-zulu/jre;matlab & disown'
 
 alias refresh='watch -n 1 cat'
 
@@ -31,7 +32,7 @@ alias mv='mv -i'
 alias ainstall='sudo apt-get update -y & sudo apt-get upgrade -y && sudo apt-get install'
 
 #directories and files
-#alias do='cd ~/.dotfiles' this line caused a tone of problems for me.
+#alias do='cd ~/.dotfiles' this line caused a tone of problems for me, because do is a keyword in bash of course
 alias regi3='$maineditor ~/.dotfiles/config/regolith/i3/config'
 alias aalias='$maineditor ~/.dotfiles/shell/aliases.sh'
 alias ozsh='cd ~/.dotfiles/zsh/oh-my-zsh'
@@ -46,19 +47,19 @@ alias hm2="xdg-open $unifiles2/Höhere\ Mathematik\ I\ \(Analysis\)\ für\ die\ 
 
 
 #navigate to ranger
-alias os="cd $osfiles; ranger"
-alias ro="cd $rofiles; ranger"
-alias rob="cd $robfiles; ranger"
-alias ws="cd $wsfiles; ranger"
-alias tgi="cd $tgifiles; ranger"
-alias cg="cd $cgfiles; ranger"
-alias rs="cd $unifiles; ranger"
-alias hm="cd $hmfiles; ranger"
-alias la="cd $lafiles; ranger"
-alias swt="cd $swtfiles; ranger"
-alias dgt="cd $dgtfiles; ranger"
-alias algo="cd $algofiles; ranger"
-alias ot="cd $HOME/repos/oTree/; ranger"
+alias os="cd $osfiles ; ranger"
+alias ro="cd $rofiles ; ranger"
+alias rob="cd $robfiles ; ranger"
+alias ws="cd $wsfiles ; ranger"
+alias tgi="cd $tgifiles ; ranger"
+alias cg="cd $cgfiles ; ranger"
+alias rs="cd $unifiles ; ranger"
+alias hm="cd $hmfiles ; ranger"
+alias la="cd $lafiles ; ranger"
+alias swt="cd $swtfiles ; ranger"
+alias dgt="cd $dgtfiles ; ranger"
+alias algo="cd $algofiles ; ranger"
+alias ot="cd $HOME/repos/oTree/ ; ranger"
 
 
 alias la1="xdg-open semester2/Lineare\ Algebra\ II\ für\ Mathematik/stuff/LA1.pdf && exit"
