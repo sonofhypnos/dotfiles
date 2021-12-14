@@ -6,10 +6,39 @@
 
 # Matches are the substitution rules, when you type the "trigger" string
 # it gets replaced by the "replace" string.
+#
+# # work with date ISO 8601 easy
+# 
+# alias isodate="date +%Y-%m-%dT%H:%M:%S%z"
+# alias isodate_utc="date -u +%Y-%m-%dT%H:%M:%SZ"
+# alias isodate_basic="date -u +%Y%m%dT%H%M%SZ"
+# alias unixstamp="date +%s"
+# alias date_locale="date +"%c""
 matches:
-  # Simple text replacement
-  - trigger: ":espanso"
-    form: "\n  - trigger: \"{{match}}\"\n    replace:"
+  - trigger: ":ip"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: shell
+        params:
+          cmd: "curl 'https://api.ipify.org'"
+  # local date
+  - trigger: ":ldate"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: shell
+        params:
+          cmd: "date"
+          debug: true
+  # Shell commands
+  - trigger: ":shell"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: shell
+        params:
+          cmd: "echo Hello from your shell"
   # Dates
   - trigger: ":date"
     replace: "{{mydate}}"
@@ -34,7 +63,17 @@ matches:
         type: date
         params:
           format: "%d"
-  # ISO-Date
+
+  # ISO-date
+  - trigger: ":isodate"
+    replace: "{{mydate}}"
+    vars:
+      - name: mydate
+        type: date
+        params:
+          format: "%Y-%m-%d %H:%M"
+
+  # ISO-time
   - trigger: ":time"
     replace: "{{mydate}}"
     vars:
@@ -50,8 +89,6 @@ matches:
         type: date
         params:
           format: "[%Y-%m-%d]"
-
-
   # latex
   - trigger: "\\pd "
     form: \frac{\partial {{num}}}{\partial {{denum}}}
@@ -60,14 +97,6 @@ matches:
   - trigger: ":x "
     replace: "$x$"
 
-  # Shell commands
-  - trigger: ":shell"
-    replace: "{{output}}"
-    vars:
-      - name: output
-        type: shell
-        params:
-          cmd: "echo Hello from your shell"
 
 
   - trigger: '@tw'
