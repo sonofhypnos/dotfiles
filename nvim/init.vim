@@ -17,6 +17,7 @@ Plug 'ciaranm/securemodelines'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'justinmk/vim-sneak'
 Plug 'tpope/vim-surround'
+Plug 'osyo-manga/vim-over'
 
 "stop swapfiles from annoying me
 Plug 'gioele/vim-autoswap'
