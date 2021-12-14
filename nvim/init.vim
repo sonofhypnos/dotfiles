@@ -310,3 +310,25 @@ execute "digraphs TS " . 0x1D40
 execute "digraphs US " . 0x1D41
 execute "digraphs VS " . 0x2C7D
 execute "digraphs WS " . 0x1D42
+
+
+
+
+
+"Use `ALT+{h,j,k,l}` to navigate windows from any mode:
+tnoremap <A-h> <C-\><C-N><C-w>h
+tnoremap <A-j> <C-\><C-N><C-w>j
+tnoremap <A-k> <C-\><C-N><C-w>k
+tnoremap <A-l> <C-\><C-N><C-w>l
+inoremap <A-h> <C-\><C-N><C-w>h
+inoremap <A-j> <C-\><C-N><C-w>j
+inoremap <A-k> <C-\><C-N><C-w>k
+inoremap <A-l> <C-\><C-N><C-w>l
+nnoremap <A-h> <C-w>h
+nnoremap <A-j> <C-w>j
+nnoremap <A-k> <C-w>k
+tnoremap ö <C-\><C-n>
+
+autocmd TermOpen * setlocal nonumber norelativenumber | startinsert!
+
+let $FZF_DEFAULT_OPTS .= ' --no-height'
