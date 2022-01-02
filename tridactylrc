@@ -25,19 +25,12 @@ blacklistadd calendar.google.com
 blacklistadd keyma.sh
 blacklistadd monkeytype.com
 
-"Everything that follows was copied from the example configuration at  https://github.com/tridactyl/tridactyl/blob/master/.tridactylrc
-
-
 "
 " Binds
 "
 
 " Comment toggler for Reddit, Hacker News and Lobste.rs
 bind ;c hint -Jc [class*="expand"],[class="togg"],[class="comment_folder"]
-
-" make d take you to the left
-bind d composite tabprev; tabclose #
-bind D tabclose
 
 "Use Firefox search
 unbind <C-f>
@@ -165,9 +158,9 @@ bind gD composite tabduplicate; tabdetach
 bind yy clipboard yankcanon
 bind ;C composite hint_focus; !s xdotool key Menu
 bind rr js javascript:location.href ='org-protocol://capture?template=L&url='+ encodeURIComponent(location.href) + '&title=' + encodeURIComponent(document.title) + '&body=' + encodeURIComponent(window.getSelection())
+" Unbind r in order for rr and rl to work
 unbind r
 # delete with x
-unbind d
 bind rl js javascript:location.href = 'org-protocol://roam-ref?template=r&ref=' + encodeURIComponent(location.href) + '&title=' + encodeURIComponent(document.title) + '&body=' + encodeURIComponent(window.getSelection())
 bind ;x hint -F e => { const pos = tri.dom.getAbsoluteCentre(e); tri.excmds.exclaim_quiet("xdotool mousemove --sync " + window.devicePixelRatio * pos.x + " " + window.devicePixelRatio * pos.y + "; xdotool click 1")}
 bind ;X hint -F e => { const pos = tri.dom.getAbsoluteCentre(e); tri.excmds.exclaim_quiet("xdotool mousemove --sync " + window.devicePixelRatio * pos.x + " " + window.devicePixelRatio * pos.y + "; xdotool keydown ctrl+shift; xdotool click 1; xdotool keyup ctrl+shift")}
