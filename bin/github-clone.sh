@@ -9,4 +9,4 @@
 #bash_version   :5.1.4(1)-release
 #============================================================================
 
-echo "$1" | sed 's/.*github.com\//git@github.com:/' | sed 's/$/.git/' | xargs git clone
+echo "$1" | sed 's/.*github.com\//git@github.com:/' | sed 's/$/.git/' | xargs git clone --recurse-submodules
