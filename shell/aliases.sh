@@ -68,3 +68,4 @@ alias update-alternatives='sudo update-alternatives'
 
 #miscelanous or recently added.
 alias vpn="sudo $HOME/vpnstuff"
+alias htop="sudo htop"

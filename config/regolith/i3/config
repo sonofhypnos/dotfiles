@@ -706,9 +706,10 @@ set $emacs emacsclient -c
 set $transGerman sh -c 'firefox "http://translate.google.com/#de/en/$(xclip -o)"'
 
 #Open main Applications
-exec emacs --daemon; emacsclient -c & flatpak run org.zotero.Zotero & rescuetime & flameshot & i3-wallpaper & ~/.local/opt/activitywatch/aw-qt
-#mutes microphone when typing
-exec hushboard 
+exec emacs --daemon; emacsclient -c & flatpak run org.zotero.Zotero & rescuetime & flameshot & i3-wallpaper & ~/.local/opt/activitywatch/aw-qt & ~/bin/sleepnag.sh
+
+#clipboard manager
+exec copyq
 
 
 #assign [class="^Chromium$"] 1
