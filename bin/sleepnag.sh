@@ -12,7 +12,7 @@
 reminder="You might think that you'll never do the task if you don't stay up to do it. If the task really is that important, you _will_ do it later; if the task isn't, then sleep is more important"
 nowcounter=0
 shutdownsoon(){
-    shutdown 10
+    shutdown 4
 }
 
 justifywhyawake(){
