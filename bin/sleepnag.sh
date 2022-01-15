@@ -11,11 +11,13 @@
 
 reminder="You might think that you'll never do the task if you don't stay up to do it. If the task really is that important, you _will_ do it later; if the task isn't, then sleep is more important"
 nowcounter=0
+justified=0
 shutdownsoon(){
     shutdown 4
 }
 
 justifywhyawake(){
+    justified=1
     capture.sh
     (( nowcounter+=1 ))
     if [[ $nowcounter -eq 10 ]]; then
@@ -27,10 +29,15 @@ justifywhyawake(){
 
 while :; do
     currenttime=$(date +%H:%M)
-    if [[ "$currenttime" > "23:00" ]] || [[ "$currenttime" < "06:30" ]]; then
+    if [[ "$currenttime" > "22:00" ]] || [[ "$currenttime" < "06:30" ]]; then
         rofi -e "$reminder";
         $(printf 'shutdownsoon\njustifywhyawake' | rofi -dmenu)
         #could do fancy stuff here, but I don't know how to do arrays in bash (eg dictionaries would be nice)
+	sleep 4
+	if [[ justified -eq 0 ]]; then
+		shutdownsoon
+	fi
+	justified=0
     else
     nowcounter=0
     fi
