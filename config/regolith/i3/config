@@ -706,7 +706,13 @@ set $emacs emacsclient -c
 set $transGerman sh -c 'firefox "http://translate.google.com/#de/en/$(xclip -o)"'
 
 #Open main Applications
-exec emacs --daemon; emacsclient -c & flatpak run org.zotero.Zotero & rescuetime & flameshot & i3-wallpaper & ~/.local/opt/activitywatch/aw-qt & ~/bin/sleepnag.sh
+exec emacs --daemon; emacsclient -c
+exec flatpak run org.zotero.Zotero
+exec rescuetime
+exec flameshot
+exec i3-wallpaper
+exec ~/.local/opt/activitywatch/aw-qt
+exec ~/bin/sleepnag.sh
 
 #clipboard manager
 exec copyq
@@ -779,7 +785,7 @@ set $kill [con_id="__focused__"] exec --no-startup-id kill -9 $(xdotool getwindo
 set $hardKill [con_id="__focused__"] exec --no-startup-id kill -9 -1 $(xdotool getwindowfocus getwindowpid)
 
 # Close all windows
-bindsym $mod+Shift+q [class=".*"] kill
+#bindsym $mod+Shift+q [class=".*"] kill
 
 #shortcuts
 bindsym Mod1+F4 $kill
