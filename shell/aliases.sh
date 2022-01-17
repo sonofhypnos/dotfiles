@@ -28,6 +28,7 @@ alias refresh='watch -n 1 cat'
 # Aliases to protect against overwriting
 alias cp='cp -i'
 alias mv='mv -i'
+alias rm='echo "use trash instead you moron!";rm'
 alias ainstall='sudo apt-get update -y & sudo apt-get upgrade -y && sudo apt-get install'
 
 #directories and files
