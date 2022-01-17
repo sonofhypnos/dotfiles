@@ -2,6 +2,10 @@ path_remove() {
     PATH=$(echo -n "$PATH" | awk -v RS=: -v ORS=: "\$0 != \"$1\"" | sed 's/:$//')
 }
 
+sudo_exports(){
+    eval sudo $(for x in $_EXPORTS; do printf '%q=%q ' "$x" "${!x}"; done;) "$@"
+}
+
 path_append() {
     path_remove "$1"
     PATH="${PATH:+"$PATH:"}$1"

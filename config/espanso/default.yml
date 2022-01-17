@@ -170,3 +170,7 @@ matches:
     replace: "length"
   - trigger: "compiel"
     replace: "compile"
+  - trigger: "tenosr"
+    replace: "tensor"
+  - trigger: ":HaT:"
+    replace: "Grüße\n\nTassilo F504"

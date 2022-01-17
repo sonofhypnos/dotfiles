@@ -12,10 +12,9 @@ maineditor='nvim'
 
 #convenience
 alias d='cd'
-alias ll='ls -alF'
-alias la='ls -A'
+alias ll='ls -alFh'
 alias l='ls -CF'
-alias e='emacsclient -c & disown'
+alias e='emacsclient -c'
 alias gll='git log --graph --pretty=oneline --abbrev-commit'
 alias bat='batcat'
 alias v='nvim'
@@ -33,7 +32,7 @@ alias ainstall='sudo apt-get update -y & sudo apt-get upgrade -y && sudo apt-get
 
 #directories and files
 #alias do='cd ~/.dotfiles' this line caused a tone of problems for me, because do is a keyword in bash of course
-alias regi3='$maineditor ~/.dotfiles/config/regolith/i3/config'
+alias regi3='e ~/.dotfiles/config/regolith/i3/config'
 alias aalias='$maineditor ~/.dotfiles/shell/aliases.sh'
 alias ozsh='cd ~/.dotfiles/zsh/oh-my-zsh'
 alias econfig='$maineditor ~/.doom.d/config.el'
@@ -52,7 +51,7 @@ alias ro="cd $rofiles ; ranger"
 alias rob="cd $robfiles ; ranger"
 alias ws="cd $wsfiles ; ranger"
 alias tgi="cd $tgifiles ; ranger"
-alias cg="cd $cgfiles ; ranger"
+alias cg1="cd $cgfiles ; ranger"
 alias rs="cd $unifiles ; ranger"
 alias hm="cd $hmfiles ; ranger"
 alias la="cd $lafiles ; ranger"
@@ -69,3 +68,4 @@ alias update-alternatives='sudo update-alternatives'
 #miscelanous or recently added.
 alias vpn="sudo $HOME/vpnstuff"
 alias htop="sudo htop"
+alias abox="archivebox"

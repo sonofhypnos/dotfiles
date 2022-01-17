@@ -133,3 +133,4 @@ unset __conda_setup
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+alias sudo='sudo '
