@@ -13,7 +13,7 @@ else
 fi
 
 # Change default shell
-if [! $0 = "-zsh"]; then
+if [[ ! $0 = "-zsh" ]]; then
   echo 'Changing default shell to zsh'
   chsh -s /bin/zsh
 else
