@@ -711,7 +711,6 @@ exec flatpak run org.zotero.Zotero
 exec rescuetime
 exec flameshot
 exec i3-wallpaper
-exec ~/.local/opt/activitywatch/aw-qt
 exec ~/bin/sleepnag.sh
 
 #clipboard manager
