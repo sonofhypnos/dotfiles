@@ -9,7 +9,7 @@ export ZSH=$HOME/.oh-my-zsh
 # For more info see https://github.com/junegunn/fzf/issues/809
 [ -n "$NVIM_LISTEN_ADDRESS" ] && export FZF_DEFAULT_OPTS='--no-height'
 
-if [[ -z $VIM ]]; then
+if [[ -z $VIM ]] && [[ -z $INSIDE_EMACS ]]; then
 	INSIDE_VIM=1
 	nvim -c "terminal"
 fi
@@ -72,8 +72,7 @@ source $ZSH/oh-my-zsh.sh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
 
-export EDITOR=nvim
-export VISUAL=nvim
+export EDITOR=nvim export VISUAL=nvim
 
 # Functions
 source ~/.shell/functions.sh
