@@ -877,3 +877,17 @@ mode "$r_mode" {
 #}
 #
 #bindsym $mod+n mode "restore"
+
+
+no_focus [class="zathura"]
+
+focus_on_window_activation urgent
+
+
+#toggle fullscreen for multiple monitors
+bindsym $mod+Control+f exec $doublePortOnly;  fullscreen toggle global
+
+
+
+#keybinds!
+bindsym $alt+c exec journal.sh
