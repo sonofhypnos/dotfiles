@@ -23,6 +23,8 @@
     ~/.tmux.conf:
     ~/.alacritty.yml:
     ~/.tridactylrc:
+    ~/.ghc/:
+            path: ghc/*
     ~/bin:
     ~/.oh-my-zsh:
     ~/.config/:
