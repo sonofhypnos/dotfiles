@@ -1,3 +1,4 @@
+" tell vim it's not vi
 set nocompatible
 
 " =============================================================================
@@ -9,7 +10,8 @@ call plug#begin('~/.local/share/nvim/plugged')
 
 " Load Plugins
 " autocompletion
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+" Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'Shougo/ddc.vim' "Using this instead of deoplete, because mentioned as successor
 " Plug 'davidhalter/jedi-vim'
 "
 " VIM enhancements
@@ -53,7 +55,7 @@ Plug 'lambdalisue/suda.vim'
 
 " timetracking
 Plug 'wakatime/vim-wakatime'
-Plug 'ActivityWatch/aw-watcher-vim'
+" Plug 'ActivityWatch/aw-watcher-vim'
 
 
 " Python documentation [I can't get it to work]
@@ -246,6 +248,11 @@ cnoremap Ö <C-C>
 " Remap in Command-line mode
 onoremap Ö <esc>
 " Remap in Operator pending mode
+
+" not sure this works in neovim:
+syntax enable
+filetype plugin on
+
 
 "super/subScript
 execute "digraphs as " . 0x2090
