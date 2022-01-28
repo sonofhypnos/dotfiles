@@ -24,6 +24,7 @@
     ~/.alacritty.yml:
     ~/.tridactylrc:
     ~/.ghc/:
+            glob: true
             path: ghc/*
     ~/bin:
     ~/.oh-my-zsh:
