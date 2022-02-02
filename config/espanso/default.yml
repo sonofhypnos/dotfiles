@@ -174,3 +174,5 @@ matches:
     replace: "tensor"
   - trigger: ":HaT:"
     replace: "Grüße\n\nTassilo F504"
+  - trigger: ":lw"
+    replace: "https://lesswrong.com"
