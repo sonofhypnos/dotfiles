@@ -9,5 +9,5 @@
 #bash_version   :5.1.4(1)-release
 #============================================================================
 
-cd "$HOME/org-roam/" || echo 'Error! Org-roam directory does not exist.'
-git push origin
+cd "$HOME/org-roam/" || logger -p user.warn 'Org-roam directory does not exist.'
+git push origin || logger -p user.warn 'Was not able to push notes to Dropbox'
