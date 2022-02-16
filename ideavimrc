@@ -8,6 +8,8 @@ set surround
 " the following was recommended for ideavim
 set ideajoin
 
+set number
+
 "search
 set incsearch
 set ignorecase smartcase
@@ -106,6 +108,13 @@ snoremap Ö <esc>
 cnoremap Ö <C-C>
 " Remap in Command-line mode
 onoremap Ö <esc>
+" Remap in Operator pending mode
+
+inoremap jk <esc>
+" Remap in Insert and Replace mode
+xnoremap jk <esc>
+" Remap in Command-line mode
+onoremap jk <esc>
 " Remap in Operator pending mode
 
 " disable audible bell
