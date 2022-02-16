@@ -12,7 +12,7 @@
 sudo mount /media/tassilo/backup
 # Setting this, so the repo does not need to be given on the commandline:
 #
-export BORG_REPO='/media/tassilo/backup/8e97e9d3-ec0b-4426-8627-8f994e2f94c2/borgE15/'
+export BORG_REPO='/media/tassilo/backup/borgE15/'
 
 # See the section "Passphrase notes" for more infos.
 #export BORG_PASSPHRASE='XYZl0ngandsecurepa_55_phrasea&&123'
