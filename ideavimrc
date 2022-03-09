@@ -8,8 +8,6 @@ set surround
 " the following was recommended for ideavim
 set ideajoin
 
-set number
-
 "search
 set incsearch
 set ignorecase smartcase
