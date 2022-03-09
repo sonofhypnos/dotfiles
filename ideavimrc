@@ -114,8 +114,6 @@ inoremap jk <esc>
 " Remap in Insert and Replace mode
 xnoremap jk <esc>
 " Remap in Command-line mode
-onoremap jk <esc>
-" Remap in Operator pending mode
 
 " disable audible bell
 set noerrorbells visualbell t_vb=
