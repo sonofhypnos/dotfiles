@@ -1,13 +1,14 @@
 unifiles2="$HOME/Dropbox/semester2"
 unifiles="$HOME/Dropbox/semester3"
-lafiles="$unifiles/Lineare\ Algebra\ \ II\ für\ Mathematik/"
+lafiles="$unifiles2/Lineare\ Algebra\ \ II\ für\ Mathematik/"
 osfiles="$unifiles/Betriebssysteme\ WS\ 21-22/"
 robfiles="$unifiles/Robotik\ I\ -\ Einführung\ in\ die\ Robotik/"
 tgifiles="$unifiles/Theoretische\ Grundlagen\ der\ Informatik/"
 cgfiles="$unifiles/Computergrafik\ WS\ 21-22/"
 rofiles="$unifiles/24502\ –\ Rechnerorganisation/"
 wsfiles="$unifiles/Grundlagen\ der\ Wahrscheinlichkeitstheorie\ und\ Statistik\ für\ Studierende\ der\ Informatik/"
-dgtfiles="$unifiles/24007\ –\ Digitaltechnik\ und\ Entwurfsverfahren/"
+dgtfiles="$unifiles2/24007\ –\ Digitaltechnik\ und\ Entwurfsverfahren/"
+progfiles="$unifiles/24004\ –\ Programmieren/"
 maineditor='nvim'
 
 #convenience
@@ -48,6 +49,7 @@ alias hm2="xdg-open $unifiles2/Höhere\ Mathematik\ I\ \(Analysis\)\ für\ die\ 
 
 #navigate to ranger
 alias os="cd $osfiles ; ranger"
+alias prog="cd $progfiles ; ranger"
 alias ro="cd $rofiles ; ranger"
 alias rob="cd $robfiles ; ranger"
 alias ws="cd $wsfiles ; ranger"
