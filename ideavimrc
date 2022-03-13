@@ -27,28 +27,28 @@ set backspace=indent,eol,start
 " Do this in normal mode...
 nnoremap <ESC>:echoe "Use oe"<CR>
 
-"some useful hotkeys for idea functionality
-nnoremap <Space>e <Action>(ShowErrorDescription)
-nnoremap <Space>q <Action>(QuickImplementations)
-nnoremap <Space>d <Action>(QuickJavaDoc)
-
-" easy system clipboard copy/paster
-noremap <Space>y "*y
-noremap <Space>yy "*Y
-noremap <Space>p "*p
-noremap <Space>P "*P
-
-noremap <Space>d :action CloseContent<CR>
-nnoremap <Space>f :action FileStructurePopup<CR>
-nnoremap <Space>a :action GotoAction<CR>
-nnoremap <Space>h :action RecentFiles<CR>
-nnoremap <Space>j :action GotoClass<CR>
-nnoremap <Space>k :action GotoSymbol<CR>
-nnoremap <Space>l :action GotoFile<CR>
-nnoremap <Space>h :action RecentFiles<CR>
-nnoremap <Space>rr :action RenameElement<CR>
-nnoremap <Space>g  :action Generate<CR>
-nnoremap <Space>gs :action GenerateGetterAndSetter<CR>
+""some useful hotkeys for idea functionality
+"nnoremap <Space>e <Action>(ShowErrorDescription)
+"nnoremap <Space>q <Action>(QuickImplementations)
+"nnoremap <Space>d <Action>(QuickJavaDoc)
+"
+"" easy system clipboard copy/paster
+"noremap <Space>y "*y
+"noremap <Space>yy "*Y
+"noremap <Space>p "*p
+"noremap <Space>P "*P
+"
+"noremap <Space>d :action CloseContent<CR>
+"nnoremap <Space>f :action FileStructurePopup<CR>
+"nnoremap <Space>a :action GotoAction<CR>
+"nnoremap <Space>h :action RecentFiles<CR>
+"nnoremap <Space>j :action GotoClass<CR>
+"nnoremap <Space>k :action GotoSymbol<CR>
+"nnoremap <Space>l :action GotoFile<CR>
+"nnoremap <Space>h :action RecentFiles<CR>
+"nnoremap <Space>rr :action RenameElement<CR>
+"nnoremap <Space>g  :action Generate<CR>
+"nnoremap <Space>gs :action GenerateGetterAndSetter<CR>
 
 nnoremap mM :action ToggleBookmark0<CR>
 nnoremap mN :action ToggleBookmark1<CR>
@@ -117,6 +117,9 @@ xnoremap jk <esc>
 set noerrorbells visualbell t_vb=
 
 "getting the integrations from my nvimrc file: once I have one.
+
+:nnoremap <Space> :action LeaderAction<cr>
+
 
 
 
