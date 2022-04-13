@@ -452,6 +452,12 @@ autocmd DocStart getguestimate.com mode ignore
 autocmd DocStart localhost:8888 mode ignore
 autocmd DocLoad ^https://github.com/tridactyl/tridactyl/issues/new$ issue
 autocmd TriStart .* source_quiet
+" autocmd BeforeRequest https://www.lesswrong.com/* () => ({redirectUrl: "https://upload.wikimedia.org/wikipedia/commons/f/f4/3_Triangles_KKK.svg"})
+"below command is for opening readingList when opening lesswrong (closing the tab does not work yet.)
+autocmd BeforeRequest https://www.lesswrong.com/* js (tri.excmds.exclaim_quiet("emacsclient -ce '(find-file \"~/org-roam/someday_maybe.org\")'"); tri.excmds.tabclose();) 
+
+
 
 " For syntax highlighting see https://github.com/tridactyl/vim-tridactyl
 " vim: set filetype=tridactyl
+
