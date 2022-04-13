@@ -9,11 +9,21 @@
 #bash_version   :5.1.4(1)-release
 #============================================================================
 
+synch_archive () {
+	logger "run function synch_archive"
+	archivedir="$HOME/archivebox"
+	cd "$archivedir" || logger -p usr.error "Archiveboxes directory has changed or does not exist anymore."
+	archivebox update
+	logger "updated archivebox"
+	for dir in ~/.mozilla/firefox/*;do
+	    memacs_firefox -f "$dir/places.sqlite" | grep :URL: | sed -E 's/.*:URL:\s*//' | xargs archivebox add
+	done
+	archivebox update
+}
+
 synch_org-roam.sh
-archivedir="$HOME/archivebox"
-cd "$archivedir" || logger -p usr.error "Archiveboxes directory has changed or does not exist anymore."
-for dir in ~/.mozilla/firefox/*;do
-    memacs_firefox -f "$dir/places.sqlite" | grep :URL: | sed -E 's/.*:URL:\s*//' | xargs archivebox add
-done
-archivebox update
-sudo ~/.dotfiles/bin/backup_data
+sudo "$HOME/.dotfiles/bin/backup_data.sh"
+
+
+logger "$0 ran successfully" & synch_archive
+

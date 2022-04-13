@@ -11,3 +11,4 @@
 
 cd "$HOME/org-roam/" || logger -p user.warn 'Org-roam directory does not exist.'
 git push origin || logger -p user.warn 'Was not able to push notes to Dropbox'
+logger 'synch_org-roam ran successfully'

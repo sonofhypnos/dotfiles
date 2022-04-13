@@ -68,10 +68,14 @@ global_exit=$(( backup_exit > prune_exit ? backup_exit : prune_exit ))
 
 if [ ${global_exit} -eq 0 ]; then
     info "Backup and Prune finished successfully"
+    logger "Backup and Prune finished successfully"
+
 elif [ ${global_exit} -eq 1 ]; then
     info "Backup and/or Prune finished with warnings"
+    logger -p user.warn "Backup and/or Prune finished with warnings"
 else
     info "Backup and/or Prune finished with errors"
+    logger -p user.error "Backup and/or Prune finished with errors"
 fi
 
 exit ${global_exit}

@@ -10,6 +10,13 @@
 #============================================================================
 inside_git_repo="$(git rev-parse --is-inside-work-tree 2>/dev/null)" #https://stackoverflow.com/questions/2180270/check-if-current-directory-is-a-git-repository
 
+#repos="$HOME/repos/"
+
+#echo "Going into $repos directory"
+#if [ 
+#cd "$repos" || echo "$repos directory does not exist. github-clone aborting"
+#TODO check if in repos directory and whether to continue
+
 if [ "$inside_git_repo" ]; then #checks if inside git repository: 
 	read -p "You are inside a git repository. Github-clone will create a new submodule for you. Are you sure you want to continue?" -n 1 -r
 	echo    # (optional) move to a new line

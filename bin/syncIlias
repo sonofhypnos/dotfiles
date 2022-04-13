@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #This script starts the Ilias downloader
-#Should be put in /etc/cron.hourly
+#Should be put in /etc/cron.hourly (or run from there?)
 theEnd="$(~/Installations/KIT-ILIAS-downloader -tnv -o ~/Dropbox/semester3 --sync-url \
     'https://ilias.studium.kit.edu/goto.php\?target\=crs_1253112\&client_id\=produktiv' | tail -n 1 | awk '{print $1}')"
 if [[ $theEnd -eq 'Logged' ]]; then
