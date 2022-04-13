@@ -21,6 +21,9 @@ Plug 'justinmk/vim-sneak'
 Plug 'tpope/vim-surround'
 Plug 'osyo-manga/vim-over'
 
+" copilot
+Plug 'github/copilot.vim'
+
 "stop swapfiles from annoying me
 Plug 'gioele/vim-autoswap'
 
