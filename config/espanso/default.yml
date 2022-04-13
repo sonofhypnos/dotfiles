@@ -176,3 +176,9 @@ matches:
     replace: "Grüße\n\nTassilo F504"
   - trigger: ":lw"
     replace: "https://lesswrong.com"
+  - trigger: ":vgt"
+    replace: "Viele Grüße
+
+Tassilo"
+  - trigger: "@ra"
+    replace: "rabea.neubauer@outlook.de"
