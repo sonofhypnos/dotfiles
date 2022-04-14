@@ -1,1 +1,9 @@
-xterm*font:     *-fixed-*-*-*-30-*
+! #########################################
+XTerm*font: xft:meslolgsdz:size=11
+
+XTerm*renderFont: true
+
+XTerm*background: black
+XTerm*foreground: white
+
+
