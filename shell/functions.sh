@@ -42,3 +42,4 @@ apt_history(){
 }
 
 
+totals() { awk 'FNR==NR{s+=$1;next;} {print $1/s}' "$1" "$1"; }
