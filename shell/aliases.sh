@@ -1,5 +1,6 @@
 unifiles2="$HOME/Dropbox/semester2"
-unifiles="$HOME/Dropbox/semester3"
+#unifiles="$HOME/Dropbox/semester3"
+unifiles="$HOME/Dropbox/semester4"
 lafiles="$unifiles2/Lineare\ Algebra\ \ II\ für\ Mathematik/"
 osfiles="$unifiles/Betriebssysteme\ WS\ 21-22/"
 robfiles="$unifiles/Robotik\ I\ -\ Einführung\ in\ die\ Robotik/"
@@ -9,6 +10,18 @@ rofiles="$unifiles/24502\ –\ Rechnerorganisation/"
 wsfiles="$unifiles/Grundlagen\ der\ Wahrscheinlichkeitstheorie\ und\ Statistik\ für\ Studierende\ der\ Informatik/"
 dgtfiles="$unifiles2/24007\ –\ Digitaltechnik\ und\ Entwurfsverfahren/"
 progfiles="$unifiles/24004\ –\ Programmieren/"
+
+dsfiles="$unifiles/24516\ –\ Datenbanksysteme"
+ksfiles="$unifiles/24572\ –\ Kognitive\ Systeme"
+icfiles="$unifiles/24872\ –\ Basispraktikum\ zum\ ICPC\ Programmierwettbewerb\ -\ SS\ 2022"
+mphfiles="$unifiles/4040451\ –\ Moderne\ Physik\ für\ Informatiker"
+phfiles="$unifiles/Physik\ I\ für\ Informatiker\ \(SS\ 22\)"
+nmffiles="$unifiles/Numerische\ Mathematik\ \ für\ die\ Fachrichtungen\ Informatik\ und\ Ingenieurwesen\ \(SS22\)"
+rnfiles="$unifiles/Einführung\ in\ Rechnernetze"
+
+
+
+
 maineditor='nvim'
 
 #convenience
@@ -62,6 +75,13 @@ alias swt="cd $swtfiles ; ranger"
 alias dgt="cd $dgtfiles ; ranger"
 alias algo="cd $algofiles ; ranger"
 alias ot="cd $HOME/repos/oTree/ ; ranger"
+alias ds="cd $dsfiles  ; ranger"
+alias ks="cd $ksfiles  ; ranger"
+alias ic="cd $icfiles  ; ranger"
+alias mph="cd $mphfiles ; ranger"
+alias ph="cd $phfiles  ; ranger"
+alias nmf="cd $nmffiles ; ranger"
+alias rn="cd $rnfiles  ; ranger"
 
 
 alias la1="xdg-open semester2/Lineare\ Algebra\ II\ für\ Mathematik/stuff/LA1.pdf && exit"
