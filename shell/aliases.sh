@@ -47,7 +47,7 @@ alias ainstall='sudo apt-get update -y & sudo apt-get upgrade -y && sudo apt-get
 
 #directories and files
 #alias do='cd ~/.dotfiles' this line caused a tone of problems for me, because do is a keyword in bash of course
-alias regi3='e ~/.dotfiles/config/regolith/i3/config'
+alias regi3='v ~/.dotfiles/config/regolith/i3/config'
 alias aalias='$maineditor ~/.dotfiles/shell/aliases.sh'
 alias ozsh='cd ~/.dotfiles/zsh/oh-my-zsh'
 alias econfig='$maineditor ~/.doom.d/config.el'
