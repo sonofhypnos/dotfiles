@@ -11,6 +11,7 @@
 - link:
     ~/.profile: 
     ~/.bashrc: 
+    ~/.atamanrc.config:
     ~/.bash_logout: 
     ~/.gitconfig: 
     ~/.ideavimrc:
