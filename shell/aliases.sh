@@ -82,6 +82,7 @@ alias mph="cd $mphfiles ; ranger"
 alias ph="cd $phfiles  ; ranger"
 alias nmf="cd $nmffiles ; ranger"
 alias rn="cd $rnfiles  ; ranger"
+alias txt="cd ~/Dropbox/textbooks/ ; ranger"
 
 
 alias la1="xdg-open semester2/Lineare\ Algebra\ II\ für\ Mathematik/stuff/LA1.pdf && exit"

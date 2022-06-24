@@ -133,3 +133,25 @@ unset __conda_setup
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 alias sudo='sudo '
+
+#add pyenv:
+#
+
+export PYENV_ROOT="$HOME/.pyenv"
+command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+
+#for prioritylists in lsp-mode (for better performance)
+export LSP_USE_PLISTS=true
+
+export PATH=/home/tassilo/repos/axii/bin:$PATH
+
+source /home/tassilo/repos/axiicode/armarx-workspace.rc
+
+if [ -f /home/tassilo/repos/axii/armarx_setup/cli/config_files/armarx-setup-complete.zsh ]; then
+  source /home/tassilo/repos/axii/armarx_setup/cli/config_files/armarx-setup-complete.zsh
+fi
+
+
+
+[ -f "/home/tassilo/.ghcup/env" ] && source "/home/tassilo/.ghcup/env" # ghcup-env

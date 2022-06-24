@@ -174,3 +174,17 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
+export PATH=/home/tassilo/repos/axii/bin:$PATH
+
+export PATH=/home/tassilo/repos/axii/bin:$PATH
+
+export PATH=/home/tassilo/repos/axii/bin:$PATH
+
+
+source /home/tassilo/repos/axiicode/armarx-workspace.rc
+
+
+source /home/tassilo/repos/axiicode/workspace/armarx-workspace.rc
+
+export PATH=/home/tassilo/repos/axii2/bin:$PATH
+
