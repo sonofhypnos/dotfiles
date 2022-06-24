@@ -35,6 +35,9 @@
     ~/.shell:
             glob: true
             path: shell/*
+    ~/.intellimacs:
+            glob: true
+            path: intellimacs/*
     ~/.i3status.conf:
     ~/.xsession:
     ~/.doom.d:
