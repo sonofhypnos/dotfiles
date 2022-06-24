@@ -29,10 +29,7 @@ synch_archive () {
 	# archivebox update | grep Adding
 }
 
-synch_archive || logger "$0: Archiving URLs not successful"
 synch_org-roam.sh || logger "$0: Archiving org-roam-notes not successfull"
 sudo "$HOME/.dotfiles/bin/backup_data.sh"
 
-
-logger "$0 ran successfully" & synch_archive
-
+synch_archive || logger "$0: Archiving URLs not successful"
