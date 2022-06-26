@@ -3,7 +3,8 @@
 " activating IntelliJ plugins to extend ideaVim
 set sneak
 " I've never managed to get vim-which-key working. Always throws errors
-" set vim-which-key 
+set vim-which-key
+
 set surround
 " the following was recommended for ideavim
 set ideajoin
