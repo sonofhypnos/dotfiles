@@ -31,12 +31,14 @@ DISABLE_MAGIC_FUNCTIONS="true"
 # the reason why my uni-scratchpad hack is not working consistently is related to the auto-title feature
 
 # Uncomment the following line to enable command auto-correction.
-#ENABLE_CORRECTION="true" #trying this out for now
+#ENABLE_CORRECTION="true"
 
 # Uncomment the following line if you want to disable marking untracked files
 # under VCS as dirty. This makes repository status check for large repositories
 # much, much faster.
 # DISABLE_UNTRACKED_FILES_DIRTY="true"
+
+AUTO_PUSHD="true" #enables directories being pushed on a stack. To go back directories run popd
 
 # Uncomment the following line if you want to change the command execution time
 # stamp shown in the history command output.
