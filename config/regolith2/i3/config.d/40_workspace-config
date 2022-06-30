@@ -167,9 +167,9 @@ bindsym $mod+$i3-wm.binding.take_right move workspace to output right
 set_from_resource $i3-wm.binding.split_v i3-wm.binding.split_v v
 bindsym $mod+$i3-wm.binding.split_v split vertical
 
-## Modify // Horizontal Window Orientation // <> h ##
-set_from_resource $i3-wm.binding.split_h i3-wm.binding.split_h h
-bindsym $mod+$i3-wm.binding.split_h split horizontal
+### Modify // Horizontal Window Orientation // <> h ##
+#set_from_resource $i3-wm.binding.split_h i3-wm.binding.split_h h
+#bindsym $mod+$i3-wm.binding.split_h split horizontal
 
 ## Modify // Window Fullscreen Toggle // <> f ##
 set_from_resource $i3-wm.binding.fullscreen_toggle i3-wm.binding.fullscreen_toggle f
@@ -213,9 +213,9 @@ bindsym $mod+Shift+Ctrl+$ws7_key move container to workspace number $ws17
 bindsym $mod+Shift+Ctrl+$ws8_key move container to workspace number $ws18
 bindsym $mod+Shift+Ctrl+$ws9_key move container to workspace number $ws19
 
-## Modify // Move Window to Next Free Workspace // <><Shift> ` ##
-set_from_resource $i3-wm.binding.move_next_free i3-wm.binding.move_next_free Shift+grave
-bindsym $mod+$i3-wm.binding.move_next_free exec --no-startup-id /usr/bin/i3-next-workspace --move-window
+### Modify // Move Window to Next Free Workspace // <><Shift> ` ##
+#set_from_resource $i3-wm.binding.move_next_free i3-wm.binding.move_next_free Shift+grave
+#bindsym $mod+$i3-wm.binding.move_next_free exec --no-startup-id /usr/bin/i3-next-workspace --move-window
 
 # move focused container to workspace, move to workspace
 ## Modify // Carry Window to Workspace 1 - 10// <><Alt> 0..9 ##
@@ -240,9 +240,9 @@ bindsym $mod+$alt+Ctrl+$ws7_key move container to workspace number $ws17; worksp
 bindsym $mod+$alt+Ctrl+$ws8_key move container to workspace number $ws18; workspace number $ws18
 bindsym $mod+$alt+Ctrl+$ws9_key move container to workspace number $ws19; workspace number $ws19
 
-## Modify // Carry Window to Next Free Workspace // <><Alt> ` ##
-set_from_resource $i3-wm.binding.take_next_free i3-wm.binding.take_next_free Mod1+grave
-bindsym $mod+$i3-wm.binding.take_next_free exec --no-startup-id /usr/bin/i3-next-workspace --move-window-and-follow
+### Modify // Carry Window to Next Free Workspace // <><Alt> ` ##
+#set_from_resource $i3-wm.binding.take_next_free i3-wm.binding.take_next_free Mod1+grave
+#bindsym $mod+$i3-wm.binding.take_next_free exec --no-startup-id /usr/bin/i3-next-workspace --move-window-and-follow
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -258,184 +258,184 @@ hide_edge_borders $i3-wm.hide.edge.borders
 # Custom configuration
 # =========================================================================
 
-#set $wallpaper i3-wallpaper
+set $wallpaper i3-wallpaper
+
+#Screen-layout
+set $mainDeskLayout ~/.screenlayout/mainDeskLayout.sh
+set $laptopOnlyLayout ~/.screenlayout/laptopOnly.sh
+set $prog ~/.screenlayout/prog.sh
+set $doublePort ~/.screenlayout/doublePort.sh
+set $frontLaptop ~/.screenlayout/frontLaptop.sh
+set $tripleLand ~/.screenlayout/tripleLand.sh
+set $doublePortOnly ~/.screenlayout/doublePortOnly.sh
+
+#LayoutMode
+set $layout_mode Layout Mode: [p]rog [m]ain [l]aptopOnly [d]oublePortrait [o]nlyDoublePortrait [f]rontLaptop [t]rippleLand
+bindsym Control+$mod+$alt+L mode "$layout_mode"
+
+mode "$layout_mode" {
+	bindsym --release p mode "default" exec $prog
+	bindsym --release m mode "default" exec $mainDeskLayout
+	bindsym --release l mode "default" exec $laptopOnlyLayout
+	bindsym --release d mode "default" exec $doublePort
+	bindsym --release f mode "default" exec $frontLaptop
+	bindsym --release t mode "default" exec $tripleLand
+	bindsym --release o mode "default" exec $doublePortOnly
+
+
+	bindsym Escape mode "default"
+	bindsym Return mode "default"
+}
+
+#Launch Gnome:
+# Restore GNOME's settings
+exec --no-startup-id /usr/libexec/gnome-settings-daemon-localeexec
+
+# Fix a bug in gnome-settings-daemon: http://feeding.cloud.geek.nz/posts/creating-a-modern-tiling-desktop-environment-using-i3/
+exec --no-startup-id dconf write /org/gnome/settings-daemon/plugins/cursor/active false
+
+#Assign variables for special Applications
+set $todoist google-chrome --app=https://todoist.com  
+set $whatsapp google-chrome --app=https://web.whatsapp.com 
+set $gmail google-chrome --app=https://mail.google.com 
+set $keep google-chrome --app=https://keep.google.com 
+set $calendar google-chrome --app=https://calendar.google.com 
+set $focusmate google-chrome --app=https://focusmate.com/dashboard
+set $polar google-chrome --app=https://app.getpolarized.io/
+set $sitzplatz google-chrome --app=https://raumbuchung.bibliothek.kit.edu/sitzplatzreservierung/day.php?year=2021&month=7&day=1&area=20&room=140
+set $teams google-chrome --app=https://teams.microsoft.com
+set $discord discord 
+set $telegram telegram 
+set $signal signal 
+set $intellij intellij-idea-ultimate
+set $emacs emacsclient -c
+set $transGerman sh -c 'firefox "http://translate.google.com/#de/en/$(xclip -o)"'
+
+#Open main Applications
+exec emacs --daemon; emacsclient -c
+exec flatpak run org.zotero.Zotero
+exec rescuetime
+exec flameshot
+exec i3-wallpaper
+exec ~/bin/sleepnag.sh
+
+#clipboard manager
+exec copyq
+
+
+#assign [class="^Chromium$"] 1
+
+#Send Battery warning
+exec --no-startup-id ./i3-battery-popup/i3-battery-popup
+
+#Launcher for Main Applications
+set $main_launcher Main Launcher: main [t]odoist [f]ocusmate [w]hatsapp [g]mail [k]eep [c]alendar [d]iscord [i]ntelliJ [a]nki [r]eminder
+bindsym Control+$mod+$alt+o mode "$main_launcher"
+
+mode "$main_launcher" {
+	bindsym f mode "default" exec $focusmate
+	bindsym t mode "default" exec $todoist
+	bindsym w mode "default" exec $whatsapp 
+	bindsym g mode "default" exec $gmail
+	bindsym k mode "default" exec $keep
+	bindsym c mode "default" exec $calendar
+	bindsym d mode "default" exec discord
+	bindsym 3 mode "default" exec $firefox https://i3wm.org/docs/userguide.html
+	bindsym i mode "default" exec $intellij
+	bindsym p mode "default" exec $polar
+	bindsym a mode "default" exec anki
+	bindsym m mode "default" exec $teams
+	bindsym r mode "default" exec firefox https://web.colreminder.com/en-US/addReminder
+	bindsym Escape mode "default"
+	bindsym Return mode "default"
+	bindsym s mode "default" exec $sitzplatz
+}
+
+#other Shortcuts
+bindsym $mod+Shift+Escape exec gnome-system-monitor
+bindsym $mod+d exec $transGerman
+bindsym $mod+$alt+Control+q exec emacsclient -t
+
+#Todo: make shortcut for editing this file
 #
-##Screen-layout
-#set $mainDeskLayout ~/.screenlayout/mainDeskLayout.sh
-#set $laptopOnlyLayout ~/.screenlayout/laptopOnly.sh
-#set $prog ~/.screenlayout/prog.sh
-#set $doublePort ~/.screenlayout/doublePort.sh
-#set $frontLaptop ~/.screenlayout/frontLaptop.sh
-#set $tripleLand ~/.screenlayout/tripleLand.sh
-#set $doublePortOnly ~/.screenlayout/doublePortOnly.sh
-#
-##LayoutMode
-#set $layout_mode Layout Mode: [p]rog [m]ain [l]aptopOnly [d]oublePortrait [o]nlyDoublePortrait [f]rontLaptop [t]rippleLand
-#bindsym Control+$mod+$alt+L mode "$layout_mode"
-#
-#mode "$layout_mode" {
-#	bindsym --release p mode "default" exec $prog
-#	bindsym --release m mode "default" exec $mainDeskLayout
-#	bindsym --release l mode "default" exec $laptopOnlyLayout
-#	bindsym --release d mode "default" exec $doublePort
-#	bindsym --release f mode "default" exec $frontLaptop
-#	bindsym --release t mode "default" exec $tripleLand
-#	bindsym --release o mode "default" exec $doublePortOnly
-#
-#
-#	bindsym Escape mode "default"
-#	bindsym Return mode "default"
-#}
-#
-##Launch Gnome:
-## Restore GNOME's settings
-#exec --no-startup-id /usr/libexec/gnome-settings-daemon-localeexec
-#
-## Fix a bug in gnome-settings-daemon: http://feeding.cloud.geek.nz/posts/creating-a-modern-tiling-desktop-environment-using-i3/
-#exec --no-startup-id dconf write /org/gnome/settings-daemon/plugins/cursor/active false
-#
-##Assign variables for special Applications
-#set $todoist google-chrome --app=https://todoist.com  
-#set $whatsapp google-chrome --app=https://web.whatsapp.com 
-#set $gmail google-chrome --app=https://mail.google.com 
-#set $keep google-chrome --app=https://keep.google.com 
-#set $calendar google-chrome --app=https://calendar.google.com 
-#set $focusmate google-chrome --app=https://focusmate.com/dashboard
-#set $polar google-chrome --app=https://app.getpolarized.io/
-#set $sitzplatz google-chrome --app=https://raumbuchung.bibliothek.kit.edu/sitzplatzreservierung/day.php?year=2021&month=7&day=1&area=20&room=140
-#set $teams google-chrome --app=https://teams.microsoft.com
-#set $discord discord 
-#set $telegram telegram 
-#set $signal signal 
-#set $intellij intellij-idea-ultimate
-#set $emacs emacsclient -c
-#set $transGerman sh -c 'firefox "http://translate.google.com/#de/en/$(xclip -o)"'
-#
-##Open main Applications
-#exec emacs --daemon; emacsclient -c
-#exec flatpak run org.zotero.Zotero
-#exec rescuetime
-#exec flameshot
-#exec i3-wallpaper
-#exec ~/bin/sleepnag.sh
-#
-##clipboard manager
-#exec copyq
-#
-#
-##assign [class="^Chromium$"] 1
-#
-##Send Battery warning
-#exec --no-startup-id ./i3-battery-popup/i3-battery-popup
-#
-##Launcher for Main Applications
-#set $main_launcher Main Launcher: main [t]odoist [f]ocusmate [w]hatsapp [g]mail [k]eep [c]alendar [d]iscord [i]ntelliJ [a]nki [r]eminder
-#bindsym Control+$mod+$alt+o mode "$main_launcher"
-#
-#mode "$main_launcher" {
-#	bindsym f mode "default" exec $focusmate
-#	bindsym t mode "default" exec $todoist
-#	bindsym w mode "default" exec $whatsapp 
-#	bindsym g mode "default" exec $gmail
-#	bindsym k mode "default" exec $keep
-#	bindsym c mode "default" exec $calendar
-#	bindsym d mode "default" exec discord
-#	bindsym 3 mode "default" exec $firefox https://i3wm.org/docs/userguide.html
-#	bindsym i mode "default" exec $intellij
-#	bindsym p mode "default" exec $polar
-#	bindsym a mode "default" exec anki
-#	bindsym m mode "default" exec $teams
-#	bindsym r mode "default" exec firefox https://web.colreminder.com/en-US/addReminder
-#	bindsym Escape mode "default"
-#	bindsym Return mode "default"
-#	bindsym s mode "default" exec $sitzplatz
-#}
-#
-##other Shortcuts
-#bindsym $mod+Shift+Escape exec gnome-system-monitor
-#bindsym $mod+d exec $transGerman
-#bindsym $mod+$alt+Control+q exec emacsclient -t
-#
-##Todo: make shortcut for editing this file
-##
-##emacsclient in Scratchpad
-## launch scratchpad frame in existing emacs daemon
-##exec emacs
-##exec --no-startup-id /usr/local/bin/pad.sh
-#
-## when scratchpad frame is launched, move it to the scratchpad workspace
-#for_window [class="Zotero" window_role="browser"] move scratchpad
-#for_window [title="_emacs scratchpad_"] move scratchpad
-#bindsym $mod+e [class="Emacs"] scratchpad show
-#for_window [title="cd ; ranger"] move scratchpad
-#
-##university binds
-#mode "userbinds" {
-#  bindsym u mode "default" [title="cd ; ranger"] scratchpad show
-#
-#  # Back to normal: Enter, Escape, or s
-#  bindsym Return mode "default"
-#  bindsym Escape mode "default"
-#  bindsym s mode "default"
-#}
-#
-#bindsym $mod+u mode "userbinds"
-#bindsym $mod+s [title="cd ; ranger"] scratchpad show
-#bindsym $mod+$alt+z [class="Zotero"] scratchpad show
-#
-##kill focused Window
-#set $kill [con_id="__focused__"] exec --no-startup-id kill -9 $(xdotool getwindowfocus getwindowpid)
-#
-##kill all windows of the given type
-#set $hardKill [con_id="__focused__"] exec --no-startup-id kill -9 -1 $(xdotool getwindowfocus getwindowpid)
-#
-## Close all windows
+#emacsclient in Scratchpad
+# launch scratchpad frame in existing emacs daemon
+#exec emacs
+#exec --no-startup-id /usr/local/bin/pad.sh
+
+# when scratchpad frame is launched, move it to the scratchpad workspace
+for_window [class="Zotero" window_role="browser"] move scratchpad
+for_window [title="_emacs scratchpad_"] move scratchpad
+bindsym $mod+e [class="Emacs"] scratchpad show
+for_window [title="cd ; ranger"] move scratchpad
+
+#university binds
+mode "userbinds" {
+  bindsym u mode "default" [title="cd ; ranger"] scratchpad show
+
+  # Back to normal: Enter, Escape, or s
+  bindsym Return mode "default"
+  bindsym Escape mode "default"
+  bindsym s mode "default"
+}
+
+bindsym $mod+u mode "userbinds"
+bindsym $mod+s [title="cd ; ranger"] scratchpad show
+bindsym $mod+$alt+z [class="Zotero"] scratchpad show
+
+#kill focused Window
+set $kill [con_id="__focused__"] exec --no-startup-id kill -9 $(xdotool getwindowfocus getwindowpid)
+
+#kill all windows of the given type
+set $hardKill [con_id="__focused__"] exec --no-startup-id kill -9 -1 $(xdotool getwindowfocus getwindowpid)
+
+# Close all windows
 #bindsym $mod+Shift+q [class=".*"] kill
-#
-##shortcuts
-#bindsym Mod1+F4 $kill
-#bindsym $mod+Shift+Control+q $hardKill
-#bindsym $mod+BackSpace kill
-#
-##create
-#bindsym $mod+c exec capture.sh
-#
-## alt-tab through windows
-## exec_always --no-startup-id i3-cycle-focus.py --history 2
-## bindsym $alt+Tab exec --no-startup-id i3-cycle-focus.py --switch
-#
-#
-#
-##Search Bindings
-##set $search_selection exec xclip -selection "c" -out | xargs -I{} xdg-open https://www.google.de/search\?q\={}
-##bindsym $mod+Shift+z $search_selection
-##set $search exec echo '' | rofi -dmenu -p 'Search:' | xargs -I{} xdg-open https://www.google.de/search?q={}
-##bindsym $mod+z $search
-#
-#
-#
-##Mnemonics (Create something to make new once or work with other stuff?)
-#set $r_mode Layout Mode: [s]enfcall [b]luebutton
-#bindsym Control+$mod+$alt+r mode "$r_mode"
-#
-#mode "$r_mode" {
-#	bindsym Escape mode "default"
-#	bindsym Return mode "default"
-#	bindsym s mode "default" exec google-chrome --app=https://public.senfcall.de/ka-rationality 
-#	bindsym b mode "default" exec google-chrome --app=https://bbb23.senfcall.de/html5client/join?sessionToken=1rjjiv1kgifdse8k
-#}
-#
-#
-#
-#no_focus [class="zathura"]
-#
-#focus_on_window_activation urgent
-#
-#
-##toggle fullscreen for multiple monitors
-#bindsym $mod+Control+f exec $doublePortOnly;  fullscreen toggle global
-#
-#
-#
-##keybinds!
-#bindsym $alt+c exec journal.sh
+
+#shortcuts
+bindsym Mod1+F4 $kill
+bindsym $mod+Shift+Control+q $hardKill
+bindsym $mod+BackSpace kill
+
+#create
+bindsym $mod+c exec capture.sh
+
+# alt-tab through windows
+# exec_always --no-startup-id i3-cycle-focus.py --history 2
+# bindsym $alt+Tab exec --no-startup-id i3-cycle-focus.py --switch
+
+
+
+#Search Bindings
+#set $search_selection exec xclip -selection "c" -out | xargs -I{} xdg-open https://www.google.de/search\?q\={}
+#bindsym $mod+Shift+z $search_selection
+#set $search exec echo '' | rofi -dmenu -p 'Search:' | xargs -I{} xdg-open https://www.google.de/search?q={}
+#bindsym $mod+z $search
+
+
+
+#Mnemonics (Create something to make new once or work with other stuff?)
+set $r_mode Layout Mode: [s]enfcall [b]luebutton
+bindsym Control+$mod+$alt+r mode "$r_mode"
+
+mode "$r_mode" {
+	bindsym Escape mode "default"
+	bindsym Return mode "default"
+	bindsym s mode "default" exec google-chrome --app=https://public.senfcall.de/ka-rationality 
+	bindsym b mode "default" exec google-chrome --app=https://bbb23.senfcall.de/html5client/join?sessionToken=1rjjiv1kgifdse8k
+}
+
+
+
+no_focus [class="zathura"]
+
+focus_on_window_activation urgent
+
+
+#toggle fullscreen for multiple monitors
+bindsym $mod+Control+f exec $doublePortOnly;  fullscreen toggle global
+
+
+
+#keybinds!
+bindsym $alt+c exec journal.sh
