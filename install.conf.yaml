@@ -32,6 +32,9 @@
     ~/.config/:
             glob: true
             path: config/*
+    ~/.config/regolith2/:
+            glob: true
+            path: config/regolith2/*
     ~/.shell:
             glob: true
             path: shell/*
