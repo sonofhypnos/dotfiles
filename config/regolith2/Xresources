@@ -1,2 +1,6 @@
 i3-wm.gaps.inner.size: 0
 i3-wm.bar.position: top
+!regolith.look.path: /usr/share/regolith-look/default
+!regolith.look.path: /usr/share/regolith-look/default
+!regolith.look.path: /usr/share/regolith-look/default
+regolith.look.path: /usr/share/regolith-look/default
