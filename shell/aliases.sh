@@ -26,6 +26,7 @@ maineditor='nvim'
 
 #convenience
 alias d='cd'
+alias p='popd'
 alias ll='ls -alFh'
 alias l='ls -CF'
 alias e='emacsclient -c'
@@ -47,7 +48,7 @@ alias ainstall='sudo apt-get update -y & sudo apt-get upgrade -y && sudo apt-get
 
 #directories and files
 #alias do='cd ~/.dotfiles' this line caused a tone of problems for me, because do is a keyword in bash of course
-alias regi3='v ~/.dotfiles/config/regolith/i3/config'
+alias regi3='v ~/.dotfiles/config/regolith2/i3/config.d/40_workspace-config'
 alias aalias='$maineditor ~/.dotfiles/shell/aliases.sh'
 alias ozsh='cd ~/.dotfiles/zsh/oh-my-zsh'
 alias econfig='$maineditor ~/.doom.d/config.el'
@@ -76,7 +77,7 @@ alias dgt="cd $dgtfiles ; ranger"
 alias algo="cd $algofiles ; ranger"
 alias ot="cd $HOME/repos/oTree/ ; ranger"
 alias ds="cd $dsfiles  ; ranger"
-alias ks="cd $ksfiles  ; ranger"
+alias kog="cd $ksfiles  ; ranger"
 alias ic="cd $icfiles  ; ranger"
 alias mph="cd $mphfiles ; ranger"
 alias ph="cd $phfiles  ; ranger"
