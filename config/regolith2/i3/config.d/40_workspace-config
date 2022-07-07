@@ -366,6 +366,7 @@ bindsym $mod+$alt+Control+q exec emacsclient -t
 # when scratchpad frame is launched, move it to the scratchpad workspace
 for_window [class="Zotero" window_role="browser"] move scratchpad
 for_window [title="_emacs scratchpad_"] move scratchpad
+for_window [title="doom-capture"] move scratchpad
 bindsym $mod+e [class="Emacs"] scratchpad show
 for_window [title="cd ; ranger"] move scratchpad
 
