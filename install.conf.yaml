@@ -15,11 +15,13 @@
     ~/.bash_logout: 
     ~/.gitconfig: 
     ~/.ideavimrc:
-    ~/.XCompose: 
-    ~/.Xresources-regolith:
-    ~/.Xresources:
-    ~/.xinitrc:
+#    ~/.XCompose: 
+#    ~/.Xresources-regolith:
+#    ~/.Xresources:
+#    ~/.xinitrc:
     ~/.zshrc:
+    ~/.config/vlc/vlcrc:
+      path: config/vlc/vlcrc
     ~/.jupyter:
     ~/.tmux.conf:
     ~/.alacritty.yml:
@@ -38,8 +40,8 @@
     ~/.intellimacs:
             glob: true
             path: intellimacs/*
-    ~/.i3status.conf:
-    ~/.xsession:
+#    ~/.i3status.conf:
+#    ~/.xsession:
     ~/.doom.d:
     ~/.screenlayout:
 
