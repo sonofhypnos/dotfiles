@@ -9,10 +9,11 @@ export ZSH=$HOME/.oh-my-zsh
 # For more info see https://github.com/junegunn/fzf/issues/809
 [ -n "$NVIM_LISTEN_ADDRESS" ] && export FZF_DEFAULT_OPTS='--no-height'
 
-if [[ -z $VIM ]] && [[ -z $INSIDE_EMACS ]]; then
-	INSIDE_VIM=1
-	nvim -c "terminal"
-fi
+# TODO Fix neovim (for some reason scrolling does not work anymore and I am starting in normal mode instead of insert mode by default
+#if [[ -z $VIM ]] && [[ -z $INSIDE_EMACS ]]; then
+#	INSIDE_VIM=1
+#	nvim -c "terminal"
+#fi
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
