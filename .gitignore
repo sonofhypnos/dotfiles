@@ -1,3 +1,4 @@
 .projectile
 config/evince/accels
 jupyter/lab/workspaces/*
+./bin/fziVpn
