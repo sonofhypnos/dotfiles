@@ -57,7 +57,7 @@ Plug 'lambdalisue/suda.vim'
 
 
 " timetracking
-Plug 'wakatime/vim-wakatime'
+#Plug 'wakatime/vim-wakatime'
 " Plug 'ActivityWatch/aw-watcher-vim'
 
 
