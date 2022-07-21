@@ -309,7 +309,7 @@ set $telegram telegram
 set $signal signal 
 set $intellij intellij-idea-ultimate
 set $emacs emacsclient -c
-set $transGerman sh -c 'firefox "http://translate.google.com/#de/en/$(xclip -o)"'
+#set $transGerman sh -c 'firefox "http://translate.google.com/#de/en/$(xclip -o)"'
 
 #Open main Applications
 exec emacs --daemon; emacsclient -c
@@ -353,7 +353,7 @@ mode "$main_launcher" {
 
 #other Shortcuts
 bindsym $mod+Shift+Escape exec gnome-system-monitor
-bindsym $mod+d exec $transGerman
+#bindsym $mod+d exec $transGerman
 bindsym $mod+$alt+Control+q exec emacsclient -t
 
 #Todo: make shortcut for editing this file
@@ -388,18 +388,18 @@ bindsym $mod+$alt+z [class="Zotero"] scratchpad show
 set $kill [con_id="__focused__"] exec --no-startup-id kill -9 $(xdotool getwindowfocus getwindowpid)
 
 #kill all windows of the given type
-set $hardKill [con_id="__focused__"] exec --no-startup-id kill -9 -1 $(xdotool getwindowfocus getwindowpid)
+#set $hardKill [con_id="__focused__"] exec --no-startup-id kill -9 -1 $(xdotool getwindowfocus getwindowpid)
 
 # Close all windows
 #bindsym $mod+Shift+q [class=".*"] kill
 
 #shortcuts
 bindsym Mod1+F4 $kill
-bindsym $mod+Shift+Control+q $hardKill
+#bindsym $mod+Shift+Control+q $hardKill
 bindsym $mod+BackSpace kill
 
 #create
-bindsym $mod+c exec capture.sh
+#bindsym $mod+c exec capture.sh
 
 # alt-tab through windows
 # exec_always --no-startup-id i3-cycle-focus.py --history 2
@@ -440,3 +440,4 @@ bindsym $mod+Control+f exec $doublePortOnly;  fullscreen toggle global
 
 #keybinds!
 bindsym $alt+c exec journal.sh
+assign [class="TestWindow"] $ws3
