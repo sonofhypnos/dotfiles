@@ -22,8 +22,6 @@ rnfiles="$unifiles/Einführung\ in\ Rechnernetze"
 
 
 
-maineditor='nvim'
-
 #convenience
 alias d='cd'
 alias p='popd'
@@ -32,11 +30,11 @@ alias l='ls -CF'
 alias e='emacsclient -c'
 alias gll='git log --graph --pretty=oneline --abbrev-commit'
 alias bat='batcat'
-alias v='nvim'
+alias v="nvim"
 alias pip2='python2 -m pip'
 alias printpagesd='lpr -o number-up=2 sides=two-sided-long-edge -P HaDiKo-EUFF'
 alias rars="$HOME/Dropbox/semester3/24502\ –\ Rechnerorganisation/Übungsmaterialien/Übung\ 2/rars_46ab74d.jar"
-alias mat='MATLAB_JAVA=/home/tassilo/.sdkman/candidates/java/8.0.282.fx-zulu/jre;matlab & disown'
+alias mat='MATLAB_JAVA=tassilo/.sdkman/candidates/java/8.0.282.fx-zulu/jre;matlab & disown'
 
 alias refresh='watch -n 1 cat'
 
@@ -48,12 +46,12 @@ alias ainstall='sudo apt-get update -y & sudo apt-get upgrade -y && sudo apt-get
 
 #directories and files
 #alias do='cd ~/.dotfiles' this line caused a tone of problems for me, because do is a keyword in bash of course
-alias regi3='v ~/.dotfiles/config/regolith2/i3/config.d/40_workspace-config'
-alias aalias='$maineditor ~/.dotfiles/shell/aliases.sh'
+alias regi3='vim ~/.dotfiles/config/regolith2/i3/config.d/40_workspace-config'
+alias aalias='vim ~/.dotfiles/shell/aliases.sh'
 alias ozsh='cd ~/.dotfiles/zsh/oh-my-zsh'
-alias econfig='$maineditor ~/.doom.d/config.el'
-alias .d='cd /home/tassilo/.dotfiles/'
-alias ashell="$maineditor /home/tassilo/.dotfiles/shell/aliases.sh"
+alias econfig='vim ~/.doom.d/config.el'
+alias .d='cd ~/.dotfiles/'
+alias ashell="vim ~/.dotfiles/shell/aliases.sh"
 alias dmemacs="~/.local/lib/python3.9/site-packages/memacs/"
 
 # Uni Files
