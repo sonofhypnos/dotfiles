@@ -16,16 +16,16 @@
 	url = git@github.com:sonofhypnos/emacs-config.git
 [submodule "oh-my-zsh"]
 	path = oh-my-zsh
-	url = git@github.com:ohmyzsh/ohmyzsh.git
+	url = https://github.com/ohmyzsh/ohmyzsh.git
 [submodule "zsh/custom/zsh-wakatime"]
 	path = zsh/custom/plugins/zsh-wakatime
-	url = git@github.com:wbingli/zsh-wakatime.git
+	url = https://github.com/wbingli/zsh-wakatime.git
 [submodule "zsh/custom/zsh-autosuggestions"]
 	path = zsh/custom/plugins/zsh-autosuggestions
-	url = git@github.com:zsh-users/zsh-autosuggestions.git
+	url = https://github.com/zsh-users/zsh-autosuggestions.git
 [submodule "zsh/custom/zsh-syntax-highlighting"]
 	path = zsh/custom/plugins/zsh-syntax-highlighting
-	url = git@github.com:zsh-users/zsh-syntax-highlighting.git
+	url = https://github.com/zsh-users/zsh-syntax-highlighting.git
 [submodule "intellimacs"]
 	path = intellimacs
 	url = https://github.com/MarcoIeni/intellimacs
