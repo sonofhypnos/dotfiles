@@ -2,6 +2,7 @@
 
 set -e
 
+. ./pre-install.sh
 CONFIG="install.conf.yaml"
 DOTBOT_DIR="dotbot"
 
