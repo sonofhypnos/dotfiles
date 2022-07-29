@@ -35,3 +35,5 @@
 	rebase = true
 [url "ssh://git@github.com/"]
 	insteadOf = https://github.com/
+[gitlab]
+	user = tassilo.neubauer
