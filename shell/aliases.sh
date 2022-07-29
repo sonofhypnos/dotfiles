@@ -92,3 +92,6 @@ alias update-alternatives='sudo update-alternatives'
 alias vpn="sudo $HOME/vpnstuff"
 alias htop="sudo htop"
 alias abox="archivebox"
+gitdownload(){
+	curl -L $(echo "$1" | sed -r 's/https:\/\/github\.com\/(.*)$/git@github.com:\1\/archive\/master.tar.gz/' ) | tar zxf -
+}
