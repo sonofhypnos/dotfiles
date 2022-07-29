@@ -9,7 +9,20 @@
 #bash_version   :5.1.4(1)-release
 #============================================================================
 
-sudo mount /media/tassilo/backup
+if [ "$EUID" -ne 0 ]
+  then echo "Please run as root"
+  exit
+fi
+
+if cat /etc/fstab | grep -q "UUID=8e97e9d3-ec0b-4426-8627-8f994e2f94c2 /media/tassilo/backup"; then
+	echo "/etc/fstab seems configured"
+else
+	echo "diretory /etc/fstab must be edited. Probably add: \"UUID=8e97e9d3-ec0b-4426-8627-8f994e2f94c2 /media/tassilo/backup ext4 noauto 0 2\""
+	exit
+fi
+
+
+mount /media/tassilo/backup
 # Setting this, so the repo does not need to be given on the commandline:
 #
 export BORG_REPO='/media/tassilo/backup/borgE15/'
@@ -37,6 +50,7 @@ borg create                            \
     --exclude '/home/*/CacheStorage/*' \
     --exclude '/home/*/CacheStorage/*' \
     --exclude '/var/tmp/*'             \
+    --exclude '/home/tassilo/Dropbox/semester*/**/*.mp4'           \
                                        \
     ::'{hostname}-{now}'               \
     /etc                               \
@@ -82,4 +96,4 @@ exit ${global_exit}
 
 #do borg backup stuff, if the thing is actually mounted otherwise inform that
 
-sudo umount /media/tassilo/backup
+umount /media/tassilo/backup
