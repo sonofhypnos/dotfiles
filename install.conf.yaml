@@ -8,6 +8,7 @@
 - shell:
 
 - link:
+  #TODO figure out what in home needs to be added here (for example nvim does not seem to be configured????)
     ~/.profile: 
     ~/.bashrc: 
     ~/.atamanrc.config:

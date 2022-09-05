@@ -182,3 +182,6 @@ matches:
 Tassilo"
   - trigger: "@ra"
     replace: "rabea.neubauer@outlook.de"
+  - trigger: ":CT"
+    replace: "Cheers,
+Tassilo"
