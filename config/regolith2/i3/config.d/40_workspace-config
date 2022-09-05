@@ -391,11 +391,10 @@ set $kill [con_id="__focused__"] exec --no-startup-id kill -9 $(xdotool getwindo
 #set $hardKill [con_id="__focused__"] exec --no-startup-id kill -9 -1 $(xdotool getwindowfocus getwindowpid)
 
 # Close all windows
-#bindsym $mod+Shift+q [class=".*"] kill
+bindsym $mod+Shift+u [class=".*"] kill
 
 #shortcuts
 bindsym Mod1+F4 $kill
-#bindsym $mod+Shift+Control+q $hardKill
 bindsym $mod+BackSpace kill
 
 #create
@@ -439,5 +438,6 @@ bindsym $mod+Control+f exec $doublePortOnly;  fullscreen toggle global
 
 
 #keybinds!
-bindsym $alt+c exec journal.sh
-assign [class="TestWindow"] $ws3
+#bindsym $alt+j exec journal.sh
+bindsym $mod+c exec capture.sh -k 'n'
+assign [class="TestWindow"] $ws9
