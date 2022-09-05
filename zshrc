@@ -106,8 +106,8 @@ if [ -e /usr/share/doc/fzf ]; then
     source /usr/share/doc/fzf/examples/key-bindings.zsh
     source /usr/share/doc/fzf/examples/completion.zsh; fi
 # Nix
-if [ -f /home/tassilo/.nix-profile/etc/profile.d/nix.sh ]; then
-    . /home/tassilo/.nix-profile/etc/profile.d/nix.sh; fi
+# if [ -f /home/tassilo/.nix-profile/etc/profile.d/nix.sh ]; then
+#     . /home/tassilo/.nix-profile/etc/profile.d/nix.sh; fi
 
 # SDKMAN
 if [ -d ~/.sdkman ]; then 

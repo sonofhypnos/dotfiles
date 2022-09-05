@@ -188,3 +188,5 @@ source /home/tassilo/repos/axiicode/workspace/armarx-workspace.rc
 
 export PATH=/home/tassilo/repos/axii2/bin:$PATH
 
+
+[ -f "/home/tassilo/.ghcup/env" ] && source "/home/tassilo/.ghcup/env" # ghcup-env
