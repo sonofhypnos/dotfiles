@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 for file in "$@"; do
-	lpr -o sides=two-sided-long-edge -P HaDiKo-EUFF "$file"
+	lp -o ColorModel=Gray -o number-up=2 -o sides=two-sided-long-edge -d HaDiKo-EUFF "$file" || echo "If this does not seem to work, you probably don't have cups-pdf installed!"
 done
