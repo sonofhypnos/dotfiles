@@ -11,6 +11,12 @@ The following files/folders might be of interest to you:
 
 My [Doom-Emacs](https://github.com/hlissner/doom-emacs/blob/develop/docs/getting_started.org) files are in a separate [repo](https://github.com/sonofhypnos/emacs-config/)
 
+## Install (intended for myself)
+
+``` sh
+git clone --depth 1 --recurse-submodules -j8 git@github.com:sonofhypnos/dotfiles.git
+```
+
 ## miscellaneous/obscure
  - `Xcompose` Compose key file for the German [neo keyboard layout](https://neo-layout.org/).
  - `trydactylrc` [tridactyl](https://github.com/tridactyl/tridactyl) configuration - Vim navigation in Firefox
