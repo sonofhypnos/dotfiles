@@ -21,7 +21,7 @@
 	dhs = diff HEAD~ --stat
 	dhw = diff HEAD~ --color-words
 	lg = log -p
-        gll= log --graph --pretty=oneline --abbrev-commit
+  gll= log --graph --pretty=oneline --abbrev-commit
 	gr = log --graph --format=line # graph
 	grd = log --graph --format=detail # graph detail
 	gra = log --graph --format=line --all # graph all
@@ -37,3 +37,6 @@
 	insteadOf = https://github.com/
 [gitlab]
 	user = tassilo.neubauer
+[root]
+	email = tassilo.neubauer@gmailcom
+	name = Tassilo Neubauer
