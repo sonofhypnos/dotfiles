@@ -141,10 +141,6 @@ matches:
     replace: 'I’ll'
     propagate_case: true
     word: true
-  - trigger: 'Im'
-    replace: 'I’m'
-    propagate_case: true
-    word: true
   - trigger: 'Ive'
     replace: 'I’ve'
     propagate_case: true
