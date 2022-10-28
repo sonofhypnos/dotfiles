@@ -1,26 +1,27 @@
 unifiles2="$HOME/Dropbox/semester2"
 #unifiles="$HOME/Dropbox/semester3"
 unifiles="$HOME/Dropbox/semester4"
+unifiles5="$HOME/Dropbox/semester5"
 lafiles="$unifiles2/Lineare\ Algebra\ \ II\ für\ Mathematik/"
 osfiles="$unifiles/Betriebssysteme\ WS\ 21-22/"
 robfiles="$unifiles/Robotik\ I\ -\ Einführung\ in\ die\ Robotik/"
 tgifiles="$unifiles/Theoretische\ Grundlagen\ der\ Informatik/"
-cgfiles="$unifiles/Computergrafik\ WS\ 21-22/"
+# cgfiles="$unifiles/Computergrafik\ WS\ 21-22/"
 rofiles="$unifiles/24502\ –\ Rechnerorganisation/"
 wsfiles="$unifiles/Grundlagen\ der\ Wahrscheinlichkeitstheorie\ und\ Statistik\ für\ Studierende\ der\ Informatik/"
 dgtfiles="$unifiles2/24007\ –\ Digitaltechnik\ und\ Entwurfsverfahren/"
 progfiles="$unifiles/24004\ –\ Programmieren/"
-
 dsfiles="$unifiles/24516\ –\ Datenbanksysteme"
 ksfiles="$unifiles/24572\ –\ Kognitive\ Systeme"
 icfiles="$unifiles/24872\ –\ Basispraktikum\ zum\ ICPC\ Programmierwettbewerb\ -\ SS\ 2022"
+icpcfiles="$unifiles5/24872 – Basispraktikum zum ICPC Programmierwettbewerb - SS 2022"
+cg23files="$unifiles/Computergrafik\ WS\ 22-23/"
+ph2files="$unifiles5/Physik II für Informatiker (WS22-23)"
 mphfiles="$unifiles/4040451\ –\ Moderne\ Physik\ für\ Informatiker"
 phfiles="$unifiles/Physik\ I\ für\ Informatiker\ \(SS\ 22\)"
 nmffiles="$unifiles/Numerische\ Mathematik\ \ für\ die\ Fachrichtungen\ Informatik\ und\ Ingenieurwesen\ \(SS22\)"
 rnfiles="$unifiles/Einführung\ in\ Rechnernetze"
-
-
-
+propafiles="$unifiles5/24030\ –\ Programmierparadigmen/"
 
 #convenience
 alias d='cd'
@@ -55,11 +56,12 @@ alias ashell="vim ~/.dotfiles/shell/aliases.sh"
 alias dmemacs="~/.local/lib/python3.9/site-packages/memacs/"
 
 # Uni Files
-alias hm1="xdg-open ~/Dropbox/semester2/Höhere\ Mathematik\ I\ \(Analysis\)\ für\ die\ Fachrichtung\ Informatik/Vorlesungsmaterial/Skript\ Höhere\ Mathematik\ 1.pdf && exit" 
-alias hm2="xdg-open $unifiles2/Höhere\ Mathematik\ I\ \(Analysis\)\ für\ die\ Fachrichtung\ Informatik/Vorlesungsmaterial/HM2.pdf && exit" 
+alias hm1="xdg-open ~/Dropbox/semester2/Höhere\ Mathematik\ I\ \(Analysis\)\ für\ die\ Fachrichtung\ Informatik/Vorlesungsmaterial/Skript\ Höhere\ Mathematik\ 1.pdf && exit"
+alias hm2="xdg-open $unifiles2/Höhere\ Mathematik\ I\ \(Analysis\)\ für\ die\ Fachrichtung\ Informatik/Vorlesungsmaterial/HM2.pdf && exit"
 
-
-#navigate to ranger
+alias icpc="cd $icpcfiles ; ranger"
+alias ph2="cd $ph2files ; ranger"
+alias propa="cd $propafiles ; ranger"
 alias os="cd $osfiles ; ranger"
 alias prog="cd $progfiles ; ranger"
 alias ro="cd $rofiles ; ranger"
@@ -67,6 +69,7 @@ alias rob="cd $robfiles ; ranger"
 alias ws="cd $wsfiles ; ranger"
 alias tgi="cd $tgifiles ; ranger"
 alias cg1="cd $cgfiles ; ranger"
+alias cg23="cd $cg23files ; ranger"
 alias rs="cd $unifiles ; ranger"
 alias hm="cd $hmfiles ; ranger"
 alias la="cd $lafiles ; ranger"
@@ -83,7 +86,6 @@ alias nmf="cd $nmffiles ; ranger"
 alias rn="cd $rnfiles  ; ranger"
 alias txt="cd ~/Dropbox/textbooks/ ; ranger"
 
-
 alias la1="xdg-open semester2/Lineare\ Algebra\ II\ für\ Mathematik/stuff/LA1.pdf && exit"
 alias dIlias='exec ~/Installations/KIT-ILIAS-downloader -t -o ~/Dropbox/semester2'
 alias update-alternatives='sudo update-alternatives'
@@ -92,6 +94,6 @@ alias update-alternatives='sudo update-alternatives'
 alias vpn="sudo $HOME/vpnstuff"
 alias htop="sudo htop"
 alias abox="archivebox"
-gitdownload(){
-	curl -L $(echo "$1" | sed -r 's/https:\/\/github\.com\/(.*)$/git@github.com:\1\/archive\/master.tar.gz/' ) | tar zxf -
+gitdownload() {
+	curl -L $(echo "$1" | sed -r 's/https:\/\/github\.com\/(.*)$/git@github.com:\1\/archive\/master.tar.gz/') | tar zxf -
 }
