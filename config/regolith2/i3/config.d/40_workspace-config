@@ -295,7 +295,8 @@ exec --no-startup-id /usr/libexec/gnome-settings-daemon-localeexec
 exec --no-startup-id dconf write /org/gnome/settings-daemon/plugins/cursor/active false
 
 #Assign variables for special Applications
-set $todoist google-chrome --app=https://todoist.com  
+set $main_launcher Main Launcher: main gather[t]own [f]ocusmate [w]hatsapp [g]mail [k]eep [c]alendar [d]iscord [i]ntelliJ [a]nki [r]eminder
+set $gathertown google-chrome --app=https://app.gather.town/app/Yhi4XYj0zFNWuUNv/EA%20coworking%20and%20lounge
 set $whatsapp google-chrome --app=https://web.whatsapp.com 
 set $gmail google-chrome --app=https://mail.google.com 
 set $keep google-chrome --app=https://keep.google.com 
@@ -329,12 +330,11 @@ exec copyq
 exec --no-startup-id ./i3-battery-popup/i3-battery-popup
 
 #Launcher for Main Applications
-set $main_launcher Main Launcher: main [t]odoist [f]ocusmate [w]hatsapp [g]mail [k]eep [c]alendar [d]iscord [i]ntelliJ [a]nki [r]eminder
 bindsym Control+$mod+$alt+o mode "$main_launcher"
 
 mode "$main_launcher" {
 	bindsym f mode "default" exec $focusmate
-	bindsym t mode "default" exec $todoist
+	bindsym t mode "default" exec $gathertown
 	bindsym w mode "default" exec $whatsapp 
 	bindsym g mode "default" exec $gmail
 	bindsym k mode "default" exec $keep
