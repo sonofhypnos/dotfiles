@@ -24,13 +24,15 @@ toggle_key: LEFT_ALT
 # them has its quirks, therefore you may want to change it if you are having problems.
 # By default, espanso uses the "Auto" backend which should work well in most cases,
 # but you may want to try the "Clipboard" or "Inject" backend in case of issues.
-# backend: Clipboard
+#backend: Inject
 
 # --- Auto-restart
 
 # Enable/disable the config auto-reload after a file change is detected.
 auto_restart: true
-
+#extra inject method that is fast on linuxjk
+fast_inject: true
+#disable_x11_fast_inject: true
 # --- Clipboard threshold
 
 # Because injecting long texts char-by-char is a slow operation, espanso automatically
