@@ -29,3 +29,6 @@
 [submodule "intellimacs"]
 	path = intellimacs
 	url = https://github.com/MarcoIeni/intellimacs
+[submodule "zotadd"]
+	path = zotadd
+	url = https://github.com/sdx23/zotadd
