@@ -33,7 +33,9 @@ backup_repo() {
     # the machine this script is currently running on:
     # TODO remove emacs stuff from backup
     #TODO: further things to exclude: 
+    # straight compiled emacs things
     # /var/cache...
+    # TODO: either empty the trash or exclude it in your backup?
     # the backup on the nixos server took under 9 minutes last time. So don't worry too much about the backup taking long. You are just impatient.
     # everything else with cache?
     # is there like another reason to need it?
