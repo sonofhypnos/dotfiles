@@ -18,9 +18,10 @@ icpcfiles="$unifiles5/24872\ –\ Basispraktikum\ zum\ ICPC\ Programmierwettbewe
 cg23files="$unifiles/Computergrafik\ WS\ 22-23/"
 ph2files="$unifiles5/Physik\ II\ für\ Informatiker\ \(WS22-23\)"
 mphfiles="$unifiles/4040451\ –\ Moderne\ Physik\ für\ Informatiker"
-nmffiles="$unifiles/Numerische\ Mathematik\ \ für\ die\ Fachrichtungen\ Informatik\ und\ Ingenieurwesen\ \(SS22\)"
+nmffiles="$unifiles5/Numerische\ Mathematik\ \ für\ die\ Fachrichtungen\ Informatik\ und\ Ingenieurwesen\ \(SS22\)"
 rnfiles="$unifiles/Einführung\ in\ Rechnernetze"
 propafiles="$unifiles5/24030\ –\ Programmierparadigmen/"
+profiles="$unifiles5/Proseminar/"
 
 #convenience
 alias d='cd'
@@ -63,6 +64,7 @@ alias ph2="cd $ph2files ; ranger"
 alias propa="cd $propafiles ; ranger"
 alias os="cd $osfiles ; ranger"
 alias prog="cd $progfiles ; ranger"
+alias pro="cd $profiles; ranger"
 alias ro="cd $rofiles ; ranger"
 alias rob="cd $robfiles ; ranger"
 alias ws="cd $wsfiles ; ranger"
