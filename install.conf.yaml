@@ -22,7 +22,7 @@
     ~/.zshrc:
     ~/.config/vlc/vlcrc:
       path: config/vlc/vlcrc
-    ~/.jupyter:
+#    ~/.jupyter:
     ~/.tmux.conf:
     ~/.alacritty.yml:
     ~/.tridactylrc:
