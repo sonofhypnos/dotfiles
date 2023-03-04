@@ -17,6 +17,8 @@ My [Doom-Emacs](https://github.com/hlissner/doom-emacs/blob/develop/docs/getting
 git clone --depth 1 --recurse-submodules -j8 git@github.com:sonofhypnos/dotfiles.git
 ```
 
+Once installed you need to run the `enable_services.sh` script with root to enable systemd services.
+
 ## miscellaneous/obscure
  - `Xcompose` Compose key file for the German [neo keyboard layout](https://neo-layout.org/).
  - `trydactylrc` [tridactyl](https://github.com/tridactyl/tridactyl) configuration - Vim navigation in Firefox
