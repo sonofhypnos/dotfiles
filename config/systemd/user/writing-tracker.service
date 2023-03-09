@@ -1,0 +1,8 @@
+[Unit]
+Description=writing-tracker
+
+[Service]
+ExecStart=/home/tassilo/repos/writing-tracker/writing-tracker.sh
+
+[Install]
+WantedBy=default.target

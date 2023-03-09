@@ -1,0 +1,11 @@
+[Unit]
+Description=espanso
+
+[Service]
+ExecStart=/snap/espanso/129/bin/espanso launcher 
+Restart=on-failure
+RestartSec=3
+
+[Install]
+WantedBy=default.target
+
