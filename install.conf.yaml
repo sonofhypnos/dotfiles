@@ -20,8 +20,6 @@
 #    ~/.Xresources:
 #    ~/.xinitrc:
     ~/.zshrc:
-    ~/.config/vlc/vlcrc:
-      path: config/vlc/vlcrc
 #    ~/.jupyter:
     ~/.tmux.conf:
     ~/.alacritty.yml:
