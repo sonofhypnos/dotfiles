@@ -6,10 +6,10 @@ if [ ! -d "$DOOM" ]; then
   echo 'installing doom prereqs'
 apt-get install ripgrep fd-find
 git clone --depth 1 https://github.com/hlissner/doom-emacs "$HOME/.emacs.d"
+  echo 'installing doom'
 ~/.emacs.d/bin/doom install
 else
-  echo 'Updating doom'
-  doom sync
+  echo 'Doom is installed'
 fi
 
 #Below does not work
