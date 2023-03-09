@@ -158,6 +158,3 @@ export LSP_USE_PLISTS=true
 
 
 [ -f "/home/tassilo/.ghcup/env" ] && source "/home/tassilo/.ghcup/env" # ghcup-env
-
-# Add qtcreator:
-export PATH="$HOME/qtcreator-5.0.3/bin:$PATH"
