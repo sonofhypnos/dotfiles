@@ -1,3 +1,3 @@
 # Todo
 
-- figure out conflicting versions of vlc player settings
+- [ ] create better paths for shell (use $HOME instead of /home/tassilo) 

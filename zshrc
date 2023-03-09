@@ -124,8 +124,8 @@ __conda_setup="$('/home/tassilo/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
-    if [ -f "/home/tassilo/miniconda3/etc/profile.d/conda.sh" ]; then
-        . "/home/tassilo/miniconda3/etc/profile.d/conda.sh"
+    if [ -f "$HOME/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "$HOME/miniconda3/etc/profile.d/conda.sh"
     else
         export PATH="/home/tassilo/miniconda3/bin:$PATH"
     fi
@@ -157,4 +157,6 @@ export LSP_USE_PLISTS=true
 
 
 
-[ -f "/home/tassilo/.ghcup/env" ] && source "/home/tassilo/.ghcup/env" # ghcup-env
+[ -f "$HOME/.ghcup/env" ] && source "$HOME/.ghcup/env" # ghcup-env
+
+[ -f "$HOME/.nix-profile/etc/profile.d/hm-session-vars.sh" ] && source "$HOME/.nix-profile/etc/profile.d/hm-session-vars.sh"
