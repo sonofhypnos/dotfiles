@@ -17,7 +17,7 @@ My [Doom-Emacs](https://github.com/hlissner/doom-emacs/blob/develop/docs/getting
 git clone --depth 1 --recurse-submodules -j8 git@github.com:sonofhypnos/dotfiles.git
 ```
 
-Once installed you need to run the `enable_services.sh` script with root to enable systemd services.
+Once installed you need to run the `enable_services.sh` script with root to enable systemd services. Next you want to figure out how to get the home manager installed for the programs you installed through it (like ripgrep. Longterm you want to move as much as possible of your programs from apt to nix).
 
 ## miscellaneous/obscure
  - `Xcompose` Compose key file for the German [neo keyboard layout](https://neo-layout.org/).
