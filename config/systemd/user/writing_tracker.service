@@ -1,8 +1,10 @@
 [Unit]
-Description=writing-tracker
+Description=writing tracker
 
 [Service]
+Type=oneshot
 ExecStart=/home/tassilo/repos/writing-tracker/writing-tracker.sh
+User=tassilo
 
 [Install]
 WantedBy=default.target

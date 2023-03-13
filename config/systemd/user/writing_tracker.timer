@@ -2,7 +2,7 @@
 Description=Writing Tracker Timer
 
 [Timer]
-Unit=writing-tracker.service
+Unit=writing_tracker.service
 OnCalendar=daily
 
 [Install]
