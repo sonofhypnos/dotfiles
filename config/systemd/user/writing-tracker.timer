@@ -1,0 +1,9 @@
+[Unit]
+Description=Writing Tracker Timer
+
+[Timer]
+Unit=writing-tracker.service
+OnCalendar=daily
+
+[Install]
+WantedBy=timers.target
