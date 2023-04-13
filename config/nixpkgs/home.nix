@@ -18,7 +18,8 @@
   # }))
   #  ];
 
-  home.packages = [ pkgs.ripgrep ];
+  nixpkgs.config.allowUnfree = true; # needed for 1password
+  home.packages = with pkgs; [ ripgrep _1password ];
 
   #programs.emacs = {
   #    enable = true;
