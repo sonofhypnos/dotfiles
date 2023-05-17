@@ -19,8 +19,11 @@ fi
 #export BORG_REPO='/media/tassilo/backup/borgE15/'
 
 # See the section "Passphrase notes" for more infos.
-op whoami || eval $(op signin) #check if logged in with op whoami
-export BORG_PASSPHRASE=$(op read "op://Personal/Encryption borg base laptop passphrase/password")
+pwd=$(rofi -dmenu -p "Prompt for the user")
+
+op whoami || eval "$(echo \"$pwd\" | op signin)" #check if logged in with op whoami
+BORG_PASSPHRASE=$(op read "op://Personal/Encryption borg base laptop passphrase/password")
+export BORG_PASSPHRASE
 
 # some helpers and error handling:
 info() { printf "\n%s %s\n\n" "$(date)" "$*" >&2; }
