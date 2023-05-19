@@ -18,10 +18,9 @@ fi
 #
 #export BORG_REPO='/media/tassilo/backup/borgE15/'
 
-# See the section "Passphrase notes" for more infos.
-pwd=$(rofi -dmenu -p "Prompt for the user")
+pwd=$(runuser -l tassilo -c 'DISPLAY=:0; export DISPLAY;rofi -dmenu -password -lines 1 -p "Enter 1Password password"')
+op whoami || eval "$(echo "$pwd" | op signin)"
 
-op whoami || eval "$(echo \"$pwd\" | op signin)" #check if logged in with op whoami
 BORG_PASSPHRASE=$(op read "op://Personal/Encryption borg base laptop passphrase/password")
 export BORG_PASSPHRASE
 
