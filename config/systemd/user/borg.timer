@@ -3,7 +3,7 @@ Description=Borg Backup Timer
 
 [Timer]
 Unit=borg.service
-OnCalendar=hourly
+OnCalendar=daily
 
 [Install]
 WantedBy=timers.target
