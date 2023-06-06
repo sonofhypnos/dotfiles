@@ -98,8 +98,7 @@ source ~/.shell/paths.sh
 # Aliases
 source ~/.shell/aliases.sh
 
-# mujoco (version 1.5, since version 2.0 does not work with openais gym[mujoco] library)
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/tassilo/.mujoco/mjpro150/bin
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/tassilo/.pyenv/versions/3.6.15/lib
 
 # fzf
 if [ -e /usr/share/doc/fzf ]; then
@@ -164,3 +163,9 @@ export LSP_USE_PLISTS=true
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+
+
+export PYENV_ROOT="$HOME/.pyenv"
+command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
