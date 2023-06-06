@@ -2,9 +2,10 @@ unifiles2="$HOME/Dropbox/semester2"
 #unifiles="$HOME/Dropbox/semester3"
 unifiles="$HOME/Dropbox/semester4"
 unifiles5="$HOME/Dropbox/semester5"
+unifiles6="$HOME/Dropbox/semester6"
 mphfiles="$unifiles/4040451\ –\ Moderne\ Physik\ für\ Informatiker/"
 cvxfiles="$unifiles5/convex_optimization/"
-pgfiles="$unifiles5/24614\ –\ Algorithmen\ für\ planare\ Graphen\ \(mit\ Übungen\)"
+pgfiles="$unifiles6/24614\ –\ Algorithmen\ für\ planare\ Graphen\ \(mit\ Übungen\)"
 
 #convenience
 alias d='cd'
