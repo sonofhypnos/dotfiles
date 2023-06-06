@@ -26,7 +26,10 @@ in {
   #  ];
 
   home.packages = [
+    pkgs.cargo
+    pkgs.rustc
     pkgs.ripgrep
+
     #pkgsUnstable._1password #NOTE: not installing 1password for now since connection between apps did not work
     #pkgsUnstable._1password-gui
   ];
