@@ -15,6 +15,29 @@
 # alias unixstamp="date +%s"
 # alias date_locale="date +"%c""
 matches:
+  - trigger: ":fdatetime"
+    replace: "{{output}}"
+    vars:
+    - name: form1
+      type: form
+      params:
+        layout: |
+          Which type of input do you want to provide?
+          Please enter the date (YYYY-MM-DD) or 2-character weekday shorthand:
+          [[value]]
+          Please enter the time (HH:MM):
+          [[time]]
+    - name: output
+      type: shell
+      params:
+        cmd: "python3 /home/tassilo/bin/format_datetime.py '{{form1.value}}' '{{form1.time}}'"
+  - trigger: ":unixdate"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: shell
+        params:
+          cmd: "date +%s"
   - trigger: ":ip"
     replace: "{{output}}"
     vars:
