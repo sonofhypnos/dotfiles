@@ -66,6 +66,11 @@ bind yy clipboard yankcanon
 " Open right click menu on links
 bind ;C composite hint_focus; !s xdotool key Menu
 
+" add current page to orgmode
+bind yo composite js "[[" +  document.location.href +"][" + document.title + "]]" | clipboard yank
+" add selected link to clipboard as orgmode thing
+bind ;d hint -F e => navigator.clipboard.writeText("[[" + e.href+ "][" +e.textContent+ "]]")
+
 " Suspend / "discard" all tabs - handy for stretching out battery life
 command discardall jsb browser.tabs.query({}).then(ts => browser.tabs.discard(ts.map(t=>t.id)))
 
@@ -182,7 +187,6 @@ bind T current_url tabopen
 bind ys clipboard yankshort
 bind yc clipboard yankcanon
 bind ym clipboard yankmd
-bind yo clipboard yankorg
 bind yt clipboard yanktitle
 bind gh home
 bind gH home true
