@@ -69,7 +69,7 @@ bind ;C composite hint_focus; !s xdotool key Menu
 " add current page to orgmode
 bind yo composite js "[[" +  document.location.href +"][" + document.title + "]]" | clipboard yank
 " add selected link to clipboard as orgmode thing
-bind ;d hint -F e => navigator.clipboard.writeText("[[" + e.href+ "][" +e.textContent+ "]]")
+bind ;d hint -F e => navigator.clipboard.writeText("[[" + e.href+ "][" +e.textContent.trim() + "]]")
 
 " Suspend / "discard" all tabs - handy for stretching out battery life
 command discardall jsb browser.tabs.query({}).then(ts => browser.tabs.discard(ts.map(t=>t.id)))
