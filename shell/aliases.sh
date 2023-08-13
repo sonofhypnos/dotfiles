@@ -1,9 +1,9 @@
 unifiles2="$HOME/Dropbox/semester2"
 #unifiles="$HOME/Dropbox/semester3"
-unifiles="$HOME/Dropbox/semester4"
+unifiles="$HOME/Dropbox/semester6"
 unifiles5="$HOME/Dropbox/semester5"
 unifiles6="$HOME/Dropbox/semester6"
-mphfiles="$unifiles/4040451\ –\ Moderne\ Physik\ für\ Informatiker/"
+mphfiles="$unifiles/4040451\ –\ Moderne\ Physik\ für\ Informatiker"
 cvxfiles="$unifiles5/convex_optimization/"
 pgfiles="$unifiles6/24614\ –\ Algorithmen\ für\ planare\ Graphen\ \(mit\ Übungen\)"
 
@@ -43,7 +43,7 @@ alias hm1="xdg-open ~/Dropbox/semester2/Höhere\ Mathematik\ I\ \(Analysis\)\ f�
 alias hm2="xdg-open $unifiles2/Höhere\ Mathematik\ I\ \(Analysis\)\ für\ die\ Fachrichtung\ Informatik/Vorlesungsmaterial/HM2.pdf && exit"
 
 alias rs="cd $unifiles ; ranger"
-alias mph="cd $mphfiles ; ranger"
+alias mph="xdg-open $mphfiles/Vorlesung-Skript/VL.pdf  ; ranger"
 alias cvx="cd $cvxfiles ; ranger"
 alias txt="cd ~/Dropbox/textbooks/ ; ranger"
 alias ml="zathura ~/Dropbox/textbooks/machine\ learning\ from\ theory\ to\ algorithms.pdf"
