@@ -17,7 +17,7 @@ in {
   # You can update Home Manager without changing this value. See
   # the Home Manager release notes for a list of state version
   # changes in each release.
-  home.stateVersion = "22.05";
+  home.stateVersion = "23.05";
 
   # nixpkgs.overlays = [
   #  (import (builtins.fetchTarball {
@@ -27,6 +27,7 @@ in {
 
   home.packages = [
     pkgs.ripgrep
+    pkgsUnstable.lua54Packages.digestif
 
     #pkgsUnstable._1password #NOTE: not installing 1password for now since connection between apps did not work
     #pkgsUnstable._1password-gui
