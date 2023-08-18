@@ -1,6 +1,15 @@
+
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
+if [[ $TERM = "tramp" ]]; then
+        unset RPROMPT
+        unset RPS1
+        PS1="$ "
+        unsetopt zle
+        unsetopt rcs  # Inhibit loading of further config files
+        return
+fi
 
 # If not running interactively, don't do anything
 case $- in
