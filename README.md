@@ -1,5 +1,6 @@
 # dotfiles
 Welcome to my [dotfiles](https://wiki.archlinux.org/title/Dotfiles) 👋! I use [dotbot](https://github.com/anishathalye/dotbot) to manage the files. 
+I'd discourage just forking this repo, because lots of things here are specific to my workflow. Don't shoot yourself in the foot! Feel free to copy what you like though.
 
 ## Overview
 The following files/folders might be of interest to you:
@@ -11,15 +12,49 @@ The following files/folders might be of interest to you:
 
 My [Doom-Emacs](https://github.com/hlissner/doom-emacs/blob/develop/docs/getting_started.org) files are in a separate [repo](https://github.com/sonofhypnos/emacs-config/)
 
-## Install (intended for myself)
+## Setting up remote machine (intended for myself)
+
+In case we want to push stuff to github:
 
 ``` sh
-git clone --depth 1 --recurse-submodules -j8 git@github.com:sonofhypnos/dotfiles.git
+ssh-keygen -f ~/.ssh/github
+```
+And add the public key to your github account.
+
+``` sh
+sudo apt update
+sudo apt install neovim zsh emacs
+
 ```
 
-Once installed you need to run the `enable_services.sh` script with root to enable systemd services. Next you want to figure out how to get the home manager installed for the programs you installed through it (like ripgrep. Longterm you want to move as much as possible of your programs from apt to nix).
+Install the repo
+``` sh
+git clone --depth 1 --recurse-submodules -j8 git@github.com:sonofhypnos/dotfiles.git ~/.dotfiles
+```
+
+Then run ./install.sh (make sure you have emacs and neovim installed)
+
+put the following at the top of the bashrc (if your are using the local one)
+
+``` bash
+if [[ $TERM = "tramp" ]]; then
+        unset RPROMPT
+        unset RPS1
+        PS1="$ "
+        unsetopt zle
+        unsetopt rcs  # Inhibit loading of further config files
+        return
+fi
+
+```
+
+
+If this is your desktop, once installed you need to run the `enable_services.sh` script with root to enable systemd services. Next you want to figure out how to get the home manager installed for the programs you installed through it (like ripgrep. Longterm you want to move as much as possible of your programs from apt to nix).
 
 ## miscellaneous/obscure
  - `Xcompose` Compose key file for the German [neo keyboard layout](https://neo-layout.org/).
  - `trydactylrc` [tridactyl](https://github.com/tridactyl/tridactyl) configuration - Vim navigation in Firefox
 
+## todos
+- [ ] Make sure install does not do weird things when we haven't installed emacs
+- [ ] same for neovim (for commiting with git for example)

@@ -1,3 +1,11 @@
+if [[ $TERM = "tramp" ]]; then
+        unset RPROMPT
+        unset RPS1
+        PS1="$ "
+        unsetopt zle
+        unsetopt rcs  # Inhibit loading of further config files
+        return
+fi
 # If you come from bash you might have to change your $PATH. See:
 # fix commandline with pycharm: https://stackoverflow.com/questions/41960441/why-my-zsh-in-pycharm-doesnt-have-correct-path
 export PATH=$HOME/bin:/usr/local/bin:$PATH
