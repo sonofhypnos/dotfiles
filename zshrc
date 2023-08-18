@@ -98,7 +98,13 @@ source ~/.shell/paths.sh
 # Aliases
 source ~/.shell/aliases.sh
 
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/tassilo/.pyenv/versions/3.6.15/lib
+if [ -d ~/.pyenv ]; then
+    export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/tassilo/.pyenv/versions/3.6.15/lib
+
+    export PYENV_ROOT="$HOME/.pyenv"
+    command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+    eval "$(pyenv init -)"
+fi
 
 # fzf
 if [ -e /usr/share/doc/fzf ]; then
@@ -166,6 +172,3 @@ export NVM_DIR="$HOME/.nvm"
 
 
 
-export PYENV_ROOT="$HOME/.pyenv"
-command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
