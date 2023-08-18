@@ -17,11 +17,6 @@ My [Doom-Emacs](https://github.com/hlissner/doom-emacs/blob/develop/docs/getting
 In case we want to push stuff to github:
 
 ``` sh
-ssh-keygen -f ~/.ssh/github
-```
-And add the public key to your github account.
-
-``` sh
 sudo apt update
 sudo apt install neovim zsh emacs
 
