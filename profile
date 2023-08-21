@@ -27,3 +27,8 @@ if [ -d "$HOME/.local/bin" ] ; then
 fi
 if [ -e /home/tassilo/.nix-profile/etc/profile.d/nix.sh ]; then . /home/tassilo/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
 . "$HOME/.cargo/env"
+
+
+# for homemanager
+. "$HOME/.nix-profile/etc/profile.d/hm-session-vars.sh"
+
