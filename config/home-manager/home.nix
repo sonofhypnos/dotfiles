@@ -27,8 +27,12 @@ in {
 
   home.packages = [
     pkgs.ripgrep
-    pkgsUnstable.lua54Packages.digestif
+    # pkgsUnstable.lua54Packages.digestif
 
+    pkgs.rxvt-unicode
+    # (pkgs.rxvt_unicode.override {
+    #   withPerls = [ pkgs.rxvt_unicode_perl ]; # Add copy and paste to urxvt
+    # })
     #pkgsUnstable._1password #NOTE: not installing 1password for now since connection between apps did not work
     #pkgsUnstable._1password-gui
   ];
