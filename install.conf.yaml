@@ -17,7 +17,7 @@
     ~/.ideavimrc:
 #    ~/.XCompose: 
 #    ~/.Xresources-regolith:
-#    ~/.Xresources:
+    ~/.Xresources:
 #    ~/.xinitrc:
     ~/.zshrc:
 #    ~/.jupyter:
