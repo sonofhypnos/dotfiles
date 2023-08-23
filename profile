@@ -25,17 +25,33 @@ fi
 if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
-if [ -e /home/tassilo/.nix-profile/etc/profile.d/nix.sh ]; then .
+if [ -f /home/tassilo/.nix-profile/etc/profile.d/nix.sh ]; then .
   /home/tassilo/.nix-profile/etc/profile.d/nix.sh
 fi # added by Nix installer
 
-if [ -e "$HOME/.local/bin" ]; then
+#cargo
+if [ -s "$HOME/.cargo/env" ]; then
   . "$HOME/.cargo/env"
 fi
 
-
 # for homemanager
-if [ -e "$HOME/.nix-profile/etc/profile.d/hm-session-vars.sh" ]; then
+if [ -s "$HOME/.nix-profile/etc/profile.d/hm-session-vars.sh" ]; then
   . "$HOME/.nix-profile/etc/profile.d/hm-session-vars.sh"
 fi
 
+
+#ghcup
+[ -s "$HOME/.ghcup/env" ] && source "$HOME/.ghcup/env" # ghcup-env
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+#pyenv
+if [ -d ~/.pyenv ]; then
+    export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/tassilo/.pyenv/versions/3.6.15/lib
+
+    export PYENV_ROOT="$HOME/.pyenv"
+    command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+    eval "$(pyenv init -)"
+fi
