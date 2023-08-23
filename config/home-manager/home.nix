@@ -27,9 +27,9 @@ in {
 
   home.packages = [
     pkgs.ripgrep
-    # pkgsUnstable.lua54Packages.digestif
-
+    pkgs.zathura
     pkgs.rxvt-unicode
+    # pkgsUnstable.lua54Packages.digestif
     # (pkgs.rxvt_unicode.override {
     #   withPerls = [ pkgs.rxvt_unicode_perl ]; # Add copy and paste to urxvt
     # })
