@@ -89,11 +89,11 @@ export EDITOR=nvim export VISUAL=nvim
 source ~/.shell/functions.sh
 
 # Allow local customizations in the ~/.zshrc_local_before file
-if [ -f ~/.zshrc_local_before ]; then
+if [ -s ~/.zshrc_local_before ]; then
     source ~/.zshrc_local_before; fi
 
 # Allow local customizations in the ~/.shell_local_before file
-if [ -f ~/.shell_local_before ]; then
+if [ -s ~/.shell_local_before ]; then
     source ~/.shell_local_before; fi
 
 #   Emacs vterm support
@@ -137,7 +137,7 @@ __conda_setup="$('/home/tassilo/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
-    if [ -f "$HOME/miniconda3/etc/profile.d/conda.sh" ]; then
+    if [ -s "$HOME/miniconda3/etc/profile.d/conda.sh" ]; then
         . "$HOME/miniconda3/etc/profile.d/conda.sh"
     else
         export PATH="/home/tassilo/miniconda3/bin:$PATH"
@@ -146,7 +146,7 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+[ -s ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 alias sudo='sudo '
 
