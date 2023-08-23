@@ -15,9 +15,9 @@
     ~/.bash_logout: 
     ~/.gitconfig: 
     ~/.ideavimrc:
-#    ~/.XCompose: 
-#    ~/.Xresources-regolith:
-    ~/.Xresources:
+    ~/.XCompose: 
+#    ~/.Xresources-regolith: #not sure what happened to this file
+#    ~/.Xresources: #managed by home-nix now
 #    ~/.xinitrc:
     ~/.zshrc:
 #    ~/.jupyter:

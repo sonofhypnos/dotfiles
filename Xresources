@@ -6,6 +6,30 @@ XTerm*renderFont: true
 XTerm*background: black
 XTerm*foreground: white
 
+
+! urxvt settings
+Xft.dpi: 93 #formula for correct value: pixels/(inches of screen in that dimension)
+! URxvt.font: xft:Monospace:size=10 ! previous font
+URxvt.font: xft:BitstreamVeraSansMono Nerd Font:size=12
+
+! Dark mode
+URxvt.foreground: #c0c0c0
+URxvt.background: #202020
+
+! Disabling blinking cursor
+URxvt.cursorBlink: false
+
+! Scrolling & History
+URxvt.saveLines: 10000
+URxvt.scrollBar: true
+URxvt.scrollBar_right: true
+
+! Enable copy and paste
+URxvt.perl-ext-common: default,clipboard
+URxvt.keysym.M-c: perl:clipboard:copy
+URxvt.keysym.M-v: perl:clipboard:paste
+
+
 !! see: https://addy-dclxvi.github.io/post/configuring-urxvt/
 !! Colorscheme
 

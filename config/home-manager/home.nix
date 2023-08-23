@@ -3,8 +3,12 @@
 let
   pkgsUnstable = import <nixpkgs-unstable> {
     config.allowUnfree = true;
-  }; # This line allows me to selectively use unstable version (it also enables unfree packages in this version)
 
+  }; # This line allows me to selectively use unstable version (it also enables unfree packages in this version)
+  clipboardScriptPath = ./urxvt_clipboard.pl;
+
+  xresourcesContent = builtins.readFile
+    /home/tassilo/.dotfiles/Xresources; # Read the content of the external file
 in {
 
   home.username = "tassilo";
@@ -29,6 +33,8 @@ in {
     pkgs.ripgrep
     pkgs.zathura
     pkgs.rxvt-unicode
+    pkgs.fontconfig
+    pkgs.xclip
     # pkgsUnstable.lua54Packages.digestif
     # (pkgs.rxvt_unicode.override {
     #   withPerls = [ pkgs.rxvt_unicode_perl ]; # Add copy and paste to urxvt
@@ -36,12 +42,24 @@ in {
     #pkgsUnstable._1password #NOTE: not installing 1password for now since connection between apps did not work
     #pkgsUnstable._1password-gui
   ];
-
-  #programs.emacs = {
-  #    enable = true;
-  #    package = pkgs.emacsGit;
-  #   extraPackages = (epkgs: [ epkgs.vterm ] );
+  # Configuration for URxvt to use the Perl extension
+  # xsession.terminal = {
+  #   urxvt = {
+  #     perl-lib = "${
+  #         ./.
+  #       }/urxvt_clipboard.pl"; # This line references the script in the current directory
+  #   };
   # };
+  home.file.".Xresources".text = ''
+    ${xresourcesContent}  # Include content from Xresources
+
+    URxvt.perl-lib: ${clipboardScriptPath}
+    URxvt.perl-ext-common: default,clipboard
+    URxvt.keysym.C-S-V: perl:clipboard:paste
+  '';
+  #In the above not sure what the line:
+  #URxvt.perl-ext-common: default,clipboard
+  #does exactly
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;

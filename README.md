@@ -53,4 +53,5 @@ If this is your desktop, once installed you need to run the `enable_services.sh`
 ## todos
 - [ ] Make sure install does not do weird things when we haven't installed emacs
 - [ ] same for neovim (for commiting with git for example)
+- [ ] move all dotbot stuff that I only need for my home to nix already (this is absolutely optional though.)
 - [ ] create a bootstrap script to install nix and setup home-manager (for now I gave up on this, because nix doesn't like to work with root as docker does.)
