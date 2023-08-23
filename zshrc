@@ -13,7 +13,7 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 
-# Making ctrl+R work in neovim-terminal: 
+# Making ctrl+R work in neovim-terminal:
 # For more info see https://github.com/junegunn/fzf/issues/809
 [ -n "$NVIM_LISTEN_ADDRESS" ] && export FZF_DEFAULT_OPTS='--no-height'
 
@@ -106,13 +106,6 @@ source ~/.shell/paths.sh
 # Aliases
 source ~/.shell/aliases.sh
 
-if [ -d ~/.pyenv ]; then
-    export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/tassilo/.pyenv/versions/3.6.15/lib
-
-    export PYENV_ROOT="$HOME/.pyenv"
-    command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
-    eval "$(pyenv init -)"
-fi
 
 # fzf
 if [ -e /usr/share/doc/fzf ]; then
@@ -123,7 +116,7 @@ if [ -e /usr/share/doc/fzf ]; then
 #     . /home/tassilo/.nix-profile/etc/profile.d/nix.sh; fi
 
 # SDKMAN
-if [ -d ~/.sdkman ]; then 
+if [ -d ~/.sdkman ]; then
 export SDKMAN_DIR="/home/tassilo/.sdkman"
 [[ -s "/home/tassilo/.sdkman/bin/sdkman-init.sh" ]] && source "/home/tassilo/.sdkman/bin/sdkman-init.sh"
 fi
@@ -143,19 +136,13 @@ else
         export PATH="/home/tassilo/miniconda3/bin:$PATH"
     fi
 fi
+
 unset __conda_setup
 # <<< conda initialize <<<
 
 [ -s ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 alias sudo='sudo '
-
-#add pyenv:
-#
-
-#export PYENV_ROOT="$HOME/.pyenv"
-#command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
-#eval "$(pyenv init -)"
 
 #for prioritylists in lsp-mode (for better performance)
 export LSP_USE_PLISTS=true
@@ -167,16 +154,5 @@ export LSP_USE_PLISTS=true
 #if [ -f /home/tassilo/repos/axii/armarx_setup/cli/config_files/armarx-setup-complete.zsh ]; then
 #  source /home/tassilo/repos/axii/armarx_setup/cli/config_files/armarx-setup-complete.zsh
 #fi
-
-
-
-[ -f "$HOME/.ghcup/env" ] && source "$HOME/.ghcup/env" # ghcup-env
-
-[ -f "$HOME/.nix-profile/etc/profile.d/hm-session-vars.sh" ] && source "$HOME/.nix-profile/etc/profile.d/hm-session-vars.sh"
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
 
 
