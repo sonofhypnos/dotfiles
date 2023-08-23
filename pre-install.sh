@@ -26,7 +26,7 @@
 set -e
 
 confirm() {
-  read -pr "$1 [y/N] " response
+  read -p "$1 [y/N] " response
   case "$response" in
     [yY][eE][sS] | [yY])
       true
