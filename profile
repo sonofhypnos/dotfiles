@@ -25,10 +25,17 @@ fi
 if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
-if [ -e /home/tassilo/.nix-profile/etc/profile.d/nix.sh ]; then . /home/tassilo/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
-. "$HOME/.cargo/env"
+if [ -e /home/tassilo/.nix-profile/etc/profile.d/nix.sh ]; then .
+  /home/tassilo/.nix-profile/etc/profile.d/nix.sh
+fi # added by Nix installer
+
+if [ -e "$HOME/.local/bin" ]; then
+  . "$HOME/.cargo/env"
+fi
 
 
 # for homemanager
-. "$HOME/.nix-profile/etc/profile.d/hm-session-vars.sh"
+if [ -e "$HOME/.nix-profile/etc/profile.d/hm-session-vars.sh" ]; then
+  . "$HOME/.nix-profile/etc/profile.d/hm-session-vars.sh"
+fi
 
