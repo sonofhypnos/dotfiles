@@ -16,10 +16,10 @@ My [Doom-Emacs](https://github.com/hlissner/doom-emacs/blob/develop/docs/getting
 
 In case we want to push stuff to github:
 
-``` sh
+``` bash
 sudo apt update
-sudo apt install neovim zsh emacs
-
+sudo apt install git python3 curl neovim #zsh emacs
+sudo apt install xz-utils #necessary for unpacking tarballs (which we need to install nix)
 ```
 
 Install the repo
@@ -53,3 +53,4 @@ If this is your desktop, once installed you need to run the `enable_services.sh`
 ## todos
 - [ ] Make sure install does not do weird things when we haven't installed emacs
 - [ ] same for neovim (for commiting with git for example)
+- [ ] create a bootstrap script to install nix and setup home-manager (for now I gave up on this, because nix doesn't like to work with root as docker does.)
