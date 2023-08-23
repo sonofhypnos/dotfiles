@@ -168,27 +168,3 @@ if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init -)"
 fi
 
-## >>> conda initialize >>>
-## !! Contents within this block are managed by 'conda init' !!
-#__conda_setup="$('/home/tassilo/miniconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
-#if [ $? -eq 0 ]; then
-#    eval "$__conda_setup"
-#else
-#    if [ -f "/home/tassilo/miniconda3/etc/profile.d/conda.sh" ]; then
-#        . "/home/tassilo/miniconda3/etc/profile.d/conda.sh"
-#    else
-#        export PATH="/home/tassilo/miniconda3/bin:$PATH"
-#    fi
-#fi
-#unset __conda_setup
-## <<< conda initialize <<<
-
-# three lines below are there to initialize vastai server
-if [[ -f ~/.vast_containerlabel]]; then
-    PATH='/opt/conda/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
-    VAST_CONTAINERLABEL="$(cat ~/.vast_containerlabel)"
-    PS1="\[^[]0;\u@$VAST_CONTAINERLABEL: \w^G\]\[^[[01;34m\]\u\[^[[m^[[01m\]@\[^[[01;36m\]$VAST_CONTAINERLABEL\[^[[m^[[01m\]:\[^[[01;37m\]\w\$\[^[[m\] " ; if [ ! -e "$HOME/.no_auto_tmux" ] && [[ -z "$TMUX" ]] && [ "$SSH_CONNECTION" != "" ] && [ "$TMUX_STARTED" = "" ]; then tmux attach-session -t ssh_tmux || tmux new-session -s ssh_tmux; exit; elif ! [[ -z "$TMUX" ]]; then echo 'Welcome to your vast.ai container! This session is running in `tmux`.'; echo 'To disconnect without closing your processes, press ctrl+b, release, then d.'; echo 'To disable auto-tmux, run `touch ~/.no_auto_tmux` and reconnect. See also https://tmuxcheatsheet.com/'; fi;
-fi
-
-
-[ -f "/home/tassilo/.ghcup/env" ] && source "/home/tassilo/.ghcup/env" # ghcup-env

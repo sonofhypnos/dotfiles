@@ -111,9 +111,6 @@ source ~/.shell/aliases.sh
 if [ -e /usr/share/doc/fzf ]; then
     source /usr/share/doc/fzf/examples/key-bindings.zsh
     source /usr/share/doc/fzf/examples/completion.zsh; fi
-# Nix
-# if [ -f /home/tassilo/.nix-profile/etc/profile.d/nix.sh ]; then
-#     . /home/tassilo/.nix-profile/etc/profile.d/nix.sh; fi
 
 # SDKMAN
 if [ -d ~/.sdkman ]; then
@@ -123,22 +120,6 @@ fi
 
 # disable special meaning for brackets by default
 alias rake='noglob rake'
-
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/tassilo/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -s "$HOME/miniconda3/etc/profile.d/conda.sh" ]; then
-        . "$HOME/miniconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/home/tassilo/miniconda3/bin:$PATH"
-    fi
-fi
-
-unset __conda_setup
-# <<< conda initialize <<<
 
 [ -s ~/.fzf.zsh ] && source ~/.fzf.zsh
 
