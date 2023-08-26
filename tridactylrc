@@ -50,8 +50,8 @@ bindurl www.google.com F hint -Jbc #search div:not(.action-menu) > a
 " bindurl ^https://duckduckgo.com f hint -Jc [class=result__a]
 " bindurl ^https://duckduckgo.com F hint -Jbc [class=result__a]
 
-" Allow Ctrl-a to select all in the commandline
-unbind --mode=ex <C-a>
+" Allow Ctrl-a to select all
+unbind <C-a>
 
 " Allow Ctrl-c to copy in the commandline
 unbind --mode=ex <C-c>
@@ -464,4 +464,3 @@ autocmd BeforeRequest https://www.lesswrong.com/* js (tri.excmds.exclaim_quiet("
 
 " For syntax highlighting see https://github.com/tridactyl/vim-tridactyl
 " vim: set filetype=tridactyl
-
