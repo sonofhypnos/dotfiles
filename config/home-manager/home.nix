@@ -35,6 +35,10 @@ in {
     pkgs.rxvt-unicode
     pkgs.fontconfig
     pkgs.xclip
+    pkgs.git-lfs
+    pkgs.git
+    # pkgs.bfg-repo-cleaner
+    pkgs.git-filter-repo
     # pkgsUnstable.lua54Packages.digestif
     # (pkgs.rxvt_unicode.override {
     #   withPerls = [ pkgs.rxvt_unicode_perl ]; # Add copy and paste to urxvt
@@ -42,6 +46,7 @@ in {
     #pkgsUnstable._1password #NOTE: not installing 1password for now since connection between apps did not work
     #pkgsUnstable._1password-gui
   ];
+
   # Configuration for URxvt to use the Perl extension
   # xsession.terminal = {
   #   urxvt = {
@@ -63,5 +68,7 @@ in {
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
+
+  programs.git.lfs.enable = true;
 
 }
