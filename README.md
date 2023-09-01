@@ -6,7 +6,8 @@ I'd discourage just forking this repo, because lots of things here are specific 
 The following files/folders might be of interest to you:
 
  - `config/espanso/default.yml` textexpansions for [espanso](https://espanso.org)
- - `config/regolith` configuration for [regolith](https://regolith-linux.org/) = Ubuntu + i3
+ - `config/home-manager/` my [home-manager](https://github.com/nix-community/home-manager) config
+ - `config/regolith` configuration for [regolith](https://regolith-linux.org/) ≅ Ubuntu + i3
  - `nvim` neovim configuration and plugins
  - `gitconfig` git configuration
 

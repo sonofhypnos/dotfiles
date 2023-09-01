@@ -35,7 +35,24 @@ in {
     pkgs.texlab # for emacs lsp in tex
     pkgs.jdk17_headless
     pkgs.languagetool
+    pkgs.janet
+    pkgs.nix-lsp
   ];
+
+  # programs.zsh = {
+  #   enable = true;
+  #   enableCompletion = true;
+  #   plugins = [{
+  #     name = "zsh-nix-shell";
+  #     file = "nix-shell.plugin.zsh";
+  #     src = pkgs.fetchFromGitHub {
+  #       owner = "chisui";
+  #       repo = "zsh-nix-shell";
+  #       rev = "v0.7.0";
+  #       sha256 = "149zh2rm59blr2q458a5irkfh82y3dwdich60s9670kl3cl5h2m1";
+  #     };
+  #   }];
+  # };
 
   home.file.".Xresources".text = ''
     ${xresourcesContent}
@@ -50,10 +67,18 @@ in {
 
   programs.git.lfs.enable = true;
   home.file."${envFile}".text = ''
-    (setq languagetool-java-arguments '("-Dfile.encoding=UTF-8" "-cp" "${pkgs.languagetool}/share/")
-          languagetool-java-bin "${pkgs.jdk17_headless}/bin/java"
-          languagetool-console-command "${pkgs.languagetool}/share/languagetool-commandline.jar"
-          languagetool-server-command "${pkgs.languagetool}/share/languagetool-server.jar")
+        (setq languagetool-java-arguments '("-Dfile.encoding=UTF-8" "-cp" "${pkgs.languagetool}/share/")
+              languagetool-java-bin "${pkgs.jdk17_headless}/bin/java"
+              languagetool-console-command "${pkgs.languagetool}/share/languagetool-commandline.jar"
+              languagetool-server-command "${pkgs.languagetool}/share/languagetool-server.jar")
+
+    (after! nix-mode
+      (add-to-list 'lsp-language-id-configuration '(nix-mode . "nix"))
+      (lsp-register-client
+       (make-lsp-client :new-connection (lsp-stdio-connection "nix-lsp")
+                        :major-modes '(nix-mode)
+                        :server-id 'nix-lsp))
+      (add-hook 'nix-mode-hook #'lsp!))
   '';
 
   # ... Your previous home-manager config here.
