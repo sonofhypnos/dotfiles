@@ -2,9 +2,8 @@
   description = "My home-manager config as a flake";
 
   inputs = {
-    nixpkgs.url = "https://nixos.org/channels/nixos-23.05";
-    home-manager.url =
-      "https://github.com/nix-community/home-manager/archive/release-23.05.tar.gz";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-23.05";
+    home-manager.url = "github:nix-community/home-manager/release-23.05";
   };
 
   outputs = { self, nixpkgs, home-manager, ... }:
