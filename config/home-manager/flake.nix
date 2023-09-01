@@ -16,10 +16,10 @@
         stateVersion = "23.05";
         configuration = { config, lib, ... }:
           let
-            pkgsUnstable = import nixpkgs {
-              inherit system;
-              config.allowUnfree = true;
-            };
+            # pkgsUnstable = import nixpkgs {
+            #   inherit system;
+            #   config.allowUnfree = true;
+            # }; NOTE: don't need unstable for now, but just keeping it here for when I do.
             clipboardScriptPath = ./urxvt_clipboard.pl;
             xresourcesContent =
               builtins.readFile /home/tassilo/.dotfiles/Xresources;
