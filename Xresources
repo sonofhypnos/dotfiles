@@ -1,15 +1,9 @@
 ! #########################################
-XTerm*font: xft:meslolgsdz:size=11
-
-XTerm*renderFont: true
-
-XTerm*background: black
-XTerm*foreground: white
-
 
 ! urxvt settings
-Xft.dpi: 93 #formula for correct value: pixels/(inches of screen in that dimension)
-! URxvt.font: xft:Monospace:size=10 ! previous font
+! We set dpi, so urxvt gets correct values
+Xft.dpi: 93 !formula for correct value: pixels/(inches of screen in that dimension)
+
 URxvt.font: xft:BitstreamVeraSansMono Nerd Font:size=12
 
 ! Dark mode
@@ -24,14 +18,10 @@ URxvt.saveLines: 10000
 URxvt.scrollBar: true
 URxvt.scrollBar_right: true
 
-! Enable copy and paste
-URxvt.perl-ext-common: default,clipboard
-URxvt.keysym.M-c: perl:clipboard:copy
-URxvt.keysym.M-v: perl:clipboard:paste
-
-
 !! see: https://addy-dclxvi.github.io/post/configuring-urxvt/
 !! Colorscheme
+Emacs*menu*Background: #2e3436
+Emacs*menu*Foreground: #eeeeec
 
 ! special
 *.foreground: #93a1a1
