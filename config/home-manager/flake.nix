@@ -9,7 +9,6 @@
   outputs = { self, nixpkgs, home-manager, ... }:
     let
       system = "x86_64-linux";
-      pkgs = nixpkgs.legacyPackages.${system};
       home = home-manager.lib.homeManagerConfiguration {
         username = "tassilo";
         homeDirectory = "/home/tassilo";
@@ -25,6 +24,7 @@
               builtins.readFile /home/tassilo/.dotfiles/Xresources;
             doomDir = ".doom.d";
             envFile = "${doomDir}/emacs-hm-env.el";
+            pkgs = nixpkgs.legacyPackages.${system};
           in {
 
             # home.username = "tassilo";
