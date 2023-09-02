@@ -22,27 +22,56 @@ in {
   # changes in each release.
   # home.stateVersion = "23.05";
 
-  home.packages = [
-    pkgs.ripgrep
-    pkgs.zathura
-    pkgs.rxvt-unicode
-    pkgs.fontconfig
-    pkgs.xclip
-    pkgs.git-lfs
-    pkgs.git
-    pkgs.git-filter-repo
-    pkgs.emacs29
-    pkgs.texlab # for emacs lsp in tex
-    pkgs.jdk17_headless
-    pkgs.languagetool
-    pkgs.janet
-    pkgs.rnix-lsp
-    pkgs.zsh-nix-shell
-    pkgs.zsh
-  ];
+  home = {
+    packages = [
+      pkgs.ripgrep
+      pkgs.zathura
+      pkgs.rxvt-unicode
+      pkgs.fontconfig
+      pkgs.xclip
+      pkgs.git-lfs
+      pkgs.git
+      pkgs.git-filter-repo
+      pkgs.emacs29
+      pkgs.texlab # for emacs lsp in tex
+      pkgs.jdk17_headless
+      pkgs.languagetool
+      pkgs.janet
+      pkgs.rnix-lsp
+      pkgs.zsh-nix-shell
+      pkgs.zsh
+    ];
 
+    sessionVariables = { SHELL = "${pkgs.zsh}/bin/zsh"; };
+
+    file."${envFile}".text = ''
+          (setq languagetool-java-arguments '("-Dfile.encoding=UTF-8" "-cp" "${pkgs.languagetool}/share/")
+                languagetool-java-bin "${pkgs.jdk17_headless}/bin/java"
+                languagetool-console-command "${pkgs.languagetool}/share/languagetool-commandline.jar"
+                languagetool-server-command "${pkgs.languagetool}/share/languagetool-server.jar")
+
+      (after! nix-mode
+        (add-to-list 'lsp-language-id-configuration '(nix-mode . "nix"))
+        (lsp-register-client
+         (make-lsp-client :new-connection (lsp-stdio-connection "nix-lsp")
+                          :major-modes '(nix-mode)
+                          :server-id 'nix-lsp))
+        (add-hook 'nix-mode-hook #'lsp!))
+    '';
+
+    file.".Xresources".text = ''
+      ${xresourcesContent}
+
+      URxvt.perl-lib: ${clipboardScriptPath}
+      URxvt.perl-ext-common: default,clipboard
+      URxvt.keysym.C-S-V: perl:clipboard:paste
+    '';
+
+  };
   programs.zsh = {
     enable = true;
+    enableAutosuggestions = true;
+    enableSyntaxHighlighting = true;
     enableCompletion = true;
     initExtra = ''
       ${builtins.readFile ../../zshrc}
@@ -55,9 +84,6 @@ in {
         "colored-man-pages"
         "colorize"
         "fasd"
-        "zsh-syntax-highlighting"
-        "zsh-autosuggestions"
-        "zsh-wakatime"
       ]; # Add your plugins here
     };
     plugins = [{
@@ -72,32 +98,10 @@ in {
     }];
   };
 
-  home.file.".Xresources".text = ''
-    ${xresourcesContent}
-
-    URxvt.perl-lib: ${clipboardScriptPath}
-    URxvt.perl-ext-common: default,clipboard
-    URxvt.keysym.C-S-V: perl:clipboard:paste
-  '';
-
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 
   programs.git.lfs.enable = true;
-  home.file."${envFile}".text = ''
-        (setq languagetool-java-arguments '("-Dfile.encoding=UTF-8" "-cp" "${pkgs.languagetool}/share/")
-              languagetool-java-bin "${pkgs.jdk17_headless}/bin/java"
-              languagetool-console-command "${pkgs.languagetool}/share/languagetool-commandline.jar"
-              languagetool-server-command "${pkgs.languagetool}/share/languagetool-server.jar")
-
-    (after! nix-mode
-      (add-to-list 'lsp-language-id-configuration '(nix-mode . "nix"))
-      (lsp-register-client
-       (make-lsp-client :new-connection (lsp-stdio-connection "nix-lsp")
-                        :major-modes '(nix-mode)
-                        :server-id 'nix-lsp))
-      (add-hook 'nix-mode-hook #'lsp!))
-  '';
 
   # ... Your previous home-manager config here.
   # Remember to replace `pkgs` with `pkgsUnstable` if you need packages from unstable.
