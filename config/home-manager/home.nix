@@ -47,14 +47,18 @@ in {
     initExtra = ''
       ${builtins.readFile ../../zshrc}
     '';
+    oh-my-zsh = {
+      enable = true;
+      plugins = [ "git" "sudo" ]; # Add your plugins here
+    };
     plugins = [
-      "git"
-      "alias-finder"
-      "colored-man-pages"
-      "colorize"
-      "fasd"
-      "zsh-syntax-highlighting"
-      "zsh-autosuggestions"
+      # "git"
+      # "alias-finder"
+      # "colored-man-pages"
+      # "colorize"
+      # "fasd"
+      # "zsh-syntax-highlighting"
+      # "zsh-autosuggestions"
       # "zsh-wakatime"
       {
         name = "zsh-nix-shell";
