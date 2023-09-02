@@ -78,6 +78,7 @@ in {
     '';
     oh-my-zsh = {
       enable = true;
+      theme = "fwalch";
       plugins = [
         "git"
         "alias-finder"
