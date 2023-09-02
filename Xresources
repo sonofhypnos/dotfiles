@@ -2,7 +2,8 @@
 
 ! urxvt settings
 ! We set dpi, so urxvt gets correct values
-Xft.dpi: 93 !formula for correct value: pixels/(inches of screen in that dimension)
+Xft.dpi: 93 
+!formula for correct value: pixels/(inches of screen in that dimension)
 
 URxvt.font: xft:BitstreamVeraSansMono Nerd Font:size=12
 
