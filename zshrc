@@ -65,16 +65,16 @@ ZSH_CUSTOM="$HOME/.dotfiles/zsh/custom"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git
-	alias-finder
-	colored-man-pages
-	colorize
-	fasd
-	zsh-syntax-highlighting
-	zsh-autosuggestions
-	zsh-wakatime)
+# plugins=(git
+# 	alias-finder
+# 	colored-man-pages
+# 	colorize
+# 	fasd
+# 	zsh-syntax-highlighting
+# 	zsh-autosuggestions
+# 	zsh-wakatime)
 
-source $ZSH/oh-my-zsh.sh
+# source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
