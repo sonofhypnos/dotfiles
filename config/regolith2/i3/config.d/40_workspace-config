@@ -295,7 +295,8 @@ exec --no-startup-id /usr/libexec/gnome-settings-daemon-localeexec
 exec --no-startup-id dconf write /org/gnome/settings-daemon/plugins/cursor/active false
 
 #Assign variables for special Applications
-set $main_launcher Main Launcher: main gather[t]own [f]ocusmate [w]hatsapp [g]mail [k]eep [c]alendar [d]iscord gpt[4] [a]nki [r]eminder
+set $main_launcher Main Launcher: main gather[t]own [f]ocusmate [w]hatsapp [g]mail [k]eep [c]alendar [d]iscord gpt[4] [a]nki [r]eminder [p]rediction
+set $fatebook google-chrome --app=https://fatebook.io/
 set $gathertown google-chrome --app=https://app.gather.town/app/Yhi4XYj0zFNWuUNv/EA%20coworking%20and%20lounge
 set $whatsapp google-chrome --app=https://web.whatsapp.com 
 set $gmail google-chrome --app=https://mail.google.com 
@@ -303,7 +304,6 @@ set $keep google-chrome --app=https://keep.google.com
 set $calendar google-chrome --app=https://calendar.google.com 
 set $focusmate google-chrome --app=https://focusmate.com
 set $gpt google-chrome --app=https://chat.openai.com/?model=gpt-4
-set $polar google-chrome --app=https://app.getpolarized.io/
 set $sitzplatz google-chrome --app=https://raumbuchung.bibliothek.kit.edu/sitzplatzreservierung/day.php?year=2021&month=7&day=1&area=20&room=140
 set $teams google-chrome --app=https://teams.microsoft.com
 set $discord discord 
@@ -341,9 +341,9 @@ mode "$main_launcher" {
 	bindsym c mode "default" exec $calendar
 	bindsym d mode "default" exec discord
 	bindsym 3 mode "default" exec $firefox https://i3wm.org/docs/userguide.html
+	bindsym p mode "default" exec $fatebook
 #	bindsym i mode "default" exec $intellij
 	bindsym 4 mode "default" exec $gpt
-	bindsym p mode "default" exec $polar
 	bindsym a mode "default" exec anki
 	bindsym m mode "default" exec $teams
 	bindsym r mode "default" exec firefox https://web.colreminder.com/en-US/addReminder
@@ -392,7 +392,7 @@ set $kill [con_id="__focused__"] exec --no-startup-id kill -9 $(xdotool getwindo
 #set $hardKill [con_id="__focused__"] exec --no-startup-id kill -9 -1 $(xdotool getwindowfocus getwindowpid)
 
 # Close all windows
-bindsym $mod+Shift+u [class=".*"] kill
+#bindsym $mod+Shift+u [class=".*"] kill
 
 #shortcuts
 bindsym Mod1+F4 $kill
@@ -415,6 +415,11 @@ bindsym $mod+BackSpace kill
 #for_window [title="ChatGPT"] move scratchpad
 for_window [class="Google-chrome" instance="chat.openai.com"] move scratchpad
 bindsym $mod+w [class="Google-chrome" instance="chat.openai.com"] scratchpad show
+
+for_window [class="Google-chrome" instance="fatebook.io"] move scratchpad
+bindsym $mod+p [class="Google-chrome" instance="fatebook.io"] scratchpad show
+
+
 
 
 
