@@ -13,6 +13,7 @@ alias p='popd'
 alias ll='ls -alFh'
 alias l='ls -CF'
 alias e='emacsclient -c'
+alias less='less -R'
 alias gll='git log --graph --pretty=oneline --abbrev-commit'
 alias bat='batcat'
 alias v="nvim"
