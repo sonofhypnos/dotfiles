@@ -33,7 +33,7 @@ in {
       pkgs.git
       pkgs.git-filter-repo
       pkgs.emacs29
-      pkgs.texlab # for emacs lsp in tex
+      #pkgs.texlab # for emacs lsp in tex
       pkgs.jdk17_headless
       pkgs.languagetool
       pkgs.janet
@@ -45,18 +45,18 @@ in {
     sessionVariables = { SHELL = "${pkgs.zsh}/bin/zsh"; };
 
     file."${envFile}".text = ''
-(setq languagetool-java-arguments '("-Dfile.encoding=UTF-8" "-cp" "${pkgs.languagetool}/share/")
-    languagetool-java-bin "${pkgs.jdk17_headless}/bin/java"
-    languagetool-console-command "${pkgs.languagetool}/share/languagetool-commandline.jar"
-    languagetool-server-command "${pkgs.languagetool}/share/languagetool-server.jar")
+      (setq languagetool-java-arguments '("-Dfile.encoding=UTF-8" "-cp" "${pkgs.languagetool}/share/")
+          languagetool-java-bin "${pkgs.jdk17_headless}/bin/java"
+          languagetool-console-command "${pkgs.languagetool}/share/languagetool-commandline.jar"
+          languagetool-server-command "${pkgs.languagetool}/share/languagetool-server.jar")
     '';
-#      (after! nix-mode
-#        (add-to-list 'lsp-language-id-configuration '(nix-mode . "nix"))
-#        (lsp-register-client
-#         (make-lsp-client :new-connection (lsp-stdio-connection "nix-lsp")
-#                          :major-modes '(nix-mode)
-#                          :server-id 'nix-lsp))
-#        (add-hook 'nix-mode-hook #'lsp!))
+    #      (after! nix-mode
+    #        (add-to-list 'lsp-language-id-configuration '(nix-mode . "nix"))
+    #        (lsp-register-client
+    #         (make-lsp-client :new-connection (lsp-stdio-connection "nix-lsp")
+    #                          :major-modes '(nix-mode)
+    #                          :server-id 'nix-lsp))
+    #        (add-hook 'nix-mode-hook #'lsp!))
 
     file.".Xresources".text = ''
       ${xresourcesContent}
