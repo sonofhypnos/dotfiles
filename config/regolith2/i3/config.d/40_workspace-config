@@ -320,6 +320,7 @@ exec rescuetime
 exec flameshot
 exec i3-wallpaper
 exec ~/bin/sleepnag.sh
+exec firefox https://arena3-chapter0-fundamentals.streamlit.app
 
 #clipboard manager
 exec copyq
