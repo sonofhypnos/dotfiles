@@ -1,10 +1,11 @@
 [Unit]
-Description=writing tracker
+Description=Writing Tracker
 
 [Service]
-Type=oneshot
+Type=simple
 ExecStart=/home/tassilo/repos/writing-tracker/writing-tracker.sh
-User=tassilo
+Restart=on-failure
+RestartSec=5s
 
 [Install]
 WantedBy=default.target

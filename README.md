@@ -51,6 +51,31 @@ If this is your desktop, once installed you need to run the `enable_services.sh`
  - `Xcompose` Compose key file for the German [neo keyboard layout](https://neo-layout.org/).
  - `trydactylrc` [tridactyl](https://github.com/tridactyl/tridactyl) configuration - Vim navigation in Firefox
 
+## timers:
+
+At the moment, user-level systemd timers are automatically enabled. The borg backup timer needs to be set manually for now:
+
+``` bash
+sudo systemctl --user enable borg.service
+sudo systemctl --user enable borg.timer
+sudo systemctl --user start borg.timer
+```
+
+
+To check when your timers are running next, you can run:
+
+
+``` bash
+systemctl list-timers
+```
+or 
+
+``` bash
+systemctl --user list-timers
+```
+for your user level timers.
+
+
 ## todos
 - [ ] Make sure install does not do weird things when we haven't installed emacs
 - [ ] same for neovim (for commiting with git for example)

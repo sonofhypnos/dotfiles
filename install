@@ -22,3 +22,17 @@ if [ -d "/home/tassilo/" ];then
 fi
 
 # some helpers and error handling:
+
+# Add systemd timer setup
+SYSTEMD_SERVICE_FILE="./config/systemd/user/detault.target.wants/writing_tracker.service"
+SYSTEMD_TIMER_FILE="./config/systemd/user/detault.target.wants/writing_tracker.timer"
+
+if [ -f "$SYSTEMD_SERVICE_FILE" ] && [ -f "$SYSTEMD_TIMER_FILE" ]; then
+  echo "starting to enable writing_tracker script."
+  systemctl --user enable writing-tracker.service
+  systemctl --user enable writing-tracker.timer
+  systemctl --user start writing-tracker.timer
+  echo "Systemd timer enabled and started."
+else
+  echo "Error: Missing systemd service or timer file."
+fi

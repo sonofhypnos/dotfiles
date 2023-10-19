@@ -3,7 +3,8 @@ Description=Writing Tracker Timer
 
 [Timer]
 Unit=writing_tracker.service
-OnCalendar=daily
+OnBootSec=30min
+RandomizedDelaySec=5m
 
 [Install]
 WantedBy=timers.target

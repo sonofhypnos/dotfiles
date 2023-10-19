@@ -3,7 +3,8 @@ Description=Borg Backup Timer
 
 [Timer]
 Unit=borg.service
-OnCalendar=daily
+OnBootSec=30min
+RandomizedDelaySec=5m
 
 [Install]
 WantedBy=timers.target
