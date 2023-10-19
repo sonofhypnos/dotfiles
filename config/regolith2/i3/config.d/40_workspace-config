@@ -407,10 +407,11 @@ bindsym $mod+BackSpace kill
 # bindsym $alt+Tab exec --no-startup-id i3-cycle-focus.py --switch
 
 #Search Bindings
-#set $search_selection exec xclip -selection "c" -out | xargs -I{} xdg-open https://www.google.de/search\?q\={}
-#bindsym $mod+Shift+z $search_selection
-#set $search exec echo '' | rofi -dmenu -p 'Search:' | xargs -I{} xdg-open https://www.google.de/search?q={}
-#bindsym $mod+z $search
+set $search_selection exec xclip -selection "c" -out | xargs -I{} xdg-open https://www.google.de/search\?q\={}
+bindsym $mod+Shift+y $search_selection
+set $search exec echo '' | rofi -dmenu -p 'Search:' | xargs -I{} xdg-open https://www.google.de/search?q={}
+bindsym $mod+y $search
+
 
 #Configuration chatgpt
 #for_window [title="ChatGPT"] move scratchpad
