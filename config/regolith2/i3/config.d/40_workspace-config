@@ -408,9 +408,9 @@ bindsym $mod+BackSpace kill
 
 #Search Bindings
 set $search_selection exec xclip -selection "c" -out | xargs -I{} xdg-open https://www.google.de/search\?q\={}
-bindsym $mod+Shift+y $search_selection
+bindsym $mod+Shift+z $search_selection
 set $search exec echo '' | rofi -dmenu -p 'Search:' | xargs -I{} xdg-open https://www.google.de/search?q={}
-bindsym $mod+y $search
+bindsym $mod+z $search
 
 
 #Configuration chatgpt
