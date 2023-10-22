@@ -313,6 +313,10 @@ set $intellij intellij-idea-ultimate
 set $emacs emacsclient -c
 #set $transGerman sh -c 'firefox "http://translate.google.com/#de/en/$(xclip -o)"'
 
+set $clearpythoncomments "xclip -o | sed '/^\s*#/d; s/#.*//' | xclip -selection clipboard"
+
+bindsym $mod+p exec $clearpythoncomments
+
 #Open main Applications
 exec emacs --daemon; emacsclient -c
 exec flatpak run org.zotero.Zotero
@@ -419,7 +423,7 @@ for_window [class="Google-chrome" instance="chat.openai.com"] move scratchpad
 bindsym $mod+w [class="Google-chrome" instance="chat.openai.com"] scratchpad show
 
 for_window [class="Google-chrome" instance="fatebook.io"] move scratchpad
-bindsym $mod+p [class="Google-chrome" instance="fatebook.io"] scratchpad show
+bindsym $mod+Ctrl+p [class="Google-chrome" instance="fatebook.io"] scratchpad show
 
 
 
