@@ -32,7 +32,7 @@ alias ainstall='sudo apt-get update -y & sudo apt-get upgrade -y && sudo apt-get
 #directories and files
 #alias do='cd ~/.dotfiles' this line caused a tone of problems for me, because do is a keyword in bash of course
 alias regi3='vim ~/.dotfiles/config/regolith2/i3/config.d/40_workspace-config'
-alias aalias='vim ~/.dotfiles/shell/aliases.sh'
+alias aalias='emacsclient ~/.dotfiles/shell/aliases.sh'
 alias ozsh='cd ~/.dotfiles/zsh/oh-my-zsh'
 alias econfig='vim ~/.doom.d/config.el'
 alias .d='cd ~/.dotfiles/'
