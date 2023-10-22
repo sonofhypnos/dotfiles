@@ -13,6 +13,10 @@ The following files/folders might be of interest to you:
 
 My [Doom-Emacs](https://github.com/hlissner/doom-emacs/blob/develop/docs/getting_started.org) files are in a separate [repo](https://github.com/sonofhypnos/emacs-config/)
 
+## miscellaneous/obscure
+ - `Xcompose` Compose key file for the German [neo keyboard layout](https://neo-layout.org/).
+ - `trydactylrc` [tridactyl](https://github.com/tridactyl/tridactyl) configuration - Vim navigation in Firefox
+
 ## Setting up remote machine (intended for myself)
 
 In case we want to push stuff to github:
@@ -47,11 +51,14 @@ fi
 
 If this is your desktop, once installed you need to run the `enable_services.sh` script with root to enable systemd services. Next you want to figure out how to get the home manager installed for the programs you installed through it (like ripgrep. Longterm you want to move as much as possible of your programs from apt to nix).
 
-## miscellaneous/obscure
- - `Xcompose` Compose key file for the German [neo keyboard layout](https://neo-layout.org/).
- - `trydactylrc` [tridactyl](https://github.com/tridactyl/tridactyl) configuration - Vim navigation in Firefox
 
-## timers:
+## Setting up desktop:
+Setup services and timers:
+
+``` bash
+sudo systemctl enable /home/tassilo/.dotfiles/config/systemd/user/set-fn-key.service
+sudo systemctl start set-fn-key.service
+```
 
 At the moment, user-level systemd timers are automatically enabled. The borg backup timer needs to be set manually for now:
 

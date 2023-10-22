@@ -1,0 +1,9 @@
+[Unit]
+Description=Set Fn key to act as Ctrl
+
+[Service]
+ExecStart=/usr/bin/setkeycodes e063 29
+Type=oneshot
+
+[Install]
+WantedBy=multi-user.target
