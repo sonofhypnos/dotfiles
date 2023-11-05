@@ -3,17 +3,13 @@
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-23.05";
-    lean4.url = "github:leanprover/lean4";
     home-manager.url = "github:nix-community/home-manager/release-23.05";
   };
 
-  outputs = { self, nixpkgs, home-manager, lean4, ... }:
+  outputs = { self, nixpkgs, home-manager, ... }:
     let
       home = home-manager.lib.homeManagerConfiguration {
-        pkgs = nixpkgs.legacyPackages."x86_64-linux".override {
-          overlays = [ lean4.overlay ];
-
-        };
+        pkgs = nixpkgs.legacyPackages."x86_64-linux";
         modules = [
           ./home.nix
           {

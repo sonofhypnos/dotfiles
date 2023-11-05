@@ -24,8 +24,7 @@ in {
 
   home = {
     packages = [
-      pkgs.lean4
-      # pkgs.lean
+      pkgs.lean
       pkgs.ripgrep
       pkgs.zathura
       pkgs.rxvt-unicode
