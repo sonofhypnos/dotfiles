@@ -464,3 +464,7 @@ autocmd BeforeRequest https://www.lesswrong.com/* js (tri.excmds.exclaim_quiet("
 
 " For syntax highlighting see https://github.com/tridactyl/vim-tridactyl
 " vim: set filetype=tridactyl
+
+
+
+:command rsssend -description "Send to RSS feed" js <<EOM
