@@ -24,7 +24,9 @@ in {
 
   home = {
     packages = [
-      pkgs.lean
+      pkgs.elan
+      # pkgs.lean
+      pkgs.mongodb
       pkgs.ripgrep
       pkgs.zathura
       pkgs.rxvt-unicode
@@ -106,4 +108,5 @@ in {
 
   # ... Your previous home-manager config here.
   # Remember to replace `pkgs` with `pkgsUnstable` if you need packages from unstable.
+  nixpkgs.config.allowUnfree = true;
 }
