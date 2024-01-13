@@ -4,8 +4,13 @@ import pandas as pd
 from dateutil import parser as date_parser
 import matplotlib.pyplot as plt
 import os
+import numpy as np
+import sys
 
-file_name = os.path.expanduser("~/gc-logs.txt")
+(file,) = sys.argv[1:]
+
+file_name = os.path.expanduser(file)
+# "~/gc-logs.txt"
 
 data = {"time": [], "gc": []}
 for l in open(file_name, "r").readlines():
@@ -18,7 +23,7 @@ df["gc-diff"] = df["gc"].diff()
 df["gc-diff"][df["gc-diff"] < 0] = 0
 print(df["gc-diff"].describe())
 n, bins, patches = plt.hist(
-    df["gc-diff"], 50, density=False, facecolor="g", alpha=0.75, log=True
+    df[df != 0]["gc-diff"], 50, density=False, facecolor="g", alpha=0.75, log=True
 )
 plt.grid(True)
 plt.show()
