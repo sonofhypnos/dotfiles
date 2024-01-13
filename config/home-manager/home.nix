@@ -108,5 +108,4 @@ in {
 
   # ... Your previous home-manager config here.
   # Remember to replace `pkgs` with `pkgsUnstable` if you need packages from unstable.
-  nixpkgs.config.allowUnfree = true;
 }
