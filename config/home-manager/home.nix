@@ -26,7 +26,7 @@ in {
     packages = [
       pkgs.elan
       # pkgs.lean
-      pkgs.mongodb
+      #pkgs.mongodb
       pkgs.ripgrep
       pkgs.zathura
       pkgs.rxvt-unicode
