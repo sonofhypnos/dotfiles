@@ -152,4 +152,4 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
-
+source /home/tassilo/.config/op/plugins.sh
