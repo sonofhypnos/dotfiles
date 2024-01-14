@@ -55,11 +55,6 @@ If this is your desktop, once installed you need to run the `enable_services.sh`
 ## Setting up desktop:
 Setup services and timers:
 
-``` bash
-sudo systemctl enable /home/tassilo/.dotfiles/config/systemd/user/set-fn-key.service
-sudo systemctl start set-fn-key.service
-```
-
 At the moment, user-level systemd timers are automatically enabled. The borg backup timer needs to be set manually for now:
 
 ``` bash
