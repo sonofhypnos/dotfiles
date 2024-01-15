@@ -1,4 +1,4 @@
-#!/bin/bash -   
+#!/bin/zsh
 #title          :transcribe.sh
 #description    :Transcribes mp4 and mp3 files.
 #author         :Tassilo Neubauer
@@ -8,11 +8,9 @@
 #notes          :       
 #bash_version   :5.1.16(1)-release
 #============================================================================
-
-#!/bin/bash
-
+set -x
 # Define the path to the MeetingSummarizer directory
-MEETING_SUMMARIZER_PATH="$HOME/repos/MeetingSummarizer"
+MEETING_SUMMARIZER_PATH="/home/tassilo/repos/MeetingSummarizer"
 
 # Function to convert MP4 to MP3 using FFmpeg
 convert_mp4_to_mp3() {
@@ -41,25 +39,39 @@ get_openai_key() {
 transcribe_and_summarize() {
     local mp3_file="$1"
 
-    cd "$MEETING_SUMMARIZER_PATH"
+    cd "$MEETING_SUMMARIZER_PATH" || (echo "couldn't find Meeting Summarizer path edit script" && exit)
+    source "$MEETING_SUMMARIZER_PATH/.venv/bin/activate"
     python cli.py summarize "$mp3_file"
 }
 
 # Main script execution
-main() {
-    local mp4_file="$1"
 
-    if [ -z "$mp4_file" ]; then
-        echo "Usage: $0 <path-to-mp4-file>"
+main() {
+    local file="$1"
+
+
+    if [[ -z "$file" ]]; then
+        echo "Usage: $0 <path-to-media-file>"
+        exit 1
+    fi
+    echo "$file"
+
+    local file_extension="${file##*.}"
+    mp3_file="$file"
+
+    # Check file extension and convert if necessary
+    if [[ "$file_extension" == "mp4" ]]; then
+        mp3_file=$(convert_mp4_to_mp3 "$file")
+    elif [[ "$file_extension" == "mp3" ]]; then
+        mp3_file="$file"
+    else
+        echo "Error: Unsupported file format. Please provide an .mp4 or .mp3 file."
         exit 1
     fi
 
-    # Convert MP4 to MP3
-    local mp3_file=$(convert_mp4_to_mp3 "$mp4_file")
-
     # Get the OpenAI key from 1Password
     local openai_key=$(get_openai_key)
-    export OPENAI_API_KEY="$openai_key"
+    export OPEN_API_KEY="$openai_key"
 
     # Transcribe and summarize the meeting
     transcribe_and_summarize "$mp3_file"
