@@ -304,6 +304,7 @@ set $keep google-chrome --app=https://keep.google.com
 set $calendar google-chrome --app=https://calendar.google.com 
 set $focusmate google-chrome --app=https://focusmate.com
 set $gpt google-chrome --app=https://chat.openai.com/?model=gpt-4
+set $gpt3 google-chrome --app=https://chat.openai.com/
 set $sitzplatz google-chrome --app=https://raumbuchung.bibliothek.kit.edu/sitzplatzreservierung/day.php?year=2021&month=7&day=1&area=20&room=140
 set $teams google-chrome --app=https://teams.microsoft.com
 set $todoist google-chrome --app=https://todoist.com
@@ -376,20 +377,6 @@ for_window [class="Zotero" window_role="browser"] move scratchpad
 for_window [title="_emacs scratchpad_"] move scratchpad
 for_window [title="doom-capture"] move scratchpad
 bindsym $mod+e [class="Emacs"] scratchpad show
-for_window [title="cd ; ranger"] move scratchpad
-
-#university binds
-mode "userbinds" {
-  bindsym u mode "default" [title="cd ; ranger"] scratchpad show
-
-  # Back to normal: Enter, Escape, or s
-  bindsym Return mode "default"
-  bindsym Escape mode "default"
-  bindsym s mode "default"
-}
-
-bindsym $mod+u mode "userbinds"
-bindsym $mod+s [title="cd ; ranger"] scratchpad show
 bindsym $mod+$alt+z [class="Zotero"] scratchpad show
 
 #kill focused Window
@@ -421,9 +408,11 @@ bindsym $mod+z $search
 
 #Configuration chatgpt
 #for_window [title="ChatGPT"] move scratchpad
-for_window [class="Google-chrome" instance="chat.openai.com"] move scratchpad
-bindsym $mod+w [class="Google-chrome" instance="chat.openai.com"] scratchpad show
+for_window [class="Google-chrome" instance="chat.openai.com/?model=gpt-4"] move scratchpad
+bindsym $mod+w [class="Google-chrome" instance="chat.openai.com/?model=gpt-4"] scratchpad show
 
+for_window [class="Google-chrome" instance="chat.openai.com"] move scratchpad
+bindsym $mod+u [class="Google-chrome" instance="chat.openai.com"] scratchpad show
 for_window [class="Google-chrome" instance="fatebook.io"] move scratchpad
 bindsym $mod+Ctrl+p [class="Google-chrome" instance="fatebook.io"] scratchpad show
 
