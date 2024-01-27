@@ -153,3 +153,5 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 source /home/tassilo/.config/op/plugins.sh
+export MODULAR_HOME="/home/tassilo/.modular"
+export PATH="/home/tassilo/.modular/pkg/packages.modular.com_mojo/bin:$PATH"
