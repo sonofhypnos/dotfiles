@@ -305,6 +305,8 @@ set $calendar google-chrome --app=https://calendar.google.com
 set $focusmate google-chrome --app=https://focusmate.com
 set $gpt google-chrome --app=https://chat.openai.com/?model=gpt-4
 set $gpt3 google-chrome --app=https://chat.openai.com/
+#set $gpt firefox https://chat.openai.com/?model=gpt-4
+#set $gpt3 firefox https://chat.openai.com/
 set $sitzplatz google-chrome --app=https://raumbuchung.bibliothek.kit.edu/sitzplatzreservierung/day.php?year=2021&month=7&day=1&area=20&room=140
 set $teams google-chrome --app=https://teams.microsoft.com
 set $todoist google-chrome --app=https://todoist.com
@@ -348,10 +350,11 @@ mode "$main_launcher" {
 	bindsym k mode "default" exec $keep
 	bindsym c mode "default" exec $calendar
 	bindsym d mode "default" exec discord
-	bindsym 3 mode "default" exec $firefox https://i3wm.org/docs/userguide.html
+	bindsym i mode "default" exec $firefox https://i3wm.org/docs/userguide.html
 	bindsym p mode "default" exec $fatebook
 #	bindsym i mode "default" exec $intellij
 	bindsym 4 mode "default" exec $gpt
+	bindsym 3 mode "default" exec $gpt3
 	bindsym a mode "default" exec anki
 	bindsym m mode "default" exec $teams
 	bindsym r mode "default" exec firefox https://web.colreminder.com/en-US/addReminder
@@ -408,11 +411,11 @@ bindsym $mod+z $search
 
 #Configuration chatgpt
 #for_window [title="ChatGPT"] move scratchpad
-for_window [class="Google-chrome" instance="chat.openai.com/?model=gpt-4"] move scratchpad
-bindsym $mod+w [class="Google-chrome" instance="chat.openai.com/?model=gpt-4"] scratchpad show
+#for_window [class="Google-chrome" instance="chat.openai.com/?model=gpt-4"] move scratchpad
+#bindsym $mod+w [class="Google-chrome" instance="chat.openai.com/?model=gpt-4"] scratchpad show
 
 for_window [class="Google-chrome" instance="chat.openai.com"] move scratchpad
-bindsym $mod+u [class="Google-chrome" instance="chat.openai.com"] scratchpad show
+bindsym $mod+w [class="Google-chrome" instance="chat.openai.com"] scratchpad show
 for_window [class="Google-chrome" instance="fatebook.io"] move scratchpad
 bindsym $mod+Ctrl+p [class="Google-chrome" instance="fatebook.io"] scratchpad show
 

@@ -468,3 +468,9 @@ autocmd BeforeRequest https://www.lesswrong.com/* js (tri.excmds.exclaim_quiet("
 
 
 :command rsssend -description "Send to RSS feed" js <<EOM
+
+command gpt4title js if (new URL(window.location.href).search === "?model=gpt-4") document.title = "gpt-4"
+command gpt3title js if (new URL(window.location.href).hostname === "chat.openai.com" && !(new URL(window.location.href).search == "?model=gpt-4")) document.title = "gpt3"
+
+autocmd DocLoad chat.openai.com gpt4title
+autocmd DocLoad chat.openai.com gpt3title
