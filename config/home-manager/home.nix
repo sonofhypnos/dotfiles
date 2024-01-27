@@ -43,6 +43,7 @@ in {
       pkgs.rnix-lsp
       pkgs.zsh-nix-shell
       pkgs.zsh
+      pkgs.tmux
     ];
 
     sessionVariables = { SHELL = "${pkgs.zsh}/bin/zsh"; };
