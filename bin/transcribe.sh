@@ -47,7 +47,16 @@ transcribe_and_summarize() {
 # Main script execution
 
 main() {
+    if [[ -z "$1" ]] || [[ -z "$2" ]]; then
+        echo "Usage: $0 <path-to-media-file> <path-to-log-file>"
+        exit 1
+    fi
+
     local file="$1"
+    local log_file="$2"
+    # Redirecting and appending both stdout and stderr to log file and displaying on console
+    exec > >(tee -a "$log_file") 2>&1
+
 
 
     if [[ -z "$file" ]]; then

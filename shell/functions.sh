@@ -43,3 +43,15 @@ apt_history(){
 
 
 totals() { awk 'FNR==NR{s+=$1;next;} {print $1/s}' "$1" "$1"; }
+
+
+# Function to get OpenAI API key from 1Password
+get_openai_key() {
+    # Replace with the correct 1Password item identifier for your OpenAI key
+    local item_identifier="yocqakmciuu7bidjgftbol57wy"
+
+    # Fetch the OpenAI API key from 1Password
+    local openai_key=$(op item get "$item_identifier" --fields credential)
+
+    echo "$openai_key"
+}
