@@ -44,6 +44,7 @@ in {
       pkgs.zsh-nix-shell
       pkgs.zsh
       pkgs.tmux
+      pkgs.okular
     ];
 
     sessionVariables = { SHELL = "${pkgs.zsh}/bin/zsh"; };
