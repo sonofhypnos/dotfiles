@@ -14,7 +14,7 @@ nowcounter=0
 
 
 shutdownsoon(){
-    shutdown 4
+    shutdown 4 # Early enough to trigger before the sleep timer in the justifywhyawake function is over.
 }
 
 justifywhyawake(){
@@ -22,6 +22,8 @@ justifywhyawake(){
     (( nowcounter+=1 ))
     if [[ $nowcounter -eq 10 ]]; then
         shutdownsoon
+    else
+        shutdown 15 #Long enough that we are asking about the reason for not shutting down yet again.
     fi
     sleep 300
 }
@@ -29,11 +31,20 @@ justifywhyawake(){
 
 while :; do
     currenttime=$(date +%H:%M)
-    if [[ "$currenttime" > "20:30" ]] || [[ "$currenttime" < "06:30" ]]; then
+    if [[ "$currenttime" > "23:30" ]] || [[ "$currenttime" < "06:30" ]]; then
         rofi -e "$reminder";
-        printf 'shutdownsoon\njustifywhyawake' | rofi -dmenu
-        #could do fancy stuff here, but I don't know how to do arrays in bash (eg dictionaries would be nice)
-        justifywhyawake
+        shutdown 2 #We add it here also, in order to force the user to interact with the program.
+        #printf 'shutdownsoon\njustifywhyawake' | rofi -dmenu
+        selection=$(printf 'Shutdown Soon and Justify Why Awake\nShutdown Now' | rofi -dmenu -p "Select an action:")
+
+        case $selection in
+          "Shutdown Soon and Justify Why Awake")
+            justifywhyawake
+            ;;
+          "Shutdown Now")
+            shutdown 0
+            ;;
+        esac
     else
         nowcounter=0
     fi
