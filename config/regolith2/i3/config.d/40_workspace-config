@@ -417,10 +417,7 @@ bindsym $mod+z $search
 for_window [class="Google-chrome" instance="chat.openai.com"] move scratchpad
 bindsym $mod+w [class="Google-chrome" instance="chat.openai.com"] scratchpad show
 for_window [class="Google-chrome" instance="fatebook.io"] move scratchpad
-bindsym $mod+Ctrl+p [class="Google-chrome" instance="fatebook.io"] scratchpad show
-
-
-
+bindsym $mod+$alt+p [class="Google-chrome" instance="fatebook.io"] scratchpad show
 
 
 #Mnemonics (Create something to make new once or work with other stuff?)
