@@ -8,6 +8,10 @@ let
   xresourcesContent = builtins.readFile ../../Xresources;
   doomDir = ".doom.d";
   envFile = "${doomDir}/emacs-hm-env.el";
+  myPythonEnv = pkgs.python3.withPackages (ps: [
+    ps.python-lsp-server
+    ps.pylsp-rope # Add this if available directly or adjust with an overlay if needed
+  ]);
   # pkgs = nixpkgs.legacyPackages.${system};
 in {
 
@@ -24,6 +28,7 @@ in {
 
   home = {
     packages = [
+      myPythonEnv
       pkgs.elan
       # pkgs.lean
       #pkgs.mongodb
@@ -47,6 +52,11 @@ in {
       pkgs.elasticsearch
       pkgs.okular
     ];
+
+    # Or you can explicitly link the binary to a known location
+    home.activationScripts.link-pylsp = lib.stringAfter [ "writeBoundary" ] ''
+      ln -sfn ${myPythonEnv}/bin/pylsp $HOME/.local/bin/pylsp
+    '';
 
     sessionVariables = { SHELL = "${pkgs.zsh}/bin/zsh"; };
 
