@@ -31,7 +31,7 @@ justifywhyawake(){
 
 while :; do
     currenttime=$(date +%H:%M)
-    if [[ "$currenttime" > "23:30" ]] || [[ "$currenttime" < "06:30" ]]; then
+    if [[ "$currenttime" > "22:15" ]] || [[ "$currenttime" < "06:30" ]]; then
         rofi -e "$reminder";
         shutdown 2 #We add it here also, in order to force the user to interact with the program.
         #printf 'shutdownsoon\njustifywhyawake' | rofi -dmenu
