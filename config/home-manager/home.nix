@@ -42,7 +42,11 @@ in {
       pkgs.git-filter-repo
       pkgs.emacs29
       #pkgs.texlab # for emacs lsp in tex
+
+      # For screenshot automation:
       pkgs.fswebcam
+      pkgs.jpegoptim
+
       pkgs.jdk17_headless
       pkgs.languagetool
       pkgs.janet

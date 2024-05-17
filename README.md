@@ -77,6 +77,13 @@ systemctl --user list-timers
 ```
 for your user level timers.
 
+crontab:
+Add this:
+
+``` crontab
+0,10,20,30,40,50 * * * * ~/bin/bin/sousveillance.sh
+```
+
 
 ## todos
 - [ ] Make sure install does not do weird things when we haven't installed emacs
