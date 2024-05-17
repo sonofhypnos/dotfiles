@@ -42,6 +42,7 @@ in {
       pkgs.git-filter-repo
       pkgs.emacs29
       #pkgs.texlab # for emacs lsp in tex
+      pkgs.fswebcam
       pkgs.jdk17_headless
       pkgs.languagetool
       pkgs.janet
@@ -54,9 +55,9 @@ in {
     ];
 
     # Or you can explicitly link the binary to a known location
-    home.activationScripts.link-pylsp = lib.stringAfter [ "writeBoundary" ] ''
-      ln -sfn ${myPythonEnv}/bin/pylsp $HOME/.local/bin/pylsp
-    '';
+    # activationScripts.link-pylsp = lib.stringAfter [ "writeBoundary" ] ''
+    #   ln -sfn ${myPythonEnv}/bin/pylsp $HOME/.local/bin/pylsp
+    # '';
 
     sessionVariables = { SHELL = "${pkgs.zsh}/bin/zsh"; };
 
