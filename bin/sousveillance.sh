@@ -13,12 +13,15 @@ set -e
 
 if grep open /proc/acpi/button/lid/LID/state > /dev/null
 then
-    CURRENT=$(date +%s);
-    SLEEP=$(( $CURRENT % 10 ))
-    TIMEOUT="m"
-    sleep $SLEEP$TIMEOUT
-    import -quality 100 -window root png:$HOME/Pictures/webcam/xwd-$CURRENT.png
-    fswebcam --resolution 1280x1024 -S 2 -F 3 "$HOME/Pictures/webcam/$CURRENT.jpg"
-    optipng -o9 -fix `ls -t ~/Pictures/webcam/*.png | head -1`
-    jpegoptim -m50 `ls -t ~/Pictures/webcam/*.jpg | head -1`
+    echo "Lid is open"
+    HOME="/home/tassilo"
+    # CURRENT=$(date +%s);
+    # SLEEP=$(( $CURRENT % 10 ))
+    # TIMEOUT="m"
+    # sleep $SLEEP$TIMEOUT
+    scrot "$HOME/Pictures/webcam/screenshot-$(date +%s).png"
+    echo "current: $CURRENT"
+    # fswebcam --resolution 1280x1024 -S 2 -F 3 "$HOME/Pictures/webcam/$CURRENT.jpg"
+    # optipng -o9 -fix `ls -t $HOME/Pictures/webcam/*.png | head -1` (compression doesn't seem worth the CPU time)
+    # jpegoptim -m50 `ls -t $HOME/Pictures/webcam/*.jpg | head -1`
 fi
