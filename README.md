@@ -6,10 +6,12 @@ I'd discourage just forking this repo, because lots of things here are specific 
 The following files/folders might be of interest to you:
 
  - `config/espanso/default.yml` textexpansions for [espanso](https://espanso.org)
- - `config/home-manager/` my [home-manager](https://github.com/nix-community/home-manager) config
+ - `config/home-manager/` my [home-manager](https://github.com/nix-community/home-manager) config (I am slowly trying to move more and more of my package-management and other config into home-manager)
  - `config/regolith` configuration for [regolith](https://regolith-linux.org/) ≅ Ubuntu + i3
  - `nvim` neovim configuration and plugins
  - `gitconfig` git configuration
+ - whatever else I added since updating this readme
+
 
 My [Doom-Emacs](https://github.com/hlissner/doom-emacs/blob/develop/docs/getting_started.org) files are in a separate [repo](https://github.com/sonofhypnos/emacs-config/)
 
