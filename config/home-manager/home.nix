@@ -88,41 +88,46 @@ in {
     '';
 
   };
-  programs.zsh = {
-    enable = true;
-    enableAutosuggestions = true;
-    enableSyntaxHighlighting = true;
-    enableCompletion = true;
-    initExtra = ''
-      ${builtins.readFile ../../zshrc}
-    '';
-    oh-my-zsh = {
+
+  users.users.tassilo.extraGroups = [ "adbusers" ];
+
+  programs = {
+    adb.enable = true;
+    home-manager.enable = true;
+    git.lfs.enable = true;
+    zsh = {
       enable = true;
-      theme = "fwalch";
-      plugins = [
-        "git"
-        "alias-finder"
-        "colored-man-pages"
-        "colorize"
-        "fasd"
-      ]; # Add your plugins here
-    };
-    plugins = [{
-      name = "zsh-nix-shell";
-      file = "nix-shell.plugin.zsh";
-      src = pkgs.fetchFromGitHub {
-        owner = "chisui";
-        repo = "zsh-nix-shell";
-        rev = "v0.7.0";
-        sha256 = "149zh2rm59blr2q458a5irkfh82y3dwdich60s9670kl3cl5h2m1";
+      enableAutosuggestions = true;
+      enableSyntaxHighlighting = true;
+      enableCompletion = true;
+      initExtra = ''
+        ${builtins.readFile ../../zshrc}
+      '';
+      oh-my-zsh = {
+        enable = true;
+        theme = "fwalch";
+        plugins = [
+          "git"
+          "alias-finder"
+          "colored-man-pages"
+          "colorize"
+          "fasd"
+        ]; # Add your plugins here
       };
-    }];
+      plugins = [{
+        name = "zsh-nix-shell";
+        file = "nix-shell.plugin.zsh";
+        src = pkgs.fetchFromGitHub {
+          owner = "chisui";
+          repo = "zsh-nix-shell";
+          rev = "v0.7.0";
+          sha256 = "149zh2rm59blr2q458a5irkfh82y3dwdich60s9670kl3cl5h2m1";
+        };
+      }];
+    };
   };
 
   # Let Home Manager install and manage itself.
-  programs.home-manager.enable = true;
-
-  programs.git.lfs.enable = true;
 
   # ... Your previous home-manager config here.
   # Remember to replace `pkgs` with `pkgsUnstable` if you need packages from unstable.
