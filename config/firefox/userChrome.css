@@ -1,0 +1,36 @@
+@document url-prefix('moz-environment://instance2/') {
+    /* CSS rules for instance 2 */
+    #nav-bar { display: none !important; }
+    /* other customizations for instance 2 */
+
+/* Hide the tab bar */
+#TabsToolbar {
+    visibility: collapse !important;
+}
+
+/* Hide the navigation bar */
+#nav-bar {
+    display: none !important;
+}
+
+/* Hide the bookmark bar */
+#PersonalToolbar {
+    display: none !important;
+}
+
+/* Hide the overflow menu button */
+#PanelUI-button {
+    display: none !important;
+}
+
+/* Hide the main menu bar (File, Edit, View, etc.) */
+#toolbar-menubar {
+    display: none !important;
+}
+
+/* Optionally, hide the scrollbars */
+/* Uncomment to apply */
+/* html {
+    scrollbar-width: none !important;
+} */
+}
