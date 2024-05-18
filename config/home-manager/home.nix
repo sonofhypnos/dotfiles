@@ -52,6 +52,7 @@ in {
       pkgs.janet
       pkgs.rnix-lsp
       pkgs.zsh-nix-shell
+      pkgs.androidenv.androidPkgs_9_0.platform-tools
       pkgs.zsh
       pkgs.tmux
       pkgs.elasticsearch
@@ -89,10 +90,7 @@ in {
 
   };
 
-  users.users.tassilo.extraGroups = [ "adbusers" ];
-
   programs = {
-    adb.enable = true;
     home-manager.enable = true;
     git.lfs.enable = true;
     zsh = {
