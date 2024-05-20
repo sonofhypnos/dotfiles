@@ -30,6 +30,7 @@ in {
     packages = [
       myPythonEnv
       pkgs.elan
+      pkgs.git-secret
       # pkgs.lean
       #pkgs.mongodb
       pkgs.ripgrep
