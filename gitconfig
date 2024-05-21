@@ -1,6 +1,7 @@
 [user]
 	name = Tassilo Neubauer
 	email = 46806445+sonofhypnos@users.noreply.github.com
+	signingkey = /home/tassilo/.ssh/git
 [core]
 	autocrlf = input
 [alias]
@@ -27,8 +28,10 @@
 	gra = log --graph --format=line --all # graph all
 	grad = log --graph --format=detail --all # graph all in detail
 	info = ! "inf() { if git rev-parse ${1} >/dev/null 2>&1; then git cat-file -p $(git rev-parse ${1}); else echo Invalid object; fi }; inf"
+	gbccc = blame -w -C -C -C #blame really smart but slow
 	update-submodules = submodule update --init --recursive
 	upgrade-submodules = submodule update --init --remote
+	push = !/home/tassilo/bin/safe_force_push.sh
 [init]
 	defaultBranch = main
 [pull]
@@ -48,3 +51,7 @@
 	clean = git-lfs clean -- %f
 [color]
     ui = always
+[rere]
+	enabled = true #Remembers when something was fixed in a merge conflict, so you don't have to do it again.
+[gpg]
+	format = ssh
