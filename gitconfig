@@ -55,3 +55,5 @@
 	enabled = true #Remembers when something was fixed in a merge conflict, so you don't have to do it again.
 [gpg]
 	format = ssh
+[maintenance]
+	repo = /home/tassilo/.dotfiles
