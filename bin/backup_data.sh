@@ -9,6 +9,12 @@
 #bash_version   :5.1.4(1)-release
 #============================================================================
 
+# TODO: Add functionality from backupstuff.sh back in which currently isn't used.
+
+# Backup ssh-keys:
+/home/bin/tassilo/save_ssh_keys.sh
+
+
 if [ "$EUID" -ne 0 ]; then
     echo "Please run as root"
     exit
