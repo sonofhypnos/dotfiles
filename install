@@ -23,6 +23,7 @@ chmod +x .git/hooks/pre-commit
 echo "Git hooks have been set up."
 }
 
+setup_hooks
 
 git -C "${DOTBOT_DIR}" submodule sync --quiet --recursive
 git submodule update --init --recursive "${DOTBOT_DIR}"

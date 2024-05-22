@@ -5,7 +5,7 @@ unwanted_dir="$HOME/.dotfiles/config/op"
 
 # Check if the directory exists
 if [ -d "$unwanted_dir" ]; then
-  echo "Error: The directory $unwanted_dir exists. OnePassword will complain if ~/.config/op is just a softlink.
+  echo "Error: The directory $unwanted_dir exists. OnePassword will complain if ~/.config/op is just a softlink."
   echo "Move the directory back before commiting."
   exit 1
 fi
