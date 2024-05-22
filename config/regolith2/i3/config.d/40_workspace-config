@@ -40,104 +40,13 @@
 #
 ###############################################################################
 
-
-################################################################################
-## Window and Workspace Navigation
-################################################################################
-#
-### Navigate // Relative Parent // <> a ##/
-#set_from_resource $i3-wm.binding.focus_parent i3-wm.binding.focus_parent a
-#bindsym $mod+$i3-wm.binding.focus_parent focus parent
-#
-### Navigate // Relative Child // <> y ##/
-#set_from_resource $i3-wm.binding.focus_child i3-wm.binding.focus_child y
-#bindsym $mod+$i3-wm.binding.focus_child focus child
-#
-### Navigate // Relative Window // <> ↑ ↓ ← → ##
-#bindsym $mod+Left focus left
-#bindsym $mod+Down focus down
-#bindsym $mod+Up focus up
-#bindsym $mod+Right focus right
-#
-### Navigate // Relative Window // <> k j h l ##
-#set_from_resource $i3-wm.binding.left i3-wm.binding.left j
-#set_from_resource $i3-wm.binding.right i3-wm.binding.right odiaeresis
-#set_from_resource $i3-wm.binding.up i3-wm.binding.up l
-#set_from_resource $i3-wm.binding.down i3-wm.binding.down k
-#bindsym $mod+$i3-wm.binding.left focus left
-#bindsym $mod+$i3-wm.binding.down focus down
-#bindsym $mod+$i3-wm.binding.up focus up
-#bindsym $mod+$i3-wm.binding.right focus right
-#
-### Navigate // Workspaces 1-10 // <> 0..9 ##
-#bindsym $mod+$ws1_key workspace number $ws1
-#bindsym $mod+$ws2_key workspace number $ws2
-#bindsym $mod+$ws3_key workspace number $ws3
-#bindsym $mod+$ws4_key workspace number $ws4
-#bindsym $mod+$ws5_key workspace number $ws5
-#bindsym $mod+$ws6_key workspace number $ws6
-#bindsym $mod+$ws7_key workspace number $ws7
-#bindsym $mod+$ws8_key workspace number $ws8
-#bindsym $mod+$ws9_key workspace number $ws9
-#bindsym $mod+$ws10_key workspace number $ws10
-### Navigate // Workspace 11 - 19 // <><Ctrl> 1..9 ##
-#bindsym $mod+Ctrl+$ws1_key workspace number $ws11
-#bindsym $mod+Ctrl+$ws2_key workspace number $ws12
-#bindsym $mod+Ctrl+$ws3_key workspace number $ws13
-#bindsym $mod+Ctrl+$ws4_key workspace number $ws14
-#bindsym $mod+Ctrl+$ws5_key workspace number $ws15
-#bindsym $mod+Ctrl+$ws6_key workspace number $ws16
-#bindsym $mod+Ctrl+$ws7_key workspace number $ws17
-#bindsym $mod+Ctrl+$ws8_key workspace number $ws18
-#bindsym $mod+Ctrl+$ws9_key workspace number $ws19
-#
-### Navigate // Next Workspace // <> Tab ##
-#set_from_resource $i3-wm.binding.ws_next i3-wm.binding.ws_next Tab
-#bindsym $mod+$i3-wm.binding.ws_next workspace next
-#
-### Navigate // Next Workspace // <><Alt> → ##
-#set_from_resource $i3-wm.binding.ws_next2 i3-wm.binding.ws_next2 Mod1+Right
-#bindsym $mod+$i3-wm.binding.ws_next2 workspace next
-#
-### Navigate // Next Workspace on Output // <><Ctrl> Tab ##
-#set_from_resource $i3-wm.binding.ws_next_on_output i3-wm.binding.ws_next_on_output Ctrl+Tab
-#bindsym $mod+$i3-wm.binding.ws_next_on_output workspace next_on_output
-#
-### Navigate // Next Workspace on Output // <><Ctrl> ö ##
-#set_from_resource $i3-wm.binding.ws_next_on_output2 i3-wm.binding.ws_next_on_output2 Ctrl+odiaeresis
-#bindsym $mod+$i3-wm.binding.ws_next_on_output2 workspace next_on_output
-#
-### Navigate // Previous Workspace // <><Shift> Tab ##
-#set_from_resource $i3-wm.binding.ws_prev i3-wm.binding.ws_prev Shift+Tab
-#bindsym $mod+$i3-wm.binding.ws_prev workspace prev
-#
-### Navigate // Previous Workspace // <><Alt> ← ##
-#set_from_resource $i3-wm.binding.ws_prev2 i3-wm.binding.ws_prev2 Mod1+Left
-#bindsym $mod+$i3-wm.binding.ws_prev2 workspace prev
-#
-### Navigate // Previous Workspace on Output // <><Ctrl><Shift> Tab ##
-#set_from_resource $i3-wm.binding.ws_prev_on_output i3-wm.binding.ws_prev_on_output Ctrl+Shift+Tab
-#bindsym $mod+$i3-wm.binding.ws_prev_on_output workspace prev_on_output
-#
-### Navigate // Previous Workspace on Output // <><Ctrl> j ##
-#set_from_resource $i3-wm.binding.ws_prev_on_output2 i3-wm.binding.ws_prev_on_output2 Ctrl+j
-#bindsym $mod+$i3-wm.binding.ws_prev_on_output2 workspace prev_on_output
-#
-### Navigate // Scratchpad // <><Ctrl> a ##
-#set_from_resource $i3-wm.binding.scratchpad i3-wm.binding.scratchpad Ctrl+a
-#bindsym $mod+$i3-wm.binding.scratchpad scratchpad show
-#
-###############################################################################
-# Window and Workspace Configuration
-###############################################################################
-
 ## Modify // Window Position // <><Shift> ↑ ↓ ← → ##
 bindsym $mod+Shift+Left move left
 bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
-## Modify // Window Position // <><Shift> k j h l ##
+## Modify // Window Position // <><Shift> j ö l k ##
 set_from_resource $i3-wm.binding.move_left i3-wm.binding.move_left Shift+j
 set_from_resource $i3-wm.binding.move_right i3-wm.binding.move_right Shift+odiaeresis
 set_from_resource $i3-wm.binding.move_up i3-wm.binding.move_up Shift+l
@@ -153,7 +62,7 @@ bindsym $mod+Ctrl+Shift+Down move workspace to output down
 bindsym $mod+Ctrl+Shift+Up move workspace to output up
 bindsym $mod+Ctrl+Shift+Right move workspace to output right
 
-## Modify // Containing Workspace // <><Ctrl><Shift> k j h l ##
+## Modify // Containing Workspace // <><Ctrl><Shift> j ö l k ##
 set_from_resource $i3-wm.binding.take_left i3-wm.binding.take_left Ctrl+Shift+j
 set_from_resource $i3-wm.binding.take_right i3-wm.binding.take_right Ctrl+Shift+odiaeresis
 set_from_resource $i3-wm.binding.take_up i3-wm.binding.take_up Ctrl+Shift+l
@@ -166,10 +75,6 @@ bindsym $mod+$i3-wm.binding.take_right move workspace to output right
 ## Modify // Vertical Window Orientation // <> v ##
 set_from_resource $i3-wm.binding.split_v i3-wm.binding.split_v v
 bindsym $mod+$i3-wm.binding.split_v split vertical
-
-### Modify // Horizontal Window Orientation // <> h ##
-#set_from_resource $i3-wm.binding.split_h i3-wm.binding.split_h h
-#bindsym $mod+$i3-wm.binding.split_h split horizontal
 
 ## Modify // Window Fullscreen Toggle // <> f ##
 set_from_resource $i3-wm.binding.fullscreen_toggle i3-wm.binding.fullscreen_toggle f
@@ -212,10 +117,6 @@ bindsym $mod+Shift+Ctrl+$ws6_key move container to workspace number $ws16
 bindsym $mod+Shift+Ctrl+$ws7_key move container to workspace number $ws17
 bindsym $mod+Shift+Ctrl+$ws8_key move container to workspace number $ws18
 bindsym $mod+Shift+Ctrl+$ws9_key move container to workspace number $ws19
-
-### Modify // Move Window to Next Free Workspace // <><Shift> ` ##
-#set_from_resource $i3-wm.binding.move_next_free i3-wm.binding.move_next_free Shift+grave
-#bindsym $mod+$i3-wm.binding.move_next_free exec --no-startup-id /usr/bin/i3-next-workspace --move-window
 
 # move focused container to workspace, move to workspace
 ## Modify // Carry Window to Workspace 1 - 10// <><Alt> 0..9 ##
@@ -404,26 +305,32 @@ bindsym $mod+BackSpace kill
 
 #Search Bindings
 set $search_selection exec xclip -selection "c" -out | xargs -I{} xdg-open https://www.google.de/search\?q\={}
+## Launch // Search selection in Google // <> z ##/
 bindsym $mod+Shift+z $search_selection
 set $search exec echo '' | rofi -dmenu -p 'Search:' | xargs -I{} xdg-open https://www.google.de/search?q={}
+## Launch // Search Google // <> z ##/
 bindsym $mod+z $search
 
+
+## Launch // Copyq menu // <> y ##/
 set $copyq exec copyq menu
 bindsym $mod+y $copyq
-
 
 #Configuration chatgpt
 #for_window [title="ChatGPT"] move scratchpad
 #for_window [class="Google-chrome" instance="chat.openai.com/?model=gpt-4"] move scratchpad
 #bindsym $mod+w [class="Google-chrome" instance="chat.openai.com/?model=gpt-4"] scratchpad show
 
+## Launch // Open Openai Scratchpad // <> w ##/
 for_window [class="Google-chrome" instance="chat.openai.com"] move scratchpad
 bindsym $mod+w [class="Google-chrome" instance="chat.openai.com"] scratchpad show
+## Launch // Open Fatebook // <> Alt p ##/
 for_window [class="Google-chrome" instance="fatebook.io"] move scratchpad
 bindsym $mod+$alt+p [class="Google-chrome" instance="fatebook.io"] scratchpad show
 
 
 #Mnemonics (Create something to make new once or work with other stuff?)
+## Launch // Mnemonics (senfcall, bluebutton) // Ctrl <> Alt r ##/
 set $r_mode Layout Mode: [s]enfcall [b]luebutton
 bindsym Control+$mod+$alt+r mode "$r_mode"
 
@@ -443,13 +350,13 @@ focus_on_window_activation urgent
 
 
 #toggle fullscreen for multiple monitors
+## Modify // Fullscreen multiple monitors // <> Ctrl f ##/
 bindsym $mod+Control+f exec $doublePortOnly;  fullscreen toggle global
 
 
 
 #keybinds!
 #bindsym $alt+j exec journal.sh
+## Launch // Org-roam-capture // <> c ##/
 bindsym $mod+c exec capture.sh -k 'n'
 assign [class="TestWindow"] $ws9
-
-

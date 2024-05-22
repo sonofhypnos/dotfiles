@@ -1,0 +1,4 @@
+i3-wm.binding.help: Shift+ssharp
+i3-wm.binding.next_free: dead_circumflex
+i3-wm.binding.move_next_free: Shift+dead_caron
+i3-wm.binding.take_next_free: dead_circumflex
