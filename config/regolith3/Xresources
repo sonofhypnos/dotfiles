@@ -1,0 +1,42 @@
+wm.binding.help: Shift+ssharp
+wm.binding.next_free: dead_circumflex
+wm.binding.move_next_free: Shift+dead_caron
+wm.binding.take_next_free: dead_circumflex
+! wm.binding.launcher.cmd: Shift+alt+Space
+wm.binding.focus_child: y
+wm.binding.left: j
+wm.binding.right: odiaeresis
+wm.binding.up: l
+wm.binding.down: k
+wm.binidng.ws_prev_on_output2: Ctrl+j
+wm.binding.ws_next_on_output2: Ctrl+odiaeresis
+wm.binding.move_left: Shift+j
+wm.binding.move_right: Shift+odiaeresis
+wm.binding.move_up: Shift+l
+wm.binding.move_down: Shift+k
+
+
+wm.binding.left: j
+wm.binding.right: odiaeresis
+wm.binding.up: l
+wm.binding.down: k
+
+wm.binding.take_left: Ctrl+Shift+j
+wm.binding.take_right: Ctrl+Shift+odiaeresis
+wm.binding.take_up: Ctrl+Shift+l
+wm.binding.take_down: Ctrl+Shift+k
+wm.workspace.auto_back_and_forth: yes
+
+! Used to be Backspace:
+wm.binding.orientation_toggle: F1
+! Used to be c:
+wm.binding.settings: F2
+! Used to be c:
+wm.binding.display: F3
+! Used to be w:
+wm.binding.wifi: F4
+! Used to be g:
+wm.binding.split_h: F5
+wm.program.bluetooth: regolith-control-center --class=floating_window bluetooth
+
+wm.gaps.inner.size: 0
