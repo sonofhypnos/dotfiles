@@ -408,6 +408,9 @@ bindsym $mod+Shift+z $search_selection
 set $search exec echo '' | rofi -dmenu -p 'Search:' | xargs -I{} xdg-open https://www.google.de/search?q={}
 bindsym $mod+z $search
 
+set $copyq exec copyq menu
+bindsym $mod+y $copyq
+
 
 #Configuration chatgpt
 #for_window [title="ChatGPT"] move scratchpad
@@ -448,3 +451,5 @@ bindsym $mod+Control+f exec $doublePortOnly;  fullscreen toggle global
 #bindsym $alt+j exec journal.sh
 bindsym $mod+c exec capture.sh -k 'n'
 assign [class="TestWindow"] $ws9
+
+
