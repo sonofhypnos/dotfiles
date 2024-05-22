@@ -3,7 +3,6 @@ wm.binding.next_free: dead_circumflex
 wm.binding.move_next_free: Shift+dead_caron
 wm.binding.take_next_free: dead_circumflex
 ! wm.binding.launcher.cmd: Shift+alt+Space
-wm.binding.focus_child: y
 wm.binding.left: j
 wm.binding.right: odiaeresis
 wm.binding.up: l
@@ -37,6 +36,7 @@ wm.binding.display: F3
 wm.binding.wifi: F4
 ! Used to be g:
 wm.binding.split_h: F5
+wm.binding.focus_child: F6
 wm.program.bluetooth: regolith-control-center --class=floating_window bluetooth
 
 wm.gaps.inner.size: 0

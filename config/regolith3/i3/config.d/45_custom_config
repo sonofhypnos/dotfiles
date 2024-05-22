@@ -155,8 +155,8 @@ bindsym $mod+z $search
 
 
 ## Launch // Copyq menu // <> y ##/
-#set $copyq exec copyq menu
-#bindsym $mod+y $copyq
+set $copyq exec copyq menu
+bindsym $mod+y $copyq
 
 #Configuration chatgpt
 #for_window [title="ChatGPT"] move scratchpad
