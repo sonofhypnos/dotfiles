@@ -28,7 +28,7 @@ in {
 
   home = {
     packages = [
-      myPythonEnv
+      # myPythonEnv
       pkgs.elan
       pkgs.git-secret
       # pkgs.lean
