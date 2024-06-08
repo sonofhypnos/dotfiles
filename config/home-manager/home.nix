@@ -31,6 +31,8 @@ in {
       # myPythonEnv
       pkgs.elan
       pkgs.git-secret
+      pkgs.stripe-cli
+      pkgs.bun
       # pkgs.lean
       #pkgs.mongodb
       pkgs.ripgrep
