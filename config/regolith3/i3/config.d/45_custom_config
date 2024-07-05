@@ -49,9 +49,11 @@ set $keep google-chrome --app=https://keep.google.com
 set $calendar google-chrome --app=https://calendar.google.com
 set $focusmate google-chrome --app=https://focusmate.com
 set $gpt google-chrome --app=https://chat.openai.com/?model=gpt-4
+#set $claude google-chrome  --user-data-dir="/home/tassilo/.config/google-chrome/Profile 2" --no-extensions --app=https://claude.ai 
+set $claude google-chrome --app=https://claude.ai 
+
+
 set $gpt3 google-chrome --app=https://chat.openai.com/
-#set $gpt firefox https://chat.openai.com/?model=gpt-4
-#set $gpt3 firefox https://chat.openai.com/
 set $sitzplatz google-chrome --app=https://raumbuchung.bibliothek.kit.edu/sitzplatzreservierung/day.php?year=2021&month=7&day=1&area=20&room=140
 set $teams google-chrome --app=https://teams.microsoft.com
 set $todoist google-chrome --app=https://todoist.com
@@ -73,12 +75,14 @@ exec rescuetime
 exec flameshot
 exec i3-wallpaper
 exec ~/bin/sleepnag.sh
-exec firefox https://arena3-chapter0-fundamentals.streamlit.app
+
 
 #clipboard manager
 exec copyq
 
-
+# arena
+exec firefox https://arena3-chapter0-fundamentals.streamlit.app
+exec firefox https://arena3-chapter1-transformer-interp.streamlit.app/
 
 #Send Battery warning
 exec --no-startup-id ./i3-battery-popup/i3-battery-popup
@@ -99,6 +103,7 @@ mode "$main_launcher" {
 	bindsym p mode "default" exec $fatebook
 #	bindsym i mode "default" exec $intellij
 	bindsym 4 mode "default" exec $gpt
+	bindsym 2 mode "default" exec $claude
 	bindsym 3 mode "default" exec $gpt3
 	bindsym a mode "default" exec anki
 	bindsym m mode "default" exec $teams
@@ -158,14 +163,16 @@ bindsym $mod+z $search
 set $copyq exec copyq menu
 bindsym $mod+y $copyq
 
-#Configuration chatgpt
-#for_window [title="ChatGPT"] move scratchpad
-#for_window [class="Google-chrome" instance="chat.openai.com/?model=gpt-4"] move scratchpad
-#bindsym $mod+w [class="Google-chrome" instance="chat.openai.com/?model=gpt-4"] scratchpad show
-
 ## Launch // Open Openai Scratchpad // <> w ##/
 for_window [class="Google-chrome" instance="chat.openai.com"] move scratchpad
-bindsym $mod+w [class="Google-chrome" instance="chat.openai.com"] scratchpad show
+bindsym $mod+q [class="Google-chrome" instance="chat.openai.com"] scratchpad show
+
+
+## Launch // Open Claude Scratchpad // <> w ##/
+for_window [class="Google-chrome" instance="claude.ai"] move scratchpad
+bindsym $mod+w [class="Google-chrome" instance="claude.ai"] scratchpad show
+
+
 ## Launch // Open Fatebook // <> Alt p ##/
 for_window [class="Google-chrome" instance="fatebook.io"] move scratchpad
 bindsym $mod+$alt+p [class="Google-chrome" instance="fatebook.io"] scratchpad show
