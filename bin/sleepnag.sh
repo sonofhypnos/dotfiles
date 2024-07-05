@@ -9,44 +9,46 @@
 #bash_version   :5.1.4(1)-release
 #============================================================================
 
-reminder="You might think that you'll never do the task if you don't stay up to do it. If the task really is that important, you _will_ do it later; if the task isn't, then sleep is more important"
+reminder="You might think that you'll never do the task if you don't stay up to do it. If the task really is that important, you *will* do it later; if the task isn't, then sleep is more important"
+override_phrase="I promise I am staying up for a specific reason, which I am now saying out loud, and it's better to do that right now than to eat and sleep."
 nowcounter=0
 
-
-shutdownsoon(){
-    shutdown 4 # Early enough to trigger before the sleep timer in the justifywhyawake function is over.
-}
-
-justifywhyawake(){
-    capture.sh
-    (( nowcounter+=1 ))
-    if [[ $nowcounter -eq 10 ]]; then
-        shutdownsoon
+check_override() {
+    input=$(zenity --entry --title="LeechBlock Override" --text="Enter the following code to activate override:\n\n$override_phrase" --width=500 --height=200)
+    if [[ "$input" == "$override_phrase" ]]; then
+        return 0
     else
-        shutdown 15 #Long enough that we are asking about the reason for not shutting down yet again.
+        return 1
     fi
-    sleep 300
 }
 
+justifywhyawake() {
+    if check_override; then
+        (( nowcounter+=1 ))
+        if [[ $nowcounter -eq 10 ]]; then
+            shutdown +10 "System will shutdown in 10 minutes due to sleep time violation"
+        fi
+    else
+        shutdown +10 "System will shutdown in 10 minutes due to sleep time violation"
+    fi
+}
 
-while :; do
+# Make the script harder to kill
+trap '' SIGINT SIGTERM
+
+## Use sudo to make the script run with elevated privileges (disabled a long as I don't start the script correctly from a place with elevated privileges.
+#if [ "$EUID" -ne 0 ]; then
+#    sudo "$0" "$@"
+#    exit $?
+#fi
+
+while true; do
     currenttime=$(date +%H:%M)
     if [[ "$currenttime" > "22:15" ]] || [[ "$currenttime" < "06:30" ]]; then
-        rofi -e "$reminder";
-        shutdown 2 #We add it here also, in order to force the user to interact with the program.
-        #printf 'shutdownsoon\njustifywhyawake' | rofi -dmenu
-        selection=$(printf 'Shutdown Soon and Justify Why Awake\nShutdown Now' | rofi -dmenu -p "Select an action:")
-
-        case $selection in
-          "Shutdown Soon and Justify Why Awake")
-            justifywhyawake
-            ;;
-          "Shutdown Now")
-            shutdown 0
-            ;;
-        esac
+        zenity --info --text="$reminder" --width=500 --height=200
+        justifywhyawake
     else
         nowcounter=0
     fi
-    sleep 300
+    sleep 1800  # 30 minutes
 done
