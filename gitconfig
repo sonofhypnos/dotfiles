@@ -57,3 +57,5 @@
 	format = ssh
 [maintenance]
 	repo = /home/tassilo/.dotfiles
+[github]
+	user = sonofhypnos
