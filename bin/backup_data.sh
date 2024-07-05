@@ -12,8 +12,7 @@
 # TODO: Add functionality from backupstuff.sh back in which currently isn't used.
 
 # Backup ssh-keys:
-/home/bin/tassilo/save_ssh_keys.sh
-
+#/home/bin/tassilo/bin/save_ssh_keys.sh 
 
 if [ "$EUID" -ne 0 ]; then
     echo "Please run as root"
@@ -78,6 +77,10 @@ borg create \
     --exclude '/var/snap/lxd/common/lxd/disks/storage1.img' \
     --exclude '/var/tmp/*' \
     --exclude '/home/tassilo/Dropbox/semester*/**/*.mp4' \
+    --exclude '/home/tassilo/Videos/simon/**' \
+    --exclude '/home/tassilo/Videos/transcribe/**' \
+    --exclude '/home/tassilo/.config/google-chrome/' \
+    --exclude '/home/tassilo/.steam/' \
     \
     ::'{hostname}-{now}' \
     /etc \
@@ -134,55 +137,55 @@ fi
 #backup_repo
 #info "backup finished family server"
 
-info "Starting backup with nix server"
+#info "Starting backup with nix server"
 
-export BORG_REPO='root@nixos:/home/tassilo/backups'
+#export BORG_REPO='root@nixos:/home/tassilo/backups'
 
-borg create \
-    --verbose \
-    --filter AME \
-    --list \
-    --stats \
-    --show-rc \
-    --exclude-caches \
-    --exclude '/home/**/.cache/**' \
-    --exclude '/home/**/.Cache/**' \
-    --exclude '/home/**/cache/**' \
-    --exclude '/home/**/Cache/**' \
-    --exclude '/home/**/CacheStorage/**' \
-    --exclude '/home/**/CacheStorage/**' \
-    --exclude '/home/**/CachedData/**' \
-    --exclude '/home/tassilo/Dropbox/**' \
-    --exclude '/home/tassilo/Games/' \
-    --exclude '/home/**/Code Cache/**' \
-    --exclude '/var/snap/lxd/common/lxd/disks/storage1.img' \
-    --exclude '/var/tmp/*' \
-    --exclude '/home/tassilo/Dropbox/semester*/**/*.mp4' \
-    \
-    ::'{hostname}-{now}' \
-    /etc \
-    /home \
-    /root \
-    /var
-
-backup_exit=$?
-
-info "Pruning repository"
-
-# Use the `prune` subcommand to maintain 7 daily, 4 weekly and 6 monthly
-# archives of THIS machine. The '{hostname}-' prefix is very important to
-# limit prune's operation to this machine's archives and not apply to
-# other machines' archives also:
-
-borg prune \
-    --list \
-    --prefix '{hostname}-' \
-    --show-rc \
-    --keep-daily 7 \
-    --keep-weekly 4 \
-    --keep-monthly 6
-
-prune_exit=$?
+#borg create \
+#    --verbose \
+#    --filter AME \
+#    --list \
+#    --stats \
+#    --show-rc \
+#    --exclude-caches \
+#    --exclude '/home/**/.cache/**' \
+#    --exclude '/home/**/.Cache/**' \
+#    --exclude '/home/**/cache/**' \
+#    --exclude '/home/**/Cache/**' \
+#    --exclude '/home/**/CacheStorage/**' \
+#    --exclude '/home/**/CacheStorage/**' \
+#    --exclude '/home/**/CachedData/**' \
+#    --exclude '/home/tassilo/Dropbox/**' \
+#    --exclude '/home/tassilo/Games/' \
+#    --exclude '/home/**/Code Cache/**' \
+#    --exclude '/var/snap/lxd/common/lxd/disks/storage1.img' \
+#    --exclude '/var/tmp/*' \
+#    --exclude '/home/tassilo/Dropbox/semester*/**/*.mp4' \
+#    \
+#    ::'{hostname}-{now}' \
+#    /etc \
+#    /home \
+#    /root \
+#    /var
+#
+#backup_exit=$?
+#
+#info "Pruning repository"
+#
+## Use the `prune` subcommand to maintain 7 daily, 4 weekly and 6 monthly
+## archives of THIS machine. The '{hostname}-' prefix is very important to
+## limit prune's operation to this machine's archives and not apply to
+## other machines' archives also:
+#
+#borg prune \
+#    --list \
+#    --prefix '{hostname}-' \
+#    --show-rc \
+#    --keep-daily 7 \
+#    --keep-weekly 4 \
+#    --keep-monthly 6
+#
+#prune_exit=$?
 
 # use highest exit code as global exit code
 global_exit=$((backup_exit > prune_exit ? backup_exit : prune_exit))
