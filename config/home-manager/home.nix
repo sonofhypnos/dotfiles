@@ -32,6 +32,7 @@ in {
       pkgs.elan
       pkgs.git-secret
       pkgs.stripe-cli
+      pkgs.jq
       # pkgs.lean
       #pkgs.mongodb
       pkgs.ripgrep
