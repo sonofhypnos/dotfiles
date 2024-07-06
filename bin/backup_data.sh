@@ -29,31 +29,17 @@ op whoami || eval "$(echo "$pwd" | op signin)"
 BORG_PASSPHRASE=$(op read "op://Personal/Encryption borg base laptop passphrase/password")
 export BORG_PASSPHRASE
 
-# Function to log information
-info() { printf "\n%s %s\n\n" "$( date '+%Y-%m-%d %H:%M:%S' )" "$*" >&2; }
-
-# Set up error handling and traps
-trap 'echo $( date "+%Y-%m-%d %H:%M:%S" ) Backup interrupted >&2; notify-send -u critical "Backup failed!" ; exit 2' INT TERM
+# some helpers and error handling:
+info() { printf "\n%s %s\n\n" "$(date)" "$*" >&2; }
 
 #info "Breaking any existing locks on the server" FIXME: don't use this madness
-#as long as you don't know this thing could fuck you up hard (which seems
+#as long as you don't kknow this thing could fuck you up hard (which seems
 #likely to you currently!
 #borg break-lock root@nixos:/home/tassilo/backups
 
 info "Starting backup with borg base server"
 #export BORG_REPO='root@nixos:/home/tassilo/backups'
 export BORG_REPO=ssh://d7h5sb0u@borgbase/./repo
-
-info "Checking for incomplete backups to resume"
-# Check for the existence of incomplete checkpoints
-incomplete=$(borg list --consider-checkpoint --json "${BORG_REPO}" | jq -r '.archives[] | select(.name | test("checkpoint$")) | .name')
-if [[ -n "$incomplete" ]]; then
-    info "Resuming from checkpoint: $incomplete"
-    archive_name="$incomplete"
-else
-    archive_name="'{hostname}-{now}'"
-    info "Starting new backup"
-fi
 
 #backup_repo{
 trap 'echo $( date ) Backup interrupted >&2; notify-send -u critical "Backup failed!" ; exit 2' INT TERM
@@ -78,7 +64,6 @@ borg create \
     --stats \
     --show-rc \
     --exclude-caches \
-    --checkpoint-interval 1800 \
     --exclude '/home/**/.cache/**' \
     --exclude '/home/**/.Cache/**' \
     --exclude '/home/**/cache/**' \
@@ -97,7 +82,7 @@ borg create \
     --exclude '/home/tassilo/.config/google-chrome/' \
     --exclude '/home/tassilo/.steam/' \
     \
-    ::"${archive_name}" \
+    ::'{hostname}-{now}' \
     /etc \
     /home \
     /root \
