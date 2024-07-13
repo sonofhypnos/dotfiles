@@ -3,85 +3,170 @@
 #description    :Backup data from laptop to pc
 #author         :Tassilo Neubauer
 #date           :20220102
-#version        :0.1
+#version        :0.7
 #usage          :./backup_data.sh
 #notes          :
 #bash_version   :5.1.4(1)-release
 #============================================================================
 
-# TODO: Add functionality from backupstuff.sh back in which currently isn't used.
+# User-configurable constants
+# ============================
+# Modify these variables to customize the script for your setup
 
-# Backup ssh-keys:
-#/home/bin/tassilo/bin/save_ssh_keys.sh 
+# The user who will receive GUI prompts
+GUI_USER="tassilo"
+
+# The repository URL for your Borg backup
+BORG_REPO="ssh://d7h5sb0u@borgbase/./repo"
+
+# The path to the log file for storing the last successful archive date
+LAST_ARCHIVE_LOG="/var/log/borg_last_archive.log"
+
+# The 1Password item path for the Borg passphrase
+BORG_PASSPHRASE_1PASSWORD_PATH="op://Personal/Encryption borg base laptop passphrase/password"
+
+# Directories and files to exclude from the backup
+# Add or remove paths as needed
+EXCLUDE_PATTERNS=(
+    '/home/**/.cache/**'
+    '/home/**/.Cache/**'
+    '/home/**/cache/**'
+    '/home/**/Cache/**'
+    '/home/**/CacheStorage/**'
+    '/home/**/CachedData/**'
+    '/home/tassilo/Dropbox/**'
+    '/home/tassilo/Games/'
+    '/home/**/Code Cache/**'
+    '/var/snap/lxd/common/lxd/disks/storage1.img'
+    '/var/tmp/*'
+    '/home/tassilo/Dropbox/semester*/**/*.mp4'
+    '/home/tassilo/Videos/simon/**'
+    '/home/tassilo/Videos/transcribe/**'
+    '/home/tassilo/.config/google-chrome/'
+    '/home/tassilo/.steam/'
+)
+
+# Borg pruning settings
+KEEP_DAILY=7
+KEEP_WEEKLY=4
+KEEP_MONTHLY=6
+
+# End of user-configurable constants
+# ===================================
 
 if [ "$EUID" -ne 0 ]; then
     echo "Please run as root"
     exit
 fi
 
-# Setting this, so the repo does not need to be given on the commandline:
-#
-#export BORG_REPO='/media/tassilo/backup/borgE15/'
+# Function to prevent shutdown during backup
+prevent_shutdown() {
+    systemctl mask systemd-poweroff.service
+    systemctl mask systemd-reboot.service
+    systemctl mask systemd-halt.service
+    systemctl mask systemd-suspend.service
+    systemctl mask systemd-hibernate.service
+    systemctl mask systemd-hybrid-sleep.service
+}
 
-pwd=$(runuser -l tassilo -c 'DISPLAY=:0; export DISPLAY;rofi -dmenu -password -lines 1 -p "Enter 1Password password"')
+# Function to allow shutdown after backup
+allow_shutdown() {
+    systemctl unmask systemd-poweroff.service
+    systemctl unmask systemd-reboot.service
+    systemctl unmask systemd-halt.service
+    systemctl unmask systemd-suspend.service
+    systemctl unmask systemd-hibernate.service
+    systemctl unmask systemd-hybrid-sleep.service
+}
+
+# Function to get the last full archive date and save to log file
+update_last_archive_log() {
+    local last_archive=$(borg list --last 1 --format '{time}' "$BORG_REPO")
+    echo "Last successful archive: $last_archive" > "$LAST_ARCHIVE_LOG"
+}
+
+# Function to read the last archive date from log file
+get_last_archive_from_log() {
+    if [ -f "$LAST_ARCHIVE_LOG" ]; then
+        cat "$LAST_ARCHIVE_LOG"
+    else
+        echo "No previous archive information available"
+    fi
+}
+
+# Function to check for lock and ask user to break it using zenity
+check_and_break_lock() {
+    if borg list "$BORG_REPO" &>/dev/null; then
+        return 0
+    else
+        if sudo -u $GUI_USER DISPLAY=:0 zenity --question --text="A lock was detected on the server. Do you want to break the lock?" --title="Borg Backup Lock Detected"; then
+            borg break-lock "$BORG_REPO"
+            return $?
+        else
+            return 1
+        fi
+    fi
+}
+
+# Function to display error message using zenity
+display_error_message() {
+    local message="$1"
+    sudo -u $GUI_USER DISPLAY=:0 zenity --error --text="$message" --title="Backup Error"
+}
+
+# Get the last archive date from log
+last_archive_info=$(get_last_archive_from_log)
+
+# Use zenity for password prompt
+pwd=$(sudo -u $GUI_USER DISPLAY=:0 zenity --password --title="1Password Authentication" --text="Enter 1Password password. Last archive: ($last_archive_info)")
+
+if [ -z "$pwd" ]; then
+    display_error_message "Password input cancelled. Aborting backup."
+    exit 1
+fi
+
 op whoami || eval "$(echo "$pwd" | op signin)"
 
-BORG_PASSPHRASE=$(op read "op://Personal/Encryption borg base laptop passphrase/password")
+BORG_PASSPHRASE=$(op read "$BORG_PASSPHRASE_1PASSWORD_PATH")
 export BORG_PASSPHRASE
 
 # some helpers and error handling:
 info() { printf "\n%s %s\n\n" "$(date)" "$*" >&2; }
 
-#info "Breaking any existing locks on the server" FIXME: don't use this madness
-#as long as you don't kknow this thing could fuck you up hard (which seems
-#likely to you currently!
-#borg break-lock root@nixos:/home/tassilo/backups
+export BORG_REPO
 
-info "Starting backup with borg base server"
-#export BORG_REPO='root@nixos:/home/tassilo/backups'
-export BORG_REPO=ssh://d7h5sb0u@borgbase/./repo
-
-#backup_repo{
-trap 'echo $( date ) Backup interrupted >&2; notify-send -u critical "Backup failed!" ; exit 2' INT TERM
+trap 'echo $( date ) Backup interrupted >&2; notify-send -u critical "Backup failed!" ; display_error_message "Backup was interrupted!"; allow_shutdown; exit 2' INT TERM
 
 info "Starting backup"
 
+# Prevent shutdown
+prevent_shutdown
+
+# Check for lock and ask user to break it if necessary
+if ! check_and_break_lock; then
+    info "Backup aborted due to lock"
+    display_error_message "Backup aborted due to lock"
+    allow_shutdown
+    exit 1
+fi
+
+# Prepare exclude patterns for borg create command
+exclude_options=""
+for pattern in "${EXCLUDE_PATTERNS[@]}"; do
+    exclude_options+="--exclude '$pattern' "
+done
+
 # Backup the most important directories into an archive named after
 # the machine this script is currently running on:
-# TODO remove emacs stuff from backup
-#TODO: further things to exclude:
-# straight compiled emacs things
-# /var/cache...
-# TODO: either empty the trash or exclude it in your backup?
-# the backup on the nixos server took under 9 minutes last time. So don't worry too much about the backup taking long. You are just impatient.
-# everything else with cache?
-# is there like another reason to need it?
-
-borg create \
+eval borg create \
     --verbose \
     --filter AME \
     --list \
     --stats \
     --show-rc \
+    --checkpoint-interval 1800 \
     --exclude-caches \
-    --exclude '/home/**/.cache/**' \
-    --exclude '/home/**/.Cache/**' \
-    --exclude '/home/**/cache/**' \
-    --exclude '/home/**/Cache/**' \
-    --exclude '/home/**/CacheStorage/**' \
-    --exclude '/home/**/CacheStorage/**' \
-    --exclude '/home/**/CachedData/**' \
-    --exclude '/home/tassilo/Dropbox/**' \
-    --exclude '/home/tassilo/Games/' \
-    --exclude '/home/**/Code Cache/**' \
-    --exclude '/var/snap/lxd/common/lxd/disks/storage1.img' \
-    --exclude '/var/tmp/*' \
-    --exclude '/home/tassilo/Dropbox/semester*/**/*.mp4' \
-    --exclude '/home/tassilo/Videos/simon/**' \
-    --exclude '/home/tassilo/Videos/transcribe/**' \
-    --exclude '/home/tassilo/.config/google-chrome/' \
-    --exclude '/home/tassilo/.steam/' \
-    \
+    $exclude_options \
     ::'{hostname}-{now}' \
     /etc \
     /home \
@@ -92,18 +177,13 @@ backup_exit=$?
 
 info "Pruning repository"
 
-# Use the `prune` subcommand to maintain 7 daily, 4 weekly and 6 monthly
-# archives of THIS machine. The '{hostname}-' prefix is very important to
-# limit prune's operation to this machine's archives and not apply to
-# other machines' archives also:
-
 borg prune \
     --list \
     --prefix '{hostname}-' \
     --show-rc \
-    --keep-daily 7 \
-    --keep-weekly 4 \
-    --keep-monthly 6
+    --keep-daily $KEEP_DAILY \
+    --keep-weekly $KEEP_WEEKLY \
+    --keep-monthly $KEEP_MONTHLY
 
 prune_exit=$?
 
@@ -113,94 +193,20 @@ global_exit=$((backup_exit > prune_exit ? backup_exit : prune_exit))
 if [ ${global_exit} -eq 0 ]; then
     info "Backup and Prune finished successfully"
     logger "Backup and Prune finished successfully"
-
+    # Update the last archive log file
+    update_last_archive_log
 elif [ ${global_exit} -eq 1 ]; then
     info "Backup and/or Prune finished with warnings"
     logger -p user.warn "Backup and/or Prune finished with warnings"
+    display_error_message "Backup and/or Prune finished with warnings. Check the logs for more information."
 else
     info "Backup and/or Prune finished with errors"
     logger -p user.error "Backup and/or Prune finished with errors"
+    display_error_message "Backup and/or Prune finished with errors. Check the logs for more information."
 fi
 
-#} #end of backup_repo
-
-#do borg backup stuff, if the thing is actually mounted otherwise inform that
-#TODO using global variable instead of parameter is ugly, make this pretty once I trust my bash skills
-
-# FIXME: disabled the family thing, because sister disabled it.
-#enabeling vpn for my families router
-#wg-quick up neubauer
-
-# FIXME: the below was used when I tried to run the whole routine above as a bash script, which very much did not seem to work by 2023-01-30.
-#info "Starting backup on family server"
-#export BORG_REPO='tassilo@family:/home/tassilo/z500GB/borg_backups'
-#backup_repo
-#info "backup finished family server"
-
-#info "Starting backup with nix server"
-
-#export BORG_REPO='root@nixos:/home/tassilo/backups'
-
-#borg create \
-#    --verbose \
-#    --filter AME \
-#    --list \
-#    --stats \
-#    --show-rc \
-#    --exclude-caches \
-#    --exclude '/home/**/.cache/**' \
-#    --exclude '/home/**/.Cache/**' \
-#    --exclude '/home/**/cache/**' \
-#    --exclude '/home/**/Cache/**' \
-#    --exclude '/home/**/CacheStorage/**' \
-#    --exclude '/home/**/CacheStorage/**' \
-#    --exclude '/home/**/CachedData/**' \
-#    --exclude '/home/tassilo/Dropbox/**' \
-#    --exclude '/home/tassilo/Games/' \
-#    --exclude '/home/**/Code Cache/**' \
-#    --exclude '/var/snap/lxd/common/lxd/disks/storage1.img' \
-#    --exclude '/var/tmp/*' \
-#    --exclude '/home/tassilo/Dropbox/semester*/**/*.mp4' \
-#    \
-#    ::'{hostname}-{now}' \
-#    /etc \
-#    /home \
-#    /root \
-#    /var
-#
-#backup_exit=$?
-#
-#info "Pruning repository"
-#
-## Use the `prune` subcommand to maintain 7 daily, 4 weekly and 6 monthly
-## archives of THIS machine. The '{hostname}-' prefix is very important to
-## limit prune's operation to this machine's archives and not apply to
-## other machines' archives also:
-#
-#borg prune \
-#    --list \
-#    --prefix '{hostname}-' \
-#    --show-rc \
-#    --keep-daily 7 \
-#    --keep-weekly 4 \
-#    --keep-monthly 6
-#
-#prune_exit=$?
-
-# use highest exit code as global exit code
-global_exit=$((backup_exit > prune_exit ? backup_exit : prune_exit))
-
-if [ ${global_exit} -eq 0 ]; then
-    info "Backup 2 and Prune finished successfully"
-    logger "Backup 2 and Prune finished successfully"
-
-elif [ ${global_exit} -eq 1 ]; then
-    info "Backup 2 and/or Prune finished with warnings"
-    logger -p user.warn "Backup 2 and/or Prune finished with warnings"
-else
-    info "Backup and/or Prune finished with errors"
-    logger -p user.error "Backup 2 and/or Prune finished with errors"
-fi
+# Allow shutdown after backup
+allow_shutdown
 
 info "finished backup"
 
