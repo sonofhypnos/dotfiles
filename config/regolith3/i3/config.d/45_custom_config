@@ -2,6 +2,7 @@
 # Custom configuration
 # =========================================================================
 
+
 set $wallpaper i3-wallpaper
 
 #Screen-layout
@@ -32,12 +33,6 @@ mode "$layout_mode" {
 	bindsym Return mode "default"
 }
 
-#Launch Gnome:
-# Restore GNOME's settings
-exec --no-startup-id /usr/libexec/gnome-settings-daemon-localeexec
-
-# Fix a bug in gnome-settings-daemon: http://feeding.cloud.geek.nz/posts/creating-a-modern-tiling-desktop-environment-using-i3/
-exec --no-startup-id dconf write /org/gnome/settings-daemon/plugins/cursor/active false
 
 #Assign variables for special Applications
 set $main_launcher Main Launcher: main gathert[o]wn [f]ocusmate [w]hatsapp [g]mail [k]eep [c]alendar [d]iscord gpt[4] [a]nki [r]eminder [p]rediction [t]odoist
@@ -68,24 +63,6 @@ set $clearpythoncomments "xclip -o | sed '/^\s*#/d; s/#.*//' | xclip -selection 
 
 bindsym $mod+p exec $clearpythoncomments
 
-#Open main Applications
-exec emacs --daemon; emacsclient -c
-exec flatpak run org.zotero.Zotero
-exec rescuetime
-exec flameshot
-exec i3-wallpaper
-exec ~/bin/sleepnag.sh
-
-
-#clipboard manager
-exec copyq
-
-# arena
-exec firefox https://arena3-chapter0-fundamentals.streamlit.app
-exec firefox https://arena3-chapter1-transformer-interp.streamlit.app/
-
-#Send Battery warning
-exec --no-startup-id ./i3-battery-popup/i3-battery-popup
 
 #Launcher for Main Applications
 bindsym Control+$mod+$alt+o mode "$main_launcher"
@@ -210,3 +187,33 @@ bindsym $mod+Control+f exec $doublePortOnly;  fullscreen toggle global
 bindsym $mod+c exec capture.sh -k 'n'
 assign [class="TestWindow"] $ws9
 
+
+#Launch Gnome:
+# Restore GNOME's settings
+exec --no-startup-id /usr/libexec/gnome-settings-daemon-localeexec
+
+# Fix a bug in gnome-settings-daemon: http://feeding.cloud.geek.nz/posts/creating-a-modern-tiling-desktop-environment-using-i3/
+exec --no-startup-id dconf write /org/gnome/settings-daemon/plugins/cursor/active false
+
+
+##Open main Applications
+#exec emacs --daemon; emacsclient -c
+#exec flatpak run org.zotero.Zotero
+#exec rescuetime
+#exec flameshot
+#exec i3-wallpaper
+#exec ~/bin/sleepnag.sh
+#
+#
+##clipboard manager
+#exec copyq
+#
+## arena
+#exec firefox https://arena3-chapter0-fundamentals.streamlit.app
+#exec firefox https://arena3-chapter1-transformer-interp.streamlit.app/
+
+#Send Battery warning
+exec --no-startup-id ./i3-battery-popup/i3-battery-popup
+
+# Smart startup script
+exec ~/.dotfiles/bin/startup_applications.sh
