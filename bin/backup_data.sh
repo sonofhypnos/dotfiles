@@ -59,6 +59,9 @@ if [ "$EUID" -ne 0 ]; then
     exit 1
 fi
 
+# some helpers and error handling:
+info() { printf "\n%s %s\n\n" "$(date)" "$*" >&2; }
+
 # Function to prevent shutdown during backup
 prevent_shutdown() {
     systemctl mask systemd-poweroff.service
@@ -83,6 +86,7 @@ allow_shutdown() {
 update_last_archive_log() {
     local last_archive=$(borg list --last 1 --format '{time}' "$BORG_REPO")
     echo "$last_archive" > "$LAST_ARCHIVE_LOG"
+    info "Last archive: $last_archive"
 }
 
 # Function to read the last archive date from log file
@@ -123,11 +127,15 @@ display_error_message() {
 # Get the last archive date from log
 last_archive_info=$(get_last_archive_from_log)
 
-# Use zenity for password prompt with last archive info
+# Display last archive info
+sudo -u $GUI_USER DISPLAY=:0 zenity --info \
+    --title="Backup Information" \
+    --text="Last successful archive:\n$last_archive_info" \
+    --width=300
+
+# Use zenity for password prompt
 pwd=$(sudo -u $GUI_USER DISPLAY=:0 zenity --password \
-    --title="1Password Authentication" \
-    --text="Enter 1Password password\n\nLast successful archive:\n$last_archive_info" \
-    --width=300)
+    --title="1Password Authentication")
 
 if [ -z "$pwd" ]; then
     display_error_message "Password input cancelled. Aborting backup."
@@ -139,8 +147,6 @@ op whoami || eval "$(echo "$pwd" | op signin)"
 BORG_PASSPHRASE=$(op read "$BORG_PASSPHRASE_1PASSWORD_PATH")
 export BORG_PASSPHRASE
 
-# some helpers and error handling:
-info() { printf "\n%s %s\n\n" "$(date)" "$*" >&2; }
 
 export BORG_REPO
 
@@ -175,7 +181,7 @@ eval borg create \
     --show-rc \
     --checkpoint-interval 1800 \
     --exclude-caches \
-    $exclude_options \
+    "$exclude_options" \
     ::'{hostname}-{now}' \
     /etc \
     /home \
@@ -199,15 +205,21 @@ prune_exit=$?
 # use highest exit code as global exit code
 global_exit=$((backup_exit > prune_exit ? backup_exit : prune_exit))
 
+
+
 if [ ${global_exit} -eq 0 ]; then
     info "Backup and Prune finished successfully"
     logger "Backup and Prune finished successfully"
     # Update the last archive log file
     update_last_archive_log
-elif [ ${global_exit} -eq 1 ]; then
-    info "Backup and/or Prune finished with warnings"
-    logger -p user.warn "Backup and/or Prune finished with warnings"
-    display_error_message "Backup and/or Prune finished with warnings. Check the logs for more information."
+elif [ ${backup_exit} -eq 1 ]; then
+    info "Backup finished with warnings"
+    logger -p user.warn "Backup finished with warnings"
+    display_error_message "Backup finished with warnings. Check the logs for more information."
+elif [ ${prune_exit} -eq 1 ]; then
+    info "Prune finished with warnings"
+    logger -p user.warn "Prune finished with warnings"
+    display_error_message "Prune finished with warnings. Check the logs for more information."
 else
     info "Backup and/or Prune finished with errors"
     logger -p user.error "Backup and/or Prune finished with errors"
