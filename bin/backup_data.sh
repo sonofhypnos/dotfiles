@@ -3,7 +3,7 @@
 #description    :Backup data from laptop to pc
 #author         :Tassilo Neubauer
 #date           :20220102
-#version        :0.7
+#version        :0.9
 #usage          :./backup_data.sh
 #notes          :
 #bash_version   :5.1.4(1)-release
@@ -22,7 +22,7 @@ BORG_REPO="ssh://d7h5sb0u@borgbase/./repo"
 # The path to the log file for storing the last successful archive date
 LAST_ARCHIVE_LOG="/var/log/borg_last_archive.log"
 
-# The 1Password item path for the Borg passphrase
+# The 1Password item path for the Borg passphrase (Or adjust code to whichever way you handle secrets.)
 BORG_PASSPHRASE_1PASSWORD_PATH="op://Personal/Encryption borg base laptop passphrase/password"
 
 # Directories and files to exclude from the backup
@@ -56,7 +56,7 @@ KEEP_MONTHLY=6
 
 if [ "$EUID" -ne 0 ]; then
     echo "Please run as root"
-    exit
+    exit 1
 fi
 
 # Function to prevent shutdown during backup
@@ -82,7 +82,7 @@ allow_shutdown() {
 # Function to get the last full archive date and save to log file
 update_last_archive_log() {
     local last_archive=$(borg list --last 1 --format '{time}' "$BORG_REPO")
-    echo "Last successful archive: $last_archive" > "$LAST_ARCHIVE_LOG"
+    echo "$last_archive" > "$LAST_ARCHIVE_LOG"
 }
 
 # Function to read the last archive date from log file
@@ -99,7 +99,13 @@ check_and_break_lock() {
     if borg list "$BORG_REPO" &>/dev/null; then
         return 0
     else
-        if sudo -u $GUI_USER DISPLAY=:0 zenity --question --text="A lock was detected on the server. Do you want to break the lock?" --title="Borg Backup Lock Detected"; then
+        local response
+        response=$(sudo -u $GUI_USER DISPLAY=:0 zenity --entry \
+            --title="Borg Backup Lock Detected" \
+            --text="A lock was detected on the server.\nTo break the lock, type 'break-lock' (without quotes) and press Enter.\nTo cancel, leave blank and press Enter or close this window." \
+            --width=400)
+
+        if [ "$response" = "break-lock" ]; then
             borg break-lock "$BORG_REPO"
             return $?
         else
@@ -111,14 +117,33 @@ check_and_break_lock() {
 # Function to display error message using zenity
 display_error_message() {
     local message="$1"
-    sudo -u $GUI_USER DISPLAY=:0 zenity --error --text="$message" --title="Backup Error"
+    sudo -u $GUI_USER DISPLAY=:0 zenity --error --text="$message" --title="Backup Error" --width=300
 }
+
+# Function to clean up in case of interruption
+cleanup() {
+    echo "$( date ) Backup interrupted" >&2
+    notify-send -u critical "Backup failed!"
+    display_error_message "Backup was interrupted!"
+
+    echo "Attempting to break any existing locks..."
+    borg break-lock "$BORG_REPO"
+
+    allow_shutdown
+    exit 2
+}
+
+# Set the trap to use the cleanup function
+trap cleanup INT TERM
 
 # Get the last archive date from log
 last_archive_info=$(get_last_archive_from_log)
 
-# Use zenity for password prompt
-pwd=$(sudo -u $GUI_USER DISPLAY=:0 zenity --password --title="1Password Authentication" --text="Enter 1Password password. Last archive: ($last_archive_info)")
+# Use zenity for password prompt with last archive info
+pwd=$(sudo -u $GUI_USER DISPLAY=:0 zenity --password \
+    --title="1Password Authentication" \
+    --text="Enter 1Password password\n\nLast successful archive:\n$last_archive_info" \
+    --width=300)
 
 if [ -z "$pwd" ]; then
     display_error_message "Password input cancelled. Aborting backup."
@@ -134,8 +159,6 @@ export BORG_PASSPHRASE
 info() { printf "\n%s %s\n\n" "$(date)" "$*" >&2; }
 
 export BORG_REPO
-
-trap 'echo $( date ) Backup interrupted >&2; notify-send -u critical "Backup failed!" ; display_error_message "Backup was interrupted!"; allow_shutdown; exit 2' INT TERM
 
 info "Starting backup"
 
