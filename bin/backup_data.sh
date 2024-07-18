@@ -219,7 +219,7 @@ elif [ ${backup_exit} -eq 1 ]; then
 elif [ ${prune_exit} -eq 1 ]; then
     info "Prune finished with warnings"
     logger -p user.warn "Prune finished with warnings"
-    display_error_message "Prune finished with warnings. Check the logs for more information."
+    display_error_message "Prune finished with warnings. Check the logs for more information: sudo cat /var/log/borg_backup.log"
 else
     info "Backup and/or Prune finished with errors"
     logger -p user.error "Backup and/or Prune finished with errors"
