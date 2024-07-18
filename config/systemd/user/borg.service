@@ -4,6 +4,8 @@ Description=Borg Backup
 [Service]
 Type=oneshot
 ExecStart=/home/tassilo/bin/backup_data.sh
+StandardOutput=append:/var/log/borg_backup.log
+StandardError=append:/var/log/borg_backup.log
 
 [Install]
 WantedBy=multi-user.target
