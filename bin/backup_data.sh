@@ -120,22 +120,6 @@ display_error_message() {
     sudo -u $GUI_USER DISPLAY=:0 zenity --error --text="$message" --title="Backup Error" --width=300
 }
 
-# Function to clean up in case of interruption
-cleanup() {
-    echo "$( date ) Backup interrupted" >&2
-    notify-send -u critical "Backup failed!"
-    display_error_message "Backup was interrupted!"
-
-    echo "Attempting to break any existing locks..."
-    borg break-lock "$BORG_REPO"
-
-    allow_shutdown
-    exit 2
-}
-
-# Set the trap to use the cleanup function
-trap cleanup INT TERM
-
 # Get the last archive date from log
 last_archive_info=$(get_last_archive_from_log)
 
@@ -159,6 +143,8 @@ export BORG_PASSPHRASE
 info() { printf "\n%s %s\n\n" "$(date)" "$*" >&2; }
 
 export BORG_REPO
+
+trap 'echo $( date ) Backup interrupted >&2; notify-send -u critical "Backup failed!" ; display_error_message "Backup was interrupted!"; allow_shutdown; exit 2' INT TERM
 
 info "Starting backup"
 
