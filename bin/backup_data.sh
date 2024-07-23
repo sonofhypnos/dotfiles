@@ -22,6 +22,9 @@ BORG_REPO="ssh://d7h5sb0u@borgbase/./repo"
 # The path to the log file for storing the last successful archive date
 LAST_ARCHIVE_LOG="/var/log/borg_last_archive.log"
 
+# The path to Borg log file
+BORG_LOG_FILE="/var/log/borg_backup.log"
+
 # The 1Password item path for the Borg passphrase (Or adjust code to whichever way you handle secrets.)
 BORG_PASSPHRASE_1PASSWORD_PATH="op://Personal/Encryption borg base laptop passphrase/password"
 
@@ -60,7 +63,12 @@ if [ "$EUID" -ne 0 ]; then
 fi
 
 # some helpers and error handling:
-info() { printf "\n%s %s\n\n" "$(date)" "$*" >&2; }
+info() {
+    local log_message
+    log_message="$(date) $*"
+    echo "$log_message" | tee -a "$BORG_LOG_FILE" >&2
+    echo "" | tee -a "$BORG_LOG_FILE" >&2
+}
 
 # Function to prevent shutdown during backup
 prevent_shutdown() {
