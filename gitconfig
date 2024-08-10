@@ -32,6 +32,8 @@
 	update-submodules = submodule update --init --recursive
 	upgrade-submodules = submodule update --init --remote
 	push = !/home/tassilo/bin/safe_force_push.sh
+	hooks-on = config core.hooksPath .git/hooks
+	hooks-off = config core.hooksPath /dev/null
 [init]
 	defaultBranch = main
 [pull]
