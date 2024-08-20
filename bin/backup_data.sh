@@ -42,12 +42,30 @@ EXCLUDE_PATTERNS=(
     '/home/**/Code Cache/**'
     '/var/snap/lxd/common/lxd/disks/storage1.img'
     '/var/tmp/*'
+    '/var/log/syslog'
     '/home/tassilo/Dropbox/semester*/**/*.mp4'
     '/home/tassilo/Videos/simon/**'
     '/home/tassilo/Videos/transcribe/**'
     '/home/tassilo/.config/google-chrome/'
     '/home/tassilo/.steam/'
+    '/home/tassilo/.drobbox/'
 )
+
+TEMP_LOG_DIR="/tmp/borg_backup_logs"
+
+FIREFOX_PROFILE_DIR="/home/tassilo/.mozilla/firefox/*.default-release"
+TEMP_FIREFOX_DIR="$TEMP_LOG_DIR/firefox_backup"
+
+LOG_FILES_TO_COPY=(
+    "/var/log/borg_backup.log"
+    "/var/log/journal/*/system.journal"
+    "/var/log/syslog"
+)
+
+
+
+# Append log files to exclude patterns
+EXCLUDE_PATTERNS+=("${LOG_FILES_TO_EXCLUDE[@]}")
 
 # Borg pruning settings
 KEEP_DAILY=7
@@ -56,6 +74,43 @@ KEEP_MONTHLY=6
 
 # End of user-configurable constants
 # ===================================
+
+# Function to pause Firefox
+pause_firefox() {
+    pgrep firefox | xargs -r -n1 kill -STOP
+}
+
+# Function to resume Firefox
+resume_firefox() {
+    pgrep firefox | xargs -r -n1 kill -CONT
+}
+
+# Function to copy Firefox files
+copy_firefox_files() {
+    mkdir -p "$TEMP_FIREFOX_DIR"
+    cp -R "$FIREFOX_PROFILE_DIR"/* "$TEMP_FIREFOX_DIR/"
+}
+
+# Modify the copy_log_files function to include Firefox handling
+copy_log_files() {
+    mkdir -p "$TEMP_LOG_DIR"
+    for file in "${LOG_FILES_TO_COPY[@]}"; do
+        mkdir -p "$TEMP_LOG_DIR/$(dirname "$file")"
+        cp -R $file "$TEMP_LOG_DIR/$file" 2>/dev/null || true
+    done
+
+    # Handle Firefox files
+    info "Pausing Firefox for file copy"
+    pause_firefox
+    copy_firefox_files
+    resume_firefox
+    info "Firefox resumed"
+}
+
+# Function to clean up temporary log files
+cleanup_temp_logs() {
+    rm -rf "$TEMP_LOG_DIR"
+}
 
 if [ "$EUID" -ne 0 ]; then
     echo "Please run as root"
@@ -182,6 +237,9 @@ for pattern in "${EXCLUDE_PATTERNS[@]}"; do
     exclude_options+="--exclude '$pattern' "
 done
 
+# Copy log files to temporary directory
+copy_log_files
+
 # Backup the most important directories into an archive named after
 # the machine this script is currently running on:
 eval borg create \
@@ -197,6 +255,7 @@ eval borg create \
     /etc \
     /home \
     /root \
+    "$TEMP_LOG_DIR" \
     /var
 
 backup_exit=$?
