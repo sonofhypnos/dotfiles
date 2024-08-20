@@ -49,20 +49,20 @@ EXCLUDE_PATTERNS=(
     '/home/tassilo/.config/google-chrome/'
     '/home/tassilo/.steam/'
     '/home/tassilo/.drobbox/'
+    '/home/tassilo/.mozilla/firefox/*.default-release'
 )
 
 TEMP_LOG_DIR="/tmp/borg_backup_logs"
 
-FIREFOX_PROFILE_DIR="/home/tassilo/.mozilla/firefox/*.default-release"
+FIREFOX_PROFILE_DIR="/home/tassilo/.mozilla/firefox/*.default-release" # NOTE: Manually also added to ignore directories
 TEMP_FIREFOX_DIR="$TEMP_LOG_DIR/firefox_backup"
 
 LOG_FILES_TO_COPY=(
     "/var/log/borg_backup.log"
-    "/var/log/journal/*/system.journal"
+    "/var/log/journal/**/system.journal"
     "/var/log/syslog"
+    #TODO: implement similar solution for chrome that we implemented for firefox
 )
-
-
 
 # Append log files to exclude patterns
 EXCLUDE_PATTERNS+=("${LOG_FILES_TO_EXCLUDE[@]}")
@@ -85,26 +85,32 @@ resume_firefox() {
     pgrep firefox | xargs -r -n1 kill -CONT
 }
 
-# Function to copy Firefox files
-copy_firefox_files() {
-    mkdir -p "$TEMP_FIREFOX_DIR"
-    cp -R "$FIREFOX_PROFILE_DIR"/* "$TEMP_FIREFOX_DIR/"
-}
-
-# Modify the copy_log_files function to include Firefox handling
+# Function to copy log files
 copy_log_files() {
     mkdir -p "$TEMP_LOG_DIR"
-    for file in "${LOG_FILES_TO_COPY[@]}"; do
-        mkdir -p "$TEMP_LOG_DIR/$(dirname "$file")"
-        cp -R $file "$TEMP_LOG_DIR/$file" 2>/dev/null || true
+    for file_pattern in "${LOG_FILES_TO_COPY[@]}"; do
+        # Use find to properly handle wildcards
+        find $(dirname "$file_pattern") -path "$file_pattern" -print0 | while IFS= read -r -d '' file; do
+            # Create the directory structure in the temp directory
+            target_dir="$TEMP_LOG_DIR$(dirname "$file")"
+            mkdir -p "$target_dir"
+            # Copy the file
+            cp -a "$file" "$target_dir/"
+        done
     done
+}
 
-    # Handle Firefox files
-    info "Pausing Firefox for file copy"
-    pause_firefox
-    copy_firefox_files
-    resume_firefox
-    info "Firefox resumed"
+# Function to copy Firefox files
+copy_firefox_files() {
+    local profile_dir
+    # Find the actual Firefox profile directory
+    profile_dir=$(find /home/tassilo/.mozilla/firefox -maxdepth 1 -type d -name '*.default-release' | head -n 1)
+    if [ -n "$profile_dir" ]; then
+        mkdir -p "$TEMP_FIREFOX_DIR"
+        cp -a "$profile_dir"/* "$TEMP_FIREFOX_DIR/"
+    else
+        info "Firefox profile directory not found"
+    fi
 }
 
 # Function to clean up temporary log files
@@ -239,6 +245,13 @@ done
 
 # Copy log files to temporary directory
 copy_log_files
+
+# Handle Firefox files
+info "Pausing Firefox for file copy"
+pause_firefox
+copy_firefox_files
+resume_firefox
+info "Firefox resumed"
 
 # Backup the most important directories into an archive named after
 # the machine this script is currently running on:
