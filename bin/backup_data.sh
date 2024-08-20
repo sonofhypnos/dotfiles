@@ -2,8 +2,8 @@
 #title          :backup_data.sh
 #description    :Backup data from laptop to pc
 #author         :Tassilo Neubauer
-#date           :20220102
-#version        :0.9
+#date           :2024-08-20
+#version        :1.0
 #usage          :./backup_data.sh
 #notes          :
 #bash_version   :5.1.4(1)-release
@@ -25,7 +25,7 @@ LAST_ARCHIVE_LOG="/var/log/borg_last_archive.log"
 # The path to Borg log file
 BORG_LOG_FILE="/var/log/borg_backup.log"
 
-# The 1Password item path for the Borg passphrase (Or adjust code to whichever way you handle secrets.)
+# The 1Password item path for the Borg passphrase (Or adjust code below whichever way you handle secrets.)
 BORG_PASSPHRASE_1PASSWORD_PATH="op://Personal/Encryption borg base laptop passphrase/password"
 
 # Directories and files to exclude from the backup
@@ -90,11 +90,14 @@ allow_shutdown() {
     systemctl unmask systemd-hybrid-sleep.service
 }
 
-# Function to get the last full archive date and save to log file
 update_last_archive_log() {
     local last_archive=$(borg list --last 1 --format '{time}' "$BORG_REPO")
-    echo "$last_archive" > "$LAST_ARCHIVE_LOG"
-    info "Last archive: $last_archive"
+    if [ -n "$last_archive" ]; then
+        echo "$last_archive" > "$LAST_ARCHIVE_LOG"
+        info "Last archive updated: $last_archive"
+    else
+        info "Failed to retrieve last archive information"
+    fi
 }
 
 # Function to read the last archive date from log file
@@ -165,7 +168,7 @@ info "Starting backup"
 # Prevent shutdown
 prevent_shutdown
 
-# Check for lock and ask user to break it if necessary
+## Check for lock and ask user to break it if necessary
 if ! check_and_break_lock; then
     info "Backup aborted due to lock"
     display_error_message "Backup aborted due to lock"
@@ -213,28 +216,61 @@ prune_exit=$?
 # use highest exit code as global exit code
 global_exit=$((backup_exit > prune_exit ? backup_exit : prune_exit))
 
+# Function to handle exit codes and return a status message
+handle_exit_code() {
+    local exit_code=$1
+    local operation=$2
 
+    case $exit_code in
+        0)
+            echo "$operation completed successfully"
+            return 0
+            ;;
+        1)
+            echo "$operation completed with warnings"
+            return 1
+            ;;
+        *)
+            echo "$operation failed with critical errors"
+            return 2
+            ;;
+    esac
+}
 
-if [ ${global_exit} -eq 0 ]; then
+# Handle backup and prune exit codes
+backup_status=$(handle_exit_code $backup_exit "Backup")
+backup_code=$?
+
+prune_status=$(handle_exit_code $prune_exit "Prune")
+prune_code=$?
+
+# Log the status of each operation
+info "$backup_status"
+info "$prune_status"
+
+# Determine overall exit status
+if [ $backup_code -eq 2 ] || [ $prune_code -eq 2 ]; then
+    info "Backup and/or Prune finished with critical errors"
+    logger -p user.error "Backup and/or Prune finished with critical errors"
+    display_error_message "Backup and/or Prune finished with critical errors. Check the logs for more information."
+    global_exit=2
+elif [ $backup_code -eq 1 ] || [ $prune_code -eq 1 ]; then
+    info "Backup and/or Prune finished with warnings"
+    logger -p user.warn "Backup and/or Prune finished with warnings"
+    display_error_message "Backup and/or Prune finished with warnings. Check the logs for more information."
+    global_exit=1
+else
     info "Backup and Prune finished successfully"
     logger "Backup and Prune finished successfully"
-    # Update the last archive log file
-    update_last_archive_log
-elif [ ${backup_exit} -eq 1 ]; then
-    info "Backup finished with warnings"
-    logger -p user.warn "Backup finished with warnings"
-    display_error_message "Backup finished with warnings. Check the logs for more information."
-elif [ ${prune_exit} -eq 1 ]; then
-    info "Prune finished with warnings"
-    logger -p user.warn "Prune finished with warnings"
-    display_error_message "Prune finished with warnings. Check the logs for more information: sudo cat /var/log/borg_backup.log"
-else
-    info "Backup and/or Prune finished with errors"
-    logger -p user.error "Backup and/or Prune finished with errors"
-    display_error_message "Backup and/or Prune finished with errors. Check the logs for more information."
+    global_exit=0
 fi
 
-# Allow shutdown after backup
+# Update the last archive log file if there are no critical errors
+if [ $backup_code -ne 2 ]; then
+    update_last_archive_log
+fi
+
+## Allow shutdown after backup
 allow_shutdown
 
 info "finished backup"
