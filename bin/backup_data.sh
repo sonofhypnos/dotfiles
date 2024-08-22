@@ -49,7 +49,7 @@ EXCLUDE_PATTERNS=(
     '/home/tassilo/.config/google-chrome/'
     '/home/tassilo/.steam/'
     '/home/tassilo/.drobbox/'
-    '/home/tassilo/.mozilla/firefox/*.default-release'
+    '/home/tassilo/.mozilla/'
 )
 
 TEMP_LOG_DIR="/tmp/borg_backup_logs"
@@ -59,7 +59,7 @@ TEMP_FIREFOX_DIR="$TEMP_LOG_DIR/firefox_backup"
 
 LOG_FILES_TO_COPY=(
     "/var/log/borg_backup.log"
-    "/var/log/journal/**/system.journal"
+    "/var/log/journal/*"
     "/var/log/syslog"
     #TODO: implement similar solution for chrome that we implemented for firefox
 )
@@ -103,8 +103,7 @@ copy_log_files() {
 # Function to copy Firefox files
 copy_firefox_files() {
     local profile_dir
-    # Find the actual Firefox profile directory
-    profile_dir=$(find /home/tassilo/.mozilla/firefox -maxdepth 1 -type d -name '*.default-release' | head -n 1)
+    profile_dir="/home/tassilo/.mozilla"
     if [ -n "$profile_dir" ]; then
         mkdir -p "$TEMP_FIREFOX_DIR"
         cp -a "$profile_dir"/* "$TEMP_FIREFOX_DIR/"
