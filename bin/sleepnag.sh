@@ -10,11 +10,11 @@
 #============================================================================
 
 reminder="You might think that you'll never do the task if you don't stay up to do it. If the task really is that important, you *will* do it later; if the task isn't, then sleep is more important"
-override_phrase="I promise I am staying up for a specific reason, which I am now saying out loud, and it's better to do that right now than to eat and sleep."
+override_phrase="I am staying up for a specific reason, which I am now saying out loud, and it's better to do that right now than to eat and sleep. I will pay 10€ per 30 minutes after midnight for staying up."
 nowcounter=0
 
 check_override() {
-    input=$(zenity --entry --title="LeechBlock Override" --text="Enter the following code to activate override:\n\n$override_phrase" --width=500 --height=200)
+  input=$(zenity --entry --title="LeechBlock Override" --text="Enter the following code to activate override (Remember TDT: Choose as though controlling the logical output of the abstract computation you implement, including the output of all other instantiations and simulations of that computation):\n\n$override_phrase" --width=500 --height=200)
     if [[ "$input" == "$override_phrase" ]]; then
         return 0
     else
