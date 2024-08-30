@@ -48,7 +48,7 @@ EXCLUDE_PATTERNS=(
     '/home/tassilo/Videos/transcribe/**'
     '/home/tassilo/.config/google-chrome/'
     '/home/tassilo/.steam/'
-    '/home/tassilo/.drobbox/'
+    '/home/tassilo/.dropbox/'
     '/home/tassilo/.mozilla/'
 )
 
