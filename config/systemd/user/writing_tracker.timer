@@ -3,7 +3,7 @@ Description=Writing Tracker Timer
 
 [Timer]
 Unit=writing_tracker.service
-OnBootSec=30min
+OnBootSec=15min # We do it after 15 minutes (not 30) to avoid changing this file right when the backup script runs
 RandomizedDelaySec=5m
 
 [Install]
