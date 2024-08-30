@@ -89,9 +89,9 @@ prompt_for_name() {
     local zenity_exit_code=$?
 
     # If we opened an image viewer, close it now
-    # if [[ -n "$display_pid" ]]; then
-    #     kill $display_pid 2>/dev/null
-    # fi
+    if [[ -n "$display_pid" ]]; then
+        kill $display_pid 2>/dev/null
+    fi
 
     # Handle the result
     case $zenity_exit_code in
@@ -184,8 +184,6 @@ main() {
     echo "getting todays videos"
     # Get today's videos
     readarray -t videos < <(get_todays_videos)
-    # gio list "$SRC_DIR" | grep '\.mp4$' | grep -v '^\.trashed' | grep "PXL_${TODAY}" | sort | cat
-    # exit
 
 
     echo "running through videos"
