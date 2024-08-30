@@ -6,10 +6,9 @@
 // @match        https://claude.ai/*
 // @grant        none
 // @author      Smart Manoj
+// @updateURL   https://raw.githubusercontent.com/sonofhypnos/dotfiles/main/userscripts/claude.user.js
 // ==/UserScript==
-// TODO: add "@" "updateUrl" stuff
-
-
+// TEST COMMENT
 
 (function() {
     'use strict';
