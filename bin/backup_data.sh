@@ -42,7 +42,6 @@ EXCLUDE_PATTERNS=(
     '/home/**/Code Cache/**'
     '/var/snap/lxd/common/lxd/disks/storage1.img'
     '/var/tmp/*'
-    '/var/log/syslog'
     '/home/tassilo/Dropbox/semester*/**/*.mp4'
     '/home/tassilo/Videos/simon/**'
     '/home/tassilo/Videos/transcribe/**'
@@ -59,13 +58,15 @@ TEMP_FIREFOX_DIR="$TEMP_LOG_DIR/firefox_backup"
 
 LOG_FILES_TO_COPY=(
     "/var/log/borg_backup.log"
-    "/var/log/journal/*"
-    "/var/log/syslog"
+    '/var/log/journal/*'
+    '/var/log/syslog'
     #TODO: implement similar solution for chrome that we implemented for firefox
 )
 
+
+
 # Append log files to exclude patterns
-EXCLUDE_PATTERNS+=("${LOG_FILES_TO_EXCLUDE[@]}")
+EXCLUDE_PATTERNS+=("${LOG_FILES_TO_COPY[@]}")
 
 # Borg pruning settings
 KEEP_DAILY=7
