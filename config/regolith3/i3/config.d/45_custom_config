@@ -1,6 +1,7 @@
 # =========================================================================
 # Custom configuration
 # =========================================================================
+# How to get keybindings help: Mod+Shift+ssharp
 
 
 set $wallpaper i3-wallpaper
@@ -44,6 +45,7 @@ set $keep google-chrome --app=https://keep.google.com
 set $calendar google-chrome --app=https://calendar.google.com
 set $focusmate google-chrome --app=https://focusmate.com
 set $gpt google-chrome --app=https://chat.openai.com/?model=gpt-4
+set $perp google-chrome --app=https://www.perplexity.ai/
 #set $claude google-chrome  --user-data-dir="/home/tassilo/.config/google-chrome/Profile 2" --no-extensions --app=https://claude.ai 
 set $claude google-chrome --app=https://claude.ai 
 
@@ -61,7 +63,7 @@ set $emacs emacsclient -c
 
 set $clearpythoncomments "xclip -o | sed '/^\s*#/d; s/#.*//' | xclip -selection clipboard"
 
-bindsym $mod+p exec $clearpythoncomments
+bindsym $mod+Control+p exec $clearpythoncomments
 
 
 #Launcher for Main Applications
@@ -79,9 +81,10 @@ mode "$main_launcher" {
 	bindsym i mode "default" exec $firefox https://i3wm.org/docs/userguide.html
 	bindsym p mode "default" exec $fatebook
 #	bindsym i mode "default" exec $intellij
-	bindsym 4 mode "default" exec $gpt
+  bindsym 1 mode "default" exec $perp
 	bindsym 2 mode "default" exec $claude
 	bindsym 3 mode "default" exec $gpt3
+	bindsym 4 mode "default" exec $gpt
 	bindsym a mode "default" exec anki
 	bindsym m mode "default" exec $teams
 	bindsym r mode "default" exec firefox https://web.colreminder.com/en-US/addReminder
@@ -140,7 +143,7 @@ bindsym $mod+z $search
 set $copyq exec copyq menu
 bindsym $mod+y $copyq
 
-## Launch // Open Openai Scratchpad // <> w ##/
+## Launch // Open Openai Scratchpad // <> q ##/
 for_window [class="Google-chrome" instance="chat.openai.com"] move scratchpad
 bindsym $mod+q [class="Google-chrome" instance="chat.openai.com"] scratchpad show
 
@@ -149,6 +152,9 @@ bindsym $mod+q [class="Google-chrome" instance="chat.openai.com"] scratchpad sho
 for_window [class="Google-chrome" instance="claude.ai"] move scratchpad
 bindsym $mod+w [class="Google-chrome" instance="claude.ai"] scratchpad show
 
+## Launch // Open perplexity Scratchpad // <> p ##/
+for_window [class="Google-chrome" instance="www.perplexity.ai"] move scratchpad
+bindsym $mod+p [class="Google-chrome" instance="www.perplexity.ai"] scratchpad show
 
 ## Launch // Open Fatebook // <> Alt p ##/
 for_window [class="Google-chrome" instance="fatebook.io"] move scratchpad
