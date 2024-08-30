@@ -196,14 +196,15 @@ display_error_message() {
     sudo -u $GUI_USER DISPLAY=:0 zenity --error --text="$message" --title="Backup Error" --width=300
 }
 
+display_info_message() {
+    local message="$1"
+    sudo -u $GUI_USER DISPLAY=:0 zenity --info --text="$message" --title="Backup Information" --width=300
+}
+
 # Get the last archive date from log
 last_archive_info=$(get_last_archive_from_log)
 
-# Display last archive info
-sudo -u $GUI_USER DISPLAY=:0 zenity --info \
-    --title="Backup Information" \
-    --text="Last successful archive:\n$last_archive_info" \
-    --width=300
+display_info_message "Last successful archive:\n$last_archive_info"
 
 # Use zenity for password prompt
 pwd=$(sudo -u $GUI_USER DISPLAY=:0 zenity --password \
@@ -332,6 +333,7 @@ elif [ $backup_code -eq 1 ] || [ $prune_code -eq 1 ]; then
     display_error_message "Backup and/or Prune finished with warnings. Check the logs for more information."
     global_exit=1
 else
+    display_info_message "Backup and Prune finished successfully"
     info "Backup and Prune finished successfully"
     logger "Backup and Prune finished successfully"
     global_exit=0
