@@ -57,7 +57,7 @@ If this is your desktop, once installed you need to run the `enable_services.sh`
 ## Setting up desktop:
 Setup services and timers:
 
-At the moment, user-level systemd timers are automatically enabled. The borg backup timer needs to be set manually for now:
+At the moment, user-level systemd timers are automatically enabled. The borg backup timer needs to be set manually (and possibly others):
 
 ``` bash
 sudo systemctl --user enable borg.service
