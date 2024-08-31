@@ -33,6 +33,7 @@ in {
       pkgs.git-secret
       pkgs.stripe-cli
       pkgs.jq
+      pkgs.python311
       # pkgs.lean
       #pkgs.mongodb
       pkgs.ripgrep
