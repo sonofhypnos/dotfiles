@@ -60,9 +60,9 @@ Setup services and timers:
 At the moment, user-level systemd timers are automatically enabled. The borg backup timer needs to be set manually (and possibly others):
 
 ``` bash
-sudo systemctl --user enable borg.service
-sudo systemctl --user enable borg.timer
-sudo systemctl --user start borg.timer
+sudo systemctl enable borg.service
+sudo systemctl enable borg.timer
+sudo systemctl start borg.timer
 ```
 
 
