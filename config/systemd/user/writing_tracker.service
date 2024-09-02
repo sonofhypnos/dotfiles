@@ -2,10 +2,9 @@
 Description=Writing Tracker
 
 [Service]
+# Don't use retry for this file!
 Type=simple
 ExecStart=/home/tassilo/repos/writing-tracker/writing-tracker.sh
-Restart=on-failure
-RestartSec=5s
 
 [Install]
 WantedBy=default.target
