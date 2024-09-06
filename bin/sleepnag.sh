@@ -25,7 +25,7 @@ check_override() {
 justifywhyawake() {
     if check_override; then
         (( nowcounter+=1 ))
-        if [[ $nowcounter -eq 10 ]]; then
+        if [[ $nowcounter -eq 4 ]]; then
             shutdown +10 "System will shutdown in 10 minutes due to sleep time violation"
         fi
     else
