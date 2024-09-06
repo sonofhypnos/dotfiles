@@ -221,3 +221,8 @@ exec --no-startup-id ./i3-battery-popup/i3-battery-popup
 
 # Smart startup script
 #exec home/tassilo/.dotfiles/bin/startup_applications.sh
+
+
+# Added evening routine suspension
+echo "systemctl suspend" | at 19:30
+
