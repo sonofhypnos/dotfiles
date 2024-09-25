@@ -46,9 +46,12 @@ EXCLUDE_PATTERNS=(
     '/home/tassilo/Videos/simon/**'
     '/home/tassilo/Videos/transcribe/**'
     '/home/tassilo/.config/google-chrome/'
+    '/home/tassilo/.config/RescueTime.com/log/debug_log.txt'
     '/home/tassilo/.steam/'
     '/home/tassilo/.dropbox/'
     '/home/tassilo/.mozilla/'
+    '/home/tassilo/.vscode/'
+
 )
 
 TEMP_LOG_DIR="/tmp/borg_backup_logs"
