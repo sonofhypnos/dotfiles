@@ -20,8 +20,7 @@ alias e='emacsclient -c'
 alias less='less -R'
 alias gll='git log --graph --pretty=oneline --abbrev-commit'
 alias bat='batcat'
-alias v="nvim"
-alias vim="nvim"
+alias v="vim"
 alias pip2='python2 -m pip'
 alias printpagesd='lpr -o number-up=2 sides=two-sided-long-edge -P HaDiKo-EUFF'
 alias mat='MATLAB_JAVA=tassilo/.sdkman/candidates/java/8.0.282.fx-zulu/jre;matlab & disown'

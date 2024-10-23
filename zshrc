@@ -28,7 +28,7 @@ export ZSH=$HOME/.oh-my-zsh
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 #ZSH_THEME="fwalch"
-# ZSH_THEME="robbyrussell"
+ZSH_THEME="robbyrussell"
 
 DISABLE_UPDATE_PROMPT="true"
 
@@ -65,16 +65,16 @@ ZSH_CUSTOM="$HOME/.dotfiles/zsh/custom"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-# plugins=(git
-# 	alias-finder
-# 	colored-man-pages
-# 	colorize
-# 	fasd
-# 	zsh-syntax-highlighting
-# 	zsh-autosuggestions
-# 	zsh-wakatime)
+plugins=(git
+	alias-finder
+	colored-man-pages
+	colorize
+	fasd
+	zsh-syntax-highlighting
+	zsh-autosuggestions
+	zsh-wakatime)
 
-# source $ZSH/oh-my-zsh.sh
+source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
@@ -82,8 +82,6 @@ ZSH_CUSTOM="$HOME/.dotfiles/zsh/custom"
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
-
-export EDITOR=nvim export VISUAL=nvim
 
 # Functions
 source ~/.shell/functions.sh
@@ -112,12 +110,6 @@ if [ -e /usr/share/doc/fzf ]; then
     source /usr/share/doc/fzf/examples/key-bindings.zsh
     source /usr/share/doc/fzf/examples/completion.zsh; fi
 
-# SDKMAN
-if [ -d ~/.sdkman ]; then
-export SDKMAN_DIR="/home/tassilo/.sdkman"
-[[ -s "/home/tassilo/.sdkman/bin/sdkman-init.sh" ]] && source "/home/tassilo/.sdkman/bin/sdkman-init.sh"
-fi
-
 # disable special meaning for brackets by default
 alias rake='noglob rake'
 
@@ -128,39 +120,4 @@ alias sudo='sudo '
 #for prioritylists in lsp-mode (for better performance)
 export LSP_USE_PLISTS=true
 
-#export PATH=/home/tassilo/repos/axii/bin:$PATH
-#
-#source /home/tassilo/repos/axiicode/armarx-workspace.rc
-#
-#if [ -f /home/tassilo/repos/axii/armarx_setup/cli/config_files/armarx-setup-complete.zsh ]; then
-#  source /home/tassilo/repos/axii/armarx_setup/cli/config_files/armarx-setup-complete.zsh
-#fi
 
-
-
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/tassilo/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/home/tassilo/miniconda3/etc/profile.d/conda.sh" ]; then
-        . "/home/tassilo/miniconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/home/tassilo/miniconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
-source /home/tassilo/.config/op/plugins.sh
-export MODULAR_HOME="/home/tassilo/.modular"
-export PATH="/home/tassilo/.modular/pkg/packages.modular.com_mojo/bin:$PATH"
-
-export BUN_INSTALL="$HOME/.bun"
-export PATH="$BUN_INSTALL/bin:$PATH"
-
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-
-export ESPANSO_CONFIG="~/.config/espanso/match/default.yml"
