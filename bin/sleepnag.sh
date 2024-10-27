@@ -44,7 +44,7 @@ trap '' SIGINT SIGTERM
 
 while true; do
     currenttime=$(date +%H:%M)
-    if [[ "$currenttime" > "22:15" ]] || [[ "$currenttime" < "06:30" ]]; then
+    if [[ "$currenttime" > "21:30" ]] || [[ "$currenttime" < "05:30" ]]; then
         zenity --info --text="$reminder" --width=500 --height=200
         justifywhyawake
     else
