@@ -55,6 +55,14 @@ If this is your desktop, once installed you need to run the `enable_services.sh`
 
 
 ## Setting up desktop:
+
+Allow sleep in user mode (necessary to enable a scheduled sleep from your i3 config):
+
+Edit/create a sleep file:
+``` sh
+sudo echo "tassilo ALL=(ALL) NOPASSWD: /usr/bin/systemctl suspend" > /etc/sudoers.d/sleep
+```
+
 Setup services and timers:
 
 At the moment, user-level systemd timers are automatically enabled. The borg backup timer needs to be set manually (and possibly others):
@@ -85,6 +93,8 @@ Add this:
 ``` crontab
 0,10,20,30,40,50 * * * * ~/bin/bin/sousveillance.sh
 ```
+
+
 
 
 ## todos

@@ -224,5 +224,4 @@ exec --no-startup-id ./i3-battery-popup/i3-battery-popup
 
 
 # Added evening routine suspension
-echo "systemctl suspend" | at 19:30
-
+exec echo "sudo systemctl suspend" | at 17:30
