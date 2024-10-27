@@ -88,6 +88,7 @@ Add this:
 
 
 ## todos
+- [ ] Make sure that things are still working without needing to install home-manager? (Or do we want that?)
 - [ ] Make sure install does not do weird things when we haven't installed emacs
 - [ ] By now I know instead of copying and modifying things under /etc/share/regolith/conf.d/ I can just overwrite them in ~/config/regolith2/Xresources. That is what the set_from_xresource keybinds are for. Undoing that would be nice to do before or after we move to regolith 3.0
 - [ ] same for neovim (for commiting with git for example)
