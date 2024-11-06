@@ -29,6 +29,7 @@ in {
   home = {
     packages = [
       # myPythonEnv
+      pkgs.spotify
       pkgs.elan
       pkgs.git-secret
       pkgs.stripe-cli
