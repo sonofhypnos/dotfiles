@@ -215,6 +215,7 @@ exec ~/bin/sleepnag.sh
 ## arena
 #exec firefox https://arena3-chapter0-fundamentals.streamlit.app
 #exec firefox https://arena3-chapter1-transformer-interp.streamlit.app/
+exec firefox https://ultra.work/cycles
 
 #Send Battery warning
 exec --no-startup-id ./i3-battery-popup/i3-battery-popup
