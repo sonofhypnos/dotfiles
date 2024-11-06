@@ -134,26 +134,6 @@ info() {
     echo "" | tee -a "$BORG_LOG_FILE" >&2
 }
 
-# Function to prevent shutdown during backup
-prevent_shutdown() {
-    systemctl mask systemd-poweroff.service
-    systemctl mask systemd-reboot.service
-    systemctl mask systemd-halt.service
-    systemctl mask systemd-suspend.service
-    systemctl mask systemd-hibernate.service
-    systemctl mask systemd-hybrid-sleep.service
-}
-
-# Function to allow shutdown after backup
-allow_shutdown() {
-    systemctl unmask systemd-poweroff.service
-    systemctl unmask systemd-reboot.service
-    systemctl unmask systemd-halt.service
-    systemctl unmask systemd-suspend.service
-    systemctl unmask systemd-hibernate.service
-    systemctl unmask systemd-hybrid-sleep.service
-}
-
 update_last_archive_log() {
     local last_archive=$(borg list --last 1 --format '{time}' "$BORG_REPO")
     if [ -n "$last_archive" ]; then
@@ -226,18 +206,14 @@ export BORG_PASSPHRASE
 
 export BORG_REPO
 
-trap 'echo $( date ) Backup interrupted >&2; notify-send -u critical "Backup failed!" ; display_error_message "Backup was interrupted!"; allow_shutdown; exit 2' INT TERM
+trap 'echo $( date ) Backup interrupted >&2; notify-send -u critical "Backup failed!" ; display_error_message "Backup was interrupted!"; exit 2' INT TERM
 
 info "Starting backup"
-
-# Prevent shutdown
-prevent_shutdown
 
 ## Check for lock and ask user to break it if necessary
 if ! check_and_break_lock; then
     info "Backup aborted due to lock"
     display_error_message "Backup aborted due to lock"
-    allow_shutdown
     exit 1
 fi
 
@@ -346,9 +322,6 @@ fi
 if [ $backup_code -ne 2 ]; then
     update_last_archive_log
 fi
-
-## Allow shutdown after backup
-allow_shutdown
 
 info "finished backup"
 
