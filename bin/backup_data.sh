@@ -247,6 +247,7 @@ eval borg create \
     ::'{hostname}-{now}' \
     /etc \
     /home \
+    /mnt/ssd2 \
     /root \
     "$TEMP_LOG_DIR" \
     /var
