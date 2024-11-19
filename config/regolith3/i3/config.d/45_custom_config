@@ -215,7 +215,8 @@ exec ~/bin/sleepnag.sh
 ## arena
 #exec firefox https://arena3-chapter0-fundamentals.streamlit.app
 #exec firefox https://arena3-chapter1-transformer-interp.streamlit.app/
-exec firefox https://ultra.work/cycles
+#exec firefox https://ultra.work/cycles
+exec ~/bin/evening_routine.sh
 
 #Send Battery warning
 exec --no-startup-id ./i3-battery-popup/i3-battery-popup
@@ -225,4 +226,4 @@ exec --no-startup-id ./i3-battery-popup/i3-battery-popup
 
 
 # Added evening routine suspension
-exec echo "sudo systemctl suspend" | at 17:30
+exec echo "{{/home/tassilo/bin/evening_routine.sh}}" | at 18:30
