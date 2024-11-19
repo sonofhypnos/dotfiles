@@ -14,7 +14,7 @@
     'use strict';
 
     document.addEventListener('keydown', function(e) {
-        if (e.key === '/' && !isInputFocused()) {
+        if (e.key === 'f' && !isInputFocused()) {
             e.preventDefault();
             const searchInput = document.querySelector('#searchboxinput');
             if (searchInput) {
