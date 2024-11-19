@@ -4,6 +4,7 @@
 // @version      0.2
 // @description  Shortcut for maps
 // @match        https://maps.google.com/*
+// @match        https://www.google.com/maps/*
 // @grant        none
 // @author      Tassilo Neubauer
 // @updateURL   https://raw.githubusercontent.com/sonofhypnos/dotfiles/main/userscripts/maps.user.js
