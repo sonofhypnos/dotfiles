@@ -132,6 +132,10 @@ matches:
     replace: "Grüße\n\nTassilo"
   - trigger: 'mfg'
     replace: "Mit freundlichen Grüßen\n\nTassilo Neubauer"
+  - trigger: ':iA'
+    replace: "Mit freundlichen Grüßen\n\nTassilo Neubauer i. A. von Simon Skade und Mrigyen Sawant"
+  - trigger: ':ssms'
+    replace: "Simon Skade und Mrigyen Sawant"
   - trigger: "ill"
     replace: "i’ll"
     propagate_case: true
