@@ -34,6 +34,7 @@ in {
       pkgs.git-secret
       pkgs.stripe-cli
       pkgs.jq
+      pkgs.meme-suite
       # pkgs.lean
       #pkgs.mongodb
       pkgs.ripgrep
