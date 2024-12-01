@@ -45,19 +45,20 @@ alias ashell="vim ~/.dotfiles/shell/aliases.sh"
 alias dmemacs="~/.local/lib/python3.9/site-packages/memacs/"
 
 # Uni Files
-alias hm1="xdg-open ~/Dropbox/semester2/Höhere\ Mathematik\ I\ \(Analysis\)\ für\ die\ Fachrichtung\ Informatik/Vorlesungsmaterial/Skript\ Höhere\ Mathematik\ 1.pdf && exit"
-alias hm2="xdg-open $unifiles2/Höhere\ Mathematik\ I\ \(Analysis\)\ für\ die\ Fachrichtung\ Informatik/Vorlesungsmaterial/HM2.pdf && exit"
+# alias hm1="xdg-open ~/Dropbox/semester2/Höhere\ Mathematik\ I\ \(Analysis\)\ für\ die\ Fachrichtung\ Informatik/Vorlesungsmaterial/Skript\ Höhere\ Mathematik\ 1.pdf && exit"
+# alias hm2="xdg-open $unifiles2/Höhere\ Mathematik\ I\ \(Analysis\)\ für\ die\ Fachrichtung\ Informatik/Vorlesungsmaterial/HM2.pdf && exit"
 
-alias rs="cd $unifiles ; ranger"
-alias mph="xdg-open $mphfiles/Vorlesung-Skript/VL.pdf  ; ranger"
-alias cvx="cd $cvxfiles ; ranger"
-alias txt="cd ~/Dropbox/textbooks/ ; ranger"
-alias ml="zathura ~/Dropbox/textbooks/machine\ learning\ from\ theory\ to\ algorithms.pdf"
-alias pg="cd $pgfiles ; ranger"
+# alias rs="cd $unifiles ; ranger"
+# alias mph="xdg-open $mphfiles/Vorlesung-Skript/VL.pdf  ; ranger"
+# alias cvx="cd $cvxfiles ; ranger"
+# alias txt="cd ~/Dropbox/textbooks/ ; ranger"
+# alias ml="zathura ~/Dropbox/textbooks/machine\ learning\ from\ theory\ to\ algorithms.pdf"
+# alias pg="cd $pgfiles ; ranger"
 
-alias la1="xdg-open semester2/Lineare\ Algebra\ II\ für\ Mathematik/stuff/LA1.pdf && exit"
-alias dIlias='exec ~/Installations/KIT-ILIAS-downloader -t -o ~/Dropbox/semester2'
-alias update-alternatives='sudo update-alternatives'
+# alias la1="xdg-open semester2/Lineare\ Algebra\ II\ für\ Mathematik/stuff/LA1.pdf && exit"
+# alias dIlias='exec ~/Installations/KIT-ILIAS-downloader -t -o ~/Dropbox/semester2'
+# alias update-alternatives='sudo update-alternatives'
+alias int="cd ~/Dropbox/DokumenteTassilo/intelligenceAmplification/reading/; ranger"
 
 #miscelanous or recently added.
 alias vpn="sudo $HOME/vpnstuff"
