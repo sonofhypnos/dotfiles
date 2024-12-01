@@ -8,6 +8,9 @@
 #notes          :
 #bash_version   :5.1.4(1)-release
 #============================================================================
-
-zotadd "$1"
-emacsclient -ce "(tassilo/open-pdf \"$1\")"
+zathura $1 &
+zotero >> zotero.log &
+sleep 5
+zotadd "$1" >> zotadd.log
+# I am adding zathura instead of emacs here, because it is nicer to use.
+#emacsclient -ce "(tassilo/open-pdf \"$1\")"
