@@ -94,6 +94,11 @@ Add this:
 0,10,20,30,40,50 * * * * ~/bin/bin/sousveillance.sh
 ```
 
+Firefox:
+
+Set .dotfiles/bin/pdf.sh as the default application for pdfs.
+Also enable org-protocol (refer to your notes for how to setup or debug org-protocol).
+
 
 
 
