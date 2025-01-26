@@ -1,14 +1,12 @@
 #!/bin/bash
+unwanted_dir="${HOME}/.dotfiles/config/op"
 
-# Path to the directory that should not exist
-unwanted_dir="$HOME/.dotfiles/config/op"
-
-# Check if the directory exists
-if [ -d "$unwanted_dir" ]; then
-  echo "Error: The directory $unwanted_dir exists. OnePassword will complain if ~/.config/op is just a softlink."
-  echo "Move the directory back before commiting."
-  exit 1
+if [ ! -e "$unwanted_dir" ]; then
+    exit 0
 fi
 
-# Allow the commit to proceed if the directory does not exist
-exit 0
+if [ -d "$unwanted_dir" ]; then
+    echo "Error: Directory $unwanted_dir exists. OnePassword will complain if ~/.config/op is just a softlink."
+    echo "Move the directory back before committing."
+    exit 1
+fi
