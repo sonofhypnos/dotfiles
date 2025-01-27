@@ -27,41 +27,41 @@ in {
   # home.stateVersion = "23.05";
 
   home = {
-    packages = [
+    packages = with pkgs; [
       # myPythonEnv
-      pkgs.spotify
-      pkgs.elan
-      pkgs.git-secret
-      pkgs.stripe-cli
-      pkgs.jq
-      pkgs.meme-suite
-      # pkgs.lean
-      #pkgs.mongodb
-      pkgs.ripgrep
-      pkgs.zathura
-      pkgs.rxvt-unicode
-      pkgs.fontconfig
-      pkgs.xclip
-      pkgs.git-lfs
-      pkgs.git
-      pkgs.git-filter-repo
-      pkgs.emacs29
-      #pkgs.texlab # for emacs lsp in tex
+      spotify
+      elan
+      git-secret
+      stripe-cli
+      jq
+      meme-suite
+      # lean
+      #mongodb
+      ripgrep
+      zathura
+      rxvt-unicode
+      fontconfig
+      xclip
+      git-lfs
+      git
+      git-filter-repo
+      emacs29
+      #texlab # for emacs lsp in tex
 
       # For screenshot automation:
-      pkgs.fswebcam
-      pkgs.jpegoptim
+      fswebcam
+      jpegoptim
 
-      pkgs.jdk17_headless
-      pkgs.languagetool
-      pkgs.janet
-      pkgs.rnix-lsp
-      pkgs.zsh-nix-shell
-      pkgs.androidenv.androidPkgs_9_0.platform-tools
-      pkgs.zsh
-      pkgs.tmux
-      pkgs.elasticsearch
-      pkgs.okular
+      jdk17_headless
+      languagetool
+      janet
+      rnix-lsp
+      zsh-nix-shell
+      androidenv.androidPkgs_9_0.platform-tools
+      zsh
+      tmux
+      elasticsearch
+      okular
     ];
 
     # Or you can explicitly link the binary to a known location
