@@ -68,3 +68,16 @@ if [ -d "$SHARE" ] && [ ! -d "$TRI" ]; then
     curl -fsSl https://raw.githubusercontent.com/tridactyl/native_messenger/master/installers/install.sh -o /tmp/trinativeinstall.sh && sh /tmp/trinativeinstall.sh 1.22.1
   fi
 fi
+
+
+if confirm 'Do you want to bind mount private.yml from espanso to ~/org-roam/private.yml?(y/n)\n'; then
+  echo "🔧 Running pre-install setup..."
+
+  # Path to the bind mount script
+  BIND_MOUNT_SCRIPT="$HOME/.dotfiles/bin/espanso_bind_mount.sh"
+
+  # Run the script to set up the bind mount
+  "$BIND_MOUNT_SCRIPT"
+
+  echo "✅ Pre-install setup completed. Proceeding with Dotbot..."
+fi

@@ -122,12 +122,6 @@ matches:
 
 
 
-  - trigger: '@tw'
-    replace: 'tassilo.neubauer@web.de'
-  - trigger: '@tg'
-    replace: 'tassilo.neubauer@gmail.com'
-  - trigger: '@up'
-    replace: 'upkim@student.kit.edu'
   - trigger: 'gtasse'
     replace: "Grüße\n\nTassilo"
   - trigger: 'mfg'
@@ -140,7 +134,6 @@ matches:
     replace: "i’ll"
     propagate_case: true
     word: true
-    
   - trigger: ":TN"
     replace: "Tassilo Neubauer"
   - trigger: ":tn"
@@ -203,19 +196,7 @@ matches:
     replace: "Viele Grüße
 
 Tassilo"
-  - trigger: "@ra"
-    replace: "rabea.neubauer@outlook.de"
   - trigger: ":CT"
     replace: "Cheers,
 Tassilo"
-  - trigger: "jlinkd"
-    replace: "https://www.linkedin.com/in/tassilo-neubauer/"
-  - trigger: ":linkd"
-    replace: "https://www.linkedin.com/in/tassilo-neubauer/"
-  - trigger: ":github"
-    replace: "https://github.com/sonofhypnos"
-  - trigger: ":tel"
-    replace: "+436601202579"
-  - trigger: ":addr"
-    replace: "Richard Strauss-Weg 4 (Wohnung 9)\n5640 Bad Gastein\nAustria"
 

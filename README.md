@@ -53,7 +53,6 @@ fi
 
 If this is your desktop, once installed you need to run the `enable_services.sh` script with root to enable systemd services. Next you want to figure out how to get the home manager installed for the programs you installed through it (like ripgrep. Longterm you want to move as much as possible of your programs from apt to nix).
 
-
 ## Setting up desktop:
 
 Allow sleep in user mode (necessary to enable a scheduled sleep from your i3 config):
@@ -99,8 +98,8 @@ Firefox:
 Set .dotfiles/bin/pdf.sh as the default application for pdfs.
 Also enable org-protocol (refer to your notes for how to setup or debug org-protocol).
 
-
-
+Espanso:
+Make sure the symlinked file ```~/org-roam/private.yml``` exists
 
 ## todos
 - [ ] Make sure that things are still working without needing to install home-manager? (Or do we want that?)
