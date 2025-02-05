@@ -1,5 +1,6 @@
 set window-title-basename "true"
 set selection-clipboard "clipboard"
+set selection-notification false #turns off the notification when you select text
 
 set adjust-open width
 #set recolor true
