@@ -4,8 +4,6 @@ This configuration is currently only meant to be for my desktop, because everyth
 # Update home.nix
 
 ``` shell
-home-manager switch
+home-manager switch --flake .#tassilo
 ```
-
-`
 
