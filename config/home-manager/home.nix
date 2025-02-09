@@ -25,17 +25,6 @@ in {
   # the Home Manager release notes for a list of state version
   # changes in each release.
   # home.stateVersion = "23.05";
-  # NOTE: these desktopEntries do not work, but trying to get them to work was turning into yak shaving
-  xdg.desktopEntries = {
-    zathura = {
-      name = "Zathura";
-      exec = "zathura %f";
-      terminal = false;
-      type = "Application";
-      categories = [ "Office" "Viewer" ];
-      mimeType = [ "application/pdf" ];
-    };
-  };
 
   home = {
     packages = with pkgs; [
