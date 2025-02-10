@@ -163,6 +163,7 @@ in {
           };
           extensions =
             with firefoxAddons; [ # https://discourse.nixos.org/t/firefox-extensions-with-home-manager/34108/4
+              zotero
               tridactyl
               ublock-origin
               onepassword-password-manager
