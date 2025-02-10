@@ -150,8 +150,6 @@ in {
             "browser.download.autohideButton" = false;
             "extensions.getAddons.showPane" = false;
             "extensions.htmlaboutaddons.recommendations.enabled" = false;
-            "extensions.postDownloadURL" = "";
-            "xpinstall.customConfirmationUI" = false;
 
             # Performance and UI improvements
             "browser.tabs.loadInBackground" = true;
