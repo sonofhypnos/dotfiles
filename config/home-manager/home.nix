@@ -12,6 +12,8 @@ let
     ps.python-lsp-server
     ps.pylsp-rope # Add this if available directly or adjust with an overlay if needed
   ]);
+  firefoxAddons = pkgs.nur.repos.rycee.firefox-addons;
+
   # pkgs = nixpkgs.legacyPackages.${system};
 in {
   # The below is here to make sure that .desktop files from ~/.nix-profiles/share/applications are accessed everywhere
@@ -114,6 +116,7 @@ in {
     git.lfs.enable = true;
 
     firefox = {
+      # nativeMessagingHosts = [ "tridactyl" ]; # enables native messenger?
       enable = true;
       profiles = {
         default = {
@@ -137,6 +140,13 @@ in {
             # Better right-click behavior with Tridactyl
             "dom.event.contextmenu.enabled" = false;
           };
+          extensions =
+            with firefoxAddons; [ # https://discourse.nixos.org/t/firefox-extensions-with-home-manager/34108/4
+              tridactyl
+              ublock-origin
+              languagetool
+              onepassword-password-manager
+            ];
         };
       };
     };

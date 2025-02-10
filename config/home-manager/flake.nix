@@ -6,9 +6,13 @@
 
     nixpkgs-unfree = { url = "github:NixOS/nixpkgs/nixos-23.05"; };
     home-manager.url = "github:nix-community/home-manager/release-23.05";
+    nur = {
+      url = "github:nix-community/NUR";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = { self, nixpkgs, nixpkgs-unfree, home-manager, ... }:
+  outputs = { self, nixpkgs, nixpkgs-unfree, home-manager, nur, ... }:
     let
       home = home-manager.lib.homeManagerConfiguration {
         pkgs = import nixpkgs-unfree {
@@ -17,6 +21,7 @@
             allowUnfree = true;
             # Additional configurations and overlays if needed
           };
+          overlays = [ nur.overlays.default ];
         };
         # pkgs = import nixpkgs {
         #   config = {
