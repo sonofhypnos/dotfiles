@@ -19,6 +19,17 @@ in {
   xdg.enable = true;
   xdg.systemDirs.data = [ "${config.home.homeDirectory}/.nix-profile/share" ];
 
+  xdg.desktopEntries = {
+    pdfdotsh = {
+      name = "pdf.sh";
+      exec = "pdf.sh %f";
+      terminal = true; # asks if the application is run in a terminal window
+      type = "Application";
+      categories = [ "Office" ];
+      mimeType = [ "application/pdf" ];
+    };
+  };
+
   # TODO: setting these manually like below seems like a viable option after we
   # have further figured out how mimeApps are currently set and once we imported all important settings from there
   # xdg.mimeApps = {
@@ -38,9 +49,6 @@ in {
       stripe-cli # cli for stripe the payment system
       jq # cli tool for handeling json
       meme-suite
-
-      # lean
-      #mongodb
       ripgrep
       zathura
       rxvt-unicode # Terminal
@@ -134,8 +142,4 @@ in {
     };
   };
 
-  # Let Home Manager install and manage itself.
-
-  # ... Your previous home-manager config here.
-  # Remember to replace `pkgs` with `pkgsUnstable` if you need packages from unstable.
 }
