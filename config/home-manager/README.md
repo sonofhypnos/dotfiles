@@ -4,6 +4,9 @@ This configuration is currently only meant to be for my desktop, because everyth
 # Update home.nix
 
 ``` shell
-home-manager switch --flake .#tassilo
+home-manager switch --flake -b backup .#tassilo
 ```
+
+The b- backup option is there so that files that are overwritten with home-manager get backed up.
+
 
