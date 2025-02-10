@@ -163,7 +163,13 @@ in {
           };
           extensions =
             with firefoxAddons; [ # https://discourse.nixos.org/t/firefox-extensions-with-home-manager/34108/4
-              zotero
+              video-downloadhelper
+              tampermonkey
+              web-search-navigator
+              duckduckgo-privacy-essentials
+              unpaywall
+              istilldontcareaboutcookies
+              zotero-connector
               tridactyl
               ublock-origin
               onepassword-password-manager
