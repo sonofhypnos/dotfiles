@@ -119,6 +119,24 @@ in {
         default = {
           # This makes it use the standard ~/.mozilla/firefox location
           path = ".mozilla/firefox";
+          settings = {
+            # Disable annoying extension behavior
+            "browser.download.autohideButton" = false;
+            "extensions.getAddons.showPane" = false;
+            "extensions.htmlaboutaddons.recommendations.enabled" = false;
+            "extensions.postDownloadURL" = "";
+            "xpinstall.customConfirmationUI" = false;
+
+            # Performance and UI improvements
+            "browser.tabs.loadInBackground" = true;
+            "browser.aboutConfig.showWarning" = false;
+            "browser.compactmode.show" = true;
+            "browser.toolbars.bookmarks.visibility" = "never";
+            "browser.ctrlTab.recentlyUsedOrder" = false;
+
+            # Better right-click behavior with Tridactyl
+            "dom.event.contextmenu.enabled" = false;
+          };
         };
       };
     };
