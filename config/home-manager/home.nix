@@ -123,6 +123,29 @@ in {
           # This makes it use the standard ~/.mozilla/firefox location
           path = ".mozilla/firefox";
           settings = {
+            # Cleanup url bar
+            "browser.urlbar.suggest.topsites" = false;
+            "services.sync.prefs.sync.browser.urlbar.suggest.topsites" = true;
+
+            # Remove Sponsored Content
+            "browser.newtabpage.activity-stream.showSponsored" = false;
+            "browser.newtabpage.activity-stream.showSponsoredTopSites" = false;
+            "browser.newtabpage.activity-stream.default.sites" = "";
+            "browser.newtabpage.pinned" = "[]"; # Clears all pinned sites
+
+            # Hide the Search Bar
+            "browser.newtabpage.activity-stream.improvesearch.handoffToAwesomebar" =
+              false;
+            "browser.newtabpage.activity-stream.showSearch" = false;
+
+            # Remove All Suggested Content
+            "browser.newtabpage.activity-stream.feeds.section.topstories" =
+              false;
+            "browser.newtabpage.activity-stream.feeds.snippets" = false;
+            "browser.newtabpage.activity-stream.feeds.topsites" = false;
+            "browser.newtabpage.activity-stream.feeds.section.highlights" =
+              false;
+
             # Disable annoying extension behavior
             "browser.download.autohideButton" = false;
             "extensions.getAddons.showPane" = false;
@@ -144,8 +167,8 @@ in {
             with firefoxAddons; [ # https://discourse.nixos.org/t/firefox-extensions-with-home-manager/34108/4
               tridactyl
               ublock-origin
-              languagetool
               onepassword-password-manager
+              darkreader
             ];
         };
       };
