@@ -230,3 +230,10 @@ exec --no-startup-id ./i3-battery-popup/i3-battery-popup
 exec echo "{{/home/tassilo/bin/evening_routine.sh}}" | at 18:30
 
 bindsym $mod+u [class="Google-chrome" instance="claude.ai"] move scratchpad; [class="Zotero" window_role="browser"] move scratchpad; [title="_emacs scratchpad_"] move scratchpad; [title="doom-capture"] move scratchpad; [class="Google-chrome" instance="chat.openai.com"] move scratchpad; [class="Google-chrome" instance="www.perplexity.ai"] move scratchpad; [class="Google-chrome" instance="fatebook.io"] move scratchpad; [class="Emacs"] move scratchpad
+
+# read 1 character and mark the current window with this character
+bindsym $mod+m exec i3-input -F 'mark %s' -l 1 -P 'Mark: '
+
+# read 1 character and go to the window with the character
+bindsym $mod+g exec i3-input -F '[con_mark="%s"] focus' -l 1 -P 'Goto: '
+
