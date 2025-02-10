@@ -44,7 +44,7 @@ set $gmail google-chrome --app=https://mail.google.com
 set $keep google-chrome --app=https://keep.google.com
 set $calendar google-chrome --app=https://calendar.google.com
 set $focusmate google-chrome --app=https://focusmate.com
-set $gpt google-chrome --app=https://chat.openai.com/?model=gpt-4
+set $gpt google-chrome --app=https://chat.openai.com/?model=gpt-4o
 set $perp google-chrome --app=https://www.perplexity.ai/
 #set $claude google-chrome  --user-data-dir="/home/tassilo/.config/google-chrome/Profile 2" --no-extensions --app=https://claude.ai 
 set $claude google-chrome --app=https://claude.ai 
