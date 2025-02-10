@@ -26,6 +26,19 @@ in {
   # changes in each release.
   # home.stateVersion = "23.05";
 
+  # The below is here to make sure that .desktop files from ~/.nix-profiles/share/applications are accessed everywhere
+  targets.genericLinux.enable = true; # This handles XDG_DATA_DIRS
+  xdg.enable = true;
+
+  # TODO: setting these manually like below seems like a viable option after we
+  # have further figured out how mimeApps are currently set and once we imported all important settings from there
+  # xdg.mimeApps = {
+  #   enable = true;
+  #   defaultApplications = {
+  #     "application/pdf" = [ "org.gnome.Evince.desktop" ];
+  #   };
+  # };
+
   home = {
     packages = with pkgs; [
 
