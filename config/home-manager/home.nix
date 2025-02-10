@@ -39,23 +39,32 @@ in {
 
   home = {
     packages = with pkgs; [
+
       # myPythonEnv
       spotify
       elan
       git-secret
-      stripe-cli
-      jq
+      stripe-cli # cli for stripe the payment system
+      jq # cli tool for handeling json
       meme-suite
+
+      # things supposedly (claude) useful for my environment to get the gtk error away
+      # that comes up all the time and to get avogadro working
+      gtk-engine-murrine
+      libcanberra-gtk3
+      mesa
+      mesa.drivers
+
       # lean
       #mongodb
       ripgrep
       zathura
-      rxvt-unicode
+      rxvt-unicode # Terminal
       fontconfig
       xclip
-      git-lfs
+      git-lfs # required to run git lfs
       git
-      git-filter-repo
+      git-filter-repo # useful if you want to remove things from the git history permanently
       emacs29
       #texlab # for emacs lsp in tex
 
