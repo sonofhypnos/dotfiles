@@ -9,6 +9,8 @@
 #bash_version   :5.1.4(1)-release
 #============================================================================
 if zenity --question --text="Do you want to open and process the PDF file?" --title="PDF Processor"; then
+    zotero &
+    # FIXME: doesn't work if zotero is not active. (We should use something better than the hack above)
     zathura "$1" &
     zotero >> zotero.log &
     sleep 5
