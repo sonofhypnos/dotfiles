@@ -14,18 +14,6 @@ let
   ]);
   # pkgs = nixpkgs.legacyPackages.${system};
 in {
-
-  # home.username = "tassilo";
-  # This value determines the Home Manager release that your
-  # configuration is compatible with. This helps avoid breakage
-  # when a new Home Manager release introduces backwards
-  # incompatible changes.
-  #
-  # You can update Home Manager without changing this value. See
-  # the Home Manager release notes for a list of state version
-  # changes in each release.
-  # home.stateVersion = "23.05";
-
   # The below is here to make sure that .desktop files from ~/.nix-profiles/share/applications are accessed everywhere
   targets.genericLinux.enable = true; # This handles XDG_DATA_DIRS
   xdg.enable = true;
