@@ -109,8 +109,20 @@ in {
   };
 
   programs = {
+
     home-manager.enable = true;
     git.lfs.enable = true;
+
+    firefox = {
+      enable = true;
+      profiles = {
+        default = {
+          # This makes it use the standard ~/.mozilla/firefox location
+          path = ".mozilla/firefox";
+        };
+      };
+    };
+
     zsh = {
       enable = true;
       enableAutosuggestions = true;
