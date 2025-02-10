@@ -29,6 +29,7 @@ in {
   # The below is here to make sure that .desktop files from ~/.nix-profiles/share/applications are accessed everywhere
   targets.genericLinux.enable = true; # This handles XDG_DATA_DIRS
   xdg.enable = true;
+  xdg.systemDirs.data = [ "${config.home.homeDirectory}/.nix-profile/share" ];
 
   # TODO: setting these manually like below seems like a viable option after we
   # have further figured out how mimeApps are currently set and once we imported all important settings from there
