@@ -5,6 +5,7 @@
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-23.05";
 
     nixpkgs-unfree = { url = "github:NixOS/nixpkgs/nixos-23.05"; };
+    nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
     home-manager.url = "github:nix-community/home-manager/release-23.05";
     nur = {
       url = "github:nix-community/NUR";
@@ -12,7 +13,8 @@
     };
   };
 
-  outputs = { self, nixpkgs, nixpkgs-unfree, home-manager, nur, ... }:
+  outputs =
+    { self, nixpkgs, nixpkgs-unfree, nixpkgs-unstable, home-manager, nur, ... }:
     let
       home = home-manager.lib.homeManagerConfiguration {
         pkgs = import nixpkgs-unfree {
@@ -21,7 +23,14 @@
             allowUnfree = true;
             # Additional configurations and overlays if needed
           };
-          overlays = [ nur.overlays.default ];
+          overlays = [
+            nur.overlays.default
+            (final: prev: {
+              # Access unstable packages like this
+              firefox = nixpkgs-unstable.legacyPackages.${prev.system}.firefox;
+            })
+          ];
+
         };
         # pkgs = import nixpkgs {
         #   config = {
