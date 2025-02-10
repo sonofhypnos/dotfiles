@@ -4,3 +4,4 @@ jupyter/lab/workspaces/*
 ./bin/fziVpn
 .gitsecret/keys/random_seed
 !*.secret
+config/espanso/match/private.yml
