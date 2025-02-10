@@ -1,8 +1,8 @@
 [Unit]
-Description=Set Fn key to act as Ctrl
+Description=Set Ctrl Key to Act as Ctrl Key
 
 [Service]
-ExecStart=/usr/bin/setkeycodes e063 29
+ExecStart=/usr/bin/setkeycodes e3 29
 Type=oneshot
 
 [Install]
