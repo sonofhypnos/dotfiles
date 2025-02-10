@@ -98,9 +98,6 @@ Firefox:
 Set .dotfiles/bin/pdf.sh as the default application for pdfs.
 Also enable org-protocol (refer to your notes for how to setup or debug org-protocol).
 
-Espanso:
-Make sure the symlinked file ```~/org-roam/private.yml``` exists
-
 ## todos
 - [ ] Make sure that things are still working without needing to install home-manager? (Or do we want that?)
 - [ ] Make sure install does not do weird things when we haven't installed emacs
