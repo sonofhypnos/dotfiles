@@ -37,13 +37,6 @@ in {
       jq # cli tool for handeling json
       meme-suite
 
-      # things supposedly (claude) useful for my environment to get the gtk error away
-      # that comes up all the time and to get avogadro working
-      gtk-engine-murrine
-      libcanberra-gtk3
-      mesa
-      mesa.drivers
-
       # lean
       #mongodb
       ripgrep
