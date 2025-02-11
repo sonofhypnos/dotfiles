@@ -32,8 +32,12 @@ blacklistadd monkeytype.com
 " Comment toggler for Reddit, Hacker News and Lobste.rs
 bind ;c hint -Jc [class*="expand"],[class="togg"],[class="comment_folder"]
 
-"Use Firefox search
+" Use Firefox search
 unbind <C-f>
+
+" Use Firefox select all (by default this increments the url by 1 (really not useful))
+unbind <C-a>
+
 
 " make t open the selection with tabopen
 bind --mode=visual t composite js document.getSelection().toString() | fillcmdline tabopen
