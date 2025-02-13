@@ -130,12 +130,12 @@ bindsym $mod+$alt+Control+q exec emacsclient -t
 #exec --no-startup-id /usr/local/bin/pad.sh
 
 # Add emacs scratchpad
-for_window [title="_emacs scratchpad_"] move scratchpad
-for_window [title="doom-capture"] move scratchpad
+for_window [title="_emacs scratchpad_"] move scratchpad, scratchpad show
+for_window [title="doom-capture"] move scratchpad, scratchpad show
 bindsym $mod+e [class="Emacs"] scratchpad show
 
 # Add zotero scratchpad
-for_window [class="Zotero" window_role="browser"] move scratchpad
+for_window [class="Zotero" window_role="browser"] move scratchpad, scratchpad show
 bindsym $mod+$alt+z [class="Zotero"] scratchpad show
 
 # Add atimelogger scratchpad
@@ -174,20 +174,20 @@ set $copyq exec copyq menu
 bindsym $mod+y $copyq
 
 ## Launch // Open Openai Scratchpad // <> q ##/
-for_window [class="Google-chrome" instance="chatgpt.com"] move scratchpad
+for_window [class="Google-chrome" instance="chatgpt.com"] move scratchpad, scratchpad show
 bindsym $mod+q [class="Google-chrome" instance="chatgpt.com"] scratchpad show
 
 
 ## Launch // Open Claude Scratchpad // <> w ##/
-for_window [class="Google-chrome" instance="claude.ai"] move scratchpad
+for_window [class="Google-chrome" instance="claude.ai"] move scratchpad, scratchpad show
 bindsym $mod+w [class="Google-chrome" instance="claude.ai"] scratchpad show
 
 ## Launch // Open perplexity Scratchpad // <> p ##/
-for_window [class="Google-chrome" instance="www.perplexity.ai"] move scratchpad
+for_window [class="Google-chrome" instance="www.perplexity.ai"] move scratchpad, scratchpad show
 bindsym $mod+p [class="Google-chrome" instance="www.perplexity.ai"] scratchpad show
 
 ## Launch // Open Fatebook // <> Alt p ##/
-for_window [class="Google-chrome" instance="fatebook.io"] move scratchpad
+for_window [class="Google-chrome" instance="fatebook.io"] move scratchpad, scratchpad show
 bindsym $mod+$alt+p [class="Google-chrome" instance="fatebook.io"] scratchpad show
 
 
