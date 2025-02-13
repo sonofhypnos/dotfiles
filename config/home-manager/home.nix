@@ -160,6 +160,9 @@ in {
 
             # Better right-click behavior with Tridactyl
             "dom.event.contextmenu.enabled" = false;
+
+            # Display tabs even in fullscreen mode:
+            "browser.fullscreen.autohide" = false;
           };
           extensions =
             with firefoxAddons; [ # https://discourse.nixos.org/t/firefox-extensions-with-home-manager/34108/4
