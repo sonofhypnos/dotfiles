@@ -95,15 +95,23 @@ mode "$main_launcher" {
 
 bindsym $mod+s mode "Scratchpad"
 
+
+set $gpt_scratch /home/tassilo/bin/scratch_toggle.sh "Google-chrome" "google-chrome --app=https://chatgpt.com" "chatgpt.com"
+set $emacs_scratch /home/tassilo/bin/scratch_toggle.sh "Emacs" "emacs" "Emacs"
+set $zotero_scratch /home/tassilo/bin/scratch_toggle.sh "Zotero" "zotero" "Zotero"
+set $fatebook_scratch /home/tassilo/bin/scratch_toggle.sh "Google-chrome" "google-chrome --app=https://fatebook.io" "fatebook.io"
+set $perplexity_scratch /home/tassilo/bin/scratch_toggle.sh "Google-chrome" "google-chrome --app=https://www.perplexity.ai" "www.perplexity.ai"
+set $claude_scratch /home/tassilo/bin/scratch_toggle.sh "Google-chrome" "google-chrome --app=https://claude.ai" "claude.ai"
+
 # TODO: if application is not already open, open it
 mode "Scratchpad" {
-    bindsym a mode "default" [class="aTimeLogger"] scratchpad show
-    bindsym e mode "default" [class="Emacs"] scratchpad show
-    bindsym z mode "default" [class="Zotero"] scratchpad show
-    bindsym f mode "default" [class="Google-chrome" instance="fatebook.io"] scratchpad show
-    bindsym p mode "default" [class="Google-chrome" instance="www.perplexity.ai"] scratchpad show
-    bindsym c mode "default" [class="Google-chrome" instance="claude.ai"] scratchpad show
-    bindsym o mode "default" [class="Google-chrome" instance="chatgpt.com"] scratchpad show || exec --no-startup-id $gpt
+    bindsym a mode "default" exec $gpt_scratch
+    bindsym e mode "default" exec $emacs_scratch
+    bindsym z mode "default" exec $zotero_scratch
+    bindsym f mode "default" exec $fatebook_scratch
+    bindsym p mode "default" exec $perplexity_scratch
+    bindsym o mode "default" exec $gpt_scratch
+    bindsym c mode "default" exec $claude_scratch
     bindsym Escape mode "default"
 }
 
