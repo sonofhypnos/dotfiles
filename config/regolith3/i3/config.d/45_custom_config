@@ -44,13 +44,13 @@ set $gmail google-chrome --app=https://mail.google.com
 set $keep google-chrome --app=https://keep.google.com
 set $calendar google-chrome --app=https://calendar.google.com
 set $focusmate google-chrome --app=https://focusmate.com
-set $gpt google-chrome --app=https://chat.openai.com/?model=gpt-4o
+set $gpt google-chrome --app=https://chatgpt.com/?model=gpt-4o
 set $perp google-chrome --app=https://www.perplexity.ai/
 #set $claude google-chrome  --user-data-dir="/home/tassilo/.config/google-chrome/Profile 2" --no-extensions --app=https://claude.ai 
 set $claude google-chrome --app=https://claude.ai 
 
 
-set $gpt3 google-chrome --app=https://chat.openai.com/
+set $gpt3 google-chrome --app=https://chatgpt.com/
 set $sitzplatz google-chrome --app=https://raumbuchung.bibliothek.kit.edu/sitzplatzreservierung/day.php?year=2021&month=7&day=1&area=20&room=140
 set $teams google-chrome --app=https://teams.microsoft.com
 set $todoist google-chrome --app=https://todoist.com
@@ -102,8 +102,8 @@ mode "Scratchpad" {
     bindsym z mode "default" [class="Zotero"] scratchpad show
     bindsym f mode "default" [class="Google-chrome" instance="fatebook.io"] scratchpad show
     bindsym p mode "default" [class="Google-chrome" instance="www.perplexity.ai"] scratchpad show
-    bindsym o mode "default" [class="Google-chrome" instance="chat.openai.com"] scratchpad show
     bindsym c mode "default" [class="Google-chrome" instance="claude.ai"] scratchpad show
+    bindsym o mode "default" [class="Google-chrome" instance="chatgpt.com"] scratchpad show || exec --no-startup-id $gpt
     bindsym Escape mode "default"
 }
 
@@ -166,8 +166,8 @@ set $copyq exec copyq menu
 bindsym $mod+y $copyq
 
 ## Launch // Open Openai Scratchpad // <> q ##/
-for_window [class="Google-chrome" instance="chat.openai.com"] move scratchpad
-bindsym $mod+q [class="Google-chrome" instance="chat.openai.com"] scratchpad show
+for_window [class="Google-chrome" instance="chatgpt.com"] move scratchpad
+bindsym $mod+q [class="Google-chrome" instance="chatgpt.com"] scratchpad show
 
 
 ## Launch // Open Claude Scratchpad // <> w ##/
@@ -250,7 +250,7 @@ exec --no-startup-id ./i3-battery-popup/i3-battery-popup
 # Added evening routine suspension
 exec echo "{{/home/tassilo/bin/evening_routine.sh}}" | at 18:30
 
-bindsym $mod+u [class="Google-chrome" instance="claude.ai"] move scratchpad; [class="Zotero" window_role="browser"] move scratchpad; [title="_emacs scratchpad_"] move scratchpad; [title="doom-capture"] move scratchpad; [class="Google-chrome" instance="chat.openai.com"] move scratchpad; [class="Google-chrome" instance="www.perplexity.ai"] move scratchpad; [class="Google-chrome" instance="fatebook.io"] move scratchpad; [class="Emacs"] move scratchpad; [class="aTimeLogger"] move scratchpad;
+bindsym $mod+u [class="Google-chrome" instance="claude.ai"] move scratchpad; [class="Zotero" window_role="browser"] move scratchpad; [title="_emacs scratchpad_"] move scratchpad; [title="doom-capture"] move scratchpad; [class="Google-chrome" instance="chatgpt.com"] move scratchpad; [class="Google-chrome" instance="www.perplexity.ai"] move scratchpad; [class="Google-chrome" instance="fatebook.io"] move scratchpad; [class="Emacs"] move scratchpad; [instance="^app\.atimelogger\.pro"] move scratchpad;
 
 
 # read 1 character and mark the current window with this character
