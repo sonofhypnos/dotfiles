@@ -102,6 +102,7 @@ set $zotero_scratch /home/tassilo/bin/scratch_toggle.sh "Zotero" "zotero" "Zoter
 set $fatebook_scratch /home/tassilo/bin/scratch_toggle.sh "Google-chrome" "google-chrome --app=https://fatebook.io" "fatebook.io"
 set $perplexity_scratch /home/tassilo/bin/scratch_toggle.sh "Google-chrome" "google-chrome --app=https://www.perplexity.ai" "www.perplexity.ai"
 set $claude_scratch /home/tassilo/bin/scratch_toggle.sh "Google-chrome" "google-chrome --app=https://claude.ai" "claude.ai"
+set $timetrack_scratch /home/tassilo/bin/scratch_toggle.sh "Google-chrome" "google-chrome --app=https://app.atimelogger.pro/reports" "^app\.atimelogger\.pro"
 
 # TODO: if application is not already open, open it
 mode "Scratchpad" {
@@ -112,6 +113,7 @@ mode "Scratchpad" {
     bindsym p mode "default" exec $perplexity_scratch
     bindsym o mode "default" exec $gpt_scratch
     bindsym c mode "default" exec $claude_scratch
+    bindsym t mode "default" exec $timetrack_scratch
     bindsym Escape mode "default"
 }
 
