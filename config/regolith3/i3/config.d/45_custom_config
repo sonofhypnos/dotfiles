@@ -93,6 +93,22 @@ mode "$main_launcher" {
 	bindsym Return mode "default"
 }
 
+bindsym $mod+s mode "Scratchpad"
+
+# TODO: if application is not already open, open it
+mode "Scratchpad" {
+    bindsym a mode "default" [class="aTimeLogger"] scratchpad show
+    bindsym e mode "default" [class="Emacs"] scratchpad show
+    bindsym z mode "default" [class="Zotero"] scratchpad show
+    bindsym f mode "default" [class="Google-chrome" instance="fatebook.io"] scratchpad show
+    bindsym p mode "default" [class="Google-chrome" instance="www.perplexity.ai"] scratchpad show
+    bindsym o mode "default" [class="Google-chrome" instance="chat.openai.com"] scratchpad show
+    bindsym c mode "default" [class="Google-chrome" instance="claude.ai"] scratchpad show
+    bindsym Escape mode "default"
+}
+
+
+
 #other Shortcuts
 bindsym $mod+Shift+Escape exec gnome-system-monitor
 #bindsym $mod+d exec $transGerman
@@ -105,12 +121,17 @@ bindsym $mod+$alt+Control+q exec emacsclient -t
 #exec emacs
 #exec --no-startup-id /usr/local/bin/pad.sh
 
-# when scratchpad frame is launched, move it to the scratchpad workspace
-for_window [class="Zotero" window_role="browser"] move scratchpad
+# Add emacs scratchpad
 for_window [title="_emacs scratchpad_"] move scratchpad
 for_window [title="doom-capture"] move scratchpad
 bindsym $mod+e [class="Emacs"] scratchpad show
+
+# Add zotero scratchpad
+for_window [class="Zotero" window_role="browser"] move scratchpad
 bindsym $mod+$alt+z [class="Zotero"] scratchpad show
+
+# Add atimelogger scratchpad
+for_window [instance="^app\.atimelogger\.pro"] floating enable
 
 #kill focused Window
 set $kill [con_id="__focused__"] exec --no-startup-id kill -9 $(xdotool getwindowfocus getwindowpid)
@@ -229,7 +250,8 @@ exec --no-startup-id ./i3-battery-popup/i3-battery-popup
 # Added evening routine suspension
 exec echo "{{/home/tassilo/bin/evening_routine.sh}}" | at 18:30
 
-bindsym $mod+u [class="Google-chrome" instance="claude.ai"] move scratchpad; [class="Zotero" window_role="browser"] move scratchpad; [title="_emacs scratchpad_"] move scratchpad; [title="doom-capture"] move scratchpad; [class="Google-chrome" instance="chat.openai.com"] move scratchpad; [class="Google-chrome" instance="www.perplexity.ai"] move scratchpad; [class="Google-chrome" instance="fatebook.io"] move scratchpad; [class="Emacs"] move scratchpad
+bindsym $mod+u [class="Google-chrome" instance="claude.ai"] move scratchpad; [class="Zotero" window_role="browser"] move scratchpad; [title="_emacs scratchpad_"] move scratchpad; [title="doom-capture"] move scratchpad; [class="Google-chrome" instance="chat.openai.com"] move scratchpad; [class="Google-chrome" instance="www.perplexity.ai"] move scratchpad; [class="Google-chrome" instance="fatebook.io"] move scratchpad; [class="Emacs"] move scratchpad; [class="aTimeLogger"] move scratchpad;
+
 
 # read 1 character and mark the current window with this character
 bindsym $mod+m exec i3-input -F 'mark %s' -l 1 -P 'Mark: '
