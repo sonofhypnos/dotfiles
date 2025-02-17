@@ -40,6 +40,7 @@
         # };
         modules = [
           ./home.nix
+          ./privileged.nix
           {
             home = {
               username = "tassilo";
