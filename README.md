@@ -62,16 +62,11 @@ Edit/create a sleep file:
 sudo echo "tassilo ALL=(ALL) NOPASSWD: /usr/bin/systemctl suspend" > /etc/sudoers.d/sleep
 ```
 
-Setup services and timers:
-
-At the moment, user-level systemd timers are automatically enabled. The borg backup timer needs to be set manually (and possibly others):
+To setup your root backup service, compile your home-manager config and then run:
 
 ``` bash
-sudo systemctl enable borg.service
-sudo systemctl enable borg.timer
-sudo systemctl start borg.timer
+sudo /home/tassilo/.nix-profile/bin/deploy-privileged
 ```
-
 
 To check when your timers are running next, you can run:
 

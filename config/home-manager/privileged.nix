@@ -4,7 +4,6 @@
 let
   deployPrivilegedPackage = pkgs.writeScriptBin "deploy-privileged" ''
         #!${pkgs.bash}/bin/bash
-        set -euo pipefail
 
         SCRIPT_PATH="/home/tassilo/.nix-profile/bin/deploy-privileged"
 
@@ -56,6 +55,7 @@ let
     EOF
 
         # Install service and timer files
+        echo "Installing new systemd files..."
         install -v -m 644 -o root -g root "$BUILD_DIR/borg.service" /etc/systemd/system/
         install -v -m 644 -o root -g root "$BUILD_DIR/borg.timer" /etc/systemd/system/
 
@@ -80,7 +80,6 @@ in {
   };
 
   config = lib.mkIf config.privileged.enable {
-    # Just install the script, don't try to run it during activation
     home.packages = [ deployPrivilegedPackage ];
   };
 }
