@@ -2,8 +2,8 @@
 { config, pkgs, lib, ... }:
 
 let
-  # Script to deploy privileged files
-  deployScript = pkgs.writeScript "deploy-privileged" ''
+  # Create a proper package for the deploy script
+  deployPrivilegedPackage = pkgs.writeScriptBin "deploy-privileged" ''
     #!${pkgs.bash}/bin/bash
     set -euo pipefail
 
@@ -32,12 +32,12 @@ in {
 
   config = lib.mkIf config.privileged.enable {
     # Add the deploy script to path
-    home.packages = [ deployScript ];
+    home.packages = [ deployPrivilegedPackage ];
 
     # Run during home-manager activation
     home.activation.deployPrivileged =
       lib.hm.dag.entryAfter [ "writeBoundary" ] ''
-        $DRY_RUN_CMD ${deployScript}
+        $DRY_RUN_CMD ${deployPrivilegedPackage}/bin/deploy-privileged
       '';
   };
 }
