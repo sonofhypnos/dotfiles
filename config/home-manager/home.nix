@@ -16,6 +16,7 @@ let
 
   # pkgs = nixpkgs.legacyPackages.${system};
 in {
+
   # The below is here to make sure that .desktop files from ~/.nix-profiles/share/applications are accessed everywhere
   targets.genericLinux.enable = true; # This handles XDG_DATA_DIRS
   xdg.enable = true;
@@ -109,6 +110,8 @@ in {
     '';
 
   };
+
+  privileged.enable = true;
 
   programs = {
 
