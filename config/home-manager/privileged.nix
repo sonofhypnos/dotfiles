@@ -2,27 +2,37 @@
 { config, pkgs, lib, ... }:
 
 let
-  # Create a proper package for the deploy script
   deployPrivilegedPackage = pkgs.writeScriptBin "deploy-privileged" ''
     #!${pkgs.bash}/bin/bash
     set -euo pipefail
 
+    SCRIPT_PATH="/home/tassilo/.nix-profile/bin/deploy-privileged"
+
     if [[ $EUID -ne 0 ]]; then
-      echo "This script must be run as root"
-      exit 1
+      echo "Escalating privileges for deployment..."
+      exec sudo "$SCRIPT_PATH"
     fi
+
+    echo "Running privileged deployment..."
+    echo "Using script from: $SCRIPT_PATH"
 
     # Create secure build directory
     BUILD_DIR="$(mktemp -d)"
     trap 'rm -rf "$BUILD_DIR"' EXIT
     chmod 700 "$BUILD_DIR"
 
-    # Deploy backup script
-    install -d -m 700 -o root -g root /etc/privileged-dotfiles
-    install -m 600 -o root -g root "${config.home.homeDirectory}/bin/backup_data.sh" /etc/privileged-dotfiles/
+    # Deploy backup script with explicit feedback
+    echo "Creating privileged directory..."
+    install -v -d -m 700 -o root -g root /etc/privileged-dotfiles
 
-    # Update systemd if needed
+    echo "Installing backup script..."
+    install -v -m 600 -o root -g root "${config.home.homeDirectory}/bin/backup_data.sh" /etc/privileged-dotfiles/
+
+    echo "Reloading systemd..."
     systemctl daemon-reload
+
+    echo "Deployment complete! Files installed:"
+    ls -la /etc/privileged-dotfiles/
   '';
 
 in {
@@ -31,13 +41,7 @@ in {
   };
 
   config = lib.mkIf config.privileged.enable {
-    # Add the deploy script to path
+    # Just install the script, don't try to run it during activation
     home.packages = [ deployPrivilegedPackage ];
-
-    # Run during home-manager activation
-    home.activation.deployPrivileged =
-      lib.hm.dag.entryAfter [ "writeBoundary" ] ''
-        $DRY_RUN_CMD ${deployPrivilegedPackage}/bin/deploy-privileged
-      '';
   };
 }
