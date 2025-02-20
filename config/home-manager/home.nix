@@ -114,10 +114,50 @@ in {
   privileged.enable = true;
 
   programs = {
-
     neovim = {
       enable = true;
-      plugins = with pkgs.vimPlugins; [ vim-plug ];
+
+      # Configure plugins using Nix
+      plugins = with pkgs.vimPlugins; [
+        # VIM enhancements
+        securemodelines
+        editorconfig-vim
+        vim-sneak
+        vim-surround
+        vim-over
+        vim-tridactyl
+
+        # Copilot
+        copilot-vim
+
+        # Stop swapfiles
+        vim-autoswap
+
+        # GUI enhancements
+        lightline-vim
+        vim-highlightedyank
+        vim-matchup
+
+        # Fuzzy finder
+        vim-rooter
+        fzf-vim
+
+        # Linting/spellchecking
+        ale
+
+        # Vim editing in browser
+        vim-ghost
+
+        # Code formatting
+        neoformat
+
+        # File management
+        nerdtree
+
+        # Saving as root
+        suda-vim
+
+      ];
     };
 
     home-manager.enable = true;
