@@ -20,6 +20,7 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'justinmk/vim-sneak'
 Plug 'tpope/vim-surround'
 Plug 'osyo-manga/vim-over'
+Plug 'tridactyl/vim-tridactyl'
 
 " copilot
 Plug 'github/copilot.vim'

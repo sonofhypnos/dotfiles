@@ -78,6 +78,7 @@ in {
       tmux
       elasticsearch
       okular
+      neovim
     ];
 
     # Or you can explicitly link the binary to a known location
@@ -114,6 +115,11 @@ in {
   privileged.enable = true;
 
   programs = {
+
+    neovim = {
+      enable = true;
+      plugins = with pkgs.vimPlugins; [ vim-plug ];
+    };
 
     home-manager.enable = true;
     git.lfs.enable = true;
