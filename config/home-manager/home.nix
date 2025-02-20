@@ -78,7 +78,6 @@ in {
       tmux
       elasticsearch
       okular
-      neovim
     ];
 
     # Or you can explicitly link the binary to a known location
