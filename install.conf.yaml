@@ -22,7 +22,6 @@
 #    ~/.jupyter:
     ~/.tmux.conf:
     ~/.alacritty.yml:
-    ~/.tridactylrc:
     ~/.ghc/:
             glob: true
             path: ghc/*
