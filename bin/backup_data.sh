@@ -51,7 +51,11 @@ EXCLUDE_PATTERNS=(
     '/home/tassilo/.dropbox/'
     '/home/tassilo/.mozilla/'
     '/home/tassilo/.vscode/'
-
+    '/nix/store/**'
+    '/nix/var/**'
+    '/nix/profiles/**'
+    '/nix/var/nix/**'
+    '/nix/var/log/**'
 )
 
 TEMP_LOG_DIR="/tmp/borg_backup_logs"
