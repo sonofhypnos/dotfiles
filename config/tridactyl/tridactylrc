@@ -35,10 +35,6 @@ bind ;c hint -Jc [class*="expand"],[class="togg"],[class="comment_folder"]
 " Use Firefox search
 unbind <C-f>
 
-" Use Firefox select all (by default this increments the url by 1 (really not useful))
-unbind <C-a>
-
-
 " make t open the selection with tabopen
 bind --mode=visual t composite js document.getSelection().toString() | fillcmdline tabopen
 
@@ -183,10 +179,6 @@ bind W current_url winopen
 bind t fillcmdline tabopen
 bind ]] followpage next
 bind [[ followpage prev
-bind [c urlincrement -1
-bind ]c urlincrement 1
-bind <C-x> urlincrement -1
-bind <C-a> urlincrement 1
 bind T current_url tabopen
 bind ys clipboard yankshort
 bind yc clipboard yankcanon
