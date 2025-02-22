@@ -127,7 +127,7 @@ in {
         vim-over
         vim-tridactyl
 
-        # Copilot
+        # Copilot (doesn't work here, because it is not the newest version (What crap!))
         copilot-vim
 
         # Stop swapfiles
