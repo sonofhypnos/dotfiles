@@ -5,7 +5,12 @@
 Xft.dpi: 93 
 !formula for correct value: pixels/(inches of screen in that dimension)
 
+! The below line is important for regolith to show your lower system info nicely
 URxvt.font: xft:BitstreamVeraSansMono Nerd Font:size=12
+
+! UXterm nice font configuration
+UXTerm*faceName: JetBrains Mono:size=11
+UXTerm*renderFont: true
 
 ! Dark mode
 URxvt.foreground: #c0c0c0
