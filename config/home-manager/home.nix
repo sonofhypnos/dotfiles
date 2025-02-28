@@ -73,7 +73,6 @@ in {
       jdk17_headless
       languagetool
       janet
-      rnix-lsp
       zsh-nix-shell
       androidenv.androidPkgs_9_0.platform-tools
       zsh
