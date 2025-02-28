@@ -62,6 +62,7 @@ in {
       git
       git-filter-repo # useful if you want to remove things from the git history permanently
       emacs29
+      emacsExperimental
       #texlab # for emacs lsp in tex
 
       # For screenshot automation:
