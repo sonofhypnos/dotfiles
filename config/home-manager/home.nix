@@ -157,7 +157,7 @@ in {
         nerdtree
 
         # Saving as root
-        suda-vim
+        vim-suda
 
       ];
     };
