@@ -29,6 +29,12 @@
               # Access unstable packages like this
               firefox = nixpkgs-unstable.legacyPackages.${prev.system}.firefox;
             })
+            (final: prev: {
+              emacsExperimental = prev.emacs.overrideAttrs (oldAttrs: {
+                patches = (oldAttrs.patches or [ ])
+                  ++ [ ./patches/emacs-experimental-gc.diff ];
+              });
+            })
           ];
 
         };
