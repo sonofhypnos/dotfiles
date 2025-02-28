@@ -2,11 +2,11 @@
   description = "My home-manager config as a flake";
 
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-23.05";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.05";
 
-    nixpkgs-unfree = { url = "github:NixOS/nixpkgs/nixos-23.05"; };
+    nixpkgs-unfree = { url = "github:NixOS/nixpkgs/nixos-24.05"; };
     nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
-    home-manager.url = "github:nix-community/home-manager/release-23.05";
+    home-manager.url = "github:nix-community/home-manager/release-24.05";
     nur = {
       url = "github:nix-community/NUR";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -30,7 +30,7 @@
               firefox = nixpkgs-unstable.legacyPackages.${prev.system}.firefox;
             })
             (final: prev: {
-              emacsExperimental = prev.emacs.overrideAttrs (oldAttrs: {
+              emacsExperimental = prev.emacs30.overrideAttrs (oldAttrs: {
                 patches = (oldAttrs.patches or [ ])
                   ++ [ ./patches/emacs-experimental-gc.diff ];
               });
@@ -51,7 +51,7 @@
             home = {
               username = "tassilo";
               homeDirectory = "/home/tassilo";
-              stateVersion = "23.05";
+              stateVersion = "24.05";
             };
           }
         ];
