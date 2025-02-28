@@ -1,0 +1,31 @@
+[1mdiff --git a/src/alloc.c b/src/alloc.c[m
+[1mindex 170d273dcc3..6251b4acff8 100644[m
+[1m--- a/src/alloc.c[m
+[1m+++ b/src/alloc.c[m
+[36m@@ -6293,6 +6293,16 @@[m [mDEFUN ("garbage-collect", Fgarbage_collect, Sgarbage_collect, 0, 0, "",[m
+   if (garbage_collection_inhibited)[m
+     return Qnil;[m
+ [m
+[32m+[m[32m  static int my_gc_counter = 0;[m
+[32m+[m[32m  my_gc_counter++;[m
+[32m+[m
+[32m+[m[32m  if (my_gc_counter % 4 != 0)[m
+[32m+[m[32m    {[m
+[32m+[m[32m      fprintf (stderr, "[Experimental GC] Skipping GC cycle #%d\n",[m
+[32m+[m	[32m       my_gc_counter);[m
+[32m+[m[32m      return;[m
+[32m+[m[32m    }[m
+[32m+[m
+   specpdl_ref count = SPECPDL_INDEX ();[m
+   specbind (Qsymbols_with_pos_enabled, Qnil);[m
+   garbage_collect ();[m
+[36m@@ -7724,7 +7734,8 @@[m [msyms_of_alloc (void)[m
+ system-wide memory pressure, and never use a too-high value for[m
+ prolonged periods of time.[m
+ [m
+[31m-If this portion is smaller than `gc-cons-threshold', this is ignored.[m
+[32m+[m[32mIf this portion is smaller than `gc-cons-threshold', this is[m
+[32m+[m[32mignored.[m
+ */);[m
+   Vgc_cons_percentage = make_float (0.1);[m
+ [m
