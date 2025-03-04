@@ -14,12 +14,6 @@ wm.binding.move_right: Shift+odiaeresis
 wm.binding.move_up: Shift+l
 wm.binding.move_down: Shift+k
 
-
-wm.binding.left: j
-wm.binding.right: odiaeresis
-wm.binding.up: l
-wm.binding.down: k
-
 wm.binding.take_left: Ctrl+Shift+j
 wm.binding.take_right: Ctrl+Shift+odiaeresis
 wm.binding.take_up: Ctrl+Shift+l
@@ -40,3 +34,5 @@ wm.binding.focus_child: F6
 wm.program.bluetooth: regolith-control-center --class=floating_window bluetooth
 
 wm.gaps.inner.size: 0
+
+wm.program.launcher.app: rofi -show drun
