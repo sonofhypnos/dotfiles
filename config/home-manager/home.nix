@@ -157,6 +157,19 @@ in {
         # Saving as root
         vim-suda
 
+        # vim-multisheet:
+        (pkgs.vimUtils.buildVimPlugin {
+          pname = "vim-multisheets";
+          version = "2022-04-28"; # Use current date or commit date
+          src = pkgs.fetchFromGitHub {
+            owner = "tsvibt";
+            repo = "vim-multisheets";
+            rev = "main"; # Or specific commit hash if you prefer
+            sha256 =
+              ""; # Leave empty first, Nix will error and tell you the correct hash
+          };
+        })
+
       ];
     };
 
