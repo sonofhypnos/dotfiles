@@ -245,8 +245,8 @@ in {
 
     zsh = {
       enable = true;
-      enableAutosuggestions = true;
-      enableSyntaxHighlighting = true;
+      autosuggestion.enable = true;
+      syntaxHighlighting.enable = true;
       enableCompletion = true;
       initExtra = ''
         ${builtins.readFile ../../zshrc}
