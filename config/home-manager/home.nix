@@ -62,7 +62,7 @@ in {
       git
       git-filter-repo # useful if you want to remove things from the git history permanently
       emacs29
-      emacs30
+      # emacs30 There can't be two emacs versions at the same time that easily
       #texlab # for emacs lsp in tex
 
       # For screenshot automation:
@@ -166,7 +166,7 @@ in {
             repo = "vim-multisheets";
             rev = "main"; # Or specific commit hash if you prefer
             sha256 =
-              ""; # Leave empty first, Nix will error and tell you the correct hash
+              "sha256-RAnpUMpgMPqKHpfufk2ieQDCyM2yfERSh6DNK9NoYwc="; # Leave empty first, Nix will error and tell you the correct hash
           };
         })
 
