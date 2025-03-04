@@ -35,4 +35,3 @@ wm.program.bluetooth: regolith-control-center --class=floating_window bluetooth
 
 wm.gaps.inner.size: 0
 
-wm.program.launcher.app: rofi -show drun
