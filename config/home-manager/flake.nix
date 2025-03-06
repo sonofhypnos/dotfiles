@@ -33,15 +33,20 @@
               firefox = nixpkgs-unstable.legacyPackages.${prev.system}.firefox;
 
               # Define emacs-igc inside flake.nix
-              emacs-igc = prev.emacs-git.overrideAttrs (oldAttrs: {
+              emacs-igc = prev.emacs30.overrideAttrs (oldAttrs: {
+                pname = "emacs-igc";
+                version = "30.1-igc";
                 src = emacs-igc-src;
-                buildInputs = oldAttrs.buildInputs ++ [ prev.mps ];
+                buildInputs = oldAttrs.buildInputs
+                  ++ [ prev.mps ]; # Ensure libmps is available
                 configureFlags = oldAttrs.configureFlags
-                  ++ [ "--with-mps=yes" ];
+                  ++ [ "--with-mps=yes" ]; # Use MPS by default
                 postInstall = (oldAttrs.postInstall or "") + ''
                   mv $out/bin/emacs $out/bin/emacs-igc
                   mv $out/bin/emacsclient $out/bin/emacsclient-igc
+                  mv $out/bin/emacs.service $out/bin/emacs-igc.service
                 '';
+
               });
             })
           ];
