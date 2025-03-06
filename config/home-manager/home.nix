@@ -13,6 +13,35 @@ let
     ps.pylsp-rope # Add this if available directly or adjust with an overlay if needed
   ]);
   firefoxAddons = pkgs.nur.repos.rycee.firefox-addons;
+  # emacs29 = pkgs.emacs29.overrideAttrs (oldAttrs: {
+  #   version = "29.1";
+  #   src = pkgs.fetchurl {
+  #     url = "https://ftp.gnu.org/gnu/emacs/emacs-29.1.tar.xz";
+  #     sha256 = "sha256-0viBpcwjHi9aA+hvRYSwQ4+D7ddZignSSiG9jQA+LgE=";
+  #   };
+  #   postInstall = (oldAttrs.postInstall or "") + ''
+  #     mv $out/bin/emacs $out/bin/emacs29
+  #     mv $out/bin/emacsclient $out/bin/emacsclient29
+  #   '';
+  # });
+
+  # # Create an overlay for Emacs 30 with a different binary name
+  # emacs30 = pkgs.emacs30.overrideAttrs (oldAttrs: {
+  #   postInstall = (oldAttrs.postInstall or "") + ''
+  #     mv $out/bin/emacs $out/bin/emacs30
+  #     mv $out/bin/emacsclient $out/bin/emacsclient30
+  #   '';
+  # });
+
+  # emacs-igc = pkgs.emacs-git.overrideAttrs (oldAttrs: {
+  #   src = inputs.emacs-igc-src;
+  #   buildInputs = oldAttrs.buildInputs ++ [ pkgs.mps ];
+  #   configureFlags = oldAttrs.configureFlags ++ [ "--with-mps=yes" ];
+  #   postInstall = (oldAttrs.postInstall or "") + ''
+  #     mv $out/bin/emacs $out/bin/emacs-igc
+  #     mv $out/bin/emacsclient $out/bin/emacsclient-igc
+  #   '';
+  # });
 
   # pkgs = nixpkgs.legacyPackages.${system};
 in {
@@ -61,9 +90,9 @@ in {
       git-lfs # required to run git lfs
       git
       git-filter-repo # useful if you want to remove things from the git history permanently
-      emacs29
-      # emacs30 There can't be two emacs versions at the same time that easily
-      #texlab # for emacs lsp in tex
+      # emacs29
+      # emacs30
+      emacs-igc
 
       # For screenshot automation:
       fswebcam

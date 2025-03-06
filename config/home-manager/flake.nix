@@ -11,10 +11,14 @@
       url = "github:nix-community/NUR";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    emacs-igc-src = {
+      url = "github:emacs-mirror/emacs/feature/igc";
+      flake = false;
+    };
   };
 
-  outputs =
-    { self, nixpkgs, nixpkgs-unfree, nixpkgs-unstable, home-manager, nur, ... }:
+  outputs = { self, nixpkgs, nixpkgs-unfree, nixpkgs-unstable, home-manager, nur
+    , emacs-igc-src, ... }:
     let
       home = home-manager.lib.homeManagerConfiguration {
         pkgs = import nixpkgs-unfree {
@@ -26,8 +30,19 @@
           overlays = [
             nur.overlays.default
             (final: prev: {
-              # Access unstable packages like this
               firefox = nixpkgs-unstable.legacyPackages.${prev.system}.firefox;
+
+              # Define emacs-igc inside flake.nix
+              emacs-igc = prev.emacs-git.overrideAttrs (oldAttrs: {
+                src = emacs-igc-src;
+                buildInputs = oldAttrs.buildInputs ++ [ prev.mps ];
+                configureFlags = oldAttrs.configureFlags
+                  ++ [ "--with-mps=yes" ];
+                postInstall = (oldAttrs.postInstall or "") + ''
+                  mv $out/bin/emacs $out/bin/emacs-igc
+                  mv $out/bin/emacsclient $out/bin/emacsclient-igc
+                '';
+              });
             })
           ];
 
