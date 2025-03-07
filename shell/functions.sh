@@ -51,7 +51,7 @@ get_openai_key() {
     local item_identifier="yocqakmciuu7bidjgftbol57wy"
 
     # Fetch the OpenAI API key from 1Password
-    local openai_key=$(op item get "$item_identifier" --fields credential)
+    local openai_key=$(op item get "$item_identifier" --reveal --fields credential )
 
     echo "$openai_key"
 }
