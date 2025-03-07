@@ -19,11 +19,6 @@ let
       url = "https://ftp.gnu.org/gnu/emacs/emacs-29.1.tar.xz";
       sha256 = "sha256-0viBpcwjHi9aA+hvRYSwQ4+D7ddZignSSiG9jQA+LgE=";
     };
-    postInstall = (oldAttrs.postInstall or "") + ''
-      mv $out/bin/emacs $out/bin/emacs29
-      mv $out/bin/emacsclient $out/bin/emacsclient29
-      mv $out/bin/emacs.service $out/bin/emacs29.service
-    '';
   });
 
   # # Create an overlay for Emacs 30 with a different binary name
@@ -92,8 +87,8 @@ in {
       git
       git-filter-repo # useful if you want to remove things from the git history permanently
       emacs29
-      # emacs30
-      emacs-igc
+      direnv
+      nix-direnv
 
       # For screenshot automation:
       fswebcam

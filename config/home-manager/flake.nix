@@ -41,11 +41,13 @@
                   ++ [ prev.mps ]; # Ensure libmps is available
                 configureFlags = oldAttrs.configureFlags
                   ++ [ "--with-mps=yes" ]; # Use MPS by default
-                postInstall = (oldAttrs.postInstall or "") + ''
+
+                postFixup = (oldAttrs.postFixup or "") + ''
                   mv $out/bin/emacs $out/bin/emacs-igc
                   mv $out/bin/emacsclient $out/bin/emacsclient-igc
-                  mv $out/bin/emacs.service $out/bin/emacs-igc.service
-                '';
+                  rm -f $out/lib/systemd/user/emacs.service
+                  rm -rf $out/share/info/dired-x.info.gz
+                ''; # We rename in this phase, since patchelf is run in this phase which still needs the regular binary name
 
               });
             })
