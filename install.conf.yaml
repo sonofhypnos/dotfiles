@@ -47,7 +47,8 @@
         - [git submodule sync --recursive, Recursively fetching submodules]
         - [git submodule update, Updating submodules]
         -
-            command: home-manager switch -b backup --flake .#tassilo --show-trace
+            command: update-home-manager.sh
+            stdin: true
             stdout: true
             stderr: true
-            description: Updating home-manager
+            description: Updating home-manager (since this is desktop)
