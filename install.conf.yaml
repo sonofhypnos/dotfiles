@@ -9,13 +9,14 @@
 
 - link:
   #TODO figure out what in home needs to be added here (for example nvim does not seem to be configured????)
-    ~/.profile: 
+    ~/.profile:
     ~/.bashrc: 
     ~/.atamanrc.config:
     ~/.bash_logout: 
     ~/.gitconfig: 
     ~/.ideavimrc:
-    ~/.XCompose: 
+    ~/.XCompose:
+    ~/.authinfo.gpg:
 #    ~/.Xresources-regolith: #not sure what happened to this file
 #    ~/.Xresources: #managed by home-nix now
 #    ~/.xinitrc:
