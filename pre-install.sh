@@ -38,10 +38,7 @@ confirm() {
 }
 
 # 1. Install Nix
-if
-  ! command -v nix-env &
-  >/dev/null
-then
+if ! command -v nix &>/dev/null; then
   if confirm "Do you want to install Nix?"; then
     echo "Installing Nix..."
     curl -L https://nixos.org/nix/install | sh
@@ -51,7 +48,7 @@ then
 fi
 
 # 2. Install home-manager
-if ! [ -e "$HOME/.config/nixpkgs/home.nix" ]; then
+if [[ ! -e "$HOME/.config/nixpkgs/home.nix" && ! -e "$HOME/.config/home-manager/home.nix" ]]; then
   if confirm "Do you want to install home-manager?"; then
     echo "Installing home-manager..."
     nix-channel --add https://github.com/nix-community/home-manager/archive/master.tar.gz home-manager
@@ -68,5 +65,3 @@ if [ -d "$SHARE" ] && [ ! -d "$TRI" ]; then
     curl -fsSl https://raw.githubusercontent.com/tridactyl/native_messenger/master/installers/install.sh -o /tmp/trinativeinstall.sh && sh /tmp/trinativeinstall.sh 1.22.1
   fi
 fi
-
-
