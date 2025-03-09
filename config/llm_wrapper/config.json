@@ -1,0 +1,22 @@
+{
+  "context_sources": {
+    "nix_config": {
+      "type": "directory",
+      "path": "~/.config/nixpkgs",
+      "description": "NixOS configuration files",
+      "extensions": [
+        ".nix"
+      ]
+    },
+    "zotero": {
+      "type": "directory",
+      "path": "~/Zotero",
+      "description": "Zotero documents and PDFs",
+      "extensions": [
+        ".pdf",
+        ".txt",
+        ".md"
+      ]
+    }
+  }
+}
