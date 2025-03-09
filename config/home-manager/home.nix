@@ -70,6 +70,15 @@ in {
   home = {
     packages = with pkgs; [
 
+      rocmPackages.rocm-runtime
+      rocmPackages.rocm-device-libs
+      rocmPackages.rocm-smi
+      rocmPackages.rocminfo
+      rocmPackages.rocm-core
+      rocmPackages.rocm-docs-core
+      rocmPackages.rocm-device-libs
+
+      ollama-rocm
       firefox
       # myPythonEnv
       spotify
