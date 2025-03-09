@@ -31,8 +31,7 @@
             nur.overlays.default
             (final: prev: {
               firefox = nixpkgs-unstable.legacyPackages.${prev.system}.firefox;
-              ollama-rocm =
-                nixpkgs-unstable.legacyPackages.${prev.system}.ollama-rocm;
+              ollama = nixpkgs-unstable.legacyPackages.${prev.system}.ollama;
               # Define emacs-igc inside flake.nix
               emacs-igc = prev.emacs30.overrideAttrs (oldAttrs: {
                 pname = "emacs-igc";
