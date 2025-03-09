@@ -159,17 +159,22 @@ bindsym $mod+BackSpace kill
 
 
 # alt-tab through windows
-# exec_always --no-startup-id i3-cycle-focus.py --history 2
-# bindsym $alt+Tab exec --no-startup-id i3-cycle-focus.py --switch
+exec_always --no-startup-id i3-cycle-focus.py --history 2
+bindsym $alt+Tab exec --no-startup-id i3-cycle-focus.py --switch
 
 #Search Bindings
-set $search_selection exec xclip -selection "c" -out | xargs -I{} xdg-open https://www.google.de/search\?q\={}
-## Launch // Search selection in Google // <> Shift z ##/
+## Launch // Search Highlighted selection in Google // <> Shift z ##/
+set $search_selection exec sleep 0.1 & xdotool key --clearmodifiers ctrl+c && xclip -selection "c" -out | xargs -I{} xdg-open https://www.google.de/search\?q\={}
 bindsym $mod+Shift+z $search_selection
-set $search exec echo '' | rofi -dmenu -p 'Search:' | xargs -I{} xdg-open https://www.google.de/search?q={}
-## Launch // Search Google // <> z ##/
-bindsym $mod+z $search
 
+
+# Launch // Search clipboard in Google // <> Ctrl Shift z ##/
+set $search_clip exec xclip -selection "c" -out | xargs -I{} xdg-open https://www.google.de/search\?q\={}
+bindsym $mod+Control+Shift+z $search_clip
+
+## Launch // Search Google // <> z ##/
+set $search exec echo '' | rofi -dmenu -p 'Search:' | xargs -I{} xdg-open https://www.google.de/search?q={}
+bindsym $mod+z $search
 
 ## Launch // Copyq menu // <> y ##/
 set $copyq exec copyq menu
