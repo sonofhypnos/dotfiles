@@ -5,8 +5,6 @@
                 relink: true
 - clean: ['~', '~/.oh-my-zsh/custom/', '~/.oh-my-zsh/custom/plugins/']
 
-- shell:
-
 - link:
   #TODO figure out what in home needs to be added here (for example nvim does not seem to be configured????)
     ~/.profile:
@@ -43,7 +41,6 @@
     ~/.screenlayout:
 
 - shell:
-        # - git submodule sync --recursive
         - [git submodule sync --recursive, Recursively fetching submodules]
         - [git submodule update, Updating submodules]
         -
