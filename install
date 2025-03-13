@@ -28,16 +28,7 @@ setup_hooks
 git -C "${DOTBOT_DIR}" submodule sync --quiet --recursive
 git submodule update --init --recursive "${DOTBOT_DIR}"
 
-
-
 "${BASEDIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" -d "${BASEDIR}" -c "${CONFIG}" "${@}"
-
-if [ -d "/home/tassilo/" ];then
-  echo "Since this is desktop, running home_manager"
-  home-manager switch --show-trace
-fi
-
-
 
 # some helpers and error handling:
 
