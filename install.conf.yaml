@@ -15,10 +15,6 @@
     ~/.ideavimrc:
     ~/.XCompose:
     ~/.authinfo.gpg:
-#    ~/.Xresources-regolith: #not sure what happened to this file
-#    ~/.Xresources: #managed by home-nix now
-#    ~/.xinitrc:
-#    ~/.jupyter:
     ~/.tmux.conf:
     ~/.alacritty.yml:
     ~/.ghc/:
@@ -39,6 +35,8 @@
 #    ~/.xsession:
     ~/.doom.d:
     ~/.screenlayout:
+    ~/.local/share/ranger/bookmarks:
+        path: local/share/ranger/bookmarks
 
 - shell:
         - [git submodule sync --recursive, Recursively fetching submodules]
