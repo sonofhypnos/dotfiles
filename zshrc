@@ -165,4 +165,3 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 
 export ESPANSO_CONFIG="~/.config/espanso/match/default.yml"
 
-eval "$(direnv hook zsh)"
