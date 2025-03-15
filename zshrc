@@ -60,29 +60,6 @@ AUTO_PUSHD="true" #enables directories being pushed on a stack. To go back direc
 # Would you like to use another custom folder than $ZSH/custom?
 ZSH_CUSTOM="$HOME/.dotfiles/zsh/custom"
 
-# Which plugins would you like to load?
-# Standard plugins can be found in $ZSH/plugins/
-# Custom plugins may be added to $ZSH_CUSTOM/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-# Add wisely, as too many plugins slow down shell startup.
-# plugins=(git
-# 	alias-finder
-# 	colored-man-pages
-# 	colorize
-# 	fasd
-# 	zsh-syntax-highlighting
-# 	zsh-autosuggestions
-# 	zsh-wakatime)
-
-# source $ZSH/oh-my-zsh.sh
-
-# User configuration
-
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-
 export EDITOR=nvim export VISUAL=nvim
 
 # Functions
