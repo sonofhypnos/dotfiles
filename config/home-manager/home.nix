@@ -104,6 +104,7 @@ in {
       tmux
       elasticsearch
       okular
+      xournalpp
     ];
 
     # Or you can explicitly link the binary to a known location
