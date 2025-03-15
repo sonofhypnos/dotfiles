@@ -24,7 +24,7 @@ let
         install -v -d -m 700 -o root -g root /etc/privileged-dotfiles
 
         echo "Installing backup script..."
-        install -v -m 600 -o root -g root "${config.home.homeDirectory}/bin/backup_data.sh" /etc/privileged-dotfiles/
+        install -v -m 700 -o root -g root "${config.home.homeDirectory}/bin/backup_data.sh" /etc/privileged-dotfiles/
 
         # Install systemd service
         echo "Installing systemd service..."
