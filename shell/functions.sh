@@ -122,3 +122,52 @@ conda() {
   conda_setup
   conda "$@"
 }
+
+# Lazy load SDKMAN
+export SDKMAN_DIR="/home/tassilo/.sdkman"
+sdk() {
+  if [ -s "$SDKMAN_DIR/bin/sdkman-init.sh" ]; then
+    source "$SDKMAN_DIR/bin/sdkman-init.sh"
+    sdk "$@"
+  else
+    echo "SDKMAN not found"
+  fi
+}
+
+# Lazy load nvm
+export NVM_DIR="$HOME/.nvm"
+nvm() {
+  if [ -s "$NVM_DIR/nvm.sh" ]; then
+    source "$NVM_DIR/nvm.sh"
+    nvm "$@"
+  else
+    echo "NVM not found"
+  fi
+}
+
+# Define commonly used node commands that should trigger nvm loading
+node() {
+  unset -f node npm npx yarn
+  if [ -s "$NVM_DIR/nvm.sh" ]; then
+    source "$NVM_DIR/nvm.sh"
+    node "$@"
+  else
+    echo "NVM not found"
+  fi
+}
+
+# Create aliases for other node-related commands
+npm() {
+  node --version > /dev/null
+  npm "$@"
+}
+
+npx() {
+  node --version > /dev/null
+  npx "$@"
+}
+
+yarn() {
+  node --version > /dev/null
+  yarn "$@"
+}

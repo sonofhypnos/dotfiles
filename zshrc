@@ -89,11 +89,6 @@ if [ -e /usr/share/doc/fzf ]; then
     source /usr/share/doc/fzf/examples/key-bindings.zsh
     source /usr/share/doc/fzf/examples/completion.zsh; fi
 
-# SDKMAN
-if [ -d ~/.sdkman ]; then
-export SDKMAN_DIR="/home/tassilo/.sdkman"
-[[ -s "/home/tassilo/.sdkman/bin/sdkman-init.sh" ]] && source "/home/tassilo/.sdkman/bin/sdkman-init.sh"
-fi
 
 # disable special meaning for brackets by default
 alias rake='noglob rake'
@@ -106,15 +101,12 @@ alias sudo='sudo '
 export LSP_USE_PLISTS=true
 
 source /home/tassilo/.config/op/plugins.sh
+
 export MODULAR_HOME="/home/tassilo/.modular"
 export PATH="/home/tassilo/.modular/pkg/packages.modular.com_mojo/bin:$PATH"
 
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
-
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
 
 export ESPANSO_CONFIG="~/.config/espanso/match/default.yml"
 
