@@ -139,6 +139,9 @@ in {
 
   privileged.enable = true;
 
+  dconf.settings = {
+    "org/gnome/desktop/interface" = { color-scheme = "prefer-dark"; };
+  };
   programs = {
     neovim = {
       enable = true;
