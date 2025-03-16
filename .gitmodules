@@ -14,9 +14,6 @@
 [submodule "doom.d"]
 	path = doom.d
 	url = git@github.com:sonofhypnos/emacs-config.git
-[submodule "oh-my-zsh"]
-	path = oh-my-zsh
-	url = https://github.com/ohmyzsh/ohmyzsh.git
 [submodule "zsh/custom/zsh-wakatime"]
 	path = zsh/custom/plugins/zsh-wakatime
 	url = https://github.com/wbingli/zsh-wakatime.git
