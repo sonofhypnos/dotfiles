@@ -104,6 +104,7 @@ in {
       elasticsearch
       okular
       xournalpp
+      nodePackages.prettier # Required by apheleia in Emacs to format some file formats like yaml
     ];
 
     # Or you can explicitly link the binary to a known location
