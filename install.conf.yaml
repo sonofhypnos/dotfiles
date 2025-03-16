@@ -1,50 +1,49 @@
 #addons21 needs to be manually installed.
 - defaults:
-        link:
-                create: true
-                relink: true
-- clean: ['~', '~/.oh-my-zsh/custom/', '~/.oh-my-zsh/custom/plugins/']
+      link:
+          create: true
+          relink: true
+- clean: ["~", "~/.oh-my-zsh/custom/", "~/.oh-my-zsh/custom/plugins/"]
 
 - link:
-  #TODO figure out what in home needs to be added here (for example nvim does not seem to be configured????)
-    # ~/.profile:
-    ~/.bashrc.local:
-    ~/.zshrc.local:
-    ~/.atamanrc.config:
-    ~/.bash_logout: 
-    ~/.gitconfig: 
-    ~/.ideavimrc:
-    ~/.XCompose:
-    ~/.authinfo.gpg:
-    ~/.tmux.conf:
-    ~/.alacritty.yml:
-    ~/.ghc/:
-            glob: true
-            path: ghc/*
-    ~/bin:
-    ~/.oh-my-zsh:
-    ~/.config/:
-            glob: true
-            path: config/*
-    ~/.shell:
-            glob: true
-            path: shell/*
-    ~/.intellimacs:
-            glob: true
-            path: intellimacs/*
-#    ~/.i3status.conf:
-#    ~/.xsession:
-    ~/.doom.d:
-    ~/.screenlayout:
-    ~/.local/share/ranger/bookmarks:
-        path: local/share/ranger/bookmarks
+      #TODO figure out what in home needs to be added here (for example nvim does not seem to be configured????)
+      # ~/.profile:
+      ~/.bashrc.local:
+      ~/.zshrc.local:
+      ~/.atamanrc.config:
+      ~/.bash_logout:
+      ~/.gitconfig:
+      ~/.ideavimrc:
+      ~/.XCompose:
+      ~/.authinfo.gpg:
+      ~/.tmux.conf:
+      ~/.alacritty.yml:
+      ~/.ghc/:
+          glob: true
+          path: ghc/*
+      ~/bin:
+      ~/.oh-my-zsh:
+      ~/.config/:
+          glob: true
+          path: config/*
+      ~/.shell:
+          glob: true
+          path: shell/*
+      ~/.intellimacs:
+          glob: true
+          path: intellimacs/*
+      #    ~/.i3status.conf:
+      #    ~/.xsession:
+      ~/.doom.d:
+      ~/.screenlayout:
+      ~/.local/share/ranger/bookmarks:
+          path: local/share/ranger/bookmarks
 
 - shell:
-        - [git submodule sync --recursive, Recursively fetching submodules]
-        - [git submodule update, Updating submodules]
-        -
-            command: update-home-manager.sh
-            stdin: true
-            stdout: true
-            stderr: true
-            description: Updating home-manager (since this is desktop)
+      - [git submodule sync --recursive, Recursively fetching submodules]
+      - [git submodule update, Updating submodules]
+      - command: update-home-manager.sh
+        stdin: true
+        stdout: true
+        stderr: true
+        description: Updating home-manager (since this is desktop)
