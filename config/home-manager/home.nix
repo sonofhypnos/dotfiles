@@ -141,6 +141,7 @@ in {
     "org/gnome/desktop/interface" = { color-scheme = "prefer-dark"; };
   };
   programs = {
+    fzf.enable = true;
     neovim = {
       enable = true;
 
@@ -303,6 +304,11 @@ in {
         if [ -f "$HOME/.zshrc.local" ]; then
           source "$HOME/.zshrc.local"
         fi
+
+        # Oh-my-zsh settings
+        DISABLE_UPDATE_PROMPT="true"
+        DISABLE_MAGIC_FUNCTIONS="true"
+        AUTO_PUSHD="true" # enables directories being pushed on a stack
       '';
       oh-my-zsh = {
         enable = true;
