@@ -68,7 +68,7 @@ in {
 
   home = {
     packages = with pkgs; [
-
+      zotero
       ollama
       firefox
       # myPythonEnv
