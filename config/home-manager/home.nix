@@ -276,7 +276,13 @@ in {
       syntaxHighlighting.enable = true;
       enableCompletion = true;
       initExtra = ''
-        ${builtins.readFile ../../zshrc}
+        # Core configuration managed by home-manager
+        # Load plugins, set up completions, etc.
+
+        # Source the user's local .zshrc if it exists
+        if [ -f "$HOME/.zshrc.local" ]; then
+          source "$HOME/.zshrc.local"
+        fi
       '';
       oh-my-zsh = {
         enable = true;

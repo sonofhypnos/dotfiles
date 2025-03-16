@@ -8,7 +8,8 @@
 - link:
   #TODO figure out what in home needs to be added here (for example nvim does not seem to be configured????)
     ~/.profile:
-    ~/.bashrc: 
+    ~/.bashrc:
+    ~/.zshrc.local:
     ~/.atamanrc.config:
     ~/.bash_logout: 
     ~/.gitconfig: 
