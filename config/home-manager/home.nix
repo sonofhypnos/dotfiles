@@ -276,10 +276,30 @@ in {
       syntaxHighlighting.enable = true;
       enableCompletion = true;
       initExtra = ''
-        # Core configuration managed by home-manager
-        # Load plugins, set up completions, etc.
+        # Home manager managed configuration
 
-        # Source the user's local .zshrc if it exists
+        # Source shell files for consistent configuration
+        if [ -f "$HOME/.shell/functions.sh" ]; then
+          source "$HOME/.shell/functions.sh"
+        fi
+
+        if [ -f "$HOME/.shell/general.sh" ]; then
+          source "$HOME/.shell/general.sh"
+        fi
+
+        if [ -f "$HOME/.shell/paths.sh" ]; then
+          source "$HOME/.shell/paths.sh"
+        fi
+
+        if [ -f "$HOME/.shell/lazy_loaders.sh" ]; then
+          source "$HOME/.shell/lazy_loaders.sh"
+        fi
+
+        if [ -f "$HOME/.shell/aliases.sh" ]; then
+          source "$HOME/.shell/aliases.sh"
+        fi
+
+        # Source local configuration (for quick changes without rebuilding)
         if [ -f "$HOME/.zshrc.local" ]; then
           source "$HOME/.zshrc.local"
         fi
