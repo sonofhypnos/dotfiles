@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Exec=google-chrome --app=https://claude.ai
+Hidden=false
+NoDisplay=false
+X-GNOME-Autostart-enabled=true
+Name=Claude
+Comment=Launch Claude on startup
