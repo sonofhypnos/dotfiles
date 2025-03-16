@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Exec=rescuetime
+Hidden=false
+NoDisplay=false
+X-GNOME-Autostart-enabled=true
+Name=RescueTime
+Comment=Track computer usage with RescueTime

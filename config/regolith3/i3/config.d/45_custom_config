@@ -124,13 +124,6 @@ bindsym $mod+Shift+Escape exec gnome-system-monitor
 #bindsym $mod+d exec $transGerman
 bindsym $mod+$alt+Control+q exec emacsclient -t
 
-#Todo: make shortcut for editing this file
-#
-#emacsclient in Scratchpad
-# launch scratchpad frame in existing emacs daemon
-#exec emacs
-#exec --no-startup-id /usr/local/bin/pad.sh
-
 # Add emacs scratchpad
 for_window [title="_emacs scratchpad_"] move scratchpad, scratchpad show
 for_window [title="doom-capture"] move scratchpad, scratchpad show
@@ -240,31 +233,10 @@ exec --no-startup-id dconf write /org/gnome/settings-daemon/plugins/cursor/activ
 
 
 ##Open main Applications
-##clipboard manager
-exec copyq
-exec emacs --daemon; emacsclient -c
-#exec flatpak run org.zotero.Zotero
-exec rescuetime
-exec flameshot
-exec i3-wallpaper
-exec ~/bin/sleepnag.sh
-#
-## arena
-#exec firefox https://arena3-chapter0-fundamentals.streamlit.app
-#exec firefox https://arena3-chapter1-transformer-interp.streamlit.app/
-#exec firefox https://ultra.work/cycles
-exec ~/bin/evening_routine.sh
-
 #Send Battery warning
 exec --no-startup-id ./i3-battery-popup/i3-battery-popup
 
-# Smart startup script
-#exec home/tassilo/.dotfiles/bin/startup_applications.sh
-
-
-# Added evening routine suspension
-exec echo "{{/home/tassilo/bin/evening_routine.sh}}" | at 18:30
-
+## Clear Scratchpad // <> Shift u ##/
 bindsym $mod+u [class="Google-chrome" instance="claude.ai"] move scratchpad; [class="Zotero" window_role="browser"] move scratchpad; [title="_emacs scratchpad_"] move scratchpad; [title="doom-capture"] move scratchpad; [class="Google-chrome" instance="chatgpt.com"] move scratchpad; [class="Google-chrome" instance="www.perplexity.ai"] move scratchpad; [class="Google-chrome" instance="fatebook.io"] move scratchpad; [class="Emacs"] move scratchpad; [instance="^app\.atimelogger\.pro"] move scratchpad;
 
 

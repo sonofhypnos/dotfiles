@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Exec=zotero
+Hidden=false
+NoDisplay=false
+X-GNOME-Autostart-enabled=true
+Name=Zotero
+Comment=Open Zotero at startup

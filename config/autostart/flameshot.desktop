@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Exec=flameshot
+Hidden=false
+NoDisplay=false
+X-GNOME-Autostart-enabled=true
+Name=Flameshot
+Comment=Screenshot tool
