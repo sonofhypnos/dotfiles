@@ -98,5 +98,7 @@ Also enable org-protocol (refer to your notes for how to setup or debug org-prot
 - [ ] Make sure install does not do weird things when we haven't installed emacs
 - [ ] By now I know instead of copying and modifying things under /etc/share/regolith/conf.d/ I can just overwrite them in ~/config/regolith2/Xresources. That is what the set_from_xresource keybinds are for. Undoing that would be nice to do before or after we move to regolith 3.0
 - [ ] same for neovim (for commiting with git for example)
-- [ ] move all dotbot stuff that I only need for my home to nix already (this is absolutely optional though.)
+- [ ] move all dotbot stuff that I only need for my home to nix already (optional)
 - [ ] create a bootstrap script to install nix and setup home-manager (for now I gave up on this, because nix doesn't like to work with root as docker does.)
+- [ ] create better paths for shell (use $HOME instead of /home/tassilo) 
+- [ ] Move more configuration to home-manager and make it declarative.
