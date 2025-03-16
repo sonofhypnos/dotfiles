@@ -6,7 +6,6 @@
 - clean: ["~", "~/.oh-my-zsh/custom/", "~/.oh-my-zsh/custom/plugins/"]
 
 - link:
-      #TODO figure out what in home needs to be added here (for example nvim does not seem to be configured????)
       ~/.bashrc.local:
       ~/.zshrc.local:
       ~/.atamanrc.config:
@@ -16,12 +15,10 @@
       ~/.XCompose:
       ~/.authinfo.gpg:
       ~/.tmux.conf:
-      ~/.alacritty.yml:
       ~/.ghc/:
           glob: true
           path: ghc/*
       ~/bin:
-      ~/.oh-my-zsh:
       ~/.config/:
           glob: true
           path: config/*
@@ -31,8 +28,6 @@
       ~/.intellimacs:
           glob: true
           path: intellimacs/*
-      #    ~/.i3status.conf:
-      #    ~/.xsession:
       ~/.doom.d:
       ~/.screenlayout:
       ~/.local/share/ranger/bookmarks:
