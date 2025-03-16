@@ -35,3 +35,4 @@ wm.program.bluetooth: regolith-control-center --class=floating_window bluetooth
 
 wm.gaps.inner.size: 0
 
+regolith.look.path: /usr/share/regolith-look/solarized-dark
