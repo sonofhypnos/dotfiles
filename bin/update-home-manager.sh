@@ -22,6 +22,6 @@ confirm() {
     esac
 }
 
-if confirm "Do you want to update home-manager?"; then
+if confirm "Do you want to recompile the home-manager configuration?"; then
     [[ -e $home_dir ]] && cd "$home_dir" && home-manager switch -b backup --flake .#tassilo --show-trace
 fi
