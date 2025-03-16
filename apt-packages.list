@@ -7,7 +7,6 @@ adduser
 alsa-utils
 anacron
 android-sdk-platform-tools-common
-ansible
 apport-gtk
 appstream
 apt
