@@ -5,7 +5,6 @@ let
   #   config.allowUnfree = true;
   # }; NOTE: don't need unstable for now, but just keeping it here for when I do.
   clipboardScriptPath = ./urxvt_clipboard.pl;
-  xresourcesContent = builtins.readFile ../../Xresources;
   doomDir = ".doom.d";
   envFile = "${doomDir}/emacs-hm-env.el";
   myPythonEnv = pkgs.python3.withPackages (ps: [
@@ -129,8 +128,6 @@ in {
     #        (add-hook 'nix-mode-hook #'lsp!))
 
     file.".Xresources".text = ''
-      ${xresourcesContent}
-
       URxvt.perl-lib: ${clipboardScriptPath}
       URxvt.perl-ext-common: default,clipboard
       URxvt.keysym.C-S-V: perl:clipboard:paste
