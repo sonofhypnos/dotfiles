@@ -22,6 +22,9 @@ systemctl enable "$s_path"
 #systemctl enable borg.service
 #systemctl enable borg.timer
 
-
 #cp $(realpath "./config/systemd/user/borg.timer") $HOME config/systemd/user/borg.timer
 systemctl start borg.timer
+
+systemctl --user enable writing-tracker.service
+systemctl --user enable writing-tracker.timer
+systemctl --user start writing-tracker.timer

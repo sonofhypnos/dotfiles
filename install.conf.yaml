@@ -42,6 +42,7 @@
 - shell:
       - [git submodule sync --recursive, Recursively fetching submodules]
       - [git submodule update, Updating submodules]
+      - [enable_user_services.sh, Updating user services]
       - command: update-home-manager.sh
         stdin: true
         stdout: true
