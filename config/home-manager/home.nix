@@ -68,6 +68,7 @@ in {
 
   home = {
     packages = with pkgs; [
+      i3-cycle-focus # for tabbing through regolith
       zotero
       ollama
       firefox

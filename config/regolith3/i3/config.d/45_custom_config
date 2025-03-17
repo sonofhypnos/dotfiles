@@ -150,7 +150,6 @@ bindsym Mod1+F4 kill
 bindsym $mod+Shift+u $kill # A more effective kill command
 bindsym $mod+BackSpace kill
 
-
 # alt-tab through windows
 exec_always --no-startup-id i3-cycle-focus.py --history 2
 bindsym $alt+Tab exec --no-startup-id i3-cycle-focus.py --switch
@@ -241,9 +240,15 @@ bindsym $mod+u [class="Google-chrome" instance="claude.ai"] move scratchpad; [cl
 
 
 # read 1 character and mark the current window with this character
+## Mark window with char // <> m ##/
 bindsym $mod+m exec i3-input -F 'mark %s' -l 1 -P 'Mark: '
 
 # read 1 character and go to the window with the character
+## Go to window char // <> Shift g ##/
 bindsym $mod+g exec i3-input -F '[con_mark="%s"] focus' -l 1 -P 'Goto: '
 
+## Logout (keep session) // <> Shift w ##/
 bindsym $mod+Shift+w exec dm-tool switch-to-greeter
+
+## Screenshot region (clipboard) // Ctrl Shift Print ##/
+bindsym Control+Shift+Print exec /home/tassilo/bin/screenshot.sh
