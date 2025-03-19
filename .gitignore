@@ -5,3 +5,4 @@ jupyter/lab/workspaces/*
 .gitsecret/keys/random_seed
 !*.secret
 config/espanso/match/private.yml
+bin/liftOver
