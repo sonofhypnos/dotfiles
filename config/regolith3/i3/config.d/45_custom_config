@@ -62,9 +62,6 @@ set $intellij intellij-idea-ultimate
 set $emacs emacsclient -c
 #set $transGerman sh -c 'firefox "http://translate.google.com/#de/en/$(xclip -o)"'
 
-set $clearpythoncomments "xclip -o | sed '/^\s*#/d; s/#.*//' | xclip -selection clipboard"
-
-bindsym $mod+Control+p exec $clearpythoncomments
 
 
 #Launcher for Main Applications
@@ -93,7 +90,26 @@ mode "$main_launcher" {
 	bindsym Return mode "default"
 }
 
-bindsym $mod+s mode "Scratchpad"
+
+
+
+# This mode is still searching for use
+bindsym Control+$mod+$alt+m "miscellaneous"
+
+mode "miscellaneous" {
+    bindsym Escape mode "default"
+}
+
+bindsym Control+$mod+$alt+p "clipboard_mode"
+
+set $clearpythoncomments "xclip -o | sed -E '/^\s*#/d; s/#.*//' | xclip -selection clipboard"
+set $dna_coord "xclip -selection clipboard -o | sed -E 's/([^:]+):([0-9]+)\.\.([0-9]+).*/\1:\2-\3/' | xclip -selection clipboard -i"
+
+mode "clipboard_mode" {
+    bindsym c mode "default" exec $clearpythoncomments
+    bindsym d mode "default" exec $dna_coord
+    bindsym Escape mode "default"
+}
 
 
 set $gpt_scratch /home/tassilo/bin/scratch_toggle.sh "Google-chrome" "google-chrome --app=https://chatgpt.com" "chatgpt.com"
@@ -103,6 +119,8 @@ set $fatebook_scratch /home/tassilo/bin/scratch_toggle.sh "Google-chrome" "googl
 set $perplexity_scratch /home/tassilo/bin/scratch_toggle.sh "Google-chrome" "google-chrome --app=https://www.perplexity.ai" "www.perplexity.ai"
 set $claude_scratch /home/tassilo/bin/scratch_toggle.sh "Google-chrome" "google-chrome --app=https://claude.ai" "claude.ai"
 set $timetrack_scratch /home/tassilo/bin/scratch_toggle.sh "Google-chrome" "google-chrome --app=https://app.atimelogger.pro/reports" "^app\.atimelogger\.pro"
+
+bindsym $mod+s mode "Scratchpad"
 
 # TODO: if application is not already open, open it
 mode "Scratchpad" {
