@@ -1,8 +1,7 @@
-# Save this as ~/.local/share/applications/firefox-protocol.desktop
 [Desktop Entry]
 Name=Firefox Protocol Handler
 GenericName=Web Browser
-Exec=~/.local/bin/firefox-protocol-handler %u
+Exec=~/bin/firefox-protocol-handler %u
 Terminal=false
 Type=Application
 MimeType=x-scheme-handler/firefox;
