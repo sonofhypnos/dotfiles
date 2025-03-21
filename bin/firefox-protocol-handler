@@ -1,7 +1,18 @@
 #!/bin/bash
 
 # Extract the URL from the firefox:// protocol
-url="${1#firefox://}"
+raw_url="${1#firefox://}"
 
-# Launch Firefox with the URL
+# Make sure the URL has proper formatting
+# Check if the URL has a protocol, and if it does, ensure it has ://
+if [[ "$raw_url" =~ ^(http|https)// ]]; then
+    # Fix URLs where the colon is missing after the protocol
+    protocol="${raw_url%%//*}"
+    rest="${raw_url#"$protocol"//}"
+    url="${protocol}://${rest}"
+else
+    # If no protocol or already correct, use as is
+    url="$raw_url"
+fi
 firefox "$url"
+

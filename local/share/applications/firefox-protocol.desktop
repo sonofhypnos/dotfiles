@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=Firefox Protocol Handler
 GenericName=Web Browser
-Exec=~/bin/firefox-protocol-handler %u
+Exec=/home/tassilo/bin/firefox-protocol-handler %u
 Terminal=false
 Type=Application
 MimeType=x-scheme-handler/firefox;
