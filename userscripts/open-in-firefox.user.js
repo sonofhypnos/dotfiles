@@ -8,6 +8,7 @@
 // @run-at       document-start
 // @author       Tassilo Neubauer
 // @updateURL    https://raw.githubusercontent.com/sonofhypnos/dotfiles/main/userscripts/open-in-firefox.user.js
+// @downloadURL    https://raw.githubusercontent.com/sonofhypnos/dotfiles/main/userscripts/open-in-firefox.user.js
 // ==/UserScript==
 
 (function () {
@@ -48,7 +49,7 @@
     true,
   );
 
-  // Add a hint to any links hovered
+  // Add a hint to any links hovered (I should remove this after I got used to using this)
   document.addEventListener("mouseover", function (e) {
     const target = e.target.closest("a");
     if (target && target.href) {
