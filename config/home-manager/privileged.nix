@@ -67,11 +67,38 @@ let
         systemctl enable borg.timer
         systemctl start borg.timer
 
+        # Set up logwatch configuration
+        echo "Setting up logwatch configuration..."
+        mkdir -p /etc/logwatch/conf
+        # Check if user's logwatch config exists
+        if [[ -f "${config.home.homeDirectory}/.config/logwatch/ignore.conf" ]]; then
+          # Create symlink to user's config if it exists
+          echo "Linking user's logwatch ignore configuration..."
+          cp -f "${config.home.homeDirectory}/.config/logwatch/ignore.conf" /etc/logwatch/conf/ignore.conf
+        else
+          echo "User's logwatch configuration not found at ${config.home.homeDirectory}/.config/logwatch/ignore.conf"
+        fi
+
+        # Set up services directory if needed
+        mkdir -p /etc/logwatch/conf/services
+        if [[ -d "${config.home.homeDirectory}/.config/logwatch/services" ]]; then
+          echo "Linking user's logwatch service configurations..."
+          for config_file in "${config.home.homeDirectory}/.config/logwatch/services/"*.conf; do
+            if [[ -f "$config_file" ]]; then
+              basename=$(basename "$config_file")
+              cp -f "$config_file" "/etc/logwatch/conf/services/$basename"
+              echo "Linked $basename"
+            fi
+          done
+        fi
+
         echo "Deployment complete! Files installed:"
         echo "Script:"
         ls -la /etc/privileged-dotfiles/
         echo "Systemd files:"
         ls -la /etc/systemd/system/borg.*
+        echo "Logwatch configuration:"
+        ls -la /etc/logwatch/conf/
   '';
 
 in {
