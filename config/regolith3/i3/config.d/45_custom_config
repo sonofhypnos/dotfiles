@@ -100,7 +100,7 @@ mode "miscellaneous" {
     bindsym Escape mode "default"
 }
 
-bindsym Control+$mod+$alt+p "clipboard_mode"
+bindsym Control+$mod+$alt+p mode "clipboard_mode"
 
 set $clearpythoncomments "xclip -o | sed -E '/^\s*#/d; s/#.*//' | xclip -selection clipboard"
 set $dna_coord "xclip -selection clipboard -o | sed -E 's/([^:]+):([0-9]+)\.\.([0-9]+).*/\1:\2-\3/' | xclip -selection clipboard -i"
