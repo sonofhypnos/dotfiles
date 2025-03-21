@@ -28,19 +28,8 @@
           e.preventDefault();
           e.stopPropagation();
 
-          // If using Tampermonkey with GM_openInTab available
-          if (typeof GM_openInTab !== "undefined") {
-            GM_openInTab(target.href, {
-              active: true,
-              insert: true,
-              incognito: false,
-              setParent: true,
-            });
-          } else {
-            // Fallback to opening via custom protocol handler
-            // This requires a custom protocol handler to be registered on your system
-            window.location.href = "firefox://" + target.href;
-          }
+          // opening via custom protocol handler
+          window.location.href = "firefox://" + target.href;
 
           return false;
         }
