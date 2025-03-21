@@ -1,0 +1,7 @@
+#!/bin/bash
+
+# Extract the URL from the firefox:// protocol
+url="${1#firefox://}"
+
+# Launch Firefox with the URL
+firefox "$url"

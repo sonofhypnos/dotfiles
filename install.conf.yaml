@@ -32,6 +32,9 @@
     ~/.screenlayout:
     ~/.local/share/ranger/bookmarks:
       path: local/share/ranger/bookmarks
+    ~/.local/share/applications:
+      path: local/share/applications/*
+      glob: true
 
 - shell:
     - [git submodule sync --recursive, Recursively fetching submodules]
