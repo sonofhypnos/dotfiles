@@ -20,6 +20,20 @@ wm.binding.take_up: Ctrl+Shift+l
 wm.binding.take_down: Ctrl+Shift+k
 wm.workspace.auto_back_and_forth: yes
 
+wm.binding.ws_next_on_output2: Ctrl+odiaeresis
+wm.binding.ws_prev_on_output2: Ctrl+j
+
+! wm.binding.move_right:
+wm.binding.move_left: wm.binding.move_left Shift+j
+wm.binding.move_right: wm.binding.move_right Shift+odiaeresis
+wm.binding.move_up: wm.binding.move_up Shift+l
+wm.binding.move_down: wm.binding.move_down Shift+k
+
+wm.binding.take_left: wm.binding.take_left Ctrl+Shift+j
+wm.binding.take_right: wm.binding.take_right Ctrl+Shift+odiaeresis
+wm.binding.take_up: wm.binding.take_up Ctrl+Shift+l
+wm.binding.take_down: wm.binding.take_down Ctrl+Shift+k
+
 ! Used to be Backspace:
 wm.binding.orientation_toggle: F1
 ! Used to be c:
