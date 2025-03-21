@@ -28,8 +28,9 @@
           e.preventDefault();
           e.stopPropagation();
 
-          // opening via custom protocol handler
-          window.location.href = "firefox://" + target.href;
+          // // opening via custom protocol handler
+          // window.location.href = "firefox://" + target.href;
+          window.open(target.href, "_blank");
 
           return false;
         }
