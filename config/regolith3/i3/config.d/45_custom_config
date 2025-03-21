@@ -253,20 +253,22 @@ exec --no-startup-id dconf write /org/gnome/settings-daemon/plugins/cursor/activ
 #Send Battery warning
 exec --no-startup-id ./i3-battery-popup/i3-battery-popup
 
-## Clear Scratchpad // <> Shift u ##/
+## Launch // Clear Scratchpad // <> Shift u ##/
 bindsym $mod+u [class="Google-chrome" instance="claude.ai"] move scratchpad; [class="Zotero" window_role="browser"] move scratchpad; [title="_emacs scratchpad_"] move scratchpad; [title="doom-capture"] move scratchpad; [class="Google-chrome" instance="chatgpt.com"] move scratchpad; [class="Google-chrome" instance="www.perplexity.ai"] move scratchpad; [class="Google-chrome" instance="fatebook.io"] move scratchpad; [class="Emacs"] move scratchpad; [instance="^app\.atimelogger\.pro"] move scratchpad;
 
 
 # read 1 character and mark the current window with this character
-## Mark window with char // <> m ##/
+## Launch // Mark window with char // <> m ##/
 bindsym $mod+m exec i3-input -F 'mark %s' -l 1 -P 'Mark: '
 
 # read 1 character and go to the window with the character
-## Go to window char // <> Shift g ##/
+
+## Launch //  Go to window char // <> Shift g ##/
 bindsym $mod+g exec i3-input -F '[con_mark="%s"] focus' -l 1 -P 'Goto: '
 
-## Logout (keep session) // <> Shift w ##/
+## Launch // Logout (keep session) // <> Shift w ##/
 bindsym $mod+Shift+w exec dm-tool switch-to-greeter
 
-## Screenshot region (clipboard) // Ctrl Shift Print ##/
+## Launch // Screenshot region (clipboard) // Ctrl Shift Print ##/
 bindsym Control+Shift+Print exec /home/tassilo/bin/screenshot.sh
+
