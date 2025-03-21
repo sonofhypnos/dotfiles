@@ -249,9 +249,6 @@ in {
             "browser.toolbars.bookmarks.visibility" = "never";
             "browser.ctrlTab.recentlyUsedOrder" = false;
 
-            # Better right-click behavior with Tridactyl
-            "dom.event.contextmenu.enabled" = false;
-
             # Display tabs even in fullscreen mode:
             "browser.fullscreen.autohide" = false;
           };
