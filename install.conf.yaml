@@ -35,6 +35,9 @@
     ~/.local/share/applications:
       path: local/share/applications/*
       glob: true
+    ~/.gnupg/:
+      glob: true
+      path: gnupg/*
 
 - shell:
     - [git submodule sync --recursive, Recursively fetching submodules]
