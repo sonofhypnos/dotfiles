@@ -36,3 +36,11 @@ export ESPANSO_CONFIG="$HOME/.config/espanso/match/default.yml"
 if [ -f "/home/tassilo/.config/op/plugins.sh" ]; then
     source "/home/tassilo/.config/op/plugins.sh"
 fi
+
+# Configure to use gpg for password handleing
+export GPG_TTY=$(tty)
+
+export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
+gpgconf --launch gpg-agent
+
+export SUDO_ASKPASS=/usr/bin/ssh-askpass
