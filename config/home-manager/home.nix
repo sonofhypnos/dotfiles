@@ -108,6 +108,7 @@ in {
       nodePackages.prettier # Required by apheleia in Emacs to format some file formats like yaml
 
       # Python related: (This way we don't have to pollute the system python with these things)
+      poetry
       pyright
     ];
 
