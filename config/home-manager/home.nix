@@ -68,11 +68,11 @@ in {
 
   home = {
     packages = with pkgs; [
+
       i3-cycle-focus # for tabbing through regolith
       zotero
       ollama
       firefox
-      pkgs.poetry
       spotify
       elan
       git-secret
@@ -106,6 +106,10 @@ in {
       okular
       xournalpp
       nodePackages.prettier # Required by apheleia in Emacs to format some file formats like yaml
+
+      # Python related: (This way we don't have to pollute the system python with these things)
+      poetry
+      pyright
     ];
 
     # Or you can explicitly link the binary to a known location
