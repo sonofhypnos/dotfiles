@@ -44,3 +44,9 @@ export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
 gpgconf --launch gpg-agent
 
 export SUDO_ASKPASS=/usr/bin/ssh-askpass
+
+# Make sure poetry puts venv in project directory
+POETRY_VIRTUALENVS_IN_PROJECT=true
+
+# Tell poetry to use the same python version that was used to install it to avoid weird errors
+POETRY_VIRTUALENVS_USE_POETRY_PYTHON=true
