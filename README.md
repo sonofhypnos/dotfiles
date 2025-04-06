@@ -35,6 +35,7 @@ git clone --depth 1 --recurse-submodules -j8 git@github.com:sonofhypnos/dotfiles
 ```
 
 Then run ./install.sh (make sure you have emacs and neovim installed)
+(./install.sh will also ask you if you want to recompile your home-manager config)
 
 put the following at the top of the bashrc (if your are using the local one)
 

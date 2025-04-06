@@ -72,7 +72,7 @@ in {
       zotero
       ollama
       firefox
-      # myPythonEnv
+      pkgs.poetry
       spotify
       elan
       git-secret
