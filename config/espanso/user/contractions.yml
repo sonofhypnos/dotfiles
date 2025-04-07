@@ -23,10 +23,6 @@ matches:
     replace: "can\'t"
     propagate_case: true
     word: true
-  - trigger: "cause"
-    replace: "\'cause"
-    propagate_case: true
-    word: true
   - trigger: "couldve"
     replace: "could\'ve"
     propagate_case: true
