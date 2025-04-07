@@ -48,5 +48,5 @@ export SUDO_ASKPASS=/usr/bin/ssh-askpass
 # Make sure poetry puts venv in project directory
 POETRY_VIRTUALENVS_IN_PROJECT=true
 
-# Tell poetry to use the same python version that was used to install it to avoid weird errors
-POETRY_VIRTUALENVS_USE_POETRY_PYTHON=true
+# # Tell poetry to use the same python version that was used to install it to avoid weird errors
+# POETRY_VIRTUALENVS_USE_POETRY_PYTHON=true
