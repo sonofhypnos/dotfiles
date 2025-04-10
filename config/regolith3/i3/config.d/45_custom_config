@@ -16,7 +16,7 @@ set $tripleLand ~/.screenlayout/tripleLand.sh
 set $doublePortOnly ~/.screenlayout/doublePortOnly.sh
 
 #LayoutMode
-## Launch // Layout mode [p]rog [m]ain [l]aptopOnly [d]oublePortrait [o]nlyDoublePortrait [f]rontLaptop [t]rippleLand // <> z ##/
+## Launch // Layout mode [p]rog [m]ain [l]aptopOnly [d]oublePortrait [o]nlyDoublePortrait [f]rontLaptop [t]rippleLand // <> Ctrl Alt L ##/
 set $layout_mode Layout Mode: [p]rog [m]ain [l]aptopOnly [d]oublePortrait [o]nlyDoublePortrait [f]rontLaptop [t]rippleLand
 bindsym Control+$mod+$alt+L mode "$layout_mode"
 
@@ -100,7 +100,10 @@ mode "miscellaneous" {
     bindsym Escape mode "default"
 }
 
-bindsym Control+$mod+$alt+p mode "clipboard_mode"
+
+## Launch // Layout mode [1] [2] [3] [4] // Ctrl <> Alt p ##/
+set $clipboard_mode Clipboard Mode: [c]learPythonComments [d]na_coord
+bindsym Control+$mod+$alt+p mode "$clipboard_mode"
 
 set $clearpythoncomments "xclip -o | sed -E '/^\s*#/d; s/#.*//' | xclip -selection clipboard"
 set $dna_coord "xclip -selection clipboard -o | sed -E 's/([^:]+):([0-9]+)\.\.([0-9]+).*/\1:\2-\3/' | xclip -selection clipboard -i"
@@ -120,11 +123,11 @@ set $perplexity_scratch /home/tassilo/bin/scratch_toggle.sh "Google-chrome" "goo
 set $claude_scratch /home/tassilo/bin/scratch_toggle.sh "Google-chrome" "google-chrome --app=https://claude.ai" "claude.ai"
 set $timetrack_scratch /home/tassilo/bin/scratch_toggle.sh "Google-chrome" "google-chrome --app=https://app.atimelogger.pro/reports" "^app\.atimelogger\.pro"
 
-bindsym $mod+s mode "Scratchpad"
+## Launch // Scratchpad mode [e]macs [z]otero [f]atebook [p]erplexity [o]penai [c]laude [t]imetrack // <> s ##/
+set $scratchpad_mode Scratchpad Mode: [e]macs [z]otero [f]atebook [p]erplexity [o]penai [c]laude [t]imetrack
+bindsym $mod+s mode "$scratchpad_mode"
 
-# TODO: if application is not already open, open it
 mode "Scratchpad" {
-    bindsym a mode "default" exec $gpt_scratch
     bindsym e mode "default" exec $emacs_scratch
     bindsym z mode "default" exec $zotero_scratch
     bindsym f mode "default" exec $fatebook_scratch
