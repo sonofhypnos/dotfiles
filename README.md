@@ -94,6 +94,17 @@ Firefox:
 Set .dotfiles/bin/pdf.sh as the default application for pdfs.
 Also enable org-protocol (refer to your notes for how to setup or debug org-protocol).
 
+Zotero:
+Make sure you configure autoexport for your zotero library entries. We are currently storing them under ~/repos/bibliography/zotLib.bib. You have to manually set the auto-export folder.
+
+Next you need to manually install the better bibtex addon. Zotero will otherwise something is wrong if you try to export things in the better bibtex format. 
+Download the latest version from the release from the github repository and make sure that the version of bibtex is compatible with your zotero version. 
+
+
+
+To do this, right-click your library in the left pane and select "Export Library...". In the dialog that appears, select "Better BibTeX" as the export format and check the "Keep updated" checkbox. Then, select the folder where you want to save the exported file (e.g., ~/repos/bibliography) and click "OK".
+
+
 ## todos
 - [ ] Make sure that things are still working without needing to install home-manager? (Or do we want that?)
 - [ ] Make sure install does not do weird things when we haven't installed emacs
