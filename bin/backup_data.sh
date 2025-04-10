@@ -198,8 +198,10 @@ pwd=$(sudo -u $GUI_USER DISPLAY=:0 zenity --password \
     --title="1Password Authentication")
 
 if [ -z "$pwd" ]; then
-    display_error_message "Password input cancelled. Aborting backup."
-    exit 1
+    display_info_message "Password input cancelled. Aborting backup."
+    info "Password input cancelled. Aborting backup."
+    logger "Password input cancelled. Aborting backup."
+    exit 0
 fi
 
 op whoami || eval "$(echo "$pwd" | op signin)"
