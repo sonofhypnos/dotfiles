@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Org-Protocol
+Exec=/home/tassilo/bin/emacs-protocol.sh %u
+Icon=emacs-icon
+Type=Application
+Terminal=false
+MimeType=x-scheme-handler/org-protocol
