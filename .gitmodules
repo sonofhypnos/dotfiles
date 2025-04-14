@@ -29,3 +29,6 @@
 [submodule "zotadd"]
 	path = zotadd
 	url = https://github.com/sdx23/zotadd
+[submodule "config/ranger/plugins/ranger-fzf-filter"]
+	path = config/ranger/plugins/ranger-fzf-filter
+	url = https://github.com/MuXiu1997/ranger-fzf-filter
