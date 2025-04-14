@@ -20,9 +20,6 @@ wm.binding.take_up: Ctrl+Shift+l
 wm.binding.take_down: Ctrl+Shift+k
 wm.workspace.auto_back_and_forth: yes
 
-wm.binding.ws_next_on_output2: Ctrl+odiaeresis
-wm.binding.ws_prev_on_output2: Ctrl+j
-
 ! Used to be Backspace:
 wm.binding.orientation_toggle: F1
 ! Used to be c:
@@ -37,7 +34,7 @@ wm.binding.focus_child: F6
 
 wm.gaps.inner.size: 0
 
-regolith.look.path: /usr/share/regolith-look/solarized-dark
+#regolith.look.path: /usr/share/regolith-look/solarized-dark
 
 !
 ! More general settings unrelated to regolith
