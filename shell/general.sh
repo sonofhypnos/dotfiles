@@ -50,3 +50,6 @@ POETRY_VIRTUALENVS_IN_PROJECT=true
 
 # # Tell poetry to use the same python version that was used to install it to avoid weird errors
 # POETRY_VIRTUALENVS_USE_POETRY_PYTHON=true
+
+# Set file manager ranger to not load the default rc file, since we have our own
+RANGER_LOAD_DEFAULT_RC=false
