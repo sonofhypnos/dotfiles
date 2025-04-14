@@ -144,6 +144,12 @@ in {
 
   dconf.settings = {
     "org/gnome/desktop/interface" = { color-scheme = "prefer-dark"; };
+    "org/gnome/desktop/nautilus/preferences" = {
+      show-hidden-files = true;
+      show-image-thumbnails = "always";
+      default-sort-order = "mtime"; # Sort by modification time
+      default-sort-in-reverse-order = false; # Newest first if true
+    };
   };
   programs = {
     fzf.enable = true;
