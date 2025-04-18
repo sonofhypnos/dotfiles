@@ -2,11 +2,11 @@
   description = "My home-manager config as a flake";
 
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.11";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.05";
 
-    nixpkgs-unfree = { url = "github:NixOS/nixpkgs/nixos-24.11"; };
+    nixpkgs-unfree = { url = "github:NixOS/nixpkgs/nixos-24.05"; };
     nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
-    home-manager.url = "github:nix-community/home-manager/release-24.11";
+    home-manager.url = "github:nix-community/home-manager/release-24.05";
     nur = {
       url = "github:nix-community/NUR";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -67,7 +67,7 @@
             home = {
               username = "tassilo";
               homeDirectory = "/home/tassilo";
-              stateVersion = "24.11";
+              stateVersion = "24.05";
             };
           }
         ];
