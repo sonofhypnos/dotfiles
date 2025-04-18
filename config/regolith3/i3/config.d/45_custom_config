@@ -18,7 +18,7 @@ set $doublePortOnly ~/.screenlayout/doublePortOnly.sh
 #LayoutMode
 ## Launch // Layout mode [p]rog [m]ain [l]aptopOnly [d]oublePortrait [o]nlyDoublePortrait [f]rontLaptop [t]rippleLand // <> Ctrl Alt L ##/
 set $layout_mode Layout Mode: [p]rog [m]ain [l]aptopOnly [d]oublePortrait [o]nlyDoublePortrait [f]rontLaptop [t]rippleLand
-bindsym Control+$mod+$alt+L mode "$layout_mode"
+bindsym Control+$mod+$alt+l mode "$layout_mode"
 
 mode "$layout_mode" {
 	bindsym --release p mode "default" exec $prog
@@ -94,25 +94,26 @@ mode "$main_launcher" {
 
 
 # This mode is still searching for use
-bindsym Control+$mod+$alt+m "miscellaneous"
+#bindsym Control+$mod+$alt+m "miscellaneous"
 
-mode "miscellaneous" {
-    bindsym Escape mode "default"
-}
+#mode "$miscellaneous" {
+#    bindsym Escape mode "default"
+#}
 
 
 ## Launch // Layout mode [1] [2] [3] [4] // Ctrl <> Alt p ##/
-set $clipboard_mode Clipboard Mode: [c]learPythonComments [d]na_coord
-bindsym Control+$mod+$alt+p mode "$clipboard_mode"
+set $clipboard_mode Clipboard Mode: clipboard [c]learPythonComments [d]na_coord
 
-set $clearpythoncomments "xclip -o | sed -E '/^\s*#/d; s/#.*//' | xclip -selection clipboard"
-set $dna_coord "xclip -selection clipboard -o | sed -E 's/([^:]+):([0-9]+)\.\.([0-9]+).*/\1:\2-\3/' | xclip -selection clipboard -i"
-
-mode "clipboard_mode" {
+bindsym $mod+Control+$alt+p mode "$clipboard_mode"
+mode "$clipboard_mode" {
     bindsym c mode "default" exec $clearpythoncomments
     bindsym d mode "default" exec $dna_coord
     bindsym Escape mode "default"
 }
+
+set $clearpythoncomments "xclip -o | sed -E '/^\s*#/d; s/#.*//' | xclip -selection clipboard"
+set $dna_coord "xclip -selection clipboard -o | sed -E 's/([^:]+):([0-9]+)\.\.([0-9]+).*/\1:\2-\3/' | xclip -selection clipboard -i"
+
 
 
 set $gpt_scratch /home/tassilo/bin/scratch_toggle.sh "Google-chrome" "google-chrome --app=https://chatgpt.com" "chatgpt.com"
