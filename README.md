@@ -98,7 +98,9 @@ Zotero:
 Make sure you configure autoexport for your zotero library entries. We are currently storing them under ~/repos/bibliography/zotLib.bib. You have to manually set the auto-export folder.
 
 Next you need to manually install the better bibtex addon. Zotero will otherwise something is wrong if you try to export things in the better bibtex format. 
-Download the latest version from the release from the github repository and make sure that the version of bibtex is compatible with your zotero version. 
+Download the latest version from the release from the github repository and make sure that the version of bibtex is compatible with your zotero version. (You also need to pay attention to that with all the other addons)
+You also need to install this addon for duplicates if you want to handle them: https://github.com/ChenglongMa/zoplicate/releases/tag/3.0.8 
+
 
 
 
