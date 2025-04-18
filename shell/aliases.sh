@@ -46,3 +46,5 @@ alias abox="archivebox"
 gitdownload() {
     curl -L $(echo "$1" | sed -r 's/https:\/\/github\.com\/(.*)$/git@github.com:\1\/archive\/master.tar.gz/') | tar zxf -
 }
+
+alias ranger='ranger . .'
