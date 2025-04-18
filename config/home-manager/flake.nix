@@ -25,6 +25,8 @@
           system = "x86_64-linux";
           config = {
             allowUnfree = true;
+            permittedInsecurePackages = [ "emacs-29.1" ];
+
             # Additional configurations and overlays if needed
           };
           overlays = [
