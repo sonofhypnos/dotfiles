@@ -99,7 +99,7 @@ in {
       languagetool
       janet
       zsh-nix-shell
-      androidenv.androidPkgs_9_0.platform-tools
+      #androidenv.androidPkgs_9_0.platform-tools (got deprecated when switching to 24.11 and wasn't using it, so not fixing)
       zsh
       tmux
       elasticsearch
