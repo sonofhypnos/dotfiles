@@ -1,44 +1,9 @@
-{ config, lib, pkgs, ... }:
+{ config, lib, pkgs, unstable, ... }:
 let
-  # pkgsUnstable = import nixpkgs {
-  #   inherit system;
-  #   config.allowUnfree = true;
-  # }; NOTE: don't need unstable for now, but just keeping it here for when I do.
   clipboardScriptPath = ./urxvt_clipboard.pl;
   doomDir = ".doom.d";
   envFile = "${doomDir}/emacs-hm-env.el";
-  myPythonEnv = pkgs.python3.withPackages (ps: [
-    ps.python-lsp-server
-    ps.pylsp-rope # Add this if available directly or adjust with an overlay if needed
-  ]);
   firefoxAddons = pkgs.nur.repos.rycee.firefox-addons;
-  emacs29 = pkgs.emacs29.overrideAttrs (oldAttrs: {
-    version = "29.1";
-    src = pkgs.fetchurl {
-      url = "https://ftp.gnu.org/gnu/emacs/emacs-29.1.tar.xz";
-      sha256 = "sha256-0viBpcwjHi9aA+hvRYSwQ4+D7ddZignSSiG9jQA+LgE=";
-    };
-  });
-
-  # # Create an overlay for Emacs 30 with a different binary name
-  # emacs30 = pkgs.emacs30.overrideAttrs (oldAttrs: {
-  #   postInstall = (oldAttrs.postInstall or "") + ''
-  #     mv $out/bin/emacs $out/bin/emacs30
-  #     mv $out/bin/emacsclient $out/bin/emacsclient30
-  #   '';
-  # });
-
-  # emacs-igc = pkgs.emacs-git.overrideAttrs (oldAttrs: {
-  #   src = inputs.emacs-igc-src;
-  #   buildInputs = oldAttrs.buildInputs ++ [ pkgs.mps ];
-  #   configureFlags = oldAttrs.configureFlags ++ [ "--with-mps=yes" ];
-  #   postInstall = (oldAttrs.postInstall or "") + ''
-  #     mv $out/bin/emacs $out/bin/emacs-igc
-  #     mv $out/bin/emacsclient $out/bin/emacsclient-igc
-  #   '';
-  # });
-
-  # pkgs = nixpkgs.legacyPackages.${system};
 in {
 
   # The below is here to make sure that .desktop files from ~/.nix-profiles/share/applications are accessed everywhere
@@ -107,14 +72,8 @@ in {
       xournalpp
       nodePackages.prettier # Required by apheleia in Emacs to format some file formats like yaml
 
-      # Python related: (This way we don't have to pollute the system python with these things)
       pyright
     ];
-
-    # Or you can explicitly link the binary to a known location
-    # activationScripts.link-pylsp = lib.stringAfter [ "writeBoundary" ] ''
-    #   ln -sfn ${myPythonEnv}/bin/pylsp $HOME/.local/bin/pylsp
-    # '';
 
     sessionVariables = { SHELL = "${pkgs.zsh}/bin/zsh"; };
 
@@ -218,6 +177,7 @@ in {
     firefox = {
       # nativeMessagingHosts = [ "tridactyl" ]; # enables native messenger?
       enable = true;
+      package = unstable.firefox;
       profiles = {
         default = {
           # This makes it use the standard ~/.mozilla/firefox location

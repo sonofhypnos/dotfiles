@@ -6,7 +6,10 @@
 
     nixpkgs-unfree = { url = "github:NixOS/nixpkgs/nixos-24.11"; };
     nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
-    home-manager.url = "github:nix-community/home-manager/release-24.11";
+    home-manager = {
+      url = "github:nix-community/home-manager/release-24.11";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     nur = {
       url = "github:nix-community/NUR";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -20,19 +23,20 @@
   outputs = { self, nixpkgs, nixpkgs-unfree, nixpkgs-unstable, home-manager, nur
     , emacs-igc-src, ... }:
     let
+      system = "x86_64-linux";
+      unstable = import nixpkgs-unstable {
+        inherit system;
+        config.allowUnfree = true;
+      };
       home = home-manager.lib.homeManagerConfiguration {
+        extraSpecialArgs = { inherit unstable; };
         pkgs = import nixpkgs-unfree {
-          system = "x86_64-linux";
-          config = {
-            allowUnfree = true;
-            permittedInsecurePackages = [ "emacs-29.1" ];
-
-            # Additional configurations and overlays if needed
-          };
+          inherit system;
+          config = { allowUnfree = true; };
           overlays = [
             nur.overlays.default
             (final: prev: {
-              firefox = nixpkgs-unstable.legacyPackages.${prev.system}.firefox;
+              # firefox = nixpkgs-unstable.legacyPackages.${prev.system}.firefox;
               ollama = nixpkgs-unstable.legacyPackages.${prev.system}.ollama;
               # Define emacs-igc inside flake.nix
               emacs-igc = prev.emacs30.overrideAttrs (oldAttrs: {
@@ -56,12 +60,6 @@
           ];
 
         };
-        # pkgs = import nixpkgs {
-        #   config = {
-        #     allowUnfree = true;
-        #     # other configurations...
-        #   }; # in customizedPkgs.legacyPackages."x86_64-linux";
-        # };
         modules = [
           ./home.nix
           ./privileged.nix
