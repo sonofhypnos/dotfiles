@@ -52,7 +52,7 @@ in {
       git-lfs # required to run git lfs
       git
       git-filter-repo # useful if you want to remove things from the git history permanently
-      emacs29
+      emacs30
       direnv
       nix-direnv
 
