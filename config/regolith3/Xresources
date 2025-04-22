@@ -105,3 +105,4 @@ Emacs*menu*Foreground: #eeeeec
 ! white
 *.color7: #bfbaac
 *.color15: #fdf6e3
+regolith.look.path: /usr/share/regolith-look/lascaille
