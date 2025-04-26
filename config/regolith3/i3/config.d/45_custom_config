@@ -275,5 +275,3 @@ bindsym $mod+Shift+w exec dm-tool switch-to-greeter
 
 ## Launch // Screenshot region (clipboard) // Ctrl Shift Print ##/
 bindsym Control+Shift+Print exec /home/tassilo/bin/screenshot.sh
-
-exec --no-startup-id xinput disable "ETPS/2 Elantech TrackPoint"
