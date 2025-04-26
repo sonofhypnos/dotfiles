@@ -37,7 +37,7 @@ in {
       i3-cycle-focus # for tabbing through regolith
       zotero
       ollama
-      firefox
+      #firefox somehow updating the nixos version made firefox collide?
       spotify
       elan
       git-secret
