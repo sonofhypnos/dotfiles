@@ -262,7 +262,7 @@ info "Pruning repository"
 
 borg prune \
     --list \
-    --prefix '{hostname}-' \
+    --glob-archives '{hostname}-' \
     --show-rc \
     --keep-daily $KEEP_DAILY \
     --keep-weekly $KEEP_WEEKLY \
