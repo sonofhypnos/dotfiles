@@ -52,9 +52,10 @@ fi
 ```
 
 
-If this is your desktop, once installed you need to run the `enable_services.sh` script with root to enable systemd services. Next you want to figure out how to get the home manager installed for the programs you installed through it (like ripgrep. Longterm you want to move as much as possible of your programs from apt to nix).
 
 ## Setting up desktop:
+
+- [ ] If this is your desktop, once installed you need to run the `enable_services.sh` script with root to enable systemd services. Next you want to figure out how to get the home manager installed for the programs you installed through it (like ripgrep. Longterm you want to move as much as possible of your programs from apt to nix).
 
 Allow sleep in user mode (necessary to enable a scheduled sleep from your i3 config):
 
@@ -69,6 +70,13 @@ To setup your root backup service, compile your home-manager config and then run
 sudo /home/tassilo/.nix-profile/bin/deploy-privileged
 ```
 
+- [ ] For your root backup service to work, you need to store the access details:
+
+``` sh
+op read 'op://Personal/Encryption borg base laptop passphrase/password' | sudo tee /root/.borg_passphrase > /dev/null
+sudo chmod 600 /root/.borg_passphrase
+```
+
 To check when your timers are running next, you can run:
 
 
@@ -81,13 +89,6 @@ or
 systemctl --user list-timers
 ```
 for your user level timers.
-
-crontab:
-Add this:
-
-``` crontab
-0,10,20,30,40,50 * * * * ~/bin/bin/sousveillance.sh
-```
 
 Firefox:
 

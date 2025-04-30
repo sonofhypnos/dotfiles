@@ -5,7 +5,14 @@
 #date           :2024-08-20
 #version        :1.0
 #usage          :./backup_data.sh
-#notes          :
+#notes          : Launching the user gui things from root is fundamentally brittle. For this reason, we are minimizing the gui stuff as much as possible.
+#We could also consider separating into a user and a root backup, where the root
+#one happens less frequently, but the only advantage would be less annoyance
+#with the root one, and if they are out of sync this could complicate things if
+#we restore things. We could also consider trying to eliminate truly all zenity gui things (like asking for break-lock).
+#We could also decide there is no user interaction and we have another user script that reads log files from this script and lets the user know if we should do things like break-lock.
+#For the above reasons we decided to save the password for the borg backup under root privileges. We will put into the documentation that we need to restore this.
+# TODO: create another small test backup repository?
 #bash_version   :5.1.4(1)-release
 #============================================================================
 
@@ -69,8 +76,6 @@ LOG_FILES_TO_COPY=(
     '/var/log/syslog'
     #TODO: implement similar solution for chrome that we implemented for firefox
 )
-
-
 
 # Append log files to exclude patterns
 EXCLUDE_PATTERNS+=("${LOG_FILES_TO_COPY[@]}")
@@ -141,7 +146,7 @@ info() {
 update_last_archive_log() {
     local last_archive=$(borg list --last 1 --format '{time}' "$BORG_REPO")
     if [ -n "$last_archive" ]; then
-        echo "$last_archive" > "$LAST_ARCHIVE_LOG"
+        echo "$last_archive" >"$LAST_ARCHIVE_LOG"
         info "Last archive updated: $last_archive"
     else
         info "Failed to retrieve last archive information"
@@ -193,22 +198,15 @@ last_archive_info=$(get_last_archive_from_log)
 
 display_info_message "Last successful archive:\n$last_archive_info"
 
-# Use zenity for password prompt
-pwd=$(sudo -u $GUI_USER DISPLAY=:0 zenity --password \
-    --title="1Password Authentication")
-
-if [ -z "$pwd" ]; then
-    display_info_message "Password input cancelled. Aborting backup."
-    info "Password input cancelled. Aborting backup."
-    logger "Password input cancelled. Aborting backup."
-    exit 0
-fi
-
-op whoami || eval "$(echo "$pwd" | op signin)"
-
-BORG_PASSPHRASE=$(op read "$BORG_PASSPHRASE_1PASSWORD_PATH")
+BORG_PASSPHRASE=$(cat /root/.borg_passphrase)
 export BORG_PASSPHRASE
 
+if [ -z "$BORG_PASSPHRASE" ]; then
+    display_info_message "Password not found. Aborting backup"
+    info "Password not found. Aborting backup"
+    logger "Password not found. Aborting backup"
+    exit 0
+fi
 
 export BORG_REPO
 
@@ -281,18 +279,18 @@ handle_exit_code() {
     local operation=$2
 
     case $exit_code in
-        0)
-            echo "$operation completed successfully"
-            return 0
-            ;;
-        1)
-            echo "$operation completed with warnings"
-            return 1
-            ;;
-        *)
-            echo "$operation failed with critical errors"
-            return 2
-            ;;
+    0)
+        echo "$operation completed successfully"
+        return 0
+        ;;
+    1)
+        echo "$operation completed with warnings"
+        return 1
+        ;;
+    *)
+        echo "$operation failed with critical errors"
+        return 2
+        ;;
     esac
 }
 
