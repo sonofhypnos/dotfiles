@@ -18,7 +18,7 @@ path_prepend() {
 
 # Function to pass environment variables to sudo
 sudo_exports() {
-    eval sudo $(for x in $_EXPORTS; do printf '%q=%q ' "$x" "${!x}"; done;) "$@"
+    eval sudo $(for x in $_EXPORTS; do printf '%q=%q ' "$x" "${!x}"; done) "$@"
 }
 
 # Magit in floating window for i3
@@ -30,21 +30,21 @@ magit() {
 # APT history functions
 apt_history() {
     case "$1" in
-        install)
-            cat /var/log/dpkg.log | grep 'install '
-            ;;
-        upgrade|remove)
-            cat /var/log/dpkg.log | grep $1
-            ;;
-        rollback)
-            cat /var/log/dpkg.log | grep upgrade | \
-                grep "$2" -A10000000 | \
-                grep "$3" -B10000000 | \
-                awk '{print $4"="$5}'
-            ;;
-        *)
-            cat /var/log/dpkg.log
-            ;;
+    install)
+        cat /var/log/dpkg.log | grep 'install '
+        ;;
+    upgrade | remove)
+        cat /var/log/dpkg.log | grep $1
+        ;;
+    rollback)
+        cat /var/log/dpkg.log | grep upgrade |
+            grep "$2" -A10000000 |
+            grep "$3" -B10000000 |
+            awk '{print $4"="$5}'
+        ;;
+    *)
+        cat /var/log/dpkg.log
+        ;;
     esac
 }
 
@@ -89,4 +89,29 @@ use_openai_key() {
     # Export it as an environment variable
     export OPENAI_API_KEY="$api_key"
     echo "OpenAI API key successfully loaded from authinfo.gpg"
+}
+
+# Compress a single video
+compress_video() {
+    local input_path="$1"
+    local output_path="$2"
+    ffmpeg -i "$input_path" -preset veryfast -vcodec libx264 -crf 23 "$output_path"
+}
+
+# Batch compress all MP4 videos in a directory
+batch_compress_videos() {
+    local input_dir="$1"
+    local output_dir="$2"
+
+    mkdir -p "$output_dir"
+
+    for input_file in "$input_dir"/*.mp4; do
+        [ -e "$input_file" ] || continue # skip if no .mp4 files
+
+        local filename="$(basename "$input_file" .mp4)"
+        local output_file="$output_dir/${filename}_compressed.mp4"
+
+        echo "Compressing: $input_file -> $output_file"
+        compress_video "$input_file" "$output_file"
+    done
 }
