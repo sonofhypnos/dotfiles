@@ -109,6 +109,9 @@ To do this, right-click your library in the left pane and select "Export Library
 
 
 ## todos
+- [ ] create better action logging tools/lifelogging tools for llms to process:
+  - [ ] archive urls with all of the text I read
+  - [ ] enable eye-tracking and use that to extract what text on a page I am reading
 - [ ] Make sure that things are still working without needing to install home-manager? (Or do we want that?)
 - [ ] Make sure install does not do weird things when we haven't installed emacs
 - [ ] By now I know instead of copying and modifying things under /etc/share/regolith/conf.d/ I can just overwrite them in ~/config/regolith2/Xresources. That is what the set_from_xresource keybinds are for. Undoing that would be nice to do before or after we move to regolith 3.0

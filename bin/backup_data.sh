@@ -193,6 +193,10 @@ display_info_message() {
     sudo -u $GUI_USER DISPLAY=:0 zenity --info --text="$message" --title="Backup Information" --width=300
 }
 
+# --- URL History Archiving --- #
+info "Running browser history backup (Firefox + Chrome)..."
+/home/tassilo/.dotfiles/bin/backup-urls.sh || info "Error: backup-urls.sh failed!"
+
 # Get the last archive date from log
 last_archive_info=$(get_last_archive_from_log)
 
