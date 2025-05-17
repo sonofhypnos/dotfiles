@@ -60,6 +60,7 @@ bindsym $mod+Shift+Return exec firefox
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
 bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
+bindsym $mod+space exec --no-startup-id i3-dmenu-desktop
 
 # change focus
 bindsym $mod+j focus left
@@ -100,7 +101,7 @@ bindsym $mod+f fullscreen toggle
 bindsym $mod+t layout toggle split #Same as in regolith
 
 # change focus between tiling / floating windows
-# bindsym $mod+space focus mode_toggle #removed in favor of search
+#bindsym $mod+space focus mode_toggle #removed in favor of search
 
 # focus the parent container
 bindsym $mod+a focus parent
@@ -189,7 +190,6 @@ bar {
 # Imitating regolith settings (this is for settings that are already set in regolith that I want to imitate in my i3 config)
 # =====
 
-bindsym $mod+space exec --no-startup-id i3-dmenu-desktop
 bindsym $mod+Control+m move scratchpad
 bindsym $mod+Control+a scratchpad show
 
@@ -460,3 +460,7 @@ bindsym $mod+Shift+w exec dm-tool switch-to-greeter
 
 ## Launch // Screenshot region (clipboard) // Ctrl Shift Print ##/
 bindsym Control+Shift+Print exec /home/tassilo/bin/screenshot.sh
+
+exec copyq
+exec emacs --daemon; emacsclient -c
+exec zotero
