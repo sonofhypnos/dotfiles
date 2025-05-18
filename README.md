@@ -107,6 +107,14 @@ You also need to install this addon for duplicates if you want to handle them: h
 
 To do this, right-click your library in the left pane and select "Export Library...". In the dialog that appears, select "Better BibTeX" as the export format and check the "Keep updated" checkbox. Then, select the folder where you want to save the exported file (e.g., ~/repos/bibliography) and click "OK".
 
+## Device specific information and considerations regarding backup
+So far, we always backed up all our files including files under `/` like `/var/`. Turns out our backup is getting really complicated though, because doing it like this requires us to run our backup as root, which messes with us being able to get prompted through a gui by our backup. I could write a nicer backup that takes care of this. What seems like a more pleasant solution is to decide that everything under root will have to be configured manually, and while the idea of having logs of what happened after my laptop crashes is pleasant, who in practice is going to investigate this for my desktop laptop anyway. I don't have the time for that either.
+This also makes another thing more uncomplicated. I think it probably makes a lot of sense to separate out our home directory to be on a different disk than the root directory. Last time I put ~/repos on a separate disk, because it was so large, but that was then inconvenient, when we were jumping out of repos in emacs.
+
+### Magic SysRq Keys:
+- On the Thinkpad T460 the magic key just requires you to press Fn. Just Fn+F is going to kill the application with the most memory etc.
+
+[More documentation on the magic key bitmap](https://docs.kernel.org/admin-guide/sysrq.html).
 
 ## todos
 - [ ] create better action logging tools/lifelogging tools for llms to process:
