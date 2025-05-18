@@ -35,9 +35,9 @@
     ~/.local/share/applications:
       glob: true
       path: local/share/applications/*
-    ~/.gnupg/:
-      glob: true
-      path: gnupg/*
+    # ~/.gnupg/: NOTE: this should probably only added like this for my regular user. Probably better to configure via home-manager
+    #   glob: true
+    #   path: gnupg/*
     ~/.ipython/profile_default/:
       glob: true
       path: ipython/profile_default/*
