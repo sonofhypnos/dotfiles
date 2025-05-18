@@ -32,3 +32,6 @@
 [submodule "config/ranger/plugins/ranger-fzf-filter"]
 	path = config/ranger/plugins/ranger-fzf-filter
 	url = https://github.com/MuXiu1997/ranger-fzf-filter
+[submodule "second-laptop"]
+	path = second-laptop
+	url = git@github.com:sonofhypnos/second-laptop.git
