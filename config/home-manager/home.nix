@@ -97,6 +97,8 @@ in {
       URxvt.keysym.C-S-V: perl:clipboard:paste
     '';
 
+    file.".XCompose".source = ./../../XCompose;
+
   };
 
   privileged.enable = true;
