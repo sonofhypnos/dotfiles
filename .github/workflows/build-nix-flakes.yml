@@ -1,0 +1,27 @@
+name: Build Nix flakes
+
+on:
+  push:
+    branches: [ "*" ]
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo with submodules
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+          fetch-depth: 0
+
+      - name: Install Nix
+        uses: cachix/install-nix-action@v22
+
+      - name: Build home-manager flake
+        run: nix build ./config/home-manager#homeConfigurations.tassilo.activationPackage
+
+      - name: Build second-laptop flake
+        run: |
+          cd second-laptop
+          nixos-rebuild build --flake .#nixos
