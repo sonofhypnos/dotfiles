@@ -37,13 +37,13 @@ if [ -f "/home/tassilo/.config/op/plugins.sh" ]; then
     source "/home/tassilo/.config/op/plugins.sh"
 fi
 
-# Configure to use gpg for password handleing
-export GPG_TTY=$(tty)
+# # Configure to use gpg for password handleing NOTE: removed these settings, since they are not compatible with nix
+# export GPG_TTY=$(tty)
 
-export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
-gpgconf --launch gpg-agent
+# export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
+# gpgconf --launch gpg-agent
 
-export SUDO_ASKPASS=/usr/bin/ssh-askpass
+# export SUDO_ASKPASS=/usr/bin/ssh-askpass
 
 # Make sure poetry puts venv in project directory
 POETRY_VIRTUALENVS_IN_PROJECT=true
