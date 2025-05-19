@@ -117,6 +117,7 @@ This also makes another thing more uncomplicated. I think it probably makes a lo
 [More documentation on the magic key bitmap](https://docs.kernel.org/admin-guide/sysrq.html).
 
 ## todos
+- [ ] remove or fix the script where we are automatically trying to install home-manager and nix. They don't work in their current form, because they already expect scripts we added to our /bin to be in the path.
 - [ ] create better action logging tools/lifelogging tools for llms to process:
   - [ ] archive urls with all of the text I read
   - [ ] enable eye-tracking and use that to extract what text on a page I am reading
