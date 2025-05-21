@@ -1,4 +1,4 @@
-#!/bin/bash -       
+#!/usr/bin/env bash
 #title           :mkscript.sh
 #description     :This script will make a header for a bash script.
 #author		 :bgw
@@ -12,7 +12,7 @@
 today=$(date +%Y%m%d)
 div="======================================"
 
-/usr/bin/clear
+clear
 
 _select_title(){
 
@@ -53,15 +53,14 @@ printf "%-16s\n\
 %-16s%-8s\n\
 %-16s%-8s\n\
 %-16s%-8s\n\
-%s\n\n\n" '#!/bin/bash -' '#title' ":$title" '#description' \
+%s\n\n\n" '#!/usr/bin/env bash' '#title' ":$title" '#description' \
 ":${dscrpt}" '#author' ":$name" '#date' ":$today" '#version' \
-":$vnum" '#usage' ":./$title" '#notes' ':' '#bash_version' \
-":${BASH_VERSION}" \#$div${div} > $title
+":$vnum" '#usage' ":./$title" '#notes' ":" \#$div${div} > $title
 
 # Make the file executable.
 chmod +x $title
 
-/usr/bin/clear
+clear
 
 _select_editor(){
 
@@ -75,7 +74,7 @@ _select_editor(){
             ;;
         2) emacs +12 $title &
             ;;
-        *) /usr/bin/clear
+        *) clear
            printf "%s\n%s\n\n" "I did not understand your selection." \
                "Press <Ctrl-c> to quit."
            _select_editor
