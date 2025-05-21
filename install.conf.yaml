@@ -13,7 +13,7 @@
     ~/.gitconfig:
     ~/.ideavimrc:
     ~/.XCompose:
-    ~/authinfo.gpg: authinfo.gpg
+    ~/.authinfo.gpg: authinfo.gpg
     ~/.tmux.conf:
     ~/.ghc/:
       glob: true
