@@ -464,3 +464,6 @@ bindsym Control+Shift+Print exec /home/tassilo/bin/screenshot.sh
 exec copyq
 exec emacs --daemon; emacsclient -c
 exec zotero
+
+default_border pixel 1
+default_floating_border pixel 1
