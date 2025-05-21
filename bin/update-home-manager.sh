@@ -1,4 +1,4 @@
-#!/bin/bash -
+#!/usr/bin/env bash
 #title          :update-home-manager.sh
 #description    :Updates home-manager if home-manager exists on the system
 #author         :Tassilo Neubauer

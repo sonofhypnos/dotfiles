@@ -1,4 +1,4 @@
-#!/bin/bash -   
+#!/usr/bin/env bash   
 #title          :logwatch-notify.sh
 #description    :Notify me of problems on my system
 #author         :Tassilo Neubauer

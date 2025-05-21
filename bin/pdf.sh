@@ -1,4 +1,4 @@
-#!/bin/bash -
+#!/usr/bin/env bash
 #title          :pdf.sh
 #description    :open pdf in emacs and do other interesting things
 #author         :Tassilo Neubauer

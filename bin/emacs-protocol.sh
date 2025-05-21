@@ -1,4 +1,4 @@
-#!/bin/bash -   
+#!/usr/bin/env bash   
 #title          :emacs-protocol.sh
 #description    :executable that is fed emacs-protocol
 #author         :Tassilo Neubauer

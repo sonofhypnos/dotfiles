@@ -1,4 +1,4 @@
-#!/bin/bash -   
+#!/usr/bin/env bash   
 #title          :safe_force_push.sh
 #description    :Fix force pushing
 #author         :Tassilo Neubauer

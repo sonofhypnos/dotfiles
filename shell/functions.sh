@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # functions.sh - Shell-agnostic functions that work in both bash and zsh
 
 # PATH management functions

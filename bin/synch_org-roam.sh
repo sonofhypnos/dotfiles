@@ -1,4 +1,4 @@
-#!/bin/bash -   
+#!/usr/bin/env bash   
 #title          :synch_org-roam.sh
 #description    :push org-roam stuff to remote
 #author         :Tassilo Neubauer

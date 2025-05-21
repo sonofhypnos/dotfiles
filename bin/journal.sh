@@ -1,4 +1,4 @@
-#!/bin/bash -   
+#!/usr/bin/env bash   
 #title          :journal.sh
 #description    :Capture Journal Entry in Emacs
 #author         :Tassilo Neubauer

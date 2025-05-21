@@ -1,4 +1,4 @@
-#!/bin/env bash
+#!/usr/bin/env bash
 
 # https://stackoverflow.com/questions/7998302/graphing-a-processs-memory-usage
 # https://gist.github.com/nicolasazrak/32d68ed6c845a095f75f037ecc2f0436

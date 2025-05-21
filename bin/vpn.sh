@@ -1,4 +1,4 @@
-#!/bin/bash -   
+#!/usr/bin/env bash   
 #title          :vpn.sh 
 #description    :vpn    
 #author         :Tassilo Neubauer

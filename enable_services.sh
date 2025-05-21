@@ -1,4 +1,4 @@
-#!/bin/bash -
+#!/usr/bin/env bash
 #title          :enable_services.sh
 #description    :Enable systemd services from dotfiles
 #author         :Tassilo Neubauer

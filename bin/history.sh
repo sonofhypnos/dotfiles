@@ -1,4 +1,4 @@
-#!/bin/bash -   
+#!/usr/bin/env bash   
 #title          :history.sh
 #description    :copy over history files
 #author         :Tassilo Neubauer

@@ -1,4 +1,4 @@
-#!/bin/bash -   
+#!/usr/bin/env bash   
 #title          :github-clone.sh
 #description    :Use git clone with ssh instead of http address. Use 
 #author         :Tassilo Neubauer

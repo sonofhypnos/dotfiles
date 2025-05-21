@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # paths.sh - PATH management for both shells
 
 # Basic system paths

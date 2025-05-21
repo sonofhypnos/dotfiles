@@ -1,4 +1,4 @@
-#!/bin/bash -   
+#!/usr/bin/env bash   
 #title          :screenshot.sh
 #description    :make screenshots
 #author         :Tassilo Neubauer

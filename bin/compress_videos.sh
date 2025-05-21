@@ -1,4 +1,4 @@
-#!/bin/bash -
+#!/usr/bin/env bash
 #title          :compress_videos.sh
 #description    :Compress videos from phone and move them back to phone
 #author         :Tassilo Neubauer

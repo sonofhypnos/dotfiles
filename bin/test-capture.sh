@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env sh
 
 # launch emacsclient with special frame name
 # TODO Figure out why sleep is necessary here?

@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # general.sh - Common settings for both bash and zsh
 
 # Set default editor

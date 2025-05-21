@@ -1,4 +1,4 @@
-#!/bin/bash -   
+#!/usr/bin/env bash   
 #title          :save_ssh_keys.sh
 #description    :Saves my ssh keys to 1password
 #author         :Tassilo Neubauer

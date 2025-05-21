@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env sh
 # lazy_loaders.sh - Lazy loading functions for heavy tools
 # These work in both bash and zsh
 

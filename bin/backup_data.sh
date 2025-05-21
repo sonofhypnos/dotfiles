@@ -1,4 +1,4 @@
-#!/bin/bash -
+#!/usr/bin/env bash
 #title          :backup_data.sh
 #description    :Backup data from laptop to pc
 #author         :Tassilo Neubauer

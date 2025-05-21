@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/usr/bin/env zsh
 # zsh_specific.sh - Settings that only apply to zsh
 
 # Handle Tramp mode for Emacs to avoid prompt issues

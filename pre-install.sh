@@ -20,7 +20,7 @@
 #else
 #  echo 'Already using zsh'
 #fi
-#!/bin/bash
+#!/usr/bin/env bash
 
 # Exit on error
 set -e

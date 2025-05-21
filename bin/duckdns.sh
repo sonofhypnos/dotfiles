@@ -1,4 +1,4 @@
-#!/bin/bash -   
+#!/usr/bin/env bash   
 #title          :duckdns.sh
 #description    :New Duck DNS
 #author         :Tassilo Neubauer

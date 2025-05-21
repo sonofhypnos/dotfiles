@@ -1,4 +1,4 @@
-#!/bin/bash -
+#!/usr/bin/env bash
 #title          :enable_user_services.sh
 #description    :Enables user services
 #author         :Tassilo Neubauer

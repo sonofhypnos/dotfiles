@@ -1,4 +1,4 @@
-#!/bin/bash -
+#!/usr/bin/env bash
 #title          :init_conda.sh
 #description    :Initialize conda in the current shell
 #author         :Tassilo Neubauer

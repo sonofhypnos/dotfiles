@@ -1,4 +1,4 @@
-#!/bin/bash -   
+#!/usr/bin/env bash   
 #title          :evening_routine.sh
 #description    :Starts evening routine script
 #author         :Tassilo Neubauer

@@ -1,4 +1,4 @@
-#!/bin/python3 -
+#!/usr/bin/env python3
 # title          :unix_time.sh
 # description    :enter iso-date to unix time
 # author         :Tassilo Neubauer

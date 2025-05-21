@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # Extract the URL from the firefox:// protocol
 raw_url="${1#firefox://}"

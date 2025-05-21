@@ -1,4 +1,4 @@
-#!/bin/bash -
+#!/usr/bin/env bash
 #title          :backup-urls.sh
 #description    :Backs up all the urls I visit through firefox and chrome.
 #Should be updated in the future when we have more file storage to also archive
@@ -65,7 +65,7 @@ git add .
 git commit -m "Updated URLs from Chrome and Firefox"
 
 # NOTE: In a second step we would also like to save all of the file data, but for now we are just going to save the urls, so they are not lost to the void
-#!/bin/bash
+#!/usr/bin/env bash
 # Simplified link archiving script based on Gwern's `linkArchive.sh`
 # This version saves a deduplicated, timestamped archive of URLs as HTML or PDF
 # Adapt to your folder structure and tooling setup where noted

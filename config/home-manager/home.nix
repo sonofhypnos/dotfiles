@@ -245,7 +245,7 @@ in {
       enable = true;
       # enableCompletion=true;
       initExtra = ''
-        #!/bin/bash
+        #!/usr/bin/env bash
         # .bashrc - Bash shell configuration file
 
         # Source common functions first (needed for path management)

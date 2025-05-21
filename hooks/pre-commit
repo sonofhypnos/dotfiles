@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 unwanted_dir="${HOME}/.dotfiles/config/op"
 
 if [ ! -e "$unwanted_dir" ]; then

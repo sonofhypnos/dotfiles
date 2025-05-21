@@ -1,4 +1,4 @@
-#!/bin/bash -   
+#!/usr/bin/env bash   
 #title          :profile.sh
 #description    :profile python code
 #author         :Tassilo Neubauer

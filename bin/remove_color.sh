@@ -1,4 +1,4 @@
-#!/bin/bash -   
+#!/usr/bin/env bash   
 #title          :remove_color.sh
 #description    :removes color from output
 #author         :Tassilo Neubauer

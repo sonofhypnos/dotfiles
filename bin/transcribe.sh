@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/usr/bin/env zsh
 #title          :transcribe.sh
 #description    :Transcribes mp4 and mp3 files.
 #author         :Tassilo Neubauer

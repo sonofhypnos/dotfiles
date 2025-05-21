@@ -1,4 +1,4 @@
-#!/bin/bash -   
+#!/usr/bin/env bash   
 #title          :compile-config.sh
 #description    :Compiles config and removes todo from readme.org. Takes the file of the configuration as input. Default is ~/.doom.d
 #author         :Tassilo Neubauer

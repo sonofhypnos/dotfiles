@@ -1,4 +1,4 @@
-#!/bin/bash -   
+#!/usr/bin/env bash   
 #title          :sleepnag.sh
 #description    :Remind me that sleep is important. Maybe enable auto-shutdown as well.
 #author         :Tassilo Neubauer

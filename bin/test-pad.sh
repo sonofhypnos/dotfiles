@@ -1,4 +1,4 @@
-#!/bin/env sh
+#!/usr/bin/env sh
 
 # launch emacsclient with special frame name
 /usr/local/bin/emacs -n -c  --frame-parameters "((name . \"_emacs scratchpad_\"))" "$@"

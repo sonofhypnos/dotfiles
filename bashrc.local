@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # bash_specific.sh - Settings that only apply to bash
 
 # If not running interactively, don't do anything

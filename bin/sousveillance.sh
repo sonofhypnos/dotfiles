@@ -1,4 +1,4 @@
-#!/bin/bash -
+#!/usr/bin/env bash
 #title          :sousveillance.sh
 #description    :Monitor my laptop behaviour
 #author         :Gwern Branwen
