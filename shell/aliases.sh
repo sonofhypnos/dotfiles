@@ -40,8 +40,8 @@ alias int="cd ~/Dropbox/DokumenteTassilo/intelligenceAmplification/reading/; ran
 
 #miscelanous or recently added.
 alias vpn="sudo -A $HOME/vpnstuff"
-alias htop="sudo -A htop"
-alias sudo='sudo -A'
+#alias htop="sudo -A htop"
+#alias sudo='sudo -A' #We added this in order to require passwords to go via askpass, which would be useful down the line, if we wanted to send all our keybinds except from askpass and 1password to llms.
 alias abox="archivebox"
 gitdownload() {
     curl -L $(echo "$1" | sed -r 's/https:\/\/github\.com\/(.*)$/git@github.com:\1\/archive\/master.tar.gz/') | tar zxf -
