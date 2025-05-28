@@ -4,6 +4,7 @@ let
   doomDir = ".doom.d";
   envFile = "${doomDir}/emacs-hm-env.el";
   firefoxAddons = pkgs.nur.repos.rycee.firefox-addons;
+  imports = [ ./1password.nix ];
 in {
 
   # The below is here to make sure that .desktop files from ~/.nix-profiles/share/applications are accessed everywhere
@@ -316,6 +317,7 @@ in {
       syntaxHighlighting.enable = true;
       enableCompletion = true;
       initExtra = ''
+        SSH_AUTH_SOCK=~/.1password/agent.sock
         # Home manager managed configuration
 
         # Source shell files for consistent configuration
@@ -370,6 +372,15 @@ in {
           sha256 = "149zh2rm59blr2q458a5irkfh82y3dwdich60s9670kl3cl5h2m1";
         };
       }];
+    };
+    _1password.enable = true;
+    _1password-gui = {
+      enable = true;
+
+      # Certain features, including CLI integration and system authentication support,
+      # require enabling PolKit integration on some desktop environments (e.g. Plasma).
+      # (Possibly the below also helps when I want to have my passwords saved?)
+      polkitPolicyOwners = [ "tassilo" ];
     };
   };
 
