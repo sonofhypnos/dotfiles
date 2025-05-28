@@ -43,6 +43,7 @@ in {
       nixfmt-classic # For syntax for highlighting in nix folders
       trash-cli
       discord
+      google-chrome
 
       i3-cycle-focus # for tabbing through regolith
       zotero
@@ -53,7 +54,7 @@ in {
       git-secret
       stripe-cli # cli for stripe the payment system
       jq # cli tool for handeling json
-      meme-suite
+      meme-suite # biology things
       ripgrep
       zathura
       rxvt-unicode # Terminal
@@ -77,7 +78,6 @@ in {
       #androidenv.androidPkgs_9_0.platform-tools (got deprecated when switching to 24.11 and wasn't using it, so not fixing)
       zsh
       tmux
-      elasticsearch
       #okular
       xournalpp
       nodePackages.prettier # Required by apheleia in Emacs to format some file formats like yaml

@@ -46,6 +46,11 @@
                 "steam-original"
                 "steam-unwrapped"
                 "steam-run"
+                "meme-suite"
+                "copilot.vim"
+                "video-downloadhelper"
+                "tampermonkey"
+                "onepassword-password-manager"
               ];
           };
 
@@ -55,6 +60,8 @@
               # firefox = nixpkgs-unstable.legacyPackages.${prev.system}.firefox;
               ollama = nixpkgs-unstable.legacyPackages.${prev.system}.ollama;
               codex = nixpkgs-unstable.legacyPackages.${prev.system}.codex;
+              google-chrome =
+                nixpkgs-unstable.legacyPackages.${prev.system}.google-chrome;
               # Define emacs-igc inside flake.nix
               emacs-igc = prev.emacs30.overrideAttrs (oldAttrs: {
                 pname = "emacs-igc";
