@@ -33,7 +33,15 @@ in {
   # };
 
   home = {
+    username = "tassilo";
+    homeDirectory = "/home/tassilo";
+    stateVersion="25.05";
+
     packages = with pkgs; [
+
+      _1password-gui
+      _1password
+      _1password-cli
 
       i3-cycle-focus # for tabbing through regolith
       zotero
@@ -69,7 +77,7 @@ in {
       zsh
       tmux
       elasticsearch
-      okular
+      #okular
       xournalpp
       nodePackages.prettier # Required by apheleia in Emacs to format some file formats like yaml
 
@@ -130,6 +138,7 @@ in {
     '';
 
     file.".XCompose".source = ./../../XCompose;
+    file.".gitconfig".source = ./../../gitconfig;
 
   };
 
@@ -372,15 +381,6 @@ in {
           sha256 = "149zh2rm59blr2q458a5irkfh82y3dwdich60s9670kl3cl5h2m1";
         };
       }];
-    };
-    _1password.enable = true;
-    _1password-gui = {
-      enable = true;
-
-      # Certain features, including CLI integration and system authentication support,
-      # require enabling PolKit integration on some desktop environments (e.g. Plasma).
-      # (Possibly the below also helps when I want to have my passwords saved?)
-      polkitPolicyOwners = [ "tassilo" ];
     };
   };
 
