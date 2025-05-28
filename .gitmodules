@@ -35,3 +35,6 @@
 [submodule "second-laptop"]
 	path = second-laptop
 	url = git@github.com:sonofhypnos/second-laptop.git
+[submodule "config/emacs"]
+	path = config/emacs
+	url = https://github.com/doomemacs/doomemacs
