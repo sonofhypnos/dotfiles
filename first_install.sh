@@ -53,10 +53,12 @@ if [ -d "$SHARE" ] && [ ! -d "$TRI" ]; then
   fi
 fi
 
+home_manager_dir="$HOME/.dotfiles/config/home-manager"
+
 if confirm "Do you want to recompile the home-manager configuration?"; then
-    [[ -e $home_dir ]] && cd "$home_dir" && {
+    [[ -e $home_manager_dir ]] && cd "$home_manager_dir" && {
       echo "Running: home-manager switch"
-      home-manager switch -b backup --flake .#tassilo --show-trace 2>&1
+      home-manager --extra-experimental-features "nix-command flakes" switch -b backup --flake .#tassilo --show-trace 2>&1
     }
 
     if [ -x "$HOME/.config/emacs/bin/doom" ]; then
