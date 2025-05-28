@@ -37,24 +37,24 @@ mode "$layout_mode" {
 
 #Assign variables for special Applications
 set $main_launcher Main Launcher: main gathert[o]wn [f]ocusmate [w]hatsapp [g]mail [k]eep [c]alendar [d]iscord gpt[4] [a]nki [r]eminder [p]rediction [t]odoist t[i]metrack
-set $fatebook google-chrome-stable --app=https://fatebook.io/
-set $gathertown google-chrome-stable --app=https://app.gather.town/app/Yhi4XYj0zFNWuUNv/EA%20coworking%20and%20lounge
-set $whatsapp google-chrome-stable --app=https://web.whatsapp.com
-set $gmail google-chrome-stable --app=https://mail.google.com
-set $keep google-chrome-stable --app=https://keep.google.com
-set $calendar google-chrome-stable --app=https://calendar.google.com
-set $focusmate google-chrome-stable --app=https://focusmate.com
-set $gpt google-chrome-stable --app=https://chatgpt.com/?model=gpt-4o
-set $perp google-chrome-stable --app=https://www.perplexity.ai/
-#set $claude google-chrome-stable  --user-data-dir="/home/tassilo/.config/google-chrome/Profile 2" --no-extensions --app=https://claude.ai
-set $claude google-chrome-stable --app=https://claude.ai
+set $fatebook google-chrome-stable --no-sandbox --app=https://fatebook.io/
+set $gathertown google-chrome-stable --no-sandbox --app=https://app.gather.town/app/Yhi4XYj0zFNWuUNv/EA%20coworking%20and%20lounge
+set $whatsapp google-chrome-stable --no-sandbox --app=https://web.whatsapp.com
+set $gmail google-chrome-stable --no-sandbox --app=https://mail.google.com
+set $keep google-chrome-stable --no-sandbox --app=https://keep.google.com
+set $calendar google-chrome-stable --no-sandbox --app=https://calendar.google.com
+set $focusmate google-chrome-stable --no-sandbox --app=https://focusmate.com
+set $gpt google-chrome-stable --no-sandbox --app=https://chatgpt.com/?model=gpt-4o
+set $perp google-chrome-stable --no-sandbox --app=https://www.perplexity.ai/
+#set $claude google-chrome-stable --no-sandbox  --user-data-dir="/home/tassilo/.config/google-chrome/Profile 2" --no-extensions --app=https://claude.ai
+set $claude google-chrome-stable --no-sandbox --app=https://claude.ai
 
 
-set $gpt3 google-chrome-stable --app=https://chatgpt.com/
-set $sitzplatz google-chrome-stable --app=https://raumbuchung.bibliothek.kit.edu/sitzplatzreservierung/day.php?year=2021&month=7&day=1&area=20&room=140
-set $teams google-chrome-stable --app=https://teams.microsoft.com
-set $todoist google-chrome-stable --app=https://todoist.com
-set $timetrack google-chrome-stable --app=https://app.atimelogger.pro/reports
+set $gpt3 google-chrome-stable --no-sandbox --app=https://chatgpt.com/
+set $sitzplatz google-chrome-stable --no-sandbox --app=https://raumbuchung.bibliothek.kit.edu/sitzplatzreservierung/day.php?year=2021&month=7&day=1&area=20&room=140
+set $teams google-chrome-stable --no-sandbox --app=https://teams.microsoft.com
+set $todoist google-chrome-stable --no-sandbox --app=https://todoist.com
+set $timetrack google-chrome-stable --no-sandbox --app=https://app.atimelogger.pro/reports
 set $discord discord
 set $telegram telegram
 set $signal signal
@@ -220,8 +220,8 @@ bindsym Control+$mod+$alt+r mode "$r_mode"
 mode "$r_mode" {
 	bindsym Escape mode "default"
 	bindsym Return mode "default"
-	bindsym s mode "default" exec google-chrome-stable --app=https://public.senfcall.de/ka-rationality
-	bindsym b mode "default" exec google-chrome-stable --app=https://bbb23.senfcall.de/html5client/join?sessionToken=1rjjiv1kgifdse8k
+	bindsym s mode "default" exec google-chrome-stable --no-sandbox --app=https://public.senfcall.de/ka-rationality
+	bindsym b mode "default" exec google-chrome-stable --no-sandbox --app=https://bbb23.senfcall.de/html5client/join?sessionToken=1rjjiv1kgifdse8k
 }
 
 
