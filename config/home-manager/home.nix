@@ -4,7 +4,6 @@ let
   doomDir = ".doom.d";
   envFile = "${doomDir}/emacs-hm-env.el";
   firefoxAddons = pkgs.nur.repos.rycee.firefox-addons;
-  imports = [ ./1password.nix ];
   onePassPath= "~/.1password/agent.sock";
 in {
 
@@ -39,11 +38,6 @@ in {
     stateVersion="25.05";
 
     packages = with pkgs; [
-
-      _1password-gui
-      _1password
-      _1password-cli
-
       i3-cycle-focus # for tabbing through regolith
       zotero
       ollama
@@ -333,7 +327,7 @@ in {
       syntaxHighlighting.enable = true;
       enableCompletion = true;
       initExtra = ''
-        SSH_AUTH_SOCK=~/.1password/agent.sock
+        SSH_AUTH_SOCK=${onePassPath}
         # Home manager managed configuration
 
         # Source shell files for consistent configuration

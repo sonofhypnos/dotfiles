@@ -38,9 +38,6 @@
             (final: prev: {
               # firefox = nixpkgs-unstable.legacyPackages.${prev.system}.firefox;
               ollama = nixpkgs-unstable.legacyPackages.${prev.system}.ollama;
-	      _1password-gui = nixpkgs-unstable.legacyPackages.${prev.system}._1password-gui;
-	      _1password = nixpkgs-unstable.legacyPackages.${prev.system}._1password-gui;
-	      _1password-cli = nixpkgs-unstable.legacyPackages.${prev.system}._1password-gui;
               # Define emacs-igc inside flake.nix
               emacs-igc = prev.emacs30.overrideAttrs (oldAttrs: {
                 pname = "emacs-igc";
