@@ -265,7 +265,7 @@ in {
             # Display tabs even in fullscreen mode:
             "browser.fullscreen.autohide" = false;
           };
-          extensions =
+          extensions.packages =
             with firefoxAddons; [ # https://discourse.nixos.org/t/firefox-extensions-with-home-manager/34108/4
               video-downloadhelper
               tampermonkey
