@@ -38,6 +38,14 @@ in {
     stateVersion="25.05";
 
     packages = with pkgs; [
+      anki
+      codex
+      nixfmt-classic #For syntax for highlighting in nix folders
+      trash-cli
+      discord
+
+
+
       i3-cycle-focus # for tabbing through regolith
       zotero
       ollama
