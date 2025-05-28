@@ -5,6 +5,7 @@ let
   envFile = "${doomDir}/emacs-hm-env.el";
   firefoxAddons = pkgs.nur.repos.rycee.firefox-addons;
   imports = [ ./1password.nix ];
+  onePassPath= "~/.1password/agent.sock";
 in {
 
   # The below is here to make sure that .desktop files from ~/.nix-profiles/share/applications are accessed everywhere
@@ -154,6 +155,12 @@ in {
     };
   };
   programs = {
+    ssh = {
+    enable=true;
+    extraConfig=''
+    IdentityAgent ${onePassPath}
+    '';
+    };
     fzf.enable = true;
     neovim = {
       enable = true;
