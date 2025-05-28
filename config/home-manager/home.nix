@@ -4,7 +4,7 @@ let
   doomDir = ".doom.d";
   envFile = "${doomDir}/emacs-hm-env.el";
   firefoxAddons = pkgs.nur.repos.rycee.firefox-addons;
-  onePassPath= "~/.1password/agent.sock";
+  onePassPath = "~/.1password/agent.sock";
 in {
 
   # The below is here to make sure that .desktop files from ~/.nix-profiles/share/applications are accessed everywhere
@@ -35,16 +35,14 @@ in {
   home = {
     username = "tassilo";
     homeDirectory = "/home/tassilo";
-    stateVersion="25.05";
+    stateVersion = "25.05";
 
     packages = with pkgs; [
       anki
       codex
-      nixfmt-classic #For syntax for highlighting in nix folders
+      nixfmt-classic # For syntax for highlighting in nix folders
       trash-cli
       discord
-
-
 
       i3-cycle-focus # for tabbing through regolith
       zotero
@@ -158,10 +156,10 @@ in {
   };
   programs = {
     ssh = {
-    enable=true;
-    extraConfig=''
-    IdentityAgent ${onePassPath}
-    '';
+      enable = true;
+      extraConfig = ''
+        IdentityAgent ${onePassPath}
+      '';
     };
     fzf.enable = true;
     neovim = {

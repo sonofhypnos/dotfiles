@@ -32,7 +32,23 @@
         extraSpecialArgs = { inherit unstable; };
         pkgs = import nixpkgs-unfree {
           inherit system;
-          config = { allowUnfree = true; };
+          config = {
+            allowUnfreePredicate = pkg:
+              builtins.elem (nixpkgs.lib.getName pkg) [
+                "spotify"
+                "1password-gui"
+                "1password"
+                "1password-cli"
+                "discord"
+                "dropbox"
+                "google-chrome"
+                "steam"
+                "steam-original"
+                "steam-unwrapped"
+                "steam-run"
+              ];
+          };
+
           overlays = [
             nur.overlays.default
             (final: prev: {
@@ -61,10 +77,7 @@
           ];
 
         };
-        modules = [
-          ./home.nix
-          ./privileged.nix
-        ];
+        modules = [ ./home.nix ./privileged.nix ];
       };
     in { homeConfigurations = { tassilo = home; }; };
 }
