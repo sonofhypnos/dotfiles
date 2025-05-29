@@ -220,7 +220,9 @@ in {
       ];
     };
 
-    home-manager.enable = true;
+    # NOTE: DO NOT add: "home-manager.enable = true;", because then we will add
+    # a new version of home-manager that will conflict with the conflicting one
+    # we need to have already installed to compile this config.
     git.lfs.enable = true;
 
     firefox = {
