@@ -49,6 +49,12 @@ in {
     stateVersion = "25.05";
 
     packages = with pkgs; [
+      #Sandboxed applications that initially didn't work
+      discord
+      google-chrome
+      signal-desktop
+      steam
+
       nemo
       copyq
       anki
