@@ -8,5 +8,5 @@
 #notes          :       
 #bash_version   :5.1.16(1)-release
 #============================================================================
-/usr/local/bin/emacsclient -n -c  --frame-parameters "((name . \"_emacs scratchpad_\"))" "$@"
+emacsclient -n -c  --frame-parameters "((name . \"_emacs scratchpad_\"))" "$@"
 i3-msg '[title="_emacs scratchpad_"] scratchpad show'
