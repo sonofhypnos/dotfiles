@@ -95,10 +95,10 @@ Set .dotfiles/bin/pdf.sh as the default application for pdfs.
 Also enable org-protocol (refer to your notes for how to setup or debug org-protocol).
 
 ### Dropbox
-- We are not using 
 
 ### Zotero:
 
+- [ ] Fix my entire backup setup (In my new setup, I will only backup user owned things.)
 - [ ] First you need to manually install two addons below. Download their files (use wget, since firefox will try to install them by default) and then go to "Tools>plugins" in Zotero to install them. 
  - The better bibtex addon. Zotero will otherwise something is wrong if you try to export things in the better bibtex format. 
     Download the latest version from the release from [the github repository](https://github.com/retorquere/zotero-better-bibtex):
