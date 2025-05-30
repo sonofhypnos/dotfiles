@@ -149,8 +149,15 @@ in {
       URxvt.keysym.C-S-V: perl:clipboard:paste
     '';
 
-    file.".XCompose".source = ./../../nix/XCompose;
-    file.".gitconfig".source = ./../../nix/gitconfig;
+    file = {
+      ".XCompose".source = ../../nix/XCompose;
+      ".gitconfig".source = ../../nix/gitconfig;
+      ".config" = {
+        source = ../../nix/.config;
+        recursive = true;
+      };
+
+    };
 
   };
 

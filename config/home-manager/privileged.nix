@@ -1,9 +1,11 @@
 { config, pkgs, lib, ... }:
 
 let
+  nixPath = ../../nix;
+  systemdPath = "${nixPath}/.config/systemd/user";
   # Paths to your correct service and timer
-  borgServiceFile = ../systemd/user/borg.service;
-  borgTimerFile = ../systemd/user/borg.timer;
+  borgServiceFile = "${systemdPath}/borg.service";
+  borgTimerFile = "${systemdPath}/borg.timer";
 
   deployPrivilegedPackage = pkgs.writeScriptBin "deploy-privileged" ''
     #!${pkgs.bash}/bin/bash
