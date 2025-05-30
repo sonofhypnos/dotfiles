@@ -55,6 +55,7 @@ fi
 
 ## Setting up desktop:
 
+- [ ] You will have to remove the ~/.config/systemd directory created by home-manager once, so that we can first write the files from dotbot there, before we proceed to add the ones from home-manager
 - [ ] If this is your desktop, once installed you need to run the `enable_services.sh` script with root to enable systemd services. Next you want to figure out how to get the home manager installed for the programs you installed through it (like ripgrep. Longterm you want to move as much as possible of your programs from apt to nix).
 
 Allow sleep in user mode (necessary to enable a scheduled sleep from your i3 config):
@@ -90,12 +91,15 @@ systemctl --user list-timers
 ```
 for your user level timers.
 
-Firefox:
+### Firefox:
 
 Set .dotfiles/bin/pdf.sh as the default application for pdfs.
 Also enable org-protocol (refer to your notes for how to setup or debug org-protocol).
 
-Zotero:
+### Dropbox
+- We are not using 
+
+### Zotero:
 
 - [ ] First you need to manually install two addons below. Download their files (use wget, since firefox will try to install them by default) and then go to "Tools>plugins" in Zotero to install them. 
  - The better bibtex addon. Zotero will otherwise something is wrong if you try to export things in the better bibtex format. 
