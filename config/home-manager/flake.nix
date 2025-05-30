@@ -24,44 +24,45 @@
     , emacs-igc-src, ... }:
     let
       system = "x86_64-linux";
+      unfreePredicate = pkg:
+        builtins.elem (nixpkgs.lib.getName pkg) [
+          "spotify"
+          "1password-gui"
+          "1password"
+          "1password-cli"
+          "discord"
+          "dropbox"
+          "google-chrome"
+          "steam"
+          "steam-original"
+          "steam-unwrapped"
+          "steam-run"
+          "meme-suite"
+          "copilot.vim"
+          "video-downloadhelper"
+          "tampermonkey"
+          "onepassword-password-manager"
+        ];
       unstable = import nixpkgs-unstable {
         inherit system;
-        config.allowUnfree = true;
-      };
+        config.allowUnfreePredicate = unfreePredicate;
+
+      }; # By calling import on the package set, we get the raw package set, so
+      # when we call it later, we don't do
+      # "unstable.legacyPackages.${prev.system}.google-chrome", to get
+      # google-chrome, we just do "unstable.google-chrome"
       home = home-manager.lib.homeManagerConfiguration {
         extraSpecialArgs = { inherit unstable; };
         pkgs = import nixpkgs-unfree {
           inherit system;
-          config = {
-            allowUnfreePredicate = pkg:
-              builtins.elem (nixpkgs.lib.getName pkg) [
-                "spotify"
-                "1password-gui"
-                "1password"
-                "1password-cli"
-                "discord"
-                "dropbox"
-                "google-chrome"
-                "steam"
-                "steam-original"
-                "steam-unwrapped"
-                "steam-run"
-                "meme-suite"
-                "copilot.vim"
-                "video-downloadhelper"
-                "tampermonkey"
-                "onepassword-password-manager"
-              ];
-          };
-
+          config.allowUnfreePredicate = unfreePredicate;
           overlays = [
             nur.overlays.default
             (final: prev: {
               # firefox = nixpkgs-unstable.legacyPackages.${prev.system}.firefox;
-              ollama = nixpkgs-unstable.legacyPackages.${prev.system}.ollama;
-              codex = nixpkgs-unstable.legacyPackages.${prev.system}.codex;
-              google-chrome =
-                nixpkgs-unstable.legacyPackages.${prev.system}.google-chrome;
+              ollama = unstable.ollama;
+              codex = unstable.codex;
+              google-chrome = unstable.google-chrome;
               # Define emacs-igc inside flake.nix
               emacs-igc = prev.emacs30.overrideAttrs (oldAttrs: {
                 pname = "emacs-igc";
