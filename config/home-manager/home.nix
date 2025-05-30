@@ -38,6 +38,7 @@ in {
     stateVersion = "25.05";
 
     packages = with pkgs; [
+      nemo
       copyq
       anki
       codex
