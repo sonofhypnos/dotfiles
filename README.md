@@ -96,16 +96,15 @@ Set .dotfiles/bin/pdf.sh as the default application for pdfs.
 Also enable org-protocol (refer to your notes for how to setup or debug org-protocol).
 
 Zotero:
-Make sure you configure autoexport for your zotero library entries. We are currently storing them under ~/repos/bibliography/zotLib.bib. You have to manually set the auto-export folder.
 
-Next you need to manually install the better bibtex addon. Zotero will otherwise something is wrong if you try to export things in the better bibtex format. 
-Download the latest version from the release from the github repository and make sure that the version of bibtex is compatible with your zotero version. (You also need to pay attention to that with all the other addons)
-You also need to install this addon for duplicates if you want to handle them: https://github.com/ChenglongMa/zoplicate/releases/tag/3.0.8 
+- [ ] First you need to manually install two addons below. Download their files (use wget, since firefox will try to install them by default) and then go to "Tools>plugins" in Zotero to install them. 
+ - The better bibtex addon. Zotero will otherwise something is wrong if you try to export things in the better bibtex format. 
+    Download the latest version from the release from [the github repository](https://github.com/retorquere/zotero-better-bibtex):
 
+  - this addon for duplicates if you want to handle them: https://github.com/ChenglongMa/zoplicate/releases/tag/3.0.8 
+- [ ] and make sure that the versions of the addons are compatible with your zotero version. 
 
-
-
-To do this, right-click your library in the left pane and select "Export Library...". In the dialog that appears, select "Better BibTeX" as the export format and check the "Keep updated" checkbox. Then, select the folder where you want to save the exported file (e.g., ~/repos/bibliography) and click "OK".
+- [ ] Configure autoexport for your zotero library entries. Go to "File>Export Library ...". Check the box for "keep updated". This option will not exist if you have not added the better bibtex addon! We are currently storing them under `~/repos/bibliography/My Library.bib`. You have to manually set the auto-export folder.
 
 ## Device specific information and considerations regarding backup
 So far, we always backed up all our files including files under `/` like `/var/`. Turns out our backup is getting really complicated though, because doing it like this requires us to run our backup as root, which messes with us being able to get prompted through a gui by our backup. I could write a nicer backup that takes care of this. What seems like a more pleasant solution is to decide that everything under root will have to be configured manually, and while the idea of having logs of what happened after my laptop crashes is pleasant, who in practice is going to investigate this for my desktop laptop anyway. I don't have the time for that either.
@@ -125,6 +124,7 @@ TODO
 [More documentation on the magic key bitmap](https://docs.kernel.org/admin-guide/sysrq.html).
 
 ## todos
+- [ ] find a fix for the fact that home-manager wants to sandbox my applications when I do not want that
 - [ ] try bash with starship, fzf and bash-completion and see if you can get rid of zsh as something you need to install extra.
 - [ ] remove or fix the script where we are automatically trying to install home-manager and nix. They don't work in their current form, because they already expect scripts we added to our /bin to be in the path.
 - [ ] create better action logging tools/lifelogging tools for llms to process:
