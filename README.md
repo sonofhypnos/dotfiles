@@ -95,6 +95,13 @@ Set .dotfiles/bin/pdf.sh as the default application for pdfs.
 Also enable org-protocol (refer to your notes for how to setup or debug org-protocol).
 
 ### Dropbox
+Run dropbox once on the commandline with 
+
+``` sh
+dropbox start -i
+```
+It will ask you to connect dropbox with this laptop by opening a url for login.
+
 
 ### Zotero:
 
@@ -111,6 +118,43 @@ Also enable org-protocol (refer to your notes for how to setup or debug org-prot
 ## Device specific information and considerations regarding backup
 So far, we always backed up all our files including files under `/` like `/var/`. Turns out our backup is getting really complicated though, because doing it like this requires us to run our backup as root, which messes with us being able to get prompted through a gui by our backup. I could write a nicer backup that takes care of this. What seems like a more pleasant solution is to decide that everything under root will have to be configured manually, and while the idea of having logs of what happened after my laptop crashes is pleasant, who in practice is going to investigate this for my desktop laptop anyway. I don't have the time for that either.
 This also makes another thing more uncomplicated. I think it probably makes a lot of sense to separate out our home directory to be on a different disk than the root directory. Last time I put ~/repos on a separate disk, because it was so large, but that was then inconvenient, when we were jumping out of repos in emacs.
+
+# Things to change with the root user
+ 
+## Ubuntu 24.04 User Namespace Fix
+
+### Problem
+Ubuntu 24.04 restricts unprivileged user namespaces by default, breaking sandboxed applications like:
+- Nix-installed dropbox, signal, 1password, chrome
+- Flatpak applications  
+- Container tools
+- Any app using `bwrap` (bubblewrap)
+
+**Error symptoms:**
+```
+bwrap: setting up uid map: Permission denied
+unshare: write failed /proc/self/uid_map: Operation not permitted
+```
+
+### Solution
+Disable Ubuntu's user namespace restrictions:
+
+```bash
+## Permanent fix
+echo 'kernel.apparmor_restrict_unprivileged_userns = 0' | sudo tee /etc/sysctl.d/20-apparmor-donotrestrict.conf
+sudo sysctl --system
+
+## Test the fix
+unshare --user --map-root-user echo "success"
+```
+
+### Security Note
+This reverts Ubuntu 24.04 to the same user namespace behavior as Ubuntu 22.04 and other major distros (Debian, Fedora, Arch). The security impact is minimal since malware with admin privileges can bypass these restrictions anyway.
+
+### References
+- [Ubuntu Community Hub discussion](https://discourse.ubuntu.com/t/spec-unprivileged-user-namespace-restrictions-via-apparmor-in-ubuntu-23-10/37626)
+- [Ask Ubuntu solution](https://askubuntu.com/questions/1511854/how-to-permanently-disable-ubuntus-new-apparmor-user-namespace-creation-restric)
+
 
 # secrets
 So far we didn't have a proper solution to secrets.
