@@ -95,6 +95,8 @@ Set .dotfiles/bin/pdf.sh as the default application for pdfs.
 Also enable org-protocol (refer to your notes for how to setup or debug org-protocol).
 
 ### Dropbox
+Install dropbox by downloading the latest .deb file and use 
+`apt instal ./dropbox-file.deb` to install it.
 Run dropbox once on the commandline with 
 
 ``` sh
