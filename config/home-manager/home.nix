@@ -162,6 +162,9 @@ in {
         source = ../../nix/.config;
         recursive = true;
       };
+      "Dropbox/.keep" = {
+        text = "";
+      }; # We add an empty file to add an empty directory
 
     };
 
@@ -418,8 +421,8 @@ in {
   };
 
   services = {
-    dropbox.enable = true;
-    dropbox.path = "/home/tassilo/Dropbox";
+    # dropbox.enable = true; #FIXME: for unknown reasons, dropbox doesn't render properly if we install it via nix.
+    # dropbox.path = "/home/tassilo/Dropbox";
     espanso.enable = true;
     espanso.configs = { };
     espanso.matches = { };
