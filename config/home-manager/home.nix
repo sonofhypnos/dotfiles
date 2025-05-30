@@ -21,6 +21,17 @@ in {
       categories = [ "Office" ];
       mimeType = [ "application/pdf" ];
     };
+    nemo = {
+      name = "Nemo";
+      comment = "File Manager";
+      icon = "folder";
+      exec = "${pkgs.nemo}/bin/nemo %U";
+      categories = [ "System" "FileTools" "FileManager" ];
+      mimeType = [ "inode/directory" ];
+      terminal = false;
+      type = "Application";
+    };
+
   };
 
   # TODO: setting these manually like below seems like a viable option after we
