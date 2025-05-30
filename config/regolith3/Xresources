@@ -34,7 +34,6 @@ wm.binding.focus_child: F6
 
 wm.gaps.inner.size: 0
 
-#regolith.look.path: /usr/share/regolith-look/solarized-dark
 
 !
 ! More general settings unrelated to regolith
@@ -105,4 +104,5 @@ Emacs*menu*Foreground: #eeeeec
 ! white
 *.color7: #bfbaac
 *.color15: #fdf6e3
-regolith.look.path: /usr/share/regolith-look/lascaille
+
+regolith.look.path: /usr/share/regolith-look/blackhole
