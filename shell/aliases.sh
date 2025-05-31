@@ -32,6 +32,8 @@ alias aalias='emacsclient ~/.dotfiles/shell/aliases.sh'
 alias ozsh='cd ~/.dotfiles/zsh/oh-my-zsh'
 alias econfig='vim ~/.doom.d/config.el'
 alias .d='cd ~/.dotfiles/'
+alias .home='cd ~/.dotfiles/config/home-manager'
+alias home-manager-switch='cd ~/.dotfiles/config/home-manager;home-manager switch -b backup --flake .#tassilo'
 alias ashell="vim ~/.dotfiles/shell/aliases.sh"
 alias dmemacs="~/.local/lib/python3.9/site-packages/memacs/"
 
