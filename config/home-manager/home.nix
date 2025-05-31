@@ -337,7 +337,7 @@ in {
     bash = {
       enable = true;
       # enableCompletion=true;
-      initContent = ''
+      initExtra = ''
         #!/usr/bin/env bash
         # .bashrc - Bash shell configuration file
 
@@ -377,7 +377,7 @@ in {
       autosuggestion.enable = true;
       syntaxHighlighting.enable = true;
       enableCompletion = true;
-      initExtra = ''
+      initContent = ''
         SSH_AUTH_SOCK=${onePassPath}
         # Home manager managed configuration
 
