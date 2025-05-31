@@ -16,6 +16,8 @@ alias vim="nvim"
 alias pip2='python2 -m pip'
 alias printpagesd='lpr -o number-up=2 sides=two-sided-long-edge -P HaDiKo-EUFF'
 alias mat='MATLAB_JAVA=tassilo/.sdkman/candidates/java/8.0.282.fx-zulu/jre;matlab & disown'
+alias evim='echo -n "e)macs or v)im? "; read -k1 c; echo; [[ $c == "e" ]] && emacsclient || vim'
+# alias editor='emacsclient 2>/dev/null || emacs 2>/dev/null || vim'
 
 alias refresh='watch -n 1 cat'
 
@@ -26,9 +28,11 @@ alias rm='echo "use trash instead you moron!";rm'
 alias ainstall='sudo -A apt-get update -y & sudo -A apt-get upgrade -y && sudo -A apt-get install'
 
 #directories and files
-#alias do='cd ~/.dotfiles' this line caused a tone of problems for me, because do is a keyword in bash of course
-alias regi3='vim ~/.dotfiles/config/regolith3/i3/config.d/45_custom_config'
-alias aalias='emacsclient ~/.dotfiles/shell/aliases.sh'
+#alias do='cd ~/.dotfiles' NOTE: this line caused a tone of problems for me, because do is a keyword in bash of course
+alias emacsclient="emacsclient -a vim"
+alias regi3="emacsclient -t ~/.dotfiles/config/regolith3/i3/config.d/45_custom_config"
+alias ehome="emacsclient -t ~/.dotfiles/config/home-manager/home.nix"
+alias aalias='emacsclient -t ~/.dotfiles/shell/aliases.sh'
 alias ozsh='cd ~/.dotfiles/zsh/oh-my-zsh'
 alias econfig='vim ~/.doom.d/config.el'
 alias .d='cd ~/.dotfiles/'
