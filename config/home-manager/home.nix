@@ -49,88 +49,103 @@ in {
     stateVersion = "25.05";
 
     packages = with pkgs; [
-      #Sandboxed applications that initially didn't work
-      discord
-      google-chrome
-      signal-desktop
-      steam
+      # Communication & Social
+      element-desktop # Matrix client for encrypted messaging
+      discord # Gaming/community chat platform
+      signal-desktop # Private messaging with end-to-end encryption
 
-      nemo
-      copyq
-      anki
-      codex
-      nixfmt-classic # For syntax for highlighting in nix folders
-      trash-cli
+      # Web Browsers
+      google-chrome # Chromium-based browser for web compatibility
+      #firefox # somehow updating the nixos version made firefox collide?
 
-      i3-cycle-focus # for tabbing through regolith
-      zotero
-      ollama
-      #firefox somehow updating the nixos version made firefox collide?
-      spotify
-      elan
-      git-secret
-      stripe-cli # cli for stripe the payment system
-      jq # cli tool for handeling json
-      meme-suite # biology things
-      ripgrep
-      zathura
-      rxvt-unicode # Terminal
-      fontconfig
-      xclip
-      git-lfs # required to run git lfs
-      git
-      git-filter-repo # useful if you want to remove things from the git history permanently
-      emacs30
-      direnv
-      nix-direnv
+      # Media & Entertainment
+      spotify # Music streaming
+      steam # Gaming platform
 
-      # For screenshot automation:
-      fswebcam
-      jpegoptim
+      # File Management & System Tools
+      nemo # GUI file manager
+      copyq # Clipboard manager with history
+      trash-cli # CLI for trash operations (safer than rm)
+      xclip # X11 clipboard utilities
+      fontconfig # Font configuration and management
 
-      jdk17_headless
-      languagetool
-      janet
-      zsh-nix-shell
-      #androidenv.androidPkgs_9_0.platform-tools (got deprecated when switching to 24.11 and wasn't using it, so not fixing)
-      zsh
-      tmux
-      #okular
-      xournalpp
-      nodePackages.prettier # Required by apheleia in Emacs to format some file formats like yaml
+      # Productivity & Office
+      anki # Spaced repetition flashcard system
+      zotero # Reference manager for academic papers
+      xournalpp # PDF annotation and note-taking
+      #okular # Alternative PDF viewer
 
-      pyright
+      # Development Tools - Core
+      git # Version control system
+      git-lfs # Git Large File Storage extension
+      git-filter-repo # Tool for rewriting git history safely
+      git-secret # Encrypt secrets in git repos
+      emacs30 # Text editor/IDE
+      direnv # Per-directory environment variables
+      nix-direnv # Nix integration for direnv
 
-      # git-remote-dropbox
+      # Development Tools - Languages & LSPs
+      janet # Minimal functional lisp dialect
+      pyright # Python language server for IDE features
+      jdk17_headless # Java development kit (headless)
+      elan # Lean theorem prover toolchain manager
+
+      # Development Tools - Formatters & Linters
+      nixfmt-classic # Nix code formatter for syntax highlighting
+      nodePackages.prettier # Multi-language code formatter (required by Emacs apheleia)
+      languagetool # Grammar and style checker
+
+      # CLI Utilities & Data Processing
+      jq # Command-line JSON processor
+      ripgrep # Fast text search tool (better grep)
+      stripe-cli # CLI for Stripe payment platform API
+
+      # Terminal & Shell
+      rxvt-unicode # Lightweight Unicode terminal emulator
+      zsh # Z shell with advanced features
+      zsh-nix-shell # Zsh integration for nix-shell
+      tmux # Terminal multiplexer for session management
+
+      # Window Manager Tools
+      i3-cycle-focus # Window cycling for i3/regolith desktop
+
+      # Screenshot & Media Tools
+      fswebcam # Webcam capture tool for screenshots/automation
+      jpegoptim # JPEG optimization utility
+
+      # Research & Biology
+      meme-suite # Motif-based sequence analysis tools for bioinformatics
+      ollama # Local LLM runner
+
+      # Sandboxed applications (initially problematic on Ubuntu 24.04)
+      codex # AI coding assistant
+
+      #androidenv.androidPkgs_9_0.platform-tools # Android development tools (deprecated in 24.11, unused)
+
+      # Custom Package: Git-Dropbox Integration
       (python3Packages.buildPythonApplication {
         pname = "git-remote-dropbox";
-        version = "2.0.4"; # Update this to the latest version
-
+        version = "2.0.4";
         src = pkgs.fetchFromGitHub {
           owner = "anishathalye";
           repo = "git-remote-dropbox";
-          rev = "v2.0.4"; # Update this to match version
-          sha256 =
-            "sha256-miA8lYfk77pXn5aWIh17uul1l+7w2VCBDT3+YiVK5OY="; # Add SHA256 after first attempt
+          rev = "v2.0.4";
+          sha256 = "sha256-miA8lYfk77pXn5aWIh17uul1l+7w2VCBDT3+YiVK5OY=";
         };
         format = "pyproject";
-
         nativeBuildInputs = with pkgs.python3Packages; [
           hatchling
           hatch-vcs
           poetry-core
           setuptools
         ];
-
         propagatedBuildInputs = with python3Packages; [
           dropbox
           setuptools
           requests
         ];
-
-        doCheck = false; # Skip tests as they might require Dropbox credentials
+        doCheck = false; # Skip tests (require Dropbox credentials)
       })
-
     ];
 
     sessionVariables = { SHELL = "${pkgs.zsh}/bin/zsh"; };
