@@ -172,6 +172,7 @@ TODO
 [More documentation on the magic key bitmap](https://docs.kernel.org/admin-guide/sysrq.html).
 
 ## todos
+- [ ] fix your version control setup with dropbox? Using a remote to backup your stuff doesn't work, because your repository is too big. Probably the easiest solution is to just give up on having a remote and to just use ... instead.
 - [ ] find a fix for the fact that home-manager wants to sandbox my applications when I do not want that
 - [ ] try bash with starship, fzf and bash-completion and see if you can get rid of zsh as something you need to install extra.
 - [ ] remove or fix the script where we are automatically trying to install home-manager and nix. They don't work in their current form, because they already expect scripts we added to our /bin to be in the path.
