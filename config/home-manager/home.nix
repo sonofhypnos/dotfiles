@@ -337,7 +337,7 @@ in {
     bash = {
       enable = true;
       # enableCompletion=true;
-      initExtra = ''
+      initContent = ''
         #!/usr/bin/env bash
         # .bashrc - Bash shell configuration file
 
