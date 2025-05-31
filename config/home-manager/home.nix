@@ -83,6 +83,7 @@ in {
       emacs30 # Text editor/IDE
       direnv # Per-directory environment variables
       nix-direnv # Nix integration for direnv
+      make # dev tool
 
       # Development Tools - Languages & LSPs
       janet # Minimal functional lisp dialect
