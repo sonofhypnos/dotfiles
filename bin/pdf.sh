@@ -8,15 +8,26 @@
 #notes          :
 #bash_version   :5.1.4(1)-release
 #============================================================================
+open_file() {
+    local file="$1"
+    if command -v xdg-open > /dev/null 2>&1; then
+        xdg-open "$file"
+    elif command -v open > /dev/null 2>&1; then
+        open "$file"
+    else
+        return 1
+    fi
+}
+
 if zenity --question --text="Add PDF to bibliography?" --title="PDF Processor"; then
     zotero &
-    # FIXME: doesn't work if zotero is not active. (We should use something better than the hack above)
-    zathura "$1" &
-    zotero >> zotero.log &
+    open_file "$1" &
+    xdg-open >> zotero.log &
     sleep 5
     zotadd "$1" >> zotadd.log
 else
-    zathura "$1" &
+    open_file "$1" &
 fi
-# I am adding zathura instead of emacs here, because it is nicer to use.
+
+#NOTE: In case we ever want to use emacs for this:
 #emacsclient -ce "(tassilo/open-pdf \"$1\")"
