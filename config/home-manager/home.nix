@@ -34,14 +34,32 @@ in {
 
   };
 
-  # TODO: setting these manually like below seems like a viable option after we
-  # have further figured out how mimeApps are currently set and once we imported all important settings from there
-  # xdg.mimeApps = {
-  #   enable = true;
-  #   defaultApplications = {
-  #     "application/pdf" = [ "org.gnome.Evince.desktop" ];
-  #   };
-  # };
+  xdg.mimeApps = {
+    enable = true;
+    defaultApplications = {
+      "application/pdf" = [ "sioyek.desktop" "evince.desktop" ];
+      "text/plain" = [ "emacs.desktop" "vim.desktop" ];
+      "text/x-tex" = "emacs.desktop";
+
+      #firefox stuff:
+      "x-scheme-handler/http" = "firefox.desktop";
+      "x-scheme-handler/https" = "firefox.desktop";
+      "x-scheme-handler/chrome" = "firefox.desktop";
+      "application/x-extension-htm" = "firefox.desktop";
+      "application/x-extension-html" = "firefox.desktop";
+      "application/x-extension-shtml" = "firefox.desktop";
+      "application/xhtml+xml" = "firefox.desktop";
+      "application/x-extension-xhtml" = "firefox.desktop";
+      "application/x-extension-xht" = "firefox.desktop";
+      "text/html" = "firefox.desktop";
+
+      #signal
+      "x-scheme-handler/sgnl" = "signal.desktop";
+      "x-scheme-handler/signalcaptcha" = "signal.desktop";
+    };
+
+    associations.added = { };
+  };
 
   home = {
     username = "tassilo";
