@@ -4,3 +4,4 @@ set selection-notification false #turns off the notification when you select tex
 
 set adjust-open width
 #set recolor true
+map <C-Z> feedkeys ":! zotadd % <Return>" #Adds currently open pdf to zotero.

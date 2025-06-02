@@ -147,6 +147,35 @@ in {
         ];
         doCheck = false; # Skip tests (require Dropbox credentials)
       })
+      (python3Packages.buildPythonApplication { # Hacky script to add things to zotero from the commandline
+        pname = "zotadd";
+        version = "1.0.0"; # Use whatever version makes sense
+        src = pkgs.fetchFromGitHub {
+          owner = "sonofhypnos";
+          repo = "zotadd";
+          rev =
+            "master"; # NOTE: this is master and not main, if main is used it will fail, since main doesn't exist for this repo.
+          sha256 =
+            "sha256-U3mODuCy3LlCz76auPVqScr4W6Y7Ny5Od9O1skdZ3+M="; # Leave empty initially, nix will tell you the correct hash
+        };
+        format =
+          "other"; # Since it's just a script, not a standard Python package
+
+        # Copy the script to bin/
+        installPhase = ''
+          mkdir -p $out/bin
+          cp zotadd $out/bin/zotadd
+          chmod +x $out/bin/zotadd
+        '';
+
+        # Add any Python dependencies the script needs
+        propagatedBuildInputs = with python3Packages;
+          [
+            requests # Add other dependencies as needed
+          ];
+
+        doCheck = false; # Skip tests
+      })
     ];
 
     sessionVariables = { SHELL = "${pkgs.zsh}/bin/zsh"; };
