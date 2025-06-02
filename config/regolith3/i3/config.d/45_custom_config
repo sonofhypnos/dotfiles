@@ -37,24 +37,24 @@ mode "$layout_mode" {
 
 #Assign variables for special Applications
 set $main_launcher Main Launcher: main gathert[o]wn [f]ocusmate [w]hatsapp [g]mail [k]eep [c]alendar [d]iscord gpt[4] [a]nki [r]eminder [p]rediction [t]odoist t[i]metrack
-set $fatebook google-chrome-stable --no-sandbox --app=https://fatebook.io/
-set $gathertown google-chrome-stable --no-sandbox --app=https://app.gather.town/app/Yhi4XYj0zFNWuUNv/EA%20coworking%20and%20lounge
-set $whatsapp google-chrome-stable --no-sandbox --app=https://web.whatsapp.com
-set $gmail google-chrome-stable --no-sandbox --app=https://mail.google.com
-set $keep google-chrome-stable --no-sandbox --app=https://keep.google.com
-set $calendar google-chrome-stable --no-sandbox --app=https://calendar.google.com
-set $focusmate google-chrome-stable --no-sandbox --app=https://focusmate.com
-set $gpt google-chrome-stable --no-sandbox --app=https://chatgpt.com/?model=gpt-4o
-set $perp google-chrome-stable --no-sandbox --app=https://www.perplexity.ai/
-#set $claude google-chrome-stable --no-sandbox  --user-data-dir="/home/tassilo/.config/google-chrome/Profile 2" --no-extensions --app=https://claude.ai
-set $claude google-chrome-stable --no-sandbox --app=https://claude.ai
+set $fatebook chromium --no-sandbox --app=https://fatebook.io/
+set $gathertown chromium --no-sandbox --app=https://app.gather.town/app/Yhi4XYj0zFNWuUNv/EA%20coworking%20and%20lounge
+set $whatsapp chromium --no-sandbox --app=https://web.whatsapp.com
+set $gmail chromium --app=https://mail.google.com
+set $keep chromium --app=https://keep.google.com
+set $calendar chromium --app=https://calendar.google.com
+set $focusmate chromium --app=https://focusmate.com
+set $gpt chromium --app=https://chatgpt.com/?model=gpt-4o
+set $perp chromium --app=https://www.perplexity.ai/
+#set $claude chromium --no-extensions --app=https://claude.ai
+set $claude chromium --app=https://claude.ai
 
 
-set $gpt3 google-chrome-stable --no-sandbox --app=https://chatgpt.com/
-set $sitzplatz google-chrome-stable --no-sandbox --app=https://raumbuchung.bibliothek.kit.edu/sitzplatzreservierung/day.php?year=2021&month=7&day=1&area=20&room=140
-set $teams google-chrome-stable --no-sandbox --app=https://teams.microsoft.com
-set $todoist google-chrome-stable --no-sandbox --app=https://todoist.com
-set $timetrack google-chrome-stable --no-sandbox --app=https://app.atimelogger.pro/reports
+set $gpt3 chromium --app=https://chatgpt.com/
+set $sitzplatz chromium --app=https://raumbuchung.bibliothek.kit.edu/sitzplatzreservierung/day.php?year=2021&month=7&day=1&area=20&room=140
+set $teams chromium --app=https://teams.microsoft.com
+set $todoist chromium --app=https://todoist.com
+set $timetrack chromium --app=https://app.atimelogger.pro/reports
 set $discord discord
 set $telegram telegram
 set $signal signal
@@ -116,13 +116,13 @@ set $dna_coord "xclip -selection clipboard -o | sed -E 's/([^:]+):([0-9]+)\.\.([
 
 
 
-set $gpt_scratch /home/tassilo/bin/scratch_toggle.sh "Google-chrome" "google-chrome --app=https://chatgpt.com" "chatgpt.com"
+set $gpt_scratch /home/tassilo/bin/scratch_toggle.sh "Chromium" "chromium --app=https://chatgpt.com" "chatgpt.com"
 set $emacs_scratch /home/tassilo/bin/scratch_toggle.sh "Emacs" "emacs" "Emacs"
 set $zotero_scratch /home/tassilo/bin/scratch_toggle.sh "Zotero" "zotero" "Zotero"
-set $fatebook_scratch /home/tassilo/bin/scratch_toggle.sh "Google-chrome" "google-chrome --app=https://fatebook.io" "fatebook.io"
-set $perplexity_scratch /home/tassilo/bin/scratch_toggle.sh "Google-chrome" "google-chrome --app=https://www.perplexity.ai" "www.perplexity.ai"
-set $claude_scratch /home/tassilo/bin/scratch_toggle.sh "Google-chrome" "google-chrome --app=https://claude.ai" "claude.ai"
-set $timetrack_scratch /home/tassilo/bin/scratch_toggle.sh "Google-chrome" "google-chrome --app=https://app.atimelogger.pro/reports" "^app\.atimelogger\.pro"
+set $fatebook_scratch /home/tassilo/bin/scratch_toggle.sh "Chromium" "chromium --app=https://fatebook.io" "fatebook.io"
+set $perplexity_scratch /home/tassilo/bin/scratch_toggle.sh "Chromium" "chromium --app=https://www.perplexity.ai" "www.perplexity.ai"
+set $claude_scratch /home/tassilo/bin/scratch_toggle.sh "Chromium" "chromium --app=https://claude.ai" "claude.ai"
+set $timetrack_scratch /home/tassilo/bin/scratch_toggle.sh "Chromium" "chromium --app=https://app.atimelogger.pro/reports" "^app\.atimelogger\.pro"
 
 ## Launch // Scratchpad mode [e]macs [z]otero [f]atebook [p]erplexity [o]penai [c]laude [t]imetrack // <> s ##/
 set $scratchpad_mode Scratchpad Mode: [e]macs [z]otero [f]atebook [p]erplexity [o]penai [c]laude [t]imetrack
@@ -195,21 +195,21 @@ set $copyq exec copyq menu
 bindsym $mod+y $copyq
 
 ## Launch // Open Openai Scratchpad // <> q ##/
-for_window [class="Google-chrome" instance="chatgpt.com"] move scratchpad, scratchpad show
-bindsym $mod+q [class="Google-chrome" instance="chatgpt.com"] scratchpad show
+for_window [class="Chromium" instance="chatgpt.com"] move scratchpad, scratchpad show
+bindsym $mod+q [class="Chromium" instance="chatgpt.com"] scratchpad show
 
 
 ## Launch // Open Claude Scratchpad // <> w ##/
-for_window [class="Google-chrome" instance="claude.ai"] move scratchpad, scratchpad show
-bindsym $mod+w [class="Google-chrome" instance="claude.ai"] scratchpad show
+for_window [class="Chromium" instance="claude.ai"] move scratchpad, scratchpad show
+bindsym $mod+w [class="Chromium" instance="claude.ai"] scratchpad show
 
 ## Launch // Open perplexity Scratchpad // <> p ##/
-for_window [class="Google-chrome" instance="www.perplexity.ai"] move scratchpad, scratchpad show
-bindsym $mod+p [class="Google-chrome" instance="www.perplexity.ai"] scratchpad show
+for_window [class="Chromium" instance="www.perplexity.ai"] move scratchpad, scratchpad show
+bindsym $mod+p [class="Chromium" instance="www.perplexity.ai"] scratchpad show
 
 ## Launch // Open Fatebook // <> Alt p ##/
-for_window [class="Google-chrome" instance="fatebook.io"] move scratchpad, scratchpad show
-bindsym $mod+$alt+p [class="Google-chrome" instance="fatebook.io"] scratchpad show
+for_window [class="Chromium" instance="fatebook.io"] move scratchpad, scratchpad show
+bindsym $mod+$alt+p [class="Chromium" instance="fatebook.io"] scratchpad show
 
 
 #Mnemonics (Create something to make new once or work with other stuff?)
@@ -220,8 +220,8 @@ bindsym Control+$mod+$alt+r mode "$r_mode"
 mode "$r_mode" {
 	bindsym Escape mode "default"
 	bindsym Return mode "default"
-	bindsym s mode "default" exec google-chrome-stable --no-sandbox --app=https://public.senfcall.de/ka-rationality
-	bindsym b mode "default" exec google-chrome-stable --no-sandbox --app=https://bbb23.senfcall.de/html5client/join?sessionToken=1rjjiv1kgifdse8k
+	bindsym s mode "default" exec chromium --app=https://public.senfcall.de/ka-rationality
+	bindsym b mode "default" exec chromium --app=https://bbb23.senfcall.de/html5client/join?sessionToken=1rjjiv1kgifdse8k
 }
 
 
@@ -258,7 +258,7 @@ exec --no-startup-id dconf write /org/gnome/settings-daemon/plugins/cursor/activ
 exec --no-startup-id ./i3-battery-popup/i3-battery-popup
 
 ## Launch // Clear Scratchpad // <> Shift u ##/
-bindsym $mod+u [class="Google-chrome" instance="claude.ai"] move scratchpad; [class="Zotero" window_role="browser"] move scratchpad; [title="_emacs scratchpad_"] move scratchpad; [title="doom-capture"] move scratchpad; [class="Google-chrome" instance="chatgpt.com"] move scratchpad; [class="Google-chrome" instance="www.perplexity.ai"] move scratchpad; [class="Google-chrome" instance="fatebook.io"] move scratchpad; [class="Emacs"] move scratchpad; [instance="^app\.atimelogger\.pro"] move scratchpad;
+bindsym $mod+u [class="Chromium" instance="claude.ai"] move scratchpad; [class="Zotero" window_role="browser"] move scratchpad; [title="_emacs scratchpad_"] move scratchpad; [title="doom-capture"] move scratchpad; [class="Chromium" instance="chatgpt.com"] move scratchpad; [class="Chromium" instance="www.perplexity.ai"] move scratchpad; [class="Chromium" instance="fatebook.io"] move scratchpad; [class="Emacs"] move scratchpad; [instance="^app\.atimelogger\.pro"] move scratchpad;
 
 
 # read 1 character and mark the current window with this character

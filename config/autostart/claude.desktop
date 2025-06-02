@@ -1,6 +1,6 @@
 [Desktop Entry]
 Type=Application
-Exec=google-chrome --app=https://claude.ai
+Exec=chromium --app=https://claude.ai
 Hidden=false
 NoDisplay=false
 X-GNOME-Autostart-enabled=true
