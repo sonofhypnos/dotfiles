@@ -53,6 +53,7 @@ fi
 
 ## Setting up desktop:
 
+- [ ] forget below things on setting up your backup for root! We are going to only backup things owned by the user in the future. Less problems with permissions. We just manually edit the configuration for root and document it well.
 - [ ] You will have to remove the ~/.config/systemd directory created by home-manager once, so that we can first write the files from dotbot there, before we proceed to add the ones from home-manager
 - [ ] If this is your desktop, once installed you need to run the `enable_services.sh` script with root to enable systemd services. Next you want to figure out how to get the home manager installed for the programs you installed through it (like ripgrep. Longterm you want to move as much as possible of your programs from apt to nix).
 
@@ -122,36 +123,46 @@ So far, we always backed up all our files including files under `/` like `/var/`
 This also makes another thing more uncomplicated. I think it probably makes a lot of sense to separate out our home directory to be on a different disk than the root directory. Last time I put ~/repos on a separate disk, because it was so large, but that was then inconvenient, when we were jumping out of repos in emacs.
 
 # Things to change with the root user
- 
+
+## Enable sync + OOM killer only (secure)
+
+We enable:
+
+``` docs
+16 =  0x10 - enable sync command (s)
+32 =  0x20 - enable remount read-only (u)
+64 =  0x40 - enable signalling of processes (term, kill, oom-kill) (f)
+128 =  0x80 - allow reboot/poweroff (b)
+```
+
+run:
+check if 
+/etc/sysctl.d/99-sysrq.conf exists.
+Check the current value of the commands via:
+
+``` bash
+cat /proc/sys/kernel/sysrq
+```
+s, u, b is probably enabled, so the value is 176 on ubuntu. If the value is something else, perhaps you have also other keys enabled and you would want to change the command below.
+
+``` bash
+echo 'kernel.sysrq = 240' | sudo tee /etc/sysctl.d/99-sysrq.conf
+sudo sysctl -p
+```
+
 ## Ubuntu 24.04 User Namespace Fix
-
-### Problem
-Ubuntu 24.04 restricts unprivileged user namespaces by default, breaking sandboxed applications like:
-- Nix-installed dropbox, signal, 1password, chrome
-- Flatpak applications  
-- Container tools
-- Any app using `bwrap` (bubblewrap)
-
-**Error symptoms:**
-```
-bwrap: setting up uid map: Permission denied
-unshare: write failed /proc/self/uid_map: Operation not permitted
-```
-
-### Solution
-Disable Ubuntu's user namespace restrictions:
-
+Fixes Nix apps (dropbox, signal, chrome) getting `bwrap: Permission denied`:
 ```bash
-## Permanent fix
 echo 'kernel.apparmor_restrict_unprivileged_userns = 0' | sudo tee /etc/sysctl.d/20-apparmor-donotrestrict.conf
 sudo sysctl --system
 
+
+```
+
+```bash
 ## Test the fix
 unshare --user --map-root-user echo "success"
 ```
-
-### Security Note
-This reverts Ubuntu 24.04 to the same user namespace behavior as Ubuntu 22.04 and other major distros (Debian, Fedora, Arch). The security impact is minimal since malware with admin privileges can bypass these restrictions anyway.
 
 ### References
 - [Ubuntu Community Hub discussion](https://discourse.ubuntu.com/t/spec-unprivileged-user-namespace-restrictions-via-apparmor-in-ubuntu-23-10/37626)
@@ -163,7 +174,6 @@ So far we didn't have a proper solution to secrets.
 TODO
 - [] add secrets for backup 
 - [] add secrets for ssh (check which ones you want on desktop or other machines etc.)
- 
 
 
 ### Magic SysRq Keys:
