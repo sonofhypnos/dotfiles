@@ -24,6 +24,7 @@ blacklistadd mail.google.com
 blacklistadd calendar.google.com
 blacklistadd keyma.sh
 blacklistadd monkeytype.com
+blacklistadd paypal.com
 
 "
 " Binds
