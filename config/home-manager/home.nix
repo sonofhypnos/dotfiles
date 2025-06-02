@@ -119,6 +119,7 @@ in {
       jq # Command-line JSON processor
       ripgrep # Fast text search tool (better grep)
       stripe-cli # CLI for Stripe payment platform API
+      fd # search
 
       # Terminal & Shell
       rxvt-unicode # Lightweight Unicode terminal emulator
