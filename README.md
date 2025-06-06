@@ -150,6 +150,14 @@ echo 'kernel.sysrq = 240' | sudo tee /etc/sysctl.d/99-sysrq.conf
 sudo sysctl -p
 ```
 
+Test if killing memory is working via:
+
+``` bash
+python3 -c "x=[0]*10**8; input('Press Enter to exit or Ctrl+C to kill: ')"
+```
+
+`
+
 ## Ubuntu 24.04 User Namespace Fix
 Fixes Nix apps (dropbox, signal, chrome) getting `bwrap: Permission denied`:
 ```bash
