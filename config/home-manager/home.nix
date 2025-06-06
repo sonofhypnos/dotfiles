@@ -37,7 +37,7 @@ in {
   xdg.mimeApps = {
     enable = true;
     defaultApplications = {
-      "application/pdf" = [ "sioyek.desktop" "evince.desktop" ];
+      "application/pdf" = [ "evince.desktop" ];
       "text/plain" = [ "emacs.desktop" "vim.desktop" ];
       "text/x-tex" = "emacs.desktop";
 
