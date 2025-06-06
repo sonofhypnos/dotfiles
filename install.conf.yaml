@@ -9,9 +9,7 @@
     ~/.bashrc.local:
     ~/.zshrc.local:
     ~/.atamanrc.config:
-    ~/.gitconfig:
     ~/.ideavimrc:
-    ~/.XCompose:
     ~/.authinfo.gpg:
     ~/.tmux.conf:
     ~/.ghc/:
