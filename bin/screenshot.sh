@@ -12,11 +12,8 @@
 # Take a screenshot of a selected region and save it as a PNG file
 gnome-screenshot -a -f /tmp/screenshot.png
 
-# Convert the PNG file to JPEG format
-mogrify -format jpg /tmp/screenshot.png
-
-# Copy the JPEG file to the clipboard
-xclip -selection clipboard -t image/jpeg -i /tmp/screenshot.jpg
+# Copy the PNG file to the clipboard
+xclip -selection clipboard -t image/png -i /tmp/screenshot.png
 
 # Optionally, remove the temporary files
-rm /tmp/screenshot.png /tmp/screenshot.jpg
+rm /tmp/screenshot.png
