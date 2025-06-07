@@ -275,3 +275,8 @@ bindsym $mod+Shift+w exec dm-tool switch-to-greeter
 
 ## Launch // Screenshot region (clipboard) // Ctrl Shift Print ##/
 bindsym Control+Shift+Print exec /home/tassilo/bin/screenshot.sh
+
+# This screenshot keybind should work on most keyboards:
+bindsym $mod+Shift+Print exec /home/tassilo/bin/screenshot.sh
+# Below we add this weirder keybind, since on my thinkpad E16 gen 2, this is what the Keyboard sends for my Print key by default (probably supposed to be a "feature" on windows)
+bindsym $mod+Shift+XF86TouchpadOff exec /home/tassilo/bin/screenshot.sh
