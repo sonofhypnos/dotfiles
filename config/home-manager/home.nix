@@ -73,7 +73,9 @@ in {
       signal-desktop # Private messaging with end-to-end encryption
 
       # Web Browsers
-      google-chrome # Chromium-based browser for web compatibility
+      #google-chrome # We are not installing google chrome this way, because the
+      #sandboxing is causing issues on ubuntu that I don't have the time to
+      #resolve
       #firefox # somehow updating the nixos version made firefox collide?
 
       # Media & Entertainment
