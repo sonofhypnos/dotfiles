@@ -128,7 +128,7 @@ set $timetrack_scratch /home/tassilo/bin/scratch_toggle.sh "Chromium" "chromium 
 set $scratchpad_mode Scratchpad Mode: [e]macs [z]otero [f]atebook [p]erplexity [o]penai [c]laude [t]imetrack
 bindsym $mod+s mode "$scratchpad_mode"
 
-mode "Scratchpad" {
+mode "$scratchpad_mode" {
     bindsym e mode "default" exec $emacs_scratch
     bindsym z mode "default" exec $zotero_scratch
     bindsym f mode "default" exec $fatebook_scratch
