@@ -111,6 +111,7 @@ in {
       pyright # Python language server for IDE features
       jdk17_headless # Java development kit (headless)
       elan # Lean theorem prover toolchain manager
+      poetry # Python package management
 
       # Development Tools - Formatters & Linters
       nixfmt-classic # Nix code formatter for syntax highlighting
