@@ -23,8 +23,7 @@ In case we want to push stuff to github:
 
 ``` bash
 sudo apt update
-sudo apt install git python3 curl neovim #zsh emacs
-sudo apt install xz-utils #necessary for unpacking tarballs (which we need to install nix)
+sudo apt install git python3 curl neovim nix-bin #zsh emacs
 ```
 
 Install the repo
@@ -52,6 +51,47 @@ fi
 
 
 ## Setting up desktop:
+
+### Setup neo keyboard
+Enable neo keyboard with gnome
+#+begin_src sh
+gsettings set org.gnome.desktop.input-sources show-all-sources true
+#+end_src
+Systemweit:
+#+begin_src sh
+sudo localectl --no-convert set-x11-keymap de pc105 neo_qwertz
+#+end_src
+
+### Setup regolith
+- [ ] check the latest way of installing regolith [here](https://regolith-desktop.com/docs/using-regolith/install/)
+
+Remove config files we already have installed. To find the correct config file to remove, we run:
+```bash
+~ dpkg -S /usr/share/regolith/i3/config.d/60_config_keybindings 
+regolith-i3-control-center-regolith: /usr/share/regolith/i3/config.d/60_config_keybindings
+~ dpkg -L regolith-i3-control-center-regolith
+/.
+/usr
+/usr/share
+/usr/share/doc
+/usr/share/doc/regolith-i3-control-center-regolith
+/usr/share/doc/regolith-i3-control-center-regolith/changelog.Debian.gz
+/usr/share/doc/regolith-i3-control-center-regolith/copyright
+/usr/share/regolith
+/usr/share/regolith/i3
+/usr/share/regolith/i3/config.d
+/usr/share/regolith/i3/config.d/60_config_keybindings
+ ~ 
+ ```
+What we see above is what we should see if regolith-i3-control-center-regolith only modifies a single file
+
+Remove the keybindings config from regolith (since you configure it manually)
+
+```bash
+sudo apt remove regolith-i3-control-center-regolith
+```
+
+### Setup remaining
 
 - [ ] forget below things on setting up your backup for root! We are going to only backup things owned by the user in the future. Less problems with permissions. We just manually edit the configuration for root and document it well.
 - [ ] You will have to remove the ~/.config/systemd directory created by home-manager once, so that we can first write the files from dotbot there, before we proceed to add the ones from home-manager
@@ -196,6 +236,8 @@ TODO
 [More documentation on the magic key bitmap](https://docs.kernel.org/admin-guide/sysrq.html).
 
 ## todos
+- [ ] note: there is a problem, because we need the home-manager setup thing, but to get that zshrc and bashrc need to be set up if we want to add things under ~/bin to the path, but this is done by home-manager:
+ - [ ] insight: we do not need to properly install home-manager: we can use nix-shell -p home-manager and then install home-manager with home-manager! (this worked for me on a new install flawlessly)
 - [ ] fix your version control setup with dropbox? Using a remote to backup your stuff doesn't work, because your repository is too big. Probably the easiest solution is to just give up on having a remote and to just use ... instead.
 - [ ] find a fix for the fact that home-manager wants to sandbox my applications when I do not want that
 - [ ] try bash with starship, fzf and bash-completion and see if you can get rid of zsh as something you need to install extra.
