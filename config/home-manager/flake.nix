@@ -26,6 +26,7 @@
       system = "x86_64-linux";
       unfreePredicate = pkg:
         builtins.elem (nixpkgs.lib.getName pkg) [
+          "slack"
           "spotify"
           "1password-gui"
           "1password"

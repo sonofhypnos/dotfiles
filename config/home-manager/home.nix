@@ -69,8 +69,9 @@ in {
     packages = with pkgs; [
       # Communication & Social
       element-desktop # Matrix client for encrypted messaging
-      discord # Gaming/community chat platform
+      discord # Gaming/community chat platform NOTE: Sandbox issues for discord were resolved by root changes documented in the readme
       signal-desktop # Private messaging with end-to-end encryption
+      slack # Work
 
       # Web Browsers
       #google-chrome # We are not installing google chrome this way, because the
