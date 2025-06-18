@@ -103,7 +103,7 @@ sudo apt install regolith-look-blackhole
 ### Install applications via snap that otherwise won't work
 
 ``` bash
-sudo snap install steam anki-woodrow.anki
+sudo snap install steam anki-woodrow.anki 1password
 ```
 
 Download the latest chrome version and run:
@@ -126,6 +126,7 @@ unshare --user --map-root-user echo "success"
 #### References
 - [Ubuntu Community Hub discussion](https://discourse.ubuntu.com/t/spec-unprivileged-user-namespace-restrictions-via-apparmor-in-ubuntu-23-10/37626)
 - [Ask Ubuntu solution](https://askubuntu.com/questions/1511854/how-to-permanently-disable-ubuntus-new-apparmor-user-namespace-creation-restric)
+
 
 
 ### Firefox:
@@ -160,7 +161,10 @@ It will ask you to connect dropbox with this laptop by opening a url for login.
 So far, we always backed up all our files including files under `/` like `/var/`. Turns out our backup is getting really complicated though, because doing it like this requires us to run our backup as root, which messes with us being able to get prompted through a gui by our backup. I could write a nicer backup that takes care of this. What seems like a more pleasant solution is to decide that everything under root will have to be configured manually, and while the idea of having logs of what happened after my laptop crashes is pleasant, who in practice is going to investigate this for my desktop laptop anyway. I don't have the time for that either.
 This also makes another thing more uncomplicated. I think it probably makes a lot of sense to separate out our home directory to be on a different disk than the root directory. Last time I put ~/repos on a separate disk, because it was so large, but that was then inconvenient, when we were jumping out of repos in emacs.
 
-
+### Set dark mode
+# Set GNOME's dark theme preference explicitly
+gsettings set org.gnome.desktop.interface gtk-theme 'Yaru-dark'
+gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
 
 ### Enable sync + OOM killer only (secure)
 
@@ -235,6 +239,11 @@ or
 systemctl --user list-timers
 ```
 for your user level timers.
+
+### Install other great applications that you can't install via nix (possibly because they need root access)
+```bash
+sudo apt install logwatch
+```
 
 # secrets
 So far we didn't have a proper solution to secrets.
