@@ -8,3 +8,4 @@ config/espanso/match/private.yml
 bin/liftOver
 **/__pycache__
 **/__init__.py
+local/share/ranger/bookmarks
