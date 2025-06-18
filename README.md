@@ -111,6 +111,11 @@ Download the latest chrome version and run:
 sudo apt install ./google-chrome-stable_current_amd64.deb
 ```
 
+Same for 1password and run (you cannot install 1password via snap since it will be sandboxed and can't do everthing you want)
+```
+sudo apt install ./1password-latest.deb 
+```
+
 ### Ubuntu 24.04 User Namespace Fix
 Fixes Nix apps (dropbox, signal, chrome) getting `bwrap: Permission denied`:
 ```bash
