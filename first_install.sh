@@ -22,27 +22,7 @@ confirm() {
   esac
 }
 
-sudo apt install zsh git curl
-
-# 1. Install Nix
-if ! command -v nix &>/dev/null; then
-  if confirm "Do you want to install Nix?"; then
-    echo "Installing Nix..."
-    curl -L https://nixos.org/nix/install | sh
-    # Enable Nix for this script
-    source "$HOME/.nix-profile/etc/profile.d/nix.sh"
-  fi
-fi
-
-# 2. Install home-manager
-if [[ ! -e "$HOME/.config/nixpkgs/home.nix" && ! -e "$HOME/.config/home-manager/home.nix" ]]; then
-  if confirm "Do you want to install home-manager?"; then
-    echo "Installing home-manager..."
-    nix-channel --add https://github.com/nix-community/home-manager/archive/master.tar.gz home-manager
-    nix-channel --update
-    nix-shell '<home-manager>' -A install
-  fi
-fi
+sudo apt install zsh git curl nix-bin
 
 SHARE="$HOME/.local/share/"
 TRI="$HOME/.local/share/tridactyl"
@@ -58,7 +38,7 @@ home_manager_dir="$HOME/.dotfiles/config/home-manager"
 if confirm "Do you want to recompile the home-manager configuration?"; then
     [[ -e $home_manager_dir ]] && cd "$home_manager_dir" && {
       echo "Running: home-manager switch"
-      home-manager --extra-experimental-features "nix-command flakes" switch -b backup --flake .#tassilo --show-trace 2>&1
+      nix-shell -p home-manager 'home-manager --extra-experimental-features "nix-command flakes" switch -b backup --flake .#tassilo --show-trace 2>&1'
     }
 
     if [ -x "$HOME/.config/emacs/bin/doom" ]; then
