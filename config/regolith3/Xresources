@@ -106,3 +106,5 @@ Emacs*menu*Foreground: #eeeeec
 *.color15: #fdf6e3
 
 regolith.look.path: /usr/share/regolith-look/blackhole
+regolith.wallpaper.file: /usr/share/backgrounds/Rainbow_lightbulb_by_Daniel_Micallef.png
+regolith.lockscreen.wallpaper.file: /usr/share/backgrounds/Rainbow_lightbulb_by_Daniel_Micallef.png
