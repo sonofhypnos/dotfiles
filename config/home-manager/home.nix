@@ -81,7 +81,7 @@ in {
 
       # Media & Entertainment
       spotify # Music streaming
-      steam # Gaming platform
+      # steam # Gaming platform (doesn't properly work)
 
       # File Management & System Tools
       nemo # GUI file manager
