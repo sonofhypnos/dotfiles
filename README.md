@@ -124,6 +124,12 @@ This also makes another thing more uncomplicated. I think it probably makes a lo
 
 # Things to change with the root user
 
+## Install applications via snap that otherwise won't work
+
+``` bash
+sudo snap install google-chrome steam anki
+```
+
 ## Enable sync + OOM killer only (secure)
 
 We enable:
