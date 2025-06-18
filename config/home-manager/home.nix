@@ -91,7 +91,7 @@ in {
       fontconfig # Font configuration and management
 
       # Productivity & Office
-      anki # Spaced repetition flashcard system
+      #anki # Spaced repetition flashcard system NOTE: (doesn't work on ubuntu)
       zotero # Reference manager for academic papers
       xournalpp # PDF annotation and note-taking
       sioyek # Another cool pdf viewer
