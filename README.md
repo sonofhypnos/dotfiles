@@ -100,44 +100,33 @@ The above doesn't literally work sadly
 sudo apt install regolith-look-blackhole 
 ```
 
-### Setup remaining
-
-- [ ] forget below things on setting up your backup for root! We are going to only backup things owned by the user in the future. Less problems with permissions. We just manually edit the configuration for root and document it well.
-- [ ] You will have to remove the ~/.config/systemd directory created by home-manager once, so that we can first write the files from dotbot there, before we proceed to add the ones from home-manager
-- [ ] If this is your desktop, once installed you need to run the `enable_services.sh` script with root to enable systemd services. Next you want to figure out how to get the home manager installed for the programs you installed through it (like ripgrep. Longterm you want to move as much as possible of your programs from apt to nix).
-
-Allow sleep in user mode (necessary to enable a scheduled sleep from your i3 config):
-
-Edit/create a sleep file:
-``` sh
-sudo echo "tassilo ALL=(ALL) NOPASSWD: /usr/bin/systemctl suspend" > /etc/sudoers.d/sleep
-```
-
-To setup your root backup service, compile your home-manager config and then run:
+### Install applications via snap that otherwise won't work
 
 ``` bash
-sudo /home/tassilo/.nix-profile/bin/deploy-privileged
+sudo snap install steam anki-woodrow.anki
 ```
 
-- [ ] For your root backup service to work, you need to store the access details:
-
-``` sh
-op read 'op://Personal/Encryption borg base laptop passphrase/password' | sudo tee /root/.borg_passphrase > /dev/null
-sudo chmod 600 /root/.borg_passphrase
+Download the latest chrome version and run:
+```
+sudo apt install ./google-chrome-stable_current_amd64.deb
 ```
 
-To check when your timers are running next, you can run:
-
-
-``` bash
-systemctl list-timers
+### Ubuntu 24.04 User Namespace Fix
+Fixes Nix apps (dropbox, signal, chrome) getting `bwrap: Permission denied`:
+```bash
+echo 'kernel.apparmor_restrict_unprivileged_userns = 0' | sudo tee /etc/sysctl.d/20-apparmor-donotrestrict.conf
+sudo sysctl --system
 ```
-or 
 
-``` bash
-systemctl --user list-timers
+```bash
+#### Test the fix
+unshare --user --map-root-user echo "success"
 ```
-for your user level timers.
+
+#### References
+- [Ubuntu Community Hub discussion](https://discourse.ubuntu.com/t/spec-unprivileged-user-namespace-restrictions-via-apparmor-in-ubuntu-23-10/37626)
+- [Ask Ubuntu solution](https://askubuntu.com/questions/1511854/how-to-permanently-disable-ubuntus-new-apparmor-user-namespace-creation-restric)
+
 
 ### Firefox:
 
@@ -167,19 +156,13 @@ It will ask you to connect dropbox with this laptop by opening a url for login.
 
 - [ ] Configure autoexport for your zotero library entries. Go to "File>Export Library ...". Check the box for "keep updated". This option will not exist if you have not added the better bibtex addon! We are currently storing them under `~/repos/bibliography/My Library.bib`. You have to manually set the auto-export folder.
 
-## Device specific information and considerations regarding backup
+### Device specific information and considerations regarding backup
 So far, we always backed up all our files including files under `/` like `/var/`. Turns out our backup is getting really complicated though, because doing it like this requires us to run our backup as root, which messes with us being able to get prompted through a gui by our backup. I could write a nicer backup that takes care of this. What seems like a more pleasant solution is to decide that everything under root will have to be configured manually, and while the idea of having logs of what happened after my laptop crashes is pleasant, who in practice is going to investigate this for my desktop laptop anyway. I don't have the time for that either.
 This also makes another thing more uncomplicated. I think it probably makes a lot of sense to separate out our home directory to be on a different disk than the root directory. Last time I put ~/repos on a separate disk, because it was so large, but that was then inconvenient, when we were jumping out of repos in emacs.
 
-# Things to change with the root user
 
-## Install applications via snap that otherwise won't work
 
-``` bash
-sudo snap install google-chrome steam anki
-```
-
-## Enable sync + OOM killer only (secure)
+### Enable sync + OOM killer only (secure)
 
 We enable:
 
@@ -211,26 +194,47 @@ Test if killing memory is working via:
 python3 -c "x=[0]*10**8; input('Press Enter to exit or Ctrl+C to kill: ')"
 ```
 
-`
 
-## Ubuntu 24.04 User Namespace Fix
-Fixes Nix apps (dropbox, signal, chrome) getting `bwrap: Permission denied`:
-```bash
-echo 'kernel.apparmor_restrict_unprivileged_userns = 0' | sudo tee /etc/sysctl.d/20-apparmor-donotrestrict.conf
-sudo sysctl --system
+### Setup backup
 
+- [ ] forget below things on setting up your backup for root! We are going to only backup things owned by the user in the future. Less problems with permissions. We just manually edit the configuration for root and document it well.
+- [ ] You will have to remove the ~/.config/systemd directory created by home-manager once, so that we can first write the files from dotbot there, before we proceed to add the ones from home-manager
+- [ ] If this is your desktop, once installed you need to run the `enable_services.sh` script with root to enable systemd services. Next you want to figure out how to get the home manager installed for the programs you installed through it (like ripgrep. Longterm you want to move as much as possible of your programs from apt to nix).
 
+Allow sleep in user mode (necessary to enable a scheduled sleep from your i3 config):
+
+Edit/create a sleep file:
+``` sh
+sudo echo "tassilo ALL=(ALL) NOPASSWD: /usr/bin/systemctl suspend" > /etc/sudoers.d/sleep
 ```
 
-```bash
-## Test the fix
-unshare --user --map-root-user echo "success"
+To setup your root backup service, compile your home-manager config and then run:
+
+``` bash
+sudo /home/tassilo/.nix-profile/bin/deploy-privileged
 ```
 
-### References
-- [Ubuntu Community Hub discussion](https://discourse.ubuntu.com/t/spec-unprivileged-user-namespace-restrictions-via-apparmor-in-ubuntu-23-10/37626)
-- [Ask Ubuntu solution](https://askubuntu.com/questions/1511854/how-to-permanently-disable-ubuntus-new-apparmor-user-namespace-creation-restric)
+- [ ] For your root backup service to work, you need to store the access details:
 
+``` sh
+op read 'op://Personal/Encryption borg base laptop passphrase/password' | sudo tee /root/.borg_passphrase > /dev/null
+sudo chmod 600 /root/.borg_passphrase
+```
+
+### Setup timers
+
+To check when your timers are running next, you can run:
+
+
+``` bash
+systemctl list-timers
+```
+or 
+
+``` bash
+systemctl --user list-timers
+```
+for your user level timers.
 
 # secrets
 So far we didn't have a proper solution to secrets.
