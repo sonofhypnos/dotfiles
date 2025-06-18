@@ -91,6 +91,15 @@ Remove the keybindings config from regolith (since you configure it manually)
 sudo apt remove regolith-i3-control-center-regolith
 ```
 
+Add your favorite look:
+```bash
+sudo apt install regolith-look-*
+```
+The above doesn't literally work sadly
+```bash
+sudo apt install regolith-look-blackhole 
+```
+
 ### Setup remaining
 
 - [ ] forget below things on setting up your backup for root! We are going to only backup things owned by the user in the future. Less problems with permissions. We just manually edit the configuration for root and document it well.
