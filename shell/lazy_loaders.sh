@@ -29,7 +29,7 @@ conda_setup() {
 # Create alias for conda and any other commands that need it
 conda() {
     conda_setup
-    conda "$@"
+    command conda "$@"
 }
 
 # Lazy load SDKMAN
@@ -37,7 +37,7 @@ export SDKMAN_DIR="$HOME/.sdkman"
 sdk() {
     if [ -s "$SDKMAN_DIR/bin/sdkman-init.sh" ]; then
         source "$SDKMAN_DIR/bin/sdkman-init.sh"
-        sdk "$@"
+        command sdk "$@"
     else
         echo "SDKMAN not found"
     fi
@@ -48,7 +48,7 @@ export NVM_DIR="$HOME/.nvm"
 nvm() {
     if [ -s "$NVM_DIR/nvm.sh" ]; then
         source "$NVM_DIR/nvm.sh"
-        nvm "$@"
+        command nvm "$@"
     else
         echo "NVM not found"
     fi
@@ -59,7 +59,7 @@ node() {
     unset -f node npm npx yarn
     if [ -s "$NVM_DIR/nvm.sh" ]; then
         source "$NVM_DIR/nvm.sh"
-        node "$@"
+        command node "$@"
     else
         echo "NVM not found"
     fi
@@ -68,17 +68,17 @@ node() {
 # Create aliases for other node-related commands
 npm() {
     node --version >/dev/null
-    npm "$@"
+    command npm "$@"
 }
 
 npx() {
     node --version >/dev/null
-    npx "$@"
+    command npx "$@"
 }
 
 yarn() {
     node --version >/dev/null
-    yarn "$@"
+    command yarn "$@"
 }
 
 # Lazy load pyenv
@@ -86,5 +86,5 @@ pyenv() {
     export PYENV_ROOT="$HOME/.pyenv"
     path_prepend "$PYENV_ROOT/bin"
     eval "$(command pyenv init -)"
-    pyenv "$@"
+    command pyenv "$@"
 }
