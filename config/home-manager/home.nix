@@ -113,6 +113,7 @@ in {
       jdk17_headless # Java development kit (headless)
       elan # Lean theorem prover toolchain manager
       poetry # Python package management
+      conda
 
       # Development Tools - Formatters & Linters
       nixfmt-classic # Nix code formatter for syntax highlighting
