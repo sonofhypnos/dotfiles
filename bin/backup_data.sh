@@ -62,16 +62,6 @@ TEMP_LOG_DIR="$HOME/.cache/borg_backup_logs"
 FIREFOX_PROFILE_DIR="/home/tassilo/.mozilla/" # NOTE: Manually also added to ignore directories
 TEMP_FIREFOX_DIR="$TEMP_LOG_DIR/firefox_backup"
 
-LOG_FILES_TO_COPY=(
-    "/var/log/borg_backup.log"
-    '/var/log/journal/*'
-    '/var/log/syslog'
-    #TODO: implement similar solution for chrome that we implemented for firefox
-)
-
-# Append log files to exclude patterns
-EXCLUDE_PATTERNS+=("${LOG_FILES_TO_COPY[@]}")
-
 # Borg pruning settings
 KEEP_DAILY=7
 KEEP_WEEKLY=4
@@ -90,20 +80,6 @@ resume_firefox() {
     pgrep firefox | xargs -r -n1 kill -CONT
 }
 
-# Function to copy log files
-copy_log_files() {
-    mkdir -p "$TEMP_LOG_DIR"
-    for file_pattern in "${LOG_FILES_TO_COPY[@]}"; do
-        # Use find to properly handle wildcards
-        find $(dirname "$file_pattern") -path "$file_pattern" -print0 | while IFS= read -r -d '' file; do
-            # Create the directory structure in the temp directory
-            target_dir="$TEMP_LOG_DIR$(dirname "$file")"
-            mkdir -p "$target_dir"
-            # Copy the file
-            cp -a "$file" "$target_dir/"
-        done
-    done
-}
 
 # Function to copy Firefox files
 copy_firefox_files() {
