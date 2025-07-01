@@ -24,7 +24,9 @@
 GUI_USER="tassilo"
 
 # The repository URL for your Borg backup
-BORG_REPO="ssh://d7h5sb0u@borgbase/./repo"
+BORG_REPO="borgbase:./repo"
+
+
 
 LAST_ARCHIVE_LOG="$HOME/.local/share/borg_last_archive.log"
 BORG_LOG_FILE="$HOME/.local/share/borg_backup.log"

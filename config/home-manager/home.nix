@@ -260,6 +260,14 @@ in {
       extraConfig = ''
         IdentityAgent ${onePassPath}
       '';
+      matchBlocks = {
+        "borgbase" = {
+          hostname = "d7h5sb0u.repo.borgbase.com";
+          user = "d7h5sb0u";
+          identityFile = "~/.ssh/borg_base_ssh";
+          identitiesOnly = true;
+        };
+      };
     };
     fzf.enable = true;
     neovim = {
