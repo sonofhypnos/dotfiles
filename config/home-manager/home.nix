@@ -223,6 +223,8 @@ in {
       URxvt.perl-lib: ${clipboardScriptPath}
       URxvt.perl-ext-common: default,clipboard
       URxvt.keysym.C-S-V: perl:clipboard:paste
+      # Make urxvt use zsh
+      URxvt*shell: /bin/zsh
     '';
 
     file = {
