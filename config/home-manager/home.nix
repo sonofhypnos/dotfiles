@@ -95,6 +95,7 @@ in {
       zotero # Reference manager for academic papers
       xournalpp # PDF annotation and note-taking
       sioyek # Another cool pdf viewer
+      borgbackup # Backups
       #okular # Alternative PDF viewer
 
       # Development Tools - Core
