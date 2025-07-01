@@ -26,11 +26,8 @@ GUI_USER="tassilo"
 # The repository URL for your Borg backup
 BORG_REPO="ssh://d7h5sb0u@borgbase/./repo"
 
-# The path to the log file for storing the last successful archive date
-LAST_ARCHIVE_LOG="/var/log/borg_last_archive.log"
-
-# The path to Borg log file
-BORG_LOG_FILE="/var/log/borg_backup.log"
+LAST_ARCHIVE_LOG="$HOME/.local/share/borg_last_archive.log"
+BORG_LOG_FILE="$HOME/.local/share/borg_backup.log"
 
 # The 1Password item path for the Borg passphrase (Or adjust code below whichever way you handle secrets.)
 BORG_PASSPHRASE_1PASSWORD_PATH="op://Personal/Encryption borg base laptop passphrase/password"
@@ -47,8 +44,6 @@ EXCLUDE_PATTERNS=(
     '/home/tassilo/Dropbox/**'
     '/home/tassilo/Games/'
     '/home/**/Code Cache/**'
-    '/var/snap/lxd/common/lxd/disks/storage1.img'
-    '/var/tmp/*'
     '/home/tassilo/Dropbox/semester*/**/*.mp4'
     '/home/tassilo/Videos/simon/**'
     '/home/tassilo/Videos/transcribe/**'
@@ -58,16 +53,11 @@ EXCLUDE_PATTERNS=(
     '/home/tassilo/.dropbox/'
     '/home/tassilo/.mozilla/'
     '/home/tassilo/.vscode/'
-    '/nix/store/**'
-    '/nix/var/**'
-    '/nix/profiles/**'
-    '/nix/var/nix/**'
-    '/nix/var/log/**'
 )
 
-TEMP_LOG_DIR="/tmp/borg_backup_logs"
+TEMP_LOG_DIR="$HOME/.cache/borg_backup_logs"
 
-FIREFOX_PROFILE_DIR="/home/tassilo/.mozilla/firefox/*.default-release" # NOTE: Manually also added to ignore directories
+FIREFOX_PROFILE_DIR="/home/tassilo/.mozilla/" # NOTE: Manually also added to ignore directories
 TEMP_FIREFOX_DIR="$TEMP_LOG_DIR/firefox_backup"
 
 LOG_FILES_TO_COPY=(
@@ -116,7 +106,7 @@ copy_log_files() {
 # Function to copy Firefox files
 copy_firefox_files() {
     local profile_dir
-    profile_dir="/home/tassilo/.mozilla"
+    profile_dir=$FIREFOX_PROFILE_DIR
     if [ -n "$profile_dir" ]; then
         mkdir -p "$TEMP_FIREFOX_DIR"
         cp -a "$profile_dir"/* "$TEMP_FIREFOX_DIR/"
@@ -130,8 +120,8 @@ cleanup_temp_logs() {
     rm -rf "$TEMP_LOG_DIR"
 }
 
-if [ "$EUID" -ne 0 ]; then
-    echo "Please run as root"
+if [ "$EUID" -e 0 ]; then
+    echo "Please run as user"
     exit 1
 fi
 
@@ -162,17 +152,16 @@ get_last_archive_from_log() {
     fi
 }
 
-# Function to check for lock and ask user to break it using zenity
+# Functions involving user-interaction with zenity:
 check_and_break_lock() {
     if borg list "$BORG_REPO" &>/dev/null; then
         return 0
     else
         local response
-        response=$(sudo -u $GUI_USER DISPLAY=:0 zenity --entry \
+        response=$(zenity --entry \
             --title="Borg Backup Lock Detected" \
             --text="A lock was detected on the server.\nTo break the lock, type 'break-lock' (without quotes) and press Enter.\nTo cancel, leave blank and press Enter or close this window." \
             --width=400)
-
         if [ "$response" = "break-lock" ]; then
             borg break-lock "$BORG_REPO"
             return $?
@@ -182,15 +171,14 @@ check_and_break_lock() {
     fi
 }
 
-# Function to display error message using zenity
 display_error_message() {
     local message="$1"
-    sudo -u $GUI_USER DISPLAY=:0 zenity --error --text="$message" --title="Backup Error" --width=300
+    zenity --error --text="$message" --title="Backup Error" --width=300
 }
 
 display_info_message() {
     local message="$1"
-    sudo -u $GUI_USER DISPLAY=:0 zenity --info --text="$message" --title="Backup Information" --width=300
+    zenity --info --text="$message" --title="Backup Information" --width=300
 }
 
 # --- URL History Archiving --- #
@@ -202,8 +190,9 @@ last_archive_info=$(get_last_archive_from_log)
 
 display_info_message "Last successful archive:\n$last_archive_info"
 
-BORG_PASSPHRASE=$(cat /root/.borg_passphrase)
-export BORG_PASSPHRASE
+# FIXME: we need to fetch the password differently now that the script is run by the user, it will only work if BORG_PASSPHRASE is already defined
+# BORG_PASSPHRASE=$(cat /root/.borg_passphrase)
+# export BORG_PASSPHRASE
 
 if [ -z "$BORG_PASSPHRASE" ]; then
     display_info_message "Password not found. Aborting backup"
@@ -253,12 +242,8 @@ eval borg create \
     --exclude-caches \
     "$exclude_options" \
     ::'{hostname}-{now}' \
-    /etc \
     /home \
-    /mnt/ssd2 \
-    /root \
-    "$TEMP_LOG_DIR" \
-    /var
+    "$TEMP_LOG_DIR"
 
 backup_exit=$?
 
