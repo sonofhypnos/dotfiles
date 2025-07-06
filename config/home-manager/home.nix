@@ -147,6 +147,8 @@ in {
       # Sandboxed applications (initially problematic on Ubuntu 24.04)
       codex # AI coding assistant
 
+      pkgs.texlivePackages.chemfig
+
       #androidenv.androidPkgs_9_0.platform-tools # Android development tools (deprecated in 24.11, unused)
 
       # Custom Package: Git-Dropbox Integration
