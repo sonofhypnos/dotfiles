@@ -168,8 +168,7 @@ last_archive_info=$(get_last_archive_from_log)
 
 display_info_message "Last successful archive:\n$last_archive_info"
 
-# FIXME: we need to fetch the password differently now that the script is run by the user, it will only work if BORG_PASSPHRASE is already defined
-# BORG_PASSPHRASE=$(cat /root/.borg_passphrase)
+BORG_PASSPHRASE=$(cat ~/.borg_passphrase)
 # export BORG_PASSPHRASE
 
 if [ -z "$BORG_PASSPHRASE" ]; then
