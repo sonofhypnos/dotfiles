@@ -9,9 +9,9 @@ current_shell=$(ps -p $$ -o comm=)
 export CONDA_HOME="$HOME/miniconda3"
 conda_setup() {
     if [ "$current_shell" = "zsh" ] || [ "$current_shell" = "-zsh" ]; then
-        __conda_setup="$('$CONDA_HOME/bin/conda' 'shell.zsh' 'hook' 2>/dev/null)"
+        __conda_setup="$("$CONDA_HOME/bin/conda" 'shell.zsh' 'hook' 2>/dev/null)"
     else
-        __conda_setup="$('$CONDA_HOME/bin/conda' 'shell.bash' 'hook' 2>/dev/null)"
+        __conda_setup="$("$CONDA_HOME/bin/conda" 'shell.bash' 'hook' 2>/dev/null)"
     fi
 
     if [ $? -eq 0 ]; then
@@ -25,6 +25,7 @@ conda_setup() {
     fi
     unset __conda_setup
 }
+
 
 # Create alias for conda and any other commands that need it
 conda() {
