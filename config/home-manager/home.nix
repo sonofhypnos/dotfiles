@@ -382,6 +382,9 @@ in {
 
             # Display tabs even in fullscreen mode:
             "browser.fullscreen.autohide" = false;
+
+            # This allows the user to add stylesheets TODO: (we have a custom stilesheet in these dotfiles, it is not being compiled to anywhere though)
+            "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
           };
           extensions.packages =
             with firefoxAddons; [ # https://discourse.nixos.org/t/firefox-extensions-with-home-manager/34108/4
