@@ -69,8 +69,11 @@ in {
     packages = with pkgs; [
       # Communication & Social
       element-desktop # Matrix client for encrypted messaging
-      discord # Gaming/community chat platform NOTE: Sandbox issues for discord were resolved by root changes documented in the readme
-      signal-desktop # Private messaging with end-to-end encryption
+      discord # Gaming/community chat platform
+      # NOTE: Sandbox issues for discord were resolved by root changes documented in the readme
+      signalUnstable # Private messaging with end-to-end encryption
+      # NOTE: we renamed the package, because if we kept the original name the
+      # overlay did not successfully overwrite the original name
       slack # Work
 
       # Web Browsers
@@ -142,10 +145,10 @@ in {
 
       # Research & Biology
       meme-suite # Motif-based sequence analysis tools for bioinformatics
-      ollama # Local LLM runner
+      ollamaUnstable # Local LLM runner
 
       # Sandboxed applications (initially problematic on Ubuntu 24.04)
-      codex # AI coding assistant
+      codexUnstable # AI coding assistant
 
       pkgs.texlivePackages.chemfig
 
