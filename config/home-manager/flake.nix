@@ -14,10 +14,6 @@
       url = "github:nix-community/NUR";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    emacs-igc-src = {
-      url = "github:emacs-mirror/emacs/feature/igc";
-      flake = false;
-    };
   };
 
   outputs = { self, nixpkgs, nixpkgs-unfree, nixpkgs-unstable, home-manager, nur
@@ -60,28 +56,9 @@
           overlays = [
             nur.overlays.default
             (final: prev: {
-              # firefox = nixpkgs-unstable.legacyPackages.${prev.system}.firefox;
               ollamaUnstable = unstable.ollama;
               codexUnstable = unstable.codex;
               signalUnstable = unstable.signal-desktop;
-              # Define emacs-igc inside flake.nix
-              emacs-igc = prev.emacs30.overrideAttrs (oldAttrs: {
-                pname = "emacs-igc";
-                version = "30.1-igc";
-                src = emacs-igc-src;
-                buildInputs = oldAttrs.buildInputs
-                  ++ [ prev.mps ]; # Ensure libmps is available
-                configureFlags = oldAttrs.configureFlags
-                  ++ [ "--with-mps=yes" ]; # Use MPS by default
-
-                postFixup = (oldAttrs.postFixup or "") + ''
-                  mv $out/bin/emacs $out/bin/emacs-igc
-                  mv $out/bin/emacsclient $out/bin/emacsclient-igc
-                  rm -f $out/lib/systemd/user/emacs.service
-                  rm -rf $out/share/info/dired-x.info.gz
-                ''; # We rename in this phase, since patchelf is run in this phase which still needs the regular binary name
-
-              });
             })
           ];
 
