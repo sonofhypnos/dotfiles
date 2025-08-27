@@ -238,6 +238,10 @@ in {
     file = {
       ".XCompose".source = ../../nix/XCompose;
       ".gitconfig".source = ../../nix/gitconfig;
+      ".config" = {
+        source = ../../nix/.config;
+        recursive = true;
+      };
       "Dropbox/.keep" = {
         text = "";
       }; # We add an empty file to add an empty directory
