@@ -197,9 +197,6 @@ for pattern in "${EXCLUDE_PATTERNS[@]}"; do
     exclude_options+="--exclude '$pattern' "
 done
 
-# Copy log files to temporary directory
-copy_log_files
-
 # Handle Firefox files
 info "Pausing Firefox for file copy"
 pause_firefox
