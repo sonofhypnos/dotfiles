@@ -250,8 +250,6 @@ in {
 
   };
 
-  privileged.enable = true;
-
   dconf.settings = {
     "org/gnome/desktop/interface" = { color-scheme = "prefer-dark"; };
     "org/gnome/desktop/nautilus/preferences" = {
