@@ -197,10 +197,15 @@ if ! check_and_break_lock; then
     exit 1
 fi
 
-# Prepare exclude patterns for borg create command
-exclude_options=""
+# # Prepare exclude patterns for borg create command
+# exclude_options=""
+# for pattern in "${EXCLUDE_PATTERNS[@]}"; do
+#     exclude_options+="--exclude '$pattern' "
+# done
+
+exclude_args=()
 for pattern in "${EXCLUDE_PATTERNS[@]}"; do
-    exclude_options+="--exclude '$pattern' "
+  exclude_args+=( --exclude "$pattern" )
 done
 
 # Handle Firefox files
@@ -212,18 +217,25 @@ info "Firefox resumed"
 
 # Backup the most important directories into an archive named after
 # the machine this script is currently running on:
-eval borg create \
-    --verbose \
-    --filter AME \
-    --list \
-    --stats \
-    --show-rc \
-    --checkpoint-interval 1800 \
-    --exclude-caches \
-    "$exclude_options" \
-    ::'{hostname}-{now}' \
-    /home \
-    "$TEMP_LOG_DIR"
+# borg create \
+#     --verbose \
+#     --filter AME \
+#     --list \
+#     --stats \
+#     --show-rc \
+#     --checkpoint-interval 1800 \
+#     --exclude-caches \
+#     "$exclude_options" \
+#     ::'{hostname}-{now}' \
+#     /home \
+#     "$TEMP_LOG_DIR"
+
+borg create \
+  --verbose --filter AME --list --stats --show-rc \
+  --checkpoint-interval 1800 --exclude-caches \
+  "${exclude_args[@]}" \
+  ::'{hostname}-{now}' \
+  /home "$TEMP_LOG_DIR"
 
 backup_exit=$?
 
