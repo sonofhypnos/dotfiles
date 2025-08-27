@@ -87,7 +87,9 @@ copy_firefox_files() {
     profile_dir=$FIREFOX_PROFILE_DIR
     if [ -n "$profile_dir" ]; then
         mkdir -p "$TEMP_FIREFOX_DIR"
-        cp -a "$profile_dir"/* "$TEMP_FIREFOX_DIR/"
+        cp "$profile_dir"/* "$TEMP_FIREFOX_DIR/" #NOTE: we are not preserving
+        #ownership for root own things here. There is some root owned firefox
+        #stuff here that doesn't seem important enough to deal with.
     else
         info "Firefox profile directory not found"
     fi
