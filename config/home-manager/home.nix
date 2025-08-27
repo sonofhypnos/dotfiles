@@ -130,6 +130,7 @@ in {
       ripgrep # Fast text search tool (better grep)
       stripe-cli # CLI for Stripe payment platform API
       fd # search
+      parallel # more pretty than bash for-loops
 
       # Terminal & Shell
       rxvt-unicode # Lightweight Unicode terminal emulator
