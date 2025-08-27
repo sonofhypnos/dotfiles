@@ -16,8 +16,8 @@
     };
   };
 
-  outputs = { self, nixpkgs, nixpkgs-unfree, nixpkgs-unstable, home-manager, nur
-    , emacs-igc-src, ... }:
+  outputs =
+    { self, nixpkgs, nixpkgs-unfree, nixpkgs-unstable, home-manager, nur, ... }:
     let
       system = "x86_64-linux";
       unfreePredicate = pkg:
