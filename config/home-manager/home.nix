@@ -510,6 +510,34 @@ in {
       }];
     };
   };
+  systemd.user = {
+    services.borgbackup = {
+      Unit = { Description = "Borg Backup"; };
+      Service = {
+        Type = "oneshot";
+        ExecStart = ''
+          ${pkgs.systemd}/bin/systemd-inhibit \
+            --what=sleep:shutdown:idle \
+            --who="borg backup" \
+            --why="Backup in progress" \
+            /home/tassilo/bin/backup_data.sh
+        '';
+        # capture output into file:
+        StandardOutput = "append:%h/.local/share/borg_backup.log";
+        StandardError = "append:%h/.local/share/borg_backup.log";
+      };
+    };
+
+    timers.borgbackup = {
+      Unit = { Description = "Borg Backup Timer"; };
+      Timer = {
+        Unit = "borgbackup.service";
+        OnBootSec = "30min";
+        RandomizedDelaySec = "5m";
+      };
+      Install = { WantedBy = [ "timers.target" ]; };
+    };
+  };
 
   services = {
     # dropbox.enable = true; #FIXME: for unknown reasons, dropbox doesn't render properly if we install it via nix.
