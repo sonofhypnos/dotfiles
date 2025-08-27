@@ -20,7 +20,9 @@ My [Doom-Emacs](https://github.com/hlissner/doom-emacs/blob/develop/docs/getting
 - `Xcompose` - Compose key file for the German [neo keyboard layout](https://neo-layout.org/)
 - `trydactylrc` - [tridactyl](https://github.com/tridactyl/tridactyl) configuration for Vim navigation in Firefox
 
-## Setting Up Remote Machine (intended for myself)
+# Setting up Machines (intended for myself)
+
+## Setting Up Remote Machine 
 
 In case we want to push stuff to GitHub:
 
@@ -242,12 +244,6 @@ python3 -c "x=[0]*10**8; input('Press Enter to exit or Ctrl+C to kill: ')"
 ### Checking Timers
 
 To check when your timers are running next, you can run:
-
-```bash
-systemctl list-timers
-```
-
-or 
 
 ```bash
 systemctl --user list-timers
