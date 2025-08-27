@@ -171,7 +171,9 @@ last_archive_info=$(get_last_archive_from_log)
 display_info_message "Last successful archive:\n$last_archive_info"
 
 BORG_PASSPHRASE=$(cat ~/.borg_passphrase)
-# export BORG_PASSPHRASE
+export BORG_PASSPHRASE
+# export BORG_PASSCOMMAND='cat ~/.borg_passphrase'
+
 
 if [ -z "$BORG_PASSPHRASE" ]; then
     display_info_message "Password not found. Aborting backup"
