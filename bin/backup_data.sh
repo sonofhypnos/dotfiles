@@ -55,6 +55,8 @@ EXCLUDE_PATTERNS=(
     '/home/tassilo/.dropbox/'
     '/home/tassilo/.mozilla/'
     '/home/tassilo/.vscode/'
+    '/home/tassilo/.local/share/Trash'
+    '/home/lost+found' #This is at the root of a filesystem for some system related things and it is not user owned
 )
 
 TEMP_LOG_DIR="$HOME/.cache/borg_backup_logs"
