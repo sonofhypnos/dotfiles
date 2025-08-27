@@ -63,7 +63,7 @@
           ];
 
         };
-        modules = [ ./home.nix ./privileged.nix ];
+        modules = [ ./home.nix ];
       };
     in { homeConfigurations = { tassilo = home; }; };
 }
