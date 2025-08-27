@@ -98,7 +98,7 @@ cleanup_temp_logs() {
     rm -rf "$TEMP_LOG_DIR"
 }
 
-if [ "$EUID" -e 0 ]; then
+if [ "$EUID" -eq 0 ]; then
     echo "Please run as user"
     exit 1
 fi
