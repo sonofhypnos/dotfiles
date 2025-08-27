@@ -123,6 +123,7 @@ in {
       nixfmt-classic # Nix code formatter for syntax highlighting
       nodePackages.prettier # Multi-language code formatter (required by Emacs apheleia)
       languagetool # Grammar and style checker
+      sqlite # Required for backup urls script
 
       # CLI Utilities & Data Processing
       jq # Command-line JSON processor
