@@ -273,6 +273,7 @@ in {
           user = "d7h5sb0u";
           identityFile = "~/.ssh/borg_base_ssh";
           identitiesOnly = true;
+          extraOptions = { GSSAPIAuthentication = "no"; };
         };
       };
     };
