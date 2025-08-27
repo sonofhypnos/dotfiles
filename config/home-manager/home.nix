@@ -509,31 +509,59 @@ in {
     };
   };
   systemd.user = {
-    services.borgbackup = {
-      Unit = { Description = "Borg Backup"; };
-      Service = {
-        Type = "oneshot";
-        ExecStart = ''
-          ${pkgs.systemd}/bin/systemd-inhibit \
-            --what=sleep:shutdown:idle \
-            --who="borg backup" \
-            --why="Backup in progress" \
-            /home/tassilo/bin/backup_data.sh
-        '';
-        # capture output into file:
-        StandardOutput = "append:%h/.local/share/borg_backup.log";
-        StandardError = "append:%h/.local/share/borg_backup.log";
+    services = {
+      writingtracker = {
+        Unit = { Description = "Writing Tracker"; };
+
+        Service = {
+          Type = "simple";
+          ExecStart = "/home/tassilo/repos/writing-tracker/writing-tracker.sh";
+
+          StandardOutput = "append:%h/.local/share/writing_tracker.log";
+          StandardError = "append:%h/.local/share/writing_tracker.log";
+        };
+
+      };
+      borgbackup = {
+        Unit = { Description = "Borg Backup"; };
+        Service = {
+          Type = "oneshot";
+          ExecStart = ''
+            ${pkgs.systemd}/bin/systemd-inhibit \
+              --what=sleep:shutdown:idle \
+              --who="borg backup" \
+              --why="Backup in progress" \
+              /home/tassilo/bin/backup_data.sh
+          '';
+          # capture output into file:
+          StandardOutput = "append:%h/.local/share/borg_backup.log";
+          StandardError = "append:%h/.local/share/borg_backup.log";
+        };
       };
     };
 
-    timers.borgbackup = {
-      Unit = { Description = "Borg Backup Timer"; };
-      Timer = {
-        Unit = "borgbackup.service";
-        OnBootSec = "30min";
-        RandomizedDelaySec = "5m";
+    timers = {
+      writingtracker = {
+        Unit = { Description = "Writing Tracker Timer"; };
+        Timer = {
+          Unit = "writingtracker.service";
+          OnBootSec = "15min";
+          RandomizedDelaySec = "5m";
+
+        };
+
+        Install = { WantedBy = [ "timers.target" ]; };
       };
-      Install = { WantedBy = [ "timers.target" ]; };
+
+      borgbackup = {
+        Unit = { Description = "Borg Backup Timer"; };
+        Timer = {
+          Unit = "borgbackup.service";
+          OnBootSec = "30min";
+          RandomizedDelaySec = "5m";
+        };
+        Install = { WantedBy = [ "timers.target" ]; };
+      };
     };
   };
 
