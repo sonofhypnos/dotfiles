@@ -238,31 +238,8 @@ python3 -c "x=[0]*10**8; input('Press Enter to exit or Ctrl+C to kill: ')"
 
 - [ ] Forget the things below on setting up your backup for root! We are going to only backup things owned by the user in the future. Fewer problems with permissions. We just manually edit the configuration for root and document it well.
 - [ ] You will have to remove the `~/.config/systemd` directory created by home-manager once, so that we can first write the files from dotbot there, before we proceed to add the ones from home-manager.
-- [ ] If this is your desktop, once installed you need to run the `enable_services.sh` script with root to enable systemd services. Next you want to figure out how to get the home manager installed for the programs you installed through it (like ripgrep). Long-term you want to move as much as possible of your programs from apt to nix.
 
-Allow sleep in user mode (necessary to enable a scheduled sleep from your i3 config):
-
-Edit/create a sleep file:
-
-```sh
-sudo echo "tassilo ALL=(ALL) NOPASSWD: /usr/bin/systemctl suspend" > /etc/sudoers.d/sleep
-```
-
-To setup your root backup service, compile your home-manager config and then run:
-
-```bash
-sudo /home/tassilo/.nix-profile/bin/deploy-privileged
-```
-
-- [ ] For your root backup service to work, you need to store the access details:
-
-```sh
-op read 'op://Personal/Encryption borg base laptop passphrase/password' | sudo tee /root/.borg_passphrase > /dev/null
-sudo chmod 600 /root/.borg_passphrase
-```
-
-
-### Setup Timers
+### Checking Timers
 
 To check when your timers are running next, you can run:
 
@@ -299,11 +276,7 @@ Search and replace tags
 
 ## Secrets
 
-So far we didn't have a proper solution to secrets.
-
-TODO:
-- [ ] Add secrets for backup 
-- [ ] Add secrets for SSH (check which ones you want on desktop or other machines etc.)
+So far we don't have a proper solution to secrets.
 
 ### Magic SysRq Keys
 
@@ -313,6 +286,8 @@ On the ThinkPad T460, the magic key just requires you to press Fn. Just Fn+F is 
 
 ## TODOs
 
+- [ ] Add secrets for backup 
+- [ ] Add secrets for SSH (check which ones you want on desktop or other machines etc.)
 - [ ] Note: there is a problem, because we need the home-manager setup thing, but to get that zshrc and bashrc need to be set up if we want to add things under `~/bin` to the path, but this is done by home-manager:
   - [ ] Insight: we do not need to properly install home-manager: we can use `nix-shell -p home-manager` and then install home-manager with home-manager! (This worked for me on a new install flawlessly)
 - [ ] Fix your version control setup with Dropbox? Using a remote to backup your stuff doesn't work, because your repository is too big. Probably the easiest solution is to just give up on having a remote and to just use ... instead.
