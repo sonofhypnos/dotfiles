@@ -1,22 +1,5 @@
 {
   "nodes": {
-    "emacs-igc-src": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1748344017,
-        "narHash": "sha256-owmatNLN36/csbvknygKOFPZ3kB8IvHvjT+9n8nxnxY=",
-        "owner": "emacs-mirror",
-        "repo": "emacs",
-        "rev": "75acd19b011febb3eb35ee1bec1552b96e1bb25a",
-        "type": "github"
-      },
-      "original": {
-        "owner": "emacs-mirror",
-        "ref": "feature/igc",
-        "repo": "emacs",
-        "type": "github"
-      }
-    },
     "flake-parts": {
       "inputs": {
         "nixpkgs-lib": [
@@ -131,7 +114,6 @@
     },
     "root": {
       "inputs": {
-        "emacs-igc-src": "emacs-igc-src",
         "home-manager": "home-manager",
         "nixpkgs": "nixpkgs",
         "nixpkgs-unfree": "nixpkgs-unfree",
@@ -139,27 +121,6 @@
         "nur": "nur"
       }
     },
-    "treefmt-nix": {
-      "inputs": {
-        "nixpkgs": [
-          "nur",
-          "nixpkgs"
-        ]
-      },
-      "locked": {
-        "lastModified": 1733222881,
-        "narHash": "sha256-JIPcz1PrpXUCbaccEnrcUS8jjEb/1vJbZz5KkobyFdM=",
-        "owner": "numtide",
-        "repo": "treefmt-nix",
-        "rev": "49717b5af6f80172275d47a418c9719a31a78b53",
-        "type": "github"
-      },
-      "original": {
-        "owner": "numtide",
-        "repo": "treefmt-nix",
-        "type": "github"
-      }
-    }
   },
   "root": "root",
   "version": 7
