@@ -311,13 +311,13 @@ set $dna_coord "xclip -selection clipboard -o | sed -E 's/([^:]+):([0-9]+)\.\.([
 
 
 #set $generic_scratch /home/tassilo/bin/scratch_toggle.sh "generic-i3-window-class" "python ./command-to-launch-application.sh" "generic-window-instance-name"
-set $gpt_scratch /home/tassilo/bin/scratch_toggle.sh "google-chrome" "google-chrome-stable --app=https://chatgpt.com" "chatgpt.com"
+set $gpt_scratch /home/tassilo/bin/scratch_toggle.sh "Google-chrome" "google-chrome-stable --app=https://chatgpt.com" "chatgpt.com"
 set $emacs_scratch /home/tassilo/bin/scratch_toggle.sh "Emacs" "emacs" "Emacs"
 set $zotero_scratch /home/tassilo/bin/scratch_toggle.sh "Zotero" "zotero" "Zotero"
-set $fatebook_scratch /home/tassilo/bin/scratch_toggle.sh "google-chrome" "google-chrome-stable --app=https://fatebook.io" "fatebook.io"
-set $perplexity_scratch /home/tassilo/bin/scratch_toggle.sh "google-chrome" "google-chrome-stable --app=https://www.perplexity.ai" "www.perplexity.ai"
-set $claude_scratch /home/tassilo/bin/scratch_toggle.sh "google-chrome" "google-chrome-stable --app=https://claude.ai" "claude.ai"
-set $timetrack_scratch /home/tassilo/bin/scratch_toggle.sh "google-chrome" "google-chrome-stable --app=https://app.atimelogger.pro/reports" "^app\.atimelogger\.pro"
+set $fatebook_scratch /home/tassilo/bin/scratch_toggle.sh "Google-chrome" "google-chrome-stable --app=https://fatebook.io" "fatebook.io"
+set $perplexity_scratch /home/tassilo/bin/scratch_toggle.sh "Google-chrome" "google-chrome-stable --app=https://www.perplexity.ai" "www.perplexity.ai"
+set $claude_scratch /home/tassilo/bin/scratch_toggle.sh "Google-chrome" "google-chrome-stable --app=https://claude.ai" "claude.ai"
+set $timetrack_scratch /home/tassilo/bin/scratch_toggle.sh "Google-chrome" "google-chrome-stable --app=https://app.atimelogger.pro/reports" "^app\.atimelogger\.pro"
 
 ## Launch // Scratchpad mode [e]macs [z]otero [f]atebook [p]erplexity [o]penai [c]laude [t]imetrack // <> s ##/
 set $scratchpad_mode Scratchpad Mode: [e]macs [z]otero [f]atebook [p]erplexity [o]penai [c]laude [t]imetrack
@@ -390,21 +390,21 @@ set $copyq exec copyq menu
 bindsym $mod+y $copyq
 
 ## Launch // Open Openai Scratchpad // <> q ##/
-for_window [class="google-chrome" instance="chatgpt.com"] move scratchpad, scratchpad show
-bindsym $mod+q [class="google-chrome" instance="chatgpt.com"] scratchpad show
+for_window [class="Google-chrome" instance="chatgpt.com"] move scratchpad, scratchpad show
+bindsym $mod+q [class="Google-chrome" instance="chatgpt.com"] scratchpad show
 
 
 ## Launch // Open Claude Scratchpad // <> w ##/
-for_window [class="google-chrome" instance="claude.ai"] move scratchpad, scratchpad show
-bindsym $mod+w [class="google-chrome" instance="claude.ai"] scratchpad show
+for_window [class="Google-chrome" instance="claude.ai"] move scratchpad, scratchpad show
+bindsym $mod+w [class="Google-chrome" instance="claude.ai"] scratchpad show
 
 ## Launch // Open perplexity Scratchpad // <> p ##/
-for_window [class="google-chrome" instance="www.perplexity.ai"] move scratchpad, scratchpad show
-bindsym $mod+p [class="google-chrome" instance="www.perplexity.ai"] scratchpad show
+for_window [class="Google-chrome" instance="www.perplexity.ai"] move scratchpad, scratchpad show
+bindsym $mod+p [class="Google-chrome" instance="www.perplexity.ai"] scratchpad show
 
 ## Launch // Open Fatebook // <> Alt p ##/
-for_window [class="google-chrome" instance="fatebook.io"] move scratchpad, scratchpad show
-bindsym $mod+$alt+p [class="google-chrome" instance="fatebook.io"] scratchpad show
+for_window [class="Google-chrome" instance="fatebook.io"] move scratchpad, scratchpad show
+bindsym $mod+$alt+p [class="Google-chrome" instance="fatebook.io"] scratchpad show
 
 
 #Mnemonics (Create something to make new once or work with other stuff?)
