@@ -242,13 +242,8 @@ set $gmail google-chrome-stable --app=https://mail.google.com
 set $keep google-chrome-stable --app=https://keep.google.com
 set $calendar google-chrome-stable --app=https://calendar.google.com
 set $focusmate google-chrome-stable --app=https://focusmate.com
-set $gpt google-chrome-stable --app=https://chatgpt.com/?model=gpt-4o
-set $perp google-chrome-stable --app=https://www.perplexity.ai/
-#set $claude google-chrome-stable  --user-data-dir="/home/tassilo/.config/google-chrome/Profile 2" --no-extensions --app=https://claude.ai
-set $claude google-chrome-stable --app=https://claude.ai
 
 
-set $gpt3 google-chrome-stable --app=https://chatgpt.com/
 set $sitzplatz google-chrome-stable --app=https://raumbuchung.bibliothek.kit.edu/sitzplatzreservierung/day.php?year=2021&month=7&day=1&area=20&room=140
 set $teams google-chrome-stable --app=https://teams.microsoft.com
 set $todoist google-chrome-stable --app=https://todoist.com
@@ -277,10 +272,9 @@ mode "$main_launcher" {
 	bindsym m mode "default" exec $firefox https://i3wm.org/docs/userguide.html
 	bindsym p mode "default" exec $fatebook
 	bindsym i mode "default" exec $timetrack
-  bindsym 1 mode "default" exec $perp
-	bindsym 2 mode "default" exec $claude
-	bindsym 3 mode "default" exec $gpt3
-	bindsym 4 mode "default" exec $gpt
+    bindsym 1 mode "default" exec $perplexity_scratch
+	bindsym 2 mode "default" exec $claude_scratch
+	bindsym 4 mode "default" exec $gpt_scratch
 	bindsym a mode "default" exec anki
 #	bindsym m mode "default" exec $teams
 	bindsym r mode "default" exec firefox https://web.colreminder.com
@@ -317,13 +311,13 @@ set $dna_coord "xclip -selection clipboard -o | sed -E 's/([^:]+):([0-9]+)\.\.([
 
 
 #set $generic_scratch /home/tassilo/bin/scratch_toggle.sh "generic-i3-window-class" "python ./command-to-launch-application.sh" "generic-window-instance-name"
-set $gpt_scratch /home/tassilo/bin/scratch_toggle.sh "google-chrome" "google-chrome --app=https://chatgpt.com" "chatgpt.com"
+set $gpt_scratch /home/tassilo/bin/scratch_toggle.sh "google-chrome" "google-chrome-stable --app=https://chatgpt.com" "chatgpt.com"
 set $emacs_scratch /home/tassilo/bin/scratch_toggle.sh "Emacs" "emacs" "Emacs"
 set $zotero_scratch /home/tassilo/bin/scratch_toggle.sh "Zotero" "zotero" "Zotero"
-set $fatebook_scratch /home/tassilo/bin/scratch_toggle.sh "google-chrome" "google-chrome --app=https://fatebook.io" "fatebook.io"
-set $perplexity_scratch /home/tassilo/bin/scratch_toggle.sh "google-chrome" "google-chrome --app=https://www.perplexity.ai" "www.perplexity.ai"
-set $claude_scratch /home/tassilo/bin/scratch_toggle.sh "google-chrome" "google-chrome --app=https://claude.ai" "claude.ai"
-set $timetrack_scratch /home/tassilo/bin/scratch_toggle.sh "google-chrome" "google-chrome --app=https://app.atimelogger.pro/reports" "^app\.atimelogger\.pro"
+set $fatebook_scratch /home/tassilo/bin/scratch_toggle.sh "google-chrome" "google-chrome-stable --app=https://fatebook.io" "fatebook.io"
+set $perplexity_scratch /home/tassilo/bin/scratch_toggle.sh "google-chrome" "google-chrome-stable --app=https://www.perplexity.ai" "www.perplexity.ai"
+set $claude_scratch /home/tassilo/bin/scratch_toggle.sh "google-chrome" "google-chrome-stable --app=https://claude.ai" "claude.ai"
+set $timetrack_scratch /home/tassilo/bin/scratch_toggle.sh "google-chrome" "google-chrome-stable --app=https://app.atimelogger.pro/reports" "^app\.atimelogger\.pro"
 
 ## Launch // Scratchpad mode [e]macs [z]otero [f]atebook [p]erplexity [o]penai [c]laude [t]imetrack // <> s ##/
 set $scratchpad_mode Scratchpad Mode: [e]macs [z]otero [f]atebook [p]erplexity [o]penai [c]laude [t]imetrack
