@@ -1,6 +1,6 @@
 [Desktop Entry]
 Type=Application
-Exec=emacsclient -c -a ""
+Exec=/home/tassilo/bin/scratch_toggle.sh 'Emacs' 'emacsclient -c -a ""' 'Emacs'
 Hidden=false
 NoDisplay=false
 X-GNOME-Autostart-enabled=true
