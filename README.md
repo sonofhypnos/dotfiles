@@ -75,49 +75,29 @@ curl --proto '=https' --tlsv1.2 -sSf -L https://install.determinate.systems/nix 
 
 ### Setup Neo Keyboard
 
-Enable neo keyboard with GNOME:
-
-```sh
-gsettings set org.gnome.desktop.input-sources show-all-sources true
-```
-
-System-wide:
+System-wide (didn't work on ubuntu last time I tried):
 
 ```sh
 sudo localectl --no-convert set-x11-keymap de pc105 neo_qwertz
+```
+
+Enable with (if it doesn't work go to next step):
+``` sh
+setxkbmap de neo_qwertz
+```
+
+Enable neo keyboard with GNOME (not required on ubuntu last time I checked):
+
+```sh
+gsettings set org.gnome.desktop.input-sources show-all-sources true
 ```
 
 ### Setup Regolith
 
 - [ ] Check the latest way of installing regolith [here](https://regolith-desktop.com/docs/using-regolith/install/)
 
-Remove config files we already have installed. To find the correct config file to remove, we run:
-
-```bash
-~ dpkg -S /usr/share/regolith/i3/config.d/60_config_keybindings 
-regolith-i3-control-center-regolith: /usr/share/regolith/i3/config.d/60_config_keybindings
-~ dpkg -L regolith-i3-control-center-regolith
-/.
-/usr
-/usr/share
-/usr/share/doc
-/usr/share/doc/regolith-i3-control-center-regolith
-/usr/share/doc/regolith-i3-control-center-regolith/changelog.Debian.gz
-/usr/share/doc/regolith-i3-control-center-regolith/copyright
-/usr/share/regolith
-/usr/share/regolith/i3
-/usr/share/regolith/i3/config.d
-/usr/share/regolith/i3/config.d/60_config_keybindings
-~ 
-```
-
-What we see above is what we should see if regolith-i3-control-center-regolith only modifies a single file.
 
 Remove the keybindings config from regolith (since you configure it manually):
-
-```bash
-sudo apt remove regolith-i3-control-center-regolith
-```
 
 Add your favorite look:
 
@@ -130,6 +110,31 @@ The above doesn't literally work sadly:
 ```bash
 sudo apt install regolith-look-blackhole 
 ```
+
+<!-- NOTE: this is out of date, since we don't use any preinstalled config files anymore, since we are able to handle the same by just changing Xresources (but putting this here in case we find ourselves wanting to change those config files in the future): Remove config files we already have installed. To find the correct config file to remove, we run: -->
+
+<!-- ```bash -->
+<!-- sudo apt remove regolith-i3-control-center-regolith -->
+<!-- ``` -->
+<!-- ```bash -->
+<!-- ~ dpkg -S /usr/share/regolith/i3/config.d/60_config_keybindings  -->
+<!-- regolith-i3-control-center-regolith: /usr/share/regolith/i3/config.d/60_config_keybindings -->
+<!-- ~ dpkg -L regolith-i3-control-center-regolith -->
+<!-- /. -->
+<!-- /usr -->
+<!-- /usr/share -->
+<!-- /usr/share/doc -->
+<!-- /usr/share/doc/regolith-i3-control-center-regolith -->
+<!-- /usr/share/doc/regolith-i3-control-center-regolith/changelog.Debian.gz -->
+<!-- /usr/share/doc/regolith-i3-control-center-regolith/copyright -->
+<!-- /usr/share/regolith -->
+<!-- /usr/share/regolith/i3 -->
+<!-- /usr/share/regolith/i3/config.d -->
+<!-- /usr/share/regolith/i3/config.d/60_config_keybindings -->
+<!-- ~  -->
+<!-- ``` -->
+
+<!-- What we see above is what we should see if regolith-i3-control-center-regolith only modifies a single file. -->
 
 ### Install Applications via Snap That Otherwise Won't Work
 
@@ -151,7 +156,8 @@ sudo apt install ./1password-latest.deb
 ```
 - [ ] go to 1password and enable developer setings
 - [ ] disable default keybinds in 1password, because they conflict with Ctrl+a on neoqwertz layout
-- [ ] same for vscode
+
+- [ ] same for vscode??
 ### Ubuntu 24.04 User Namespace Fix
 
 Fixes Nix apps (dropbox, signal, chrome) getting `bwrap: Permission denied`:
