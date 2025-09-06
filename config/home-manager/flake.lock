@@ -95,8 +95,7 @@
         "flake-parts": "flake-parts",
         "nixpkgs": [
           "nixpkgs"
-        ],
-        "treefmt-nix": "treefmt-nix"
+        ]
       },
       "locked": {
         "lastModified": 1748405140,
@@ -120,7 +119,7 @@
         "nixpkgs-unstable": "nixpkgs-unstable",
         "nur": "nur"
       }
-    },
+    }
   },
   "root": "root",
   "version": 7
