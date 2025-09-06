@@ -122,7 +122,8 @@ sudo apt install regolith-look-blackhole
 ### Install Applications via Snap That Otherwise Won't Work
 
 ```bash
-sudo snap install steam anki-woodrow.anki
+sudo snap install steam 
+sudo snap install anki-woodrow
 ```
 
 Download the latest Chrome version and run:
