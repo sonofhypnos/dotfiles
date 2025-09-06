@@ -28,7 +28,12 @@ In case we want to push stuff to GitHub:
 
 ```bash
 sudo apt update
-sudo apt install git python3 curl neovim nix-bin #zsh emacs
+sudo apt install git python3 curl neovim 
+```
+
+Install nix with:
+``` bash
+curl --proto '=https' --tlsv1.2 -sSf -L https://install.determinate.systems/nix | sh -s -- install # See https://github.com/DeterminateSystems/nix-installer
 ```
 
 Install the repo:
@@ -58,8 +63,15 @@ fi
 
 ```bash
 sudo apt update
-sudo apt install git python3 curl neovim nix-bin #zsh emacs
+sudo apt install git python3 curl neovim 
 ```
+
+
+Install nix with:
+``` bash
+curl --proto '=https' --tlsv1.2 -sSf -L https://install.determinate.systems/nix | sh -s -- install # See https://github.com/DeterminateSystems/nix-installer
+```
+
 
 ### Setup Neo Keyboard
 
