@@ -109,3 +109,7 @@ Emacs*menu*Foreground: #eeeeec
 regolith.look.path: /usr/share/regolith-look/blackhole
 regolith.wallpaper.file: /usr/share/backgrounds/Rainbow_lightbulb_by_Daniel_Micallef.png
 regolith.lockscreen.wallpaper.file: /usr/share/backgrounds/Rainbow_lightbulb_by_Daniel_Micallef.png
+
+
+! Set the filemanager in regolith
+wm.program.files: nemo
