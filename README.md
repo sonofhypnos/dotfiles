@@ -169,6 +169,12 @@ sudo snap install steam
 sudo snap install anki-woodrow
 ```
 
+Important applications to install via apt:
+``` bash
+sudo apt install npm
+# Needed for copilot with emacs
+```
+
 Download the latest Chrome version and run:
 
 ```bash
@@ -304,7 +310,7 @@ sudo apt install fprintd libpam-fprintd
 Scan your fingerprint:
 
 ``` bash
-fprintd-enroll
+sudo fprintd-enroll
 ```
 
 After add
@@ -312,6 +318,7 @@ After add
 ``` bash
 sudo pam-auth-update
 ```
+And select fingerprint from the menu
 
 ### Install Other Great Applications That You Can't Install via Nix
 
@@ -332,6 +339,16 @@ Batch Note editing
 Search and replace tags
 
 (use Flexible Cloze 2 min note type)
+
+# Doom
+Compile your config (last time you compiled your config on 30.2 it took just 2 minutes).
+Install further dependencies inside doom:
+
+Run:
+```
+M-x: copilot-install-server
+```
+
 
 ## Secrets
 
