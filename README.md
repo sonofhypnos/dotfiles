@@ -72,7 +72,6 @@ Install nix with:
 curl --proto '=https' --tlsv1.2 -sSf -L https://install.determinate.systems/nix | sh -s -- install # See https://github.com/DeterminateSystems/nix-installer
 ```
 
-
 ### Setup Neo Keyboard
 
 System-wide (didn't work on ubuntu last time I tried):
@@ -91,6 +90,33 @@ Enable neo keyboard with GNOME (not required on ubuntu last time I checked):
 ```sh
 gsettings set org.gnome.desktop.input-sources show-all-sources true
 ```
+
+### Setup .dotfiles
+Download your dotfiles:
+
+``` sh
+git clone --depth 1 --recurse-submodules -j8 git@github.com:sonofhypnos/dotfiles.git ~/.dotfiles
+```
+
+
+``` sh
+nix-shell -p home-manager
+cd ~/.dotfiles/config/home-manager/
+home-manager switch -b backup --flake .#tassilo
+```
+
+After running the above we want to add home-manager independent of home-manager:
+``` sh
+nix profile add home-manager
+```
+
+finally we run the dotfiles install script:
+
+``` sh
+cd ~/.dotfiles
+./install
+```
+
 
 ### Setup Regolith
 
@@ -253,8 +279,6 @@ Test if killing memory is working via:
 python3 -c "x=[0]*10**8; input('Press Enter to exit or Ctrl+C to kill: ')"
 ```
 
-### Setup shell
-
 ### Setup Backup
 
 - [ ] Forget the things below on setting up your backup for root! We are going to only backup things owned by the user in the future. Fewer problems with permissions. We just manually edit the configuration for root and document it well.
@@ -301,6 +325,7 @@ On the ThinkPad T460, the magic key just requires you to press Fn. Just Fn+F is 
 
 ## TODOs
 
+- [ ] we could change our bios such that we power on our device at midnight and then allow our backup to run.
 - [ ] Add secrets for backup 
 - [ ] Add secrets for SSH (check which ones you want on desktop or other machines etc.)
 - [ ] Note: there is a problem, because we need the home-manager setup thing, but to get that zshrc and bashrc need to be set up if we want to add things under `~/bin` to the path, but this is done by home-manager:
