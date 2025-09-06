@@ -6,7 +6,6 @@
 - clean: ["~", "~/.oh-my-zsh/custom/", "~/.oh-my-zsh/custom/plugins/"]
 
 - link:
-    ~/.gitconfig:
     ~/.bashrc.local:
     ~/.zshrc.local:
     ~/.atamanrc.config:
