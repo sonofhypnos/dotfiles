@@ -294,7 +294,27 @@ systemctl --user list-timers
 
 for your user-level timers.
 
+### Setup fingerprint software
+
+``` bash
+sudo apt update
+sudo apt install fprintd libpam-fprintd
+```
+
+Scan your fingerprint:
+
+``` bash
+fprintd-enroll
+```
+
+After add
+
+``` bash
+sudo pam-auth-update
+```
+
 ### Install Other Great Applications That You Can't Install via Nix
+
 
 (Possibly because they need root access)
 
