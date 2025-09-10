@@ -115,3 +115,20 @@ batch_compress_videos() {
         compress_video "$input_file" "$output_file"
     done
 }
+
+untar() {
+    if [ $# -eq 0 ]; then
+        echo "Usage: untar file.tar [file2.tar ...]"
+        return 1
+    fi
+
+    for file in "$@"; do
+        if [ ! -f "$file" ]; then
+            echo "File not found: $file"
+            continue
+        fi
+
+        dir="${file%.tar}"
+        mkdir -p "$dir" && tar -xf "$file" -C "$dir"
+    done
+}
