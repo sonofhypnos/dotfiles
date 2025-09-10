@@ -113,3 +113,5 @@ regolith.lockscreen.wallpaper.file: /usr/share/backgrounds/Rainbow_lightbulb_by_
 
 ! Set the filemanager in regolith
 wm.program.files: nemo
+! Workaround to make sure ilia does not hang the system (dev seems to not understand that he is changing a datastructure in parallel when he is not allowed to)
+wm.program.launcher.app: /usr/bin/timeout 5 ilia -p apps
