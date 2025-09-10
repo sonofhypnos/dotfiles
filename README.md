@@ -342,7 +342,7 @@ Search and replace tags
 
 # Doom
 Compile your config (last time you compiled your config on 30.2 it took just 2 minutes).
-Install further dependencies inside doom:
+Install further dependencies inside doom (depends on node 20+ which you can install with nix):
 
 Run:
 ```
