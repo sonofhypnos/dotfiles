@@ -164,9 +164,10 @@ sudo apt install regolith-look-blackhole
 
 ### Install Applications via Snap That Otherwise Won't Work
 
+
 ```bash
-sudo snap install steam 
-sudo snap install anki-woodrow
+sudo snap install steam
+sudo snap install anki-desktop # Do NOT install anki-woodrow, which is deprecated
 ```
 
 Important applications to install via apt:
@@ -179,6 +180,8 @@ Download the latest Chrome version and run:
 
 ```bash
 sudo apt install ./google-chrome-stable_current_amd64.deb
+sudo apt install ./code_1.101.1-1750254731_amd64.deb
+
 ```
 
 Same for 1password and run (you cannot install 1password via snap since it will be sandboxed and can't do everything you want):
