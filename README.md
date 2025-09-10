@@ -310,11 +310,12 @@ sudo apt update
 sudo apt install fprintd libpam-fprintd
 ```
 
-Scan your fingerprint:
+Scan your fingerprint (NOTE: it is important that we add our user here, otherwise the fingerprint will be used for root, but that is not the correct fingerprint if you want to log into root, which requires the fingerprint from a user with root access):
 
 ``` bash
-sudo fprintd-enroll
+sudo fprintd-enroll tassilo
 ```
+
 
 After add
 
