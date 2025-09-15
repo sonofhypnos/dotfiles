@@ -118,6 +118,7 @@ in {
       elan # Lean theorem prover toolchain manager
       poetry # Python package management
       conda
+      R # Programming Language for statistical computing
 
       # Development Tools - Formatters & Linters
       nixfmt-classic # Nix code formatter for syntax highlighting
