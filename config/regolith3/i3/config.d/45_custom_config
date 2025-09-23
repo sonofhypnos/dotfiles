@@ -168,7 +168,7 @@ set $kill [con_id="__focused__"] exec --no-startup-id kill -9 $(xdotool getwindo
 #bindsym $mod+Shift+u [class=".*"] kill
 
 #shortcuts
-bindsym Mod1+F4 kill
+bindsym Mod1+F4 $kill
 bindsym $mod+Shift+u $kill # A more effective kill command
 bindsym $mod+BackSpace kill
 
