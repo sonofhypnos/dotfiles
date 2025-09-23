@@ -173,6 +173,8 @@ sudo snap install anki-desktop # Do NOT install anki-woodrow, which is deprecate
 Important applications to install via apt:
 ``` bash
 sudo apt install npm
+sudo apt install pulseaudio-utils # Useful for audio via commandline
+
 # Needed for copilot with emacs
 ```
 
