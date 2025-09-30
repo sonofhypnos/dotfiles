@@ -274,6 +274,14 @@ in {
           identityFile = "~/.ssh/borg_base_ssh";
           identitiesOnly = true;
         };
+        "vastai" = {
+          hostname = "45.67.213.138";
+          port = "22945";
+          user = "root";
+          identityAgent = "~/.1password/agent.sock";
+          localForward = "8080 localhost:8080";
+        };
+
       };
     };
     fzf.enable = true;
