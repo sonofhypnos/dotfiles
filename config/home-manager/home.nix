@@ -278,10 +278,16 @@ in {
           hostname = "45.67.213.138";
           port = 22945;
           user = "root";
-          identityAgent = "~/.1password/agent.sock";
-          # localForward = "8080 localhost:8080";
-        };
+          identityFile =
+            "~/.ssh/vastai"; # <-- use IdentityFile not identityAgent
+          identitiesOnly = true;
+          forwardAgent = true; # <-- instead of identityAgent = …
+          extraOptions = {
+            LocalForward =
+              "8080 localhost:8080"; # <-- forward not a first-class attr
 
+          };
+        };
       };
     };
     fzf.enable = true;
