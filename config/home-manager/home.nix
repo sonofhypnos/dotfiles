@@ -75,6 +75,7 @@ in {
       # NOTE: we renamed the package, because if we kept the original name the
       # overlay did not successfully overwrite the original name
       slack # Work
+      obs-studio
 
       # Web Browsers
       #google-chrome # We are not installing google chrome this way, because the
