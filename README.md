@@ -162,7 +162,7 @@ sudo apt install regolith-look-blackhole
 
 <!-- What we see above is what we should see if regolith-i3-control-center-regolith only modifies a single file. -->
 
-### Install Applications via Snap That Otherwise Won't Work
+### Install Applications Manually That Otherwise Won't Work
 
 
 ```bash
@@ -171,7 +171,6 @@ sudo snap install steam
 
 Important applications to install via apt:
 ``` bash
-sudo apt install anki #Do not try nix or snap! In both anki gets rendering issues from being sandboxed.
 sudo apt install npm
 sudo apt install pulseaudio-utils # Useful for audio via commandline
 
@@ -194,7 +193,8 @@ sudo apt install ./1password-latest.deb
 - [ ] go to 1password and enable developer setings
 - [ ] disable default keybinds in 1password, because they conflict with Ctrl+a on neoqwertz layout
 
-- [ ] same for vscode??
+
+- [ ] Download the most recent version of anki (don't try APT (too old), nix or snap (too sandboxed)) and install it manually.
 ### Ubuntu 24.04 User Namespace Fix
 
 Fixes Nix apps (dropbox, signal, chrome) getting `bwrap: Permission denied`:
