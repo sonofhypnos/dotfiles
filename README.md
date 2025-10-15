@@ -167,11 +167,11 @@ sudo apt install regolith-look-blackhole
 
 ```bash
 sudo snap install steam
-sudo snap install anki-desktop # Do NOT install anki-woodrow, which is deprecated
 ```
 
 Important applications to install via apt:
 ``` bash
+sudo apt install anki #Do not try nix or snap! In both anki gets rendering issues from being sandboxed.
 sudo apt install npm
 sudo apt install pulseaudio-utils # Useful for audio via commandline
 
