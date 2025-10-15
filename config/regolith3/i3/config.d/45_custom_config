@@ -114,7 +114,8 @@ mode "$clipboard_mode" {
 
 set $clearpythoncomments "xclip -o | sed -E '/^\s*#/d; s/#.*//' | xclip -selection clipboard"
 set $dna_coord "xclip -selection clipboard -o | sed -E 's/([^:]+):([0-9]+)\.\.([0-9]+).*/\1:\2-\3/' | xclip -selection clipboard -i"
-set $dna_tab "xclip -selection clipboard -o | sed -E 's/^chr([0-9XYM]+):([0-9]+)-([0-9]+)/\1\t\2\t\3/' | xclip -selection clipboard -i"
+set $dna_tab "xclip -selection clipboard -o | sed 's/,//g' | sed -E 's/^chr([0-9XYM]+):([0-9]+)-([0-9]+)/\1\t\2\t\3/' | xclip -selection clipboard -i"
+
 
 
 
