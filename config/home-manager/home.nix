@@ -112,6 +112,7 @@ in {
       nix-direnv # Nix integration for direnv
       gnumake # dev tool
       ncdu # directories
+      tldr # documentation
 
       # Development Tools - Languages & LSPs
       janet # Minimal functional lisp dialect
