@@ -326,7 +326,15 @@ sudo pam-auth-update
 ```
 And select fingerprint from the menu
 
-### Install Other Great Applications That You Can't Install via Nix
+### Setup org-roam
+Your org-roam notes are backed up with github. We do not use git-dropbox anymore, since it is confusing to set up and it is slower than regular git. We thought it might be a good idea to use to allow us to store more data (like images), but it doesn't actually work well for that purpose. If we have too much data, downloading your repository becomes so slow as to be impossible. Instead, we just store images outside of our notes, which makes way more sense in the first place.
+Clone your repository:
+
+``` bash
+git clone git@github.com:sonofhypnos/org-roam.git org-roam
+```
+
+# Install Other Great Applications That You Can't Install via Nix
 
 
 (Possibly because they need root access)
@@ -346,7 +354,7 @@ Search and replace tags
 
 (use Flexible Cloze 2 min note type)
 
-# Doom
+## Doom
 Compile your config (last time you compiled your config on 30.2 it took just 2 minutes).
 Install further dependencies inside doom (depends on node 20+ which you can install with nix):
 
