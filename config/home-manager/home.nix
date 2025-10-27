@@ -111,6 +111,7 @@ in {
       direnv # Per-directory environment variables
       nix-direnv # Nix integration for direnv
       gnumake # dev tool
+      ncdu # directories
 
       # Development Tools - Languages & LSPs
       janet # Minimal functional lisp dialect
