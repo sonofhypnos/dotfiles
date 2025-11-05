@@ -40,6 +40,7 @@ alias .home='cd ~/.dotfiles/config/home-manager'
 alias home-manager-switch='cd ~/.dotfiles/config/home-manager;home-manager switch -b backup --flake .#tassilo'
 alias ashell="vim ~/.dotfiles/shell/aliases.sh"
 alias dmemacs="~/.local/lib/python3.9/site-packages/memacs/"
+alias vastai-ssh="ssh -i ~/.ssh/vastai -o IdentitiesOnly=yes -A"
 
 # Uni Files
 alias int="cd ~/Dropbox/DokumenteTassilo/intelligenceAmplification/reading/; ranger"
