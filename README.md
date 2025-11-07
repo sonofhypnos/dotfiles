@@ -167,6 +167,8 @@ sudo apt install regolith-look-blackhole
 
 ```bash
 sudo snap install steam
+sudo snap install aws-cli --classic #Amazon website mentions snap version is maintained, so up to date.
+
 ```
 
 Important applications to install via apt:
