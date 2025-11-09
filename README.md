@@ -308,6 +308,7 @@ systemctl --user list-timers
 for your user-level timers.
 
 ### Setup fingerprint software
+NOTE: We are trying without fingerprint for a while now, because we suspect it is the culprit that broke login with chrome not working anymore (chrome needs access to the keyring to decrypt its profile and so it looses things if we loose the keyring (or so the theory). I think it is easier to just not use the fingerprint feature probably.)
 
 ``` bash
 sudo apt update
@@ -375,6 +376,10 @@ So far we don't have a proper solution to secrets.
 On the ThinkPad T460, the magic key just requires you to press Fn. Just Fn+F is going to kill the application with the most memory etc.
 
 [More documentation on the magic key bitmap](https://docs.kernel.org/admin-guide/sysrq.html).
+
+# Fix backup:
+If lock on your backup and there aren't two processes currently accessing at the same time:
+
 
 ## TODOs
 
