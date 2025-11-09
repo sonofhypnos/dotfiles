@@ -380,6 +380,10 @@ On the ThinkPad T460, the magic key just requires you to press Fn. Just Fn+F is 
 # Fix backup:
 If lock on your backup and there aren't two processes currently accessing at the same time:
 
+``` bash
+borg break-lock borgbase:./repo
+```
+
 
 ## TODOs
 
