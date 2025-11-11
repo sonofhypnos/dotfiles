@@ -53,3 +53,5 @@ POETRY_VIRTUALENVS_IN_PROJECT=true
 
 # Set file manager ranger to not load the default rc file, since we have our own
 RANGER_LOAD_DEFAULT_RC=false
+
+AWS_PROFILE=tassilo
