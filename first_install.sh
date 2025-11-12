@@ -38,7 +38,7 @@ home_manager_dir="$HOME/.dotfiles/config/home-manager"
 if confirm "Do you want to recompile the home-manager configuration?"; then
     [[ -e $home_manager_dir ]] && cd "$home_manager_dir" && {
       echo "Running: home-manager switch"
-      nix-shell -p home-manager 'home-manager --extra-experimental-features "nix-command flakes" switch -b backup --flake .#tassilo --show-trace 2>&1'
+      nix-shell -p home-manager 'home-manager --extra-experimental-features "nix-command flakes" switch --flake .#tassilo --show-trace 2>&1'
     }
 
     if [ -x "$HOME/.config/emacs/bin/doom" ]; then
