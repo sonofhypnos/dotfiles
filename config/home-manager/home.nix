@@ -113,7 +113,6 @@ in {
       gnumake # dev tool
       ncdu # directories
       tldr # documentation
-      kazam # Screen recording tool
 
       # Development Tools - Languages & LSPs
       janet # Minimal functional lisp dialect
