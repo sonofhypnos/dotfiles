@@ -175,6 +175,7 @@ Important applications to install via apt:
 ``` bash
 sudo apt install npm
 sudo apt install pulseaudio-utils # Useful for audio via commandline
+sudo apt install kazam #Not working via nix
 
 # Needed for copilot with emacs
 ```
