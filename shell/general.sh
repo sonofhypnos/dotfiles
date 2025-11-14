@@ -6,9 +6,9 @@ export EDITOR=nvim
 export VISUAL=nvim
 
 # History settings (work in both bash/zsh)
-HISTSIZE=10000
-HISTFILESIZE=20000
-SAVEHIST=$HISTSIZE
+export HISTSIZE=10000
+export HISTFILESIZE=20000
+export SAVEHIST=$HISTSIZE
 
 # Don't put duplicate lines in history
 export HISTCONTROL=ignoreboth
@@ -46,12 +46,12 @@ fi
 # export SUDO_ASKPASS=/usr/bin/ssh-askpass
 
 # Make sure poetry puts venv in project directory
-POETRY_VIRTUALENVS_IN_PROJECT=true
+export POETRY_VIRTUALENVS_IN_PROJECT=true
 
 # # Tell poetry to use the same python version that was used to install it to avoid weird errors
 # POETRY_VIRTUALENVS_USE_POETRY_PYTHON=true
 
 # Set file manager ranger to not load the default rc file, since we have our own
-RANGER_LOAD_DEFAULT_RC=false
+export RANGER_LOAD_DEFAULT_RC=false
 
-AWS_PROFILE=tassilo
+export AWS_PROFILE=tassilo
