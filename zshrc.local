@@ -19,3 +19,5 @@ fi
 # Settings for poetry completions
 fpath+=~/.zfunc
 autoload -Uz compinit && compinit
+
+eval "$(direnv hook zsh)"
