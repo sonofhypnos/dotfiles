@@ -4,6 +4,9 @@
 [core]
 	autocrlf = input
 [alias]
+	gc= commit
+	gst= status
+	gloga= log --oneline --decorate --graph --all
 	br = branch -vv
 	bra = branch -vv --all
 	aa = add --all :/
@@ -33,5 +36,3 @@
 	defaultBranch = main
 [pull]
 	rebase = true
-[url "ssh://git@github.com/"]
-	insteadOf = https://github.com/
