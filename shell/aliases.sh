@@ -41,7 +41,7 @@ alias home-manager-switch='cd ~/.dotfiles/config/home-manager;home-manager switc
 alias ashell="vim ~/.dotfiles/shell/aliases.sh"
 alias dmemacs="~/.local/lib/python3.9/site-packages/memacs/"
 alias vastai-ssh="ssh -i ~/.ssh/vastai -o IdentitiesOnly=yes -A"
-alias aws-ssh="ssh -i ~/.ssh/aws-e184.pem -o IdentitiesOnly=yes -A"
+alias aws-ssh="ssh -i ~/.ssh/aws-e184.pem -o IdentitiesOnly=yes -A" # NOTE: if you are tempted to alias to a different key, you opened your instance in the wrong region!
 
 # Uni Files
 alias int="cd ~/Dropbox/DokumenteTassilo/intelligenceAmplification/reading/; ranger"
