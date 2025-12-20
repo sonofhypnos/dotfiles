@@ -60,6 +60,43 @@ fi
 ```
 
 ## Setting Up Desktop
+## Suspend
+Make sure you have more swap disk space than RAM, so you can use the swap partition for sleep with disk. (If you forget this, it's fine you can make a swap file)
+
+Get UUID:
+``` bash
+blkid | grep swap
+```
+
+Add swap to grub:
+``` bash
+sudo vim /etc/default/grub
+```
+Append resume= at the end of already existing "quiet splash" or similar:
+
+``` bash
+GRUB_CMDLINE_LINUX_DEFAULT="quiet splash
+resume=UUID=2763225c-d330-4d26-82a3-76ef82dfc3f0"
+```
+
+Regenerate grub config:
+On Debian/Ubuntu/Mint:
+
+``` bash
+sudo update-grupb
+```
+
+Regenerate initramfs (on Debian/Ubuntu/Mint) (this is needed to make sure the resume hook is in the initramfs (an os thingy in your RAM loaded at boot time)):
+
+``` bash    
+sudo update-initramfs -u
+```
+
+restart. Afterwards, sudo systemctl hibernate, should work.
+
+
+
+## Applications
 
 ```bash
 sudo apt update
@@ -384,6 +421,7 @@ If lock on your backup and there aren't two processes currently accessing at the
 ``` bash
 borg break-lock borgbase:./repo
 ```
+
 
 
 ## TODOs
