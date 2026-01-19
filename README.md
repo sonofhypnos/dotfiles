@@ -409,6 +409,15 @@ M-x: copilot-install-server
 
 So far we don't have a proper solution to secrets.
 
+## Trash-cli
+To use trashcli in root, use: 
+
+``` bash
+sudo mkdir /.Trash-1001
+sudo chown $(whoami):$(whoami) /.Trash-1001
+```
+(Trash-cli needs there to be a trash directory)
+
 ### Magic SysRq Keys
 
 On the ThinkPad T460, the magic key just requires you to press Fn. Just Fn+F is going to kill the application with the most memory etc.
