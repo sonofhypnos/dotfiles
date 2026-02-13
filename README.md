@@ -60,7 +60,10 @@ fi
 ```
 
 ## Setting Up Desktop
-## Suspend
+## Hibernate
+Set up hibernate (since suspend on Linux takes insane amounts of power and overheats laptop in your bag).
+NOTE: With my E16 Laptop, My Wifi card for some reason did not properly start whenever I started from hibernate. The ultimate culprit: My Realtek Wifi card just doesn't have good support for hibernate on Linux. Ordered Intel Wifi card, which will hopefully resolve the issue. This really cannot be properly handled from our side.
+
 Make sure you have more swap disk space than RAM, so you can use the swap partition for sleep with disk. (If you forget this, it's fine you can make a swap file)
 
 Get UUID:
