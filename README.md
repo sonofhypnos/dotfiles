@@ -75,8 +75,7 @@ sudo vim /etc/default/grub
 Append resume= at the end of already existing "quiet splash" or similar:
 
 ``` bash
-GRUB_CMDLINE_LINUX_DEFAULT="quiet splash
-resume=UUID=2763225c-d330-4d26-82a3-76ef82dfc3f0"
+GRUB_CMDLINE_LINUX_DEFAULT="quiet splash resume=UUID=2763225c-d330-4d26-82a3-76ef82dfc3f0"
 ```
 
 Regenerate grub config:
@@ -92,8 +91,18 @@ Regenerate initramfs (on Debian/Ubuntu/Mint) (this is needed to make sure the re
 sudo update-initramfs -u
 ```
 
-restart. Afterwards, sudo systemctl hibernate, should work.
+Add a rule to polkit (so that hibernate can be run without needing root access)
 
+``` bash
+sudo tee /etc/polkit-1/localauthority/50-local.d/hibernate.pkla << 'EOF'
+[Allow Hibernate]
+Identity=unix-user:tassilo
+Action=org.freedesktop.login1.hibernate;org.freedesktop.login1.handle-hibernate-key;org.freedesktop.login1.hibernate-multiple-sessions;org.freedesktop.login1.hibernate-ignore-inhibit
+ResultActive=yes
+EOF
+```
+
+restart. Afterwards, `systemctl hibernate`, should work.
 
 
 ## Applications
