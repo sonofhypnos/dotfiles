@@ -34,7 +34,8 @@ wm.binding.focus_child: F6
 
 wm.gaps.inner.size: 0
 wm.program.terminal: gnome-terminal -- zsh
-
+! Instead of logout and loosing user session, we switch to the greeter, so we can log in again without rebooting
+$wm.program.logout: dm-tool switch-to-greeter
 
 !
 ! More general settings unrelated to regolith

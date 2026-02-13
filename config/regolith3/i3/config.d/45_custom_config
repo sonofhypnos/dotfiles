@@ -48,6 +48,7 @@ set $gpt google-chrome --app=https://chatgpt.com/?model=gpt-4o --profile-directo
 set $perp google-chrome --app=https://www.perplexity.ai/ --profile-directory=Default
 #set $claude google-chrome --no-extensions --app=https://claude.ai --profile-directory=Default
 set $claude google-chrome --app=https://claude.ai --profile-directory=Default
+set $gemini google-chrome --app=https://gemini.google.com/ --profile-directory="Profile 1"
 
 
 set $gpt3 google-chrome --app=https://chatgpt.com/ --profile-directory=Default
@@ -79,10 +80,11 @@ mode "$main_launcher" {
 	bindsym m mode "default" exec $firefox https://i3wm.org/docs/userguide.html
 	bindsym p mode "default" exec $fatebook
 	bindsym i mode "default" exec $timetrack
-  bindsym 1 mode "default" exec $perp
+    bindsym 1 mode "default" exec $perp
 	bindsym 2 mode "default" exec $claude
 	bindsym 3 mode "default" exec $gpt3
 	bindsym 4 mode "default" exec $gpt
+	bindsym 5 mode "default" exec $gemini
 	bindsym a mode "default" exec anki
 #	bindsym m mode "default" exec $teams
 	bindsym r mode "default" exec firefox https://web.colreminder.com
@@ -126,10 +128,11 @@ set $zotero_scratch /home/tassilo/bin/scratch_toggle.sh "Zotero" "zotero" "Zoter
 set $fatebook_scratch /home/tassilo/bin/scratch_toggle.sh "Google-chrome" "google-chrome --app=https://fatebook.io --profile-directory=Default" "fatebook.io"
 set $perplexity_scratch /home/tassilo/bin/scratch_toggle.sh "Google-chrome" "google-chrome --app=https://www.perplexity.ai --profile-directory=Default" "www.perplexity.ai"
 set $claude_scratch /home/tassilo/bin/scratch_toggle.sh "Google-chrome" "google-chrome --app=https://claude.ai --profile-directory=Default" "claude.ai"
+set $gemini_scratch /home/tassilo/bin/scratch_toggle.sh "Google-chrome" "google-chrome --app=https://gemini.google.com --profile-directory='Profile 1'" "gemini.google.com"
 set $timetrack_scratch /home/tassilo/bin/scratch_toggle.sh "Google-chrome" "google-chrome --app=https://app.atimelogger.pro/reports --profile-directory=Default" "^app\.atimelogger\.pro"
 
-## Launch // Scratchpad mode [e]macs [z]otero [f]atebook [p]erplexity [o]penai [c]laude [t]imetrack // <> s ##/
-set $scratchpad_mode Scratchpad Mode: [e]macs [z]otero [f]atebook [p]erplexity [o]penai [c]laude [t]imetrack
+## Launch // Scratchpad mode [e]macs [z]otero [f]atebook [p]erplexity [o]penai [c]laude [t]imetrack [g]emini // <> s ##/
+set $scratchpad_mode Scratchpad Mode: [e]macs [z]otero [f]atebook [p]erplexity [o]penai [c]laude [t]imetrack [g]emini
 bindsym $mod+s mode "$scratchpad_mode"
 
 mode "$scratchpad_mode" {
@@ -140,6 +143,7 @@ mode "$scratchpad_mode" {
     bindsym o mode "default" exec $gpt_scratch
     bindsym c mode "default" exec $claude_scratch
     bindsym t mode "default" exec $timetrack_scratch
+    bindsym g mode "default" exec $gemini_scratch
     bindsym Escape mode "default"
 }
 
@@ -207,6 +211,10 @@ bindsym $mod+q [class="Google-chrome" instance="chatgpt.com"] scratchpad show
 for_window [class="Google-chrome" instance="claude.ai"] move scratchpad, scratchpad show
 bindsym $mod+w [class="Google-chrome" instance="claude.ai"] scratchpad show
 
+## Launch // Open Gemini Scratchpad // <> Shift w ##/
+for_window [class="Google-chrome" instance="gemini.google.com"] move scratchpad, scratchpad show
+bindsym $mod+Shift+w [class="Google-chrome" instance="gemini.google.com"] scratchpad show
+
 ## Launch // Open perplexity Scratchpad // <> p ##/
 for_window [class="Google-chrome" instance="www.perplexity.ai"] move scratchpad, scratchpad show
 bindsym $mod+p [class="Google-chrome" instance="www.perplexity.ai"] scratchpad show
@@ -262,7 +270,7 @@ exec --no-startup-id dconf write /org/gnome/settings-daemon/plugins/cursor/activ
 exec --no-startup-id ./i3-battery-popup/i3-battery-popup
 
 ## Launch // Clear Scratchpad // <> Shift u ##/
-bindsym $mod+u [class="Google-chrome" instance="claude.ai"] move scratchpad; [class="Zotero" window_role="browser"] move scratchpad; [title="_emacs scratchpad_"] move scratchpad; [title="doom-capture"] move scratchpad; [class="Google-chrome" instance="chatgpt.com"] move scratchpad; [class="Google-chrome" instance="www.perplexity.ai"] move scratchpad; [class="Google-chrome" instance="fatebook.io"] move scratchpad; [class="Emacs"] move scratchpad; [instance="^app\.atimelogger\.pro"] move scratchpad;
+bindsym $mod+u [class="Google-chrome" instance="claude.ai"] move scratchpad; [class="Zotero" window_role="browser"] move scratchpad; [title="_emacs scratchpad_"] move scratchpad; [title="doom-capture"] move scratchpad; [class="Google-chrome" instance="chatgpt.com"] move scratchpad; [class="Google-chrome" instance="www.perplexity.ai"] move scratchpad; [class="Google-chrome" instance="fatebook.io"] move scratchpad; [class="Emacs"] move scratchpad; [instance="^app\.atimelogger\.pro"] move scratchpad; [class="Google-chrome" instance="gemini.google.com"] move scratchpad
 
 
 # read 1 character and mark the current window with this character
@@ -273,9 +281,6 @@ bindsym $mod+m exec i3-input -F 'mark %s' -l 1 -P 'Mark: '
 
 ## Launch //  Go to window char // <> Shift g ##/
 bindsym $mod+g exec i3-input -F '[con_mark="%s"] focus' -l 1 -P 'Goto: '
-
-## Launch // Logout (keep session) // <> Shift w ##/
-bindsym $mod+Shift+w exec dm-tool switch-to-greeter
 
 ## Launch // Screenshot region (clipboard) // Ctrl Shift Print ##/
 bindsym Control+Shift+Print exec /home/tassilo/bin/screenshot.sh
