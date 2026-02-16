@@ -1,3 +1,5 @@
+!NOTE: for special characters, make sure you check their exact spelling for
+!their X11 keysim names. Having "space" capitalized will fail for example.
 wm.binding.help: Shift+ssharp
 wm.binding.next_free: dead_circumflex
 wm.binding.move_next_free: Shift+dead_caron
