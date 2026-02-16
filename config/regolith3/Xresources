@@ -32,6 +32,9 @@ wm.binding.wifi: F4
 wm.binding.split_h: F5
 wm.binding.focus_child: F6
 
+wm.binding.exit_app: BackSpace
+
+
 wm.gaps.inner.size: 0
 wm.program.terminal: gnome-terminal -- zsh
 ! Instead of logout and loosing user session, we switch to the greeter, so we can log in again without rebooting
