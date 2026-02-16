@@ -208,11 +208,11 @@ bindsym $mod+q [class="Google-chrome" instance="chatgpt.com"] scratchpad show
 
 ## Launch // Open Claude Scratchpad // <> w ##/
 for_window [class="Google-chrome" instance="claude.ai"] move scratchpad, scratchpad show
-bindsym $mod+w [class="Google-chrome" instance="claude.ai"] scratchpad show
+bindsym $mod+Shift+w [class="Google-chrome" instance="claude.ai"] scratchpad show
 
 ## Launch // Open Gemini Scratchpad // <> Shift w ##/
 for_window [class="Google-chrome" instance="gemini.google.com"] move scratchpad, scratchpad show
-bindsym $mod+Shift+w [class="Google-chrome" instance="gemini.google.com"] scratchpad show
+bindsym $mod++w [class="Google-chrome" instance="gemini.google.com"] scratchpad show
 
 ## Launch // Open perplexity Scratchpad // <> p ##/
 for_window [class="Google-chrome" instance="www.perplexity.ai"] move scratchpad, scratchpad show
