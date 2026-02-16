@@ -2,7 +2,8 @@ wm.binding.help: Shift+ssharp
 wm.binding.next_free: dead_circumflex
 wm.binding.move_next_free: Shift+dead_caron
 wm.binding.take_next_free: dead_circumflex
-wm.binding.launcher.cmd: Shift+Alt+Space
+wm.binding.launcher.cmd: Shift+Mod1+space
+!NOTE:Shift+Space I have reserved to do something more useful! (not sure what?) ()
 wm.binding.left: j
 wm.binding.right: odiaeresis
 wm.binding.up: l
