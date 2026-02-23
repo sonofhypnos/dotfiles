@@ -14,10 +14,15 @@
       url = "github:nix-community/NUR";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    ilia = {
+      url = "github:sonofhypnos/ilia/main";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
   };
 
-  outputs =
-    { self, nixpkgs, nixpkgs-unfree, nixpkgs-unstable, home-manager, nur, ... }:
+  outputs = { self, nixpkgs, nixpkgs-unfree, nixpkgs-unstable, home-manager, nur
+    , ilia, ... }:
     let
       system = "x86_64-linux";
       unfreePredicate = pkg:
@@ -59,6 +64,7 @@
               ollamaUnstable = unstable.ollama;
               codexUnstable = unstable.codex;
               signalUnstable = unstable.signal-desktop;
+              ilia = ilia.packages.${prev.system}.ilia;
             })
           ];
 

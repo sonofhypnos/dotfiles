@@ -42,6 +42,28 @@
         "type": "github"
       }
     },
+    "ilia": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ],
+        "systems": "systems"
+      },
+      "locked": {
+        "lastModified": 1771868657,
+        "narHash": "sha256-TlBrbOXxj40TfSTOrgfivv9PJDK5WFGynbW3dc66wIQ=",
+        "owner": "sonofhypnos",
+        "repo": "ilia",
+        "rev": "d4b0d96dbfcf74f746727281fe266b710efe77a9",
+        "type": "github"
+      },
+      "original": {
+        "owner": "sonofhypnos",
+        "ref": "main",
+        "repo": "ilia",
+        "type": "github"
+      }
+    },
     "nixpkgs": {
       "locked": {
         "lastModified": 1757020766,
@@ -114,10 +136,26 @@
     "root": {
       "inputs": {
         "home-manager": "home-manager",
+        "ilia": "ilia",
         "nixpkgs": "nixpkgs",
         "nixpkgs-unfree": "nixpkgs-unfree",
         "nixpkgs-unstable": "nixpkgs-unstable",
         "nur": "nur"
+      }
+    },
+    "systems": {
+      "locked": {
+        "lastModified": 1681028828,
+        "narHash": "sha256-Vy1rq5AaRuLzOxct8nz4T6wlgyUR7zLU309k9mBC768=",
+        "owner": "nix-systems",
+        "repo": "default",
+        "rev": "da67096a3b9bf56a91d16901293e51ba5b49a27e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-systems",
+        "repo": "default",
+        "type": "github"
       }
     }
   },

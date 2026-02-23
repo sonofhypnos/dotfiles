@@ -93,6 +93,7 @@ in {
       trash-cli # CLI for trash operations (safer than rm)
       xclip # X11 clipboard utilities
       fontconfig # Font configuration and management
+      ilia # viewer of applications (has fix for bug that still exists in public version)
 
       # Productivity & Office
       #anki # Spaced repetition flashcard system NOTE: (doesn't work on ubuntu)
