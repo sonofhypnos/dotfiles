@@ -60,7 +60,9 @@ fi
 ```
 
 ## Setting Up Desktop
-## Hibernate
+
+### Hibernate
+
 Set up hibernate (since suspend on Linux takes insane amounts of power and overheats laptop in your bag).
 NOTE: With my E16 Laptop, My Wifi card for some reason did not properly start whenever I started from hibernate. The ultimate culprit: My Realtek Wifi card just doesn't have good support for hibernate on Linux. Ordered Intel Wifi card, which will hopefully resolve the issue. This really cannot be properly handled from our side.
 
@@ -108,7 +110,8 @@ EOF
 restart. Afterwards, `systemctl hibernate`, should work.
 
 
-## Applications
+
+### Applications
 
 ```bash
 sudo apt update
@@ -387,16 +390,34 @@ Clone your repository:
 git clone git@github.com:sonofhypnos/org-roam.git org-roam
 ```
 
-# Install Other Great Applications That You Can't Install via Nix
+### Magic SysRq Keys
+
+On the ThinkPad T460, the magic key just requires you to press Fn. Just Fn+F is going to kill the application with the most memory etc.
+
+[More documentation on the magic key bitmap](https://docs.kernel.org/admin-guide/sysrq.html).
+
+
+
+### Trash-cli
+
+To use trashcli in root, use: 
+
+``` bash
+sudo mkdir /.Trash-1001
+sudo chown $(whoami):$(whoami) /.Trash-1001
+```
+(Trash-cli needs there to be a trash directory)
+
+### Install Other Great Applications That You Can't Install via Nix
 
 
 (Possibly because they need root access)
 
 ```bash
-sudo apt install logwatch
+sudo apt install logwatch ecryptfs-utils
 ```
 
-## Anki
+#### Anki
 
 You might have to install anki addons again. Anki addons you usually like to use:
 Image Occlusion Enhanced
@@ -407,7 +428,8 @@ Search and replace tags
 
 (use Flexible Cloze 2 min note type)
 
-## Doom
+#### Doom
+
 Compile your config (last time you compiled your config on 30.2 it took just 2 minutes).
 Install further dependencies inside doom (depends on node 20+ which you can install with nix):
 
@@ -417,26 +439,8 @@ M-x: copilot-install-server
 ```
 
 
-## Secrets
 
-So far we don't have a proper solution to secrets.
-
-## Trash-cli
-To use trashcli in root, use: 
-
-``` bash
-sudo mkdir /.Trash-1001
-sudo chown $(whoami):$(whoami) /.Trash-1001
-```
-(Trash-cli needs there to be a trash directory)
-
-### Magic SysRq Keys
-
-On the ThinkPad T460, the magic key just requires you to press Fn. Just Fn+F is going to kill the application with the most memory etc.
-
-[More documentation on the magic key bitmap](https://docs.kernel.org/admin-guide/sysrq.html).
-
-# Fix backup:
+# How to fix your backup
 If lock on your backup and there aren't two processes currently accessing at the same time:
 
 ``` bash
@@ -444,7 +448,7 @@ borg break-lock borgbase:./repo
 ```
 
 
-
+  
 ## TODOs
 
 - [ ] we could change our bios such that we power on our device at midnight and then allow our backup to run.
@@ -467,3 +471,4 @@ borg break-lock borgbase:./repo
 - [ ] Create a bootstrap script to install nix and setup home-manager (for now I gave up on this, because nix doesn't like to work with root as docker does.)
 - [ ] Create better paths for shell (use `$HOME` instead of `/home/tassilo`) 
 - [ ] Move more configuration to home-manager and make it declarative.
+  
