@@ -20,6 +20,13 @@ My [Doom-Emacs](https://github.com/hlissner/doom-emacs/blob/develop/docs/getting
 - `Xcompose` - Compose key file for the German [neo keyboard layout](https://neo-layout.org/)
 - `trydactylrc` - [tridactyl](https://github.com/tridactyl/tridactyl) configuration for Vim navigation in Firefox
 
+# Updating nix packages
+To update your nix packages (like signal), you can run:
+
+```bash
+nix flake update
+```
+
 # Setting up Machines (intended for myself)
 
 ## Setting Up Remote Machine 
