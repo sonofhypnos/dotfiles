@@ -458,6 +458,7 @@ borg break-lock borgbase:./repo
   
 ## TODOs
 
+- [ ] Make sure Firefox url backups still work even though some directories changed now because I changed profiles
 - [ ] we could change our bios such that we power on our device at midnight and then allow our backup to run.
 - [ ] Add secrets for backup 
 - [ ] Add secrets for SSH (check which ones you want on desktop or other machines etc.)
