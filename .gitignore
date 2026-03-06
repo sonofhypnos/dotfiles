@@ -10,3 +10,4 @@ bin/liftOver
 **/__init__.py
 local/share/ranger/bookmarks
 bin/nextflow
+config/vlc/vlc-qt-interface.conf
