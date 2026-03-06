@@ -92,17 +92,24 @@ mode "$main_launcher" {
 	bindsym Return mode "default"
 }
 
+
+
+set $work_launcher Wor[k] Launcher: [g]mail [c]alendar [d]rive
 set $gmail_work google-chrome --app=https://mail.google.com --profile-directory="Profile 1"
-set $calendar_work google-chrome --app=https://mail.google.com --profile-directory="Profile 1"
+set $calendar_work google-chrome --app=https://calendar.google.com --profile-directory="Profile 1"
 set $drive_work google-chrome --app=https://drive.google.com/drive/shared-drives --profile-directory="Profile 1"
+set $browser_work google-chrome --profile-directory="Profile 1"
+set $firefox_work firefox -P work
 
 
-bindsym Control+$mod+$alt+. "$work_launcher"
+bindsym Control+$mod+$alt+k mode "$work_launcher"
 #Launcher for work:
 mode "$work_launcher" {
     bindsym g mode "default" exec $gmail_work
     bindsym c mode "default" exec $calendar_work
     bindsym d mode "default" exec $drive_work
+    bindsym b mode "default" exec $browser_work
+    bindsym f mode "default" exec $firefox_work
 
 	bindsym Escape mode "default"
 	bindsym Return mode "default"
