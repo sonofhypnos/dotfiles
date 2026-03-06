@@ -424,7 +424,68 @@ in {
               darkreader
             ];
         };
+        work = {
+          # This makes it use the standard ~/.mozilla/firefox location
+          path = ".mozilla/firefox";
+          settings = {
+            # Cleanup url bar
+            "browser.urlbar.suggest.topsites" = false;
+            "services.sync.prefs.sync.browser.urlbar.suggest.topsites" = true;
+
+            # Remove Sponsored Content
+            "browser.newtabpage.activity-stream.showSponsored" = false;
+            "browser.newtabpage.activity-stream.showSponsoredTopSites" = false;
+            "browser.newtabpage.activity-stream.default.sites" = "";
+            "browser.newtabpage.pinned" = "[]"; # Clears all pinned sites
+
+            # Hide the Search Bar
+            "browser.newtabpage.activity-stream.improvesearch.handoffToAwesomebar" =
+              false;
+            "browser.newtabpage.activity-stream.showSearch" = false;
+
+            # Remove All Suggested Content
+            "browser.newtabpage.activity-stream.feeds.section.topstories" =
+              false;
+            "browser.newtabpage.activity-stream.feeds.snippets" = false;
+            "browser.newtabpage.activity-stream.feeds.topsites" = false;
+            "browser.newtabpage.activity-stream.feeds.section.highlights" =
+              false;
+
+            # Disable annoying extension behavior
+            "browser.download.autohideButton" = false;
+            "extensions.getAddons.showPane" = false;
+            "extensions.htmlaboutaddons.recommendations.enabled" = false;
+
+            # Performance and UI improvements
+            "browser.tabs.loadInBackground" = true;
+            "browser.aboutConfig.showWarning" = false;
+            "browser.compactmode.show" = true;
+            "browser.toolbars.bookmarks.visibility" = "never";
+            "browser.ctrlTab.recentlyUsedOrder" = false;
+
+            # Display tabs even in fullscreen mode:
+            "browser.fullscreen.autohide" = false;
+
+            # This allows the user to add stylesheets TODO: (we have a custom stilesheet in these dotfiles, it is not being compiled to anywhere though)
+            "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
+          };
+          extensions.packages =
+            with firefoxAddons; [ # https://discourse.nixos.org/t/firefox-extensions-with-home-manager/34108/4
+              video-downloadhelper
+              tampermonkey
+              web-search-navigator
+              duckduckgo-privacy-essentials
+              unpaywall
+              istilldontcareaboutcookies
+              zotero-connector
+              tridactyl
+              ublock-origin
+              onepassword-password-manager
+              darkreader
+            ];
+        };
       };
+
     };
 
     bash = {
