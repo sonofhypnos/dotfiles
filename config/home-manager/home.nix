@@ -366,7 +366,9 @@ in {
       profiles = {
         default = {
           # This makes it use the standard ~/.mozilla/firefox location
-          path = ".mozilla/firefox";
+          id = 0; # Not sure if setting isDefault alone is enough.
+          path = ".mozilla/firefox/default";
+          isDefault = true;
           settings = {
             # Cleanup url bar
             "browser.urlbar.suggest.topsites" = false;
@@ -426,7 +428,8 @@ in {
         };
         work = {
           # This makes it use the standard ~/.mozilla/firefox location
-          path = ".mozilla/firefox";
+          id = 1;
+          path = ".mozilla/firefox/work";
           settings = {
             # Cleanup url bar
             "browser.urlbar.suggest.topsites" = false;
