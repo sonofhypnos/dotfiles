@@ -58,6 +58,7 @@
         pkgs = import nixpkgs-unfree {
           inherit system;
           config.allowUnfreePredicate = unfreePredicate;
+          config.permittedInsecurePackages = [ "electron-36.9.5" ];
           overlays = [
             nur.overlays.default
             (final: prev: {

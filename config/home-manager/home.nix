@@ -124,6 +124,7 @@ in {
       conda
       R # Programming Language for statistical computing
       texliveFull # LaTex
+      rstudio # IDE for R
 
       # Development Tools - Formatters & Linters
       nixfmt-classic # Nix code formatter for syntax highlighting
