@@ -94,12 +94,13 @@ mode "$main_launcher" {
 
 
 
-set $work_launcher Wor[k] Launcher: [g]mail [c]alendar [d]rive
+set $work_launcher Wor[k] Launcher: [g]mail [c]alendar [d]rive [s]lack [b]rowser [f]irefox
 set $gmail_work google-chrome --app=https://mail.google.com --profile-directory="Profile 1"
 set $calendar_work google-chrome --app=https://calendar.google.com --profile-directory="Profile 1"
 set $drive_work google-chrome --app=https://drive.google.com/drive/shared-drives --profile-directory="Profile 1"
 set $browser_work google-chrome --profile-directory="Profile 1"
 set $firefox_work firefox -P work
+set $slack_work google-chrome --app=https://app.slack.com/client/T0A2R3Q86RF/C0A1WRBBH0X
 
 
 bindsym Control+$mod+$alt+k mode "$work_launcher"
@@ -110,6 +111,7 @@ mode "$work_launcher" {
     bindsym d mode "default" exec $drive_work
     bindsym b mode "default" exec $browser_work
     bindsym f mode "default" exec $firefox_work
+    bindsym s mode "default" exec $slack_work
 
 	bindsym Escape mode "default"
 	bindsym Return mode "default"
