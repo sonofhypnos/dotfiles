@@ -400,6 +400,7 @@ git clone git@github.com:sonofhypnos/org-roam.git org-roam
 ### Magic SysRq Keys
 
 On the ThinkPad T460, the magic key just requires you to press Fn. Just Fn+F is going to kill the application with the most memory etc.
+On the thinkpad E16 (your main laptop as of 2026-03-11), you get the magic key via Alt+Fn+F9
 
 [More documentation on the magic key bitmap](https://docs.kernel.org/admin-guide/sysrq.html).
 
