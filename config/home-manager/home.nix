@@ -124,7 +124,6 @@ in {
       conda
       R # Programming Language for statistical computing
       texliveFull # LaTex
-      rstudio # IDE for R
       black # Python code formatter for emacs
 
       # Development Tools - Formatters & Linters
