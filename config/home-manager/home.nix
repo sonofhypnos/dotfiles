@@ -122,7 +122,6 @@ in {
       elan # Lean theorem prover toolchain manager
       poetry # Python package management
       conda
-      R # Programming Language for statistical computing
       texliveFull # LaTex
       black # Python code formatter for emacs
 
