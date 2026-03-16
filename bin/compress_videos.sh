@@ -31,7 +31,13 @@ create_directories() {
 compress_video() {
     local input_path="$1"
     local output_path="$2"
-    ffmpeg -i "$input_path" -preset veryfast -vcodec libx264 -crf 23 "$output_path"
+    ffmpeg -i "$input_path" \
+        -c:v libx264 -profile:v main -level 4.1 \
+        -vf scale=1920:1080 \
+        -c:a aac \
+        -movflags +faststart \
+        -preset veryfast -crf 23 \
+        "$output_path"
 }
 
 # Function to get all videos for today
