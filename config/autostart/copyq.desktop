@@ -1,6 +1,6 @@
 [Desktop Entry]
 Type=Application
-Exec=copyq
+Exec=copyq --start-server
 Hidden=false
 NoDisplay=false
 X-GNOME-Autostart-enabled=true
