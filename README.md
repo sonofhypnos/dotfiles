@@ -404,6 +404,25 @@ On the thinkpad E16 (your main laptop as of 2026-03-11), you get the magic key v
 
 [More documentation on the magic key bitmap](https://docs.kernel.org/admin-guide/sysrq.html).
 
+Make sure you activate the magic key to kill processes with high memory:
+Where exactly the file lives to configure the magic key across reboots differs by distribution.
+In recent ubuntu versions (24.04), it is configured at `/etc/sysctl.d/10-magic-sysrq.conf`. 
+I don't know if changing that value right there might get overwritten by updates though. 
+So to be sure we will write the configuration to a new file:
+
+16 → sync (s)
+32 → remount read-only (u)
+64 → signalling of processes (term, kill, oom-kill) (f)
+128 → reboot/poweroff (b)
+= 240
+
+```
+echo 'kernel.sysrq = 240' | sudo tee /etc/sysctl.d/99-sysrq.conf
+```
+
+This should work with pretty much any distro using systemd, so unless you use nix (possible), or some other weird distro, this should work.
+
+
 
 
 ### Trash-cli
